@@ -14,15 +14,7 @@ description: <em>Check these resources to start your journey as a developing dev
 This post was written to support my participation in a panel at the
 <em>27th International Conference on Software Engineering and Knowledge
 Engineering</em>. To view the accompanying slides for this presentation, please
-refer to [@Kapfhammer2015a] [{{< iconify fa6-solid book-open
->}}](/research/presentations/kapfhammer2015a/index.qmd).
-If you want to learn more about new work that my colleagues and students and I
-are conducting in the area of efficiently testing data-centric applications,
-then please read [@Kinneer2015] [{{< iconify fa6-solid book-open
->}}](/research/papers/kinneer2015/index.qmd) and
-[@Kinneer2015a] [{{< iconify fa6-solid book-open
->}}](/research/papers/kinneer2015a/index.qmd), two papers
-that were also presented at the same conference.
+{{< iconify fa6-solid book-open >}}
 
 :::
 

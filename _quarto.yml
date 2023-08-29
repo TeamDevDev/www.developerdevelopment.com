@@ -1,0 +1,84 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!_resources/"
+  preview:
+    port: 5550
+    browser: false
+    watch-inputs: true
+    navigate: false
+
+website:
+  title: ""
+  page-navigation: true
+  favicon: "icons/fxemoji-rocket.svg"
+  open-graph: true
+  site-url: https://www.developerdevelopment.com/
+  repo-url: https://github.com/TeamDevDev/www.developerdevelopment.com
+  issue-url: https://github.com/TeamDevDev/www.developerdevelopment.com/issues/new
+  repo-actions: [source, edit, issue]
+  repo-branch: "master"
+  search:
+    location: navbar
+    type: textbox
+  reader-mode: false
+  back-to-top-navigation: false
+  navbar:
+    tools:
+      - icon: rss
+        menu:
+          - text: Blog
+            url: blog/index.xml
+    left:
+      - href: index.qmd
+        text: Home
+
+  page-footer:
+    left: "{{< fa copyright >}} GMK"
+    center: '<a href="#" aria-label="Go to the top of the page">Top {{< fa circle-up >}}</a>'
+    right:
+      - icon: github
+        href: https://github.com/TeamDevDev
+      - text: "{{< iconify fontawesome-brands github-alt size=18.85px >}}"
+        href: https://github.com/TeamDevDev/www.developerdevelopment.com/issues
+      - text: "{{< iconify academicons google-scholar-square size=18.85px >}}"
+        href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
+
+format:
+  html:
+    # do not use embed-resources: true because this
+    # causes build times to take a very long time
+    # and builds will normally crash with an out
+    # of memory error from the JavaScript runtime
+    embed-resources: false
+    mainfont: IBM Plex Sans
+    monofont: IBM Plex Mono
+    fontsize: 1.375em
+    theme:
+      # light:
+        - united
+        - united-light.scss
+      # dark:
+        # - united
+        # - united-dark.scss
+    css: styles.css
+    # css:
+      # - styles.css
+      # - united-dark.css
+    toc: true
+    toc-title: "Contents"
+    code-copy: hover
+    code-overflow: wrap
+    code-fold: false
+    code-tools: false
+    highlight-style: gruvbox
+    email-obfuscation: javascript
+    # note: needs to be false so as to
+    # ensure that the back to top button
+    # in the footer of the page works correctly
+    smooth-scroll: false
+    citations-hover: true
+    footnotes-hover: true
+    citeproc: true
+    appendix-style: default

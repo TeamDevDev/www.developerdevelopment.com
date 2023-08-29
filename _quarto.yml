@@ -32,6 +32,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: blog/index.qmd
+        text: Blog
 
   page-footer:
     left: "{{< fa copyright >}} GMK"

@@ -32,6 +32,6 @@ subdirs = [bdir for bdir in blog_dir.iterdir() if bdir.is_dir()]
 post_count = len(subdirs)
 
 console.print(
-    f":rocket: Enjoy reading these {post_count} blog posts! What else should I write about?"
+    f":gear: Read these {post_count} blog posts that highlight our developer development! "
 )
 ```

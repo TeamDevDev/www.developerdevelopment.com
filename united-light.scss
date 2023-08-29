@@ -11,11 +11,14 @@ $link-color: #E95116;
 
 // Define the color of the navbar
 .navbar-light {
-  background-color: #F37901 !important;
+  background-color: #F59301 !important;
 }
 
+// Define the color of the navbar; right
+// now even though the theme is light the
+// navbar-dark controls the navbar's color
 .navbar-dark {
-  background-color: #F37901 !important;
+  background-color: #F59301 !important;
 }
 
 // }}}

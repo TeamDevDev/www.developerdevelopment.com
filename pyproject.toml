@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "developerdevelopment"
+version = "0.1.0"
+description = ""
+authors = ["Gregory M. Kapfhammer <gkapfham@allegheny.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyter = "^1.0.0"
+matplotlib = "^3.7.1"
+pyyaml = "^6.0"
+rich = "^13.3.5"
+bibtexparser = "^1.4.0"
+csscompressor = "^0.9.5"
+htmlmin = "^0.1.12"
+rjsmin = "^1.2.1"
+minify-html = "^0.11.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+
+[tool.ruff]
+ignore = [
+    "E501", # do not check line length
+]
+select = [
+    "E",    # pycodestyle errors
+    "I",    # isort
+    "F",    # Pyflakes
+    "PL",   # pylint
+    "Q",    # flake8-quotes
+    "RUF",  # ruff-specific
+    "W",    # pycodestyle warnings
+    "T201"  # flake8-print
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

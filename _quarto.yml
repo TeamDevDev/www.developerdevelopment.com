@@ -25,10 +25,6 @@ website:
   reader-mode: false
   back-to-top-navigation: false
   navbar:
-    tools:
-      - icon: rss
-        text: Blog
-        url: blog/index.xml
     left:
       - href: index.qmd
         text: Home

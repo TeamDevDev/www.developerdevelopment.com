@@ -1,0 +1,37 @@
+---
+title: "Blog"
+toc: true
+page-layout: full
+listing:
+  page-size: 15
+  contents:
+    - "../blog/**/*.qmd"
+    - "!../blog/index.qmd"
+  sort:
+    - "date desc"
+    - "title"
+  type: default
+  categories: true
+  date-format: "YYYY"
+  sort-ui: true
+  filter-ui: true
+  fields: [author, date, title, reading-time, description, categories]
+  feed:
+    title: "Blog"
+execute:
+  freeze: auto
+---
+
+```{python}
+from pathlib import Path
+from rich.console import Console
+
+console = Console()
+blog_dir = Path(".")
+subdirs = [bdir for bdir in blog_dir.iterdir() if bdir.is_dir()]
+post_count = len(subdirs)
+
+console.print(
+    f":rocket: Enjoy reading these {post_count} blog posts! What else should I write about?"
+)
+```

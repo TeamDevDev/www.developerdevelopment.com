@@ -56,16 +56,9 @@ format:
     monofont: IBM Plex Mono
     fontsize: 1.375em
     theme:
-      # light:
         - united
         - united-light.scss
-      # dark:
-        # - united
-        # - united-dark.scss
     css: styles.css
-    # css:
-      # - styles.css
-      # - united-dark.css
     toc: true
     toc-title: "Contents"
     code-copy: hover

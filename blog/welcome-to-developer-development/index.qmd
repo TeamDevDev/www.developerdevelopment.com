@@ -1,0 +1,52 @@
+---
+author: Gregory M. Kapfhammer
+title: Welcome to Developer Development!
+date: '2023-8-29'
+date-format: YYYY
+categories: [post, developer development, course management]
+description: <em>Check these resources to start your journey as a developing developer to!</em>
+---
+
+::: {.callout-note appearance="simple"}
+
+## Important Context
+
+This post was written to support my participation in a panel at the
+<em>27th International Conference on Software Engineering and Knowledge
+Engineering</em>. To view the accompanying slides for this presentation, please
+refer to [@Kapfhammer2015a] [{{< iconify fa6-solid book-open
+>}}](/research/presentations/kapfhammer2015a/index.qmd).
+If you want to learn more about new work that my colleagues and students and I
+are conducting in the area of efficiently testing data-centric applications,
+then please read [@Kinneer2015] [{{< iconify fa6-solid book-open
+>}}](/research/papers/kinneer2015/index.qmd) and
+[@Kinneer2015a] [{{< iconify fa6-solid book-open
+>}}](/research/papers/kinneer2015a/index.qmd), two papers
+that were also presented at the same conference.
+
+:::
+
+Big data analytics software allows researchers and practitioners to create
+descriptive models and make predictions. Often characterized
+by the "three Vs" of volume, velocity, and variety, big data systems must
+respectively handle large amounts of data that arrive rapidly and take many
+different forms. fields such as evidence-based medicine and the
+detection of financial fraud, big data software is poised to and, indeed
+already is, making important contributions.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+Interested in learning more about this topic? Since this blog post was first
+written, my colleagues and students and I have published several additional
+papers about the testing of relational database schemas, with the most
+
+If you are interested in using SchemaAnalyst to test your own database schema,
+then please download and use the tool, which is now available from the GitHub
+site <a
+href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
+
+:::
+
+{{< include /_back-blog.qmd >}}

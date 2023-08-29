@@ -15,5 +15,5 @@ console.print(
 ```
 
 The page that you were looking for is not available on the [Developer Developer
-web site](https://www.developerdevelopment.com/). Please use the menu at the top
-of the page to find an available resource!
+site](https://www.developerdevelopment.com/). Please use the menu at the top of
+the page to find an available resource!

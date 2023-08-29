@@ -1,5 +1,5 @@
 ---
-title: "Developer Development"
+title: ""
 echo: true
 jupyter: python3
 section-divs: true
@@ -12,10 +12,6 @@ execute:
   freeze: auto
 ---
 
-```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":gear: Delivering better software by developing developers!"
-)
-```
+![**Developing developers to so that they can develop better software!**](images/Developer-Development-Horizontal-Logo.svg){fig-align="center"}
+
+Text to check out the [blog](blog/index.qmd)

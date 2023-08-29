@@ -12,7 +12,7 @@ project:
 website:
   title: ""
   page-navigation: true
-  favicon: "icons/devev-logo-favicon.svg"
+  favicon: "icons/devdev-logo-favicon.svg"
   open-graph: true
   site-url: https://www.developerdevelopment.com/
   repo-url: https://github.com/TeamDevDev/www.developerdevelopment.com

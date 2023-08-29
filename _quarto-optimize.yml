@@ -1,0 +1,23 @@
+project:
+  type: website
+  pre-render:
+    # perform minification to make those files
+    # in the _include directory that will be imported
+    # into other files so that they are already minified
+    # by the time that quarto inserts them in other files
+    - scripts/minify-files.py --source _include --destination _optimize --force --verbose
+  post-render:
+    # perform minification on all of the generated files
+    - scripts/minify-files.py
+
+format:
+  html:
+    include-in-header:
+      # include in the header of generated files only those
+      # with contents that have already been optimized through
+      # the process of minification
+      - file: _optimize/html/header-include.html
+    include-after-body:
+      # load the instant-page.js script so that links are
+      # pre-fetched when a person hovers over content
+      - file: _include/js/instant-page.js

@@ -1,0 +1,13 @@
+project:
+  type: website
+
+format:
+  html:
+    # define the theme color and other site-wide
+    # attributes for the web site
+    include-in-header:
+      - file: _include/html/header-include.html
+    # use the instant-page script for pre-loading
+    # of pages to ensure perceived fast loading
+    include-after-body:
+      - file: _include/js/instant-page.js

@@ -1,0 +1,21 @@
+---
+title: "Developer Development"
+echo: true
+jupyter: python3
+section-divs: true
+keep-md: false
+toc: true
+page-layout: full
+title-block-style: default
+title-block-banner: false
+execute:
+  freeze: auto
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    ":gear: Delivering better software by developing developers!"
+)
+```

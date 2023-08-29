@@ -27,9 +27,8 @@ website:
   navbar:
     tools:
       - icon: rss
-        menu:
-          - text: Blog
-            url: blog/index.xml
+        text: Blog
+        url: blog/index.xml
     left:
       - href: index.qmd
         text: Home

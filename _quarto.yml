@@ -37,10 +37,10 @@ website:
     right:
       - icon: github
         href: https://github.com/TeamDevDev
-      - text: "{{< iconify fontawesome-brands github-alt size=18.85px >}}"
-        href: https://github.com/TeamDevDev/www.developerdevelopment.com/issues
-      - text: "{{< iconify academicons google-scholar-square size=18.85px >}}"
-        href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
+      - text: "{{< iconify fa github-square size=18px >}}"
+        href: https://github.com/TeamDevDev/www.developerdevelopment.com/
+      - text: "{{< iconify bi rss-fill size=18px >}}"
+        href: "blog/index.xml"
 
 format:
   html:

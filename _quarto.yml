@@ -10,7 +10,7 @@ project:
     navigate: false
 
 website:
-  title: ""
+  title: "Developer Development"
   page-navigation: true
   favicon: "icons/devdev-logo-favicon.svg"
   open-graph: true
@@ -26,8 +26,6 @@ website:
   back-to-top-navigation: false
   navbar:
     left:
-      - href: index.qmd
-        text: Home
       - href: blog/index.qmd
         text: Blog
 

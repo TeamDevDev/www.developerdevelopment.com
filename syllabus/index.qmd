@@ -1,0 +1,36 @@
+---
+title: "Syllabus"
+toc: true
+page-layout: full
+---
+
+## Computer Science 203 Fall 2023
+
+### Course Instructor
+
+- Name: Dr. Gregory M. Kapfhammer
+- Office Location: Alden Hall 108
+
+### Instructor Appointments
+
+- Monday: 2:00 PM-3:30 PM, Alden Hall, 15 minute time slots
+- TBD
+
+::: {.callout-note appearance="minimal" title="Scheduling Appointments"}
+
+To schedule a meeting with the course instructor during office hours,
+please visit the [Google Calendar for Office
+Hours](https://calendar.app.google/4ekYyCcKqGanEBqC8). You can schedule an
+appointment by clicking a suitable box in Google Calendar and then reserving an
+open time slot. At this point, the details about your chosen appointment will
+appear in both your Google Calendar and the instructor's Google Calendar. Please
+arrive five minutes in advance for your meeting and be aware that, by necessity,
+the meeting before yours may sometimes run late.
+
+:::
+
+### Course Meeting Schedule
+
+- Discussion and Group Work Session: Monday and Wednesday, 9 AM-9:50 AM, Alden 109
+- Programming Session: Friday, 10 AM-10:50 AM, Alden 109
+- Laboratory Session: Friday, 2:30 PM-4:20 PM, Alden 109

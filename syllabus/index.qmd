@@ -10,7 +10,9 @@ page-layout: full
 
 - **Instructor Name**: Dr. Gregory M. Kapfhammer
 - **Office Location**: Alden Hall 108
-- **Web Site**: [https://www.gregorykapfhammer.com/](https://www.gregorykapfhammer.com/)
+
+Please visit the instructor's [web site](https://www.gregorykapfhammer.com/)
+for more information!
 
 ### Instructor Appointments
 

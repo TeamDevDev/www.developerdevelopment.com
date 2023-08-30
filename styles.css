@@ -72,15 +72,15 @@ a {
 }
 
 p a:hover {
-  color: #e65100 !important;
+  color: #F4B003 !important;
   transition: text-decoration-color 300ms, text-underline-offset 300ms;
   text-decoration: underline 0.1em rgba(0, 0, 0, 1);
-  text-decoration-color: #e65100;
+  text-decoration-color: #F4B003;
   text-underline-offset: 0.3em;
 }
 
 .body a:hover {
-  color: #e65100 !important;
+  color: #F4B003 !important;
 }
 
 li,

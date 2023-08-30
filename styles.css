@@ -159,6 +159,7 @@ figcaption {
 /* Navbar: Header and Footer {{{ */
 
 .navbar a {
+  color: #F5F5F5 !important;
   text-decoration: none;
   font-size: 1rem;
   color: inherit;
@@ -173,7 +174,7 @@ figcaption {
 }
 
 .navbar a:hover {
-  color: #1C1C1C !important;
+  color: #F5F5F5 !important;
   text-decoration: none;
 }
 
@@ -210,6 +211,19 @@ figcaption {
 .aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-Label svg, .aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg, .aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-Label svg, .aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg {
     color: #1c1c1c;
     opacity: 1;
+}
+
+.aa-Autocomplete .aa-Form, .aa-DetachedFormContainer .aa-Form {
+    align-items: center;
+    background-color: #F5F5F5;
+    border: 3px solid #F4B003;
+    border-radius: .25rem;
+    color: #333;
+    display: flex;
+    line-height: 1em;
+    margin: 0;
+    position: relative;
+    width: 100%;
 }
 
 /* }}} */

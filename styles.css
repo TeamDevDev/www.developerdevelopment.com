@@ -135,11 +135,11 @@ figcaption {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #1c1c1c;
+  color: #F5F5F5;
 }
 
 .navbar-dark .navbar-nav .show>.nav-link, .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active {
-    color: #1c1c1c;
+    color: #F5F5F5;
 }
 
 /* }}} */
@@ -163,6 +163,16 @@ figcaption {
   font-size: 1rem;
   color: inherit;
   font-weight: 500 !important;
+}
+
+.navbar-title {
+  margin-top: 10em;
+  font-size: 1rem;
+}
+
+.navbar-brand {
+  margin-top: 0.2em;
+  font-size: 5rem;
 }
 
 .nav-footer {

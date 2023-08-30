@@ -137,13 +137,13 @@ figcaption {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #f5f5f5;
+  color: #F5F5F5;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #f5f5f5;
+  color: #F4B003 !important;
 }
 
 /* }}} */

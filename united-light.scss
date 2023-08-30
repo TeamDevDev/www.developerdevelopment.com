@@ -22,34 +22,3 @@ $link-color: #E64B19;
 }
 
 // }}}
-
-// Get the Gist {{{
-
-.form-check-input,
-.shiny-input-container .checkbox input,
-.shiny-input-container .checkbox-inline input,
-.shiny-input-container .radio input,
-.shiny-input-container .radio-inline input {
-  width: 1em;
-  height: 1em;
-  margin-top: 0.25em;
-  vertical-align: top;
-  background-color: #ef6c00 !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: 1px solid #ef6c00 !important;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-}
-
-.toggle-container {
-  background-color: rgba(233, 236, 239, 0.65);
-  border: 1px solid rgba(233, 236, 239, 0.65);
-  border-radius: 0.25rem;
-}
-
-// }}}

@@ -2,11 +2,15 @@
 
 /* Google Fonts {{{ */
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"); */
 
 /* }}} */
 
 /* Basic Components {{{ */
+
+body {
+  background-color: #F5F5F5;
+}
 
 .page-rows-contents {
   grid-template-rows:
@@ -65,7 +69,7 @@ h4,
 }
 
 a {
-  color: #e65100;
+  /* color: #e65100; */
   text-decoration: none;
   -webkit-text-decoration: none;
   -moz-text-decoration: none;
@@ -125,6 +129,26 @@ pre {
   z-index: 998;
 }
 
+.figure-img {
+  margin-bottom: -0.75rem;
+  line-height: 1;
+}
+
+.panel-caption,
+.figure-caption,
+figcaption {
+  color: #333333;
+  text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #1c1c1c;
+}
+
+.navbar-dark .navbar-nav .show>.nav-link, .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active {
+    color: #1c1c1c;
+}
+
 /* }}} */
 
 /* Forms {{{ */
@@ -138,7 +162,7 @@ pre {
 
 /* }}} */
 
-/* Navbar {{{ */
+/* Navbar: Header and Footer {{{ */
 
 .navbar a {
   text-decoration: none;
@@ -150,11 +174,12 @@ pre {
 .nav-footer {
   min-height: 1em;
   padding-bottom: 0em;
+  background-color: #F5F5F5;
   color: #757575;
 }
 
 .navbar a:hover {
-  color: #fff !important;
+  color: #1C1C1C !important;
   text-decoration: none;
 }
 
@@ -174,6 +199,23 @@ pre {
 
 .navbar .dropdown-item {
   font-weight: 400 !important;
+}
+
+.aa-Autocomplete .aa-Form, .aa-DetachedFormContainer .aa-Form {
+    align-items: center;
+    background-color: #F5F5F5;
+    border-radius: .25rem;
+    color: #333;
+    display: flex;
+    line-height: 1em;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-Label svg, .aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg, .aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-Label svg, .aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg {
+    color: #1c1c1c;
+    opacity: 1;
 }
 
 /* }}} */
@@ -239,7 +281,8 @@ sidebar .quarto-alternate-notebooks ul li a,
   display: block;
   font-size: 0.75rem;
   padding: 0.5rem 1rem;
-  color: #ef6c00;
+  /* color: #ef6c00; */
+  color: #000;
   text-decoration: none;
   -moz-text-decoration: none;
   -ms-text-decoration: none;

@@ -21,17 +21,3 @@ listing:
 execute:
   freeze: auto
 ---
-
-```{python}
-from pathlib import Path
-from rich.console import Console
-
-console = Console()
-blog_dir = Path(".")
-subdirs = [bdir for bdir in blog_dir.iterdir() if bdir.is_dir()]
-post_count = len(subdirs)
-
-console.print(
-    f":gear: Read these {post_count} blog posts that highlight our developer development! "
-)
-```

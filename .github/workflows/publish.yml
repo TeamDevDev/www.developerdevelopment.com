@@ -57,5 +57,5 @@ jobs:
           quarto --version
           # directly publish a version of the site to Netlify, using
           # the optimize profile that will perform minification
-          # poetry run quarto render --profile optimize
+          poetry run quarto render --profile optimize
           poetry run quarto publish netlify --profile optimize

@@ -36,7 +36,7 @@ website:
     center: '<a href="#" aria-label="Go to the top of the page">Top {{< fa circle-up >}}</a>'
     right:
       - icon: github
-        href: https://github.com/TeamDevDev
+        href: https://github.com/TeamDevDev/
       - text: "{{< iconify fa github-square size=18px >}}"
         href: https://github.com/TeamDevDev/www.developerdevelopment.com/
       - text: "{{< iconify bi discord size=19px >}}"

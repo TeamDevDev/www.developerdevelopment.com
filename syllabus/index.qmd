@@ -35,7 +35,7 @@ that, by necessity, the meeting before yours may sometimes run late.
 
 :::
 
-### Course Meeting Schedule
+### Schedule Overview
 
 - **Discussion, Writing, and Programming Sessions**
   - *Developing Professional Skills*: Monday, 9 AM-9:50 AM, Alden 109

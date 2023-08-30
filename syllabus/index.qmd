@@ -8,24 +8,30 @@ page-layout: full
 
 ### Course Instructor
 
-- Name: Dr. Gregory M. Kapfhammer
-- Office Location: Alden Hall 108
+- **Instructor Name**: Dr. Gregory M. Kapfhammer
+- **Office Location**: Alden Hall 108
+- **Web Site**: [https://www.gregorykapfhammer.com/](https://www.gregorykapfhammer.com/)
 
 ### Instructor Appointments
 
-- Monday: 2:00 PM-3:30 PM, Alden Hall, 15 minute time slots
-- TBD
+- **Monday**: 10:00 -- 11:00 AM, 2:00 PM -- 3:30 PM
+- **Tuesday**: 4:30 PM -- 5:00 PM
+- **Wednesday**: 4:30 PM -- 5:00 PM
+- **Thursday**: 1:30 PM -- 3:00 PM
+
+All instructor appointments are 15-minute time slots and take place in Alden Hall,
+Room 108.
 
 ::: {.callout-note appearance="minimal" title="Scheduling Appointments"}
 
-To schedule a meeting with the course instructor during office hours,
-please visit the [Google Calendar for Office
-Hours](https://calendar.app.google/4ekYyCcKqGanEBqC8). You can schedule an
-appointment by clicking a suitable box in Google Calendar and then reserving an
-open time slot. At this point, the details about your chosen appointment will
-appear in both your Google Calendar and the instructor's Google Calendar. Please
-arrive five minutes in advance for your meeting and be aware that, by necessity,
-the meeting before yours may sometimes run late.
+To schedule a meeting with the course instructor during office hours, please
+visit the [Course Instructor's Appointment
+Scheduler](https://www.gregorykapfhammer.com/schedule/). You can schedule an
+appointment by clicking a suitable box in Google Calendar's Appointment
+Scheduler and then reserving an open time slot. The details about your chosen
+appointment will appear in both your Google Calendar and the instructor's Google
+Calendar. Please arrive ten minutes in advance for your meeting and be aware
+that, by necessity, the meeting before yours may sometimes run late.
 
 :::
 

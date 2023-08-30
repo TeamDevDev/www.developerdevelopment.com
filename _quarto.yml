@@ -66,7 +66,7 @@ format:
     code-tools: false
     highlight-style: gruvbox
     email-obfuscation: javascript
-    # note: needs to be false so as to
+    # note: smooth-scroll must false so as to
     # ensure that the back to top button
     # in the footer of the page works correctly
     smooth-scroll: false
@@ -74,3 +74,7 @@ format:
     footnotes-hover: true
     citeproc: true
     appendix-style: default
+    # highlight external links in a special fashion
+    # and always open them in a new browser window
+    link-external-icon: true
+    link-external-newwindow: true

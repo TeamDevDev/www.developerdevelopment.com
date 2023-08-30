@@ -49,8 +49,8 @@ format:
     # and builds will normally crash with an out
     # of memory error from the JavaScript runtime
     embed-resources: false
-    mainfont: IBM Plex Sans
-    monofont: IBM Plex Mono
+    mainfont: Noto Sans
+    monofont: Noto Sans Mono
     fontsize: 1.375em
     theme:
         - united

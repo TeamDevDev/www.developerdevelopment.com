@@ -32,7 +32,7 @@ website:
         text: Syllabus
 
   page-footer:
-    left: '{{< fa copyright >}} <a href="https://github.com/TeamDevDev/www.developerdevelopment.com/graphs/contributors" aria-label="DevDevTeam Maintainers">DevDev Team</a>'
+    left: '<a href="https://github.com/TeamDevDev/www.developerdevelopment.com/graphs/contributors" aria-label="DevDevTeam Maintainers">{{< fa copyright >}} DevDev Team</a>'
     center: '<a href="#" aria-label="Go to the top of the page">Top {{< fa circle-up >}}</a>'
     right:
       - text: "{{< iconify fa github size=18px >}}"

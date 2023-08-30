@@ -28,6 +28,8 @@ website:
     left:
       - href: blog/index.qmd
         text: Blog
+      - href: syllabus/index.qmd
+        text: Syllabus
 
   page-footer:
     left: '{{< fa copyright >}} <a href="https://github.com/TeamDevDev/www.developerdevelopment.com/graphs/contributors" aria-label="DevDevTeam Maintainers">DevDev Team</a>'

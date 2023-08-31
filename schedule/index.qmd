@@ -25,7 +25,7 @@ page-layout: full
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - *Discuss the team's executive summary and write a professional précis*:
-    - Team-based Discussion of prior week's reading in SE
+    - Team-based discussion of prior week's reading in SE
     - Focused individual preparation for next week's SE reading
 - {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
@@ -206,3 +206,27 @@ page-layout: full
   - *Discuss the team's executive summary and write a professional précis*:
     - **Discussion of FB4**: Mutation Analysis
     - **Publication of FB5**: Mutation-Based Fuzzing
+
+## Week Eight
+
+### Monday, October 16 -- Friday, October 20
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of SE5**: How to Work Well on Teams
+    - **Preparation for SE6**: How to Lead a Team
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - First software tool enters maintenance mode
+    - Begin to focus on the second software tool
+        - Sprint planning
+        - Project implementation
+        - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of FB5**: Mutation-Based Fuzzing
+    - **Preparation for FB6**: Fuzzing with Grammars
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE6**: How to Lead a Team
+        - **Publication of FB6**: Fuzzing with Grammars

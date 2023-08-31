@@ -276,3 +276,22 @@ page-layout: full
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE8**: Style Guides and Rules
         - **Publication of FB8**: Parsing Inputs
+
+## Week Eleven
+
+### Monday, November 6 -- Friday, November 10
+
+- {{< iconify fa6-solid list-check size=18px >}} **Monday, Wednesday, and Friday**: People Operations
+  - *In-person technical and professional assessment of all student team members*:
+    - {{< iconify fa6-solid people-line size=18px >}} Answer at least one question about professional skills
+    - {{< iconify fa-solid laptop-code size=18px >}} Answer at least one question about technical skills
+    - {{< iconify fa6-solid diagram-project size=18px >}} Answer at least one technical question about the project
+    - {{< iconify game-icons team-idea size=18px >}} Document professional insights in an assessment report
+
+- {{< iconify fa6-solid flag-checkered size=18px >}} **Tuesday**: Executable Examination
+  - *Demonstrate technical skills in software engineering*:
+    - Use GitHub and GitHub Actions
+    - Use text editor and terminal window
+    - Implement and test Python functions
+    - Debug defective Python functions
+    - Confirm output of Python functions

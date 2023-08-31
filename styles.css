@@ -282,11 +282,11 @@ figcaption {
 }
 
 #quarto-margin-sidebar .toc-actions .bi:before {
-    margin-top: 0.3rem !important;
-    margin-right: 0.1rem !important;
-    font-size: 0.7rem;
-    color: #333333 !important;
-    vertical-align: top;
+  margin-top: 0.3rem !important;
+  margin-right: 0.1rem !important;
+  font-size: 0.7rem;
+  color: #333333 !important;
+  vertical-align: top;
 }
 
 /* }}} */
@@ -365,6 +365,17 @@ sidebar .quarto-alternate-notebooks ul li a,
 .nav-link a:hover {
   color: #ef6c00 !important;
   transition: none !important;
+}
+
+sidebar .quarto-alternate-notebooks ul li a,
+.sidebar .quarto-alternate-formats ul li a,
+.sidebar nav[role="doc-toc"] > ul li a {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  font-weight: 400;
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
+  color: inherit;
 }
 
 /* }}} */

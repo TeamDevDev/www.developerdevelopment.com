@@ -4,6 +4,21 @@ toc: true
 page-layout: full
 ---
 
+::: {.callout-note appearance="minimal" title="Schedule Overview" collapse="false"}
+
+- **Week One**: Technical and Professional Onboarding
+- **Module One**: Introduction to Software Engineering
+    - *Week Two through Week Five*: Technical, professional, and developer development
+    - *Week Six*:
+      - **Monday**: assessment of individual developer development
+      - **Tuesday**: first executable examination
+      - **Wednesday**: assessment of individual developer development
+      - **Friday**: Demonstration of alpha version of first software project
+- **Module Two**: Introduction to Software Engineering
+    - **Week Seven**: Completion and demonstration of beta version of first software project
+
+:::
+
 ## Week One
 
 ### Tuesday, August 29 -- Friday, September 1

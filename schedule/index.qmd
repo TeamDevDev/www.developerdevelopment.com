@@ -32,5 +32,9 @@ page-layout: full
     - Correctly run the Jupyter notebook for at least one chapter
 - Locate and bookmark the [Software Engineering at Google](https://abseil.io/resources/swe-book) book
 - Install the [Quarto](https://quarto.org/) system for scientific and technical publishing
+- Learn how to use [Quarto](https://quarto.org/) to create a [web site](https://quarto.org/docs/websites/)
+- Install and learn how to use the [Chasten](https://github.com/AstuteSource/chasten) for analyzing Python ASTs
+- Raise issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues) for any problems you encounter
+- Attach labels to all issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues)
 
 :::

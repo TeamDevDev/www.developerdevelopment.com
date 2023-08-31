@@ -60,7 +60,7 @@ page-layout: full
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical preparation for joining a software startup
 - {{< iconify fa-solid laptop-code size=18px >}} **Friday**: Technical preparation for joining a software startup
 
-::: {.callout-note appearance="minimal" title="Technical Tasks" collapse="false"}
+::: {.callout-note appearance="minimal" title="Onboarding Tasks" collapse="false"}
 
 - Join the [Developer Development Discord](https://discord.gg/aNfn8DNEMx)
 - Install [Python 3.11](https://www.python.org/) on your development workstation
@@ -160,7 +160,7 @@ page-layout: full
     - **Team-based Discussion of SE3**: How to Work Well on Teams
     - **Preparation for SE4**: Knowledge Sharing
 - {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
-  - *Demonstrate installation and use of the following artifacts*:
+  - *Collaboratively implement and deploy into production a software tool*:
     - Sprint planning
     - Project implementation
     - Project demonstration
@@ -172,3 +172,22 @@ page-layout: full
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE4**: Knowledge Sharing
         - **Publication of FB4**: Mutation Analysis
+
+## Week Six
+
+### Monday, October 2 -- Friday, October 6
+
+- {{< iconify fa6-solid list-check size=18px >}} **Monday, Wednesday, and Friday**: People Operations
+  - *In-person technical and professional assessment of all student team members*:
+    - {{< iconify fa6-solid people-line size=18px >}} Answer at least one question about professional skills
+    - {{< iconify fa-solid laptop-code size=18px >}} Answer at least one question about technical skills
+    - {{< iconify fa6-solid diagram-project size=18px >}} Answer at least one technical question about the project
+    - {{< iconify game-icons team-idea size=18px >}} Document professional insights in an assessment report
+
+- {{< iconify fa6-solid flag-checkered size=18px >}} **Tuesday**: Executable Examination
+  - *Demonstrate technical skills in software engineering*:
+    - Use GitHub and GitHub Actions
+    - Use text editor and terminal window
+    - Implement and test Python functions
+    - Debug defective Python functions
+    - Confirm output of Python functions

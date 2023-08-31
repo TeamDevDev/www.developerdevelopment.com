@@ -45,36 +45,42 @@ page-layout: full
 
 #### *Introduction to Software Engineering*
 
-- **Monday**: Professional Development
-  - Write a personal précis and publish the team's executive summary:
-    - Preparation for **SE1**: Preface - Programming Over Time
-- **Tuesday**: Developer Development
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Write a personal précis and publish the team's executive summary*:
+    - **Preparation for SE1**: Preface - Programming Over Time
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
   - *Demonstrate installation and use of the following artifacts*:
     - [Chasten](https://github.com/AstuteSource/chasten): tool for analyzing Python abstract syntax trees
     - [Fuzzing Book (FB)](https://www.fuzzingbook.org/): tools and techniques for generating tests
     - [Debugging Book (DB)](https://www.debuggingbook.org/): tools and techniques for automated debugging
-- **Wednesday**: Technical Development
-    - Write a personal précis and publish the team's executive summary:
-        - Preparation for **FB1**: Introduction to Software Testing
-- **Friday**: Development Development
-    - Publish executive summaries to the Developer Development blog:
-        - Preparation for **SE1**: Preface - Programming Over Time
-        - Preparation for **FB1**: Introduction to Software Testing
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+    - *Write a personal précis and publish the team's executive summary*:
+        - **Preparation for FB1**: Introduction to Software Testing
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE1**: Preface - Programming Over Time
+        - **Publication of FB1**: Introduction to Software Testing
 
 ## Week 3
 
 ### Monday, September 11 -- Friday, September 15
 
-#### *Introduction to Software Engineering*
+#### *Introduction to Test Coverage*
 
-- **Monday**: Write a personal précis and publish the team's executive summary:
-  - **SE1**: Preface - Programming Over Time
-- **Tuesday**: Demonstrate installation and use of the following artifacts:
-  - [Chasten](https://github.com/AstuteSource/chasten): tool for analyzing Python abstract syntax trees
-  - [Fuzzing Book (FB)](https://www.fuzzingbook.org/): tools and techniques for generating tests
-  - [Debugging Book (DB)](https://www.debuggingbook.org/): tools and techniques for automated debugging
-- **Wednesday**: Write a personal précis and publish the team's executive summary:
-  - **FB1**: Introduction to Software Testing
-- **Friday**: Publish final executive summaries to the Developer Development blog:
-  - **SE1**: Preface - Programming Over Time
-  - **FB1**: Introduction to Software Testing
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a personal précis*:
+    - **Team-based Discussion of SE1**: Preface - Programming Over Time
+    - **Preparation for SE2**: What is Software Engineering?
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Demonstrate installation and use of the following artifacts*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a personal précis*:
+    - **Team-based Discussion of FB1**: Introduction to Software Testing
+    - **Preparation for FB2**: Coverage
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE2**: What is Software Engineering?
+        - **Publication of FB2**: Coverage

@@ -19,8 +19,8 @@ page-layout: full
 
 - Join the [Developer Development Discord](https://discord.gg/aNfn8DNEMx)
 - Install [Python 3.11](https://www.python.org/) on your development workstation
-    - Use [asdf-vm]() or [rtx]() on to install Python on MacOS or Linux
-    - Use [asdf-vm]() on Windows with WSL2 support
+    - Use [asdf-vm](https://asdf-vm.com/) or [rtx](https://github.com/jdx/rtx) on to install Python on MacOS or Linux
+    - Use [asdf-vm](https://asdf-vm.com/more/faq.html#wsl2-support) on Windows with WSL2 support
     - Use the official [installers](https://www.python.org/downloads/) for Windows 10 or Windows 11
     - Install the full Python version supporting C and Rust binding and SQLite 3
 - Install the [Poetry](https://python-poetry.org/) and [Pipx](https://github.com/pypa/pipx) tools to support Python development
@@ -31,5 +31,6 @@ page-layout: full
     - Run a local Jupyter Lab server that can access a book's notebooks
     - Correctly run the Jupyter notebook for at least one chapter
 - Locate and bookmark the [Software Engineering at Google](https://abseil.io/resources/swe-book) book
+- Install the [Quarto](https://quarto.org/) system for scientific and technical publishing
 
 :::

@@ -102,3 +102,25 @@ page-layout: full
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE3**: How to Work Well on Teams
         - **Publication of FB3**: Fuzzing
+
+## Week Five
+
+### Monday, September 25 -- Friday, September 29
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a personal précis*:
+    - **Team-based Discussion of SE3**: How to Work Well on Teams
+    - **Preparation for SE4**: Knowledge Sharing
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Demonstrate installation and use of the following artifacts*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a personal précis*:
+    - **Team-based Discussion of FB3**: Fuzzing
+    - **Preparation for FB4**: Mutation Analysis
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE4**: Knowledge Sharing
+        - **Publication of FB4**: Mutation Analysis

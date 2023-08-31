@@ -230,3 +230,49 @@ page-layout: full
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE6**: How to Lead a Team
         - **Publication of FB6**: Fuzzing with Grammars
+
+## Week Nine
+
+### Monday, October 23 -- Friday, October 27
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of SE6**: How to Lead a Team
+    - **Preparation for SE7**: Leading at Scale
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Demonstration of completed version of the first software tool
+    - Development of the second software tool
+        - Sprint planning
+        - Project implementation
+        - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of FB6**: Fuzzing with Grammars
+    - **Preparation for FB7**: Efficient Grammar Fuzzing
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE7**: Leading at Scale
+        - **Publication of FB6**: Efficient Grammar Fuzzing
+
+## Week Ten
+
+### Monday, October 30 -- Friday, November 3
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of SE7**: Leading at Scale
+    - **Preparation for SE8**: Style Guides and Rules
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of FB7**: Efficient Grammar Fuzzing
+    - **Preparation for FB8**: Parsing Inputs
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE8**: Style Guides and Rules
+        - **Publication of FB8**: Parsing Inputs

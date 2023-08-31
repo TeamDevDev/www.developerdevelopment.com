@@ -33,8 +33,26 @@ page-layout: full
 - Locate and bookmark the [Software Engineering at Google](https://abseil.io/resources/swe-book) book
 - Install the [Quarto](https://quarto.org/) system for scientific and technical publishing
 - Learn how to use [Quarto](https://quarto.org/) to create a [web site](https://quarto.org/docs/websites/)
-- Install and learn how to use the [Chasten](https://github.com/AstuteSource/chasten) for analyzing Python ASTs
+- Install and learn how to use the [Chasten](https://github.com/AstuteSource/chasten) tool for analyzing Python ASTs
 - Raise issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues) for any problems you encounter
 - Attach labels to all issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues)
 
 :::
+
+## Week 2
+
+### Monday, September 4 -- Friday, September 8
+
+#### *Introduction to Software Engineering*
+
+- **Monday**: Write a personal précis and publish the team's executive summary:
+  - **SE1**: Preface - Programming Over Time
+- **Tuesday**: Demonstrate installation and use of the following artifacts:
+  - [Chasten](https://github.com/AstuteSource/chasten): tool for analyzing Python abstract syntax trees
+  - [Fuzzing Book (FB)](https://www.fuzzingbook.org/): tools and techniques for generating tests
+  - [Debugging Book (DB)](https://www.debuggingbook.org/): tools and techniques for automated debugging
+- **Wednesday**: Write a personal précis and publish the team's executive summary:
+  - **FB1**: Introduction to Software Testing
+- **Friday**: Publish final executive summaries to the Developer Development blog:
+  - **SE1**: Preface - Programming Over Time
+  - **FB1**: Introduction to Software Testing

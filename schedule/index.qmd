@@ -58,7 +58,7 @@ page-layout: full
 - {{< iconify fa-regular sad-tear size=19px >}} **Monday**: No class
 - {{< iconify fa-solid laptop-code size=18px >}} **Tuesday**: Technical preparation for joining a software startup
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical preparation for joining a software startup
-- {{< iconify fa-solid laptop-code size=18px >}} **Friday**: Technical preparation for joining a software startup
+- {{< iconify fa-solid laptop-code size=18px >}} **Friday**: Technical and professional preparation for joining a software startup
 
 ::: {.callout-note appearance="minimal" title="Onboarding Tasks" collapse="false"}
 
@@ -191,3 +191,18 @@ page-layout: full
     - Implement and test Python functions
     - Debug defective Python functions
     - Confirm output of Python functions
+
+## Week Seven
+
+### Monday, October 9 -- Friday, October 13
+
+- {{< iconify fa-regular sad-tear size=19px >}} **Monday**: No class
+- {{< iconify fa-regular sad-tear size=19px >}} **Tuesday**: No class
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Discussion of SE4**: Knowledge Sharing
+    - **Publication of SE5**: Engineering for Equity
+- {{< iconify fa-solid laptop-code size=18px >}} **Friday**: Technical Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Discussion of FB4**: Mutation Analysis
+    - **Publication of FB5**: Mutation-Based Fuzzing

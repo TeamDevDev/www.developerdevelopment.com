@@ -308,6 +308,16 @@ div.callout-note.callout {
   opacity: 1;
 }
 
+.callout p {
+  margin-top: -.25rem !important;
+  margin-bottom: .25rem !important;
+}
+
+.callout li {
+  margin-top: -.2rem !important;
+  margin-bottom: -.2rem !important;
+}
+
 /* }}} */
 
 /* Sidebar {{{ */

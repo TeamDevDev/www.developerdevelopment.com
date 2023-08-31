@@ -4,6 +4,8 @@ toc: true
 page-layout: full
 ---
 
+## Preliminaries
+
 ::: {.callout-note appearance="minimal" title="Schedule Overview" collapse="false"}
 
 - **Week One**: Technical and Professional Onboarding
@@ -11,11 +13,41 @@ page-layout: full
     - *Week Two through Week Five*: Technical, professional, and developer development
     - *Week Six*:
       - **Monday**: assessment of individual developer development
-      - **Tuesday**: first executable examination
+      - **Tuesday**: complete the first executable examination
       - **Wednesday**: assessment of individual developer development
       - **Friday**: Demonstration of alpha version of first software project
 - **Module Two**: Introduction to Software Engineering
-    - **Week Seven**: Completion and demonstration of beta version of first software project
+    - **Week Seven**: Demonstrate the beta version of first software project
+
+:::
+
+::: {.callout-note appearance="minimal" title="Weekly Cadence" collapse="false"}
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - Team-based Discussion of prior week's reading in SE
+    - Focused individual preparation for next week's SE reading
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - Team-based Discussion of prior week's reading in either FB or DB
+    - Focused individual preparation for next week's FB or DB reading
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - Publication of next SE executive summary
+        - Publication of next FB or DB executive summary
+
+:::
+
+::: {.callout-note appearance="minimal" title="Abbreviations" collapse="false"}
+
+- SE: [Software Engineering at Google](https://abseil.io/resources/swe-book)
+- FB: [Fuzzing Book](https://www.fuzzingbook.org/)
+- DB: [Debugging Book](https://www.debuggingbook.org/)
 
 :::
 
@@ -23,12 +55,10 @@ page-layout: full
 
 ### Tuesday, August 29 -- Friday, September 1
 
-#### *Technical and Professional Onboarding*
-
-- **Monday**: No class
-- **Tuesday**: Technical preparation for joining a software startup
-- **Wednesday**: Technical preparation for joining a software startup
-- **Friday**: Technical preparation for joining a software startup
+- {{< iconify fa-regular sad-tear size=19px >}} **Monday**: No class
+- {{< iconify fa-solid laptop-code size=18px >}} **Tuesday**: Technical preparation for joining a software startup
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical preparation for joining a software startup
+- {{< iconify fa-solid laptop-code size=18px >}} **Friday**: Technical preparation for joining a software startup
 
 ::: {.callout-note appearance="minimal" title="Technical Tasks" collapse="false"}
 
@@ -43,8 +73,8 @@ page-layout: full
     - Fork the GitHub repositories for these two books
     - Clone the forked GitHub repositories to your workstation
     - Use `pip` to install each books' dependencies
-    - Run a local Jupyter Lab server that can access a book's notebooks
-    - Correctly run the Jupyter notebook for at least one chapter
+    - Run a local Jupyter Lab server that can access a book's Jupyter notebooks
+    - Correctly run the Jupyter notebook for at least one chapter in FB or DB
 - Locate and bookmark the [Software Engineering at Google](https://abseil.io/resources/swe-book) book
 - Install the [Quarto](https://quarto.org/) system for scientific and technical publishing
 - Learn how to use [Quarto](https://quarto.org/) to create a [web site](https://quarto.org/docs/websites/)
@@ -59,15 +89,18 @@ page-layout: full
 ### Monday, September 4 -- Friday, September 8
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
-  - *Write a personal précis and publish the team's executive summary*:
+  - *Write a professional précis and publish the team's executive summary*:
     - **Preparation for SE1**: Preface - Programming Over Time
 - {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
-  - *Demonstrate installation and use of the following artifacts*:
-    - [Chasten](https://github.com/AstuteSource/chasten): tool for analyzing Python abstract syntax trees
-    - [Fuzzing Book (FB)](https://www.fuzzingbook.org/): tools and techniques for generating tests
-    - [Debugging Book (DB)](https://www.debuggingbook.org/): tools and techniques for automated debugging
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Demonstrate installation and use of the following artifacts:
+        - [Chasten](https://github.com/AstuteSource/chasten): tool for analyzing Python abstract syntax trees
+        - [Fuzzing Book (FB)](https://www.fuzzingbook.org/): tools and techniques for generating tests
+        - [Debugging Book (DB)](https://www.debuggingbook.org/): tools and techniques for automated debugging
+    - Label all of the issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues)
+    - Assign team members to all of the issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues)
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
-    - *Write a personal précis and publish the team's executive summary*:
+    - *Write a professional précis and publish the team's executive summary*:
         - **Preparation for FB1**: Introduction to Software Testing
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
     - *Publish executive summaries to the Developer Development blog*:
@@ -79,16 +112,16 @@ page-layout: full
 ### Monday, September 11 -- Friday, September 15
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
-  - *Discuss the team's executive summary and write a personal précis*:
+  - *Discuss the team's executive summary and write a professional précis*:
     - **Team-based Discussion of SE1**: Preface - Programming Over Time
     - **Preparation for SE2**: What is Software Engineering?
 - {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
-  - *Demonstrate installation and use of the following artifacts*:
+  - *Collaboratively implement and deploy into production a software tool*:
     - Sprint planning
     - Project implementation
     - Project demonstration
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
-  - *Discuss the team's executive summary and write a personal précis*:
+  - *Discuss the team's executive summary and write a professional précis*:
     - **Team-based Discussion of FB1**: Introduction to Software Testing
     - **Preparation for FB2**: Coverage
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
@@ -101,16 +134,16 @@ page-layout: full
 ### Monday, September 18 -- Friday, September 22
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
-  - *Discuss the team's executive summary and write a personal précis*:
+  - *Discuss the team's executive summary and write a professional précis*:
     - **Team-based Discussion of SE2**: What is Software Engineering?
     - **Preparation for SE3**: How to Work Well on Teams
 - {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
-  - *Demonstrate installation and use of the following artifacts*:
+  - *Collaboratively implement and deploy into production a software tool*:
     - Sprint planning
     - Project implementation
     - Project demonstration
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
-  - *Discuss the team's executive summary and write a personal précis*:
+  - *Discuss the team's executive summary and write a professional précis*:
     - **Team-based Discussion of FB2**: Coverage
     - **Preparation for FB3**: Fuzzing
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
@@ -123,7 +156,7 @@ page-layout: full
 ### Monday, September 25 -- Friday, September 29
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
-  - *Discuss the team's executive summary and write a personal précis*:
+  - *Discuss the team's executive summary and write a professional précis*:
     - **Team-based Discussion of SE3**: How to Work Well on Teams
     - **Preparation for SE4**: Knowledge Sharing
 - {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
@@ -132,7 +165,7 @@ page-layout: full
     - Project implementation
     - Project demonstration
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
-  - *Discuss the team's executive summary and write a personal précis*:
+  - *Discuss the team's executive summary and write a professional précis*:
     - **Team-based Discussion of FB3**: Fuzzing
     - **Preparation for FB4**: Mutation Analysis
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development

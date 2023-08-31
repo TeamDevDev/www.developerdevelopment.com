@@ -46,23 +46,16 @@ page-layout: full
 
 ### Project Deadlines
 
-- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
-  - *Discuss the team's executive summary and write a professional précis*:
-    - Team-based discussion of prior week's reading in SE
-    - Focused individual preparation for next week's SE reading
-- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
-  - *Collaboratively implement and deploy into production a software tool*:
-    - Sprint planning
-    - Project implementation
-    - Project demonstration
-- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
-  - *Discuss the team's executive summary and write a professional précis*:
-    - Team-based Discussion of prior week's reading in either FB or DB
-    - Focused individual preparation for next week's FB or DB reading
-- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
-    - *Publish executive summaries to the Developer Development blog*:
-        - Publication of next SE executive summary
-        - Publication of next FB or DB executive summary
+- Project One: Chasten tool for automated analysis of Python projects
+    - **Week One**: Onboarding of team members
+    - **Week Two**: Official start for first project
+    - **Week Eight**: Chasten completion and project maintenance
+    - **Week Nine**: Final demonstration of the Chasten tool
+- Project Two: Astronaught tool for deletion mutation analysis of Python projects
+    - **Week Eight**: Onboarding of team members
+    - **Week Nine**: Official start for second project
+    - **Week Fifteen**: Astronaught completion and project maintenance
+    - **Week Sixteen**: Final demonstration of the Astronaught tool
 
 ::: {.callout-note appearance="minimal" title="Abbreviations" collapse="false"}
 
@@ -213,6 +206,13 @@ page-layout: full
     - Debug defective Python functions
     - Confirm output of Python functions
 
+::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
+
+Both the in-person assessment and the executable examination are cumulative in
+regards to all content previously covered between week one and week five.
+
+:::
+
 ## Week Seven
 
 ### Monday, October 9 -- Friday, October 13
@@ -316,3 +316,10 @@ page-layout: full
     - Implement and test Python functions
     - Debug defective Python functions
     - Confirm output of Python functions
+
+::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
+
+Both the in-person assessment and the executable examination are cumulative in
+regards to all content previously covered between week one and week eleven.
+
+:::

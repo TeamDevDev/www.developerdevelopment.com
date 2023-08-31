@@ -1,36 +1,28 @@
 ---
-title: Schedule
-echo: true
-jupyter: python3
+title: "Schedule"
+toc: true
+page-layout: full
 ---
 
-```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":calendar: My schedule is often full - but I look forward to our meeting!"
-)
-```
+## Week 1
 
-To arrange a meeting with me during my office hours, please try to <a
-href="https://calendar.app.google/PJcK4hv1zBNMg3Sv5">Schedule
-an Appointment</a>&mdash;you can browse my available office hours and pick a
-time slot that fits into our schedules. Once you have chosen your appointment,
-it will appear in both your Google Calendar and mine. If you would like to see
-where I am during any week of the academic semester, you may <a
-href="http://www.google.com/calendar/embed?src=gkapfham%40allegheny.edu&ctz=America/New_York">View
-My Calendar</a>&mdash;but please note that my schedule is not regularly updated
-during any of <a href="http://www.allegheny.edu">Allegheny College</a>'s breaks
-that are documented in the <a href =
-"http://sites.allegheny.edu/dean/academic-calendar/">Academic Calendar</a>.
+### Tuesday, August 29 -- Friday, September 1
 
-Individuals seeking to schedule an appointment with me should also bear in mind
-that I have previously scheduled teaching, mentoring, research, and
-administrative events that may prevent me from either holding office hours
-beyond those normally scheduled or agreeing to extra meetings outside of
-existing office hours. As such, I greatly appreciate your understanding of my
-circumstances when I must decline a meeting due to schedule constraints.
+#### *Technical and Professional Onboarding*
 
-You can also schedule an appointment with me through this widget!
+- **Monday**: No class
+- **Tuesday**: Technical preparation for joining a software startup
+- **Wednesday**: Technical preparation for joining a software startup
+- **Friday**: Technical preparation for joining a software startup
 
-<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1JEAQfUpRIlkRnAhIetnHZeUMLKTtD1Ahawn8xsXvKpxY2BntK8RmZUFOfA73-5oiQ-fOZxZP-?gv=true" style="border: 0" width="100%" height="800" frameborder="0"></iframe>
+::: {.callout-note appearance="minimal" title="Technical Tasks" collapse="false"}
+
+- Join the [Developer Development Discord](https://discord.gg/aNfn8DNEMx)
+- Install [Python 3.11](https://www.python.org/) on your development workstation
+    - Use [asdf-vm]() or [rtx]() on to install Python on MacOS or Linux
+    - Use [asdf-vm]() on Windows with WSL2 support
+    - Use the official [installers](https://www.python.org/downloads/) for Windows 10 or Windows 11
+    - Install the full Python version supporting C and Rust binding and SQLite 3
+- 
+
+:::

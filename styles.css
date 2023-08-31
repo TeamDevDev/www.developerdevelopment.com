@@ -62,12 +62,17 @@ h2,
 }
 
 h3,
-.h3,
+.h3 {
+  hyphens: auto;
+  opacity: 1;
+  margin-top: 0.25rem;
+}
+
 h4,
 .h4 {
   hyphens: auto;
   opacity: 1;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 a {
@@ -299,7 +304,8 @@ div.callout-note.callout {
 
 .callout .callout-title-container {
   overflow-wrap: anywhere;
-  color: #333333 !important;
+  color: #000 !important;
+  opacity: 1;
 }
 
 /* }}} */

@@ -4,7 +4,7 @@ toc: true
 page-layout: full
 ---
 
-## Week 1
+## Week One
 
 ### Tuesday, August 29 -- Friday, September 1
 
@@ -39,11 +39,9 @@ page-layout: full
 
 :::
 
-## Week 2
+## Week Two
 
 ### Monday, September 4 -- Friday, September 8
-
-#### *Introduction to Software Engineering*
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - *Write a personal précis and publish the team's executive summary*:
@@ -61,11 +59,9 @@ page-layout: full
         - **Publication of SE1**: Preface - Programming Over Time
         - **Publication of FB1**: Introduction to Software Testing
 
-## Week 3
+## Week Three
 
 ### Monday, September 11 -- Friday, September 15
-
-#### *Introduction to Test Coverage*
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - *Discuss the team's executive summary and write a personal précis*:
@@ -84,3 +80,25 @@ page-layout: full
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE2**: What is Software Engineering?
         - **Publication of FB2**: Coverage
+
+## Week Four
+
+### Monday, September 18 -- Friday, September 22
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a personal précis*:
+    - **Team-based Discussion of SE2**: What is Software Engineering?
+    - **Preparation for SE3**: How to Work Well on Teams
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Demonstrate installation and use of the following artifacts*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a personal précis*:
+    - **Team-based Discussion of FB2**: Coverage
+    - **Preparation for FB3**: Fuzzing
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE3**: How to Work Well on Teams
+        - **Publication of FB3**: Fuzzing

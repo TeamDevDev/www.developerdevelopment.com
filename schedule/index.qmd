@@ -64,7 +64,7 @@ page-layout: full
 
 - Join the [Developer Development Discord](https://discord.gg/aNfn8DNEMx)
 - Install [Python 3.11](https://www.python.org/) on your development workstation
-    - Use [asdf-vm](https://asdf-vm.com/) or [rtx](https://github.com/jdx/rtx) on to install Python on MacOS or Linux
+    - Use [asdf-vm](https://asdf-vm.com/) or [rtx](https://github.com/jdx/rtx) to install Python on MacOS or Linux
     - Use [asdf-vm](https://asdf-vm.com/more/faq.html#wsl2-support) on Windows with WSL2 support
     - Use the official [installers](https://www.python.org/downloads/) for Windows 10 or Windows 11
     - Install the full Python version supporting C and Rust binding and SQLite 3

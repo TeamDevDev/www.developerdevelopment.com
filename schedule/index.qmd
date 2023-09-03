@@ -10,17 +10,17 @@ page-layout: full
 
 - **Week One**: Technical and Professional Onboarding
 - **Module One**: *Introduction to Software Engineering Knowledge and Skills*
-    - **Week Two through Week Five**: Assess technical and professional development
+    - **Week Two through Week Five**: Establish your technical and professional skills
     - **Week Six**:
       - **Monday**: in-person assessment of individual developer development
-      - **Tuesday**: complete the first executable examination
+      - **Tuesday**: take the first executable examination during laboratory session
       - **Wednesday**: in-person assessment of individual developer development
       - **Friday**:  in-person assessment of individual developer development
 - **Module Two**: *Practical Software Engineering Knowledge and Skills*
-    - **Week Seven through Week Ten**: Assess technical and professional development
+    - **Week Seven through Week Ten**: Enhance your technical and professional skills
     - **Week Six**:
       - **Monday**: in-person assessment of individual developer development
-      - **Tuesday**: complete second first executable examination
+      - **Tuesday**: take the second first executable examination during laboratory session
       - **Wednesday**: in-person assessment of individual developer development
       - **Friday**:  in-person assessment of individual developer development
 
@@ -37,12 +37,13 @@ page-layout: full
     - Project demonstration
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
   - *Discuss the team's executive summary and write a professional précis*:
-    - Team-based Discussion of prior week's reading in either FB or DB
+    - Team-based discussion of prior week's reading in either FB or DB
     - Focused individual preparation for next week's FB or DB reading
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
     - *Publish executive summaries to the Developer Development blog*:
         - Publication of next SE executive summary
         - Publication of next FB or DB executive summary
+        - Confirmation of readiness for next week's in-class discussions
 
 ### Project Deadlines
 

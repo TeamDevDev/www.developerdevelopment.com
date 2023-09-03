@@ -253,7 +253,7 @@ regards to all content previously covered between week one and week five.
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE6**: How to Lead a Team
-        - **Publication of FB6**: Fuzzing with Grammars
+        - **Publication of FB7**: Fuzzing with Grammars
 
 ## Week Nine
 

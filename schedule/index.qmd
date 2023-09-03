@@ -267,6 +267,7 @@ regards to all content previously covered between week one and week five.
 - {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
     - Demonstration of completed version of the first software tool
+    - Retrospective for the implementation of the first software tool
     - Development of the second software tool
         - Sprint planning
         - Project implementation

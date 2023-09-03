@@ -328,3 +328,26 @@ Both the in-person assessment and the executable examination are cumulative in
 regards to all content previously covered between week one and week eleven.
 
 :::
+
+## Week Twelve
+
+### Monday, November 13 -- Friday, November 17
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of SE8**: Style Guides and Rules
+    - **Preparation for SE9**: Code Review
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of FB8**: Parsing Inputs
+    - **Preparation for FB9**: Reducing Failure-Inducing Inputs
+    - **Note**: Content on Reducing Failure-Inducing Inputs is also in DB
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE9**: Code Review
+        - **Publication of FB9**: Reducing Failure-Inducing Inputs

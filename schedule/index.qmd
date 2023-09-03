@@ -370,3 +370,48 @@ regards to all content previously covered between week one and week eleven.
 
 - {{< iconify fa-regular sad-tear size=19px >}} **Wednesday**: No class
 - {{< iconify fa-regular sad-tear size=19px >}} **Friday**: No class
+
+## Week Fourteen
+
+### Monday, November 27 -- Friday, December 1
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of SE10**: Style Guides and Rules
+    - **Preparation for SE11**: Testing Overview
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of DB1**: Introduction to Debugging
+    - **Preparation for DB2**: Tracing Executions
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE11**: Testing Overview
+        - **Publication of DB2**: Tracing Executions
+
+## Week Fifteen
+
+### Monday, December 4 -- Friday, December 8
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of SE11**: Testing Overview
+    - **Preparation for SE12**: Unit Testing
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+    - **Astronaught completion and start of project maintenance**
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of DB2**: Tracing Executions
+    - **Preparation for DB3**: Assertions
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE12**: Unit Testing
+        - **Publication of DB3**: Assertions

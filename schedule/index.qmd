@@ -246,6 +246,7 @@ regards to all content previously covered between week one and week five.
         - Sprint planning
         - Project implementation
         - Project demonstration
+        - **Chasten completion and start of project maintenance**
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
   - *Discuss the team's executive summary and write a professional précis*:
     - **Team-based Discussion of FB5**: Mutation-Based Fuzzing

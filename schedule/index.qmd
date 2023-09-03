@@ -415,3 +415,21 @@ regards to all content previously covered between week one and week eleven.
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE12**: Unit Testing
         - **Publication of DB3**: Assertions
+
+## Week Sixteen
+
+### Monday, December  11 -- Friday, December 15
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of SE12**: Unit Testing
+    - **Preparation for DB4**: Statistical Debugging (Automatic Fault Localization)
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+      - Demonstration of completed version of the second software tool
+      - Retrospective for the implementation of the second software tool
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of DB4**: Statistical Debugging (Automatic Fault Localization)
+        - **Final review of all content on Developer Development web site**
+- {{< iconify fa-regular sad-tear size=19px >}} **Wednesday**: No class
+- {{< iconify fa-regular sad-tear size=19px >}} **Friday**: No class

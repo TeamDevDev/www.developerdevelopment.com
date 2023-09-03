@@ -351,3 +351,22 @@ regards to all content previously covered between week one and week eleven.
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE9**: Code Review
         - **Publication of FB9**: Reducing Failure-Inducing Inputs
+
+## Week Thirteen
+
+### Monday, November 20 -- Friday, November 24
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discuss the team's executive summary and write a professional précis*:
+    - **Team-based Discussion of SE9**: Code Review
+    - **Preparation for SE10**: Documentation
+
+- {{< iconify game-icons team-idea size=18px >}} **Tuesday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Team-based Discussion of FB9**: Reducing Failure-Inducing Inputs
+        - **Preparation for DB1**: Introduction to Debugging
+        - **Publication of SE10**: Documentation
+        - **Publication of DB1**: Introduction to Debugging
+
+- {{< iconify fa-regular sad-tear size=19px >}} **Wednesday**: No class
+- {{< iconify fa-regular sad-tear size=19px >}} **Friday**: No class

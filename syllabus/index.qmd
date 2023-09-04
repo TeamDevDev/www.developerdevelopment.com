@@ -98,11 +98,38 @@ institution, organization, community, or population.
 
 Allegheny College’s educational program is designed so that its graduates are able to:
 
-- Think critically and creatively
+- **AC-1**: Think critically and creatively.
 
-- Communicate clearly and persuasively as speakers and writers;
+- **AC-2**: Communicate clearly and persuasively as speakers and writers.
 
-- Invoke multiple ways of understanding to organize and evaluate evidence, and
-to interpret and make sense of their experiences and the experiences of others;
+- **AC-3**: Invoke multiple ways of understanding to organize and evaluate
+evidence, and to interpret and make sense of their experiences and the
+experiences of others.
 
-- Apply their knowledge and learning to engage in informed debate, and to analyze and solve problems.
+- **AC-4**: Apply their knowledge and learning to engage in informed debate,
+and to analyze and solve problems.
+
+Computer Science 203 at Allegheny College is a core course in the Software
+Engineering major. Graduates with the Software Engineering major attain these
+learning objectives:
+
+- **SE-1**: While working in a team, can effectively design, implement,
+evaluate, improve, and document a solution to a problem delivered as a
+maintainable software system.
+
+  - Enables attainment of **AC-1** and **AC-4**
+
+- **SE-2**: Demonstrates competency in the theories, models, and practices of
+project domains that require the engineering of software.
+
+  - Enables attainment of **AC-1** and **AC-3**
+
+- **SE-3**: Can effectively manage and predict the cost, scope, and deadline of
+a software engineering project.
+
+  - Enables attainment of **AC-2** and **AC-4**
+
+- **SE-4**: Uses effective oral and written communication methods to explain
+both the technical and product-use details of a software artifact.
+
+  - Enables attainment of **AC-2** and **AC-3**

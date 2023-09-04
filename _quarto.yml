@@ -80,3 +80,4 @@ format:
     # and always open them in a new browser window
     link-external-icon: true
     link-external-newwindow: true
+    link-external-filter: '^(?:http:|https:)\/\/www\.developerdevelopment\.com\/custom'

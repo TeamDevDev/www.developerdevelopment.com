@@ -597,7 +597,8 @@ div.quarto-grid-item .listing-categories .listing-category:hover {
 }
 
 #quarto-margin-sidebar .quarto-listing-category {
-  padding-top: 0;
+  padding-top: -1rem !important;
+  line-height: 1.25rem !important;
   font-size: 0.75rem;
 }
 

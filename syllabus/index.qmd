@@ -199,3 +199,82 @@ and **DB**:
 - Use the Jupyter Lab server to locate and execute notebooks for chapters in **FB** and **DB**
 - Use the [Quarto](https://quarto.org/) system to publish a professional précis for each reading assignment
 - Collaboratively use [Quarto](https://quarto.org/) to publish an article's executive summary to this web site
+
+### Course Policies
+
+#### Assessment
+
+The grade that a student receives in this class will be based on the following
+categories. All of these percentages are approximate and, if the need to do so
+presents itself, the course instructor may change the assigned percentages
+during the academic semester.
+
+| Category                 | Percentage |
+|--------------------------|------------|
+| Team Participation       |  5%        |
+| Midterm Examinations     |  10%       |
+| Final Examination        |  15%       |
+| Professional Development |  15%       |
+| Technical Development    |  15%       |
+| Project Development      |  40%       |
+
+These grading categories have the following definitions:
+
+- **Team Participation**: Students are expected to regularly attend and
+actively participate in all class and project development sessions. After either
+an unexcused absence or a late attendance to a either a class or project
+development session on two separate occasions, a student's course participation
+grade will be reduced by half a percentage for each additional time they are
+absent or late in an unexcused fashion. Students who need to miss class or
+attend class late for an excused reason should communicate their situation to
+the course instructor as soon as possible. The content that a student commits to
+their GitHub repositories during the weeks devoted to proactive review are also
+a component of a student's grade for class participation.
+
+- **Midterm Examinations**: The midterms are online cumulative assessments
+covering all prior material from the class, programming, and laboratory
+sessions, as outlined on the course schedule. Unless prior arrangements are made
+with the instructor, all students should use their computer to take this test on
+the scheduled date and to complete it in the stated location while taking no
+more than the required amount of time. Each midterm is an executable examination
+that a student will complete through the use of GitHub, VS Code, and the
+programming tools installed on their laptops.
+
+- **Final Examination**: The final is an online cumulative assessment covering
+all of the material from the class, programming, and laboratory sessions, as
+outlined on the course schedule. Unless prior arrangements are made with the
+instructor, all students should use their computer to take this test on the
+scheduled date and to complete it in the stated location while taking no more
+than the required amount of time. The cumulative final is an executable
+examination that a student will complete through the use of GitHub, VS Code, and
+the programming tools installed on their laptops.
+
+- **Professional Development**: Graded on a checkmark basis and building on
+material in the textbook and the content covered during that week's in-person
+classroom sessions, source code surveys have the following goals: (i) help a
+learner to demonstrate that they can remember learned material by recalling
+facts, basic concepts, and answers to questions presented in the textbook and on
+the course web site and (ii) allow a learner to demonstrate an understanding of
+facts and ideas by translating, interpreting, and stating the main technical
+ideas presented through the textbook and course web site.
+
+- **Technical Development**: Graded on a checkmark basis and building on material
+available in the textbook and the content covered during that week's in-person
+classroom session, the programming projects further equip a learner to solve new
+problems in the field of data abstraction by applying &mdash; in a new way
+&mdash; their knowledge of the facts and techniques of data abstraction and
+rigorous Python programming.
+
+- **Project Development**: These assignments invite students to explore
+different techniques for rigorously designing, implementing, evaluating, and
+documenting real-world Python programs. These assignments also encourage
+students to use tools like a text editor, a terminal window, and a modern
+Python development environment to implement functions that strike the right
+balance between understandability, generalizability, and specialization.
+Students will also use the data collected from running experiments to
+evaluate the implementation of a Python function as they consider trade-offs
+between, for instance, its efficiency, flexibility, and correctness.
+
+#### Assessment Policies
+
+Students 

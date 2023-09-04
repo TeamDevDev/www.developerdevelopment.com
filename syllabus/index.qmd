@@ -133,3 +133,11 @@ a software engineering project.
 both the technical and product-use details of a software artifact.
 
   - Enables attainment of **AC-2** and **AC-3**
+
+The following list illustrates how the learning objectives for Allegheny College
+are attained through the successful completion of Computer Science 203.
+
+- **AC-1** is attained through the course learning objectives **SE-1** and **SE-2**
+- **AC-2** is attained through the course learning objectives **SE-3** and **SE-4**
+- **AC-3** is attained through the course learning objectives **SE-2** and **SE-4**
+- **AC-4** is attained through the course learning objectives **SE-1** and **SE-3**

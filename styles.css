@@ -116,7 +116,7 @@ li,
 }
 
 pre {
-  font-family: "IBM Plex Mono" !important;
+  font-family: "Noto Sans Mono" !important;
   overflow-x: auto !important;
   white-space: pre-wrap !important;
   white-space: -moz-pre-wrap !important;
@@ -126,6 +126,15 @@ pre {
   background-color: initial;
   padding: initial;
   border: initial;
+}
+
+code {
+  font-size: 0.875em;
+  color: #1E88E5;
+  background-color: #f7f7f7;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  word-wrap: break-word;
 }
 
 .blockquote {
@@ -317,13 +326,13 @@ div.callout-note.callout {
 }
 
 .callout p {
-  margin-top: -.25rem !important;
-  margin-bottom: .25rem !important;
+  margin-top: -0.25rem !important;
+  margin-bottom: 0.25rem !important;
 }
 
 .callout li {
-  margin-top: -.2rem !important;
-  margin-bottom: -.2rem !important;
+  margin-top: -0.2rem !important;
+  margin-bottom: -0.2rem !important;
 }
 
 /* }}} */

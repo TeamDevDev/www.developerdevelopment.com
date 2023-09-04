@@ -212,8 +212,9 @@ during the academic semester.
 | Category                 | Percentage |
 |--------------------------|------------|
 | Team Participation       |  5%        |
+| In-person Assessments    |  5%        |
 | Midterm Examinations     |  10%       |
-| Final Examination        |  15%       |
+| Final Examination        |  10%       |
 | Professional Development |  15%       |
 | Technical Development    |  15%       |
 | Project Development      |  40%       |
@@ -364,17 +365,17 @@ instructor will sometimes use email to send announcements about important
 matters such as changes in the schedule. It is your responsibility to check your
 email at least once a day and to ensure that you can reliably send and receive
 emails. This class policy is based on the statement about the use of email that
-appears in *The Compass*, the College's student handbook; please see the
+appears in *The Compass*, the College's student handbook; please see the course
 instructor if you do not have this handbook.
 
 #### Honor Code
 
-The Academic Honor Program that governs the entire academic program at
-Allegheny College is described in the Allegheny Academic Bulletin. The Honor
-Program applies to all work that is submitted for academic credit or to meet
-non-credit requirements for graduation at Allegheny College. This includes all
-work assigned for this class (e.g., examinations and course assignments). All
-students who have enrolled in the College will work under the Honor Program.
+The Academic Honor Program that governs the entire academic program at Allegheny
+College is described in the Allegheny Academic Bulletin. The Honor Program
+applies to all work that is submitted for academic credit or to meet non-credit
+requirements for graduation at Allegheny College. This includes all work
+assigned for this class (e.g., executable examinations and course assignments).
+All students who have enrolled in the College will work under the Honor Program.
 Each student who has matriculated at the College has acknowledged the following
 Honor Code pledge:
 
@@ -382,17 +383,18 @@ Honor Code pledge:
 > defined in the Honor Code, and to maintain the integrity of both
 > myself and the College community as a whole.
 
+#### Effective Programming
+
+
+
 #### Disability Services
 
-The Americans with Disabilities Act (ADA) is a federal anti-discrimination
-statute that provides comprehensive civil rights protection for persons with
-disabilities. Among other things, this legislation requires all students with
-disabilities be guaranteed a learning environment that provides for reasonable
-accommodation of their disabilities. Students with disabilities who believe they
-may need accommodations in this class are encouraged to contact Disability
-Services at 814-332-2898. Disability Services is part of the Learning Commons
-and is located in Pelletier Library. Please do this as soon as possible to
-ensure that approved accommodations are implemented in a timely fashion.
+Students with disabilities who believe they may need accommodations in this
+class are encouraged to contact Student Accessibility and Support Services at
+814-332-2898 or `studentaccessibility@allegheny.edu`. SASS is located in the
+Center for Student Success in Pelletier Library. Please do this as soon as
+possible to ensure that approved accommodations are implemented in a timely
+fashion.
 
 ### Welcome Message
 
@@ -405,13 +407,3 @@ people. Moreover, the design, implementation, evaluation, and documentation of
 Python-based software are exciting and rewarding activities! The course
 instructor invites you to proactively pursue, with great enthusiasm and vigor,
 this adventure in data abstraction and rigorous Python programming.
-
-???+ note
-
-    This syllabus is for learners who enrolled in a for-credit Computer Science
-    class at Allegheny College. Even though external learners are not bound by
-    the rules in this syllabus, they can rely on the team of [programming
-    experts](https://github.com/ProactiveProgrammers/www.proactiveprogrammers.com/graphs/contributors)
-    and the members of the [proactive
-    community](/proactive-community/introduction-proactive-community.md) to
-    complete the projects on this web site.

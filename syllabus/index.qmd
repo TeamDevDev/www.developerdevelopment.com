@@ -68,7 +68,7 @@ own departmentally approved laptop in this course; a limited number of laptops
 are available for use during class and lab sessions.
 
 - **Prerequisite**: CMPSC 101
-- **Distribution Requirements**: SB, SP.
+- **Distribution Requirements**: SB, SP
 
 ::: {.callout-note appearance="minimal" title="What do these distribution requirements mean?" collapse="false"}
 

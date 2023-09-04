@@ -40,16 +40,16 @@ that, by necessity, the meeting before yours may sometimes run late.
 ### Schedule Overview
 
 - **Discussion, Writing, and Programming Sessions**
-  - *Developing Professional Skills*: Monday, 9 AM -- 9:50 AM, Alden 109
+  - *Developing Professional Skills*: Monday, 9:00 AM -- 9:50 AM, Alden 109
     - SE Book: [Software Engineering at Google](https://abseil.io/resources/swe-book)
     - First half of class: Discuss executive summaries for chapters read last week
     - Second half of class: Write executive summaries for next week's chapters
-  - *Developing Technical Skills*: Wednesday, 9 AM -- 9:50 AM, Alden 109
+  - *Developing Technical Skills*: Wednesday, 9:00 AM -- 9:50 AM, Alden 109
     - FB Book: [Fuzzing Book](https://www.fuzzingbook.org/)
     - DB Book: [Debugging Book](https://www.debuggingbook.org/)
     - First half of class: Discuss executive summaries for chapters read last week
     - Second half of class: Write executive summaries for next week's chapters
-  - *Developing as Developers*: Friday, 9 AM -- 9:50 AM, Alden 109
+  - *Developing as Developers*: Friday, 9:00 AM -- 9:50 AM, Alden 109
     - First half of class: Finish writing executive summaries of SE and FB/DB
     - Second half of class: Implement and demonstrate software engineering project
 - **Collaborative Software Engineering**: Tuesday, 2:30 PM -- 4:20 PM, Alden 109

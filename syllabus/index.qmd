@@ -53,3 +53,56 @@ that, by necessity, the meeting before yours may sometimes run late.
     - First half of class: Finish writing executive summaries of SE and FB/DB
     - Second half of class: Implement and demonstrate software engineering project
 - **Collaborative Software Engineering**: Tuesday, 2:30 PM -- 4:20 PM, Alden 109
+
+### Course Description
+
+A human-centric study of the principles used during the engineering of
+high-quality software systems. In addition to examining the human behaviors and
+social processes undergirding software development methodologies, students
+participate in teams tasked with designing, developing, and delivering a
+significant software application for a customer. During a weekly laboratory
+session, students use state-of-the-art software engineering, management, and
+communication tools to complete projects, reporting on their results through
+both written documents and oral presentations. Students are invited to use their
+own departmentally approved laptop in this course; a limited number of laptops
+are available for use during class and lab sessions.
+
+- **Prerequisite**: CMPSC 101
+- **Distribution Requirements**: SB, SP.
+
+::: {.callout-note appearance="minimal" title="What do these distribution requirements mean?" collapse="false"}
+
+- **Scientific Process and Knowledge (SP)**: Courses involving Scientific
+Process and Knowledge aim to convey an understanding of what is known or can be
+known about the natural world; apply scientific reasoning towards the analysis
+and synthesis of scientific information; and create scientifically literate
+citizens who can engage productively in problem solving.
+
+- **Learning Outcome**: Students who successfully complete this requirement will
+demonstrate an understanding of the nature, approaches, and domain of scientific
+inquiry.
+
+- **Social Behavior and Institutions (SB)**: The study of Social Behavior and
+Institutions encompasses a broad range of disciplines that use a variety of
+methodologies to describe, explain, or predict human behavior, social processes,
+and institutional structures as they interact with their environments.
+
+- **Learning Outcome**: Students who successfully complete this requirement will
+demonstrate an understanding of at least one methodology used to describe,
+explain, or predict human behavior at the level of the individual, small group,
+institution, organization, community, or population.
+
+:::
+
+### Learning Objectives
+
+Allegheny College’s educational program is designed so that its graduates are able to:
+
+- Think critically and creatively
+
+- Communicate clearly and persuasively as speakers and writers;
+
+- Invoke multiple ways of understanding to organize and evaluate evidence, and
+to interpret and make sense of their experiences and the experiences of others;
+
+- Apply their knowledge and learning to engage in informed debate, and to analyze and solve problems.

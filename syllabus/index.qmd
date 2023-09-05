@@ -131,7 +131,8 @@ experiences of others.
 and to analyze and solve problems.
 
 Computer Science 203 at Allegheny College is a core course in the Software
-Engineering major. Graduates with the Software Engineering major attain these
+Engineering major. Graduates with the Software Engineering major, who all take
+the Computer Science 203 course, must demonstrate their attainment of these
 learning objectives:
 
 - **SE-1**: While working in a team, can effectively design, implement,
@@ -155,12 +156,17 @@ both the technical and product-use details of a software artifact.
 
   - Enables the attainment of **AC-2** and **AC-3**
 
-The following list itemizes the three main types of activities in Computer
-Science 203 and illustrates their connection to the course learning objectives:
+The following list itemizes the three types of activities and two types of
+assessments in Computer Science 203 and illustrates their connection to the
+course learning objectives:
 
-- **Professional Development**: **SE-3** and **SE-4**
-- **Technical Development**: **SE-1** and **SE-2**
-- **Project Development**:  **SE-1** through **SE-4**
+- *Course Activities*:
+  - **Technical Development**: **SE-1** and **SE-2**
+  - **Professional Development**: **SE-3** and **SE-4**
+  - **Project Development**:  **SE-1** through **SE-4**
+- *Course Assessments*:
+  - **Executable Examinations**: **SE-1** and **SE-2**
+  - **In-Person Assessments**: **SE-3** and **SE-4**
 
 Finally, the following list illustrates how the learning objectives for
 Allegheny College are attained through the successful completion of Computer

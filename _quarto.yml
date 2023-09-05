@@ -78,6 +78,6 @@ format:
     appendix-style: default
     # highlight external links in a special fashion
     # and always open them in a new browser window
-    link-external-icon: true
+    link-external-icon: false
     link-external-newwindow: true
     link-external-filter: '^(?:http:|https:)\/\/www\.developerdevelopment\.com\/custom'

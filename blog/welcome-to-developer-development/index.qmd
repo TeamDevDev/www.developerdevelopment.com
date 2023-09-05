@@ -8,5 +8,6 @@ description: <em>Check these resources to start to develop as a developer!</em>
 page-layout: full
 ---
 
+The Developer Development
 
 {{< include /_back-blog.qmd >}}

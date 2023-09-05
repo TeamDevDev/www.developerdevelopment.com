@@ -43,16 +43,37 @@ that, by necessity, the meeting before yours may sometimes run late.
   - *Developing Professional Skills*: Monday, 9:00 AM -- 9:50 AM, Alden 109
     - SE Book: [Software Engineering at Google](https://abseil.io/resources/swe-book)
     - First half of class: Discuss executive summaries for chapters read last week
-    - Second half of class: Write executive summaries for next week's chapters
+    - Second half of class: Publish a professional précis for next week's chapters
   - *Developing Technical Skills*: Wednesday, 9:00 AM -- 9:50 AM, Alden 109
     - FB Book: [Fuzzing Book](https://www.fuzzingbook.org/)
     - DB Book: [Debugging Book](https://www.debuggingbook.org/)
     - First half of class: Discuss executive summaries for chapters read last week
-    - Second half of class: Write executive summaries for next week's chapters
+    - Second half of class: Publish a professional précis for next week's chapters
   - *Developing as Developers*: Friday, 9:00 AM -- 9:50 AM, Alden 109
-    - First half of class: Finish writing executive summaries of SE and FB/DB
-    - Second half of class: Implement and demonstrate software engineering project
+      - Review the professional précis documents written by team members
+      - Create an executive summary for the week's professional skills
+      - Create an executive summary for the week's professional skills
+      - Publish the executive summaries to the Developer Development web site
+      - Confirmation of readiness for next week's in-class discussions
+      - When needed, implement and demonstrate software engineering project
 - **Collaborative Software Engineering**: Tuesday, 2:30 PM -- 4:20 PM, Alden 109
+
+::: {.callout-note appearance="minimal" title="Active Learning"}
+
+With the goal of ensuring that every student develops as a developer, active
+learning plays a central role in the Software Engineering course. This means
+that you will be actively publishing your insights through blog post articles,
+in accordance with advice from well-known software engineers like [Addy
+Osmani](https://addyosmani.com/), who recently published a blog post entitled
+["Write about what you learn. It pushes you to understand topics
+better."](https://addyosmani.com/blog/write-learn/) You will also be called on
+to actively lead and participate in class discussions every week. One key task
+that you will complete every week involves running, writing about, and
+implementing program source code and publishing program documentation. Aligned
+with course goals, you will complete out-of-class programming and writing in
+preparation for in-class discussions.
+
+:::
 
 ### Course Description
 

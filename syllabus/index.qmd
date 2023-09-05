@@ -177,7 +177,7 @@ Science 203.
 - **AC-3** is attained through the course learning objectives **SE-2** and **SE-4**
 - **AC-4** is attained through the course learning objectives **SE-1** and **SE-3**
 
-::: {.callout-note appearance="minimal" title="Key Insight" collapse="false"}
+::: {.callout-note appearance="minimal" title="Developing as Developers" collapse="false"}
 
 Students who develop both **professionally** and **technically** are effectively
 undertaking the task of **developer development**, which is both the theme and
@@ -226,6 +226,23 @@ and **DB**:
 - Use the Jupyter Lab server to locate and execute notebooks for chapters in **FB** and **DB**
 - Use the [Quarto](https://quarto.org/) system to publish a professional précis for each reading assignment
 - Collaboratively use [Quarto](https://quarto.org/) to publish an article's executive summary to this web site
+
+The course will also leverage excerpts from the following supporting text books:
+
+- [Software Engineering - The Soft Parts](https://play.google.com/store/books/details?id=2SmzEAAAQBAJ), by Addy Osmani
+- [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php), by John Ousterhout
+- [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php), by John Ousterhout
+- [How to Write Good Programs: A Guide for Students](https://www.cambridge.org/core/books/how-to-write-good-programs/6CBDD8A564E0899D54140700E90601C4), by Perdita Stevens
+- [The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month), by Frederick P. Brooks, Jr.
+
+::: {.callout-note appearance="minimal" title="Accessing the Supporting Textbooks" collapse="false"}
+
+Since the latter four books in the above list are not open-access, the course
+instructor will maintain a copy on reserve that will be available during the
+class and laboratory sessions.
+
+:::
+
 
 ### Course Policies
 

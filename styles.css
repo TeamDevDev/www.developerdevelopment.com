@@ -619,6 +619,8 @@ td,
 th {
   border-style: none !important;
   border-width: 0;
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2em !important;
 }
 
 /* }}} */

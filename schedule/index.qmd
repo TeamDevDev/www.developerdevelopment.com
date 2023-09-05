@@ -25,11 +25,14 @@ page-layout: full
       - **Friday**:  in-person assessment of individual developer development
 - **Module Three**: *Advanced Software Engineering Knowledge and Skills*
     - **Week Eleven through Week Sixteen**: Enhance your technical and professional skills
-    - **Week **:
-      - **Monday**: in-person assessment of individual developer development
-      - **Tuesday**: take the second first executable examination during laboratory session
-      - **Wednesday**: in-person assessment of individual developer development
-      - **Friday**:  in-person assessment of individual developer development
+    - **Week Seventeen**:
+      - **Thursday, December 14, 2023 at 9:00 AM**: Executable Examination
+        - *Demonstrate technical skills in software engineering*:
+          - Use GitHub and GitHub Actions
+          - Use text editor and terminal window
+          - Implement and test Python functions
+          - Debug defective Python functions
+          - Confirm output of Python functions
 
 ### Weekly Cadence
 

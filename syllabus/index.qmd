@@ -281,27 +281,26 @@ activities like viewing email, social media, or other content not about software
 engineering.
 
 - **Midterm Examinations**: The two midterm examinations are online cumulative
-assessments covering all prior material from the class, programming, and
-laboratory sessions, as outlined on the course schedule. Unless prior
-arrangements are made with the instructor, all students should use their
-computer to take this test on the scheduled date and to complete it in the
-stated location while taking no more than the required amount of time. Each
-midterm is an executable examination that a student will complete through the
-use of GitHub, VS Code, and the programming tools installed on their laptops.
+assessments covering all prior material from the course sessions, as outlined on
+the [course schedule](../schedule/index.qmd). Unless prior arrangements are made
+with the instructor, all students should use their computer to take these tests
+on the scheduled date and to complete it in the stated location while taking no
+more than the required amount of time. Each midterm is an executable examination
+that a student will complete through the use of GitHub, VS Code, and the
+programming tools installed on their laptops.
 
 - **Final Examination**: The final is an online cumulative assessment covering
-all of the material from the professional development, technical development,
-project development, and developer development sessions, as outlined on the
+all of the material during all of the course sessions, as outlined on the
 [course schedule](../schedule/index.qmd). Unless prior arrangements are made
-with the instructor, all students should use their computer to take this test on
-the scheduled date and to complete it in the stated location while taking no
-more than the required amount of time. The cumulative final is an executable
-examination that a student will complete through the use of GitHub, VS Code, and
-the programming tools installed on their laptops.
+with the course instructor, all students should use their computer to take the
+final examination on the scheduled date and to complete it in the stated
+location while taking no more than the required amount of time. The cumulative
+final is an executable examination that a student will complete through the use
+of GitHub, VS Code, and the programming tools installed on their laptops.
 
 - **In-Person Assessments**: The two in-person assessments are cumulative
 evaluations conducted through a in-person conversation with the course
-instructor. All students should be prepared to answer at least one question
+instructor. All students should be prepared to answer at least one question each
 about their attainment of professional and technical skills and the source code
 and documentation of the software project(s).
 

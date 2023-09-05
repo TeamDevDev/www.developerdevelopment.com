@@ -57,20 +57,20 @@ page-layout: full
 
 ### Project Deadlines
 
-- Project One: Chasten tool for automated analysis of Python projects
+- **Project One**: Chasten tool for automated analysis of Python projects
     - **Week One**: Onboarding of team members
     - **Week Two**: Official start for first project
     - **Week Eight**: Chasten completion and project maintenance
     - **Week Nine**: Final demonstration of the Chasten tool
     - **Week Nine**: Retrospective for implementation of Chasten
-- Project Two: Astronaught tool for deletion mutation analysis of Python projects
+- **Project Two**: Astronaught tool for deletion mutation analysis of Python projects
     - **Week Eight**: Onboarding of team members
     - **Week Nine**: Official start for second project
     - **Week Fifteen**: Astronaught completion and project maintenance
     - **Week Sixteen**: Final demonstration of the Astronaught tool
     - **Week Sixteen**: Retrospective for implementation of Astronaught
 
-::: {.callout-note appearance="minimal" title="Abbreviations" collapse="false"}
+::: {.callout-note appearance="minimal" title="Textbook Abbreviations" collapse="false"}
 
 - SE: [Software Engineering at Google](https://abseil.io/resources/swe-book)
 - FB: [Fuzzing Book](https://www.fuzzingbook.org/)

@@ -177,6 +177,9 @@ Science 203.
 - **AC-3** is attained through the course learning objectives **SE-2** and **SE-4**
 - **AC-4** is attained through the course learning objectives **SE-1** and **SE-3**
 
+All four of the course's learning objectives support the **SP** and **SB**
+distribution requirements.
+
 ::: {.callout-note appearance="minimal" title="Developing as Developers" collapse="false"}
 
 Students who develop both **professionally** and **technically** are effectively

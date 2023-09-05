@@ -7,8 +7,9 @@ name: Publish
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+
+  # pull_request:
+  #   branches: [ master ]
 
 # Jobs for setup, rendering, and publishing
 # for the web site, using Python, Poetry,

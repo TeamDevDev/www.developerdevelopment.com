@@ -91,7 +91,7 @@ are available for use during class and lab sessions.
 - **Prerequisite**: CMPSC 101
 - **Distribution Requirements**: SB, SP
 
-::: {.callout-note appearance="minimal" title="What do these distribution requirements mean?" collapse="false"}
+::: {.callout-note appearance="minimal" title="Explaining Distribution Requirements" collapse="false"}
 
 - **Scientific Process and Knowledge (SP)**: Courses involving Scientific
 Process and Knowledge aim to convey an understanding of what is known or can be

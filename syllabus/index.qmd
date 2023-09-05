@@ -266,7 +266,7 @@ during the academic semester.
 | Technical Development    |  15%       |
 | Project Development      |  40%       |
 
-These grading categories have the following definitions:
+These assessment categories have the following definitions:
 
 - **Team Participation**: Students are expected to regularly attend and actively
 participate in all class and project development sessions. After either an
@@ -280,23 +280,30 @@ grade will be reduced if they are observed undertaking non-course-related
 activities like viewing email, social media, or other content not about software
 engineering.
 
-- **Midterm Examinations**: The midterms are online cumulative assessments
-covering all prior material from the class, programming, and laboratory
-sessions, as outlined on the course schedule. Unless prior arrangements are made
-with the instructor, all students should use their computer to take this test on
-the scheduled date and to complete it in the stated location while taking no
-more than the required amount of time. Each midterm is an executable examination
-that a student will complete through the use of GitHub, VS Code, and the
-programming tools installed on their laptops.
+- **Midterm Examinations**: The two midterm examinations are online cumulative
+assessments covering all prior material from the class, programming, and
+laboratory sessions, as outlined on the course schedule. Unless prior
+arrangements are made with the instructor, all students should use their
+computer to take this test on the scheduled date and to complete it in the
+stated location while taking no more than the required amount of time. Each
+midterm is an executable examination that a student will complete through the
+use of GitHub, VS Code, and the programming tools installed on their laptops.
 
 - **Final Examination**: The final is an online cumulative assessment covering
-all of the material from the class, programming, and laboratory sessions, as
-outlined on the course schedule. Unless prior arrangements are made with the
-instructor, all students should use their computer to take this test on the
-scheduled date and to complete it in the stated location while taking no more
-than the required amount of time. The cumulative final is an executable
+all of the material from the professional development, technical development,
+project development, and developer development sessions, as outlined on the
+[course schedule](../schedule/index.qmd). Unless prior arrangements are made
+with the instructor, all students should use their computer to take this test on
+the scheduled date and to complete it in the stated location while taking no
+more than the required amount of time. The cumulative final is an executable
 examination that a student will complete through the use of GitHub, VS Code, and
 the programming tools installed on their laptops.
+
+- **In-Person Assessments**: The two in-person assessments are cumulative
+evaluations conducted through a in-person conversation with the course
+instructor. All students should be prepared to answer at least one question
+about their attainment of professional and technical skills and the source code
+and documentation of the software project(s).
 
 - **Professional Development**: Graded on a checkmark basis and building on
 material in the textbook and the content covered during that week's in-person

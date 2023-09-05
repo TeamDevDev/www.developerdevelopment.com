@@ -207,7 +207,7 @@ in these ways:
 - **Technical Development** as a software engineer:
   - Active engagement with content in **FB** and **DB**
   - Publication of a professional précis of each reading assignment on personal web site
-  - Publication of an team-based executive summary on this web site
+  - Publication of a team-based executive summary on this web site
 - **Project Development** to hone professional and technical knowledge and skills:
   - Application of **SE** to technical and professional tasks during project engineering
   - Application of **FB** and **DB** to the technical tasks during project engineering

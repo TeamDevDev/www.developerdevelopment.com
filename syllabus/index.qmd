@@ -161,12 +161,12 @@ assessments in Computer Science 203 and illustrates their connection to the
 course learning objectives:
 
 - *Course Activities*:
-  - **Technical Development**: **SE-1** and **SE-2**
-  - **Professional Development**: **SE-3** and **SE-4**
-  - **Project Development**:  **SE-1** through **SE-4**
+  - **Technical Development**: Develops **SE-1** and **SE-2**
+  - **Professional Development**: Develops **SE-3** and **SE-4**
+  - **Project Development**: Develops **SE-1** through **SE-4**
 - *Course Assessments*:
-  - **Executable Examinations**: **SE-1** and **SE-2**
-  - **In-Person Assessments**: **SE-3** and **SE-4**
+  - **Executable Examinations**: Assesses **SE-1** and **SE-2**
+  - **In-Person Assessments**: Assesses **SE-3** and **SE-4**
 
 Finally, the following list illustrates how the learning objectives for
 Allegheny College are attained through the successful completion of Computer

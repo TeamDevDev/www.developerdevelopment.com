@@ -427,8 +427,7 @@ is merged into main branch of a GitHub repository.
 
 #### Assessment Policies
 
-Students who are members of this course's software development team must abide
-by the following assessment policies:
+Students must abide by the following assessment policies:
 
 ##### Assignment Submission
 
@@ -438,13 +437,15 @@ Server](https://discord.gg/aNfn8DNEMx). All reflections on and documentation of
 professional development, technical development, and project development should
 be committed to private GitHub repositories. In contrast, the publication of the
 professional précis that a student writes each week should be published to their
-Quarto-based web site hosted on Netlify. Finally, the collaboratively published
-executive summaries should be published on the Developer Development web site
-and the completed version of each software project should be available in the
-project's public GitHub repository. No credit will be awarded for any course
-work that you submit to the incorrect GitHub repository or web site. Unless
-special arrangements are made with the instructor, no work will be accepted
-after the deadline.
+Quarto-based web site hosted on Netlify. The feedback that a student shares with
+their professional précis partner should be evident in the GitHub repository for
+that partner's web site. Finally, the collaboratively published executive
+summaries should be reviewed and discussed through GitHub and published on the
+Developer Development web site and the completed version of each software
+project should be available in the project's public GitHub repository. No credit
+will be awarded for any course work that you submit to the incorrect GitHub
+repository or web site. Unless special arrangements are made with the
+instructor, no work will be accepted after the deadline.
 
 ##### Assignment Evaluation
 

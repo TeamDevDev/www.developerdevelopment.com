@@ -26,29 +26,38 @@ tested, and maintained according to industry best practices.
 
 With the goal of enabling effective developer development, this web site
 features a sixteen-week schedule filled with activities that support
-professional development, technical development, and project development.
+the development of your professional and technical capacities and walk you
+through the implementation and release of two major software projects.
+Although this site is best used by an on-campus learner in the [Department of
+Computer and information Science](https://www.cs.allegheny.edu/) at [Allegheny
+College](https://allegheny.edu/), the resources and projects are all publicly
+available. For instance, the following provides a list of the three textbooks
+that developing developers use to hone their professional and technical skills
+during sixteen weeks of personal growth:
 
-- [Software Engineering at Google](https://abseil.io/resources/swe-book) - abbreviated on this site as **SE**
-- [Fuzzing Book](https://www.fuzzingbook.org/) -- abbreviated on this site as **FB**
-- [Debugging Book](https://www.debuggingbook.org/) -- abbreviated on this site as **DB**
+- [Software Engineering at Google](https://abseil.io/resources/swe-book)
+(abbreviated on this site as **SE**): a compelling introduction to the processes
+and tools used by software engineers at Google.
+- [Fuzzing Book](https://www.fuzzingbook.org/) (abbreviated on this site as
+**FB**): a savvy, code-focused introduction to the automated tools and
+techniques for generating software tests.
+- [Debugging Book](https://www.debuggingbook.org/) (abbreviated on this site as
+**DB**): an interactive introduction to automated methods for finding programmer
+errors and their causes.
 
+As the developing developers in the on-campus course read twelve articles in
+**SE**, nine articles in **FB**, and four articles in **DB**, they will write a
+professional précis that summarizes and contextualizes the material and points
+towards a way in the lessons from these books can be applied to two long-term
+software development projects. Is this challenging? *Yep*! Will learners make
+mistakes along the way to developing as a software developer? *Of course*! Are
+there many benefits to being a proactive programmer? *Yes*! With that said, the
+participants of this sixteen-week course will contain valuable perspectives and
+practical skills to enhance their software engineering skills while
+collaboratively building and releasing two open-source tools.
 
-Is this challenging? *Yep*! Will you make mistakes along the way to emerging as
-a proactive programmer? *Of course*! Are there many benefits to being a
-proactive programmer? *Yes*! If you want to learn more about proactive
-programming, you are invited study the [proactive
-skills](proactive-skills/introduction-proactive-skills/) and complete the
-projects in [data
-abstraction](data-abstraction/introduction-data-abstraction.md) and [discrete
-structures](discrete-structures/introduction-discrete-structures.md).
+Interested in getting started on a developer development adventure? Start here:
 
-Are you nervous about getting started or afraid that becoming a proactive
-programmer will prove to be too overwhelming? Don't worry, you can rely on the
-team of [programming
-experts](https://github.com/ProactiveProgrammers/www.proactiveprogrammers.com/graphs/contributors)
-who have crafted activities that will help you to hone your technical and
-professional skills. If you get stuck on this adventure you will find a
-welcoming [community](proactive-community/introduction-proactive-community.md)
-of like-minded learners who can answer your technical questions, make
-suggestions for improvement, and relate to your struggles.
-
+- [Sixteen-week course schedule](./schedule/index.qmd) offers detailed insights
+  into each step that learners will take as the develop as developers, including
+  a list of reading assignment and references to projects.

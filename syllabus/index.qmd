@@ -234,7 +234,6 @@ The course will also leverage excerpts from the following supporting text books:
 
 - [Software Engineering - The Soft Parts](https://play.google.com/store/books/details?id=2SmzEAAAQBAJ), by Addy Osmani
 - [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php), by John Ousterhout
-- [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php), by John Ousterhout
 - [How to Write Good Programs: A Guide for Students](https://www.cambridge.org/core/books/how-to-write-good-programs/6CBDD8A564E0899D54140700E90601C4), by Perdita Stevens
 - [The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month), by Frederick P. Brooks, Jr.
 
@@ -259,7 +258,7 @@ during the academic semester.
 | Category                 | Percentage |
 |--------------------------|------------|
 | Team Participation       |  5%        |
-| In-person Assessments    |  5%        |
+| In-Person Assessments    |  5%        |
 | Midterm Examinations     |  10%       |
 | Final Examination        |  10%       |
 | Professional Development |  15%       |
@@ -271,14 +270,14 @@ These assessment categories have the following definitions:
 - **Team Participation**: Students are expected to regularly attend and actively
 participate in all class and project development sessions. After either an
 unexcused absence or a late attendance to either a class or project development
-session on two separate occasions, a student's team participation grade will be
-reduced by half a percentage for each additional time they are absent or late in
-an unexcused fashion. Students who need to miss class or attend class late for
-an excused reason should communicate their situation to the course instructor as
-soon as possible. After one warning per week, a student's team participation
-grade will be reduced if they are observed undertaking non-course-related
-activities like viewing email, social media, or other content not about software
-engineering.
+session on two separate occasions, a student's overall team participation grade
+will be reduced by half a percentage for each additional time they are absent or
+late in an unexcused fashion. Students who need to miss class or attend class
+late for an excused reason should communicate their situation to the instructor
+in a timely fashion. After one warning per week, a student's weekly team
+participation grade will be reduced if they are observed undertaking
+non-course-related activities like viewing email, social media, or other content
+not about software engineering.
 
 - **Midterm Examinations**: The two midterm examinations are online cumulative
 assessments covering all prior material from the course sessions, as outlined on
@@ -287,31 +286,35 @@ with the instructor, all students should use their computer to take these tests
 on the scheduled date and to complete it in the stated location while taking no
 more than the required amount of time. Each midterm is an executable examination
 that a student will complete through the use of GitHub, VS Code, and the
-programming tools installed on their laptops.
+Python programming tools installed on their laptops.
 
-- **Final Examination**: The final is an online cumulative assessment covering
-all of the material during all of the course sessions, as outlined on the
-[course schedule](../schedule/index.qmd). Unless prior arrangements are made
-with the course instructor, all students should use their computer to take the
-final examination on the scheduled date and to complete it in the stated
-location while taking no more than the required amount of time. The cumulative
-final is an executable examination that a student will complete through the use
-of GitHub, VS Code, and the programming tools installed on their laptops.
+- **Final Examination**: The final examination is an online cumulative
+assessment covering all of the material during all of the course sessions, as
+outlined on the [course schedule](../schedule/index.qmd). Unless prior
+arrangements are made with the course instructor, all students should use their
+computer to take the final examination on the scheduled date and to complete it
+in the stated location while taking no more than the required amount of time.
+The cumulative final is an executable examination that a student will complete
+through the use of GitHub, VS Code, and the Python programming tools installed
+on their laptops.
 
 - **In-Person Assessments**: The two in-person assessments are cumulative
-evaluations conducted through a in-person conversation with the course
+evaluations conducted through an in-person conversation with the course
 instructor. All students should be prepared to answer at least one question each
 about their attainment of professional and technical skills and the source code
-and documentation of the software project(s).
+and documentation of the software project(s). Each question response will be
+assessed by the instructor on a checkmark basis.
 
 - **Professional Development**: Graded on a checkmark basis and building on
-material in the textbook and the content covered during that week's in-person
-classroom sessions, source code surveys have the following goals: (i) help a
-learner to demonstrate that they can remember learned material by recalling
-facts, basic concepts, and answers to questions presented in the textbook and on
-the course web site and (ii) allow a learner to demonstrate an understanding of
-facts and ideas by translating, interpreting, and stating the main technical
-ideas presented through the textbook and course web site.
+material in the [Software Engineering at
+Google](https://abseil.io/resources/swe-book) textbook (i.e., **SE**), the
+content covered during that week's in-person classroom sessions, the
+professional development tasks have the following goals: (i) help a learner to
+demonstrate that they can remember the learned material by recalling facts,
+basic concepts, and answers to questions presented in **SE** and on the course
+web site and (ii) allow a learner to demonstrate an understanding of facts and
+ideas by translating, interpreting, and stating the main professional ideas
+presented in **SE**.
 
 - **Technical Development**: Graded on a checkmark basis and building on material
 available in the textbook and the content covered during that week's in-person
@@ -329,6 +332,27 @@ balance between understandability, generalizability, and specialization.
 Students will also use the data collected from running experiments to
 evaluate the implementation of a Python function as they consider trade-offs
 between, for instance, its efficiency, flexibility, and correctness.
+
+Both the **Professional Development** and **Technical Development** assessment
+categories require students to complete the following tasks on a weekly basis:
+
+- In collaboration with a partner, read an assigned article in **SE**, **FB**,
+or **DB** and write your own professional précis, that should contain, at
+minimum, the following document sections:
+  - Summary of the article in a fashion that clearly explains its key points.
+  - Analysis of the article through the translation and/or re-interpretation of
+  its central points into a context that is relevant for you as a developing
+  developer.
+  - Description of actions items that will help you and the team of software
+  engineers to enhance their development as developers and the completion of the
+  long-term software engineering projects. Each action item should have a clear
+  description of the steps that the author and/or the team should **stop
+  doing**, **start doing**, and **keep doing**, as described in [The Ultimate
+  Guide to Start, Stop, Continue
+  Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
+- Publication of the professional précis to Netlify-hosted web site using
+quarto.
+- Team-based review of all précis  
 
 #### Assessment Policies
 

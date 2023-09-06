@@ -44,8 +44,8 @@ professional précis that summarizes and contextualizes the material and points
 towards a way in the lessons from these books can be applied to two long-term
 software development projects. Is this challenging? *Yep*! Will learners make
 mistakes along the way to developing as a software developer? *Of course*! Are
-there many benefits to being a proactive programmer? *Yes*! With that said, the
-participants of this sixteen-week course will contain valuable perspectives and
+there many benefits to being a developing developer? *Yes*! With that said, the
+participants of this sixteen-week course will gain valuable perspectives and
 practical skills to enhance their software engineering skills while
 collaboratively building and releasing two open-source tools.
 

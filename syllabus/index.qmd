@@ -553,7 +553,7 @@ Ethics and Professional Conduct](https://www.acm.org/code-of-ethics). Unless the
 students in this course furnish a different governing contract, they also pledge
 to follow the principles espoused by exemplary technical organizations, such as
 [Oxide Computer](https://oxide.computer/)'s statement of [mission and
-principles](https://oxide.computer/principle).
+principles](https://oxide.computer/principles).
 
 #### Disability Services
 

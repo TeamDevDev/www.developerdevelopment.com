@@ -232,7 +232,7 @@ and **DB**:
   - Install the book's dependencies with `pip install -r requirements.txt`
   - Troubleshoot all of the issues that arise during the installation of the book's dependencies (e.g., one or more
   missing dependencies cause a Jupyter Notebook cell to produce a stack trace when you press {{< kbd Shift-Enter >}} to
-  run it)
+  run the cell)
 - Repeatedly perform the following steps when writing a professional précis:
   - Change into the directory that contains the contents of **FB** or **DB**
   - Enter into the virtual environment for a textbook with `source venv/bin/activate`

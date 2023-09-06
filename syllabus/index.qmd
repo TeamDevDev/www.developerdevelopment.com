@@ -227,9 +227,9 @@ and **DB**:
 - Install an appropriate version of both **FB** and **DB** (both currently designate Python `3.10.2`)
 - Complete one-time setup and installation steps for the **FB** or **DB** textbooks:
   - Create a virtual environment for the book's dependencies with `python -m venv venv`
-  - Enter into the virtual environment for a text with `source venv/bin/activate`
-  - Install the book's dependencies with `pip install -r requirements.txt`
+  - Enter into the virtual environment for a textbook with `source venv/bin/activate`
   - Install all platform-dependent binaries for the book's dependencies (e.g., `graphviz`)
+  - Install the book's dependencies with `pip install -r requirements.txt`
   - Troubleshoot all of the issues that arise during the installation of the book's dependencies (e.g., one or more
   missing dependencies cause a Jupyter Notebook cell to produce a stack trace when you press {{< kbd Shift-Enter >}} to
   run it)

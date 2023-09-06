@@ -24,6 +24,15 @@ establish a confidence in their program's correctness, a developing developer
 aims to engineer and ship high-quality software that is designed, documented,
 tested, and maintained according to industry best practices.
 
+With the goal of enabling effective developer development, this web site
+features a sixteen-week schedule filled with activities that support
+professional development, technical development, and project development.
+
+- [Software Engineering at Google](https://abseil.io/resources/swe-book) - abbreviated on this site as **SE**
+- [Fuzzing Book](https://www.fuzzingbook.org/) -- abbreviated on this site as **FB**
+- [Debugging Book](https://www.debuggingbook.org/) -- abbreviated on this site as **DB**
+
+
 Is this challenging? *Yep*! Will you make mistakes along the way to emerging as
 a proactive programmer? *Of course*! Are there many benefits to being a
 proactive programmer? *Yes*! If you want to learn more about proactive

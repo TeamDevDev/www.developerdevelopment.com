@@ -92,7 +92,7 @@ are available for use during class and lab sessions.
 - **Prerequisite**: CMPSC 101
 - **Distribution Requirements**: SB, SP
 
-::: {.callout-note appearance="minimal" title="Explaining Distribution Requirements" collapse="false"}
+::: {.callout-note appearance="minimal" title="Explaining the Distribution Requirements" collapse="false"}
 
 - **Scientific Process and Knowledge (SP)**: Courses involving Scientific
 Process and Knowledge aim to convey an understanding of what is known or can be
@@ -307,7 +307,7 @@ assessed by the instructor on a checkmark basis.
 
 - **Professional Development**: Graded on a checkmark basis and building on
 material in the [Software Engineering at
-Google](https://abseil.io/resources/swe-book) textbook (i.e., **SE**), the
+Google](https://abseil.io/resources/swe-book) textbook (i.e., **SE**) and the
 content covered during that week's in-person classroom sessions, the
 professional development tasks, namely the publication of an individual
 professional précis and a team-based executive summary, both have the following
@@ -319,29 +319,29 @@ presented in **SE**.
 
 - **Technical Development**: Graded on a checkmark basis and building on
 material in the [Fuzzing Book](https://www.fuzzingbook.org/) (i.e., **FB**) and
-[Debugging Book](https://www.debuggingbook.org/) textbooks (i.e., **DB**), the
-content covered during that week's in-person classroom sessions, the technical
-development tasks, namely the publication of an individual professional précis
-and a team-based executive summary, have the following goals: (i) help a learner
-to demonstrate that they can remember the learned material by recalling facts,
-basic concepts, and answers to questions presented in **FB**/**DB** and (ii)
-allow a learner to demonstrate an understanding of facts and ideas by
-interpreting and implementing the main technical ideas presented in either
-**FB** or **DB**.
+[Debugging Book](https://www.debuggingbook.org/) textbooks (i.e., **DB**) and
+the content covered during that week's in-person classroom sessions, the
+technical development tasks, namely the publication of an individual
+professional précis and a team-based executive summary, have the following
+goals: (i) help a learner to demonstrate that they can remember the learned
+material by recalling facts, basic concepts, and answers to questions presented
+in **FB**/**DB** and (ii) allow a learner to demonstrate an understanding of
+facts and ideas by interpreting and implementing the main technical ideas
+presented in either **FB** or **DB**.
 
 - **Project Development**: These assignments invite students to explore
-different techniques for rigorously specifying, designing, implementing,
-evaluating, documenting, deploying, and maintaining real-world, open-source
-Python programs. These assignments also encourage students to use software
-engineering tools to complete tasks like debugging, testing, and refactoring.
-The technical work that a student completes during project development will take
-place in a public GitHub repository and will be further documented and reflected
-on in a private GitHub repository that the course instructor will also use for
-providing feedback to the student. Finally, the professional work that a student
-undertakes as part of project development will occur in both an in-person
-setting and through a public GitHub repository, with the use of a private GitHub
-repository offering the opportunity for the student to document and reflect on
-their contributions and for the instructor to offer feedback.
+different techniques for specifying, designing, implementing, testing,
+documenting, deploying, and maintaining real-world, open-source Python programs.
+These assignments also encourage students to use software engineering tools to
+complete tasks like debugging, testing, and refactoring. The technical work that
+a student completes during project development will take place in a public
+GitHub repository and will be further documented and reflected on in a private
+GitHub repository that the instructor will use to furnish feedback to the
+student. Finally, the professional work that a student undertakes as part of
+project development will occur in both an in-person setting and through a public
+GitHub repository, with the use of a private GitHub repository offering the
+opportunity for the student to document and reflect on their contributions and
+for the instructor to offer feedback.
 
 Both the **Professional Development** and **Technical Development** assessment
 categories require students to complete the following tasks on a weekly basis:
@@ -358,10 +358,46 @@ minimum, the following document sections:
   long-term software engineering projects. Each action item should have a clear
   description of the steps that the author and/or the team should **stop
   doing**, **start doing**, and **keep doing**, as described in [The Ultimate
-  Guide to Start, Stop, Continue
+  Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
-- Publication of the professional précis to Netlify-hosted web site using Quarto.
-- Team-based review of all précis  
+- The publication of the professional précis to Netlify-hosted web site using
+Quarto.
+- A team-based, in-class review of the professional précis that was written by
+each student in the course and then a synthesis of the key ideas that results in
+the collaborative publication of a team-based executive summary of the content.
+- For both the professional précis and the executive summary, either an
+individual student or a team of students must complete their work in advance of
+the class session during which the content will be discussed, as outlined in the
+[course schedule](../schedule/index.qmd). When an individual does not complete
+their professional précis according to the agreed on schedule this will result
+in a reduction of either their technical or professional development score.
+When an executive summary is not completed according to the agreed on schedule
+this will result in a reduction in either the technical or professional
+development score for every student.
+
+The **Project Development** assessment category requires students to complete,
+on a weekly basis, both team-based and individual tasks like the following:
+
+- **Sprint planning** tasks during which between three to five students will
+lead a team-based discussion to identify the main theme for the weekly sprint
+and to organize the team and assign work to individuals in the project's GitHub
+issue tracker.
+- **Project implementation** tasks when individuals and/or groups of students
+will implement the required features in preparation for the following week's
+project development session.
+- A **project demonstration** during which a team of students will connect a
+laptop to a projector and then demonstrate the features that were required for
+the prior sprint.
+
+So as to ensure that they develop as developers, all students are required to
+participate in all of the activities associated with technical development,
+professional development, and project development. Every student is also
+required to document their activities in each of these three categories,
+including links to relevant artifacts in a GitHub repository. In addition to
+regularly providing project- and course-relevant feedback in the appropriate
+public GitHub repository (e.g., the GitHub for a course project), the instructor
+will furnish individualized feedback to each student in a private GitHub
+repository used for documentation and reflection.
 
 #### Assessment Policies
 
@@ -371,22 +407,28 @@ by the following assessment policies:
 #### Assignment Submission
 
 All assignments will have a stated due date shared through GitHub, GitHub
-Classroom, and Google Calendar. Electronic versions of the engineering efforts,
-programming projects, and source code surveys must be submitted to the
-instructor through a student's GitHub repository created by GitHub Classroom. No
-credit will be awarded for any course work that you submit to the incorrect
-GitHub repository. Unless special arrangements are made with the instructor, no
-work will be accepted after the published assignment deadline.
+Classroom, and/or the [Developer Development Discord
+Server](https://discord.gg/aNfn8DNEMx). All reflections on and documentation of
+professional development, technical development, and project development should
+be committed to private GitHub repositories. In contrast, the publication of the
+professional précis that a student writes each week should be published to their
+Quarto-based web site hosted on Netlify. Finally, the collaboratively published
+executive summaries should be published on the Developer Development web site
+and the completed version of each software project should be available in the
+project's public GitHub repository. No credit will be awarded for any course
+work that you submit to the incorrect GitHub repository or web site. Unless
+special arrangements are made with the instructor, no work will be accepted
+after the deadline.
 
 #### Assignment Evaluation
 
-Using a report that the instructor shares with you through your assignment's
-GitHub repository, you will privately receive a grade for and feedback on each
-assignment. Your grade will be a function of whether or not you completed
-correct work that fulfills the project's specification and submitted it by the
-deadline. Please refer to the description of [proactive
-learning](/proactive-learning/introduction-proactive-learning) for more details
-about the evaluation of course assignments.
+Using a report that the instructor shares with you through your GitHub
+repositories devoted to documentation and reflection, you will privately receive
+a grade for and feedback on technical development, professional development and
+project development. Your grade will be a function of whether or not you
+completed work that fulfills the project's specification and submitted it by the
+deadline to the stated platform (e.g., a GitHub repository or Netlify-hosted web
+site).
 
 #### Course Attendance
 
@@ -399,22 +441,18 @@ should not attend any in-person course sessions.
 #### Class Preparation
 
 In order to minimize confusion and maximize learning, students must invest time
-to prepare for the class discussions, laboratory, and programming sessions.
-During the class periods, the course instructor will often pose challenging
-questions that could require group discussion, the creation of a Python program
-or data table, a vote on a thought-provoking issue, or an in-class
-presentation. Only those students who have prepared for class by reading the
-assigned material and reviewing the current reading assignments course projects
-will be able to effectively participate in these class discussions.
-
-Importantly, only prepared students will be able to acquire the knowledge and
-skills that they need to be successful in this course, subsequent courses, and
-the field of web development. In order to help students remain organized and to
-effectively prepare for classes, the course instructor will maintain a class
-schedule with reading assignments and presentation slides, available on this
-site. During the class sessions students will also be required to download, use,
-and modify Python software components and data sets that are made available through
-means such as the course web site or a GitHub repository.
+to prepare for the class sessions that focus on professional development,
+technical development, and project development. Although the course instructor
+will always be available to serve as guide for individual students, teams of
+students, and the entire class, it is expected that students will volunteer to
+lead and actively contribute to all class sessions. Only those students who have
+prepared for class by reading the assigned material, writing the required
+articles, and reviewing the content written by other students will be able to
+effectively participate in these class discussions. In order to help students
+remain organized and to effectively prepare for classes, the course instructor
+will maintain a [course schedule](../schedule/index.qmd) with reading
+assignments, project descriptions, and executive summaries, available on this
+site.
 
 #### Seeking Assistance
 
@@ -422,28 +460,30 @@ Students who are struggling to understand the knowledge and skills developed in
 either a class, laboratory, or programming session are encouraged to seek
 assistance from the course instructor and the student technical leaders.
 Students should, within the bounds of the Honor Code, ask and answer questions
-on the Discord server for our course; please request assistance from the
-instructor and student technical leaders first through Discord before
-sending an email. Students who need the course instructor's assistance must
-schedule a meeting through the instructor's office hours calendar and come to the meeting with all
-of the details needed to discuss their question. Students can find out the
-office hour schedule for student technical leaders by viewing the list of [student
-technical leaders](https://www.cs.allegheny.edu/teaching/technicalleaders/).
+on the course's Discord server; please request assistance from the instructor
+and student technical leaders first through Discord before sending an email.
+Students who need the course instructor's assistance are invited to schedule a
+meeting through the [course instructor's appointment
+scheduler](https://www.gregorykapfhammer.com/schedule/) and come to the meeting
+with all of the details needed to discuss their question. Students can find out
+the office hour schedule for student technical leaders by viewing the list of
+[student technical
+leaders](https://www.cs.allegheny.edu/teaching/technicalleaders/).
 
 #### Using GitHub and Discord
 
 This course will primarily use GitHub and Discord for all course communication,
 as summarized in the list of [community
-connections](/proactive-community/community-connections). We will use GitHub
-for the sharing of both source code and course projects and for reporting
-issues in those materials. We will use two distinct Discord servers for all
-course discussions. The [Proactive Programmers Discord
-Server](https://discord.gg/kjah8MFYbR) provides a way for members of the
-proactive community to use text and video to chat with each other and will be
-the main forum for discussing technical content in data abstraction. The
-[Allegheny College Computer Science Discord
-Server](https://discord.gg/CS2h9kXzX6) will be the main forum for Department
-of Computer Science announcements.
+connections](/proactive-community/community-connections). We will use GitHub for
+the sharing of both source code and course projects and for reporting issues in
+those materials. We will use two distinct Discord servers for all course
+discussions. The [Developer Development Discord
+Server](https://discord.gg/aNfn8DNEMx) provides a way for members of the
+developer development community to use text and video to chat with each other
+and will be the main forum for discussing the professional and technical content
+in software engineering. The [Allegheny College Computer Science Discord
+Server](https://discord.gg/CS2h9kXzX6) will be the main forum for Department of
+Computer Science announcements.
 
 #### Using Email
 

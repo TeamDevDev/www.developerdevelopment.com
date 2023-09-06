@@ -459,8 +459,8 @@ site).
 
 ##### Developer Development Tokens
 
-Students may use up to five developer development tokens that they may use to
-either (i) secure 48 hours of additional time to complete an assigned task or
+Students may "spend" up to five developer development "tokens" that they may use
+to either (i) secure 48 hours of additional time to complete an assigned task or
 (ii) request a reassessment of an already graded project. You may use a token to
 request the reassessment of work that you completed as part of tasks in the
 professional development, technical development, or project development
@@ -483,47 +483,47 @@ should not attend any in-person course sessions.
 In order to minimize confusion and maximize learning, students must invest time
 to prepare for the class sessions that focus on professional development,
 technical development, and project development. Although the course instructor
-will always be available to serve as guide for individual students, teams of
-students, and the entire class, it is expected that students will volunteer to
-lead and actively contribute to all class sessions. Only those students who have
-prepared for class by reading the assigned material, writing the required
-articles, and reviewing the content written by other students will be able to
-effectively participate in these class discussions. In order to help students
-remain organized and to effectively prepare for classes, the course instructor
-will maintain a [course schedule](../schedule/index.qmd) with reading
-assignments, project descriptions, and executive summaries, available on this
-site.
+and the student technical leaders will always be available to serve as guide for
+individual students, teams of students, and the entire class, it is expected
+that students will volunteer to lead and actively contribute to all class
+sessions. Only those students who have prepared for class by reading the
+assigned material, writing the required articles, and reviewing the content
+written by other students will be able to effectively participate in these class
+discussions. In order to help students remain organized and to effectively
+prepare for classes, the course instructor will maintain a [course
+schedule](../schedule/index.qmd) with reading assignments, project descriptions,
+and executive summaries, available on this site.
 
 #### Seeking Assistance
 
 Students who are struggling to understand the knowledge and skills developed in
-either a class, laboratory, or programming session are encouraged to seek
-assistance from the course instructor and the student technical leaders.
-Students should, within the bounds of the Honor Code, ask and answer questions
-on the course's Discord server; please request assistance from the instructor
-and student technical leaders first through Discord before sending an email.
-Students who need the course instructor's assistance are invited to schedule a
-meeting through the [course instructor's appointment
-scheduler](https://www.gregorykapfhammer.com/schedule/) and come to the meeting
-with all of the details needed to discuss their question. Students can find out
-the office hour schedule for student technical leaders by viewing the list of
-[student technical
+any of the course sessions are encouraged to seek assistance from the course
+instructor and/or the student technical leaders. Students should, within the
+bounds of the Honor Code, ask and answer questions on the [Developer Development
+Discord Server](https://discord.gg/aNfn8DNEMx); please request assistance from
+the instructor and student technical leaders first through public Discord
+channels before sending an email. Students who need the course instructor's
+assistance are invited to schedule a meeting through the [course instructor's
+appointment scheduler](https://www.gregorykapfhammer.com/schedule/) and come to
+the meeting with all of the details needed to discuss their question. Students
+can find out the office hour schedule for student technical leaders by viewing
+the list of [student technical
 leaders](https://www.cs.allegheny.edu/teaching/technicalleaders/).
 
 #### Using GitHub and Discord
 
-This course will primarily use GitHub and Discord for all course communication,
-as summarized in the list of [community
-connections](/proactive-community/community-connections). We will use GitHub for
-the sharing of both source code and course projects and for reporting issues in
-those materials. We will use two distinct Discord servers for all course
-discussions. The [Developer Development Discord
+This course will primarily use GitHub and Discord for all course communication.
+We will use GitHub for the sharing of both source code and course projects and
+for reporting issues in those materials. We will use two distinct Discord
+servers for all course discussions. The [Developer Development Discord
 Server](https://discord.gg/aNfn8DNEMx) provides a way for members of the
 developer development community to use text and video to chat with each other
 and will be the main forum for discussing the professional and technical content
 in software engineering. The [Allegheny College Computer Science Discord
 Server](https://discord.gg/CS2h9kXzX6) will be the main forum for Department of
-Computer Science announcements.
+Computer Science announcements. Any content that a student wants the instructor
+to assess (e.g., a professional précis or a contribution to a course project)
+must be in a GitHub repository.
 
 #### Using Email
 

@@ -56,8 +56,9 @@ participants of this sixteen-week course will contain valuable perspectives and
 practical skills to enhance their software engineering skills while
 collaboratively building and releasing two open-source tools.
 
-Interested in getting started on a developer development adventure? Start here:
+Interested in getting started on a developer development adventure? Begin here:
 
-- [Sixteen-week course schedule](./schedule/index.qmd) offers detailed insights
-  into each step that learners will take as the develop as developers, including
-  a list of reading assignment and references to projects.
+- The [sixteen-week course schedule](./schedule/index.qmd) offers detailed
+insights into each step that learners should take to help them to develop as
+developers, including a list of reading assignment and descriptions of various
+projects.

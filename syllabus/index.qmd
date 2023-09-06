@@ -1,7 +1,7 @@
 ---
 title: "Syllabus"
 toc: true
-toc-depth: 4
+toc-depth: 5
 page-layout: full
 ---
 
@@ -429,6 +429,19 @@ project development. Your grade will be a function of whether or not you
 completed work that fulfills the project's specification and submitted it by the
 deadline to the stated platform (e.g., a GitHub repository or Netlify-hosted web
 site).
+
+##### Developer Development Tokens
+
+Students may use up to five developer development tokens that they may use to
+either (i) secure 48 hours of additional time to complete an assigned task or
+(ii) request a reassessment of an already graded project. You may use a token to
+request the reassessment of work that you completed as part of tasks in the
+professional development, technical development, or project development
+categories. For instance, a student may choose to spend a token by asking the
+course instructor to reevaluate one of the professional précis articles that
+they posted to their Quarto-based web site. Outside of these five tokens, the
+instructor will not consider any additional requests for deadline extensions or
+assignment reassessment.
 
 ##### Course Attendance
 

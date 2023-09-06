@@ -30,7 +30,7 @@ the development of your professional and technical capacities and walk you
 through the implementation and release of two major software projects.
 Although this site is best used by an on-campus learner in the [Department of
 Computer and information Science](https://www.cs.allegheny.edu/) at [Allegheny
-College](https://allegheny.edu/), the resources and projects are all publicly
+College](https://www.allegheny.edu/), the resources and projects are all publicly
 available. For instance, the following provides a list of the three textbooks
 that developing developers use to hone their professional and technical skills
 during sixteen weeks of personal growth:
@@ -62,3 +62,5 @@ Interested in getting started on a developer development adventure? Begin here:
 insights into each step that learners should take to help them to develop as
 developers, including a list of reading assignment and descriptions of various
 projects.
+
+- 

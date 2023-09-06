@@ -5,7 +5,6 @@ jupyter: python3
 section-divs: true
 keep-md: false
 toc: true
-page-layout: full
 title-block-style: default
 title-block-banner: false
 execute:
@@ -14,4 +13,33 @@ execute:
 
 ![**Developing developers so that they can develop better software!**](images/Developer-Development-Horizontal-Logo.svg){fig-align="center"}
 
-Text to check out the [blog](blog/index.qmd)
+Regardless of the role or the company or the project in which they find
+themselves, a software engineer is always a *developing developer*. Like the
+word "developer" in the above logo, developers always have a "missing piece" of
+the "D" in their developer skills. Put in another way, all developers have a
+professional skill that they have not yet honed, new technologies that they have
+yet to explore, program features that they have not yet implemented, or
+nefarious bugs that they have not yet found and fixed! Always working to
+establish a confidence in their program's correctness, a developing developer
+aims to engineer and ship high-quality software that is designed, documented,
+tested, and maintained according to industry best practices.
+
+Is this challenging? *Yep*! Will you make mistakes along the way to emerging as
+a proactive programmer? *Of course*! Are there many benefits to being a
+proactive programmer? *Yes*! If you want to learn more about proactive
+programming, you are invited study the [proactive
+skills](proactive-skills/introduction-proactive-skills/) and complete the
+projects in [data
+abstraction](data-abstraction/introduction-data-abstraction.md) and [discrete
+structures](discrete-structures/introduction-discrete-structures.md).
+
+Are you nervous about getting started or afraid that becoming a proactive
+programmer will prove to be too overwhelming? Don't worry, you can rely on the
+team of [programming
+experts](https://github.com/ProactiveProgrammers/www.proactiveprogrammers.com/graphs/contributors)
+who have crafted activities that will help you to hone your technical and
+professional skills. If you get stuck on this adventure you will find a
+welcoming [community](proactive-community/introduction-proactive-community.md)
+of like-minded learners who can answer your technical questions, make
+suggestions for improvement, and relate to your struggles.
+

@@ -105,8 +105,7 @@ a.external:hover {
 
 li,
 .li {
-  margin-top: -0.1rem !important;
-  margin-bottom: -0.25rem !important;
+  margin-top: 0.05rem !important;
 }
 
 .software {

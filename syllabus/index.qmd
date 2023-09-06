@@ -580,8 +580,8 @@ Students who are effective engineers also pledge to abide by the [ACM Code of
 Ethics and Professional Conduct](https://www.acm.org/code-of-ethics). Unless the
 students in this course furnish a different governing contract, they also pledge
 to follow the principles espoused by exemplary technical organizations, such as
-[Oxide Computer](https://oxide.computer/)'s statement of [mission and
-principles](https://oxide.computer/principles).
+[Oxide Computer](https://oxide.computer/) and its public statement of [mission
+and principles](https://oxide.computer/principles).
 
 #### Disability Services
 

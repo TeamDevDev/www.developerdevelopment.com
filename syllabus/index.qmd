@@ -1,6 +1,7 @@
 ---
 title: "Syllabus"
 toc: true
+toc-depth: 4
 page-layout: full
 ---
 
@@ -245,7 +246,6 @@ class and laboratory sessions.
 
 :::
 
-
 ### Course Policies
 
 #### Assessment
@@ -309,12 +309,25 @@ assessed by the instructor on a checkmark basis.
 material in the [Software Engineering at
 Google](https://abseil.io/resources/swe-book) textbook (i.e., **SE**), the
 content covered during that week's in-person classroom sessions, the
-professional development tasks have the following goals: (i) help a learner to
-demonstrate that they can remember the learned material by recalling facts,
-basic concepts, and answers to questions presented in **SE** and on the course
-web site and (ii) allow a learner to demonstrate an understanding of facts and
-ideas by translating, interpreting, and stating the main professional ideas
+professional development tasks, namely the publication of an individual
+professional précis and a team-based executive summary, both have the following
+goals: (i) help a learner to demonstrate that they can remember the learned
+material by recalling facts, basic concepts, and answers to questions presented
+in **SE** and (ii) allow a learner to demonstrate an understanding of facts and
+ideas by translating, interpreting, and restating the main professional concepts
 presented in **SE**.
+
+- **Technical Development**: Graded on a checkmark basis and building on
+material in the [Fuzzing Book](https://www.fuzzingbook.org/) (i.e., **FB**) and
+[Debugging Book](https://www.debuggingbook.org/) textbooks (i.e., **DB**), the
+content covered during that week's in-person classroom sessions, the technical
+development tasks, namely the publication of an individual professional précis
+and a team-based executive summary, have the following goals: (i) help a learner
+to demonstrate that they can remember the learned material by recalling facts,
+basic concepts, and answers to questions presented in **FB**/**DB** and (ii)
+allow a learner to demonstrate an understanding of facts and ideas by
+interpreting and implementing the main technical ideas presented in either
+**FB** or **DB**.
 
 - **Technical Development**: Graded on a checkmark basis and building on material
 available in the textbook and the content covered during that week's in-person
@@ -350,8 +363,7 @@ minimum, the following document sections:
   doing**, **start doing**, and **keep doing**, as described in [The Ultimate
   Guide to Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
-- Publication of the professional précis to Netlify-hosted web site using
-quarto.
+- Publication of the professional précis to Netlify-hosted web site using Quarto.
 - Team-based review of all précis  
 
 #### Assessment Policies

@@ -404,7 +404,7 @@ repository used for documentation and reflection.
 Students who are members of this course's software development team must abide
 by the following assessment policies:
 
-#### Assignment Submission
+##### Assignment Submission
 
 All assignments will have a stated due date shared through GitHub, GitHub
 Classroom, and/or the [Developer Development Discord
@@ -420,7 +420,7 @@ work that you submit to the incorrect GitHub repository or web site. Unless
 special arrangements are made with the instructor, no work will be accepted
 after the deadline.
 
-#### Assignment Evaluation
+##### Assignment Evaluation
 
 Using a report that the instructor shares with you through your GitHub
 repositories devoted to documentation and reflection, you will privately receive
@@ -430,7 +430,7 @@ completed work that fulfills the project's specification and submitted it by the
 deadline to the stated platform (e.g., a GitHub repository or Netlify-hosted web
 site).
 
-#### Course Attendance
+##### Course Attendance
 
 It is mandatory for all students to attend the course sessions. If, due to
 extenuating circumstances, you will not be able to attend a session, then,
@@ -438,7 +438,7 @@ whenever possible, please communicate with the instructor at least one week in
 advance to describe your situation. Students who have any signs of illness
 should not attend any in-person course sessions.
 
-#### Class Preparation
+##### Class Preparation
 
 In order to minimize confusion and maximize learning, students must invest time
 to prepare for the class sessions that focus on professional development,

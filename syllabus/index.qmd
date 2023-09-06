@@ -603,3 +603,16 @@ testing, maintenance, and documentation of software are exciting and rewarding
 activities! At the start of this class, I invite you to pursue, with great
 enthusiasm and vigor, an adventure in software engineering as you develop as
 developers.
+
+::: {.callout-note appearance="minimal" title="External Learners"}
+
+This syllabus is for learners who enrolled in a for-credit Software Engineering
+course in the [Department of Computer and information
+Science](https://www.cs.allegheny.edu/) at [Allegheny
+College](https://www.allegheny.edu/). Even though external learners are not
+bound by the rules in this syllabus, they can rely on the team of [developing
+developers](https://github.com/TeamDevDev/www.developerdevelopment.com/graphs/contributors)
+and the members of the [Developer Development
+Discord](https://discord.gg/aNfn8DNEMx).
+
+:::

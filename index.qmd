@@ -1,17 +1,68 @@
 ---
 title: ""
-echo: true
-jupyter: python3
-section-divs: true
-keep-md: false
-toc: true
-page-layout: full
 title-block-style: default
 title-block-banner: false
-execute:
-  freeze: auto
 ---
 
 ![**Developing developers so that they can develop better software!**](images/Developer-Development-Horizontal-Logo.svg){fig-align="center"}
 
-Text to check out the [blog](blog/index.qmd)
+Regardless of the role or the company or the project in which they find
+themselves, a software engineer is always a *developing developer*. Like the
+word "developer" in the above logo, developers always have a "missing piece" of
+the "D" in their developer skills. Put in another way, all developers have a
+professional skill that they have not yet honed, new technologies that they have
+yet to explore, program features that they have not yet implemented, or
+nefarious bugs that they have not yet found and fixed! Always working to
+establish a confidence in their program's correctness, a developing developer
+aims to engineer and ship high-quality software that is designed, documented,
+tested, and maintained according to industry best practices.
+
+With the goal of enabling effective developer development, this web site
+features a sixteen-week schedule filled with activities that support
+the development of your professional and technical capacities and walk you
+through the implementation and release of two major software projects.
+Although this site is best used by an on-campus learner in the [Department of
+Computer and information Science](https://www.cs.allegheny.edu/) at [Allegheny
+College](https://www.allegheny.edu/), the resources and projects are all publicly
+available. For instance, the following provides a list of the three textbooks
+that developing developers use to hone their professional and technical skills
+during sixteen weeks of personal growth:
+
+- [Software Engineering at Google](https://abseil.io/resources/swe-book)
+(abbreviated on this site as **SE**): a compelling introduction to the processes
+and tools used by software engineers at Google.
+- [Fuzzing Book](https://www.fuzzingbook.org/) (abbreviated on this site as
+**FB**): a savvy, code-focused introduction to the automated tools and
+techniques for generating software tests.
+- [Debugging Book](https://www.debuggingbook.org/) (abbreviated on this site as
+**DB**): an interactive introduction to automated methods for finding programmer
+errors and their causes.
+
+As the developing developers in the on-campus course read twelve articles in
+**SE**, nine articles in **FB**, and four articles in **DB**, they will write a
+professional précis that summarizes and contextualizes the material and points
+towards a way in the lessons from these books can be applied to two long-term
+software development projects. Is this challenging? *Yep*! Will learners make
+mistakes along the way to developing as a software developer? *Of course*! Are
+there many benefits to being a developing developer? *Yes*! For instance, the
+participants of this sixteen-week course will gain valuable perspectives and
+practical skills to enhance their software engineering skills while
+collaboratively building and releasing two open-source tools.
+
+Interested in getting started on a developer development adventure? Begin here:
+
+- The [sixteen-week course schedule](./schedule/index.qmd) offers detailed
+insights into each step that learners should take to help them to develop as
+developers, including a list of reading assignment and descriptions of various
+projects.
+
+- The [course syllabus](./syllabus/index.qmd) introduces the course and its
+learning objectives and explains how on-campus learners will be assessed by the
+course instructor.
+
+- The [developer development blog](./syllabus/index.qmd) includes executive
+summaries of all of the key professional and technical insights that students
+learned when actively engaging with the content in **SE**, **FB**, and **DB**.
+The blog also contains reports from the design, implementation, testing,
+documentation, and deployment of two software projects. Read more to watch us
+develop as developers!

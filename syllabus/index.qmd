@@ -207,10 +207,14 @@ in these ways:
 - **Professional Development** as a software engineer:
   - Active engagement with content in **SE**
   - Publication of a professional précis of each reading assignment on personal web site
+  - Use the GitHub issue tracker to review the work of your professional précis partner
+  - Revise your professional précis based on feedback from your weekly partner
   - Publication of a team-based executive summary on this web site
 - **Technical Development** as a software engineer:
   - Active engagement with content in **FB** and **DB**
   - Publication of a professional précis of each reading assignment on personal web site
+  - Use the GitHub issue tracker to review the work of your professional précis partner
+  - Revise your professional précis based on feedback from your weekly partner
   - Publication of a team-based executive summary on this web site
 - **Project Development** to hone professional and technical knowledge and skills:
   - Application of **SE** to technical and professional tasks during project engineering
@@ -221,15 +225,23 @@ All students are responsible for taking the following steps in regards to **FB**
 and **DB**:
 
 - Install an appropriate version of both **FB** and **DB** (both currently designate Python `3.10.2`)
-- Create a virtual environment for the book's dependencies with `python -m venv venv`
-- Install the book's dependencies with `pip install -r requirements.txt`
-- Install all platform-dependent binaries for the book's dependencies (e.g., `graphviz`)
-- Troubleshoot all of the issues that arise during the installation of the book's dependencies
-- Enter into the virtual environment for a text with `source venv/bin/activate`
-- Run a Jupyter Lab server using a command like `venv/bin/jupyter-lab`
-- Use the Jupyter Lab server to locate and execute notebooks for chapters in **FB** and **DB**
-- Use the [Quarto](https://quarto.org/) system to publish a professional précis for each reading assignment
-- Collaboratively use [Quarto](https://quarto.org/) to publish an article's executive summary to this web site
+- Complete one-time setup and installation steps for the **FB** or **DB** textbooks:
+  - Create a virtual environment for the book's dependencies with `python -m venv venv`
+  - Enter into the virtual environment for a text with `source venv/bin/activate`
+  - Install the book's dependencies with `pip install -r requirements.txt`
+  - Install all platform-dependent binaries for the book's dependencies (e.g., `graphviz`)
+  - Troubleshoot all of the issues that arise during the installation of the book's dependencies (e.g., one or more
+  missing dependencies cause a Jupyter Notebook cell to produce a stack trace when you press {{< kbd Shift-Enter >}} to
+  run it)
+- Repeatedly perform the following steps when writing a professional précis:
+  - Change into the directory that contains the contents of **FB** or **DB**
+  - Enter into the virtual environment for a textbook with `source venv/bin/activate`
+  - Run a Jupyter Lab server using a command like `venv/bin/jupyter-lab`
+  - Use the Jupyter Lab server to locate and execute notebooks for chapters in **FB** and **DB**
+  - Watch the embedded video(s) and run all of the providing source code segments
+  - Use the [Quarto](https://quarto.org/) system to publish a professional précis for each reading assignment
+  - Use GitHub Actions and [Netlify](https://www.netlify.com/) to host and publish your Quarto-based web site
+  - Collaboratively use [Quarto](https://quarto.org/) to publish an article's executive summary to this web site
 
 The course will also leverage excerpts from the following supporting text books:
 

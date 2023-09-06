@@ -326,8 +326,8 @@ professional précis and a team-based executive summary, both have the following
 goals: (i) help a learner to demonstrate that they can remember the learned
 material by recalling facts, basic concepts, and answers to questions presented
 in **SE** and (ii) allow a learner to demonstrate an understanding of facts and
-ideas by translating, interpreting, and restating the main professional concepts
-presented in **SE**.
+ideas by translating, interpreting, and contextualizing the main professional concepts
+found in **SE**.
 
 - **Technical Development**: Graded on a checkmark basis and building on
 material in the [Fuzzing Book](https://www.fuzzingbook.org/) (i.e., **FB**) and
@@ -372,20 +372,28 @@ minimum, the following document sections:
   doing**, **start doing**, and **keep doing**, as described in [The Ultimate
   Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
-- The publication of the professional précis to Netlify-hosted web site using
+- Working in a partner-based fashion, the review of your partner's professional
+précis for either an **SE** or **FB**/**DB**, resulting in the creation of an
+issue in the GitHub issue tracker for your partner's web site that summarizes
+your essence of your suggestions.
+- Using GitHub, a response to the suggestions that your partner made in the
+GitHub issue tracker and a summary of the steps taken to improve your
+professional précis.
+- The publication of the professional précis to a Netlify-hosted web site using
 Quarto.
 - A team-based, in-class review of the professional précis that was written by
-each student in the course and then a synthesis of the key ideas that results in
-the collaborative publication of a team-based executive summary of the content.
+each student in the course and then a synthesis of the key ideas that ultimately
+results in the collaborative publication of a team-based executive summary of
+the technical or professional content.
 - For both the professional précis and the executive summary, either an
 individual student or a team of students must complete their work in advance of
 the class session during which the content will be discussed, as outlined in the
 [course schedule](../schedule/index.qmd). When an individual does not complete
 their professional précis according to the agreed on schedule this will result
-in a reduction of either their technical or professional development score.
-When an executive summary is not completed according to the agreed on schedule
-this will result in a reduction in either the technical or professional
-development score for every student.
+in a reduction of either their technical or professional development score. When
+an executive summary is not completed according to the agreed on schedule this
+will result in a reduction in either the technical or professional development
+score for every student.
 
 The **Project Development** assessment category requires students to complete,
 on a weekly basis, both team-based and individual tasks like the following:
@@ -393,7 +401,7 @@ on a weekly basis, both team-based and individual tasks like the following:
 - **Sprint planning** tasks during which between three to five students will
 lead a team-based discussion to identify the main theme for the weekly sprint
 and to organize the team and assign work to individuals in the project's GitHub
-issue tracker.
+issue and/or milestone tracker.
 - **Project implementation** tasks when individuals and/or groups of students
 will implement the required features in preparation for the following week's
 project development session.
@@ -409,7 +417,13 @@ including links to relevant artifacts in a GitHub repository. In addition to
 regularly providing project- and course-relevant feedback in the appropriate
 public GitHub repository (e.g., the GitHub for a course project), the instructor
 will furnish individualized feedback to each student in a private GitHub
-repository used for documentation and reflection.
+repository used for documentation and reflection. Unless there is a documented
+extenuating circumstance, the course instructor will not assess a student's
+contribution to technical, professional, or project development tasks unless it
+is evident in a GitHub repository in the form of, for instance, written work in
+the GitHub issue tracker, project management through the review of a pull
+request, or contribution of source code or documentation to a pull request that
+is merged into main branch of a GitHub repository.
 
 #### Assessment Policies
 

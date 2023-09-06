@@ -23,6 +23,16 @@ page-layout: full
       - **Tuesday**: take the second first executable examination during laboratory session
       - **Wednesday**: in-person assessment of individual developer development
       - **Friday**:  in-person assessment of individual developer development
+- **Module Three**: *Advanced Software Engineering Knowledge and Skills*
+    - **Week Eleven through Week Sixteen**: Enhance your technical and professional skills
+    - **Week Seventeen**:
+      - **Thursday, December 14, 2023 at 9:00 AM**: Executable Examination
+        - *Demonstrate technical skills in software engineering*:
+          - Use GitHub and GitHub Actions
+          - Use text editor and terminal window
+          - Implement and test Python functions
+          - Debug defective Python functions
+          - Confirm output of Python functions
 
 ### Weekly Cadence
 
@@ -47,20 +57,20 @@ page-layout: full
 
 ### Project Deadlines
 
-- Project One: Chasten tool for automated analysis of Python projects
+- **Project One**: Chasten tool for automated analysis of Python projects
     - **Week One**: Onboarding of team members
     - **Week Two**: Official start for first project
     - **Week Eight**: Chasten completion and project maintenance
     - **Week Nine**: Final demonstration of the Chasten tool
     - **Week Nine**: Retrospective for implementation of Chasten
-- Project Two: Astronaught tool for deletion mutation analysis of Python projects
+- **Project Two**: Astronaught tool for deletion mutation analysis of Python projects
     - **Week Eight**: Onboarding of team members
     - **Week Nine**: Official start for second project
     - **Week Fifteen**: Astronaught completion and project maintenance
     - **Week Sixteen**: Final demonstration of the Astronaught tool
     - **Week Sixteen**: Retrospective for implementation of Astronaught
 
-::: {.callout-note appearance="minimal" title="Abbreviations" collapse="false"}
+::: {.callout-note appearance="minimal" title="Textbook Abbreviations" collapse="false"}
 
 - SE: [Software Engineering at Google](https://abseil.io/resources/swe-book)
 - FB: [Fuzzing Book](https://www.fuzzingbook.org/)
@@ -434,20 +444,23 @@ regards to all content previously covered between week one and week eleven.
         - **Publication of DB4**: Statistical Debugging (Automatic Fault Localization)
         - **Final review of all content on Developer Development web site**
 - {{< iconify fa-regular sad-tear size=19px >}} **Wednesday**: No class due to study day
-- {{< iconify fa6-solid flag-checkered size=18px >}} **Thursday**: Executable Examination
+- {{< iconify fa-regular sad-tear size=19px >}} **Friday**: No class
+
+::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
+
+The Fall 2023 edition of Computer Science 203 has  **Exam Code A**, which means
+that the final examination will take place on Thursday, December 14, 2023 at
+9:00 AM. The final executable examination is cumulative in regards to all of the
+technical, professional, and project content previously covered between week one
+and week sixteen. As a reminder, the following list describes the content that
+will be covered on the final executable examination.
+
+- {{< iconify fa6-solid flag-checkered size=18px >}} **Thursday, December 14, 2023 at 9:00 AM**: Executable Examination
   - *Demonstrate technical skills in software engineering*:
     - Use GitHub and GitHub Actions
     - Use text editor and terminal window
     - Implement and test Python functions
     - Debug defective Python functions
     - Confirm output of Python functions
-    - **Exam Code A**: Thursday, December 14, 2023 at 9:00 AM
-- {{< iconify fa-regular sad-tear size=19px >}} **Friday**: No class
-
-::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
-
-The final executable examination is cumulative in regards to all of the
-technical, professional, and project content previously covered between week
-one and week sixteen.
 
 :::

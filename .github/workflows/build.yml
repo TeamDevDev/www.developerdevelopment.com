@@ -1,5 +1,5 @@
 # Basic workflow
-name: Publish
+name: Build
 
 # Controls when the action will run
 # Workflow begins with push or PR events
@@ -7,9 +7,8 @@ name: Publish
 on:
   push:
     branches: [ master ]
-
-  # pull_request:
-  #   branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 # Jobs for setup, rendering, and publishing
 # for the web site, using Python, Poetry,
@@ -43,14 +42,14 @@ jobs:
       - name: Setup Virtual Environment
         run: |
           poetry install
-      # Render and Publish the Site
+      # Render the site without publishing
       # Note that this uses Quarto to
       # directly publish the site, which
       # means that you do not use Netlify
       # build minutes. This is great! Yet,
       # it also means that you do not get
       # a Netlify preview build for PRs.
-      - name: Render and Publish
+      - name: Render without Publishing
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           PYDEVD_DISABLE_FILE_VALIDATION: 1
@@ -58,4 +57,4 @@ jobs:
           quarto --version
           # directly publish a version of the site to Netlify, using
           # the optimize profile that will perform minification
-          poetry run quarto publish netlify --profile optimize
+          poetry run quarto render --profile optimize

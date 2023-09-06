@@ -586,11 +586,11 @@ and principles](https://oxide.computer/principles).
 #### Disability Services
 
 Students with disabilities who believe they may need accommodations in this
-class are encouraged to contact Student Accessibility and Support Services at
-814-332-2898 or `studentaccessibility@allegheny.edu`. SASS is located in the
-Center for Student Success in Pelletier Library. Please do this as soon as
-possible to ensure that approved accommodations are implemented in a timely
-fashion.
+class are encouraged to contact Student Accessibility and Support Services
+(SASS) at 814-332-2898 or `studentaccessibility@allegheny.edu`. SASS is located
+in the Center for Student Success in Pelletier Library. Please contact SASS as
+soon as possible to ensure that approved accommodations are implemented in a
+timely fashion.
 
 ### Welcome Message
 

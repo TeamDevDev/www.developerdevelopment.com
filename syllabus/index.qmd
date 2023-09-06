@@ -329,22 +329,19 @@ allow a learner to demonstrate an understanding of facts and ideas by
 interpreting and implementing the main technical ideas presented in either
 **FB** or **DB**.
 
-- **Technical Development**: Graded on a checkmark basis and building on material
-available in the textbook and the content covered during that week's in-person
-classroom session, the programming projects further equip a learner to solve new
-problems in the field of data abstraction by applying &mdash; in a new way
-&mdash; their knowledge of the facts and techniques of data abstraction and
-rigorous Python programming.
-
 - **Project Development**: These assignments invite students to explore
-different techniques for rigorously designing, implementing, evaluating, and
-documenting real-world Python programs. These assignments also encourage
-students to use tools like a text editor, a terminal window, and a modern
-Python development environment to implement functions that strike the right
-balance between understandability, generalizability, and specialization.
-Students will also use the data collected from running experiments to
-evaluate the implementation of a Python function as they consider trade-offs
-between, for instance, its efficiency, flexibility, and correctness.
+different techniques for rigorously specifying, designing, implementing,
+evaluating, documenting, deploying, and maintaining real-world, open-source
+Python programs. These assignments also encourage students to use software
+engineering tools to complete tasks like debugging, testing, and refactoring.
+The technical work that a student completes during project development will take
+place in a public GitHub repository and will be further documented and reflected
+on in a private GitHub repository that the course instructor will also use for
+providing feedback to the student. Finally, the professional work that a student
+undertakes as part of project development will occur in both an in-person
+setting and through a public GitHub repository, with the use of a private GitHub
+repository offering the opportunity for the student to document and reflect on
+their contributions and for the instructor to offer feedback.
 
 Both the **Professional Development** and **Technical Development** assessment
 categories require students to complete the following tasks on a weekly basis:

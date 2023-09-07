@@ -1,5 +1,6 @@
 ---
 title: ""
+page-layout: article
 title-block-style: default
 title-block-banner: false
 ---

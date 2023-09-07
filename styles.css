@@ -9,7 +9,7 @@
 /* Basic Components {{{ */
 
 body {
-  background-color: #f5f5f5;
+  background-color: #FAFAFA;
   font-size: 0.9rem;
   line-height: 1.5rem;
 }
@@ -164,7 +164,7 @@ figcaption {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #f5f5f5;
+  color: #FAFAFA;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link,
@@ -174,7 +174,7 @@ figcaption {
 }
 
 .page-columns .column-page-left table {
-  background: #f5f5f5;
+  background: #FAFAFA;
 }
 
 /* }}} */
@@ -193,7 +193,7 @@ figcaption {
 /* Navbar: Header and Footer {{{ */
 
 .navbar a {
-  color: #f5f5f5 !important;
+  color: #FAFAFA !important;
   text-decoration: none;
   font-size: 1rem;
   color: inherit;
@@ -213,7 +213,7 @@ figcaption {
 .nav-footer {
   min-height: 1em;
   padding-bottom: 0em;
-  background-color: #f5f5f5;
+  background-color: #FAFAFA;
   color: #757575;
 }
 
@@ -243,7 +243,7 @@ figcaption {
 .aa-Autocomplete .aa-Form,
 .aa-DetachedFormContainer .aa-Form {
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #FAFAFA;
   border-radius: 0.25rem;
   color: #333;
   display: flex;
@@ -268,7 +268,7 @@ figcaption {
 .aa-Autocomplete .aa-Form,
 .aa-DetachedFormContainer .aa-Form {
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #FAFAFA;
   border: 3px solid #f4b003;
   border-radius: 0.25rem;
   color: #333;

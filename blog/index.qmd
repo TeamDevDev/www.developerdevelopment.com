@@ -12,7 +12,6 @@ listing:
     - "title"
   type: default
   categories: true
-  # date-format: "MM DD, YYYY"
   date-format: long
   sort-ui: true
   filter-ui: true

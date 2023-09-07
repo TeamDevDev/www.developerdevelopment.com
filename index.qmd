@@ -67,3 +67,16 @@ learned when actively engaging with the content in **SE**, **FB**, and **DB**.
 The blog also contains reports from the design, implementation, testing,
 documentation, and deployment of two software projects. Read more to watch us
 develop as developers!
+
+::: {.callout-note appearance="minimal" title="Developer Development Community"}
+
+Interested in connecting with other like-minded developing developers? Please
+join the [Developer Development Discord Server](https://discord.gg/aNfn8DNEMx)
+and join the conversation! If you are an on-campus learning at Allegheny
+College, you may also join the [Allegheny College Computer Science Discord
+Server](https://discord.gg/CS2h9kXzX6). Finally, if you are an on-campus
+learner, then you may schedule a meeting with the course instructor during
+office hours by visiting the [Course Instructor's Appointment
+Scheduler](https://www.gregorykapfhammer.com/schedule/).
+
+:::

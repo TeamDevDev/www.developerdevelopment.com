@@ -12,7 +12,8 @@ listing:
     - "title"
   type: default
   categories: true
-  date-format: "YYYY"
+  # date-format: "MM DD, YYYY"
+  date-format: long
   sort-ui: true
   filter-ui: true
   fields: [author, date, title, reading-time, description, categories]

@@ -145,43 +145,43 @@ maintainable software system.
 - **SE-2**: Demonstrates competency in the theories, models, and practices of
 project domains that require the engineering of software.
 
-  - Enables the attainment of **AC-1** and **AC-3**
+  - Enables the attainment of **AC-2** and **AC-3**
 
-- **SE-3**: Can effectively manage and predict the cost, scope, and deadline of
-a software engineering project.
-
-  - Enables the attainment of **AC-2** and **AC-4**
-
-- **SE-4**: Can effectively create and use software engineering tools that
+- **SE-3**: Can effectively create and use software engineering tools that
 support software engineering activities like testing and debugging.
 
-  - Enables the attainment of **AC-1** and **AC-3**
+  - Enables the attainment of **AC-1** and **AC-4**
+
+- **SE-4**: Can effectively manage and predict the cost, scope, and deadline of
+a software engineering project.
+
+  - Enables the attainment of **AC-2** and **AC-3**
 
 - **SE-5**: Uses effective oral and written communication methods to explain
 both the technical and product-use details of a software artifact.
 
-  - Enables the attainment of **AC-2** and **AC-3**
+  - Enables the attainment of **AC-1** through **AC-4**
 
 The following list itemizes the three types of activities and two types of
 assessments in Computer Science 203 and illustrates their connection to the
 course learning objectives:
 
 - *Course Activities*:
-  - **Technical Development**: Develops **SE-1**, **SE-2**, and **SE-4**
-  - **Professional Development**: Develops **SE-3** and **SE-5**
-  - **Project Development**: Develops **SE-1** through **SE-5**
+  - **Technical Development**: Develops **SE-1**, **SE-2**, **SE-3**
+  - **Professional Development**: Develops **SE-3**, **SE-4**, **SE-5**
+  - **Project Development**: Develops **SE-1**, **SE-2**, **SE-3**, **SE-4**, **SE-5**
 - *Course Assessments*:
-  - **Executable Examinations**: Assesses **SE-1**, **SE-2**, and **SE-4**
-  - **In-Person Assessments**: Assesses **SE-3**, **SE-4**, and **SE-5**
+  - **Executable Examinations**: Assesses **SE-1**, **SE-2**, **SE-3**
+  - **In-Person Assessments**: Assesses **SE-3**, **SE-4**, **SE-5**
 
 Finally, the following list illustrates how the learning objectives for
 Allegheny College are attained through the successful completion of Computer
 Science 203.
 
-- **AC-1** is attained through the course learning objectives **SE-1**, **SE-2**, and **SE-4**
-- **AC-2** is attained through the course learning objectives **SE-3** and **SE-5**
-- **AC-3** is attained through the course learning objectives **SE-2** and **SE-5**
-- **AC-4** is attained through the course learning objectives **SE-1**, **SE-3**
+- **AC-1** is attained through the course learning objectives **SE-1**, **SE-3**, **SE-5**
+- **AC-2** is attained through the course learning objectives **SE-2**, **SE-4**, **SE-5**
+- **AC-3** is attained through the course learning objectives **SE-2**, **SE-4**, **SE-5**
+- **AC-4** is attained through the course learning objectives **SE-1**, **SE-3**, **SE-5**
 
 All five of the course's learning objectives support the **SP** and **SB**
 distribution requirements.

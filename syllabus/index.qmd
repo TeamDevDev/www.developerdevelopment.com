@@ -378,9 +378,9 @@ minimum, the following document sections:
   Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
 - Working in a partner-based fashion, the review of your partner's professional
-précis for either an **SE** or **FB**/**DB**, resulting in the creation of an
-issue in the GitHub issue tracker for your partner's web site that summarizes
-your essence of your suggestions.
+précis for either an **SE** or **FB**/**DB** article, resulting in the creation
+of an issue in the GitHub issue tracker for your partner's web site that
+summarizes the essence of your suggestions.
 - Using GitHub, a response to the suggestions that your partner made in the
 GitHub issue tracker and a summary of the steps taken to improve your
 professional précis.

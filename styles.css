@@ -91,6 +91,14 @@ p a:hover {
   text-underline-offset: 0.3em;
 }
 
+li a:hover {
+  color: #f4b003 !important;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
+  text-decoration-color: #f4b003;
+  text-underline-offset: 0.3em;
+}
+
 .body a:hover {
   color: #f4b003 !important;
 }

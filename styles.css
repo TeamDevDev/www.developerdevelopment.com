@@ -561,9 +561,22 @@ div.quarto-post .thumbnail {
   opacity: 1;
 }
 
+.quarto-title .quarto-categories .quarto-category {
+  color: #333333 !important;
+  padding: 0em 0.75em;
+  font-size: 0.55em;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: solid 1.5px;
+  border-radius: 0.25rem;
+  opacity: 1;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
 .quarto-title .quarto-categories .quarto-category:hover {
-  color: #e65100 !important;
-  text-decoration: none;
+  color: #f4b003 !important;
 }
 
 div.quarto-post .listing-categories .listing-category {
@@ -613,7 +626,7 @@ div.quarto-grid-item .listing-categories .listing-category:hover {
 #quarto-margin-sidebar .quarto-listing-category {
   padding-top: -1rem !important;
   line-height: 1.25rem !important;
-  font-size: 0.75rem;
+  font-size: 0.70rem;
 }
 
 #title-block-header.quarto-title-block.default .quarto-title-meta {

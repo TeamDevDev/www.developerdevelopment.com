@@ -1,1 +1,19 @@
-index.qmd
+---
+author: (Authors)
+title: Introduction to Software Testing
+date: '2023-8-29'
+date-format: YYYY
+categories: [post, developer development, fuzzing book]
+description: <em>This is our first blog about the `Fuzzing Book` book!</em>
+page-layout: full
+---
+
+# Summary
+
+
+# Reflection
+
+
+# Action Items
+
+

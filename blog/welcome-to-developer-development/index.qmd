@@ -10,14 +10,21 @@ page-layout: article
 
 The Developer Development [blog](../index.qmd) features three main types of articles:
 
-- **Professional Development** executive summaries furnish the responses from
+- **Professional Development Executive Summaries** furnish the responses from
 learners who recently read a chapter in [Software Engineering at
 Google](https://abseil.io/resources/swe-book) book.
 
-- **Technical Development** executive summaries furnish the responses from
+- **Technical Development Executive Summaries** furnish the responses from
 learners who recently read a chapter in [Fuzzing
 Book](https://www.fuzzingbook.org/) or [Debugging
 Book](https://www.debuggingbook.org/).
 
+- **Incident Reports** describe what the team of developing developers learned
+after making mistakes when honing their professional and technical skills and
+implementing one of two long-term, open-source software tools.
+
+Interested in responding to the articles written by the developing developers?
+Please join the [Developer Development Discord
+Server](https://discord.gg/aNfn8DNEMx) to join the conversation!
 
 {{< include /_back-blog.qmd >}}

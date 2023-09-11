@@ -152,7 +152,12 @@ a software engineering project.
 
   - Enables the attainment of **AC-2** and **AC-4**
 
-- **SE-4**: Uses effective oral and written communication methods to explain
+- **SE-4**: Can effectively create and use software engineering tools that
+support software engineering activities like testing and debugging.
+
+  - Enables the attainment of **AC-1** and **AC-3**
+
+- **SE-5**: Uses effective oral and written communication methods to explain
 both the technical and product-use details of a software artifact.
 
   - Enables the attainment of **AC-2** and **AC-3**

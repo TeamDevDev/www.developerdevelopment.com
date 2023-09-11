@@ -346,8 +346,8 @@ in **FB**/**DB** and (ii) allow a learner to demonstrate an understanding of
 facts and ideas by interpreting and implementing the main technical ideas
 presented in either **FB** or **DB**.
 
-- **Project Development**: These assignments invite students to explore
-different techniques for specifying, designing, implementing, testing,
+- **Project Development**: These team-based assignments invite students to
+explore different techniques for specifying, designing, implementing, testing,
 documenting, deploying, and maintaining real-world, open-source Python programs.
 These assignments also encourage students to use software engineering tools to
 complete tasks like debugging, testing, and refactoring. The technical work that

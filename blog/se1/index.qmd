@@ -1,1 +1,20 @@
-index.qmd
+---
+author: (Authors)
+title: Programming Over Time
+date: '2023-8-29'
+date-format: YYYY
+categories: [post, developer development, software engineering]
+description: <em>This is our first blog about the `Software Engineering at Google` book!</em>
+page-layout: full
+---
+
+# Summary
+
+
+
+# Reflection
+
+
+
+# Action Items
+

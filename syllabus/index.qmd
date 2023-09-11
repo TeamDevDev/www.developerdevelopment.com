@@ -432,7 +432,7 @@ is merged into main branch of a GitHub repository.
 
 #### Assessment Policies
 
-Students must abide by the following assessment policies:
+Unless exempted by the instructor, students must abide by the following assessment policies:
 
 ##### Assignment Submission
 

@@ -11,3 +11,43 @@ page-layout: full
 The Developer Development
 
 {{< include /_back-blog.qmd >}}
+
+# Week 1
+
+## SE1
+
+#### Summary
+
+In the preface of *Software Engineering at Google*, the section [Programming Over Time](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) defines software engineering as "programming integrated over time." The purpose of the book is to answer reflective questions that Software Engineering (SE) teams should have during the life cycle of a project and a company or institution. The thesis of the book is then laid out as motivated by three principles that should be held in the development process: **Time and Change**, **Scale and Growth**, and **Trade-offs and Costs**. We will work hard to adapt to the changes made by our peers and to be the most amiable as a software development team.
+
+#### Reflection
+
+<!--
+Needs to be added too
+-->
+
+#### Use-Case
+
+1. We should plan ahead the approach to write our program in a timely manner: well-planned schedule, detailed scope of work, class and team goals
+2. Strategies to keep track of changes: Because we have a large team of software engineers, there will be time for unexpected change. As we operate in a blame-free environment, we should work on the problem by assigning a group of people to work on fixing the problem in a timely manner.
+3. Trade-offs and Costs: We should decide which feature to build, keeping in mind the opportunity cost, technical cost, people cost. etc.
+
+## FB1
+
+#### Summary
+
+The chapter **Introduction to Software Testing** in the Fuzzing Book walks us through the basic principles and caveats of software testing, including automated testing, manually selected test cases, and randomly chosen test cases. After many brief examples, it concludes with a reminder that software testing can *never* be 100% deterministic of the correctness of code. It is up to us as developers to make sure we can maximize the confidence level, though. Our team will need to be very intentional to write tests whenever implementing new features so that, when our peers debug `chasten`, it is as painless as possible for them.
+
+#### Reflection
+
+<!--
+Needs to be added too
+-->
+
+#### Use-Case
+
+1. Utilizing ‘print()’ Statement: One of the most straightforward yet effective debugging techniques is the ‘print’ statements. This technique involves strategically printing relevant information that provides information into whether the program is running correctly.
+2. Automatic Test Execution and ‘assert()’ Statement: By crafting comprehensive test suites with assert statements, you can systematically check if your code behaves correcly.
+3. Rounding Error: Introducing Epsilon: Some programs make exact comparisons challengeing by having float type. To tackle this issue, the concept of “epsilon” is employed, determining whether two floating-point values are considered equal. Developers often check if the absolute difference between the values of floating-point numbers is less than or equal to epsilon.
+4. Generating Tests: Apply Your Test to Thousands of Inputs: To increase confidence in your software’s correctness (and also reduce the time and effort spend testing each input), consider generating tests with a wide range of inputs.
+5. Integrating Checks: For robust and reliable code, consider integrating checks directly into your functions. You can utilize Assertions to ensure that the inputs and outputs conform to expected behavior.

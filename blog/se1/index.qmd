@@ -20,6 +20,7 @@ In the preface of "Software Engineering at Google" in the Programming Over Time 
 
 # Reflection
 
+Reflecting on our project's progress, a couple of key takeaways emerge. First, as we tackle this sizable project with our relatively inexperienced team, we must prioritize effective scaling. This means carefully planning and communicating to ensure everyone stays on track as the project grows. Second, we need to weigh the cost of implementing different features against their importance. Given our limited timeframe, we should focus on the most critical aspects to ensure we deliver a working product. Lastly, the insights from Google's software engineering practices stress the importance of a shared goal within a team. Our code should stand the test of time, adapt to changes, and scale effectively. This perspective not only enriches our understanding of software engineering but also sheds light on industry expectations and rigor. By applying these principles, we can enhance our project's sustainability and overall success.
 
 # Action Items
 

@@ -160,7 +160,7 @@ a software engineering project.
 - **SE-5**: Uses effective oral and written communication methods to explain
 both the technical and product-use details of a software artifact.
 
-  - Enables the attainment of **AC-1** through **AC-4**
+  - Enables the attainment of **AC-1** through **AC-5**
 
 The following list itemizes the three types of activities and two types of
 assessments in Computer Science 203 and illustrates their connection to the

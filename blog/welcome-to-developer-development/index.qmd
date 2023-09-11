@@ -5,9 +5,19 @@ date: '2023-8-29'
 date-format: YYYY
 categories: [post, developer development, course management]
 description: <em>Review these resources to start to develop as a developer!</em>
-page-layout: full
+page-layout: article
 ---
 
-The Developer Development
+The Developer Development [blog](../index.qmd) features three main types of articles:
+
+- **Professional Development** executive summaries furnish the responses from
+learners who recently read a chapter in [Software Engineering at
+Google](https://abseil.io/resources/swe-book) book.
+
+- **Technical Development** executive summaries furnish the responses from
+learners who recently read a chapter in [Fuzzing
+Book](https://www.fuzzingbook.org/) or [Debugging
+Book](https://www.debuggingbook.org/).
+
 
 {{< include /_back-blog.qmd >}}

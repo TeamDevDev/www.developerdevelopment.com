@@ -406,8 +406,16 @@ sidebar .quarto-alternate-notebooks ul li a,
 }
 
 .nav-link a:hover {
-  color: #ef6c00 !important;
+  color: #111111 !important;
   transition: none !important;
+}
+
+.sidebar a:hover {
+  color: #e64b19 !important;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms !important;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 1) !important;
+  text-decoration-color: #e64b19 !important;
+  text-underline-offset: 0.3em !important;
 }
 
 sidebar .quarto-alternate-notebooks ul li a,

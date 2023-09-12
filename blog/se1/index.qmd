@@ -4,13 +4,15 @@ title: Programming Over Time
 date: '2023-11-29'
 date-format: YYYY
 categories: [post, professional development, software engineering]
-Description: <em>This is our first blog post concerning the `Software Engineering at Google` book! It contains three sections: the summary, reflection, and action items. The goal of this post is to relate the material from the book to our progress on our Chasten tool, with the hope that it will provide valuable lessons on how we approach designing and developing our own software. </em>
+Description: <em> This is our first blog post concerning the Software Engineering at Google book! It contains three sections: the summary,
+reflection, and action items. The goal of this post is to relate the material from the book to our progress on our Chasten
+tool, with the hope that it will provide valuable lessons on how we approach designing and developing our own software. </em>
 page-layout: full
 ---
 
 # Summary
 
-In the preface of "Software Engineering at Google" in the Programming Over Time section we are first introduced to the idea that "Software Engineering" is not just the act of creating code, but also the creation of processes that allow us to create maintainable and sustainable software processes. In this sense, when we release a version of the software we created, we don't want that software to be the final version but rather a building block upon which we can improve. In order to succeed in this goal of sustainability and growth, the book emphasizes three points to be thinking of while creating software:
+In the preface of "Software Engineering at Google" (https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) in the Programming Over Time section we are first introduced to the idea that "Software Engineering" is not just the act of creating code, but also the creation of processes that allow us to create maintainable and sustainable software processes. In this sense, when we release a version of the software we created, we don't want that software to be the final version but rather a building block upon which we can improve. In order to succeed in this goal of sustainability and growth, the book emphasizes three points to be thinking of while creating software:
 
 - Time - In order to make sure that software is created with future improvements in mind, we need to plan out how the software we create will change from the start and finish of a certain project. This means we need to open up our code to make sure that it can be improved upon in future releases.
 
@@ -20,13 +22,12 @@ In the preface of "Software Engineering at Google" in the Programming Over Time 
 
 # Reflection
 
-Reflecting on our project's progress, we've recognized the need to prioritize scaling, emphasizing clear planning, and 
-communication as our team tackles a significant project with limited experience. 
-Given our constrained timeframe, we must carefully weigh the importance of features against their implementation cost. 
-Google's software engineering practices emphasize the importance of a shared team goal and code durability, guiding us in 
-building a resilient and adaptable product. 
-This feedback is relevant to Chasten, our Python program, which uses XPath expressions to enhance code analysis, ensuring 
-its continued success.
+Reflecting on our project's progress, we've recognized the need to prioritize scaling, emphasizing clear planning, and
+communication as our team tackles a significant project with limited experience. Given our constrained timeframe, we must
+carefully weigh the importance of features against their implementation cost. Google's software engineering practices
+emphasize the importance of a shared team goal and code durability, guiding us in building a resilient and adaptable
+product. This feedback is relevant to Chasten, our Python program, which uses XPath expressions to enhance code analysis,
+ensuring its continued success.
 
 Link to book: https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time
 Link to Chasten: https://github.com/AstuteSource/chasten

@@ -1,11 +1,11 @@
 ---
-author: 
-title: 
-date: 
-date-format: YYYY
-categories: 
-Description: <em> 
-page-layout: full
+Author: Finley, Vital, Sabrina 
+Title: Fuzzingbook Review 1
+Date: '2023 - 09 - 12'
+Date-Format: '2023'
+Categories: Fuzzingbook 1 Summary 
+Description: <em> Grasping the most relevant information from Fuzzingbook and summarizing our colleagues understanding about the chapter.  
+Page-Layout: full
 ---
 
 # Summary

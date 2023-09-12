@@ -10,6 +10,19 @@ Page-Layout: full
 
 # Summary
 
+Software testing is a fundamental asset in programming, which is why it is the first topic discussed in Fuzzingbook. Test cases are important when writing and distributing code for other clients, as they provide an accurate and working program for users. The chapter describes many fundamental ways in providing test cases for different programs. It begins by walking its readers towards a basic square root program that only finds real square root numbers. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Reflection

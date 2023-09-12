@@ -18,10 +18,10 @@ For example:
     * __Automate Tests__ using `assert` can help programmers by simply testing whether a statement is True or False. If the statment is True, then the program will execute nothing (if you have it do nothing), if the statement is False, then it will stop the execution of the program and throw an error.
         * (__HOWEVER__) the error type for this method ('AssertionError') is extremely broad and will not always identify a specific error types compared to other error messages.
 
-    * __Run Time Verification__ is running the check right into the implementation of the program. For example, 
+    * __Run Time Verification__ is running the check right into the implementation of the program. 
+        *(___LIMITATION___): run-time checks often depend on multiple program state properties, necessitating their identification. A comprehensive set of run-time checks is invaluable for error detection and debugging
 
-
-
+These are some great practices and way in which programmers may use specific test cases. Despite some limitation to most of them, there is a better chance in debugging and having a working code when using most test cases. 
 
 
 # Reflection

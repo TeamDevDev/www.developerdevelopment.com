@@ -3,28 +3,72 @@ author: Mordred Boulais
 title: Incident Report Regarding First Professional Precis
 date: '2023-9-11'
 date-format: YYYY
-categories: [post, developer development, incident report, professional precis, SE1]
-description: <em>A discussion of what we struggled with and how to improve from our first incident.</em>
+categories: [post, developer development, incident report]
+description: <em>Reporting on struggles and solutions.</em>
 ---
 
-The overarching struggle with getting out our first blog post regarding `Software
-Engineering At Google` mostly centered on the team's lack of proper communication
-and mutual understanding - of Github and of the task at hand. This was amplified
-by a lack of secure and consistent access to WiFi, and of a universal
-understanding of the terms used to describe the task.
+The overarching struggle with getting out our first blog post regarding
+[Software Engineering At Google](https://abseil.io/resources/swe-book/html/toc.html)
+mostly centered on the team's lack of proper communication and mutual
+understanding - of GitHub and of the task at hand. This was amplified by a lack
+of secure and consistent access to WiFi, and of a universal understanding of the
+terms used to describe the task.
+
+By this I refer to the confusion that followed the initial announcement of our
+need to work on this blog post. We simply decided to discuss among subgroups, but
+not what to do with that discussion nor how to make it into a proper product. In
+doing so, we failed to make clear the expectations and individual responsibilities
+involved. Then, even when team members attempted to coordinate a final product,
+the team's lack of understanding of
+[GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+interferred, as did the constant disconnecting and reconnecting of the Wifi for
+those involved.
 
 In order to tackle these issues, the team laid out a new methodology for the
 completion of tasks, involving the assignment of smaller committees to each
-task. This is intended to facillate closer and more accurate communication among
+task. This is intended to facilitate closer and more accurate communication among
 teammates and to ensure clarity of assigned work. Part of obtaining this clarity
 is to assign each committee a 'Github Expert', someone confident enough in their
-understanding of Github flow and functions to help guide other committee members.
+understanding of [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+and functions to help guide other committee members.
 Through this, we aim to also allow an opportunity for those less experienced to
 get a closer look, as the teams are small. Specifically, for Professional Precis
-Synthesis and Publishing, we chose to have teams of three who can split the work
+synthesis and publishing, we chose to have teams of three who can split the work
 and discuss with each other to ensure our work's quality.
 
-The element of this left to properly establish is when in our schedule the
-committees for each week will be determined. Some possibilities are: every
-Monday, after our demo on Tuesday, and via the project's Discord. This will
-be decided by 10:00AM Monday, September 18 2023.
+The particular schedules for the team as a whole as well as for our committees
+are as follows.
+
+Every Sunday, by 9:00pm - Final Corrections for both of the week's blog posts are
+submitted. If the committee cannot accomplish this, they will reach out via
+Discord to the rest of the team so others can aid in accomplishing the task.
+A team manager will be assigned to check up on them and also help ensure that
+any aid necessary is gotten in a reasonable time frame.
+
+Every Wednesday, by 9:00am - The first Professional Precis of the week is
+properly published by individuals to their personal websites. This is to ensure
+the assigned committee has content to review.
+
+Every Friday, by 9:00am - The second Professional Precis of the week is properly
+published by individuals to their personal websites. This is to ensure the
+assigned committee has content to review.
+
+Additional details and weekly schedules will go out in the team Discord. Teams
+can also find the best practices and appropriate approval process pinned there
+as well.
+
+The elements of this left to properly establish is when in our schedule the
+committees for each week will be determined, and how to handle a situation in
+which any committee both fails to send notification to the team Discord by
+12:00pm(Noon) on Sunday that they cannot complete the work and fails to
+complete their work. The possibilities below are not guaranteed to be the only
+options chosen from; discussion may yield more efffective ideas. Both will be
+decided by 10:00AM Monday, September 18 2023.
+
+Some possibilities for scheduling are: every Monday, after
+our demo on Tuesdays, and via the project's Discord at a group determined time. 
+
+Some possibilites for handling a committee that does not complete their work:
+Requiring the offending committee members to be assigned separately from each
+other, and requiring that each cannot work individually or on a committee for
+the next two weeks without a partner that was not on the offending committee.

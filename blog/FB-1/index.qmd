@@ -26,7 +26,7 @@ For example:
 
 # Reflection
 
-
+The Chasten team, as a whole, should engage in rigorous testing to ensure the highest quality of their code. We should keep the discussion of testing at the very forefront of our minds. We may also discuss how we can begin to approach test case creation for more complex objects that we will see later in the semester. Software testing smooths the merging process and can make implementing big projects go off without problems. It is essential to remember that developing and running tests may only sometimes pick up on every error we make. We must avoid overconfidence in our code and understand that something can always go wrong. Overall, this reading was beneficial in determining how testing works and the pros and cons of different testing methods. 
 
 # Action Items
 

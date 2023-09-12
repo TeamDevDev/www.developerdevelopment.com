@@ -10,16 +10,15 @@ Page-Layout: full
 
 # Summary
 
-Software testing is a fundamental asset in programming, which is why it is the first topic discussed in Fuzzingbook. Test cases are important when writing and distributing code for other clients, as they provide an accurate and working program for users. The chapter describes many fundamental ways in providing test cases for different programs. It begins by walking its readers towards a basic square root program that only finds real square root numbers. 
+Software testing is a fundamental asset in programming, which is why it is the first topic discussed in Fuzzingbook. Test cases are important when writing and distributing code for other clients, as they provide an accurate and working program for users. The chapter describes many fundamental ways in which it provides different ways to utilize test cases. 
+For example:
+    * __Print Statements__ is an easy way to develop a test case, as it allows the programmer to walk through the code in a step-by-step process and helps debug some errors.
+        * (__HOWEVER__) the book claims that writing print statments are not the most efficient way to debug a program as it will not have the most organized formatting and cannot debug ALL errors. 
+        
+    * __Automate Tests__ using `assert` can help programmers by simply testing whether a statement is True or False. If the statment is True, then the program will execute nothing (if you have it do nothing), if the statement is False, then it will stop the execution of the program and throw an error.
+        * (__HOWEVER__) the error type for this method ('AssertionError') is extremely broad and will not always identify a specific error types compared to other error messages.
 
-
-
-
-
-
-
-
-
+    * __Run Time Verification__ is running the check right into the implementation of the program. For example, 
 
 
 

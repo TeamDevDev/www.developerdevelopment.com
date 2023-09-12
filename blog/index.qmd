@@ -1,23 +1,20 @@
 ---
-title: "Blog"
-toc: true
+author: 
+title: 
+date: 
+date-format: YYYY
+categories: 
+Description: <em> 
 page-layout: full
-listing:
-  page-size: 15
-  contents:
-    - "../blog/**/*.qmd"
-    - "!../blog/index.qmd"
-  sort:
-    - "date desc"
-    - "title"
-  type: default
-  categories: true
-  date-format: "YYYY"
-  sort-ui: true
-  filter-ui: true
-  fields: [author, date, title, reading-time, description, categories]
-  feed:
-    title: "Blog"
-execute:
-  freeze: auto
 ---
+
+# Summary
+
+
+
+# Reflection
+
+
+
+# Action Items
+

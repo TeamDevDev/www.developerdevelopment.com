@@ -12,13 +12,23 @@ page-layout: full
 
 # Summary
 
-In the preface of "Software Engineering at Google" (https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) in the Programming Over Time section we are first introduced to the idea that "Software Engineering" is not just the act of creating code, but also the creation of processes that allow us to create maintainable and sustainable software processes. In this sense, when we release a version of the software we created, we don't want that software to be the final version but rather a building block upon which we can improve. In order to succeed in this goal of sustainability and growth, the book emphasizes three points to be thinking of while creating software:
+In the preface of Software Engineering at Google, specifically in the "Programming Over Time" section, we are introduced to the idea that 
+software engineering encompasses more than just writing code; it also involves creating processes that enable the development of maintainable 
+and sustainable software. Instead of viewing a software release as the final version, it should be seen as a foundation for continuous
+improvement.
 
-- Time - In order to make sure that software is created with future improvements in mind, we need to plan out how the software we create will change from the start and finish of a certain project. This means we need to open up our code to make sure that it can be improved upon in future releases.
+To achieve sustainability and growth, the book emphasizes three key aspects when creating software:
 
-- Scale - In order to account for workplace growth, need to plan how we will change our engineering methods as our team of engineers develops. So whether that means that our team is growing or shrinking, we need to make sure that our policy change with them.
+Time: To ensure that software is designed for future enhancements, it's crucial to plan how it will evolve from project inception to completion. 
+This involves structuring code in a way that allows for future improvements.
 
-- Costs - Finally, it is vital to make sure the team knows what projects should be done first as we only have time to implement certain features.
+Scale: As the engineering team grows or contracts, it's essential to plan how engineering practices will adapt to accommodate changes in team 
+size and structure.
+
+Costs: Prioritization is vital. It's necessary to establish a clear understanding of which projects should take precedence, considering time 
+constraints and resource availability.
+
+These principles not only facilitate software development but also highlight the importance of making well-informed trade-offs when necessary.
 
 # Reflection
 

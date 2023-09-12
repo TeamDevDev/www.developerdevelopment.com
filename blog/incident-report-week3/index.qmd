@@ -21,7 +21,7 @@ doing so, we failed to make clear the expectations and individual responsibiliti
 involved. Then, even when team members attempted to coordinate a final product,
 the team's lack of understanding of
 [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
-interferred, as did the constant disconnecting and reconnecting of the Wifi for
+interfered, as did the constant disconnecting and reconnecting of the Wifi for
 those involved.
 
 In order to tackle these issues, the team laid out a new methodology for the
@@ -62,13 +62,13 @@ committees for each week will be determined, and how to handle a situation in
 which any committee both fails to send notification to the team Discord by
 12:00pm(Noon) on Sunday that they cannot complete the work and fails to
 complete their work. The possibilities below are not guaranteed to be the only
-options chosen from; discussion may yield more efffective ideas. Both will be
+options chosen from; discussion may yield more effective ideas. Both will be
 decided by 10:00AM Monday, September 18 2023.
 
 Some possibilities for scheduling are: every Monday, after
 our demo on Tuesdays, and via the project's Discord at a group determined time. 
 
-Some possibilites for handling a committee that does not complete their work:
+Some possibilities for handling a committee that does not complete their work:
 Requiring the offending committee members to be assigned separately from each
 other, and requiring that each cannot work individually or on a committee for
 the next two weeks without a partner that was not on the offending committee.

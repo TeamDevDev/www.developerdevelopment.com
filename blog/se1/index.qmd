@@ -49,16 +49,15 @@ importance of making well-informed trade-offs when necessary.
 As outlined in the [developer development schedule](../../schedule/index.qmd),
 we are embarking on a sixteen-week adventure to build two production-quality
 software tools. This reflective content is relevant to
-[Chasten](https://github.com/AstuteSource/chasten), a Python tool that we are
-implementing to use XPath expressions to
-
-Reflecting on our project's progress, we've recognized the need to prioritize
-scaling, emphasizing clear planning, and communication as our team tackles a
-significant project with limited experience. Given our constrained time-frame,
-we must carefully weigh the importance of features against their implementation
-cost. Google's software engineering practices emphasize the importance of a
-shared team goal and code durability, guiding us in building a resilient and
-adaptable product.
+[Chasten](https://github.com/AstuteSource/chasten), a tool that we are building
+to automatically search for source code patterns using XPath expressions.
+Reflecting on our project's progress so far, we've recognized the need to
+prioritize scaling, emphasizing clear planning and communication as our team
+tackles a significant project with limited experience. Given our constrained
+time-frame, we must carefully weigh the importance of features against their
+implementation cost. Google's software engineering practices emphasize the
+importance of a shared team goal and code durability, guiding us in building a
+resilient and adaptable product.
 
 ## Action Items
 

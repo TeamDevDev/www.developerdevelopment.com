@@ -1,10 +1,10 @@
 ---
-author: Caleb Kendra, Alish Chhetri, and Evan Nelson
+author: [Alish Chhetri, Caleb Kendra, Evan Nelson, Gregory M. Kapfhammer]
 title: Programming Over Time
 date: '2023-9-12'
-date-format: YYYY
+date-format: long
 categories: [post, professional development, software engineering]
-description: <em> SE1 blog post </em>
+description: <em>How is software engineering different than programming?</em>
 toc: true
 page-layout: full
 ---

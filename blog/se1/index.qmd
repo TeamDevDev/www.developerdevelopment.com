@@ -4,15 +4,20 @@ title: Programming Over Time
 date: '2023-11-29'
 date-format: YYYY
 categories: [post, professional development, software engineering]
-Description: <em> This is our first blog post concerning the Software Engineering at Google book! It contains three sections: the summary,
-reflection, and action items. The goal of this post is to relate the material from the book to our progress on our Chasten
-tool, with the hope that it will provide valuable lessons on how we approach designing and developing our own software. </em>
+Description: <em> SE1 blog post </em>
 page-layout: full
 ---
 
+# Abstract
+
+This is our first blog post concerning the [Software Engineering at Google book](https://abseil.io/resources/swe-book)! It contains three 
+sections: the summary,
+reflection, and action items. The goal of this post is to relate the material from the book to our progress on our Chasten
+tool, with the hope that it will provide valuable lessons on how we approach designing and developing our own software.
+
 # Summary
 
-In the preface of Software Engineering at Google, specifically in the "Programming Over Time" section, we are introduced to the idea that 
+In the preface of Software Engineering at Google, specifically in the ["Programming Over Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) section, we are introduced to the idea that 
 software engineering encompasses more than just writing code; it also involves creating processes that enable the development of maintainable 
 and sustainable software. Instead of viewing a software release as the final version, it should be seen as a foundation for continuous
 improvement.
@@ -36,18 +41,17 @@ Reflecting on our project's progress, we've recognized the need to prioritize sc
 communication as our team tackles a significant project with limited experience. Given our constrained timeframe, we must
 carefully weigh the importance of features against their implementation cost. Google's software engineering practices
 emphasize the importance of a shared team goal and code durability, guiding us in building a resilient and adaptable
-product. This feedback is relevant to Chasten, our Python program, which uses XPath expressions to enhance code analysis,
+product. This feedback is relevant to [Chasten](https://github.com/AstuteSource/chasten), our Python program, which uses XPath expressions to enhance code analysis,
 ensuring its continued success.
-
-Link to book: https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time
-Link to Chasten: https://github.com/AstuteSource/chasten
 
 # Action Items
 
-The principles and concepts from https://abseil.io/resources/swe-book/html/pr01.html can be adapted to enhance the development
+The principles and concepts from the [SE at Google book](https://abseil.io/resources/swe-book/html/pr01.html) can be adapted to enhance the development
 and maintenance of Chasten as a critical computational biology and physiology library. By focusing on sustainability,
 adaptability, and rigorous engineering practices, Chasten can continue to serve the scientific community effectively. By
 adapting the principles and concepts from "Software Engineering at Google," Chasten can enhance its development and
 maintenance, making it more sustainable, adaptable, and robust. This approach will enable Chasten to continue serving the
 scientific community effectively, meet evolving computational biology and physiology needs, and maintain its relevance in
 the long term.
+
+# [Back to Blog](https://developerdevelopment.com/blog/)

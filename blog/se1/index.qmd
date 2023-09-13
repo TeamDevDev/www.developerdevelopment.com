@@ -9,7 +9,7 @@ toc: true
 page-layout: full
 ---
 
-# Abstract
+## Overview
 
 This is our first post about the [Software Engineering at Google
 book](https://abseil.io/resources/swe-book)! The goal of this post is to relate
@@ -17,7 +17,7 @@ the material from the book to our progress on our Chasten tool, with the hope
 that it will provide valuable lessons on how we approach designing and
 developing our own software.
 
-# Summary
+## Summary
 
 The ["Programming Over
 Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time)
@@ -45,7 +45,7 @@ constraints and resource availability.
 These principles not only facilitate software development but also highlight the
 importance of making well-informed trade- offs when necessary.
 
-# Reflection
+## Reflection
 
 Reflecting on our project's progress, we've recognized the need to prioritize
 scaling, emphasizing clear planning, and communication as our team tackles a
@@ -57,7 +57,7 @@ adaptable product. This feedback is relevant to
 [Chasten](https://github.com/AstuteSource/chasten), our Python program, which
 uses XPath expressions to enhance code analysis, ensuring its continued success.
 
-# Action Items
+## Action Items
 
 The principles and concepts from the [SE at Google
 book](https://abseil.io/resources/swe-book/html/pr01.html) can be adapted to

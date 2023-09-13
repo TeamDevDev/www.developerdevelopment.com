@@ -1,7 +1,7 @@
 ---
 author: Caleb Kendra, Alish Chhetri, and Evan Nelson
 title: Programming Over Time
-date: '2023-11-29'
+date: '2023-9-12'
 date-format: YYYY
 categories: [post, professional development, software engineering]
 Description: <em> SE1 blog post </em>
@@ -10,30 +10,37 @@ page-layout: full
 
 # Abstract
 
-This is our first blog post concerning the [Software Engineering at Google book](https://abseil.io/resources/swe-book)! It contains three 
+This is our first blog post concerning the [Software Engineering at Google book](https://abseil.io/resources/swe-book)! It 
+contains three 
 sections: the summary,
 reflection, and action items. The goal of this post is to relate the material from the book to our progress on our Chasten
 tool, with the hope that it will provide valuable lessons on how we approach designing and developing our own software.
 
 # Summary
 
-In the preface of Software Engineering at Google, specifically in the ["Programming Over Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) section, we are introduced to the idea that 
-software engineering encompasses more than just writing code; it also involves creating processes that enable the development of maintainable 
-and sustainable software. Instead of viewing a software release as the final version, it should be seen as a foundation for continuous
-improvement.
+In the preface of Software Engineering at Google, specifically in the 
+["Programming Over Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) section, we are 
+introduced to the idea that 
+software engineering encompasses more than just writing code; it also involves creating processes that enable the 
+development of maintainable 
+and sustainable software. Instead of viewing a software release as the final version, it should be seen as a foundation for 
+continuous improvement.
 
 To achieve sustainability and growth, the book emphasizes three key aspects when creating software:
 
-Time: To ensure that software is designed for future enhancements, it's crucial to plan how it will evolve from project inception to completion. 
-This involves structuring code in a way that allows for future improvements.
+Time: To ensure that software is designed for future enhancements, it's crucial to plan how it will evolve from project 
+inception to completion. This involves structuring code in a way that allows for future improvements.
 
-Scale: As the engineering team grows or contracts, it's essential to plan how engineering practices will adapt to accommodate changes in team 
+Scale: As the engineering team grows or contracts, it's essential to plan how engineering practices will adapt to 
+accommodate changes in team 
 size and structure.
 
-Costs: Prioritization is vital. It's necessary to establish a clear understanding of which projects should take precedence, considering time 
+Costs: Prioritization is vital. It's necessary to establish a clear understanding of which projects should take precedence, 
+considering time 
 constraints and resource availability.
 
-These principles not only facilitate software development but also highlight the importance of making well-informed trade-offs when necessary.
+These principles not only facilitate software development but also highlight the importance of making well-informed trade-
+offs when necessary.
 
 # Reflection
 
@@ -41,12 +48,14 @@ Reflecting on our project's progress, we've recognized the need to prioritize sc
 communication as our team tackles a significant project with limited experience. Given our constrained timeframe, we must
 carefully weigh the importance of features against their implementation cost. Google's software engineering practices
 emphasize the importance of a shared team goal and code durability, guiding us in building a resilient and adaptable
-product. This feedback is relevant to [Chasten](https://github.com/AstuteSource/chasten), our Python program, which uses XPath expressions to enhance code analysis,
+product. This feedback is relevant to [Chasten](https://github.com/AstuteSource/chasten), our Python program, which uses 
+XPath expressions to enhance code analysis,
 ensuring its continued success.
 
 # Action Items
 
-The principles and concepts from the [SE at Google book](https://abseil.io/resources/swe-book/html/pr01.html) can be adapted to enhance the development
+The principles and concepts from the [SE at Google book](https://abseil.io/resources/swe-book/html/pr01.html) can be adapted 
+to enhance the development
 and maintenance of Chasten as a critical computational biology and physiology library. By focusing on sustainability,
 adaptability, and rigorous engineering practices, Chasten can continue to serve the scientific community effectively. By
 adapting the principles and concepts from "Software Engineering at Google," Chasten can enhance its development and

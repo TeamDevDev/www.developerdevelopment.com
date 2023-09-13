@@ -42,7 +42,7 @@ necessary to establish a clear understanding of which project tasks should take
 precedence, considering time constraints and resource availability.
 
 These principles not only facilitate software development but also highlight the
-importance of making well-informed trade- offs when necessary.
+importance of making well-informed trade-offs when necessary.
 
 ## Reflection
 

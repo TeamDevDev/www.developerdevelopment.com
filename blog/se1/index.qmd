@@ -24,9 +24,9 @@ Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time
 section introduces the idea that software engineering encompasses more than just
 writing code &mdash; it also involves creating processes that enable the
 development of maintainable and sustainable software. The preface makes it clear
-that, instead of viewing a software release as the final version, it should be
-seen as a foundation for continuous improvement. To achieve sustainability and
-growth, the book emphasizes three key aspects:
+that, instead of viewing a software release as the "final version," we should
+see it as a foundation for continuous improvement. The book's preface emphasizes
+three key concepts:
 
 - **Time**: To ensure that software is designed for future enhancements, it's
 crucial to plan how it will evolve from project inception to completion. This

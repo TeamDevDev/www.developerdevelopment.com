@@ -4,18 +4,18 @@ title: Programming Over Time
 date: '2023-9-12'
 date-format: YYYY
 categories: [post, professional development, software engineering]
-Description: <em> SE1 blog post </em>
+description: <em> SE1 blog post </em>
+toc: true
 page-layout: full
 ---
 
 # Abstract
 
-This is our first blog post concerning the [Software Engineering at Google
-book](https://abseil.io/resources/swe-book)! It contains three sections: the
-summary, reflection, and action items. The goal of this post is to relate the
-material from the book to our progress on our Chasten tool, with the hope that
-it will provide valuable lessons on how we approach designing and developing our
-own software.
+This is our first post about the [Software Engineering at Google
+book](https://abseil.io/resources/swe-book)! The goal of this post is to relate
+the material from the book to our progress on our Chasten tool, with the hope
+that it will provide valuable lessons on how we approach designing and
+developing our own software.
 
 # Summary
 

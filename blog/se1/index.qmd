@@ -56,8 +56,8 @@ prioritize scaling, emphasizing clear planning and communication as our team
 tackles a significant project with limited experience. Given our constrained
 time-frame, we must carefully weigh the importance of features against their
 implementation cost. Google's software engineering practices emphasize the
-importance of a shared team goal and code durability, guiding us in building a
-resilient and adaptable product.
+importance of a shared team goal and code durability --- they will serve as a
+worthy guide as we build a resilient and adaptable tool.
 
 ## Action Items
 

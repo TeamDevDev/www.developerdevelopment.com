@@ -45,8 +45,8 @@ working code when using most test cases.
 
 # Reflection
 
-The Chasten team, as a whole, should engage in rigorous testing to ensure the highest 
-quality of their code. We should keep the discussion of testing at the very forefront of
+The [Chasten](https://github.com/AstuteSource/chasten/tree/pysqlite3-removal-test-branch) team, as a whole, should engage in rigorous testing to ensure
+the highest quality of their code. We should keep the discussion of testing at the very forefront of
 our minds. We may also discuss how we can begin to approach test case creation for more
 complex objects that we will see later in the semester. Software testing smooths the
 merging process and can make implementing big projects go off without problems. It is
@@ -57,7 +57,7 @@ the pros and cons of different testing methods.
 
 # Action Items
 
-Making test is something that we will have to do in our develpment process of `chasten`. An
+Making test is something that we will have to do in our development process of `chasten`. An
 idea that we as a group could implement is to have a group of people designated to making
 test cases, these people should be are so called "Bug Finders". This way we can have
 different people testing code they might not have worked on. For this, the "Bug Finders"

@@ -4,7 +4,7 @@ title: Incident Report &#58; Publishing the First Executive Summary on SE1
 date: '2023-9-11'
 date-format: long
 categories: [post, developer development, incident report]
-description: <em>Let's learn from the struggles that we faced in shipping a summary!</em>
+description: <em>Let's learn from our struggles when shipping a summary!</em>
 ---
 
 The overarching struggle with getting out our first blog post regarding

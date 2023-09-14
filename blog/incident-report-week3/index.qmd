@@ -1,5 +1,5 @@
 ---
-author: Mordred Boulais
+author: [Mordred Boulais, Gregory M. Kapfhammer]
 title: Incident Report &#58; Publishing the First Executive Summary on SE1
 date: '2023-9-11'
 date-format: long
@@ -12,8 +12,8 @@ The overarching struggle with getting out our first executive summary of
 Google](https://abseil.io/resources/swe-book/html/toc.html) mostly centered on
 the team's lack of proper communication and mutual understanding - of GitHub and
 of the task at hand. This was amplified by a lack of secure and consistent
-access to WiFi, and of a universal understanding of the terms used to describe
-the task.
+access to a wireless network, and of a universal understanding of the terms used
+to describe the task.
 
 By this I refer to the confusion that followed the initial announcement of our
 need to work on this blog post. We simply decided to discuss among subgroups,
@@ -27,24 +27,24 @@ those involved.
 
 In order to tackle these issues, the team laid out a new methodology for the
 completion of tasks, involving the assignment of smaller committees to each
-task. This is intended to facilitate closer and more accurate communication among
-teammates and to ensure clarity of assigned work. Part of obtaining this clarity
-is to assign each committee a 'Github Expert', someone confident enough in their
-understanding of [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
-and functions to help guide other committee members.
-Through this, we aim to also allow an opportunity for those less experienced to
-get a closer look, as the teams are small. Specifically, for Professional Precis
-synthesis and publishing, we chose to have teams of three who can split the work
-and discuss with each other to ensure our work's quality.
+task. This is intended to facilitate closer and more accurate communication
+among teammates and to ensure clarity of assigned work. Part of obtaining this
+clarity is to assign each committee a "Github Expert", someone confident enough
+in their understanding of [GitHub
+Flow](https://docs.github.com/en/get-started/quickstart/github-flow) and
+functions to help guide other committee members. Through this, we aim to also
+allow an opportunity for those less experienced to get a closer look, as the
+teams are small. Specifically, for professional précis synthesis and publishing,
+we chose to have teams of three who can split the work and discuss with each
+other to ensure our work's quality.
 
-The particular schedules for the team as a whole as well as for our committees
-are as follows.
+Here are the schedules for the team as a whole as well as for our committees:
 
-Every Sunday, by 9:00pm - Final Corrections for both of the week's blog posts are
-submitted. If the committee cannot accomplish this, they will reach out via
-Discord to the rest of the team so others can aid in accomplishing the task.
-A team manager will be assigned to check up on them and also help ensure that
-any aid necessary is gotten in a reasonable time frame.
+- **Every Sunday, by 9:00pm**: Final Corrections for both of the week's blog
+posts are submitted. If the committee cannot accomplish this, they will reach
+out via Discord to the rest of the team so others can aid in accomplishing the
+task. A team manager will be assigned to check up on them and also help ensure
+that any aid necessary is gotten in a reasonable time frame.
 
 Every Wednesday, by 9:00am - The first Professional Precis of the week is
 properly published by individuals to their personal websites. This is to ensure

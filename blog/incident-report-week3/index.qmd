@@ -7,21 +7,22 @@ categories: [post, developer development, incident report]
 description: <em>Let's learn from our struggles when shipping a summary!</em>
 ---
 
-The overarching struggle with getting out our first blog post regarding
-[Software Engineering At Google](https://abseil.io/resources/swe-book/html/toc.html)
-mostly centered on the team's lack of proper communication and mutual
-understanding - of GitHub and of the task at hand. This was amplified by a lack
-of secure and consistent access to WiFi, and of a universal understanding of the
-terms used to describe the task.
+The overarching struggle with getting out our first executive summary of
+[Software Engineering At
+Google](https://abseil.io/resources/swe-book/html/toc.html) mostly centered on
+the team's lack of proper communication and mutual understanding - of GitHub and
+of the task at hand. This was amplified by a lack of secure and consistent
+access to WiFi, and of a universal understanding of the terms used to describe
+the task.
 
 By this I refer to the confusion that followed the initial announcement of our
-need to work on this blog post. We simply decided to discuss among subgroups, but
-not what to do with that discussion nor how to make it into a proper product. In
-doing so, we failed to make clear the expectations and individual responsibilities
-involved. Then, even when team members attempted to coordinate a final product,
-the team's lack of understanding of
-[GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
-interfered, as did the constant disconnecting and reconnecting of the Wifi for
+need to work on this blog post. We simply decided to discuss among subgroups,
+but not what to do with that discussion nor how to make it into a proper
+product. In doing so, we failed to make clear the expectations and individual
+responsibilities involved. Then, even when team members attempted to coordinate
+a final product, the team's lack of understanding of [GitHub
+Flow](https://docs.github.com/en/get-started/quickstart/github-flow) interfered,
+as did the constant disconnecting and reconnecting of the wireless network for
 those involved.
 
 In order to tackle these issues, the team laid out a new methodology for the

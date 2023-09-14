@@ -349,16 +349,16 @@ presented in either **FB** or **DB**.
 - **Project Development**: These team-based assignments invite students to
 explore different techniques for specifying, designing, implementing, testing,
 documenting, deploying, and maintaining real-world, open-source Python programs.
-These assignments also encourage students to use software engineering tools to
-complete tasks like debugging, testing, and refactoring. The technical work that
-a student completes during project development will take place in a public
-GitHub repository and will be further documented and reflected on in a private
-GitHub repository that the instructor will use to furnish feedback to the
-student. Finally, the professional work that a student undertakes as part of
-project development will occur in both an in-person setting and through a public
-GitHub repository, with the use of a private GitHub repository offering the
-opportunity for the student to document and reflect on their contributions and
-for the instructor to offer feedback.
+These assignments also encourage students to use and build software engineering
+tools to complete tasks like debugging and testing. The technical work that a
+student completes during project development will take place in a public GitHub
+repository and will be further documented and reflected on in a private GitHub
+repository that the instructor will use to furnish feedback to the student.
+Finally, the professional work that a student undertakes as part of project
+development will occur in both an in-person setting and through a public GitHub
+repository, with the use of a private GitHub repository offering the opportunity
+for the student to document and reflect on their contributions and for the
+instructor to offer detailed feedback.
 
 Both the **Professional Development** and **Technical Development** assessment
 categories require students to complete the following tasks on a weekly basis:
@@ -432,7 +432,8 @@ is merged into main branch of a GitHub repository.
 
 #### Assessment Policies
 
-Students must abide by the following assessment policies:
+Unless exempted by the instructor, students must abide by the following
+assessment policies:
 
 ##### Assignment Submission
 

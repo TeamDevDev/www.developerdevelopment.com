@@ -2,7 +2,7 @@
 author: Gregory M. Kapfhammer
 title: Are You Ready to Develop as a Developer?
 date: '2023-8-29'
-date-format: YYYY
+date-format: long
 categories: [post, developer development, course management]
 description: <em>Review these resources to start to develop as a developer!</em>
 page-layout: article

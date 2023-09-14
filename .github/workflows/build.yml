@@ -14,7 +14,7 @@ on:
 # for the web site, using Python, Poetry,
 # and the Quarto publishing system
 jobs:
-  build-deploy:
+  build-no-deploy:
     runs-on: ubuntu-latest
     steps:
       # Repository

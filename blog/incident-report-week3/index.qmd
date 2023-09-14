@@ -1,10 +1,10 @@
 ---
 author: Mordred Boulais
-title: Incident Report Regarding First Professional Precis
+title: Incident Report &#58; Publishing the First Executive Summary on SE1
 date: '2023-9-11'
-date-format: YYYY
+date-format: long
 categories: [post, developer development, incident report]
-description: <em>Reporting on struggles and solutions.</em>
+description: <em>Let's learn from the struggles that we faced in shipping a summary!</em>
 ---
 
 The overarching struggle with getting out our first blog post regarding

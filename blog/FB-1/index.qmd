@@ -1,0 +1,69 @@
+---
+Author: [Finley, Vital, Sabrina]
+Title: Fuzzingbook Review 1
+Date: '2023-09-12'
+Date-Format: long
+Categories: [post, professional development, fuzzingbook]
+Description: <em> Grasping the most relevant information from Fuzzingbook <em>  
+toc: true
+Page-Layout: full
+---
+
+# Summary
+
+Software testing is a fundamental asset in programming, which is why it is the first topic
+discussed in [Fuzzingbook](https://www.fuzzingbook.org/html/Intro_Testing.html). Test cases
+are important when writing and distributing code for other clients, as they provide an 
+accurate and working program for users. The chapter describes many fundamental ways in
+which it provides different ways to utilize test cases. 
+For example:
+    * __Print Statements__ is an easy way to develop a test case, as it allows the 
+    programmer to walk through the code in a step-by-step process and helps debug some 
+    errors.
+        * (__HOWEVER__) the book claims that writing print statments are not the most 
+        efficient way to debug a program as it will not have the most organized formatting 
+        and cannot debug ALL errors. 
+        
+    * __Automate Tests__ using `assert` can help programmers by simply testing whether a 
+    statement is True or False. If the statment is True, then the program will execute 
+    nothing (if you have it do nothing), if the statement is False, then it will stop the
+    execution of the program and throw an error.
+        * (__HOWEVER__) the error type for this method ('AssertionError') is extremely 
+        broad and will not always identify a specific error types compared to other error 
+        messages.
+
+    * __Run Time Verification__ is running the check right into the implementation of the 
+    program. 
+        *(___LIMITATION___): run-time checks often depend on multiple program state 
+        properties, necessitating their identification. A comprehensive set of run-time 
+        checks is invaluable for error detection and debugging
+
+These are some great practices and way in which programmers may use specific test cases.
+Despite some limitation to most of them, there is a better chance in debugging and having a
+working code when using most test cases. 
+
+
+# Reflection
+
+The Chasten team, as a whole, should engage in rigorous testing to ensure the highest 
+quality of their code. We should keep the discussion of testing at the very forefront of
+our minds. We may also discuss how we can begin to approach test case creation for more
+complex objects that we will see later in the semester. Software testing smooths the
+merging process and can make implementing big projects go off without problems. It is
+essential to remember that developing and running tests may only sometimes pick up on every
+error we make. We must avoid overconfidence in our code and understand that something can
+always go wrong. Overall, this reading was beneficial in determining how testing works and
+the pros and cons of different testing methods. 
+
+# Action Items
+
+Making test is something that we will have to do in our develpment process of `chasten`. An
+idea that we as a group could implement is to have a group of people designated to making
+test cases, these people should be are so called "Bug Finders". This way we can have
+different people testing code they might not have worked on. For this, the "Bug Finders"
+will have to understand the code being tested. It is a understanding that not everyone is
+on the same level when it comes to implementing test cases, so it would probably be
+beneficial for us to have different skill levels working together. A similar method to how
+we grouped people for blog post duties.
+
+{{< include / _back-blog.qmd >}}

@@ -54,7 +54,7 @@ participants of this sixteen-week course will gain valuable perspectives and
 practical skills to enhance their software engineering skills while
 collaboratively building and releasing two open-source tools.
 
-## Connections
+## Adventure
 
 Interested in getting started on a developer development adventure? Begin here:
 

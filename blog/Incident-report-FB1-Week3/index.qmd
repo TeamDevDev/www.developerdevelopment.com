@@ -1,0 +1,27 @@
+---
+author: [Sabrina Rodriguez, Vital Joseph, Finley Banas]
+title: Incident Report &#59; Publishing the First Executive Summary on FB1
+date: '2023-9-14'
+date-format: long
+categories: [post, developer development, incident report]
+description: <em>Learning from our mistakes</em>
+---
+
+Our team was unable to successfully publish 
+[Fuzzingbook - Chapter one](https://www.fuzzingbook.org/html/Intro_Testing.html) due to our mistake of forking from another classmates branch.
+Signifying that our published summary was unable to be revised due to the branch not being directly under the main branch.
+
+To resolve this issue we came together as a team and decided to create a new fork deriving from the original [Developer Development](https://github.com/TeamDevDev/www.developerdevelopment.com)
+github repository. Under this fork we created a new folder under [Blog](https://github.com/TeamDevDev/www.developerdevelopment.com/tree/master/blog) called FB-1.
+Then finally copied and pasted our previous material from our original fork into this new file.
+
+These changes allowed for our published FB-1 to be revised but because the newly made file was copied and pasted, we have issues for documentation. Therefore, to resolve this
+we decided to maintain our [original repo for FB-1](https://github.com/Finley8/www.developerdevelopment.com/tree/FB-1) inside our classmates fork. This allows proof of documentation 
+through commits and demonstrates changes that were made within different files. 
+
+**Possibilities for changes**: 
+  - Rechecking if we are within the correct repo
+  - Keeping track of commits and documentation for next group projects
+  - Communication with other classmates if we struggle with mastering certain github commands. 
+
+{{< include /_back-blog.qmd >}}

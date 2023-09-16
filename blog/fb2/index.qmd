@@ -1,0 +1,35 @@
+---
+author: [Mordred Boulais, Hank, Will, Gregory M. Kapfhammer]
+title: Code Coverage
+date: '2023-9-16'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can we achieve the most possible code coverage?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This is our second post about [The Fuzzing Book](https://www.fuzzingbook.org/)!
+The goal of this post is to relate the material from the book to our progress on
+our Chasten tool, with the hope that it will provide valuable lessons on how we
+approach designing and developing our own software.
+
+## Summary
+
+The ["Code Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter of
+this book provides us with insight into specific sorts of tests and their
+implementation. 
+
+
+
+## Reflection
+
+
+
+## Action Items
+
+
+
+{{< include /_back-blog.qmd >}}

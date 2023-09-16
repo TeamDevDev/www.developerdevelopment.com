@@ -1,5 +1,5 @@
 ---
-author: [Mordred Boulais, Hank, Will, Gregory M. Kapfhammer]
+author: [Mordred Boulais, , , Gregory M. Kapfhammer]
 title: Code Coverage
 date: '2023-9-16'
 date-format: long
@@ -14,7 +14,10 @@ page-layout: full
 This is our second post about [The Fuzzing Book](https://www.fuzzingbook.org/)!
 The goal of this post is to relate the material from the book to our progress on
 our Chasten tool, with the hope that it will provide valuable lessons on how we
-approach designing and developing our own software.
+approach designing and developing our own software. Part of this is guidance on
+automating tests, and how that may look in different coding languages, although
+the main point of focus is on Python.
+
 
 ## Summary
 
@@ -22,14 +25,31 @@ The ["Code Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter of
 this book provides us with insight into specific sorts of tests and their
 implementation. 
 
+The distinction between the tests is first highlighted in the comparison between
+black-box and white-box testing, as specification vs. implementation. This sets
+the foundation for the chapter to discuss assorted methods of running built-in
+methods to not only assess the existing coverage, but also to automatically
+generate tests. Part of this is, as one may expect with a title explicitly
+referrencing it, going over the part fuzzing tests/fuzzers play in this process.
+
 
 
 ## Reflection
 
+Notable elements of the chapter that we find worth further careful considertion
+include the need to run coverage checks, how to automatically generate test
+cases for our code, and the role which fuzzers might play in these efforts. In
+order to complete the second item on this list, we may find it useful to employ
+tracing functions.
 
 
 ## Action Items
 
-
+It is now vital that we, as a team, put into action the ideas outlined here.
+This chapter has also provided us with the knowledge as to how to go about it,
+particularly because much of our work is in Python. As our teams create new features
+and fix bugs, it is important that they also scan the coverage following their
+improvements, and how to bring the coverage up to a more ideal level through the
+generation of tests.
 
 {{< include /_back-blog.qmd >}}

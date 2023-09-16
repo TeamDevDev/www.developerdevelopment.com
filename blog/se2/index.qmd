@@ -1,0 +1,65 @@
+---
+author: [Preston Smith]
+title: What is Software Engineering?
+date: '2023-9-16'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>What is software engineering and why is it important?</em>
+toc: true
+page-layout: full
+---
+
+## Summary
+
+["What is Software Engineering?"](https://abseil.io/resources/swe-book/html/ch01.html) Goes into a little more detail about what
+the difference between programming and software engineering and talks important things
+to consider when working as a software engineer. As a software engineer you need to concern
+yourself with the longecity of the program you create and are working on and remember to
+work as a **team** these are not single person projects. **Longevity** general upkeep and maintance
+are crucial for Software Engineering there are other people who will be using the program
+and things change dependencies get updated programming languages update and change and
+this may require **adjustment**. Its important to be **proactive** in this because if something
+is wrong with the program and you either don't notice or elect to ignore it may cause
+even more problems in the future. You need to assume that every part of the program will
+be used by someone.
+
+It also needs to be acknowledged you may not be able to do something you want and **trade-offs**
+may have to be made being able to make these decisions is what can make a good Software
+Engineer. The project needs to be scaled to the amount of people working on it, amount of
+time and what is possible with the tools being used. If this isn't done you may find yourself
+working on something for long periods of time that ultimely has minimal or no gain compared 
+to the effort and time it took to implement. So making these decisions are crucial to ensuring
+things get done **effectivly** and **efficiently**
+
+As stated before it important to understant that these are not single person operation they
+require people to communicate, be organized and be informed of the direction of the project.
+If people aren't on the same page then you can have people doing redundant work, irrelevent work
+or no work at all getting your project nowhere. Its important to **be critical** on the systems and
+rules in place as they may need to change depending on the situation you cant be sucessful as a
+team or organization without some forms of critisizm or adjustment so it important for people
+to express there opinions and concerns.
+
+## Reflection
+
+While as a team we have made improvments in organization and communication theres still
+a long way to go. As alot of people seem to not be on the same page and are still having
+problems running chasten as is making so its very hard for them to contribute. This has
+caused to miss deadlines or people being unaware of whats going on or what there supposed
+to be doing. Some people don't even know how to run the program there working on. This is
+a result on people being uninformed about the program now this isn't completely a result
+of poor communication as there is documentation but if someone is falling behind then we
+all fall behind there for it is our responsibility to help them So they can succeed and
+we can succeed as well.
+
+## What can we do?
+
+We need to take little more responsibility for eachother as we have not fully grasped
+the importance of teamwork and communication stunting our progress on chasten.
+
+So we need to.
+
+- **Communicate**
+- **Help eachother**
+- **Take responsibility as a unit not an individual**
+
+{{< include /_back-blog.qmd >}}

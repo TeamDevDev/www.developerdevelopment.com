@@ -11,55 +11,87 @@ page-layout: full
 
 ## Summary
 
-["What is Software Engineering?"](https://abseil.io/resources/swe-book/html/ch01.html) Goes into a little more detail about what
-the difference between programming and software engineering and talks important things
-to consider when working as a software engineer. As a software engineer you need to concern
-yourself with the longevity of the program you create and are working on and remember to
-work as a **team** these are not single person projects. **Longevity** general upkeep and maintenance
-are crucial for Software Engineering there are other people who will be using the program
-and things change dependencies get updated programming languages update and change and
-this may require **adjustment**. Its important to be **proactive** in this because if something
-is wrong with the program and you either don't notice or elect to ignore it may cause
-even more problems in the future. You need to assume that every part of the program will
-be used by someone.
+["What is Software Engineering?"](https://abseil.io/resources/swe-book/html/ch01.html) Goes into
+more detail regarding the differences between programming and software engineering and talks about
+important considerations when working as a software engineer. As a software engineer, one must
+concern themself with the longevity of the program they work hard to maintain. Software engineers
+must aim to work as a **team**, as these are not single person projects.
 
-It also needs to be acknowledged you may not be able to do something you want and **trade-offs**
-may have to be made being able to make these decisions is what can make a good Software
-Engineer. The project needs to be scaled to the amount of people working on it, amount of
-time and what is possible with the tools being used. If this isn't done you may find yourself
-working on something for long periods of time that ultimately has minimal or no gain compared 
-to the effort and time it took to implement. So making these decisions are crucial to ensuring
-things get done **effectively** and **efficiently**
+Depending on the **longevity** of a piece of software, the user base and developers may witness
+various modifications to their environment, such as dependencies or tooling being updated. As
+longevity increases, the responsibility of the software engineers to keep their code base up to date
+is equally important across the lifespan of their software; however, with these changes often brings
+resistance. For this reason, **adjustment** is an important quality to possess as a software
+engineer. That said, it remains important to be **proactive** through this process, because, if
+something is wrong with the software, and no action is taken, this may cause even more problems in
+the future. Being *complacent* and *discerning* are two distinct attitudes that can often be
+confused in this process. A discerning attitude in the adoption of new software should be applied
+with **Hyrum's Law**, which states:
 
-As stated before it important to understand that these are not single person operation they
-require people to communicate, be organized and be informed of the direction of the project.
-If people aren't on the same page then you can have people doing redundant work, irrelevant work
-or no work at all getting your project nowhere. Its important to **be critical** on the systems and
-rules in place as they may need to change depending on the situation you cant be successful as a
-team or organization without some forms of criticism or adjustment so it important for people
-to express there opinions and concerns.
+> With a sufficient number of users of an API,
+> it does not matter what you promise in the contract:
+> all observable behaviors of your system
+> will be depended on by somebody.
+> need to assume that every part of the program will be used by someone.
+> (Credit: [https://www.hyrumslaw.com/](https://www.hyrumslaw.com/))
+
+This means that, once a feature is published, removing that feature now presents a very large ship
+to steer. Software engineers need to discuss features with scrutiny, acknowledging the pros and cons
+of those features before moving forward with decisions. Our team member
+[Jaclyn Pham](https://jaclynpham.netlify.app/) has described some factors that come into play for
+software engineering teams:
+
+* **Time Dimension**: Engineers must not only create code but also maintain it over time. Therefore,
+the role of a software engineer [surpasses] the role of a programmer, looking beyond the immediate
+problems and solutions.
+* **Scale and Growth**: Software engineering acknowledges the vast scales of modern applications and
+technology. The growth and scalability of software systems are integral considerations that go
+beyond the scope of only programming.
+* **Trade-offs**: Engineers must weigh various factors and costs, such as financial, resource,
+engineering effort, and make informed decisions.
+
+One must also acknowledge that they may not be able to do something they wish; **trade-offs** may
+have to be made. Being able to make these decisions is what can define a good software engineer. The
+project needs to be scaled appropriately as factors change: the amount of people working on it, the
+amount of time available for maintenance, and what is possible with the tools being used. If this
+isn't done one may find themself working on something for long periods of time that ultimately leads
+to minimal or no gain compared to the effort and time it took to implement. Thus, making these
+decisions is crucial to ensuring things are accomplished **effectively** and **efficiently**.
+
+As stated before, it is important to understand that this is no single person operation; it
+require people to communicate, be organized, and be informed of the direction of the project.
+If people aren't on the same page then individuals may be found doing redundant, irrelevant work
+or no work. This hinders progress in a project. It is important to **be critical** of the systems and
+rules in place, as they may need to change, depending on the situation. Good decisions are never put
+in place on the basis of "because I said so." A team without organization or forms of criticism and
+adjustment put in place is not a successful team, so it is important to be open in communicating
+opinions or concerns with colleagues.
 
 ## Reflection
 
-While as a team we have made improvements in organization and communication there is still
-a long way to go. As many people seem to not be on the same page and are still having
-problems running chasten as is making so its very hard for them to contribute. This has
-caused to miss deadlines or people being unaware of whats going on or what there supposed
-to be doing. Some people don't even know how to run the program there working on. This is
-a result on people being uninformed about the program now this isn't completely a result
-of poor communication as there is documentation but if someone is falling behind then we
-all fall behind there for it is our responsibility to help them So they can succeed and
-we can succeed as well.
+While as a team we have made improvements in organization and communication, there is still a long
+way to go. As many people seem to not be on the same page and are still having problems running
+`chasten`, it makes it very hard for them to contribute. This has caused us to miss deadlines as a
+team. Many people are unaware of what is going on and what they are supposed to be doing. Some
+people do not even know how to run the program they are currently working on. This is a result of
+people being uninformed. This isn't completely a result of poor communication, as many of our tools
+have corresponding documentation, but if someone is falling behind, then we as a team all fall
+behind. Therefore it is our responsibility to help them so they can succeed, resulting in collective
+success.
 
 ## What can we do?
 
-We need to take little more responsibility for each other as we have not fully grasped
-the importance of teamwork and communication stunting our progress on chasten.
+In our team, we need to 'step up' and take responsibility for each other's success and failures. We
+have yet to fully grasp the importance of teamwork and communication. This has significantly stunted
+our progress on `chasten`. Additionally, *we need to develop a schedule for each class meeting we have*.
+We often spend our entire time discussing action items that should be worked on outside of the meeting.
 
-So we need to.
+
+We need to:
 
 - **Communicate**
 - **Help each other**
 - **Take responsibility as a unit not an individual**
+- **Seek to self organize**
 
 {{< include /_back-blog.qmd >}}

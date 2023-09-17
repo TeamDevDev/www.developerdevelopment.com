@@ -1,5 +1,5 @@
 ---
-author: [Mordred Boulais, , , Gregory M. Kapfhammer]
+author: [Mordred Boulais]
 title: Code Coverage
 date: '2023-9-16'
 date-format: long

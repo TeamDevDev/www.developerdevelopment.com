@@ -60,6 +60,10 @@ cases for our code, and the role which fuzzers might play in these efforts. In
 order to complete the second item on this list, we may find it useful to employ
 tracing functions.
 
+The use of the code coverage is vital in software engineering. Methods such as
+the black-box testing and white-box testing can ensures if there are any errors
+within the code.
+
 
 ## Action Items
 

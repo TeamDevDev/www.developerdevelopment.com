@@ -1,5 +1,5 @@
 ---
-author: [Mordred Boulais]
+author: [Mordred Boulais, Will Wolff]
 title: Code Coverage
 date: '2023-9-16'
 date-format: long
@@ -33,8 +33,8 @@ generate tests. Part of this is, as one may expect with a title explicitly
 referrencing it, going over the part fuzzing tests/fuzzers play in this process.
 
 White-box testing shows us a better understanding of where the code is failing in 
-the internal structure (implementation) and black-box testing reads and tests
-specific errors and finds errors within a group. Both being sufficient but both having 
+the internal structure (*implementation*) and black-box testing reads and tests
+*specific errors* and finds errors within a group. Both being sufficient but both having 
 flaws within each other but both work together to create great software assurance to 
 make a code work properly.
 
@@ -52,17 +52,37 @@ except ValueError:
     pass
 ```
 
+This example highlights the fact that black-box testing is made for the specifics.
+In this, case, specific assertions are made for specific characters. In contrast
+to this, white-box covers larger segments, and checks if they happened correctly
+when implemented. 
+
+Part of this element of white-box testing is the *tracing*, which, in Python,
+can be run automatically with the command `sys.settrace(f)`, `f` being a
+tracing function, called for each line of code. From this, an assessment of code
+coverage can also be made, which is to say the amount of code that has a test
+case that checks it can be assessed. The higher the coverage the better, as it
+provides some level of error-proofing and/or checking for all code covered.
+As such, checking the coverage from automatically generated tests is a good
+start to seeing if the tests are effective or not.
+Then, once coverage is checked for several different methods of test creation,
+it can be assessed which serves the purpose better. This is where *fuzzing* gets
+brought in, as a form of testing which can be checked in this manner, and can be
+useful where others may fail.
+
 ## Reflection
 
-Notable elements of the chapter that we find worth further careful considertion
+Notable elements of the chapter that we find worth further careful consideration
 include the need to run coverage checks, how to automatically generate test
 cases for our code, and the role which fuzzers might play in these efforts. In
 order to complete the second item on this list, we may find it useful to employ
-tracing functions.
+tracing functions, through which comparison of coverage may lead us to finding
+the appropriate test generations for the segment of code in question, as different
+sections may be better served by different styles.
 
-The use of the code coverage is vital in software engineering. Methods such as
-the black-box testing and white-box testing can ensures if there are any errors
-within the code.
+The use of the code coverage is vital in software engineering, and methods such
+as the black-box testing and white-box testing can supply the knowledge of if
+there are any errors within the code.
 
 
 ## Action Items

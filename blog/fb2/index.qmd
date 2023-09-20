@@ -1,5 +1,5 @@
 ---
-author: [Mordred Boulais, Will Wolff]
+author: [Mordred Boulais, Will Wolff, Gregory M. Kapfhammer]
 title: Code Coverage
 date: '2023-9-16'
 date-format: long
@@ -13,11 +13,12 @@ page-layout: full
 
 This is our second post about the [The Fuzzing
 Book](https://www.fuzzingbook.org/)! The goal of this post is to relate the
-material from the book to our progress on our Chasten tool, with the hope that
-it will provide valuable lessons on how we approach designing and developing
-our own software. Part of this is guidance on automating tests, and how that
-may look in different coding languages, although the main point of focus is on
-Python.
+material from the book to our progress on our
+[Chasten](https://github.com/AstuteSource/chasten) tool, with the hope that it
+will provide valuable lessons on how we approach designing and developing our
+own software. Part of this is guidance on automating tests, and how that may
+look in different coding languages &mdash; although the article's main focus is
+the Python programming language.
 
 ## Summary
 

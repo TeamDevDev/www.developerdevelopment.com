@@ -18,12 +18,11 @@ approach designing and developing our own software. Part of this is guidance on
 automating tests, and how that may look in different coding languages, although
 the main point of focus is on Python.
 
-
 ## Summary
 
 The ["Code Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter of
 this book provides us with insight into specific sorts of tests and their
-implementation. 
+implementation.
 
 The distinction between the tests is first highlighted in the comparison between
 black-box and white-box testing, as specification vs. implementation. This sets

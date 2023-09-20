@@ -32,7 +32,25 @@ methods to not only assess the existing coverage, but also to automatically
 generate tests. Part of this is, as one may expect with a title explicitly
 referrencing it, going over the part fuzzing tests/fuzzers play in this process.
 
+White-box testing shows us a better understanding of where the code is failing in 
+the internal structure (implementation) and black-box testing reads and tests
+specific errors and finds errors within a group. Both being sufficient but both having 
+flaws within each other but both work together to create great software assurance to 
+make a code work properly.
 
+Example of black-box testing:
+
+```python
+assert cgi_decode('+') == ' '
+assert cgi_decode('%20') == ' '
+assert cgi_decode('abc') == 'abc'
+
+try:
+    cgi_decode('%?a')
+    assert False
+except ValueError:
+    pass
+```
 
 ## Reflection
 
@@ -41,6 +59,10 @@ include the need to run coverage checks, how to automatically generate test
 cases for our code, and the role which fuzzers might play in these efforts. In
 order to complete the second item on this list, we may find it useful to employ
 tracing functions.
+
+The use of the code coverage is vital in software engineering. Methods such as
+the black-box testing and white-box testing can ensures if there are any errors
+within the code.
 
 
 ## Action Items

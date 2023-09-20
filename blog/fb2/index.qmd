@@ -22,9 +22,11 @@ the Python programming language.
 
 ## Summary
 
-The ["Code Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter
-of this book provides us with insight into specific sorts of tests and their
-implementation.
+The ["Code Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter of
+this book provides us with insight into specific sorts of tests and their
+implementation. This post investigates two different approaches to testing and
+explains how we can leverage them in the implementation of our own software
+tools.
 
 The distinction between the tests is first highlighted in the comparison
 between black-box and white-box testing, as specification versus
@@ -89,15 +91,68 @@ sections may be better served by different styles.
 
 The use of the code coverage is vital in software engineering, and methods such
 as the black-box testing and white-box testing can supply the knowledge of if
-there are any errors within the code.
+there are any errors within the code. To explore this idea further, it is worth
+noting that the [Chasten](https://github.com/AstuteSource/chasten) tool
+currently uses the [pytest-cov]() plugin that leverages
+[Coverage.py](https://coverage.readthedocs.io/) to collect code coverage at both
+the statement and branch levels! Here is an example of a coverage report that it
+reports to GitHub:
+
+```text
+platform linux -- Python 3.11.5, pytest-7.4.0, pluggy-1.2.0
+Using --randomly-seed=2108624501
+rootdir: /home/runner/work/chasten/chasten
+configfile: pytest.ini
+plugins: dash-2.11.1, hypothesis-6.81.1, randomly-3.13.0, cov-4.1.0, clarity-1.0.1, anyio-3.7.1, pretty-1.2.0, xdist-3.3.1
+collected 66 items
+
+tests/test_process.py ...
+tests/test_debug.py ........
+tests/test_constants.py .....
+tests/test_configuration.py ...
+tests/test_util.py ...
+tests/test_validate.py ....
+tests/test_main.py .........
+tests/test_filesystem.py ................
+tests/test_checks.py ...............
+
+---------- coverage: platform linux, python 3.11.5-final-0 -----------
+Name                       Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------
+chasten/__init__.py            0      0      0      0   100%
+chasten/__main__.py            2      2      0      0     0%   3-5
+chasten/checks.py             51      6     28      6    82%   24, 35->37, 86->89, 94, 99-101, 117
+chasten/configuration.py      31      0      0      0   100%
+chasten/constants.py         119      0     20      0   100%
+chasten/database.py           65     53     22      0    14%   42-49, 56-77, 93-102, 116-129, 141-267
+chasten/debug.py              10      0      0      0   100%
+chasten/enumerations.py       13      0      0      0   100%
+chasten/filesystem.py         96     35     26      4    65%   136->143, 149->154, 160->165, 184-200, 214-230, 241-282, 288-296, 302-309
+chasten/main.py              213     51     72     13    75%   122, 159, 222, 247, 259-270, 293, 340-347, 349->exit, 374->381, 513-516, 585->exit, 623->627, 628->627, 667, 672-673, 715-756, 804-820, 873-890, 902-911, 918-920
+chasten/output.py             93     24     30      2    71%   80-81, 87-88, 94-96, 102, 108-126, 132-134, 143-150, 204->168, 213->212
+chasten/process.py            38      9     16      1    70%   27-43, 109
+chasten/results.py            45      0      0      0   100%
+chasten/server.py             29     18      4      0    33%   23-36, 43-67
+chasten/util.py               21      3      4      1    84%   25, 42-43
+chasten/validate.py           22      2      4      2    85%   94, 120
+----------------------------------------------------------------------
+TOTAL                        848    203    226     29    73%
+Coverage JSON written to file coverage.json
+
+Results (41.06s):
+        66 passed
+```
 
 ## Action Items
 
 It is now vital that we, as a team, put into action the ideas outlined here.
 This chapter has also provided us with the knowledge as to how to go about it,
-particularly because much of our work is in Python. As our teams create new features
-and fix bugs, it is important that they also scan the coverage following their
-improvements, and how to bring the coverage up to a more ideal level through the
-generation of tests.
+particularly because much of our work is in Python. As our teams create new
+features and fix bugs, it is important that they also scan the test coverage
+following their improvements, and how to bring the coverage up to a more ideal
+level through the generation of tests. Critically, if we do not have test cases
+that cover source code for existing and new functionality and/or bug fixes in
+[Chasten](https://github.com/AstuteSource/chasten) then we don't have a good way
+to know whether or not these code segments are correct!
 
 {{< include /_back-blog.qmd >}}

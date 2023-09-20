@@ -1,6 +1,6 @@
 ---
 author: [Mordred Boulais, Will Wolff, Gregory M. Kapfhammer]
-title: Code Coverage
+title: Applying Code Coverage
 date: '2023-9-16'
 date-format: long
 categories: [post, software engineering, fuzzing book]
@@ -42,7 +42,7 @@ approaches to testing are helpful &mdash; but both have limitations and,
 ultimately, they work together to create great software assurance to make a
 code work properly.
 
-Example of black-box testing:
+Here is an example of black-box testing:
 
 ```python
 assert cgi_decode('+') == ' '
@@ -56,23 +56,26 @@ except ValueError:
     pass
 ```
 
-This example highlights the fact that black-box testing is made for the specifics.
-In this, case, specific assertions are made for specific characters. In contrast
-to this, white-box covers larger segments, and checks if they happened correctly
-when implemented. 
+This example highlights the fact that black-box testing is made for "the
+specifics" of the program from the perspective of its specification. In this
+case, specific assertions are made for specific characters. Notably, the
+approach illustrated by this code segment does not focus on how the inputs to
+`cgi_decode` exercise the source code of the function under test. In contrast
+to this, white-box testing checks what happens in the function when it receives
+test inputs.
 
 Part of this element of white-box testing is the *tracing*, which, in Python,
-can be run automatically with the command `sys.settrace(f)`, `f` being a
-tracing function, called for each line of code. From this, an assessment of code
-coverage can also be made, which is to say the amount of code that has a test
-case that checks it can be assessed. The higher the coverage the better, as it
-provides some level of error-proofing and/or checking for all code covered.
-As such, checking the coverage from automatically generated tests is a good
-start to seeing if the tests are effective or not.
-Then, once coverage is checked for several different methods of test creation,
-it can be assessed which serves the purpose better. This is where *fuzzing* gets
-brought in, as a form of testing which can be checked in this manner, and can be
-useful where others may fail.
+can be run automatically with the command `sys.settrace(f)`, where `f` is a
+tracing function that the Python interpreter calls for each line of code. From
+this, an assessment of code coverage can also be made, which is to say the
+amount of code that has a test case that checks it can be assessed. The higher
+the coverage the better, as it provides some level of error-proofing and/or
+checking for all code covered. As such, checking the coverage from
+automatically generated tests is a good start to seeing if the tests are
+effective or not. Then, once coverage is checked for several different methods
+of test creation, it can be determined which tests best serve the purpose of
+the developers. This is where *fuzzing* gets brought in, as a form of testing
+which can be checked in this manner, and can be useful where others may fail.
 
 ## Reflection
 
@@ -87,7 +90,6 @@ sections may be better served by different styles.
 The use of the code coverage is vital in software engineering, and methods such
 as the black-box testing and white-box testing can supply the knowledge of if
 there are any errors within the code.
-
 
 ## Action Items
 

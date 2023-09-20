@@ -149,10 +149,10 @@ It is now vital that we, as a team, put into action the ideas outlined here.
 This chapter has also provided us with the knowledge as to how to go about it,
 particularly because much of our work is in Python. As our teams create new
 features and fix bugs, it is important that they also scan the test coverage
-following their improvements, and how to bring the coverage up to a more ideal
-level through the generation of tests. Critically, if we do not have test cases
-that cover source code for existing and new functionality and/or bug fixes in
-[Chasten](https://github.com/AstuteSource/chasten) then we don't have a good way
-to know whether or not these code segments are correct!
+following their improvements and then consider how to bring the coverage up to a
+more ideal level through the creation of new tests. Critically, if we do not
+have test cases that cover source code for existing and new functionality and/or
+bug fixes in [Chasten](https://github.com/AstuteSource/chasten) then we don't
+have a good way to know whether or not these code segments are correct!
 
 {{< include /_back-blog.qmd >}}

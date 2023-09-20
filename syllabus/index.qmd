@@ -257,7 +257,7 @@ The course will also leverage excerpts from the following supporting text books:
 
 ::: {.callout-note appearance="minimal" title="Accessing the Supporting Textbooks" collapse="false"}
 
-Since the latter four books in the above list are not open-access, the course
+Since the latter three books in the above list are not open-access, the course
 instructor will maintain a copy on reserve that will be available during the
 class and laboratory sessions.
 

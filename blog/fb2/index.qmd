@@ -11,12 +11,13 @@ page-layout: full
 
 ## Overview
 
-This is our second post about [The Fuzzing Book](https://www.fuzzingbook.org/)!
-The goal of this post is to relate the material from the book to our progress on
-our Chasten tool, with the hope that it will provide valuable lessons on how we
-approach designing and developing our own software. Part of this is guidance on
-automating tests, and how that may look in different coding languages, although
-the main point of focus is on Python.
+This is our second post about the [The Fuzzing
+Book](https://www.fuzzingbook.org/)! The goal of this post is to relate the
+material from the book to our progress on our Chasten tool, with the hope that
+it will provide valuable lessons on how we approach designing and developing
+our own software. Part of this is guidance on automating tests, and how that
+may look in different coding languages, although the main point of focus is on
+Python.
 
 ## Summary
 
@@ -24,18 +25,19 @@ The ["Code Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter of
 this book provides us with insight into specific sorts of tests and their
 implementation.
 
-The distinction between the tests is first highlighted in the comparison between
-black-box and white-box testing, as specification vs. implementation. This sets
-the foundation for the chapter to discuss assorted methods of running built-in
-methods to not only assess the existing coverage, but also to automatically
-generate tests. Part of this is, as one may expect with a title explicitly
-referrencing it, going over the part fuzzing tests/fuzzers play in this process.
+The distinction between the tests is first highlighted in the comparison
+between black-box and white-box testing, as specification versus
+implementation. This sets the foundation for the chapter to discuss assorted
+methods of running built-in methods to not only assess the existing coverage,
+but also to automatically generate tests. Part of this is, as one may expect
+with a title explicitly referencing it, going over the part fuzzing
+tests/fuzzers play in this process.
 
-White-box testing shows us a better understanding of where the code is failing in 
-the internal structure (*implementation*) and black-box testing reads and tests
-*specific errors* and finds errors within a group. Both being sufficient but both having 
-flaws within each other but both work together to create great software assurance to 
-make a code work properly.
+White-box testing shows us a better understanding of where the code is failing
+in the internal structure (*implementation*) and black-box testing reads and
+tests *specific errors* and finds errors within a group. Both being sufficient
+but both having flaws within each other but both work together to create great
+software assurance to make a code work properly.
 
 Example of black-box testing:
 

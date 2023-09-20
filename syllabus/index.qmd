@@ -53,9 +53,9 @@ that, by necessity, the meeting before yours may sometimes run late.
   - *Developing as Developers*: Friday, 9:00 AM -- 9:50 AM, Alden 109
       - Review the professional précis documents written by team members
       - Create an executive summary for the week's professional skills
-      - Create an executive summary for the week's professional skills
+      - Create an executive summary for the week's technical skills
       - Publish the executive summaries to the Developer Development web site
-      - Confirmation of readiness for next week's in-class discussions
+      - Confirm our team's readiness for next week's in-class discussions
       - When needed, implement and demonstrate software engineering project
 - **Collaborative Software Engineering**: Tuesday, 2:30 PM -- 4:20 PM, Alden 109
 

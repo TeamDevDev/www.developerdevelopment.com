@@ -22,8 +22,8 @@ the Python programming language.
 
 ## Summary
 
-The ["Code Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter of
-this book provides us with insight into specific sorts of tests and their
+The ["Code Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter
+of this book provides us with insight into specific sorts of tests and their
 implementation.
 
 The distinction between the tests is first highlighted in the comparison
@@ -34,11 +34,13 @@ but also to automatically generate tests. Part of this is, as one may expect
 with a title explicitly referencing it, going over the part fuzzing
 tests/fuzzers play in this process.
 
-White-box testing shows us a better understanding of where the code is failing
-in the internal structure (*implementation*) and black-box testing reads and
-tests *specific errors* and finds errors within a group. Both being sufficient
-but both having flaws within each other but both work together to create great
-software assurance to make a code work properly.
+White-box testing (also known as "glass box testing") shows us a better
+understanding of where the code is failing in the internal structure (i.e.,
+*implementation*) and black-box testing (also known as "closed box testing")
+reads and tests *specific errors* and finds errors within a group. Both
+approaches to testing are helpful &mdash; but both have limitations and,
+ultimately, they work together to create great software assurance to make a
+code work properly.
 
 Example of black-box testing:
 

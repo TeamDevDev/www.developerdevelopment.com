@@ -64,6 +64,6 @@ different people testing code they might not have worked on. For this, the "Bug 
 will have to understand the code being tested. It is a understanding that not everyone is
 on the same level when it comes to implementing test cases, so it would probably be
 beneficial for us to have different skill levels working together. A similar method to how
-we grouped people for blog post duties.
+we grouped people for blog post duties..
 
 {{< include / _back-blog.qmd >}}

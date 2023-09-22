@@ -55,6 +55,15 @@ error we make. We must avoid overconfidence in our code and understand that some
 always go wrong. Overall, this reading was beneficial in determining how testing works and
 the pros and cons of different testing methods. 
 
+# Action Items
 
+Making test is something that we will have to do in our development process of `chasten`. An
+idea that we as a group could implement is to have a group of people designated to making
+test cases, these people should be are so called "Bug Finders". This way we can have
+different people testing code they might not have worked on. For this, the "Bug Finders"
+will have to understand the code being tested. It is a understanding that not everyone is
+on the same level when it comes to implementing test cases, so it would probably be
+beneficial for us to have different skill levels working together. A similar method to how
+we grouped people for blog post duties.
 
 {{< include / _back-blog.qmd >}}

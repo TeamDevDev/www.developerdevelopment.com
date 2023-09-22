@@ -1,0 +1,23 @@
+---
+author: [Jaclyn Pham, Keven Michel Duverglas, Alish Chhetri]
+title: What is Software Engineering?
+date: '2023-9-22'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How to Work Well on Teams</em>
+toc: true
+page-layout: full
+---
+
+## Summary
+
+TODO
+
+## Reflection
+
+TODO
+
+## Use-Case
+
+TODO
+

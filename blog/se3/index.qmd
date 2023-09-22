@@ -19,5 +19,15 @@ TODO
 
 ## Use-Case
 
-TODO
+This chapter has provided invaluable insights into optimizing teamwork and enhancing collaboration within the context of software engineering. Our team member [Mordred](https://mbcompsci203.netlify.app/precis/) made a great point about "the desire to hide and create alone until your project is perfect in order to minimize — or perhaps avoid entirely — the judgement of others." However, the chapter emphasizes that this approach often hinders progress and innovation in software engineering. 
 
+In light of these insights, Another team member, [Simon](https://simon-jones.netlify.app/), 
+suggested some actions to consider:
+
+- **Start doing**: Paying closer attention to my interactions with team members and actively noting the various personality types present in the room during collaborative efforts. This heightened awareness can lead to more effective communication and collaboration.
+
+- **Stop doing**: Continuing to work on feature branches strictly alone, or at the very least, refraining from writing entirely isolated test cases that only describe the intended functionality of my code. Encouraging more collaborative and comprehensive testing practices can lead to improved code quality and teamwork.
+
+Once we implement these best practices, the development of [Chasten](https://github.com/AstuteSource/chasten) will take a significant step closer to achieving its goals and objectives.
+
+{{< include /_back-blog.qmd >}}

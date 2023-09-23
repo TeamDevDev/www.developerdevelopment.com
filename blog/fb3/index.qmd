@@ -1,0 +1,28 @@
+---
+author: [Finley Lastname, Keller Liptrap, Simon Jones]
+title: Fuzzing: breaking things with random inputs
+date: '2023-9-22'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>Exploring how that we can make a robust test suite.</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+Lorem ipsum
+
+## Summary
+
+Lorem ipsum
+
+## Reflection
+
+Lorem ipsum
+
+## Action Items
+
+Lorem ipsum
+
+{{< include /_back-blog.qmd >}}

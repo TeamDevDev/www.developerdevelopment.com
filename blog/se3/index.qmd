@@ -11,7 +11,18 @@ page-layout: full
 
 ## Summary
 
-TODO
+In the chapter [How to Work Well on Teams](https://abseil.io/resources/swe-book/html/ch02.html) from the [Software Engineering at Google] (https://abseil.io/resources/swe-book/html/toc.html)book, the article delves into the significance of collaboration and effective communication for software engineers. 
+
+The chapter debunks the idea of the "lone genius" programmer working in isolation to create perfect software, emphasizing that cooperative efforts often yield superior results due to the complexity of software projects. 
+
+The concept of the **bus factor** is defined as "the number of people that need to get hit by a bus before your project is completely doomed."(Credit: [https://en.wikipedia.org/wiki/Bus_factor](https://en.wikipedia.org/wiki/Bus_factor)) emphasizes the importance of shared knowledge and documentation within a team. Keeping code private can lead to a lack of knowledge if a team member leaves unexpectedly, while teamwork ensures that multiple team members can pick up where others left off. 
+
+Additionally, the chapter encourages three fundamental values that help create a positive team environment: 
+* Humility: Readily accepting feedback and criticism from team members, understanding that it contributes to personal and collective progress.
+* Respect: Valuing the unique contributions of every team member.
+* Trust: Fostering an environment where team members have confidence in each other's abilities and judgement.
+
+In summation, the chapter underscores that successful software engineering hinges on teamwork, effective communication, and knowledge sharing, dispelling the myth of the solitary coding genius. A culture of embracing change, learning from errors, and harnessing the diverse perspectives of team members is herald.
 
 ## Reflection
 

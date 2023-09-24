@@ -20,17 +20,23 @@ The concept of the **bus factor** is defined as "the number of people that need 
 Additionally, the chapter encourages three fundamental values that help create a positive team environment: 
 * Humility: Readily accepting feedback and criticism from team members, understanding that it contributes to personal and collective progress.
 * Respect: Valuing the unique contributions of every team member.
-* Trust: Fostering an environment where team members have confidence in each other's abilities and judgement.
+* Trust: Fostering an environment where team members have confidence in each other's abilities and judgment.
 
-In summation, the chapter underscores that successful software engineering hinges on teamwork, effective communication, and knowledge sharing, dispelling the myth of the solitary coding genius. A culture of embracing change, learning from errors, and harnessing the diverse perspectives of team members is herald.
+In summation, the chapter underscores that successful software engineering hinges on teamwork, effective communication, and knowledge sharing, dispelling the myth of the solitary coding genius. A culture of embracing change, learning from errors, and harnessing the diverse perspectives of team members is heralded.
 
 ## Reflection
 
-TODO
+In reflecting upon the key points presented in the chapter [How to Work Well on Teams](https://abseil.io/resources/swe-book/html/ch02.html) from the Software Engineering at Google book, it becomes evident that successful software engineering is fundamentally a team effort. The chapter effectively dispels and highlights the importance of collaboration, communication, and knowledge sharing within a team. 
+
+One of the most striking takeaways is the concept of the bus factor. This concept serves as a stark reminder of the risks associated with keeping knowledge and code isolated within individuals. It emphasizes the critical need for shared knowledge and documentation to ensure the resilience of a project in the face of unexpected departures or disruptions.
+
+The chapter's emphasis on values such as humility, respect, and trust underscores the importance of fostering a positive team environment. Humility encourages a culture of continuous improvement, while respect acknowledges the unique contributions of each team member. Trust is the foundation upon which effective collaboration is built, as it enables team members to rely on one another's skills and judgment.
+
+Overall, this chapter reinforces the notion that software engineering is a dynamic field that thrives on collective efforts, diverse perspectives, and a willingness to learn and adapt. It also encourages the practice of seeking feedback, recognizing it as a valuable tool for personal and collective growth.
 
 ## Use-Case
 
-This chapter has provided invaluable insights into optimizing teamwork and enhancing collaboration within the context of software engineering. Our team member [Mordred](https://mbcompsci203.netlify.app/precis/) made a great point about "the desire to hide and create alone until your project is perfect in order to minimize — or perhaps avoid entirely — the judgement of others." However, the chapter emphasizes that this approach often hinders progress and innovation in software engineering. 
+This chapter has provided invaluable insights into optimizing teamwork and enhancing collaboration within the context of software engineering. Our team member [Mordred](https://mbcompsci203.netlify.app/precis/) made a great point about "the desire to hide and create alone until your project is perfect in order to minimize — or perhaps avoid entirely — the judgment of others." However, the chapter emphasizes that this approach often hinders progress and innovation in software engineering. 
 
 In light of these insights, Another team member, [Simon](https://simon-jones.netlify.app/), 
 suggested some actions to consider:

@@ -19,20 +19,39 @@ Lorem ipsum
 
 ## Reflection
 
-Our team resonated with the importance of this chapter, as we have had many unnecessary issues arise on our feature branches and are feeling the pains of not implementing fuzzing sooner. Our colleague [Jason Gyamfi](https://storied-cendol-fb38cb.netlify.app/) states it frankly,
+Our team resonated with the importance of this chapter, as we have had many unnecessary issues arise
+on our feature branches and are feeling the pains of not implementing fuzzing sooner. Our colleague
+[Jason Gyamfi](https://storied-cendol-fb38cb.netlify.app/) states it frankly,
 
 > This makes the chapter a must-read for those aiming to improve software strength and safety.
 
-Our team is striving to do just that: "aiming to improve software strength and safety." While starting the semester, some of us had not even heard of the term 'fuzzing.' Now, we all are aware of the term, and some of us have even started implementing it into the test suite of [chasten](https://github.com/astutesource/chasten/), our tool for finding patterns in the AST of a python program.
+Our team is striving to do just that: "aiming to improve software strength and safety." While
+starting the semester, some of us had not even heard of the term 'fuzzing.' Now, we all are aware of
+the term, and some of us have even started implementing it into the test suite of
+[chasten](https://github.com/astutesource/chasten/), our tool for finding patterns in the AST of a
+python program.
 
-We are all aware of the benefits of fuzzing and its keen ability to point out *stress points* in our code. That said, the task remains to achieve complete familiarity with fuzzing strategies and to consistently implement them when creating new features. Many of our team members have emphasized the importance of doing this sooner than later, so as to not accrue *technical debt*. In our case, we use [Hypothesis](https://hypothesis.readthedocs.io/en/latest/index.html), which offers many powerful [strategies](https://hypothesis.readthedocs.io/en/latest/data.html) for fuzzing.
+We are all aware of the benefits of fuzzing and its keen ability to point out *stress points* in our
+code. That said, the task remains to achieve complete familiarity with fuzzing strategies and to
+consistently implement them when creating new features. Many of our team members have emphasized the
+importance of doing this sooner than later, so as to not accrue *technical debt*. In our case, we
+use [Hypothesis](https://hypothesis.readthedocs.io/en/latest/index.html), which offers many powerful
+[strategies](https://hypothesis.readthedocs.io/en/latest/data.html) for fuzzing.
 
 ## Action Items
 
-In this chapter of Fuzzing Book we the readers get a deeper understanding about the use of fuzzing and the importance of testing in software engineering. Fuzzing which is used in this chapter to test code can be very beneficial to finding weak points in code. The implementation of fuzzing into the Chasten program could have many benefits. In Chasten we can check for bugs with inputting code or using configure files. The use of fuzzing could also simulate a user's behavior which would give the team an idea of bugs that a user may encounter. We have to apply what we have learned about fuzzing in the following ways:
+In this chapter of Fuzzing Book we the readers get a deeper understanding about the use of fuzzing
+and the importance of testing in software engineering. Fuzzing which is used in this chapter to test
+code can be very beneficial to finding weak points in code. The implementation of fuzzing into the
+Chasten program could have many benefits. In Chasten we can check for bugs with inputting code or
+using configure files. The use of fuzzing could also simulate a user's behavior which would give the
+team an idea of bugs that a user may encounter. We have to apply what we have learned about fuzzing
+in the following ways:
 
 * **Have urgency:** When we see that a feature lacks proper test cases, rush to change that!
-* **Be responsible:** When we write our own features, we need to make sure each change includes some sort of test to verify that feature works with fuzzed input.
-* **Be curious:** Explore tooling that exists in order to know every inch of its feature set. This way, we can approach our testing the most effectively.
+* **Be responsible:** When we write our own features, we need to make sure each change includes some
+sort of test to verify that feature works with fuzzed input.
+* **Be curious:** Explore tooling that exists in order to know every inch of its feature set. This
+way, we can approach our testing the most effectively.
 
 {{< include /_back-blog.qmd >}}

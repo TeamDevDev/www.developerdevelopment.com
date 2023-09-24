@@ -23,6 +23,6 @@ Lorem ipsum
 
 ## Action Items
 
-Lorem ipsum
+In this chapter of Fuzzing Book we the readers get a deeper understanding about the use of fuzzing and the importance of testing in software engineering. Fuzzing which is used in this chapter to test code can be very beneficial to finding weak points in code. The implementation of fuzzing into the Chasten program could have many benefits. In Chasten we can check for bugs with inputting code or using configure files. The use of fuzzing could also simulate a user's behavior which would give the team an idea of bugs that a user may encounter. 
 
 {{< include /_back-blog.qmd >}}

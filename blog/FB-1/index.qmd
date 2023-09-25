@@ -47,7 +47,7 @@ working code when using most test cases.
 
 The [Chasten](https://github.com/AstuteSource/chasten/tree/pysqlite3-removal-test-branch) team, as a whole, should engage in rigorous testing to ensure
 the highest quality of their code. We should keep the discussion of testing at the very forefront of
-our minds. We may also discuss how we can begin to approach test case creation for more
+our minds. We can also discuss how we can approach test case creation for more
 complex objects that we will see later in the semester. Software testing smooths the
 merging process and can make implementing big projects go off without problems. It is
 essential to remember that developing and running tests may only sometimes pick up on every

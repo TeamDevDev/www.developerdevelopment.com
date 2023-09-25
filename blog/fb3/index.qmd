@@ -1,6 +1,6 @@
 ---
 author: [Finley Lastname, Keller Liptrap, Simon Jones]
-title: Fuzzing: breaking things with random inputs
+title: Fuzzing&#58; breaking things with random inputs
 date: '2023-9-22'
 date-format: long
 categories: [post, software engineering, fuzzing book]

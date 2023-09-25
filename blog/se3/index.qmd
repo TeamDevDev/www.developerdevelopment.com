@@ -11,15 +11,14 @@ page-layout: full
 
 ## Summary
 
-In the chapter [How to Work Well on
-Teams](https://abseil.io/resources/swe-book/html/ch02.html) from the [Software
-Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html)
-book, the article delves into the significance of collaboration and effective
-communication for software engineers.
-
-The chapter debunks the idea of the "lone genius" programmer working in
-isolation to create perfect software, emphasizing that cooperative efforts often
-yield superior results due to the complexity of software projects.
+This article is about the ["How to Work Well on
+Teams"](https://abseil.io/resources/swe-book/html/ch01.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book).
+The chapter delves into the significance of collaboration and effective
+communication for software engineers and their teams. The chapter debunks the
+idea of the "lone genius" programmer working in isolation to create perfect
+software, emphasizing that cooperative efforts often yield superior results due
+to the complexity of software projects.
 
 The concept of the **bus factor** is defined as "the number of people that need
 to get hit by a bus before your project is completely doomed."(Credit:

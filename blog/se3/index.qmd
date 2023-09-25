@@ -21,12 +21,12 @@ software, emphasizing that cooperative efforts often yield superior results due
 to the complexity of software projects.
 
 The concept of the **bus factor** is defined as "the number of people that need
-to get hit by a bus before your project is completely doomed."(Credit:
+to get hit by a bus before your project is completely doomed." (Credit:
 [https://en.wikipedia.org/wiki/Bus_factor](https://en.wikipedia.org/wiki/Bus_factor))
 emphasizes the importance of shared knowledge and documentation within a team.
-Keeping code private can lead to a lack of knowledge if a team member leaves
-unexpectedly, while teamwork ensures that multiple team members can pick up
-where others left off.
+Keeping a project's code private can lead to a lack of knowledge if a team
+member leaves unexpectedly, while teamwork ensures that multiple team members
+can pick up where others left off.
 
 Additionally, the chapter encourages three fundamental values that help create a
 positive team environment:

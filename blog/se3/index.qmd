@@ -13,8 +13,8 @@ page-layout: full
 
 In the chapter [How to Work Well on
 Teams](https://abseil.io/resources/swe-book/html/ch02.html) from the [Software
-Engineering at Google] (https://abseil.io/resources/swe-book/html/toc.html)book,
-the article delves into the significance of collaboration and effective
+Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html)
+book, the article delves into the significance of collaboration and effective
 communication for software engineers.
 
 The chapter debunks the idea of the "lone genius" programmer working in

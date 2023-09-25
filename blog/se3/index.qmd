@@ -1,10 +1,10 @@
 ---
 author: [Jaclyn Pham, Keven Michel Duverglas, Alish Chhetri, Gregory M. Kapfhammer]
-title: What is Software Engineering?
+title: Best Practices for Team-Based Software Engineering
 date: '2023-9-25'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>How to Work Well on Teams</em>
+description: <em>How can we improve our teamwork?</em>
 toc: true
 page-layout: full
 ---

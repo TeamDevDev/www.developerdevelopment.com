@@ -67,10 +67,10 @@ unique contributions of each team member. Trust is the foundation upon which
 effective collaboration is built, as it enables team members to rely on one
 another's skills and judgment.
 
-Overall, this chapter reinforces the notion that software engineering is a
-dynamic field that thrives on collective efforts, diverse perspectives, and a
-willingness to learn and adapt. It also encourages the practice of seeking
-feedback, recognizing it as a valuable tool for personal and collective growth.
+Ultimately, the chapter shows that software engineering is a dynamic field that
+thrives on collective efforts, diverse perspectives, and a willingness to learn
+and adapt. It also encourages the practice of seeking feedback, as it is a
+valuable tool for individual and team growth.
 
 ## Use Case
 

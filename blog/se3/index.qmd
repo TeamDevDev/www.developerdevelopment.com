@@ -72,18 +72,17 @@ thrives on collective efforts, diverse perspectives, and a willingness to learn
 and adapt. It also encourages the practice of seeking feedback, as it is a
 valuable tool for individual and team growth.
 
-## Use Case
+## Next Steps
 
 This chapter has provided invaluable insights into optimizing teamwork and
-enhancing collaboration within the context of software engineering. Our team
-member [Mordred](https://mbcompsci203.netlify.app/precis/) made a great point
-about "the desire to hide and create alone until your project is perfect in
-order to minimize — or perhaps avoid entirely — the judgment of others."
-However, the chapter emphasizes that this approach often hinders progress and
-innovation in software engineering.
+enhancing collaboration within the context of software engineering. One team
+member, Mordred, made a great point about "the desire to hide and create alone
+until your project is perfect in order to minimize &mdash; or perhaps avoid
+entirely &mdash; the judgment of others." However, the chapter emphasizes that
+this approach often hinders progress and innovation in software engineering.
 
-In light of these insights, Another team member,
-[Simon](https://simon-jones.netlify.app/), suggested some actions to consider:
+In light of these insights, another team member, named Simon, suggested these
+actions:
 
 - **Start doing**: Paying closer attention to my interactions with team members
 and actively noting the various personality types present in the room during
@@ -98,6 +97,7 @@ teamwork.
 
 Once we implement these best practices, the development of
 [Chasten](https://github.com/AstuteSource/chasten) will take a significant step
-closer to achieving its goals and objectives.
+closer to achieving its goals and objectives. How else can we improve our
+teamwork?
 
 {{< include /_back-blog.qmd >}}

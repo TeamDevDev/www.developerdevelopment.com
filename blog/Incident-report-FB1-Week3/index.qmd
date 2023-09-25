@@ -19,7 +19,7 @@ These changes allowed for our published FB-1 to be revised but because the newly
 we decided to maintain our [original repo for FB-1](https://github.com/Finley8/www.developerdevelopment.com/tree/FB-1) inside our classmates fork. This allows proof of documentation 
 through commits and demonstrates changes that were made within different files. 
 
-Update as of 9/24, all members of the team have added commits to the FB-1 post and our still waiting for approval of Prof. Kapfhammer to merge to the main branch. Apparently there are some conflicts with our file and the main trunk constricting our PR to be satisfied, so we are currently working on that issue.
+Update as of 9/24, all members of the team have added commits to the FB-1 post, and we are still waiting for approval from Prof. Kapfhammer to merge to the main branch. Apparently, there are some conflicts with our file and the main trunk constricting our PR to be satisfied, so we are currently working on that issue. This problem should be resolved at the latest by Tuesday 9/26. Our current struggle is with communication on what needs to be done and how to complete it properly.
 
 **Possibilities for changes**: 
   - Rechecking if we are within the correct repo

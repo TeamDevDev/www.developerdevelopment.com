@@ -12,7 +12,7 @@ page-layout: full
 ## Summary
 
 This article is about the ["How to Work Well on
-Teams"](https://abseil.io/resources/swe-book/html/ch01.html) chapter in the
+Teams"](https://abseil.io/resources/swe-book/html/ch02.html) chapter in the
 [Software Engineering at Google book](https://abseil.io/resources/swe-book).
 The chapter delves into the significance of collaboration and effective
 communication for software engineers and their teams. The chapter debunks the
@@ -28,20 +28,22 @@ Keeping a project's code private can lead to a lack of knowledge if a team
 member leaves unexpectedly, while teamwork ensures that multiple team members
 can pick up where others left off.
 
-Additionally, the chapter encourages three fundamental values that help create a
+The chapter also encourages three key values that help create a
 positive team environment:
 
-* Humility: Readily accepting feedback and criticism from team members,
+- **Humility**: Readily accepting feedback and criticism from team members,
 understanding that it contributes to personal and collective progress.
-* Respect: Valuing the unique contributions of every team member.
-* Trust: Fostering an environment where team members have confidence in each
-other's abilities and judgment.
+
+- **Respect**: Valuing the unique contributions of every team member.
+
+- **Trust**: Fostering an environment in which the members of a software
+engineering have confidence in each other's abilities and judgment.
 
 In summation, the chapter underscores that successful software engineering
-hinges on teamwork, effective communication, and knowledge sharing, dispelling
-the myth of the solitary coding genius. A culture of embracing change, learning
-from errors, and harnessing the diverse perspectives of team members is
-heralded.
+hinges on teamwork, effective communication, and knowledge sharing. It dispels
+the myth of the solitary coding genius. The chapter also heralds a of embracing
+change, learning from errors, and harnessing the diverse perspectives of team
+members.
 
 ## Reflection
 

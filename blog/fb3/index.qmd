@@ -1,5 +1,5 @@
 ---
-author: [Finley Lastname, Keller Liptrap, Simon Jones]
+author: [Finley Banas, Keller Liptrap, Simon Jones]
 title: Fuzzing&#58; breaking things with random inputs
 date: '2023-9-22'
 date-format: long
@@ -15,7 +15,7 @@ Lorem ipsum
 
 ## Summary
 
-Lorem ipsum
+In this chapter in the Fuzzing Book, `Fuzzing: Breaking Things with Random Inputs, we are taught about using "Fuzzers" or programs that create random sections of numbers, letters, and symbols to create a random test. "Fuzzers" can quickly test various commands and random inputs. The chapter explains the more specific details of `fuzzing` and even provides some examples of `fuzzing` implementations. The chapter also discusses the concept of a `Runner`. `Runner()` is the component responsible for executing the target application with the generated input. It captures the program’s behavior, logs crashes, and identifies potential vulnerabilities. The biggest hurdle within `Fuzzing` is `hypothesis`, a complex Python library. There is a lot to learn to be able to properly use this library as it is one of the hardest to understand. The chapter also goes into detail about different `fuzzing` methods, like grammar-based and mutation-based `fuzzing`. 
 
 ## Reflection
 

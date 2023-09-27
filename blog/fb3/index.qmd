@@ -11,11 +11,48 @@ page-layout: full
 
 ## Summary
 
-In this chapter in the Fuzzing Book, `Fuzzing: Breaking Things with Random Inputs, we are taught
+In this chapter in the Fuzzing Book, Fuzzing: Breaking Things with Random Inputs, we are taught
 about using "Fuzzers" or programs that create random sections of numbers, letters, and symbols to
-create a random test. "Fuzzers" can quickly test various commands and random inputs. The chapter
-explains the more specific details of `fuzzing` and even provides some examples of `fuzzing`
-implementations. The chapter also discusses the concept of a `Runner`. `Runner()` is the component
+create a random test. One of the most basic examples could be realized by creating a "fuzz generator:"
+
+```{python}
+import random
+
+def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) -> str:
+    """A string of up to `max_length` characters
+       in the range [`char_start`, `char_start` + `char_range`)"""
+    string_length = random.randrange(0, max_length + 1)
+    out = ""
+    for i in range(0, string_length):
+        out += chr(random.randrange(char_start, char_start + char_range))
+    return out
+```
+
+"Fuzzers" can quickly test various commands and random inputs. Suppose you had a function for
+writing to a file, `scribe(data: str) -> None`. How would you know that a random sequence of bytes
+is safe to write? You wouldn't without any notion of testing. We can easily test this using our
+fuzzer function we just created:
+
+
+```{python}
+import os
+import tempfile
+
+def scribe(data: str) -> None:
+    name = "file.txt"
+    tempdir = tempfile.mkdtemp()
+    FILE = os.path.join(tempdir, name)
+    with open(FILE, "w") as f:
+        f.write(data)
+
+input_data = fuzzer()
+scribe(input_data)
+```
+
+After running this through a few hundred iterations, we would begin to feel more comfortable
+interfacing our `scribe()` function to a public API given that it doesn't break.
+
+The chapter also discusses the concept of a `Runner`. `Runner()` is the component
 responsible for executing the target application with the generated input. It captures the program’s
 behavior, logs crashes, and identifies potential vulnerabilities. The biggest hurdle within
 `Fuzzing` is `hypothesis`, a complex Python library. There is a lot to learn to be able to properly

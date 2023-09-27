@@ -31,7 +31,7 @@ def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) ->
 "Fuzzers" can quickly test various commands and random inputs. Suppose you had a function for
 writing to a file, `scribe(data: str) -> None`. How would you know that a random sequence of bytes
 is safe to write? You wouldn't without any notion of testing. We can easily test this using our
-fuzzer function we just created:
+`fuzzer()` function we just created:
 
 
 ```{python}
@@ -45,21 +45,169 @@ def scribe(data: str) -> None:
     with open(FILE, "w") as f:
         f.write(data)
 
+    # clean up the mess!
+    os.remove(FILE)
+    os.removedirs()
+
 input_data = fuzzer()
 scribe(input_data)
+
 ```
 
 After running this through a few hundred iterations, we would begin to feel more comfortable
-interfacing our `scribe()` function to a public API given that it doesn't break.
+interfacing our `scribe()` function to a public API given that it doesn't break. But how do we run
+this multiple times in an idiomatic way? Rather than creating thousands of lines of boilerplate in
+our test suite, we may opt to implement what is known as a `Runner`.
 
-The chapter also discusses the concept of a `Runner`. `Runner()` is the component
-responsible for executing the target application with the generated input. It captures the program’s
-behavior, logs crashes, and identifies potential vulnerabilities. The biggest hurdle within
-`Fuzzing` is `hypothesis`, a complex Python library. There is a lot to learn to be able to properly
-use this library as it is one of the hardest to understand. The chapter also goes into detail about
-different `fuzzing` methods, like grammar-based and mutation-based `fuzzing`. 
+This chapter discusses the concept of a `Runner`. The `Runner()` is the component responsible for
+executing the target application with the generated input. It captures the program’s behavior, logs
+crashes, and identifies potential vulnerabilities. Consider the following example of a runner class,
+`ProgramRunner`, which inherits from the class `Runner`.
+
+```{python}
+import subprocess
+from typing import Any, List, Tuple, Union
+
+
+class Runner:
+    """Base class for testing inputs."""
+
+    # Test outcomes
+    PASS = "PASS"
+    FAIL = "FAIL"
+    UNRESOLVED = "UNRESOLVED"
+
+    def __init__(self) -> None:
+        """Initialize"""
+        pass
+
+    def run(self, inp: str) -> Any:
+        """Run the runner with the given input"""
+        return (inp, Runner.UNRESOLVED)
+
+
+class ProgramRunner(Runner)
+    """Test a program with inputs."""
+
+    def __init__(self, program: Union[str, List[str]]) -> None:
+        """Initialize.
+           `program` is a program spec as passed to `subprocess.run()`"""
+        self.program = program
+
+    def run_process(self, inp: str = "") -> subprocess.CompletedProcess:
+        """Run the program with `inp` as input.
+           Return result of `subprocess.run()`."""
+        return subprocess.run(self.program,
+                              input=inp,
+                              stdout=subprocess.PIP,
+                              stderr=subprocess.PIPE,
+                              universal_newlines=True)
+
+    def run(self, inp: str = "") -> Tuple[subprocess.CompletedProcess, str]:
+        """Run the program with `inp` as input.
+           Return test outcome based on result of `subprocess.run()`."""
+        result = self.run_process(inp)
+
+        if result.returncode == 0:
+            outcome = self.PASS
+        elif result.returncode < 0:
+            outcome = self.FAIL
+        else:
+            outcome = self.UNRESOLVED
+        return (result, outcome)
+```
+
+As detailed in the code, our `Runner` class has three outcomes: `PASS`, `FAIL`, `UNRESOLVED`, and it
+has a method `run()`, which, because there is nothing given to run, produces the `UNRESOLVED`
+outcome. We inherit `Runner` from `ProgramRunner`, which is capable of testing any generic program
+because it invokes the python module `subprocess`, which is capable of calling processes at the OS
+level.
+
+Our `ProgramRunner` exports two very important methods: `run_process()` and `run()`. `run_process()`
+is rather raw, and it is a wrapper to `subprocess.run()`, which runs a program by name and provides
+it with an input. `run()`, however, neatly interprets the `returncode` property of the process
+invoked by `run_process()`. As with all UNIX programs, a nonzero `returncode` indicates error.
+*Still*, this is not enough to give us a framework for testing functional bits of code. We will need
+another class that intelligently uses this `ProgramRunner`.
+
+This chapter instructs us to create a class specifically for the purpose of fuzzing. We'll create a
+base class `Fuzzer` and override it with a specific implementation that creates random strings
+within a range of lengths, `RandomFuzzer`.
+
+```{python}
+class Fuzzer:
+    def __init__(self) -> None:
+        """Constructor"""
+        pass
+
+    def fuzz(self) -> str:
+        """Return fuzz input"""
+        return ""
+
+    def run(self, runner: Runner = Runner()) \
+        -> Tuple[subprocess.CompletedProcess, str]:
+        return runner.run(self.fuzz())
+
+    def runs(self, runner: Runner = PrintRunner(), trials: int = 10) \
+        -> List[Tuple[subprocess.CompletedProcess, Outcome]]:
+        """Run `runner` with fuzz input, `trials` times"""
+        return [self.run(runner) for i in range(trials)]
+
+
+class RandomFuzzer(Fuzzer):
+    """Produce random inputs"""
+
+    def __init__(
+        self,
+        min_length: int = 10,
+        max_length: int = 100,
+        char_start: int = 32,
+        char_range: int = 32
+    ) -> None:
+        """Produce strings of `min_length` to `max_length` characters
+           in the interval [`char_start`, `char_start` + `char_range`)"""
+        self.min_length = min_length
+        self.max_length = max_length
+        self.char_start = char_start
+        self.char_range = char_range
+
+    def fuzz(self) -> str:
+        string_length = random.randrange(self.min_length, self.max_length + 1)
+        out = ""
+        for i in range(0, string_length):
+            out += chr(random.randrange(self.char_start, self.char_start + self.char_range))
+        return out
+```
+
+Now we can use `RandomFuzzer` to kick off a fuzzing process to test inputs of type `str` between the
+two specific lengths! As done in the book, we can test the program `cat`, which will print out its
+`stdin`.
+
+```{python}
+# initialize `cat` program as `ProgramRunner` with `stdin` = "cat"
+cat = ProgramRunner(program="cat")
+
+# create `RandomFuzzer` class capable of random inputs
+random_fuzzer = RandomFuzzer(min_length=20, max_length=21)
+
+# finally, apply the `RandomFuzzer` to the `cat` `ProgramRunner` to fuzz it once:
+print("Single Run:\n")
+random_fuzzer.run(cat)
+
+# or we can fuzz it for any number of runs!
+print("Multiple Runs:\n")
+random_fuzzer.runs(cat, 30)
+```
+
+The output shows that `cat` has succeeded for each random input. Although not comprehensive, this
+does a good job at catching inputs that may not have been expected. Note that, although this example
+is quite simple, restricting our input to random sequences of bytes, `RandomFuzzer` could be
+implemented for any kind of data structure and thus to any kind of program!
 
 ## Reflection
+
+We have seen how fuzzing provides an automated way to provide creative inputs to a program, given
+that we know the kind of data a program is expecting.
 
 Our team resonated with the importance of this chapter, as we have had many unnecessary issues arise
 on our feature branches and are feeling the pains of not implementing fuzzing sooner. Our colleague

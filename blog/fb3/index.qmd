@@ -86,7 +86,7 @@ class Runner:
         return (inp, Runner.UNRESOLVED)
 
 
-class ProgramRunner(Runner)
+class ProgramRunner(Runner):
     """Test a program with inputs."""
 
     def __init__(self, program: Union[str, List[str]]) -> None:

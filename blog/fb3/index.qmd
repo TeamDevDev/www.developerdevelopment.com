@@ -47,7 +47,7 @@ def scribe(data: str) -> None:
 
     # clean up the mess!
     os.remove(FILE)
-    os.removedirs()
+    os.removedirs(tempdir)
 
 input_data = fuzzer()
 scribe(input_data)

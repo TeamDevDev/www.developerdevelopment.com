@@ -148,7 +148,7 @@ class Fuzzer:
         -> Tuple[subprocess.CompletedProcess, str]:
         return runner.run(self.fuzz())
 
-    def runs(self, runner: Runner = PrintRunner(), trials: int = 10) \
+    def runs(self, runner: Runner = Runner(), trials: int = 10) \
         -> List[Tuple[subprocess.CompletedProcess, Outcome]]:
         """Run `runner` with fuzz input, `trials` times"""
         return [self.run(runner) for i in range(trials)]

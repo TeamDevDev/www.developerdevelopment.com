@@ -17,6 +17,7 @@ page-layout: full
 
 ## Reflection
 
+This article is very important for the work we are doing on chasten as we need to be able to communicate effectively in the small amount of time we have together each week. Overall we have done an okay job of this but we beleive that we could improve on these with a few changes. Alot of time when working on chasten, we struggle to make information widely avaliable especially when it comes to our individual pull requests and issues, this can cause a lot of problems for a few reasons. For one, this information will be lost if a member is sick or leaves the team and we will have to start again from scratch. Then, even if the issue is solved by this single person, others will still have to review the information. This means that if an error was present from the start of the change, then the pull request will have to be scrapped and potentally redone. To fix problems like this, we should greate smaller teams that allow for members to discuss the changes they are making and find a solution to these problems. As a team, it is important to always be on the same page. Making sure no ones work goes unoticed, or whether its just talking about how to attack something. Everyone just needs to be on the same page
 
 ## Action Items
 

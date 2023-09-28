@@ -29,7 +29,7 @@ Making sure no ones work goes unoticed, or whether its just talking about how to
 page.
 
 ## Action Items
-effective communication is crucial due to limited weekly meeting time. While we've done okay so far, there's room for improvement. 
+Effective communication is crucial due to limited weekly meeting time. While we've done okay so far, there's room for improvement. 
 Often, we struggle to share information, especially regarding individual pull requests and issues. This creates various issues, such as 
 losing critical information when team members are unavailable or leave. Even if one person resolves an issue, others must review it, 
 potentially leading to problems like errors being overlooked initially. To address this, we should consider forming smaller teams that 

@@ -1,0 +1,10 @@
+---
+author: [Simon Jones, Finley Banas, Keller Liptrap]
+title: Incident Report&#58; Publishing technical report of FB3
+date: '2023-9-28'
+date-format: long
+categories: [post, developer development, incident report, pain]
+description: <em>"The ratio of We’s to I’s is the best indicator of the development of a team." – Lewis B. Ergen</em>
+---
+
+FIXME

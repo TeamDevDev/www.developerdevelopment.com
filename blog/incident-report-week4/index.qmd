@@ -3,8 +3,38 @@ author: [Simon Jones, Finley Banas, Keller Liptrap]
 title: Incident Report&#58; Publishing technical report of FB3
 date: '2023-9-28'
 date-format: long
-categories: [post, developer development, incident report, pain]
+categories: [post, developer development, incident report, pain, time management]
 description: <em>"The ratio of We’s to I’s is the best indicator of the development of a team." – Lewis B. Ergen</em>
 ---
 
-FIXME
+Last week, the Chasten team collectively read 
+[Fuzzing: Breaking Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html)
+from [The Fuzzing Book](https://www.fuzzingbook.org/). Three of us were tasked with reviewing the
+articles written by our peers in order to synthesize it and publish on this website; however, due to
+sickness and other unforeseen circumstances, we found ourselves split up, confined to working
+remotely to review these. By the deadline of Monday, 2023-09-25, we were not able to publish our
+summary because we set ourselves up for failure.
+
+We can attribute our failure to a few issues:
+
+1. Rare circumstances prevented us from meeting in person. (obvious)
+2. Not all of our team members are aware of the deadlines we have for article reviews.
+3. There are varying levels of background on our development team, meaning that some of us may not
+produce a summary that sufficiently describes the technical subject we are reviewing.
+
+Needless to say, sickness and personal circumstances will always 'throw a wrench' in the
+collaborative process. Given that we are currently working to put our team policies on
+[our website](https://www.developerdevelopment.com/), we may see the issue regarding the lack of
+informed team members disappear in the following weeks. Lastly, as long as we continue to meet
+together and read these articles, the general technical literacy of each team member will
+consequentially improve.
+
+Considering the amount of time that this weekly process requires, we advocate to halt our weekly
+review of these articles. Our primary focus is to *develop software*. While we can still seek to
+improve our technical literacy and learn, we have created a considerable overhead for ourselves.
+Doing away with this weekly responsibility will mitigate problems such as this. Additionally, this
+will yield more time that can be dedicated to developing chasten.
+
+Finally, it is worth noting that such a circumstance can easily happen again if a team is not
+willing to devote their personal time to working on review. We as a team need to own up to managing
+our time and balancing it with developing the Chasten code base.

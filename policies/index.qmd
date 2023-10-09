@@ -36,3 +36,6 @@ updating their corresponding responsibilitiees weekly and/or as needed.
 
 8. At minimum, five issues in the Chasten repository must be worked on per week.
 Ideally, ten to twelve will see progress, if not total completion.
+
+9. Each pull request must receive three reviews, two of which must be
+TLs/Professor.

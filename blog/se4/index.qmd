@@ -65,12 +65,6 @@ others will still have to review the information. This means that if an error
 was present from the start of the task, then the pull request will have to be
 scrapped and potentially redone.
 
-To fix these types of problems, we should create smaller teams that allow for
-members to discuss the changes they are making and find a solution to these
-problems. As a team, it is important to always be on the same page. Making sure
-no ones work goes unnoticed, or whether its just talking about how to attack
-something. Everyone just needs to be on the same page.
-
 ## Action Items
 
 Effective communication is crucial due to limited weekly meeting time. While

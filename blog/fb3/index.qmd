@@ -227,20 +227,20 @@ program! This means that fuzzing is a general-purpose tool we can use for
 
 ## Reflection
 
-We have seen how fuzzing provides an automated way to provide creative inputs
-to a program, given that we know the kind of data a program is expecting.
+This article shows how fuzzing provides an automated way to provide creative
+inputs to a program, given that we know the kind of data a program is
+expecting.
 
 Our team resonated with the importance of this chapter, as we have had many
 unnecessary issues arise on our feature branches and are feeling the pains of
-not implementing fuzzing sooner. Our colleague [Jason
-Gyamfi](https://storied-cendol-fb38cb.netlify.app/) states it frankly,
+not implementing fuzzing sooner. Our colleague Jason Gyamfi states it clearly:
 
 > This makes the chapter a must-read for those aiming to improve software
 > strength and safety.
 
 Our team is striving to do just that: "aiming to improve software strength and
 safety." While starting the semester, some of us had not even heard of the term
-'fuzzing.' Now, we all are aware of the term, and some of us have even started
+"fuzzing." Now, we all are aware of the term, and some of us have even started
 implementing it into the test suite of
 [chasten](https://github.com/astutesource/chasten/), our tool for finding
 patterns in the AST of a python program.
@@ -257,15 +257,16 @@ offers many powerful
 
 ## Action Items
 
-In this chapter of Fuzzing Book we the readers get a deeper understanding about
-the use of fuzzing and the importance of testing in software engineering.
-Fuzzing which is used in this chapter to test code can be very beneficial to
-finding weak points in code. The implementation of fuzzing into the Chasten
-program could have many benefits. In Chasten we can check for bugs with
-inputting code or using configure files. The use of fuzzing could also simulate
-a user's behavior which would give the team an idea of bugs that a user may
-encounter. We have to apply what we have learned about fuzzing in the following
-ways:
+In the ["Fuzzing: Breaking Things with Random
+Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html) chapter of [The Fuzzing
+Book](https://www.fuzzingbook.org/) we develop a deeper understanding about the
+use of fuzzing and the importance of testing in software engineering. Fuzzing
+can be an effective way to find weak points in code. The implementation of
+fuzzing into the Chasten program could have many benefits. In Chasten we can
+check for bugs with inputting code or using configure files. The use of fuzzing
+could also simulate a user's behavior which would give the team an idea of bugs
+that a user may encounter. We have to apply what we have learned about fuzzing
+in the following ways:
 
 - **Have urgency:** When we see that a feature lacks proper test cases, rush to
 change that!

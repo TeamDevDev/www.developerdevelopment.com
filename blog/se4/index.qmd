@@ -4,7 +4,7 @@ title: Best Practices for Sharing Knowledge in Software Teams
 date: '2023-9-28'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em> What are the requirements to work effectively in a team?</em>
+description: <em>How can a team best share project knowledge?</em>
 toc: true
 page-layout: full
 ---

@@ -1,19 +1,20 @@
 ---
 author: [Finley Banas, Keller Liptrap, Simon Jones]
-title: Fuzzing&#58; breaking things with random inputs
+title: Fuzzing&#58; Breaking Things with Random Inputs
 date: '2023-9-22'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>Exploring how that we can make a robust test suite.</em>
+description: <em>How we can use fuzzing to make a robust program?</em>
 toc: true
 page-layout: full
 ---
 
 ## Summary
 
-In this chapter in the Fuzzing Book, Fuzzing: Breaking Things with Random Inputs, we are taught
-about using "Fuzzers" or programs that create random sections of numbers, letters, and symbols to
-create a random test. One of the most basic examples could be realized by creating a "fuzz generator:"
+In this chapter in the Fuzzing Book, Fuzzing: Breaking Things with Random
+Inputs, we are taught about using "Fuzzers" or programs that create random
+sections of numbers, letters, and symbols to create a random test. One of the
+most basic examples could be realized by creating a "fuzz generator:"
 
 ```{python}
 import random
@@ -28,10 +29,11 @@ def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) ->
     return out
 ```
 
-"Fuzzers" can quickly test various commands and random inputs. Suppose you had a function for
-writing to a file, `scribe(data: str) -> None`. How would you know that a random sequence of bytes
-is safe to write? You wouldn't without any notion of testing. We can easily test this using our
-`fuzzer()` function we just created:
+"Fuzzers" can quickly test various commands and random inputs. Suppose you had a
+function for writing to a file, `scribe(data: str) -> None`. How would you know
+that a random sequence of bytes is safe to write? You wouldn't without any
+notion of testing. We can easily test this using our `fuzzer()` function we just
+created:
 
 
 ```{python}
@@ -54,14 +56,16 @@ scribe(input_data)
 
 ```
 
-After running this through a few hundred iterations, we would begin to feel more comfortable
-interfacing our `scribe()` function to a public API given that it doesn't break. But how do we run
-this multiple times in an idiomatic way? Rather than creating thousands of lines of boilerplate in
-our test suite, we may opt to implement what is known as a `Runner`.
+After running this through a few hundred iterations, we would begin to feel more
+comfortable interfacing our `scribe()` function to a public API given that it
+doesn't break. But how do we run this multiple times in an idiomatic way? Rather
+than creating thousands of lines of boilerplate in our test suite, we may opt to
+implement what is known as a `Runner`.
 
-This chapter discusses the concept of a `Runner`. The `Runner()` is the component responsible for
-executing the target application with the generated input. It captures the program’s behavior, logs
-crashes, and identifies potential vulnerabilities. Consider the following example of a runner class,
+This chapter discusses the concept of a `Runner`. The `Runner()` is the
+component responsible for executing the target application with the generated
+input. It captures the program’s behavior, logs crashes, and identifies
+potential vulnerabilities. Consider the following example of a runner class,
 `ProgramRunner`, which inherits from the class `Runner`.
 
 ```{python}
@@ -117,22 +121,26 @@ class ProgramRunner(Runner):
         return (result, outcome)
 ```
 
-As detailed in the code, our `Runner` class has three outcomes: `PASS`, `FAIL`, `UNRESOLVED`, and it
-has a method `run()`, which, because there is nothing given to run, produces the `UNRESOLVED`
-outcome. We inherit `Runner` from `ProgramRunner`, which is capable of testing any generic program
-because it invokes the python module `subprocess`, which is capable of calling processes at the OS
-level.
+As detailed in the code, our `Runner` class has three outcomes: `PASS`, `FAIL`,
+`UNRESOLVED`, and it has a method `run()`, which, because there is nothing given
+to run, produces the `UNRESOLVED` outcome. We inherit `Runner` from
+`ProgramRunner`, which is capable of testing any generic program because it
+invokes the python module `subprocess`, which is capable of calling processes at
+the OS level.
 
-Our `ProgramRunner` exports two very important methods: `run_process()` and `run()`. `run_process()`
-is rather raw, and it is a wrapper to `subprocess.run()`, which runs a program by name and provides
-it with an input. `run()`, however, neatly interprets the `returncode` property of the process
-invoked by `run_process()`. As with all UNIX programs, a nonzero `returncode` indicates error.
-*Still*, this is not enough to give us a framework for testing functional bits of code. We will need
-another class that intelligently uses this `ProgramRunner`.
+Our `ProgramRunner` exports two very important methods: `run_process()` and
+`run()`. `run_process()` is rather raw, and it is a wrapper to
+`subprocess.run()`, which runs a program by name and provides it with an input.
+`run()`, however, neatly interprets the `returncode` property of the process
+invoked by `run_process()`. As with all UNIX programs, a nonzero `returncode`
+indicates error. *Still*, this is not enough to give us a framework for testing
+functional bits of code. We will need another class that intelligently uses this
+`ProgramRunner`.
 
-This chapter instructs us to create a class specifically for the purpose of fuzzing. We'll create a
-base class `Fuzzer` and override it with a specific implementation that creates random strings
-within a range of lengths, `RandomFuzzer`.
+This chapter instructs us to create a class specifically for the purpose of
+fuzzing. We'll create a base class `Fuzzer` and override it with a specific
+implementation that creates random strings within a range of lengths,
+`RandomFuzzer`.
 
 ```{python}
 class Fuzzer:
@@ -179,9 +187,9 @@ class RandomFuzzer(Fuzzer):
         return out
 ```
 
-Now we can use `RandomFuzzer` to kick off a fuzzing process to test inputs of type `str` between the
-two specific lengths! As done in the book, we can test the program `cat`, which will print out its
-`stdin`.
+Now we can use `RandomFuzzer` to kick off a fuzzing process to test inputs of
+type `str` between the two specific lengths! As done in the book, we can test
+the program `cat`, which will print out its `stdin`.
 
 ```{python}
 # initialize `cat` program as `ProgramRunner` with `stdin` = "cat"
@@ -206,42 +214,51 @@ implemented for any kind of data structure and thus to any kind of program!
 
 ## Reflection
 
-We have seen how fuzzing provides an automated way to provide creative inputs to a program, given
-that we know the kind of data a program is expecting.
+We have seen how fuzzing provides an automated way to provide creative inputs to
+a program, given that we know the kind of data a program is expecting.
 
-Our team resonated with the importance of this chapter, as we have had many unnecessary issues arise
-on our feature branches and are feeling the pains of not implementing fuzzing sooner. Our colleague
-[Jason Gyamfi](https://storied-cendol-fb38cb.netlify.app/) states it frankly,
+Our team resonated with the importance of this chapter, as we have had many
+unnecessary issues arise on our feature branches and are feeling the pains of
+not implementing fuzzing sooner. Our colleague [Jason
+Gyamfi](https://storied-cendol-fb38cb.netlify.app/) states it frankly,
 
 > This makes the chapter a must-read for those aiming to improve software strength and safety.
 
-Our team is striving to do just that: "aiming to improve software strength and safety." While
-starting the semester, some of us had not even heard of the term 'fuzzing.' Now, we all are aware of
-the term, and some of us have even started implementing it into the test suite of
-[chasten](https://github.com/astutesource/chasten/), our tool for finding patterns in the AST of a
-python program.
+Our team is striving to do just that: "aiming to improve software strength and
+safety." While starting the semester, some of us had not even heard of the term
+'fuzzing.' Now, we all are aware of the term, and some of us have even started
+implementing it into the test suite of
+[chasten](https://github.com/astutesource/chasten/), our tool for finding
+patterns in the AST of a python program.
 
-We are all aware of the benefits of fuzzing and its keen ability to point out *stress points* in our
-code. That said, the task remains to achieve complete familiarity with fuzzing strategies and to
-consistently implement them when creating new features. Many of our team members have emphasized the
-importance of doing this sooner than later, so as to not accrue *technical debt*. In our case, we
-use [Hypothesis](https://hypothesis.readthedocs.io/en/latest/index.html), which offers many powerful
+We are all aware of the benefits of fuzzing and its keen ability to point out
+*stress points* in our code. That said, the task remains to achieve complete
+familiarity with fuzzing strategies and to consistently implement them when
+creating new features. Many of our team members have emphasized the importance
+of doing this sooner than later, so as to not accrue *technical debt*. In our
+case, we use
+[Hypothesis](https://hypothesis.readthedocs.io/en/latest/index.html), which
+offers many powerful
 [strategies](https://hypothesis.readthedocs.io/en/latest/data.html) for fuzzing.
 
 ## Action Items
 
-In this chapter of Fuzzing Book we the readers get a deeper understanding about the use of fuzzing
-and the importance of testing in software engineering. Fuzzing which is used in this chapter to test
-code can be very beneficial to finding weak points in code. The implementation of fuzzing into the
-Chasten program could have many benefits. In Chasten we can check for bugs with inputting code or
-using configure files. The use of fuzzing could also simulate a user's behavior which would give the
-team an idea of bugs that a user may encounter. We have to apply what we have learned about fuzzing
-in the following ways:
+In this chapter of Fuzzing Book we the readers get a deeper understanding about
+the use of fuzzing and the importance of testing in software engineering.
+Fuzzing which is used in this chapter to test code can be very beneficial to
+finding weak points in code. The implementation of fuzzing into the Chasten
+program could have many benefits. In Chasten we can check for bugs with
+inputting code or using configure files. The use of fuzzing could also simulate
+a user's behavior which would give the team an idea of bugs that a user may
+encounter. We have to apply what we have learned about fuzzing in the following
+ways:
 
-* **Have urgency:** When we see that a feature lacks proper test cases, rush to change that!
-* **Be responsible:** When we write our own features, we need to make sure each change includes some
-sort of test to verify that feature works with fuzzed input.
-* **Be curious:** Explore tooling that exists in order to know every inch of its feature set. This
-way, we can approach our testing the most effectively.
+- **Have urgency:** When we see that a feature lacks proper test cases, rush to
+change that!
+- **Be responsible:** When we write our own features, we need to make sure each
+change includes some sort of test to verify that feature works with fuzzed
+input.
+- **Be curious:** Explore tooling that exists in order to know every inch of its
+feature set. This way, we can approach our testing the most effectively.
 
 {{< include /_back-blog.qmd >}}

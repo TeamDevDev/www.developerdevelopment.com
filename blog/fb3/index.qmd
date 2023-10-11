@@ -38,7 +38,7 @@ as shown in the following code segment. How would you know that a random
 sequence of bytes can be written without causing the function to crash? You
 wouldn't if you did not implement a test case for the function! We can easily
 test this using the `fuzzer()` from the [The Fuzzing
-Book](https://www.fuzzingbook.org/)!
+Book](https://www.fuzzingbook.org/):
 
 ```{python}
 import os
@@ -60,17 +60,20 @@ scribe(input_data)
 
 ```
 
-After running this through a few hundred iterations, we would begin to feel more
-comfortable interfacing our `scribe()` function to a public API given that it
-doesn't break. But how do we run this multiple times in an idiomatic way? Rather
-than creating thousands of lines of boilerplate source code in our test suite,
-we may opt to implement what is known as a `Runner`.
+After running this through a few hundred iterations, we would begin to feel
+more comfortable interfacing our `scribe()` function to a public API. But how
+do we run this multiple times in an idiomatic way? Rather than creating
+thousands of lines of boilerplate source code in our test suite, we may opt to
+implement what is known as a `Runner`.
 
-This chapter discusses the concept of a `Runner`. The `Runner()` is the
-component responsible for executing the target application with the generated
-input. It captures the program’s behavior, logs crashes, and identifies
-potential vulnerabilities. Consider the following example of a runner class,
-`ProgramRunner`, which inherits from the class `Runner`.
+The ["Fuzzing: Breaking Things with Random
+Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html) chapter discusses the
+concept of a `Runner`. As shown in the following source code segment, the
+`Runner()` is the component responsible for executing the target application
+with the generated input. It captures the program’s behavior, logs crashes, and
+identifies potential vulnerabilities. To learn more about this concept,
+consider the following example of a runner class, `ProgramRunner`, which
+inherits from the class `Runner`.
 
 ```{python}
 import subprocess

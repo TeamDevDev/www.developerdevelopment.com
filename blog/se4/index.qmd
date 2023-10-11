@@ -19,16 +19,16 @@ progress with chasten.
 
 ## Summary
 
-In the chapter, various valuable skills are discussed, such as effective team
-communication and respecting one another's time and contributions within a
-group. The primary focus is on cultivating a conducive work environment within a
-software engineering team. The key to maintaining a healthy work environment and
-fostering effective communication is to create a sense of comfort among team
-members. This involves establishing an environment where people can make
-mistakes without fear and openly discuss them. Addressing issues like a lack of
-psychological safety, information silos, data fragmentation, and duplication is
-crucial to ensure team members feel at ease expressing their thoughts and
-nurturing a productive working atmosphere.
+This chapter discusses valuable software engineering skills such as effective
+team communication and respecting one another's time and contributions within a
+group. The primary focus of the chapter is on cultivating a conducive work
+environment within a software engineering team. The key to maintaining a healthy
+work environment and fostering effective communication is to create a sense of
+"comfort" among team members. This involves establishing an environment where
+people can make mistakes without fear and openly discuss them. Addressing issues
+like a lack of psychological safety, information silos, data fragmentation, and
+duplication is crucial to ensure team members feel at ease expressing their
+thoughts and nurturing a productive working atmosphere.
 
 Additionally, the chapter delves into the importance of scaling an
 organization's knowledge, its impact on culture and individual mindsets, and the

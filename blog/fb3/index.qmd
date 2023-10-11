@@ -242,7 +242,7 @@ Our team is striving to do just that: "aiming to improve software strength and
 safety." While starting the semester, some of us had not even heard of the term
 "fuzzing." Now, we all are aware of the term, and some of us have even started
 implementing it into the test suite of
-[chasten](https://github.com/astutesource/chasten/), our tool for finding
+[Chasten](https://github.com/astutesource/chasten/), our tool for finding
 patterns in the AST of a python program.
 
 We are all aware of the benefits of fuzzing and its keen ability to point out
@@ -262,11 +262,13 @@ Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html) chapter of [The Fuzzing
 Book](https://www.fuzzingbook.org/) we develop a deeper understanding about the
 use of fuzzing and the importance of testing in software engineering. Fuzzing
 can be an effective way to find weak points in code. The implementation of
-fuzzing into the Chasten program could have many benefits. In Chasten we can
-check for bugs with inputting code or using configure files. The use of fuzzing
-could also simulate a user's behavior which would give the team an idea of bugs
-that a user may encounter. We have to apply what we have learned about fuzzing
-in the following ways:
+fuzzing into the [Chasten](https://github.com/astutesource/chasten/) program
+could have many benefits. When developing
+[Chasten](https://github.com/astutesource/chasten/) we can check for bugs with
+in parts of the system that input source code or configure files. The use of
+fuzzing could also simulate a user's behavior which would give the team an idea
+of bugs that a user may encounter. We have to apply what we have learned about
+fuzzing in these ways:
 
 - **Have urgency:** When we see that a feature lacks proper test cases, rush to
 change that!

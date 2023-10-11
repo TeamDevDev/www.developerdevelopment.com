@@ -275,7 +275,7 @@ change that!
 - **Be responsible:** When we write our own features, we need to make sure each
 change includes some sort of test to verify that feature works with fuzzed
 input.
-- **Be curious:** Explore tooling that exists in order to know every inch of its
-feature set. This way, we can approach our testing the most effectively.
+- **Be curious:** Explore tooling that exists in order to know "every inch" of
+its feature set. This way, we can approach our testing the most effectively.
 
 {{< include /_back-blog.qmd >}}

@@ -148,6 +148,11 @@ A simple way to produce a valid mutated version of a program is through replacin
 
 ## Reflection
 
+The Fuzzing Book has a chapter that talks about something called mutation analysis. This is a way to check how good our tests are when we run software. Just because we test a lot doesn't mean the software will always work right. The book gives two examples, named ineffective_test_1 and ineffective_test_2, to show this point.
+
+In the same chapter, there's also a bit about a triangle program. This program figures out the type of triangle using the lengths of its three sides. To check how good the tests are for this program, they first make the program more standard. They do this by using a method called 'mutation'. After that, they change some parts of the program, like swapping 'return' with 'pass'. If the program works correctly, it should show an error because some triangle types won't be recognized.
+
+The chapter also mentions problems when we purposely add fake errors to test the program. This reminds us to be careful and make sure our tests are both thorough and able to find real mistakes in the software.
 
 
 ## Use Cases

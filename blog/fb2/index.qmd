@@ -4,7 +4,7 @@ title: Applying Code Coverage
 date: '2023-9-16'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>How can we achieve the most possible code coverage?</em>
+description: <em>How can we achieve high code coverage? Should we?</em>
 toc: true
 page-layout: full
 ---

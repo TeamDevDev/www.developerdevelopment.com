@@ -1,0 +1,35 @@
+---
+author: [Audrey Blarr, Jason Gyamfi, Gregory M. Kapfhammer]
+title: 'Mutation Analysis'
+date: '2023-10-10'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can we incorporate mutations into our code for further analysis?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This is our fourth post about the [The Fuzzing
+Book](https://www.fuzzingbook.org/)! The goal of this post is to relate the
+material from the book to our progress on our
+[Chasten](https://github.com/AstuteSource/chasten) tool, with the hope that it
+will provide valuable lessons on how we approach designing and developing our
+own software. Part of this is guidance on automating tests, and how that may
+look in different coding languages &mdash; although the article's main focus is
+the Python programming language.
+
+## Summary
+
+
+
+## Reflection
+
+
+
+## Use Cases
+
+
+
+{{< include /_back-blog.qmd >}}

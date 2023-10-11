@@ -11,11 +11,11 @@ page-layout: full
 
 ## Overview
 
-This blog post discusses **Knowledge Sharing** in the [Software Engineering at
-Google book](https://abseil.io/resources/swe-book/html/ch03.html)! The goal of
-this article is to demonstrate how using specific social skills in our software
-engineering project will allow for a productive working environment throughout our
-progress with chasten.
+This blog post discusses the ["Knowledge
+Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book)! The
+This article's goal is to demonstrate how using specific social skills in our
+software engineering project will allow for a productive working environment.
 
 ## Summary
 

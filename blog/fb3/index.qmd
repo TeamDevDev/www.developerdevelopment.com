@@ -4,7 +4,7 @@ title: Fuzzing&#58; Breaking Things with Random Inputs
 date: '2023-9-22'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>How we can use fuzzing to make a robust program?</em>
+description: <em>How we can use fuzzing to make a program more robust?</em>
 toc: true
 page-layout: full
 ---

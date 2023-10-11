@@ -55,14 +55,15 @@ together each week. Overall, we are starting to do a better job at completing
 this task &mdash; but we believe that we could improve on these with a few
 changes!
 
-A lot of time when working on chasten, we struggle to make information widely
-available, especially when it comes to our individual pull requests and issues.
-Ultimately, this can cause a lot of problems! First, this information will be
-lost if a member is sick or leaves the team and we will have to start again from
-scratch. Then, even if the issue is solved by this person, others will still
-have to review the information. This means that if an error was present from the
-start of the change, then the pull request will have to be scrapped and
-potentially redone.
+A lot of time when working on
+[Chasten](https://github.com/AstuteSource/chasten), we struggle to make
+information widely available, especially when it comes to our individual pull
+requests and issues. Ultimately, this can cause a lot of problems! First, this
+information will be lost if a member is sick or leaves the team and we will have
+to start again from scratch. Then, even if the issue is solved by this person,
+others will still have to review the information. This means that if an error
+was present from the start of the task, then the pull request will have to be
+scrapped and potentially redone.
 
 To fix these types of problems, we should create smaller teams that allow for
 members to discuss the changes they are making and find a solution to these

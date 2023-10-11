@@ -1,0 +1,28 @@
+---
+author: [Simon Jones, Caleb Kendra, Haylee Pierce]
+title: Fuzzing with Grammars
+date: '2023-10-'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em></em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+Here we will be discussing the [Fuzzing with Grammars]
+(https://www.fuzzingbook.org/html/Grammars.html) chapter from [The Fuzzing Book]
+(https://www.fuzzingbook.org/). This chapter builds on the content from the 
+[Mutation-Based Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html) 
+chapter.
+
+## Summary
+
+
+
+## Action Items
+
+
+
+{{< include /_back-blog.qmd >}}

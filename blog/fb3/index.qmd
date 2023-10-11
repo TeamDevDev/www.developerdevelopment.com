@@ -217,11 +217,13 @@ print("Multiple Runs:\n")
 random_fuzzer.runs(cat, 30)
 ```
 
-The output shows that `cat` has succeeded for each random input. Although not
-comprehensive, this does a good job at catching inputs that may not have been
-expected. Note that, although this example is quite simple, restricting our
-input to random sequences of bytes, `RandomFuzzer` could be implemented for any
-kind of data structure and thus to any kind of program!
+The output shows that `cat` worked for each random input. Although this testing
+process is not comprehensive, it would do a good job at catching problems with
+inputs that the `cat` function may not expected. Note that, even though this
+simple example restricts the input to random sequences of bytes, `RandomFuzzer`
+could be extended for any kind of data structure and thus to any kind of
+program! This means that fuzzing is a general-purpose tool we can use for
+[Chasten](https://github.com/AstuteSource/chasten).
 
 ## Reflection
 

@@ -1,5 +1,5 @@
 ---
-author: [Finley Banas, Keller Liptrap, Simon Jones]
+author: [Finley Banas, Keller Liptrap, Simon Jones, Gregory Kapfhammer]
 title: Fuzzing&#58; Breaking Things with Random Inputs
 date: '2023-9-22'
 date-format: long

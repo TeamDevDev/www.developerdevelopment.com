@@ -1,0 +1,79 @@
+---
+author: [Evan Nelson, Miles Frank, Sabrina Rodriguez]
+title: Best Practices for Sharing Knowledge in Software Teams
+date: '2023-9-28'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em> What are the requirements to work effectively in a team?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+In this blog post we discuss **Knowledge Sharing** in the[Software Engineering
+at Google book](https://abseil.io/resources/swe-book/html/ch03.html)! Our goal
+is to demonstrate how utilizing specific social skills in our software
+engineering class will allow for a productive working environment throughout our
+progress with chasten.
+
+## Summary
+
+In the chapter, various valuable skills are discussed, such as effective team
+communication and respecting one another's time and contributions within a
+group. The primary focus is on cultivating a conducive work environment within a
+software engineering team. The key to maintaining a healthy work environment and
+fostering effective communication is to create a sense of comfort among team
+members. This involves establishing an environment where people can make
+mistakes without fear and openly discuss them. Addressing issues like a lack of
+psychological safety, information silos, data fragmentation, and duplication is
+crucial to ensure team members feel at ease expressing their thoughts and
+nurturing a productive working atmosphere.
+
+Additionally, the chapter delves into the importance of scaling an
+organization's knowledge, its impact on culture and individual mindsets, and the
+encouragement of good coding practices. Often, a situation arises where certain
+individuals hoard information, resulting in an uneven distribution of knowledge.
+Consequently, some team members may be well-versed in specific aspects of the
+software, while they lack essential knowledge in other areas, hindering their
+overall efficiency. This scenario is undesirable, as the aim is to ensure that
+everyone is adequately educated about the software they are working on.
+Furthermore, such disparities in knowledge can lead to inconsistent approaches
+within the team, causing conflicts and confusion that ultimately slow down the
+software development process. This situation also relates to the concept of the
+"bus factor," where if a key individual holding critical information is suddenly
+unavailable, the project can suffer significant setbacks, necessitating others
+to decipher the missing knowledge.
+
+## Reflection
+
+This article is very important for the work we are doing on chasten as we need
+to be able to communicate effectively in the small amount of time we have
+together each week. Overall we have done an okay job of this but we believe that
+we could improve on these with a few changes. A lot of time when working on
+chasten, we struggle to make information widely available especially when it
+comes to our individual pull requests and issues, this can cause a lot of
+problems for a few reasons. For one, this information will be lost if a member
+is sick or leaves the team and we will have to start again from scratch. Then,
+even if the issue is solved by this single person, others will still have to
+review the information. This means that if an error was present from the start
+of the change, then the pull request will have to be scrapped and potentially
+redone. To fix problems like this, we should create smaller teams that allow for
+members to discuss the changes they are making and find a solution to these
+problems. As a team, it is important to always be on the same page. Making sure
+no ones work goes unnoticed, or whether its just talking about how to attack
+something. Everyone just needs to be on the same page.
+
+## Action Items
+
+Effective communication is crucial due to limited weekly meeting time. While
+we've done okay so far, there's room for improvement. Often, we struggle to
+share information, especially regarding individual pull requests and issues.
+This creates various issues, such as losing critical information when team
+members are unavailable or leave. Even if one person resolves an issue, others
+must review it, potentially leading to problems like errors being overlooked
+initially. To address this, we should consider forming smaller teams that can
+discuss changes and collaboratively find solutions. This will help streamline
+our communication and problem-solving processes.
+
+{{< include /_back-blog.qmd >}}

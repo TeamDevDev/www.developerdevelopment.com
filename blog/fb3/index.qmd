@@ -128,12 +128,12 @@ class ProgramRunner(Runner):
         return (result, outcome)
 ```
 
-As detailed in the code, our `Runner` class has three outcomes: `PASS`, `FAIL`,
-`UNRESOLVED`, and it has a method `run()`, which, because there is nothing given
-to run, produces the `UNRESOLVED` outcome. We inherit `Runner` from
-`ProgramRunner`, which is capable of testing any generic program because it
-invokes the python module `subprocess`, which is capable of calling processes at
-the OS level.
+As detailed in the code, the `Runner` class has three outcomes: `PASS`, `FAIL`,
+`UNRESOLVED`, and it has a method called `run()`, which, because there is
+nothing given to run, produces the `UNRESOLVED` outcome. We inherit
+`ProgramRunner` from `Runner`, which is capable of testing any generic program
+because it invokes the python module `subprocess`, which is capable of calling
+processes at the OS level.
 
 Our `ProgramRunner` exports two very important methods: `run_process()` and
 `run()`. `run_process()` is rather raw, and it is a wrapper to

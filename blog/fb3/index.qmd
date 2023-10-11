@@ -32,12 +32,13 @@ def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) ->
     return out
 ```
 
-"Fuzzers" can quickly test various commands and random inputs. Suppose you had a
-function for writing to a file, `scribe(data: str) -> None`. How would you know
-that a random sequence of bytes is safe to write? You wouldn't without any
-notion of testing. We can easily test this using our `fuzzer()` function we just
-created:
-
+A "fuzzer" can quickly test a command by providing it with random inputs.
+Suppose you had a function for writing to a file, `scribe(data: str) -> None`,
+as shown in the following code segment. How would you know that a random
+sequence of bytes can be written without causing the function to crash? You
+wouldn't if you did not implement a test case for the function! We can easily
+test this using the `fuzzer()` from the [The Fuzzing
+Book](https://www.fuzzingbook.org/)!
 
 ```{python}
 import os
@@ -62,8 +63,8 @@ scribe(input_data)
 After running this through a few hundred iterations, we would begin to feel more
 comfortable interfacing our `scribe()` function to a public API given that it
 doesn't break. But how do we run this multiple times in an idiomatic way? Rather
-than creating thousands of lines of boilerplate in our test suite, we may opt to
-implement what is known as a `Runner`.
+than creating thousands of lines of boilerplate source code in our test suite,
+we may opt to implement what is known as a `Runner`.
 
 This chapter discusses the concept of a `Runner`. The `Runner()` is the
 component responsible for executing the target application with the generated

@@ -133,7 +133,7 @@ As detailed in the code, the `Runner` class has three outcomes: `PASS`, `FAIL`,
 nothing given to run, produces the `UNRESOLVED` outcome. We inherit
 `ProgramRunner` from `Runner`, which is capable of testing any generic program
 because it invokes the python module `subprocess`, which is capable of calling
-processes at the OS level.
+processes through the features provided by the operating system.
 
 Our `ProgramRunner` exports two very important methods: `run_process()` and
 `run()`. `run_process()` is rather raw, and it is a wrapper to
@@ -142,12 +142,13 @@ Our `ProgramRunner` exports two very important methods: `run_process()` and
 invoked by `run_process()`. As with all UNIX programs, a nonzero `returncode`
 indicates error. *Still*, this is not enough to give us a framework for testing
 functional bits of code. We will need another class that intelligently uses this
-`ProgramRunner`.
+`ProgramRunner`!
 
-This chapter instructs us to create a class specifically for the purpose of
-fuzzing. We'll create a base class `Fuzzer` and override it with a specific
-implementation that creates random strings within a range of lengths,
-`RandomFuzzer`.
+The ["Fuzzing: Breaking Things with Random
+Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html) chapter instructs us to
+create a class specifically for the purpose of fuzzing. We'll create a base
+class `Fuzzer` and override it with a specific implementation that creates
+random strings within a range of lengths, `RandomFuzzer`.
 
 ```{python}
 class Fuzzer:
@@ -195,8 +196,10 @@ class RandomFuzzer(Fuzzer):
 ```
 
 Now we can use `RandomFuzzer` to kick off a fuzzing process to test inputs of
-type `str` between the two specific lengths! As done in the book, we can test
-the program `cat`, which will print out its `stdin`.
+type `str` between the two specific lengths! As shown in [The Fuzzing
+Book](https://www.fuzzingbook.org/), we can test the program `cat`, which will
+print out its `stdin`, illustrated by the following code segment and its
+output:
 
 ```{python}
 # initialize `cat` program as `ProgramRunner` with `stdin` = "cat"
@@ -214,22 +217,24 @@ print("Multiple Runs:\n")
 random_fuzzer.runs(cat, 30)
 ```
 
-The output shows that `cat` has succeeded for each random input. Although not comprehensive, this
-does a good job at catching inputs that may not have been expected. Note that, although this example
-is quite simple, restricting our input to random sequences of bytes, `RandomFuzzer` could be
-implemented for any kind of data structure and thus to any kind of program!
+The output shows that `cat` has succeeded for each random input. Although not
+comprehensive, this does a good job at catching inputs that may not have been
+expected. Note that, although this example is quite simple, restricting our
+input to random sequences of bytes, `RandomFuzzer` could be implemented for any
+kind of data structure and thus to any kind of program!
 
 ## Reflection
 
-We have seen how fuzzing provides an automated way to provide creative inputs to
-a program, given that we know the kind of data a program is expecting.
+We have seen how fuzzing provides an automated way to provide creative inputs
+to a program, given that we know the kind of data a program is expecting.
 
 Our team resonated with the importance of this chapter, as we have had many
 unnecessary issues arise on our feature branches and are feeling the pains of
 not implementing fuzzing sooner. Our colleague [Jason
 Gyamfi](https://storied-cendol-fb38cb.netlify.app/) states it frankly,
 
-> This makes the chapter a must-read for those aiming to improve software strength and safety.
+> This makes the chapter a must-read for those aiming to improve software
+> strength and safety.
 
 Our team is striving to do just that: "aiming to improve software strength and
 safety." While starting the semester, some of us had not even heard of the term

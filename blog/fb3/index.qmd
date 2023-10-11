@@ -17,7 +17,7 @@ the [The Fuzzing Book](https://www.fuzzingbook.org/)! This chapter teachers us
 about the use of "fuzzers" or programs that automatically create random sections
 of numbers, letters, and symbols to create a random test. One of the most basic
 examples could be realized by creating a "fuzz generator", which the chapter
-explains with the following Python code segment:
+explains with the following Python function called `fuzzer`:
 
 ```{python}
 import random

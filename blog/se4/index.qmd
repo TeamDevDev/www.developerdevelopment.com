@@ -75,6 +75,7 @@ members are unavailable or leave. Even if one person resolves an issue, others
 must review it, potentially leading to problems like errors being overlooked
 initially. To address this, we should consider forming smaller teams that can
 discuss changes and collaboratively find solutions. This will help streamline
-our communication and problem-solving processes.
+our communication and problem-solving processes. What other solutions from this
+article can be proactively adopt?
 
 {{< include /_back-blog.qmd >}}

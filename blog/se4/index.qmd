@@ -1,0 +1,81 @@
+---
+author: [Evan Nelson, Miles Frank, Sabrina Rodriguez, Gregory M. Kapfhammer]
+title: Best Practices for Sharing Knowledge in Software Teams
+date: '2023-9-28'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can a team best share project knowledge?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post discusses the ["Knowledge
+Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book)! The
+This article's goal is to demonstrate how using specific social skills in our
+software engineering project will allow for a productive working environment.
+
+## Summary
+
+This chapter discusses valuable software engineering skills such as effective
+team communication and respecting one another's time and contributions within a
+group. The primary focus of the chapter is on cultivating a conducive work
+environment within a software engineering team. The key to maintaining a healthy
+work environment and fostering effective communication is to create a sense of
+comfort among team members. This involves establishing an environment where
+people can make mistakes without fear and openly discuss them. Addressing issues
+like a lack of psychological safety, information silos, data fragmentation, and
+duplication is crucial to ensure team members feel at ease expressing their
+thoughts and nurturing a productive working atmosphere.
+
+Additionally, the chapter delves into the importance of scaling an
+organization's knowledge, its impact on culture and individual mindsets, and the
+encouragement of good coding practices. Often, a situation arises where certain
+individuals hoard information, resulting in an uneven distribution of knowledge.
+Consequently, some team members may be well-versed in specific aspects of the
+software, while they lack essential knowledge in other areas, hindering their
+overall efficiency. This scenario is undesirable, as the aim is to ensure that
+everyone is adequately educated about the software on which they are working.
+
+It is also important to note that such disparities in knowledge can lead to
+inconsistent approaches within the team, causing conflicts and confusion that
+ultimately slow down the software development process. This situation also
+relates to the concept of the "bus factor," where if a key individual holding
+critical information is suddenly unavailable, the project can suffer significant
+setbacks, necessitating others to decipher the missing knowledge.
+
+## Reflection
+
+This article is very important for the work we are doing, as a team, towards
+implementing the [Chasten](https://github.com/AstuteSource/chasten) tool. We
+need to be able to communicate effectively in the small amount of time we have
+together each week. Overall, we are starting to do a better job at completing
+this task &mdash; but we believe that we could improve on these with a few
+changes!
+
+A lot of time when working on
+[Chasten](https://github.com/AstuteSource/chasten), we struggle to make
+information widely available, especially when it comes to our individual pull
+requests and issues. Ultimately, this can cause a lot of problems! First, this
+information will be lost if a member is sick or leaves the team and we will have
+to start again from scratch. Then, even if the issue is solved by this person,
+others will still have to review the information. This means that if an error
+was present from the start of the task, then the pull request will have to be
+scrapped and potentially redone.
+
+## Action Items
+
+Effective communication is crucial due to limited weekly meeting time. While
+we've done okay so far, there's room for improvement. Often, we struggle to
+share information, especially regarding individual pull requests and issues.
+This creates various issues, such as losing critical information when team
+members are unavailable or leave. Even if one person resolves an issue, others
+must review it, potentially leading to problems like errors being overlooked
+initially. To address this, we should consider forming smaller teams that can
+discuss changes and collaboratively find solutions. This will help streamline
+our communication and problem-solving processes. What other solutions from this
+article can be proactively adopt?
+
+{{< include /_back-blog.qmd >}}

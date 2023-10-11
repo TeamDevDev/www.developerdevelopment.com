@@ -22,7 +22,129 @@ the Python programming language.
 
 ## Summary
 
+Mutations, or artificial faults, can be injected into code to check whether or not a test suite will pick up on specific bugs. On subject programs there are two highlighted methods of running mutation analysis; MuFunctionAnalyzer (implementing mutation analysis for individual functions) and MuProgramAnalyzer (implementing mutation analysis for standalone programs containing test suites). 
 
+Here is an example of MuFunctionAnalyzer at work:
+
+```python
+for mutant in MuFunctionAnalyzer(gcd, log=True):
+>>>     with mutant:
+>>>         assert gcd(1, 0) == 1, "Minimal"
+>>>         assert gcd(0, 1) == 1, "Mirror"
+>>> mutant.pm.score()
+->  gcd_1
+<-  gcd_1
+Detected gcd_1 <class 'UnboundLocalError'> local variable 'c' referenced before assignment
+
+->  gcd_2
+<-  gcd_2
+Detected gcd_2 <class 'AssertionError'> Mirror
+```
+
+And MuProgramAnalyzer:
+
+```python
+class TestGCD(unittest.TestCase):
+>>>     def test_simple(self):
+>>>         assert cfg.gcd(1, 0) == 1
+>>> 
+>>>     def test_mirror(self):
+>>>         assert cfg.gcd(0, 1) == 1
+>>> for mutant in MuProgramAnalyzer('gcd', gcd_src):
+>>>     mutant[test_module].runTest('TestGCD')
+>>> mutant.pm.score()
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+```
+
+Structural coverage, as discussed previously, may not be enough since an execution that produces a wrong output yet is unnoticed by the test suite is counted exactly the same as an execution that produces the right output. Ineffective tests may achieve 100% code coverage, yet inaccurately represent the severe lack of ability of the program to detect bugs:
+
+```python
+def ineffective_test_2():
+    try:
+        execute_the_program_as_a_whole()
+    except:
+        pass
+    assert True
+```
+
+Seeding artificial faults, or mutations, into code and assessing the accuracy of the test suites helps to assess how the test suite would behave with real bugs. The set of valid tokens different from the original that make it past the compilation stage is considered to be its possible set of mutations that represent the probable faults in the program. The mutation score obtained represents the ability of any program analysis tools to prevent faults, and can then be used to judge static test suites, test generators, and execution frameworks. 
+
+The test suite is supposed to only allow the original through, so any mutant that is not detected as faulty represents a bug in the test suite. Coverage is unable to determine the quality of assertion statements, which are an extremely important factor of test suite effectiveness, so injecting artificial faults allows us to better evaluate the quality of such assertions. Fault injection techniques analyze how the frequency of detection will provide us with the actual likelihood of the test suite to uncover bugs, provided we have a list of possible faults. 
+
+However, since generating these faults is a manual process, they will be biased by the preconceptions of the developer. The majority of faults in a program is likely due to small variations in a program’s structure compared to the correct program. For a majority of larger faults composed of multiple smaller faults, a test suite detecting a single smaller fault is very likely to detect the larger fault that contains it. Generating a list of mutants, all possible valid variants of a program differing from the correct implementation by a smaller fault, is essential for generating test suites that apply to and kill each of these variants. For Python programs, we can convert the program into a tree (AST representation), then change small parts of the tree, which can then be passed through the Python interpreter for further processing. Here is an example of an AST:
+
+```python
+Module(
+    body=[
+        FunctionDef(
+            name='triangle',
+            args=arguments(
+                posonlyargs=[],
+                args=[
+                    arg(arg='a'),
+                    arg(arg='b'),
+                    arg(arg='c')],
+                kwonlyargs=[],
+                kw_defaults=[],
+                defaults=[]),
+            body=[
+                If(
+                    test=Compare(
+                        left=Name(id='a', ctx=Load()),
+                        ops=[
+                            Eq()],
+                        comparators=[
+                            Name(id='b', ctx=Load())]),
+                    body=[
+                        If(
+                            test=Compare(
+                                left=Name(id='b', ctx=Load()),
+                                ops=[
+                                    Eq()],
+                                comparators=[
+                                    Name(id='c', ctx=Load())]),
+                            body=[
+                                Return(
+                                    value=Constant(value='Equilateral'))],
+                            orelse=[
+                                Return(
+                                    value=Constant(value='Isosceles'))])],
+                    orelse=[
+                        If(
+                            test=Compare(
+                                left=Name(id='b', ctx=Load()),
+                                ops=[
+                                    Eq()],
+                                comparators=[
+                                    Name(id='c', ctx=Load())]),
+                            body=[
+                                Return(
+                                    value=Constant(value='Isosceles'))],
+                            orelse=[
+                                If(
+                                    test=Compare(
+                                        left=Name(id='a', ctx=Load()),
+                                        ops=[
+                                            Eq()],
+                                        comparators=[
+                                            Name(id='c', ctx=Load())]),
+                                    body=[
+                                        Return(
+                                            value=Constant(value='Isosceles'))],
+                                    orelse=[
+                                        Return(
+                                            value=Constant(value='Scalene'))])])])],
+            decorator_list=[])],
+    type_ignores=[])
+```
+
+A simple way to produce a valid mutated version of a program is through replacing some of its statements with ‘pass’. While MuFunctionAnalyzer utilizes mutations of specific functions, MuProgramAnalyzer is the main class responsible for mutation analysis of the test suite, accepting the name of the module to be tested and its source code. The method ‘getitem’ accepts the test module, fixes the import entries on the test module to correctly point to the mutant module, and passes it to the test runner ‘MutantTestRunner’. The problem lies with equivalent mutants, mutants indistinguishable from the original in terms of semantics, whereas it becomes very difficult to judge the mutation score in their presence. A solution to this is inspecting mutants manually if they’re small enough, or randomly selecting a smaller amount of mutants to manually inspect if there’s a larger scale of them. Chao’s estimator can also be utilized to compute the result of the complete test matrix of each test against each mutant.
 
 ## Reflection
 
@@ -30,6 +152,6 @@ the Python programming language.
 
 ## Use Cases
 
-
+Through utilization of mutations, we can more efficiently test how our existing test suites within the Chasten project will handle possible bugs. We can create a specific test case that can be used to collect sample inputs and methods, processing identified inventory, then trace the grammar and implemented code in order to run tests and generate inputs that can easily identify and eliminate any existing errors within Chasten. Mutation analysis as opposed to code coverage is a great way for us to have full confidence that Chasten will work on any and all possible inputs we may encounter, and allow us to pinpoint where exactly our code needs corrections.
 
 {{< include /_back-blog.qmd >}}

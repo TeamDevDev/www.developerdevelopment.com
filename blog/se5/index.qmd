@@ -1,0 +1,25 @@
+---
+author: [Mordred Boulais, Naboni Thomas, Alish Chhetri]
+title: 'SE5:  Engineering for Equity'
+date: '2023-10-12'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can an organization foster diversity and address bias to ensure that systems are inclusive?</em>
+toc: true
+page-layout: full
+---
+
+
+## Summary
+
+TODO
+
+## Reflection
+
+TODO
+
+## Action Items
+
+TODO
+
+{{< include /_back-blog.qmd >}}

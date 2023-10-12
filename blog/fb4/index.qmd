@@ -83,11 +83,19 @@ We can produce a valid mutated version of a program through replacing some of it
 
 ## Reflection
 
-The Fuzzing Book has a chapter that talks about something called mutation analysis. This is a way to check how good our tests are when we run software. Just because we test a lot doesn't mean the software will always work right. The book gives two examples, named ineffective_test_1 and ineffective_test_2, to show this point.
+The Fuzzing Book has a chapter that talks about something called mutation analysis. This is a way to check how well our tests are when we run software. Just because we test a lot doesn't mean the software will always work right. The book gives two examples, named ineffective_test_1 and ineffective_test_2, to show this point. Mutation testing has its challenges. First, it can be slow and use a lot of computer power because you have to run tests on many modified versions of the software.
+
+Sometimes, the tests might find problems that aren't real issues, which can be confusing. It's also hard to understand what it means when a test doesn't find a problem in one of these modified versions. As the software changes over time, keeping up with mutation testing can be a lot of work. It's also important to remember that mutation testing isn't the only way to test software, and using it alone might miss some problems. Also, just because mutation testing says a lot of the software is tested doesn't mean the software is of good quality.
+
+Some of the changes made during mutation testing are so small that they aren't helpful. In short, while mutation testing can help find gaps in testing, it has its limits and should be used with other testing methods.
 
 In the same chapter, there's also a bit about a triangle program. This program figures out the type of triangle using the lengths of its three sides. To check how good the tests are for this program, they first make the program more standard. They do this by using a method called 'mutation'. After that, they change some parts of the program, like swapping 'return' with 'pass'. If the program works correctly, it should show an error because some triangle types won't be recognized.
 
-The chapter also mentions problems when we purposely add fake errors to test the program. This reminds us to be careful and make sure our tests are both thorough and able to find real mistakes in the software.
+The chapter also mentions problems when we purposely add fake errors to test the program. The triangle program example in the Fuzzing Book's chapter on mutation analysis is a hands-on way to explain the idea of mutation testing. Sometimes, abstract or complex ideas are hard to understand without a clear example. The triangle program does just that – it brings the concept of mutation testing to life. Through it, readers can see that even if you test a lot, some tests might not catch all mistakes.
+
+This is highlighted by the examples ineffective_test_1 and ineffective_test_2. By making small changes to the triangle program, like switching 'return' with 'pass', the book shows how good or bad the tests are. Even if the triangle program seems simple, the lessons from it apply to bigger and more complex software. In short, the triangle program makes the idea of mutation testing easier to understand and shows why it's important in checking software quality. This reminds us to be careful and make
+
+sure our tests are both thorough and able to find real mistakes in the software.
 
 
 ## Use Cases

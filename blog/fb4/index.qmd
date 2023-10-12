@@ -62,7 +62,7 @@ Traceback (most recent call last):
 AssertionError
 ```
 
-Structural coverage, as discussed previously, may not be enough since an execution that produces a wrong output yet is unnoticed by the test suite is counted exactly the same as an execution that produces the right output. Ineffective tests may achieve 100% code coverage, yet inaccurately represent the severe lack of ability of the program to detect bugs:
+Structural coverage, as discussed previously in Chapter 3 of the FuzzingBook on Code Coverage (via https://www.fuzzingbook.org/html/Coverage.html), may not be enough since an execution that produces an incorrect output yet is unnoticed by the test suite reigns the same results of accuracy as an execution that produces the correct output. Ineffective tests may seemingly achieve 100% code coverage, yet inaccurately represent the severe lack of ability of the program to detect bugs. This is because the tests aren't focusing on the true bugs in the code, and instead are focusing on whether or not the function produces an output, correct or not, without reigning an error:
 
 ```python
 def ineffective_test_2():
@@ -73,78 +73,13 @@ def ineffective_test_2():
     assert True
 ```
 
-Seeding artificial faults, or mutations, into code and assessing the accuracy of the test suites helps to assess how the test suite would behave with real bugs. The set of valid tokens different from the original that make it past the compilation stage is considered to be its possible set of mutations that represent the probable faults in the program. The mutation score obtained represents the ability of any program analysis tools to prevent faults, and can then be used to judge static test suites, test generators, and execution frameworks. 
+Seeding artificial faults, or mutations, into code and assessing the accuracy of the test suites helps to assess how the test suite would behave with real bugs. The set of valid tokens, meaning valid program elements of a code, that differ from the original code and make it past the compilation stage is considered to be its possible set of mutations that represent the probable faults in the program. The mutation score obtained represents the ability of any program analysis tools to prevent faults, and can then be used to judge static test suites, test generators, and execution frameworks. 
 
-The test suite is supposed to only allow the original through, so any mutant that is not detected as faulty represents a bug in the test suite. Coverage is unable to determine the quality of assertion statements, which are an extremely important factor of test suite effectiveness, so injecting artificial faults allows us to better evaluate the quality of such assertions. Fault injection techniques analyze how the frequency of detection will provide us with the actual likelihood of the test suite to uncover bugs, provided we have a list of possible faults. 
+Because the test suite is supposed to only allow the original through, and flag any inaccurate changes made to the original code, any mutant that is not detected as faulty represents a bug in the test suite. Since the program has issues detecting a deliberately-placed mutant in the code, it will also have issues detecting bugs that may not be as obvious to the programmer. Coverage is unable to determine the quality of assertion statements, which are an extremely important factor of test suite effectiveness, so injecting artificial faults allows us to better evaluate the quality of such assertions. Fault injection techniques analyze how the frequency of detection will provide us with the actual likelihood of the test suite to uncover bugs, provided we have a list of possible faults. 
 
-However, since generating these faults is a manual process, they will be biased by the preconceptions of the developer. The majority of faults in a program is likely due to small variations in a program’s structure compared to the correct program. For a majority of larger faults composed of multiple smaller faults, a test suite detecting a single smaller fault is very likely to detect the larger fault that contains it. Generating a list of mutants, all possible valid variants of a program differing from the correct implementation by a smaller fault, is essential for generating test suites that apply to and kill each of these variants. For Python programs, we can convert the program into a tree (AST representation), then change small parts of the tree, which can then be passed through the Python interpreter for further processing. Here is an example of an AST:
+However, since generating these faults is a manual process, they will be biased by the preconceptions of the developer. The majority of faults in a program is likely due to small variations in a program’s structure compared to the correct program. For a majority of larger faults composed of multiple smaller faults, a test suite detecting a single smaller fault is very likely to detect the larger fault that contains it. Generating a list of mutants, all possible valid variants of a program differing from the correct implementation by a smaller fault, is essential for generating test suites that apply to and kill each of these variants. For Python programs, we can convert the program into a tree (AST representation, or Abstract Syntax Tree), then change small parts of the tree, which can then be passed through the Python interpreter for further processing.
 
-```python
-Module(
-    body=[
-        FunctionDef(
-            name='triangle',
-            args=arguments(
-                posonlyargs=[],
-                args=[
-                    arg(arg='a'),
-                    arg(arg='b'),
-                    arg(arg='c')],
-                kwonlyargs=[],
-                kw_defaults=[],
-                defaults=[]),
-            body=[
-                If(
-                    test=Compare(
-                        left=Name(id='a', ctx=Load()),
-                        ops=[
-                            Eq()],
-                        comparators=[
-                            Name(id='b', ctx=Load())]),
-                    body=[
-                        If(
-                            test=Compare(
-                                left=Name(id='b', ctx=Load()),
-                                ops=[
-                                    Eq()],
-                                comparators=[
-                                    Name(id='c', ctx=Load())]),
-                            body=[
-                                Return(
-                                    value=Constant(value='Equilateral'))],
-                            orelse=[
-                                Return(
-                                    value=Constant(value='Isosceles'))])],
-                    orelse=[
-                        If(
-                            test=Compare(
-                                left=Name(id='b', ctx=Load()),
-                                ops=[
-                                    Eq()],
-                                comparators=[
-                                    Name(id='c', ctx=Load())]),
-                            body=[
-                                Return(
-                                    value=Constant(value='Isosceles'))],
-                            orelse=[
-                                If(
-                                    test=Compare(
-                                        left=Name(id='a', ctx=Load()),
-                                        ops=[
-                                            Eq()],
-                                        comparators=[
-                                            Name(id='c', ctx=Load())]),
-                                    body=[
-                                        Return(
-                                            value=Constant(value='Isosceles'))],
-                                    orelse=[
-                                        Return(
-                                            value=Constant(value='Scalene'))])])])],
-            decorator_list=[])],
-    type_ignores=[])
-```
-
-A simple way to produce a valid mutated version of a program is through replacing some of its statements with ‘pass’. While MuFunctionAnalyzer utilizes mutations of specific functions, MuProgramAnalyzer is the main class responsible for mutation analysis of the test suite, accepting the name of the module to be tested and its source code. The method ‘getitem’ accepts the test module, fixes the import entries on the test module to correctly point to the mutant module, and passes it to the test runner ‘MutantTestRunner’. The problem lies with equivalent mutants, mutants indistinguishable from the original in terms of semantics, whereas it becomes very difficult to judge the mutation score in their presence. A solution to this is inspecting mutants manually if they’re small enough, or randomly selecting a smaller amount of mutants to manually inspect if there’s a larger scale of them. Chao’s estimator can also be utilized to compute the result of the complete test matrix of each test against each mutant.
+A simple way to produce a valid mutated version of a program is through replacing some of its statements with ‘pass’. While MuFunctionAnalyzer utilizes mutations of specific functions, MuProgramAnalyzer is the main class responsible for mutation analysis of the test suite, accepting the name of the module to be tested and its source code. The method ‘getitem’ accepts the test module, fixes the import entries on the test module to correctly point to the mutant module, and passes it to the test runner ‘MutantTestRunner’. The problem lies with equivalent mutants, mutants indistinguishable from the original in terms of semantics, whereas it becomes very difficult to judge the mutation score in their presence. A solution to this is inspecting mutants manually if they’re small enough, or randomly selecting a smaller amount of mutants to manually inspect if there’s a larger scale of them. Chao’s estimator can also be utilized to compute the result of the complete test matrix of each test against each mutant, a formula curated directly to estimate the number of true, inequivalent mutants, where we can then determine the estimated number of equivalent mutants present.
 
 ## Reflection
 
@@ -157,6 +92,8 @@ The chapter also mentions problems when we purposely add fake errors to test the
 
 ## Use Cases
 
-Through utilization of mutations, we can more efficiently test how our existing test suites within the Chasten project will handle possible bugs. We can create a specific test case that can be used to collect sample inputs and methods, processing identified inventory, then trace the grammar and implemented code in order to run tests and generate inputs that can easily identify and eliminate any existing errors within Chasten. Mutation analysis as opposed to code coverage is a great way for us to have full confidence that Chasten will work on any and all possible inputs we may encounter, and allow us to pinpoint where exactly our code needs corrections.
+Through utilization of mutations, we can more efficiently test how our existing test suites within the Chasten project (via https://github.com/AstuteSource/chasten) will handle possible bugs. We can create a specific test case that can be used to collect sample inputs and methods of collecting data to produce an output, then trace the grammar and implemented code in order to run tests and generate inputs that can easily identify and eliminate any existing errors within Chasten. Mutation analysis as opposed to code coverage is a great way for us to have full confidence that Chasten will work on any and all possible inputs we may encounter, and allow us to pinpoint where exactly our test suites needs corrections by determining which lines of code can accurately and inaccurately determine possible bugs within the code.
+
+One downside of mutation analysis, however, is that compared to the original not all mutations will be faulty. 'Equivalent mutants' are non-faulty mutants that are indistinguishable from the original as it may remove an assignment that's inconsequential to the overall code. With the existence of these equivalent mutants, it will be difficult to reign an accurate mutation score unless they are identified beforehand. As discussed above, we can utilize the formula provided through Chao's estimator to create an 'immortal mutant estimate' and approach a true estimate of the equivalent mutant level.
 
 {{< include /_back-blog.qmd >}}

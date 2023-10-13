@@ -198,12 +198,12 @@ lines of code can accurately and inaccurately determine possible bugs within the
 code.
 
 One downside of mutation analysis, however, is that compared to the original not
-all mutations will be faulty. 'Equivalent mutants' are non-faulty mutants that
+all mutations will be faulty. "Equivalent mutants" are non-faulty mutants that
 are indistinguishable from the original as it may remove an assignment that's
 inconsequential to the overall code. With the existence of these equivalent
 mutants, it will be difficult to reign an accurate mutation score unless they
 are identified beforehand. As discussed above, we can utilize the formula
-provided through Chao's estimator to create an 'immortal mutant estimate' and
+provided through Chao's estimator to create an "immortal mutant estimate" and
 approach a true estimate of the equivalent mutant level.
 
 {{< include /_back-blog.qmd >}}

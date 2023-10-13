@@ -44,7 +44,7 @@ Detected gcd_1 <class 'UnboundLocalError'> local variable 'c' referenced before 
 Detected gcd_2 <class 'AssertionError'> Mirror
 ```
 
-And `MuProgramAnalyzer`:
+And here is the `MuProgramAnalyzer` that runs tests for an entire program:
 
 ```python
 class TestGCD(unittest.TestCase):

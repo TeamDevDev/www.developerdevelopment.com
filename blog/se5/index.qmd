@@ -14,13 +14,36 @@ page-layout: full
 This blog post discusses the
 ["Engineering for Equity"](https://abseil.io/resources/swe-book/html/ch03.html)
 chapter in the
-[Software Engineering at Google book](https://abseil.io/resources/swe-book)! This
+[Software Engineering at Google book](https://abseil.io/resources/swe-book). This
 article's goal is to make a point of the engineer's responsibility in ensuring
 that their project meets the needs of the largest possible audience or userbase.
 
 ## Summary
 
-TODO
+This chapter goes over where Google failed to reach the ideal standard for
+inclusivity and how this can be made up for in the future, as a company&mdash;wide
+effort. The demographics of the software engineers at Google do not reflect
+those that use their products, and as such their biases were incorporated into
+their projects, such as facial recognition software.
+
+In order to remedy this issue, there are several proposed steps or areas of
+focus to take into consideration. These are outlined in the
+**Value Versus Outcomes** section, as summarised and paraphrased below.
+
+1. Who are the ones building the product? Does this represent those the product
+is being built for? If not, how is that being taken into account?
+
+2. Assume everyone will use it, and use this to take into account the one that
+will struggle the most. Design with that person or demographic in mind, in order
+to ensure that accessibility is built in.
+
+3. Building on the previous point; does the data show that your efforts
+succeeded? If not, where was the failure point? How can this be fixed and then
+prevented in the future?
+
+These are an amalgamation of the five points given in the
+**Value Versus Outcomes** section, and how it asks software engineers to create
+solutions instead of being part of the problem in order to ensure equity.
 
 ## Reflection
 

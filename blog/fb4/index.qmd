@@ -1,0 +1,210 @@
+---
+author: [Audrey Blarr, Jason Gyamfi]
+title: 'Mutation Analysis'
+date: '2023-10-10'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can mutations enable us to find test suite weaknesses?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This is our fourth post about the [The Fuzzing
+Book](https://www.fuzzingbook.org/)! The goal of this post is to relate the
+material from the book to our progress on our
+[Chasten](https://github.com/AstuteSource/chasten) tool, with the hope that it
+will provide valuable lessons on how we approach designing and developing our
+own software. Part of this is guidance on automating tests, and how that may
+look in different coding languages &mdash; although the article's main focus is
+the Python programming language.
+
+## Summary
+
+Mutations, or artificial faults, can be injected into code to check whether or
+not a test suite will pick up on specific bugs. For a specific programs there
+are two highlighted methods of running mutation analysis: `MuFunctionAnalyzer`
+(implementing mutation analysis for individual functions) and
+`MuProgramAnalyzer` (implementing mutation analysis for standalone programs
+containing test suites). Here is an example of `MuFunctionAnalyzer` at work:
+
+```python
+for mutant in MuFunctionAnalyzer(gcd, log=True):
+>>>     with mutant:
+>>>         assert gcd(1, 0) == 1, "Minimal"
+>>>         assert gcd(0, 1) == 1, "Mirror"
+>>> mutant.pm.score()
+->  gcd_1
+<-  gcd_1
+Detected gcd_1 <class 'UnboundLocalError'> local variable 'c' referenced before assignment
+
+->  gcd_2
+<-  gcd_2
+Detected gcd_2 <class 'AssertionError'> Mirror
+```
+
+And here is the `MuProgramAnalyzer` that runs tests for an entire program:
+
+```python
+class TestGCD(unittest.TestCase):
+>>>     def test_simple(self):
+>>>         assert cfg.gcd(1, 0) == 1
+>>>
+>>>     def test_mirror(self):
+>>>         assert cfg.gcd(0, 1) == 1
+>>> for mutant in MuProgramAnalyzer('gcd', gcd_src):
+>>>     mutant[test_module].runTest('TestGCD')
+>>> mutant.pm.score()
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+```
+
+Structural coverage, as discussed previously in the ["Code
+Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter of [The
+Fuzzing Book](https://www.fuzzingbook.org/), may not be enough since an
+execution that produces an incorrect output yet is unnoticed by the test suite
+reigns the same results of accuracy as an execution that produces the correct
+output. Ineffective tests may seemingly achieve 100% code coverage, yet
+inaccurately represent the severe lack of ability of the program to detect bugs.
+This is because the tests aren't focusing on the true bugs in the code, and
+instead are focusing on whether or not the function produces an output, correct
+or not, without reigning an error:
+
+```python
+def ineffective_test_2():
+    try:
+        execute_the_program_as_a_whole()
+    except:
+        pass
+    assert True
+```
+
+Seeding artificial faults, or mutations, into code and assessing the accuracy of
+the test suites helps to assess how the test suite would behave with real bugs.
+The set of valid tokens, meaning valid program elements of a code, that differ
+from the original code and make it past the compilation stage are considered its
+possible set of mutations that represent any probable faults in the program. The
+mutation score obtained represents the ability of any program analysis tools to
+prevent faults, and can then be used to judge static test suites, test
+generators, and execution frameworks.
+
+Because the test suite is supposed to only allow the original through, and flag
+any inaccurate changes made to the original code, any mutant that is not
+detected as faulty represents a bug in the test suite. Since the program has
+issues detecting a deliberately-placed mutant in the code, it will also have
+issues detecting bugs that may not be as obvious to the programmer. Coverage is
+unable to determine the quality of assertion statements, which are an extremely
+important factor of test suite effectiveness, so injecting artificial faults
+allows us to better evaluate the quality of such assertions. Fault injection
+techniques analyze how the frequency of detection will provide us with the
+actual likelihood of the test suite to uncover bugs, provided we have a list of
+possible faults.
+
+However, since generating these faults is a manual process, they will be biased
+by the preconceptions of the developer. The majority of faults in a program is
+likely due to small variations in a program’s structure compared to the correct
+program. For a majority of larger faults composed of multiple smaller faults, a
+test suite detecting a single smaller fault is very likely to detect the larger
+fault that contains it. Generating a list of mutants, all possible valid
+variants of a program differing from the correct implementation by a smaller
+fault, is essential for generating test suites that apply to and kill each of
+these variants. For Python programs, we can convert the program into a tree (AST
+representation, or Abstract Syntax Tree), then change small parts of the tree,
+which can then be passed through the Python interpreter for further processing.
+
+We can produce a valid mutated version of a program through replacing some of
+its `try`, `except` statements with the key word `pass`. While
+MuFunctionAnalyzer utilizes mutations of specific functions, MuProgramAnalyzer
+is the main class responsible for mutation analysis of the test suite, accepting
+the name of the module to be tested and its source code. The method `getitem`
+accepts the test module, fixes the import entries on the test module to
+correctly point to the mutant module, and passes it to the test runner
+`MutantTestRunner`. The problem lies with equivalent mutants, mutants
+indistinguishable from the original in terms of semantics, whereas it becomes
+very difficult to judge the mutation score in their presence. A solution to this
+is inspecting mutants manually if they’re small enough, or randomly selecting a
+smaller amount of mutants to manually inspect if there’s a larger scale of them.
+Chao’s estimator can also be utilized to compute the result of the complete test
+matrix of each test against each mutant, a formula curated directly to estimate
+the number of true, inequivalent mutants, where we can then determine the
+estimated number of equivalent mutants present.
+
+## Reflection
+
+The Fuzzing Book has a chapter that talks about something called mutation
+analysis. This is a way to check how well our tests are when we run software.
+Just because we test a lot doesn't mean the software will always work right. The
+book gives two examples, named `ineffective_test_1` and `ineffective_test_2`, to
+show this point. Mutation testing has its challenges. First, it can be slow and
+use a lot of computer power because you have to run tests on many modified
+versions of the software.
+
+Sometimes, the tests might find problems that aren't real issues, which can be
+confusing. It's also hard to understand what it means when a test doesn't find a
+problem in one of these modified versions. As the software changes over time,
+keeping up with mutation testing can be a lot of work. It's also important to
+remember that mutation testing isn't the only way to test software, and using it
+alone might miss some problems. Also, just because mutation testing says a lot
+of the software is tested doesn't mean the software is of good quality.
+
+Some of the changes made during mutation testing are so small that they aren't
+helpful. In short, while mutation testing can help find gaps in testing, it has
+its limits and should be used with other testing methods.
+
+In the same chapter, there's also a bit about a triangle program. This program
+figures out the type of triangle using the lengths of its three sides. To check
+how good the tests are for this program, they first make the program more
+standard. They do this by using a method called `mutation`. After that, they
+change some parts of the program, like swapping `return` with `pass`. If the
+program works correctly, it should show an error because some triangle types
+won't be recognized.
+
+The chapter also mentions problems when we purposely add fake errors to test the
+program. The triangle program example in the [The Fuzzing
+Book](https://www.fuzzingbook.org/)'s chapter on mutation analysis is a hands-on
+way to explain the idea of mutation testing. Sometimes, abstract or complex
+ideas are hard to understand without a clear example. The triangle program does
+just that --- it brings the concept of mutation testing to life. Through it,
+readers can see that even if you test a lot, some tests might not catch all
+mistakes.
+
+This is highlighted by the examples `ineffective_test_1` and
+`ineffective_test_2`. By making small changes to the triangle program, like
+switching `return` with `pass`, the book shows how good or bad the tests are.
+Even if the triangle program seems simple, the lessons from it apply to bigger
+and more complex software. In short, the triangle program makes the idea of
+mutation testing easier to understand and shows why it's important in checking
+software quality. This reminds us to be careful and make sure our tests are both
+thorough and able to find real mistakes in the software.
+
+## Use Cases
+
+Through utilization of mutations, we can more efficiently test how our existing
+test suites within the [Chasten
+project](https://github.com/AstuteSource/chasten) will handle possible bugs. We
+can create a specific test case that can be used to collect sample inputs and
+methods of collecting data to produce an output, then trace the grammar and
+implemented code in order to run tests and generate inputs that can easily
+identify and eliminate any existing errors within Chasten. Mutation analysis as
+opposed to code coverage is a great way for us to have full confidence that
+Chasten will work on any and all possible inputs we may encounter, and allow us
+to pinpoint where exactly our test suites needs corrections by determining which
+lines of code can accurately and inaccurately determine possible bugs within the
+code.
+
+One downside of mutation analysis, however, is that compared to the original not
+all mutations will be faulty. "Equivalent mutants" are non-faulty mutants that
+are indistinguishable from the original as it may remove an assignment that's
+inconsequential to the overall code. With the existence of these equivalent
+mutants, it will be difficult to reign an accurate mutation score unless they
+are identified beforehand. As discussed earlier in this article, we can utilize
+the formula provided through Chao's estimator to create an "immortal mutant
+estimate" and approach a true estimate of the equivalent mutant level.
+
+{{< include /_back-blog.qmd >}}

@@ -119,21 +119,21 @@ representation, or Abstract Syntax Tree), then change small parts of the tree,
 which can then be passed through the Python interpreter for further processing.
 
 We can produce a valid mutated version of a program through replacing some of
-its `try`, `except` statements with the key word `pass`. While MuFunctionAnalyzer
-utilizes mutations of specific functions, MuProgramAnalyzer is the main class
-responsible for mutation analysis of the test suite, accepting the name of the
-module to be tested and its source code. The method `getitem` accepts the test
-module, fixes the import entries on the test module to correctly point to the
-mutant module, and passes it to the test runner ‘MutantTestRunner’. The problem
-lies with equivalent mutants, mutants indistinguishable from the original in
-terms of semantics, whereas it becomes very difficult to judge the mutation
-score in their presence. A solution to this is inspecting mutants manually if
-they’re small enough, or randomly selecting a smaller amount of mutants to
-manually inspect if there’s a larger scale of them. Chao’s estimator can also be
-utilized to compute the result of the complete test matrix of each test against
-each mutant, a formula curated directly to estimate the number of true,
-inequivalent mutants, where we can then determine the estimated number of
-equivalent mutants present.
+its `try`, `except` statements with the key word `pass`. While
+MuFunctionAnalyzer utilizes mutations of specific functions, MuProgramAnalyzer
+is the main class responsible for mutation analysis of the test suite, accepting
+the name of the module to be tested and its source code. The method `getitem`
+accepts the test module, fixes the import entries on the test module to
+correctly point to the mutant module, and passes it to the test runner
+`MutantTestRunner`. The problem lies with equivalent mutants, mutants
+indistinguishable from the original in terms of semantics, whereas it becomes
+very difficult to judge the mutation score in their presence. A solution to this
+is inspecting mutants manually if they’re small enough, or randomly selecting a
+smaller amount of mutants to manually inspect if there’s a larger scale of them.
+Chao’s estimator can also be utilized to compute the result of the complete test
+matrix of each test against each mutant, a formula curated directly to estimate
+the number of true, inequivalent mutants, where we can then determine the
+estimated number of equivalent mutants present.
 
 ## Reflection
 
@@ -160,8 +160,8 @@ its limits and should be used with other testing methods.
 In the same chapter, there's also a bit about a triangle program. This program
 figures out the type of triangle using the lengths of its three sides. To check
 how good the tests are for this program, they first make the program more
-standard. They do this by using a method called 'mutation'. After that, they
-change some parts of the program, like swapping 'return' with 'pass'. If the
+standard. They do this by using a method called `mutation`. After that, they
+change some parts of the program, like swapping `return` with `pass`. If the
 program works correctly, it should show an error because some triangle types
 won't be recognized.
 

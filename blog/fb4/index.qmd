@@ -23,11 +23,11 @@ the Python programming language.
 ## Summary
 
 Mutations, or artificial faults, can be injected into code to check whether or
-not a test suite will pick up on specific bugs. On subject programs there are
-two highlighted methods of running mutation analysis; MuFunctionAnalyzer
-(implementing mutation analysis for individual functions) and MuProgramAnalyzer
-(implementing mutation analysis for standalone programs containing test suites).
-Here is an example of MuFunctionAnalyzer at work:
+not a test suite will pick up on specific bugs. For a specific programs there
+are two highlighted methods of running mutation analysis: `MuFunctionAnalyzer`
+(implementing mutation analysis for individual functions) and
+`MuProgramAnalyzer` (implementing mutation analysis for standalone programs
+containing test suites). Here is an example of `MuFunctionAnalyzer` at work:
 
 ```python
 for mutant in MuFunctionAnalyzer(gcd, log=True):

@@ -166,12 +166,13 @@ program works correctly, it should show an error because some triangle types
 won't be recognized.
 
 The chapter also mentions problems when we purposely add fake errors to test the
-program. The triangle program example in the Fuzzing Book's chapter on mutation
-analysis is a hands-on way to explain the idea of mutation testing. Sometimes,
-abstract or complex ideas are hard to understand without a clear example. The
-triangle program does just that --- it brings the concept of mutation testing to
-life. Through it, readers can see that even if you test a lot, some tests might
-not catch all mistakes.
+program. The triangle program example in the [The Fuzzing
+Book](https://www.fuzzingbook.org/)'s chapter on mutation analysis is a hands-on
+way to explain the idea of mutation testing. Sometimes, abstract or complex
+ideas are hard to understand without a clear example. The triangle program does
+just that --- it brings the concept of mutation testing to life. Through it,
+readers can see that even if you test a lot, some tests might not catch all
+mistakes.
 
 This is highlighted by the examples `ineffective_test_1` and
 `ineffective_test_2`. By making small changes to the triangle program, like

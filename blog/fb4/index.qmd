@@ -119,10 +119,10 @@ representation, or Abstract Syntax Tree), then change small parts of the tree,
 which can then be passed through the Python interpreter for further processing.
 
 We can produce a valid mutated version of a program through replacing some of
-its 'try, except' statements with the key word ‘pass’. While MuFunctionAnalyzer
+its `try`, `except` statements with the key word `pass`. While MuFunctionAnalyzer
 utilizes mutations of specific functions, MuProgramAnalyzer is the main class
 responsible for mutation analysis of the test suite, accepting the name of the
-module to be tested and its source code. The method ‘getitem’ accepts the test
+module to be tested and its source code. The method `getitem` accepts the test
 module, fixes the import entries on the test module to correctly point to the
 mutant module, and passes it to the test runner ‘MutantTestRunner’. The problem
 lies with equivalent mutants, mutants indistinguishable from the original in
@@ -140,7 +140,7 @@ equivalent mutants present.
 The Fuzzing Book has a chapter that talks about something called mutation
 analysis. This is a way to check how well our tests are when we run software.
 Just because we test a lot doesn't mean the software will always work right. The
-book gives two examples, named ineffective_test_1 and ineffective_test_2, to
+book gives two examples, named `ineffective_test_1` and `ineffective_test_2`, to
 show this point. Mutation testing has its challenges. First, it can be slow and
 use a lot of computer power because you have to run tests on many modified
 versions of the software.
@@ -173,21 +173,21 @@ triangle program does just that --- it brings the concept of mutation testing to
 life. Through it, readers can see that even if you test a lot, some tests might
 not catch all mistakes.
 
-This is highlighted by the examples ineffective_test_1 and ineffective_test_2.
-By making small changes to the triangle program, like switching 'return' with
-'pass', the book shows how good or bad the tests are. Even if the triangle
-program seems simple, the lessons from it apply to bigger and more complex
-software. In short, the triangle program makes the idea of mutation testing
-easier to understand and shows why it's important in checking software quality.
-This reminds us to be careful and make sure our tests are both thorough and able
-to find real mistakes in the software.
+This is highlighted by the examples `ineffective_test_1` and
+`ineffective_test_2`. By making small changes to the triangle program, like
+switching `return` with `pass`, the book shows how good or bad the tests are.
+Even if the triangle program seems simple, the lessons from it apply to bigger
+and more complex software. In short, the triangle program makes the idea of
+mutation testing easier to understand and shows why it's important in checking
+software quality. This reminds us to be careful and make sure our tests are both
+thorough and able to find real mistakes in the software.
 
 ## Use Cases
 
 Through utilization of mutations, we can more efficiently test how our existing
-test suites within the Chasten project (via
-https://github.com/AstuteSource/chasten) will handle possible bugs. We can
-create a specific test case that can be used to collect sample inputs and
+test suites within the [Chasten
+project](https://github.com/AstuteSource/chasten) will handle possible bugs. We
+can create a specific test case that can be used to collect sample inputs and
 methods of collecting data to produce an output, then trace the grammar and
 implemented code in order to run tests and generate inputs that can easily
 identify and eliminate any existing errors within Chasten. Mutation analysis as

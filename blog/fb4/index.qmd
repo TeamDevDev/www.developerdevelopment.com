@@ -44,13 +44,13 @@ Detected gcd_1 <class 'UnboundLocalError'> local variable 'c' referenced before 
 Detected gcd_2 <class 'AssertionError'> Mirror
 ```
 
-And MuProgramAnalyzer:
+And `MuProgramAnalyzer`:
 
 ```python
 class TestGCD(unittest.TestCase):
 >>>     def test_simple(self):
 >>>         assert cfg.gcd(1, 0) == 1
->>> 
+>>>
 >>>     def test_mirror(self):
 >>>         assert cfg.gcd(0, 1) == 1
 >>> for mutant in MuProgramAnalyzer('gcd', gcd_src):
@@ -65,15 +65,16 @@ Traceback (most recent call last):
 AssertionError
 ```
 
-Structural coverage, as discussed previously in Chapter 3 of the FuzzingBook on
-Code Coverage (via https://www.fuzzingbook.org/html/Coverage.html), may not be
-enough since an execution that produces an incorrect output yet is unnoticed by
-the test suite reigns the same results of accuracy as an execution that produces
-the correct output. Ineffective tests may seemingly achieve 100% code coverage,
-yet inaccurately represent the severe lack of ability of the program to detect
-bugs. This is because the tests aren't focusing on the true bugs in the code,
-and instead are focusing on whether or not the function produces an output,
-correct or not, without reigning an error:
+Structural coverage, as discussed previously in the ["Code
+Coverage"](https://www.fuzzingbook.org/html/Coverage.html) chapter of [The
+Fuzzing Book](https://www.fuzzingbook.org/), may not be enough since an
+execution that produces an incorrect output yet is unnoticed by the test suite
+reigns the same results of accuracy as an execution that produces the correct
+output. Ineffective tests may seemingly achieve 100% code coverage, yet
+inaccurately represent the severe lack of ability of the program to detect bugs.
+This is because the tests aren't focusing on the true bugs in the code, and
+instead are focusing on whether or not the function produces an output, correct
+or not, without reigning an error:
 
 ```python
 def ineffective_test_2():

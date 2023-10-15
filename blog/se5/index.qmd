@@ -27,23 +27,23 @@ those that use their products, and as such their biases were incorporated into
 their projects, such as facial recognition software.
 
 In order to remedy this issue, there are several proposed steps or areas of
-focus to take into consideration. These are outlined in the
-**Value Versus Outcomes** section, as summarised and paraphrased below.
+focus to take into consideration. These are outlined in the **Value Versus
+Outcomes** section, as summarised and paraphrased below.
 
 1. Who are the ones building the product? Does this represent those the product
-is being built for? If not, how is that being taken into account?
+   is being built for? If not, how is that being taken into account?
 
 2. Assume everyone will use it, and use this to take into account the one that
-will struggle the most. Design with that person or demographic in mind, in order
-to ensure that accessibility is built in.
+   will struggle the most. Design with that person or demographic in mind, in
+   order to ensure that accessibility is built in.
 
 3. Building on the previous point; does the data show that your efforts
-succeeded? If not, where was the failure point? How can this be fixed and then
-prevented in the future?
+   succeeded? If not, where was the failure point? How can this be fixed and
+   then prevented in the future?
 
-These are an amalgamation of the five points given in the
-**Value Versus Outcomes** section, and how it asks software engineers to create
-solutions instead of being part of the problem in order to ensure equity.
+These are an amalgamation of the five points given in the **Value Versus
+Outcomes** section, and how it asks software engineers to create solutions
+instead of being part of the problem in order to ensure equity.
 
 ## Reflection
 

@@ -19,7 +19,128 @@ Book](https://www.fuzzingbook.org/). This chapter builds on the content from the
 
 ## Summary
 
+**Mutation-based fuzzing** is when we slightly modify valid inputs of a
+functional piece of code we are trying to test in order to see how the code
+handles it. This increases the possibility of having a valid input, as opposed
+to traditional fuzzing, which supplies inputs as completely randomized.
+Mutation-based fuzzing may only flip a bit or randomize a single byte of an
+input, hence the use of the word *mutation*. While this may reduce the scope
+of your testing, it helps get rid of some of the redundant testing that happens
+when running a traditional fuzzer, given that the majority of
+traditionally-fuzzed inputs will be invalid regardless.
 
+As an example, this article walks us through how to create a mutation-based
+fuzzer for the input of a URL parser. First, we create three functions that
+'mutate' the input, which slightly modifies the input in some way. We'll create:
+
+1. `delete_random_character(s: str) -> str`: Randomly delete a character from `s`
+   and retunr the mutated `s`.
+2. `insert_random_character(s: str) -> str`: Randomly insert a character into `s`
+   and return the mutated `s`.
+3. `flip_random_character(s):`: Randomly flip one bit in the ASCII representation
+   of one of the bytes in `s` and return the mutated `s`. *(an interesting one,
+   although, organically, it's virtually impossible with today's error
+   correction techniques!)*
+
+```{python}
+import random
+from typing import Tuple, List, Callable, Set, Any
+from urllib.parse import urlparse
+
+
+def delete_random_character(s: str) -> str:
+    if s == "":
+        return s
+    pos = random.randint(0, len(s) - 1)
+    return s[:pos] + s[pos + 1:]
+
+
+def insert_random_character(s: str) -> str:
+    pos = random.randint(0, len(s))
+    random_character = chr(random.randrange(32, 127))
+    return s[:pos] + random_character + s[pos:]
+
+
+def flip_random_character(s: str) -> str:
+    if s == "":
+        return s
+    pos = random.randint(0, len(s) - 1)
+    c = s[pos]
+    bit = 1 << random.randint(0, 6)
+    new_c = chr(ord(c) ^ bit)
+    return s[:pos] + new_c + s[pos + 1:]
+```
+
+We can then create a function `mutate(s: str) -> str` which wraps the functions
+above:
+
+```{python}
+def mutate(s: str) -> str:
+    mutators = [
+        delete_random_character,
+        insert_random_character,
+        flip_random_character
+    ]
+    mutator = random.choice(mutators)
+    return mutator(s)
+```
+
+Now, let's create a function to mutate an input `n` number of times:
+
+```{python}
+def multi_mutate(s: str, n: int) -> str:
+    res = s
+    for i in range(n):
+        res = mutate(res)
+    return res
+
+print("Example:")
+print(f"input: 'Testing 123!!', output: {multi_mutate('Testing 123!!')}")
+```
+
+Now we have everything we need to test a basic function with our mutation-based
+fuzzing strategy we just created! As done in the Fuzzing Book, we'll test the
+function `http_program(url: str) -> bool`:
+
+```{python}
+def http_program(url: str) -> bool:
+    supported_schemes = ["http", "https"]
+    result = urlparse(url)
+    if result.scheme not in supported_schemes:
+        raise ValueError("Scheme must be one of " + 
+                         repr(supported_schemes))
+    if result.netloc == '':
+        raise ValueError("Host must be non-empty")
+    return True
+
+
+# test `http_program()`
+seed_input = "http://www.google.com/search?q=fuzzing"
+valid_inputs = set()
+trials = 20
+n_mutations = 15
+
+for i in range(trials):
+    input = multi_mutate(seed_input, n_mutations)
+    try:
+        result = http_program(input)
+        # input is valid, we can add it
+        # to the set of valid inputs
+        valid_inputs.add(input)
+    except ValueError:
+        # input is invalid, do not add it
+        # to the set of valid inputs
+        pass
+
+
+print("Output:")
+print(f"{len(valid_inputs) / trials * 100}% of the trials were valid inputs.")
+```
+
+This fuzzer poses as a realistic way to simulate things such as typos or data
+corruption of URLs. Because of its close alignment with valid inputs, this
+method can give us deeper insight into how a piece of code is handles its input
+than traditional fuzzers.
 
 ## Action Items
 

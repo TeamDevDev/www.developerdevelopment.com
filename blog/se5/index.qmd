@@ -74,7 +74,7 @@ current class project may be limited, the principles discussed remain
 significant in our preparation for the workforce. In the context of Chasten's
 future users, especially as Allegheny College students, we should place a strong
 emphasis on making our code highly readable, recalling our own initial
-challenges in understanding the codebase. Furthermore, we can leverage our
+challenges in understanding the code base. Furthermore, we can leverage our
 experiences in creating the program to assist future students in improving it,
 ensuring its accessibility and usability for a wider range of users.
 

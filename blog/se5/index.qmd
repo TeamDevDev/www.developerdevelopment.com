@@ -30,8 +30,8 @@ focus, for us to take into consideration. These are outlined in the **Value
 Versus Outcomes** section, as summarised and paraphrased in the following
 enumerated list:
 
-1. Who are the ones building the product? Does this represent those the product
-   is being built for? If not, how is that being taken into account?
+1. Who are the people building the product? Do these people represent those for
+   whom the product is being built? If not, how is that being taken into account?
 
 2. Assume everyone will use it, and use this to take into account the one that
    will struggle the most. Design with that person or demographic in mind, in

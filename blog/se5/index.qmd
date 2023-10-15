@@ -1,27 +1,27 @@
 ---
 author: [Mordred Boulais, Naboni Thomas, Alish Chhetri]
-title: 'SE5:  Engineering for Equity'
+title: 'Engineering for Equity'
 date: '2023-10-12'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>How can an organization foster diversity and address bias to ensure that systems are inclusive?</em>
+description: <em>How can we foster diversity and address bias to ensure that systems are inclusive?</em>
 toc: true
 page-layout: full
 ---
 
 ## Overview
 
-This blog post discusses the
-["Engineering for Equity"](https://abseil.io/resources/swe-book/html/ch03.html)
-chapter in the
-[Software Engineering at Google book](https://abseil.io/resources/swe-book). This
-article's goal is to make a point of the engineer's responsibility in ensuring
-that their project meets the needs of the largest possible audience or userbase.
+This blog post discusses the ["Engineering for
+Equity"](https://abseil.io/resources/swe-book/html/ch03.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book).
+This article's goal is to make a point of the engineer's responsibility in
+ensuring that their project meets the needs of the largest possible audience or
+userbase.
 
 ## Summary
 
 This chapter goes over where Google failed to reach the ideal standard for
-inclusivity and how this can be made up for in the future, as a company&mdash;wide
+inclusivity and how this can be made up for in the future, as a company-wide
 effort. The demographics of the software engineers at Google do not reflect
 those that use their products, and as such their biases were incorporated into
 their projects, such as facial recognition software.

@@ -1,5 +1,5 @@
 ---
-author: [Mordred Boulais, Naboni Thomas, Alish Chhetri]
+author: [Mordred Boulais, Naboni Thomas, Alish Chhetri, Gregory M. Kapfhammer]
 title: 'Engineering for Equity'
 date: '2023-10-12'
 date-format: long
@@ -25,9 +25,10 @@ effort. The demographics of the software engineers at Google do not reflect
 those that use their products, and as such their biases were incorporated into
 their projects, such as facial recognition software.
 
-In order to remedy this issue, there are several proposed steps or areas of
-focus to take into consideration. These are outlined in the **Value Versus
-Outcomes** section, as summarised and paraphrased below.
+In order to remedy this issue, there are several proposed steps, or areas of
+focus, for us to take into consideration. These are outlined in the **Value
+Versus Outcomes** section, as summarised and paraphrased in the following
+enumerated list:
 
 1. Who are the ones building the product? Does this represent those the product
    is being built for? If not, how is that being taken into account?

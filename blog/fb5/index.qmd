@@ -95,7 +95,7 @@ def multi_mutate(s: str, n: int) -> str:
     return res
 
 print("Example:")
-print(f"input: 'Testing 123!!', output: {multi_mutate('Testing 123!!')}")
+print(f"input: 'Testing 123!!', output: {multi_mutate('Testing 123!!',3)}")
 ```
 
 Now we have everything we need to test a basic function with our mutation-based
@@ -141,6 +141,12 @@ This fuzzer poses as a realistic way to simulate things such as typos or data
 corruption of URLs. Because of its close alignment with valid inputs, this
 method can give us deeper insight into how a piece of code is handles its input
 than traditional fuzzers.
+
+## Reflection 
+
+The `Mutation-Based Fuzzing` chapter of the Fuzzing Book combines previous chapters into a single concept of mutational-based fuzzing as a practical technique for software engineering testing. Creating these manual functions that allow for certain subtle details of inputs to be changed allows for similar but incorrect inputs that can give us an idea of our function's reaction to different scenarios. Mutation-based fuzzing allows for a large amount of variation that would be improbable to create by testing inputs thus it allows us to save time and ensures a large variation of coverage without the hassle. At the same time, this process also allows more control over traditional fuzzing as it builds variations on a given valid input, rather than random inputs of a certain length like in traditional fuzzing. Finally, with this data, we can make sure that our function can handle inputs that could potentially trick it into thinking they are true.
+
+Overall, This form of testing should be kept in the back of our team's heads as it will allow for many variations on the testing of inputs in `chasten`. Implementing these ideas will allow a greater level of efficiency and security when it comes to testing variations on the wide variety of inputs that `chasten`'s many different functions take in. 
 
 ## Action Items
 

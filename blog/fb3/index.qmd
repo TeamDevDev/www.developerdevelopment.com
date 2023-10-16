@@ -1,0 +1,281 @@
+---
+author: [Finley Banas, Keller Liptrap, Simon Jones, Gregory Kapfhammer]
+title: Fuzzing&#58; Breaking Things with Random Inputs
+date: '2023-9-22'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How we can use fuzzing to make a program more robust?</em>
+toc: true
+page-layout: full
+---
+
+## Summary
+
+This post offers our insights about the chapter called ["Fuzzing: Breaking
+Things with Random Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html) from
+the [The Fuzzing Book](https://www.fuzzingbook.org/)! This chapter teachers us
+about the use of "fuzzers" or programs that automatically create random sections
+of numbers, letters, and symbols to create a random test. One of the most basic
+examples could be realized by creating a "fuzz generator", which the chapter
+explains with the following Python function called `fuzzer`:
+
+```{python}
+import random
+
+def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) -> str:
+    """A string of up to `max_length` characters
+       in the range [`char_start`, `char_start` + `char_range`)"""
+    string_length = random.randrange(0, max_length + 1)
+    out = ""
+    for i in range(0, string_length):
+        out += chr(random.randrange(char_start, char_start + char_range))
+    return out
+```
+
+A "fuzzer" can quickly test a command by providing it with random inputs.
+Suppose you had a function for writing to a file, `scribe(data: str) -> None`,
+as shown in the following code segment. How would you know that a random
+sequence of bytes can be written without causing the function to crash? You
+wouldn't if you did not implement a test case for the function! We can easily
+test this using the `fuzzer()` from the [The Fuzzing
+Book](https://www.fuzzingbook.org/):
+
+```{python}
+import os
+import tempfile
+
+def scribe(data: str) -> None:
+    name = "file.txt"
+    tempdir = tempfile.mkdtemp()
+    FILE = os.path.join(tempdir, name)
+    with open(FILE, "w") as f:
+        f.write(data)
+
+    # clean up the mess!
+    os.remove(FILE)
+    os.removedirs(tempdir)
+
+input_data = fuzzer()
+scribe(input_data)
+
+```
+
+After running this through a few hundred iterations, we would begin to feel
+more comfortable interfacing our `scribe()` function to a public API. But how
+do we run this multiple times in an idiomatic way? Rather than creating
+thousands of lines of boilerplate source code in our test suite, we may opt to
+implement what is known as a `Runner`.
+
+The ["Fuzzing: Breaking Things with Random
+Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html) chapter discusses the
+concept of a `Runner`. As shown in the following source code segment, the
+`Runner()` is the component responsible for executing the target application
+with the generated input. It captures the program’s behavior, logs crashes, and
+identifies potential vulnerabilities. To learn more about this concept,
+consider the following example of a runner class, `ProgramRunner`, which
+inherits from the class `Runner`.
+
+```{python}
+import subprocess
+from typing import Any, List, Tuple, Union
+
+
+class Runner:
+    """Base class for testing inputs."""
+
+    # Test outcomes
+    PASS = "PASS"
+    FAIL = "FAIL"
+    UNRESOLVED = "UNRESOLVED"
+
+    def __init__(self) -> None:
+        """Initialize"""
+        pass
+
+    def run(self, inp: str) -> Any:
+        """Run the runner with the given input"""
+        return (inp, Runner.UNRESOLVED)
+
+
+class ProgramRunner(Runner):
+    """Test a program with inputs."""
+
+    def __init__(self, program: Union[str, List[str]]) -> None:
+        """Initialize.
+           `program` is a program spec as passed to `subprocess.run()`"""
+        self.program = program
+
+    def run_process(self, inp: str = "") -> subprocess.CompletedProcess:
+        """Run the program with `inp` as input.
+           Return result of `subprocess.run()`."""
+        return subprocess.run(self.program,
+                              input=inp,
+                              stdout=subprocess.PIPE,
+                              stderr=subprocess.PIPE,
+                              universal_newlines=True)
+
+    def run(self, inp: str = "") -> Tuple[subprocess.CompletedProcess, str]:
+        """Run the program with `inp` as input.
+           Return test outcome based on result of `subprocess.run()`."""
+        result = self.run_process(inp)
+
+        if result.returncode == 0:
+            outcome = self.PASS
+        elif result.returncode < 0:
+            outcome = self.FAIL
+        else:
+            outcome = self.UNRESOLVED
+        return (result, outcome)
+```
+
+As detailed in the code, the `Runner` class has three outcomes: `PASS`, `FAIL`,
+`UNRESOLVED`, and it has a method called `run()`, which, because there is
+nothing given to run, produces the `UNRESOLVED` outcome. We inherit
+`ProgramRunner` from `Runner`, which is capable of testing any generic program
+because it invokes the python module `subprocess`, which is capable of calling
+processes through the features provided by the operating system.
+
+Our `ProgramRunner` exports two very important methods: `run_process()` and
+`run()`. `run_process()` is rather raw, and it is a wrapper to
+`subprocess.run()`, which runs a program by name and provides it with an input.
+`run()`, however, neatly interprets the `returncode` property of the process
+invoked by `run_process()`. As with all UNIX programs, a nonzero `returncode`
+indicates error. *Still*, this is not enough to give us a framework for testing
+functional bits of code. We will need another class that intelligently uses this
+`ProgramRunner`!
+
+The ["Fuzzing: Breaking Things with Random
+Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html) chapter instructs us to
+create a class specifically for the purpose of fuzzing. We'll create a base
+class `Fuzzer` and override it with a specific implementation that creates
+random strings within a range of lengths, `RandomFuzzer`.
+
+```{python}
+class Fuzzer:
+    def __init__(self) -> None:
+        """Constructor"""
+        pass
+
+    def fuzz(self) -> str:
+        """Return fuzz input"""
+        return ""
+
+    def run(self, runner: Runner = Runner()) \
+        -> Tuple[subprocess.CompletedProcess, str]:
+        return runner.run(self.fuzz())
+
+    def runs(self, runner: Runner = Runner(), trials: int = 10) \
+        -> List[Tuple[subprocess.CompletedProcess, str]]:
+        """Run `runner` with fuzz input, `trials` times"""
+        return [self.run(runner) for i in range(trials)]
+
+
+class RandomFuzzer(Fuzzer):
+    """Produce random inputs"""
+
+    def __init__(
+        self,
+        min_length: int = 10,
+        max_length: int = 100,
+        char_start: int = 32,
+        char_range: int = 32
+    ) -> None:
+        """Produce strings of `min_length` to `max_length` characters
+           in the interval [`char_start`, `char_start` + `char_range`)"""
+        self.min_length = min_length
+        self.max_length = max_length
+        self.char_start = char_start
+        self.char_range = char_range
+
+    def fuzz(self) -> str:
+        string_length = random.randrange(self.min_length, self.max_length + 1)
+        out = ""
+        for i in range(0, string_length):
+            out += chr(random.randrange(self.char_start, self.char_start + self.char_range))
+        return out
+```
+
+Now we can use `RandomFuzzer` to kick off a fuzzing process to test inputs of
+type `str` between the two specific lengths! As shown in [The Fuzzing
+Book](https://www.fuzzingbook.org/), we can test the program `cat`, which will
+print out its `stdin`, illustrated by the following code segment and its
+output:
+
+```{python}
+# initialize `cat` program as `ProgramRunner` with `stdin` = "cat"
+cat = ProgramRunner(program="cat")
+
+# create `RandomFuzzer` class capable of random inputs
+random_fuzzer = RandomFuzzer(min_length=20, max_length=21)
+
+# finally, apply the `RandomFuzzer` to the `cat` `ProgramRunner` to fuzz it once:
+print("Single Run:\n")
+random_fuzzer.run(cat)
+
+# or we can fuzz it for any number of runs!
+print("Multiple Runs:\n")
+random_fuzzer.runs(cat, 30)
+```
+
+The output shows that `cat` worked for each random input. Although this testing
+process is not comprehensive, it would do a good job at catching problems with
+inputs that the `cat` function may not expected. Note that, even though this
+simple example restricts the input to random sequences of bytes, `RandomFuzzer`
+could be extended for any kind of data structure and thus to any kind of
+program! This means that fuzzing is a general-purpose tool we can use for
+[Chasten](https://github.com/AstuteSource/chasten).
+
+## Reflection
+
+This article shows how fuzzing provides an automated way to provide creative
+inputs to a program, given that we know the kind of data a program is
+expecting.
+
+Our team resonated with the importance of this chapter, as we have had many
+unnecessary issues arise on our feature branches and are feeling the pains of
+not implementing fuzzing sooner. Our colleague Jason Gyamfi states it clearly:
+
+> This makes the chapter a must-read for those aiming to improve software
+> strength and safety.
+
+Our team is striving to do just that: "aiming to improve software strength and
+safety." While starting the semester, some of us had not even heard of the term
+"fuzzing." Now, we all are aware of the term, and some of us have even started
+implementing it into the test suite of
+[Chasten](https://github.com/astutesource/chasten/), our tool for finding
+patterns in the AST of a python program.
+
+We are all aware of the benefits of fuzzing and its keen ability to point out
+*stress points* in our code. That said, the task remains to achieve complete
+familiarity with fuzzing strategies and to consistently implement them when
+creating new features. Many of our team members have emphasized the importance
+of doing this sooner than later, so as to not accrue *technical debt*. In our
+case, we use
+[Hypothesis](https://hypothesis.readthedocs.io/en/latest/index.html), which
+offers many powerful
+[strategies](https://hypothesis.readthedocs.io/en/latest/data.html) for fuzzing.
+
+## Action Items
+
+In the ["Fuzzing: Breaking Things with Random
+Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html) chapter of [The Fuzzing
+Book](https://www.fuzzingbook.org/) we develop a deeper understanding about the
+use of fuzzing and the importance of testing in software engineering. Fuzzing
+can be an effective way to find weak points in code. The implementation of
+fuzzing into the [Chasten](https://github.com/astutesource/chasten/) program
+could have many benefits. When developing
+[Chasten](https://github.com/astutesource/chasten/) we can check for bugs with
+in parts of the system that input source code or configure files. The use of
+fuzzing could also simulate a user's behavior which would give the team an idea
+of bugs that a user may encounter. We have to apply what we have learned about
+fuzzing in these ways:
+
+- **Have urgency:** When we see that a feature lacks proper test cases, rush to
+change that!
+- **Be responsible:** When we write our own features, we need to make sure each
+change includes some sort of test to verify that feature works with fuzzed
+input.
+- **Be curious:** Explore tooling that exists in order to know "every inch" of
+its feature set. This way, we can approach our testing the most effectively.
+
+{{< include /_back-blog.qmd >}}

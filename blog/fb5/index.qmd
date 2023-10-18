@@ -150,37 +150,40 @@ input, in comparison to traditional fuzzers.
 
 ## Reflection 
 
-The `Mutation-Based Fuzzing` chapter of the Fuzzing Book combines previous
-chapters into a single concept of mutation-based fuzzing as a practical technique
-for software engineering testing. Creating these manual functions that allow for
-certain subtle details of inputs to be changed allows for similar, but different
-inputs that can give us an idea of our function's reactions to different
-scenarios. Mutation-based fuzzing allows for a large amount of variation that
-would be difficult to create by testing inputs. Thus, it allows us to save time
-and ensures a large variation of coverage without much hassle. At the same time,
-this process also allows more control than traditional fuzzing, as it builds a
-variation of inputs based off a valid input, rather than random inputs of a
-certain length like in traditional fuzzing. Finally, with this data, we can make
-sure that our function can handle inputs that could potentially trick it into
-thinking they are true.
+The [Mutation-Based
+Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html) chapter of the
+Fuzzing Book combines previous chapters into a single concept of mutation-based
+fuzzing as a practical technique for software engineering testing. Creating
+these manual functions that allow for certain subtle details of inputs to be
+changed allows for similar, but different inputs that can give us an idea of
+our function's reactions to different scenarios. Mutation-based fuzzing allows
+for a large amount of variation that would be difficult to create by testing
+inputs. Thus, it allows us to save time and ensures a large variation of
+coverage without much hassle. At the same time, this process also allows more
+control than traditional fuzzing, as it builds a variation of inputs based off
+a valid input, rather than random inputs of a certain length like in
+traditional fuzzing. Finally, with this data, we can make sure that our
+function can handle inputs that could potentially trick it into thinking they
+are true.
 
 Overall, This form of testing should be kept in the back of our team's heads as
 it will allow for many variations in the testing of inputs for `Chasten`.
 Implementing these ideas will allow a greater level of efficiency and security
-when it comes to testing `Chasten` with a wide varity of inputs. 
+when it comes to testing `Chasten` with a wide verity of inputs.
 
 ## Use Cases
 
 We could potentially utilize the practices of mutation-based fuzzing in the
-testing of our tool, `Chasten`. `Chasten` requires an input to be formated in a
-specific way; therefore, the use of randomly generated inputs would only be
-useful for testing our parser. To ensure that we could adequetly use fuzzing to
-test all aspects of our program, we would __have__ to use mutation-based fuzzing.
+testing of our tool, `Chasten`. `Chasten` requires an input to be formatted in
+a specific way; therefore, the use of randomly generated inputs would only be
+useful for testing our parser. To ensure that we could adequately use fuzzing
+to test all aspects of our program, we would __have__ to use mutation-based
+fuzzing.
 
 This could be done by implementing the same methods the chapter uses. First, we
-would need to find a valid input that makes it passed the parser. Then, we would
-need to run that input through a function such as `mutate` or `multi_mutate` to
-add mutations to the input. Then we would be able run the mutated version of the
-input through the program to test for any errors.
+would need to find a valid input that makes it passed the parser. Then, we
+would need to run that input through a function such as `mutate` or
+`multi_mutate` to add mutations to the input. Then we would be able run the
+mutated version of the input through the program to test for any errors.
 
 {{< include /_back-blog.qmd >}}

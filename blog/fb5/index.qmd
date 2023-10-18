@@ -143,12 +143,12 @@ print("Output:")
 print(f"{len(valid_inputs) / trials * 100}% of the trials were valid inputs.")
 ```
 
-This fuzzer poses as a realistic way to simulate things such as typos or the data
-corruption of URLs. Because of its close alignment with valid inputs, this
-method can give us a more in-depth look into how a piece of code handles its 
+This fuzzer poses as a realistic way to simulate things such as typos or the
+data corruption of URLs. Because of its close alignment with valid inputs, this
+method can give us a more in-depth look into how a piece of code handles its
 input, in comparison to traditional fuzzers.
 
-## Reflection 
+## Reflection
 
 The [Mutation-Based
 Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html) chapter of the

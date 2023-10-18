@@ -163,10 +163,9 @@ coverage without much hassle. At the same time, this process also allows more
 control than traditional fuzzing, as it builds a variation of inputs based off
 a valid input, rather than random inputs of a certain length like in
 traditional fuzzing. Finally, with this data, we can make sure that our
-function can handle inputs that could potentially trick it into thinking they
-are true.
+function can handle inputs that may be tricky to handle.
 
-Overall, This form of testing should be kept in the back of our team's heads as
+Overall, this form of testing should be kept in the back of our team's heads as
 it will allow for many variations in the testing of inputs for `Chasten`.
 Implementing these ideas will allow a greater level of efficiency and security
 when it comes to testing `Chasten` with a wide verity of inputs.

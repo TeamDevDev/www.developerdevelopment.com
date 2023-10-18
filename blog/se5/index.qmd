@@ -1,0 +1,81 @@
+---
+author: [Mordred Boulais, Naboni Thomas, Alish Chhetri, Gregory M. Kapfhammer]
+title: 'Engineering for Equity'
+date: '2023-10-12'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can we foster diversity and address bias to ensure that systems are inclusive?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post discusses the ["Engineering for
+Equity"](https://abseil.io/resources/swe-book/html/ch03.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book).
+This article's goal is to surface the engineer's responsibility in ensuring that
+a software project meets the needs of the largest possible audience or user base.
+
+## Summary
+
+This chapter goes over where Google failed to reach the ideal standard for
+inclusivity and how this can be made up for in the future, as a company-wide
+effort. The demographics of the software engineers at Google do not reflect
+those that use their products, and as such their biases were incorporated into
+their projects, such as facial recognition software.
+
+In order to remedy this issue, there are several proposed steps, or areas of
+focus, for us to take into consideration. These are outlined in the **Value
+Versus Outcomes** section, as summarised and paraphrased in the following
+enumerated list:
+
+1. Who are the people building the product? Do these people represent those for
+   whom the product is being built? If not, how is that being taken into account?
+
+2. Assume everyone will use it, and use this to take into account the one that
+   will struggle the most. Design with that person or demographic in mind, in
+   order to ensure that accessibility is built into the software product.
+
+3. Building on the previous point &mdash; does the data show that your efforts
+   succeeded? If not, where was the failure point? How can this be fixed and
+   then prevented in the future?
+
+These are an amalgamation of the five points given in the **Value Versus
+Outcomes** section, and how it asks software engineers to create solutions
+instead of being part of the problem in order to ensure equity. Now, let's turn
+to our chapter reflections and some suggestions for next steps!
+
+## Reflection
+
+Reflecting on the chapter, it underscores the importance of creating an
+inclusive work environment where all individuals are accommodated, which is key
+to ensuring productivity and dismantling structural biases. It highlights the
+pivotal role of software engineers as agents of change, championing diversity
+and inclusivity. The chapter emphasizes the ethical and practical necessity of
+addressing bias, fostering inclusivity, and transitioning from a mindset of
+building for everyone to building with everyone. It acknowledges the systemic
+issues that are prevalent in the technology industry and offers actionable steps
+to address them, with a focus on psychological safety, multicultural competence,
+and continuous professional development. The chapter also stresses the
+importance for engineers to understand the impact of their products on a diverse
+user base. It serves as a reminder that nurturing an inclusive work environment
+and pursuing continuous learning are crucial for personal growth and career
+advancement.
+
+## Action Items
+
+This chapter offers invaluable insight for software engineers and organizations,
+emphasizing the importance of integrating inclusivity and diversity into the
+product development process. It advocates for a user-centered approach that
+caters to individuals confronting various challenges and calls for collaboration
+with diversity and inclusion experts. While the immediate relevance to our
+current class project may be limited, the principles discussed remain
+significant in our preparation for the workforce. In the context of Chasten's
+future users, especially as Allegheny College students, we should place a strong
+emphasis on making our code highly readable, recalling our own initial
+challenges in understanding the code base. Furthermore, we can leverage our
+experiences in creating the program to assist future students in improving it,
+ensuring its accessibility and usability for a wider range of users.
+
+{{< include /_back-blog.qmd >}}

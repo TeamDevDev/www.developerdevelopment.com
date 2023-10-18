@@ -7,6 +7,8 @@ title-block-banner: false
 
 ![**Developing developers so that they can develop better software!**](images/Developer-Development-Horizontal-Logo.svg){fig-align="center"}
 
+## Introduction
+
 Regardless of the role or the company or the project in which they find
 themselves, a software engineer is always a *developing developer*. Like the
 word "developer" in the above logo, developers always have a "missing piece" of
@@ -17,6 +19,8 @@ nefarious bugs that they have not yet found and fixed! Always working to
 establish a confidence in their program's correctness, a developing developer
 aims to engineer and ship high-quality software that is designed, documented,
 tested, and maintained according to industry best practices.
+
+## Schedule
 
 With the goal of enabling effective developer development, this web site
 features a sixteen-week schedule filled with activities that support
@@ -49,6 +53,8 @@ there many benefits to being a developing developer? *Yes*! For instance, the
 participants of this sixteen-week course will gain valuable perspectives and
 practical skills to enhance their software engineering skills while
 collaboratively building and releasing two open-source tools.
+
+## Adventure
 
 Interested in getting started on a developer development adventure? Begin here:
 

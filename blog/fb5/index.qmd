@@ -34,17 +34,20 @@ inputs will be invalid regardless and not be able to make it past the parser.
 
 As an example, this article walks us through how to create a mutation-based
 fuzzer for the input of a URL parser. First, we create three functions that
-"mutate" the input, which slightly modifies the input in some way. We will need
-the following functions:
+"mutate" the input, which slightly modifies the input in some way. Here are
+more details about the following functions:
 
-1. `delete_random_character(s: str) -> str`: Randomly delete a character from `s`
-   and return the mutated `s`.
-2. `insert_random_character(s: str) -> str`: Randomly insert a character into `s`
-   and return the mutated `s`.
-3. `flip_random_character(s):`: Randomly flip one bit in the ASCII representation
-   of one of the bytes in `s` and return the mutated `s`. *(an interesting one,
-   although, organically, it's virtually impossible with today's error
-   correction techniques!)*
+1. `delete_random_character(s: str) -> str`: Randomly delete a character from
+   `s` and return the mutated `s`.
+2. `insert_random_character(s: str) -> str`: Randomly insert a character into
+   `s` and return the mutated `s`.
+3. `flip_random_character(s):`: Randomly flip one bit in the ASCII
+   representation of one of the bytes in `s` and return the mutated `s`. Note
+that this is an interesting function even though, organically, it's virtually
+impossible with today's error correction techniques!
+
+With those points in mind we can now investigate the implementation of these
+functions!
 
 ```{python}
 import random

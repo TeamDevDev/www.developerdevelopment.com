@@ -23,7 +23,7 @@ this blog. Okay, let's dive into the technical details!
 
 ## Summary
 
-**Mutation-based fuzzing** is when we slightly modify valid inputs of a
+A **mutation-based fuzzing** tool slightly modifies valid inputs of a
 functional piece of code we are trying to test in order to see how the code
 handles it. This increases the possibility of having a valid input, as opposed
 to traditional fuzzing, which supplies completely randomized inputs.

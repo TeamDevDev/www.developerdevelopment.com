@@ -106,8 +106,8 @@ print(f"input: 'Testing 123!!', output: {multi_mutate('Testing 123!!',3)}")
 ```
 
 Now we have everything we need to test a basic function with our mutation-based
-fuzzing strategy we just created! As done in The Fuzzing Book, we will test the
-function `http_program`:
+fuzzing strategy we just created! As done in [The Fuzzing
+Book](https://www.fuzzingbook.org/), we will test the function `http_program`:
 
 ```{python}
 def http_program(url: str) -> bool:

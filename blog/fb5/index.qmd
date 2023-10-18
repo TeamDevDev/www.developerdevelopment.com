@@ -17,8 +17,9 @@ Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html) chapter from
 potentially be useful to the development of our tool,
 [chasten](https://github.com/AstuteSource/chasten). This chapter builds on the
 concepts that were covered in the [Fuzzing: Breaking Things with Random
-Inputs](https://www.fuzzingbook.org/html/Fuzzer.html) chapter, which is covered
-in another [article](https://developerdevelopment.com/blog/fb3/) on this blog.
+Inputs](https://www.fuzzingbook.org/html/Fuzzer.html) chapter, which is
+explored by another [article](https://developerdevelopment.com/blog/fb3/) on
+this blog. Okay, let's dive into the technical details!
 
 ## Summary
 

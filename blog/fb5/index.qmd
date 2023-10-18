@@ -180,9 +180,9 @@ testing our parser. Mutation-based fuzzing would help us to adequately fuzz
 test all aspects of our program that process input.
 
 This could be done by implementing the same methods the chapter uses. First, we
-would need to find a valid input that makes it passed the parser. Then, we
-would need to run that input through a function such as `mutate` or
-`multi_mutate` to add mutations to the input. Then we would be able run the
-mutated version of the input through the program to test for any errors.
+would need to find a valid input that an input parser accepts. Then, we would
+need to run that input through a function such as `mutate` or `multi_mutate` to
+add mutations to the input. Then we would be able run the mutated version of
+the input through the program to test for any errors.
 
 {{< include /_back-blog.qmd >}}

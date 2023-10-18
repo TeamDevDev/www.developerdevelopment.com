@@ -1,5 +1,5 @@
 ---
-author: [Simon Jones, Caleb Kendra, Haylee Pierce]
+author: [Simon Jones, Caleb Kendra, Haylee Pierce, Gregory M. Kapfhammer]
 title: Mutation-Based Fuzzing
 date: '2023-10-18'
 date-format: long
@@ -34,7 +34,8 @@ inputs will be invalid regardless and not be able to make it past the parser.
 
 As an example, this article walks us through how to create a mutation-based
 fuzzer for the input of a URL parser. First, we create three functions that
-'mutate' the input, which slightly modifies the input in some way. We'll create:
+"mutate" the input, which slightly modifies the input in some way. We will need
+the following functions:
 
 1. `delete_random_character(s: str) -> str`: Randomly delete a character from `s`
    and return the mutated `s`.

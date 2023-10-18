@@ -27,11 +27,10 @@ functional piece of code we are trying to test in order to see how the code
 handles it. This increases the possibility of having a valid input, as opposed
 to traditional fuzzing, which supplies completely randomized inputs.
 Mutation-based fuzzing may only flip a bit or randomize a single byte of an
-input, hence the use of the word *mutation*. While this may reduce the scope
-of your testing, it helps get rid of some of the redundant testing that happens
-when running a traditional fuzzer, given that the majority of
-traditionally-fuzzed inputs will be invalid regardless and not be able to make it
-past the parser.
+input, hence the use of the word *mutation*. While this may reduce the scope of
+testing, it helps to avoid some of the redundant testing that happens when
+running a traditional fuzzer, given that the majority of traditionally-fuzzed
+inputs will be invalid regardless and not be able to make it past the parser.
 
 As an example, this article walks us through how to create a mutation-based
 fuzzer for the input of a URL parser. First, we create three functions that

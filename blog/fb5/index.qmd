@@ -165,10 +165,11 @@ a valid input, rather than random inputs of a certain length like in
 traditional fuzzing. Finally, with this data, we can make sure that our
 function can handle inputs that may be tricky to handle.
 
-Overall, this form of testing should be kept in the back of our team's heads as
-it will allow for many variations in the testing of inputs for `Chasten`.
-Implementing these ideas will allow a greater level of efficiency and security
-when it comes to testing `Chasten` with a wide verity of inputs.
+This form of testing should be kept in the back of our team's heads as it will
+allow for many variations in the testing of inputs for `chasten`. Implementing
+these ideas will allow a greater level of efficiency and security when it comes
+to testing `chasten` with many inputs. Ultimately, this will help us to better
+establish a confidence in the correctness of the functions in `chasten`.
 
 ## Use Cases
 

@@ -1,5 +1,5 @@
 ---
-author: [`TOODO`, Finley Banas, Keven Duverglas, Gregory M. Kapfhammer]
+author: [Will Wolff, Finley Banas, Keven Duverglas, Gregory M. Kapfhammer]
 title: 'How to Lead a Team'
 date: '2023-10-20'
 date-format: long
@@ -70,6 +70,15 @@ takeaway from this text.
 
 ## Action Items
 
-`TODO`
+Leadership is a necessity for a team to be successful anywhere, not just within our 
+Developer Development Team. Everyone within the team has their specialties and can 
+lead from their point what will be best for the team. Making sure we all are able to 
+contribute to the code and we are able to communicate if there are any issues with one 
+member. We as a team have people who are able to give advice in certain areas.
+But as well, I think we have a lack of leadership amongst us. We do not have a clear understanding
+of what everyone is doing or how far they are on their code is a hinderance on our success. 
+Having more time dedicated to being able to communicate our progress, issues, and knowledge 
+for what we have done is essential for our success. With these things, we will be able to find a 
+way to create these project by the deadlines. 
 
 {{< include /_back-blog.qmd >}}

@@ -1,0 +1,29 @@
+---
+author: [Simon Jones, Hank Gref, Caleb Kendra]
+title: Fuzzing with Grammars
+date: '2023-10-20'
+date-format: long
+categories: [post, software engineering, fuzzing book, mutation]
+description: <em>Here, we use a set of rules to create intelligently-fuzzed inputs.</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This article discusses the [Fuzzing with Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from
+[The Fuzzing Book](https://www.fuzzingbook.org/).
+
+## Summary
+
+FIXME
+
+## Reflection
+
+FIXME
+
+## Use Cases
+
+FIXME
+
+{{< include /_back-blog.qmd >}}

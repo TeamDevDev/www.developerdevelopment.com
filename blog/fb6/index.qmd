@@ -11,12 +11,14 @@ page-layout: full
 
 ## Overview
 
-This article discusses the [Fuzzing with Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from
+This article discusses the [Fuzzing with
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from
 [The Fuzzing Book](https://www.fuzzingbook.org/).
 
 ## Summary
 
-Here is an example of a basic grammar for a word, similar to how most programming languages would parse a variable identifier:
+Here is an example of a basic grammar for a word, similar to how most
+programming languages would parse a variable identifier:
 
 ```
 <start> ::= <word>
@@ -25,7 +27,9 @@ Here is an example of a basic grammar for a word, similar to how most programmin
 a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | _
 ```
 
-We represent many other things using this syntax, including arithmetic expressions. Let's build a simple grammar-based fuzzer that takes a grammar as a `Dict` input.
+We represent many other things using this syntax, including arithmetic
+expressions. Let's build a simple grammar-based fuzzer that takes a grammar as a
+`Dict` input.
 
 ```{python}
 import random
@@ -79,7 +83,8 @@ def simple_grammar_fuzzer(grammar: Grammar,
     return term
 ```
 
-Now we can fuzz intelligently with a grammar. This chapter provides the grammar for URL, which we'll use:
+Now we can fuzz intelligently with a grammar. This chapter provides the grammar
+for URL, which we'll use:
 
 ```{python}
 URL_GRAMMAR: Grammar = {
@@ -121,9 +126,12 @@ for i in range(10):
     print(simple_grammar_fuzzer(grammar=URL_GRAMMAR, max_nonterminals=10))
 ```
 
-The value `max_nonterminals` gives the fuzzer an upper limit on how many symbols it can randomly generate until ending the expression.
+The value `max_nonterminals` gives the fuzzer an upper limit on how many symbols
+it can randomly generate until ending the expression.
 
-Grammars can be used as a kind of way to seed an input before mutating it. This way, instead of having a static seed for mutation, your seed can be randomized as well. Just when you thought fuzzing could not get any deeper, right?
+Grammars can be used as a kind of way to seed an input before mutating it. This
+way, instead of having a static seed for mutation, your seed can be randomized
+as well. Just when you thought fuzzing could not get any deeper, right?
 
 ```{python}
 n_grammar_seeds = 10

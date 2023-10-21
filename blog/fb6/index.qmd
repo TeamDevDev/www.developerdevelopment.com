@@ -34,7 +34,7 @@ expressions. Let's build a simple grammar-based fuzzer that takes a grammar as a
 ```{python}
 import random
 import re
-from typing import Dict, List
+from typing import Any, Callable, Dict, List, Set, Tuple
 
 Grammar = Dict[str, List[str]]
 
@@ -131,9 +131,45 @@ it can randomly generate until ending the expression.
 
 Grammars can be used as a kind of way to seed an input before mutating it. This
 way, instead of having a static seed for mutation, your seed can be randomized
-as well. Just when you thought fuzzing could not get any deeper, right?
+as well. Just when you thought fuzzing could not get any deeper, right? We can
+apply this directly to mutation-based fuzzing that we discussed last week:
 
 ```{python}
+def delete_random_character(s: str) -> str:
+    if s == "":
+        return s
+    pos = random.randint(0, len(s) - 1)
+    return s[:pos] + s[pos + 1:]
+
+def insert_random_character(s: str) -> str:
+    pos = random.randint(0, len(s))
+    random_character = chr(random.randrange(32, 127))
+    return s[:pos] + random_character + s[pos:]
+
+def flip_random_character(s: str) -> str:
+    if s == "":
+        return s
+    pos = random.randint(0, len(s) - 1)
+    c = s[pos]
+    bit = 1 << random.randint(0, 6)
+    new_c = chr(ord(c) ^ bit)
+    return s[:pos] + new_c + s[pos + 1:]
+
+def mutate(s: str) -> str:
+    mutators = [
+        delete_random_character,
+        insert_random_character,
+        flip_random_character
+    ]
+    mutator = random.choice(mutators)
+    return mutator(s)
+
+def multi_mutate(s: str, n: int) -> str:
+    res = s
+    for i in range(n):
+        res = mutate(res)
+    return res
+
 n_grammar_seeds = 10
 for i in range(n_grammar_seeds):
     original = simple_grammar_fuzzer(grammar=URL_GRAMMAR, max_nonterminals=10)

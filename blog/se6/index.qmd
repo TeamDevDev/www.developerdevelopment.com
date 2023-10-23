@@ -13,11 +13,11 @@ page-layout: full
 
 This blog post discusses the ["How to Lead a
 Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter in the
-[Software Engineering at Google book](https://abseil.io/resources/swe-book).
-Which delves into effective leadership within software development teams,
+[Software Engineering at Google book](https://abseil.io/resources/swe-book). The
+chapter delves into effective leadership within software development teams,
 highlighting key principles, strategies, and the transition from individual
-contributor roles to leadership positions.
-
+contributor roles to leadership positions. Let's dive into how we can apply this
+article!
 
 ## Summary
 

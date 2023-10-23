@@ -77,15 +77,17 @@ principles of supervision is a crucial takeaway from this text.
 ## Action Items
 
 Leadership is a necessity for a team to be successful anywhere, not just within
-our Developer Development Team. Everyone within the team has their specialties
+our Developer Development team. Everyone within the team has their specialties
 and can lead from their point what will be best for the team. Making sure we all
 are able to contribute to the code and we are able to communicate if there are
 any issues with one member. We as a team have people who are able to give advice
-in certain areas. But as well, I think we have a lack of leadership amongst us.
+in certain areas. With that said, we also are experiencing a lack of leadership.
 We do not have a clear understanding of what everyone is doing or how far they
-are on their code is a hindrance on our success. Having more time dedicated to
-being able to communicate our progress, issues, and knowledge for what we have
-done is essential for our success. With these things, we will be able to find a
-way to create these projects by the deadlines!
+are on their implementation of specific features or bug fixes --- and is a
+hindrance to our success as a team. Having more time dedicated to being able to
+communicate our progress, issues, and knowledge for what we have done is
+essential for our success. Bearing in mind the constraints of the academic
+semester, when can we find the time for this communication? Taking these and
+other steps will better position us to finish these projects by the deadline!
 
 {{< include /_back-blog.qmd >}}

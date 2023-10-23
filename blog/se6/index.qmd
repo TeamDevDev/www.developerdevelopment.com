@@ -22,8 +22,8 @@ article!
 ## Summary
 
 This chapter provides a deep dive into Google's approach to leadership within
-software development teams, shedding light on the roles of managers and tech
-leads. It explores how leaders are identified and integrated into the
+software development teams, shedding light on the roles of managers and
+technical leads. It explores how leaders are identified and integrated into the
 organization, focusing on "influence without authority" to underscore that
 leadership transcends formal titles. The chapter also offers insights into
 transitioning from individual contributor roles to leadership positions,
@@ -32,18 +32,19 @@ and trust.
 
 The chapter addresses common concerns about entering managerial roles within
 software development, including worries about reduced coding time and the
-potential pitfalls of the "Peter Principle." It highlights the advantages of
-embracing tech lead or manager positions, emphasizing the potential for more
-significant impact and the opportunity to become exceptional leaders. This
-comprehensive examination delineates the roles of tech leads and managers within
-development teams.
+potential pitfalls of the "Peter Principle" that was quoted in the article as
+"In a hierarchy every employee tends to rise to his level of incompetence." The
+article also highlights the advantages of embracing technical leader or manager
+positions, emphasizing the potential for more significant impact and the
+opportunity to become exceptional leaders. This comprehensive examination
+delineates the roles of tech leads and managers within development teams.
 
-The article underscores the importance of maintaining a calm and composed
-demeanor as a leader, emphasizing the need for leaders to mediate their
-reactions and serve as role models for their teams. The analogy of the company's
-organizational chart as a chain of gears illustrates how leaders increase their
-influence as they move up the hierarchy. It signifies the importance of a leader
-always serving their peers rather than being authoritative or demanding.
+The article underscores the importance of maintaining a composed demeanor as a
+leader, emphasizing the need for leaders to mediate their reactions and serve as
+role models for their teams. The analogy of the company's organizational chart
+as a chain of gears illustrates how leaders increase their influence as they
+move up the hierarchy. It signifies the importance of a leader always serving
+their peers rather than being authoritative or demanding.
 
 The text underscores the significance of asking questions when team members seek
 advice, fostering a culture of humility, respect, and trust. It also highlights

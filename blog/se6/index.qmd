@@ -61,18 +61,18 @@ their work.
 
 The text offers valuable insights into the transition from being an individual
 contributor to taking on a leadership position, particularly in the software
-development world. It overviews the challenges, responsibilities, and
-misconceptions of becoming a manager or technical leader. The text is a
-well-structured and informative article that guides anyone on the path to
-leadership. It stresses the importance of leadership principles and provides
-insights into modern leadership expectations, all while addressing common
-pitfalls to avoid. In conclusion, this comprehensive and insightful text
-provides valuable guidance for individuals transitioning to leadership
-positions, particularly in software development. It's informative and practical,
-offering readers a clear roadmap for navigating the challenges and
-responsibilities of leadership while avoiding common pitfalls. The emphasis on
-humility, respect, and trust as foundational principles of supervision is a
-crucial takeaway from this text.
+development world that is focused on creating
+[Chasten](https://github.com/AstuteSource/chasten). It overviews the challenges,
+responsibilities, and misconceptions of becoming a manager or technical leader.
+The text is a well-structured and informative article that guides anyone on the
+path to leadership. It stresses the importance of leadership principles and
+provides insights into modern leadership expectations, all while addressing
+common pitfalls to avoid. In conclusion, article provides valuable guidance for
+individuals transitioning to leadership positions, particularly in software
+development. It's informative and practical, offering readers a clear roadmap
+for navigating the challenges and responsibilities of leadership while avoiding
+common pitfalls. The emphasis on humility, respect, and trust as foundational
+principles of supervision is a crucial takeaway from this text.
 
 ## Action Items
 

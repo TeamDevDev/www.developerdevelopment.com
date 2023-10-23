@@ -1,0 +1,93 @@
+---
+author: [Will Wolff, Finley Banas, Keven Duverglas, Gregory M. Kapfhammer]
+title: 'How to Lead a Team'
+date: '2023-10-23'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can we cultivate great leaders in and for our team?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post discusses the ["How to Lead a
+Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book). The
+chapter delves into effective leadership within software development teams,
+highlighting key principles, strategies, and the transition from individual
+contributor roles to leadership positions. Let's dive into how we can apply this
+article!
+
+## Summary
+
+This chapter provides a deep dive into Google's approach to leadership within
+software development teams, shedding light on the roles of managers and
+technical leads. It explores how leaders are identified and integrated into the
+organization, focusing on "influence without authority" to underscore that
+leadership transcends formal titles. The chapter also offers insights into
+transitioning from individual contributor roles to leadership positions,
+emphasizing the principles of servant leadership rooted in humility, respect,
+and trust.
+
+The chapter addresses common concerns about entering managerial roles within
+software development, including worries about reduced coding time and the
+potential pitfalls of the "Peter Principle" that was quoted in the article as
+"In a hierarchy every employee tends to rise to his level of incompetence." The
+article also highlights the advantages of embracing technical leader or manager
+positions, emphasizing the potential for more significant impact and the
+opportunity to become exceptional leaders. This comprehensive examination
+delineates the roles of tech leads and managers within development teams.
+
+The article underscores the importance of maintaining a composed demeanor as a
+leader, emphasizing the need for leaders to mediate their reactions and serve as
+role models for their teams. The analogy of the company's organizational chart
+as a chain of gears illustrates how leaders increase their influence as they
+move up the hierarchy. It signifies the importance of a leader always serving
+their peers rather than being authoritative or demanding.
+
+The text underscores the significance of asking questions when team members seek
+advice, as this may help to create a culture of humility, respect, and trust. It
+also highlights the importance of providing guidance and direction to team
+members, ensuring they have autonomy, opportunities for mastery, and a clear
+sense of purpose. Furthermore, it suggests various leadership practices,
+including delegation, seeking to replace oneself, making timely decisions,
+shielding the team from chaos, and recognizing team member's achievements. The
+text concludes by emphasizing the need to consider individual team members'
+needs and motivate them, thereby promoting autonomy, mastery, and purpose in
+their work.
+
+## Reflection
+
+The text offers valuable insights into the transition from being an individual
+contributor to taking on a leadership position, particularly in the software
+development world that is focused on creating
+[Chasten](https://github.com/AstuteSource/chasten). It overviews the challenges,
+responsibilities, and misconceptions of becoming a manager or technical leader.
+The text is a well-structured and informative article that guides anyone on the
+path to leadership. It stresses the importance of leadership principles and
+provides insights into modern leadership expectations, all while addressing
+common pitfalls to avoid. In conclusion, article provides valuable guidance for
+individuals transitioning to leadership positions, particularly in software
+development. It's informative and practical, offering readers a clear roadmap
+for navigating the challenges and responsibilities of leadership while avoiding
+common pitfalls. The emphasis on humility, respect, and trust as foundational
+principles of supervision is a crucial takeaway from this text.
+
+## Action Items
+
+Leadership is a necessity for a team to be successful anywhere, not just within
+our Developer Development team. Everyone within the team has their specialties
+and can lead from their point what will be best for the team. Making sure we all
+are able to contribute to the code and we are able to communicate if there are
+any issues with one member. We as a team have people who are able to give advice
+in certain areas. With that said, we also are experiencing a lack of leadership.
+We do not have a clear understanding of what everyone is doing or how far they
+are on their implementation of specific features or bug fixes --- and is a
+hindrance to our success as a team. Having more time dedicated to being able to
+communicate our progress, issues, and knowledge for what we have done is
+essential for our success. Bearing in mind the constraints of the academic
+semester, when can we find the time for this communication? Taking these and
+other steps will better position us to finish these projects by the deadline!
+
+{{< include /_back-blog.qmd >}}

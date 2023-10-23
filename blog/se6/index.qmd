@@ -4,7 +4,7 @@ title: 'How to Lead a Team'
 date: '2023-10-23'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>How can we cultivate great leaders in our team?</em>
+description: <em>How can we cultivate great leaders in and for our team?</em>
 toc: true
 page-layout: full
 ---

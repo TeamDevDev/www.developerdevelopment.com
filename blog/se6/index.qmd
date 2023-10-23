@@ -23,62 +23,67 @@ contributor roles to leadership positions.
 
 This chapter provides a deep dive into Google's approach to leadership within
 software development teams, shedding light on the roles of managers and tech
-leads. It explores how leaders are identified and integrated into the organization,
-focusing on "influence without authority" to underscore that
+leads. It explores how leaders are identified and integrated into the
+organization, focusing on "influence without authority" to underscore that
 leadership transcends formal titles. The chapter also offers insights into
-transitioning from individual contributor roles to leadership positions, emphasizing
-the principles of servant leadership rooted in humility, respect, and trust.
+transitioning from individual contributor roles to leadership positions,
+emphasizing the principles of servant leadership rooted in humility, respect,
+and trust.
 
 The chapter addresses common concerns about entering managerial roles within
 software development, including worries about reduced coding time and the
-potential pitfalls of the "Peter Principle." It highlights the advantages
-of embracing tech lead or manager positions, emphasizing the potential for
-more significant impact and the opportunity to become exceptional leaders. This
-comprehensive examination delineates the roles of tech leads and managers
-within development teams.
+potential pitfalls of the "Peter Principle." It highlights the advantages of
+embracing tech lead or manager positions, emphasizing the potential for more
+significant impact and the opportunity to become exceptional leaders. This
+comprehensive examination delineates the roles of tech leads and managers within
+development teams.
 
-The article underscores the importance of maintaining a calm and composed demeanor as a
-leader, emphasizing the need for leaders to mediate their reactions and serve as
-role models for their teams. The analogy of the company's organizational chart as
-a chain of gears illustrates how leaders increase their influence as they move up the hierarchy. 
-It signifies the importance of a leader always serving their peers rather than being authoritative
-or demanding.
+The article underscores the importance of maintaining a calm and composed
+demeanor as a leader, emphasizing the need for leaders to mediate their
+reactions and serve as role models for their teams. The analogy of the company's
+organizational chart as a chain of gears illustrates how leaders increase their
+influence as they move up the hierarchy. It signifies the importance of a leader
+always serving their peers rather than being authoritative or demanding.
 
 The text underscores the significance of asking questions when team members seek
-advice, fostering a culture of humility, respect, and trust. It also highlights the
-importance of providing guidance and direction to team members, ensuring they have
-autonomy, opportunities for mastery, and a clear sense of purpose. Furthermore, it
-suggests various leadership practices, including delegation, seeking to replace oneself,
-making timely decisions, shielding the team from chaos, and recognizing team member's
-achievements. The text concludes by emphasizing the need to consider individual
-team members' needs and motivate them, thereby promoting autonomy,
-mastery, and purpose in their work.
+advice, fostering a culture of humility, respect, and trust. It also highlights
+the importance of providing guidance and direction to team members, ensuring
+they have autonomy, opportunities for mastery, and a clear sense of purpose.
+Furthermore, it suggests various leadership practices, including delegation,
+seeking to replace oneself, making timely decisions, shielding the team from
+chaos, and recognizing team member's achievements. The text concludes by
+emphasizing the need to consider individual team members' needs and motivate
+them, thereby promoting autonomy, mastery, and purpose in their work.
 
 ## Reflection
 
-The text offers valuable insights into the transition from being an individual contributor to taking 
-on a leadership position, particularly in the software development world. It overviews the challenges, 
-responsibilities, and misconceptions of becoming a manager or technical leader. The text is a well-structured 
-and informative article that guides anyone on the path to leadership. It stresses the importance of leadership 
-principles and provides insights into modern leadership expectations, all while addressing common pitfalls to
-avoid. In conclusion, this comprehensive and insightful text provides valuable guidance for individuals 
-transitioning to leadership positions, particularly in software development. It's informative and practical, 
-offering readers a clear roadmap for navigating the challenges and responsibilities of leadership while avoiding 
-common pitfalls. The emphasis on humility, respect, and trust as foundational principles of supervision is a crucial 
-takeaway from this text.
-
+The text offers valuable insights into the transition from being an individual
+contributor to taking on a leadership position, particularly in the software
+development world. It overviews the challenges, responsibilities, and
+misconceptions of becoming a manager or technical leader. The text is a
+well-structured and informative article that guides anyone on the path to
+leadership. It stresses the importance of leadership principles and provides
+insights into modern leadership expectations, all while addressing common
+pitfalls to avoid. In conclusion, this comprehensive and insightful text
+provides valuable guidance for individuals transitioning to leadership
+positions, particularly in software development. It's informative and practical,
+offering readers a clear roadmap for navigating the challenges and
+responsibilities of leadership while avoiding common pitfalls. The emphasis on
+humility, respect, and trust as foundational principles of supervision is a
+crucial takeaway from this text.
 
 ## Action Items
 
-Leadership is a necessity for a team to be successful anywhere, not just within our 
-Developer Development Team. Everyone within the team has their specialties and can 
-lead from their point what will be best for the team. Making sure we all are able to 
-contribute to the code and we are able to communicate if there are any issues with one 
-member. We as a team have people who are able to give advice in certain areas.
-But as well, I think we have a lack of leadership amongst us. We do not have a clear understanding
-of what everyone is doing or how far they are on their code is a hinderance on our success. 
-Having more time dedicated to being able to communicate our progress, issues, and knowledge 
-for what we have done is essential for our success. With these things, we will be able to find a 
-way to create these project by the deadlines. 
+Leadership is a necessity for a team to be successful anywhere, not just within
+our Developer Development Team. Everyone within the team has their specialties
+and can lead from their point what will be best for the team. Making sure we all
+are able to contribute to the code and we are able to communicate if there are
+any issues with one member. We as a team have people who are able to give advice
+in certain areas. But as well, I think we have a lack of leadership amongst us.
+We do not have a clear understanding of what everyone is doing or how far they
+are on their code is a hindrance on our success. Having more time dedicated to
+being able to communicate our progress, issues, and knowledge for what we have
+done is essential for our success. With these things, we will be able to find a
+way to create these projects by the deadlines!
 
 {{< include /_back-blog.qmd >}}

@@ -180,7 +180,9 @@ for i in range(n_grammar_seeds):
 
 ## Reflection
 
-FIXME
+Overall, introducing grammars into `chasten` would allow for a greater amount of code coverage on different function inputs. On the other hand, thier implimentation could introduce many issues, such as the fact that we would have to create a large amount of test cases in order to cover all the new possible inputs that we just discovered. That is why these fuzzers should be introduced carefully and only in places where we need to extensively consider all possible inputs. For example, there are a infinite amount of `XPath` expressions that could be introduced into the configuration of `chasten` making it impossible someone to test all inputs for it manually. However, if we were able to use grammar fuzzing to create sample inputted `XPath` expressions then we would save ourselves alot of time as you could create a large amount of inputs very quickly. Using grammar fuzzing on smaller functions however could have the opposite effect as it could mean that we were creating many tests for functions that didn't need extensive testing.
+
+The usage of grammar based fuzzing <strong>could</strong> save our team a great deal of time in testing, but if used incorrectly these functions will cost us a much more time then they are worth. 
 
 ## Use Cases
 

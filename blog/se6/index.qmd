@@ -1,22 +1,22 @@
 ---
 author: [Will Wolff, Finley Banas, Keven Duverglas, Gregory M. Kapfhammer]
 title: 'How to Lead a Team'
-date: '2023-10-20'
+date: '2023-10-23'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>A Comprehensive Guide to Managerial Roles, Servant Leadership, and Creating a Productive Work Environment.</em>
+description: <em>How can we cultivate great leaders in our team?</em>
 toc: true
 page-layout: full
 ---
 
 ## Overview
 
-This blog post discusses the ["How to Lead a Team"]
-(https://abseil.io/resources/swe-book/html/ch03.html) chapter in the
+This blog post discusses the ["How to Lead a
+Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter in the
 [Software Engineering at Google book](https://abseil.io/resources/swe-book).
 Which delves into effective leadership within software development teams,
-highlighting key principles, strategies, and the transition from individual contributor roles to
-leadership positions.
+highlighting key principles, strategies, and the transition from individual
+contributor roles to leadership positions.
 
 
 ## Summary

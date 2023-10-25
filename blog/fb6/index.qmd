@@ -208,23 +208,23 @@ time than they are worth.
 
 ## Use Cases
 
-Utilizing grammars as a simple means of specifying input languages
-can have significant positive effects on our project. For example,
-by utilizing a grammar to generate non-terminal symbols we can create
-an efficient and varied grammar fuzzer tool for Chasten, which can be
-done with `theGrammarFuzzer` class or one of its varied derivatives.
+Using grammars as a simple means of specifying input languages can have
+significant positive effects on our project. For example, by using a grammar to
+generate non-terminal symbols we can create an efficient and varied grammar
+fuzzer tool for [chasten](https://github.com/AstuteSource/chasten), which can
+be done with `theGrammarFuzzer` class or one of its varied derivatives.
 
-Grammars also allow for our project to cover both regular expressions
-found in languages like Python and Turing-compatible languages, which
-are languages which can compute anything within possibility for
-computers. We should utilize this in our project by using grammars
-to allow for compatibility with more languages that meet this criteria.
+Of course, even simple grammar structures such as start symbols and expansion
+rules can be effective for the
+[chasten](https://github.com/AstuteSource/chasten) tool. By defining our start
+symbols as several mathematical terms we can create a highly effective "grammar
+fuzzing" tool for producing complex inputs, which we can utilize to test even
+more inputs for the tool.
 
-Of course, even simple grammar structures such as start symbols and
-expansion rules can be effective for the Chasten tool. By defining
-our start symbols as several mathematical terms we can create a
-highly effective "grammar fuzzing" tool for producing complex inputs,
-which we can utilize to test even more inputs for the tool.
-
+It is also worth noting that the test suite for
+[chasten](https://github.com/AstuteSource/chasten) already uses `from
+hypothesis_jsonschema import from_schema`. This leverages the
+[hypothesis](https://github.com/HypothesisWorks/hypothesis) tool to
+automatically generate inputs that adhere to a provided JSON schema.
 
 {{< include /_back-blog.qmd >}}

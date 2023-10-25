@@ -210,9 +210,9 @@ time than they are worth.
 
 Utilizing grammars as a simple means of specifying input languages
 can have significant positive effects on our project. For example,
-by utilizing a grammar to generate nonterminal symbols we can create
+by utilizing a grammar to generate non-terminal symbols we can create
 an efficient and varied grammar fuzzer tool for Chasten, which can be
-done with theGrammarFuzzer class or one of its varied derivatives.
+done with `theGrammarFuzzer` class or one of its varied derivatives.
 
 Grammars also allow for our project to cover both regular expressions
 found in languages like Python and Turing-compatible languages, which

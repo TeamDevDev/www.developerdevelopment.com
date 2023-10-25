@@ -214,17 +214,39 @@ generate non-terminal symbols we can create an efficient and varied grammar
 fuzzer tool for [chasten](https://github.com/AstuteSource/chasten), which can
 be done with `theGrammarFuzzer` class or one of its varied derivatives.
 
-Of course, even simple grammar structures such as start symbols and expansion
-rules can be effective for the
-[chasten](https://github.com/AstuteSource/chasten) tool. By defining our start
-symbols as several mathematical terms we can create a highly effective "grammar
-fuzzing" tool for producing complex inputs, which we can utilize to test even
-more inputs for the tool.
+It is worth noting that the tests for
+[chasten](https://github.com/AstuteSource/chasten) already use `from
+hypothesis_jsonschema import from_schema` in tests like `test_validate.py`.
+This leverages the [hypothesis](https://github.com/HypothesisWorks/hypothesis)
+tool to automatically generate inputs that adhere to a provided JSON schema
+like this one in `JSON_SCHEMA_CONFIG`:
 
-It is also worth noting that the test suite for
-[chasten](https://github.com/AstuteSource/chasten) already uses `from
-hypothesis_jsonschema import from_schema`. This leverages the
-[hypothesis](https://github.com/HypothesisWorks/hypothesis) tool to
-automatically generate inputs that adhere to a provided JSON schema.
+```json
+JSON_SCHEMA_CONFIG = {
+    "type": "object",
+    "required": [],
+    "properties": {
+        "chasten": {
+            "type": "object",
+            "properties": {
+                "checks-file": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "required": [],
+                },
+            },
+            "additionalProperties": False,
+        },
+    },
+}
+```
+
+We can think of this JSON schema as being like a grammar. With that said, it is
+important to note that `hypothesis` only generates inputs that exactly adhere
+to the grammar and thus we would have to introduce mutation of the generated
+inputs if we wanted to perform mutation-based testing. If we could find a JSON
+schema for `XPath` expressions, then we could use `hypothesis` to automatically
+generate inputs that adhere to the schema and then add our own mutations when
+we want to see how well our program handles abnormal inputs. Sounds useful!
 
 {{< include /_back-blog.qmd >}}

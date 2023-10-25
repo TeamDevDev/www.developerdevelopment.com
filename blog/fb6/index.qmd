@@ -1,10 +1,10 @@
 ---
-author: [Simon Jones, Hank Gref, Caleb Kendra]
+author: [Simon Jones, Hank Gref, Caleb Kendra, Gregory M. Kapfhammer]
 title: Fuzzing with Grammars
 date: '2023-10-20'
 date-format: long
-categories: [post, software engineering, fuzzing book, mutation]
-description: <em>Here, we use a set of rules to create intelligently-fuzzed inputs.</em>
+categories: [post, software engineering, fuzzing book]
+description: <em>Can we use rules to create intelligently-fuzzed inputs?</em>
 toc: true
 page-layout: full
 ---
@@ -12,8 +12,13 @@ page-layout: full
 ## Overview
 
 This article discusses the [Fuzzing with
-Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from
-[The Fuzzing Book](https://www.fuzzingbook.org/).
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from [The
+Fuzzing Book](https://www.fuzzingbook.org/), exploring how its content could
+potentially be useful to the development of our tool,
+[chasten](https://github.com/AstuteSource/chasten). This article builds on the
+[Mutation-Based Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html)
+chapter from [The Fuzzing Book](https://www.fuzzingbook.org/). Let's dive into
+the details!
 
 ## Summary
 
@@ -23,7 +28,7 @@ programming languages would parse a variable identifier:
 ```
 <start> ::= <word>
 <word> ::= <word_char> | <word_char><word>
-<word_char> ::= 
+<word_char> ::=
 a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | _
 ```
 

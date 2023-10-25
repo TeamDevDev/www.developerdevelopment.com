@@ -1,0 +1,252 @@
+---
+author: [Simon Jones, Hank Gref, Caleb Kendra, Gregory M. Kapfhammer]
+title: Fuzzing with Grammars
+date: '2023-10-20'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>Can we use rules to create intelligently-fuzzed inputs?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This article discusses the [Fuzzing with
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from [The
+Fuzzing Book](https://www.fuzzingbook.org/), exploring how its content could
+potentially be useful to the development of our tool,
+[chasten](https://github.com/AstuteSource/chasten). This article builds on the
+[Mutation-Based Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html)
+chapter from [The Fuzzing Book](https://www.fuzzingbook.org/). Let's dive into
+the details!
+
+## Summary
+
+Here is an example of a basic grammar for a word, similar to how most
+programming languages would parse a variable identifier:
+
+```text
+<start> ::= <word>
+<word> ::= <word_char> | <word_char><word>
+<word_char> ::=
+a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | _
+```
+
+We represent many other things using this syntax, including arithmetic
+expressions. Let's build a simple grammar-based fuzzer that takes a grammar as a
+`Dict` input.
+
+```{python}
+import random
+import re
+from typing import Any, Callable, Dict, List, Set, Tuple
+
+Grammar = Dict[str, List[str]]
+
+def nonterminals(expansion):
+    return re.compile(r'(<[^<> ]*>)').findall(expansion)
+
+class ExpansionError(Exception):
+    pass
+
+def simple_grammar_fuzzer(grammar: Grammar, 
+                          start_symbol: str = "<start>",
+                          max_nonterminals: int = 10,
+                          max_expansion_trials: int = 100,
+                          log: bool = False) -> str:
+    """Produce a string from `grammar`.
+       `start_symbol`: use a start symbol other than `<start>` (default).
+       `max_nonterminals`: the maximum number of nonterminals 
+         still left for expansion
+       `max_expansion_trials`: maximum # of attempts to produce a string
+       `log`: print expansion progress if True"""
+
+    term = start_symbol
+    expansion_trials = 0
+
+    while len(nonterminals(term)) > 0:
+        symbol_to_expand = random.choice(nonterminals(term))
+        expansions = grammar[symbol_to_expand]
+        expansion = random.choice(expansions)
+        # In later chapters, we allow expansions to be tuples,
+        # with the expansion being the first element
+        if isinstance(expansion, tuple):
+            expansion = expansion[0]
+
+        new_term = term.replace(symbol_to_expand, expansion, 1)
+
+        if len(nonterminals(new_term)) < max_nonterminals:
+            term = new_term
+            if log:
+                print("%-40s" % (symbol_to_expand + " -> " + expansion), term)
+            expansion_trials = 0
+        else:
+            expansion_trials += 1
+            if expansion_trials >= max_expansion_trials:
+                raise ExpansionError("Cannot expand " + repr(term))
+
+    return term
+```
+
+Now we can fuzz intelligently with a grammar. This chapter provides the grammar
+for URL, which we'll use in the following source code:
+
+```{python}
+URL_GRAMMAR: Grammar = {
+    "<start>":
+        ["<url>"],
+    "<url>":
+        ["<scheme>://<authority><path><query>"],
+    "<scheme>":
+        ["http", "https", "ftp", "ftps"],
+    "<authority>":
+        ["<host>", "<host>:<port>", "<userinfo>@<host>", "<userinfo>@<host>:<port>"],
+    "<host>":  # Just a few
+        ["cispa.saarland", "www.google.com", "fuzzingbook.com"],
+    "<port>":
+        ["80", "8080", "<nat>"],
+    "<nat>":
+        ["<digit>", "<digit><digit>"],
+    "<digit>":
+        ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "<userinfo>":  # Just one
+        ["user:password"],
+    "<path>":  # Just a few
+        ["", "/", "/<id>"],
+    "<id>":  # Just a few
+        ["abc", "def", "x<digit><digit>"],
+    "<query>":
+        ["", "?<params>"],
+    "<params>":
+        ["<param>", "<param>&<params>"],
+    "<param>":  # Just a few
+        ["<id>=<id>", "<id>=<nat>"],
+}
+```
+
+Now we can use it to see that the generated inputs are all valid URLs:
+
+```{python}
+for i in range(10):
+    print(simple_grammar_fuzzer(grammar=URL_GRAMMAR, max_nonterminals=10))
+```
+
+The value `max_nonterminals` gives the fuzzer an upper limit on how many symbols
+it can randomly generate until ending the expression.
+
+Grammars can be used as a kind of way to seed an input before mutating it. This
+way, instead of having a static seed for mutation, your seed can be randomized
+as well. Just when you thought fuzzing could not get any deeper, right? We can
+apply this directly to mutation-based fuzzing that we discussed last week in
+the article entitled [Mutation-Based Fuzzing](../fb5/index.qmd).
+
+```{python}
+def delete_random_character(s: str) -> str:
+    if s == "":
+        return s
+    pos = random.randint(0, len(s) - 1)
+    return s[:pos] + s[pos + 1:]
+
+def insert_random_character(s: str) -> str:
+    pos = random.randint(0, len(s))
+    random_character = chr(random.randrange(32, 127))
+    return s[:pos] + random_character + s[pos:]
+
+def flip_random_character(s: str) -> str:
+    if s == "":
+        return s
+    pos = random.randint(0, len(s) - 1)
+    c = s[pos]
+    bit = 1 << random.randint(0, 6)
+    new_c = chr(ord(c) ^ bit)
+    return s[:pos] + new_c + s[pos + 1:]
+
+def mutate(s: str) -> str:
+    mutators = [
+        delete_random_character,
+        insert_random_character,
+        flip_random_character
+    ]
+    mutator = random.choice(mutators)
+    return mutator(s)
+
+def multi_mutate(s: str, n: int) -> str:
+    res = s
+    for i in range(n):
+        res = mutate(res)
+    return res
+
+n_grammar_seeds = 10
+for i in range(n_grammar_seeds):
+    original = simple_grammar_fuzzer(grammar=URL_GRAMMAR, max_nonterminals=10)
+    mutated = multi_mutate(simple_grammar_fuzzer(grammar=URL_GRAMMAR, max_nonterminals=10), 5)
+    print(f"original: {original}")
+    print(f"mutated: {mutated}")
+```
+
+## Reflection
+
+On one hand, introducing grammars into `chasten` would allow for a greater
+amount of code coverage on different function inputs. On the other hand, their
+implementation could introduce many issues, such as the fact that we would have
+to create a large number of test cases in order to cover all the new possible
+inputs that we just discovered. That is why these fuzzers should be introduced
+carefully and only in places where we need to consider all inputs extensively.
+For example, there are an infinite amount of `XPath` expressions that could be
+introduced into the configuration of `chasten` making it impossible for someone
+to test all inputs for it manually.
+
+However, if we could use grammar fuzzing to create sample inputted `XPath`
+expressions, we would save ourselves a lot of time as you could create a large
+number of inputs very quickly. Using grammar fuzzing on smaller functions,
+however, could have the opposite effect as it could mean that we were creating
+many tests for functions that didn't need extensive testing.
+
+The usage of grammar-based fuzzing <strong>could</strong> save our team a great
+deal of time in testing, but if misused these functions will cost us much more
+time than they are worth.
+
+## Use Cases
+
+Using grammars as a simple means of specifying input languages can have
+significant positive effects on our project. For example, by using a grammar to
+generate non-terminal symbols we can create an efficient and varied grammar
+fuzzer tool for [chasten](https://github.com/AstuteSource/chasten), which can
+be done with `theGrammarFuzzer` class or one of its varied derivatives.
+
+It is worth noting that the tests for
+[chasten](https://github.com/AstuteSource/chasten) already use `from
+hypothesis_jsonschema import from_schema` in tests like `test_validate.py`.
+This leverages the [hypothesis](https://github.com/HypothesisWorks/hypothesis)
+tool to automatically generate inputs that adhere to a provided JSON schema
+like this one in `JSON_SCHEMA_CONFIG`:
+
+```json
+JSON_SCHEMA_CONFIG = {
+    "type": "object",
+    "required": [],
+    "properties": {
+        "chasten": {
+            "type": "object",
+            "properties": {
+                "checks-file": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "required": [],
+                },
+            },
+            "additionalProperties": False,
+        },
+    },
+}
+```
+
+We can think of this JSON schema as being like a grammar. With that said, it is
+important to note that `hypothesis` only generates inputs that exactly adhere
+to the grammar and thus we would have to introduce mutation of the generated
+inputs if we wanted to perform mutation-based testing. If we could find a JSON
+schema for `XPath` expressions, then we could use `hypothesis` to automatically
+generate inputs that adhere to the schema and then add our own mutations when
+we want to see how well our program handles abnormal inputs. Sounds useful!
+
+{{< include /_back-blog.qmd >}}

@@ -25,7 +25,7 @@ the details!
 Here is an example of a basic grammar for a word, similar to how most
 programming languages would parse a variable identifier:
 
-```
+```text
 <start> ::= <word>
 <word> ::= <word_char> | <word_char><word>
 <word_char> ::=

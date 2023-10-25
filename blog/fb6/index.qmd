@@ -89,7 +89,7 @@ def simple_grammar_fuzzer(grammar: Grammar,
 ```
 
 Now we can fuzz intelligently with a grammar. This chapter provides the grammar
-for URL, which we'll use:
+for URL, which we'll use in the following source code:
 
 ```{python}
 URL_GRAMMAR: Grammar = {
@@ -137,7 +137,8 @@ it can randomly generate until ending the expression.
 Grammars can be used as a kind of way to seed an input before mutating it. This
 way, instead of having a static seed for mutation, your seed can be randomized
 as well. Just when you thought fuzzing could not get any deeper, right? We can
-apply this directly to mutation-based fuzzing that we discussed last week:
+apply this directly to mutation-based fuzzing that we discussed last week in
+the article entitled [Mutation-Based Fuzzing](../fb5/index.qmd).
 
 ```{python}
 def delete_random_character(s: str) -> str:

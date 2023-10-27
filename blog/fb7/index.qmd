@@ -21,7 +21,28 @@ pursue a better implementation. Let's dive into the details!
 
 ## Summary
 
+This chapter opens with outlining the issues with the `simple_grammar_fuzzer`
+introduced previously, which are that it is inefficient and hard to control. It
+can continue adding parantheses indefinitely, for example, and has a complexity
+of O(n^2) as part of this. Therefore **derivation trees** are now introduced,
+which are a form of visualization for the steps of a grammar.
 
+Below is an example of a tree built from the expression `2 + 2`.
+![DerivationTreeExample](derivation_tree.PNG)
+
+This representation works well for a higher level understanding, but is not a
+feasible way to show in code as that stands. The code representation is possible
+through the use of a combination of tuples and lists, using the formula
+`(SYMBOL_NAME, CHILDREN)`. See below for an expanded example of this.
+
+```python
+DerivationTree = ("<start>",
+                   [("<expr>",
+                     [("<expr>", None),
+                      (" + ", []),
+                         ("<term>", None)]
+                     )])
+```
 
 ## Reflection
 

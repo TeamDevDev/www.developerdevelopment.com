@@ -44,6 +44,55 @@ DerivationTree = ("<start>",
                      )])
 ```
 
+Each node has its own subnodes, until it reaches the outermost "leaves" of the
+derivation tree. Using this, the chapter then outlines how to add functionality
+for traversing and expanding nodes/whole trees using the methods it defines for
+a `GrammarFuzzer` class. Below is an example of a method for expanding a node
+randomly for fuzzing purposes.
+
+```python
+class GrammarFuzzer(GrammarFuzzer):
+    def choose_node_expansion(self, node: DerivationTree,
+                              children_alternatives: List[List[DerivationTree]]) -> int:
+        """Return index of expansion in `children_alternatives` to be selected.
+           'children_alternatives`: a list of possible children for `node`.
+           Defaults to random. To be overloaded in subclasses."""
+        return random.randrange(0, len(children_alternatives))
+```
+
+From there, limits are defined for maximum and minimum costs as another manner
+of expanding that is less random. The minimum costs help with closing the tree,
+to avoid some of the concerns about inefficiency surrounding the
+`simple_grammar_fuzzer`. An example of expanding by minimum costs is presented
+below.
+
+```python
+class GrammarFuzzer(GrammarFuzzer):
+    def expand_node_min_cost(self, node: DerivationTree) -> DerivationTree:
+        if self.log:
+            print("Expanding", all_terminals(node), "at minimum cost")
+
+        return self.expand_node_by_cost(node, min)
+```
+
+And then the expanding by maximum costs, good for using to start the tree,
+displayd here.
+
+```python
+class GrammarFuzzer(GrammarFuzzer):
+    def expand_node_max_cost(self, node: DerivationTree) -> DerivationTree:
+        if self.log:
+            print("Expanding", all_terminals(node), "at maximum cost")
+
+        return self.expand_node_by_cost(node, max)
+```
+
+These three forms of expansion can be applied together in order to achieve
+a more efficient form of fuzzing with grammars. By using the `GrammarFuzzer`
+class and the methods created for it, tests can be generated much more quickly,
+with the trade-off of creating smaller inputs that we have increased control
+over.
+
 ## Reflection
 
 

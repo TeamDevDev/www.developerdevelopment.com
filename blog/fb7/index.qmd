@@ -1,0 +1,34 @@
+---
+author: [Mordred Boulais, Miles Franck, Evan Nelson]
+title: Efficient Grammar Fuzzing
+date: '2023-10-30'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>Implementing grammars for fuzzing.</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This article discusses the
+[Efficient Grammar Fuzzing](https://www.fuzzingbook.org/html/GrammarFuzzer.html)
+chapter from [The Fuzzing Book](https://www.fuzzingbook.org/), exploring how its
+content could potentially be useful to the development of our tool,
+[chasten](https://github.com/AstuteSource/chasten). This article builds on the
+[Fuzzing with Grammars](https://www.fuzzingbook.org/html/Grammars.html),to
+pursue a better implementation. Let's dive into the details!
+
+## Summary
+
+
+
+## Reflection
+
+
+
+## Use Cases
+
+
+
+{{< include /_back-blog.qmd >}}

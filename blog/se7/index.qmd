@@ -12,9 +12,22 @@ page-layout: full
 ## Overview
 
 This blog post discusses the ["Leading at Scale"](https://abseil.io/resources/swe-book/html/ch06.html) chapter in the
-[Software Engineering at Google book](https://abseil.io/resources/swe-book). 
+[Software Engineering at Google book](https://abseil.io/resources/swe-book). The chapter delves into the challenges faced in the leadership journey and offers valuable insights into effective leadership strategies within a organization.
 
 ## Summary
+The chapter outlines three fundamental principles of successful leadership. By embracing these principles, leaders can navigate the complexities of growth, ensuring the longevity and effectiveness of both their teams and the organization as a whole. 
+
+**Always be Deciding:** Effective decision-making is paramount for leaders. They must assess trade-offs, considering both immediate and long-term consequences. Leaders need to identify blind spots within their team, where prolonged focus on a specific project can hinder a broader perspective. The chapter emphasizes the significance of keen observation and active listening, as the following statement: 
+
+> This is what good management is about: 95% observation and listening, and 5% making critical adjustments in just the right place.
+
+This quote underscores the importance of observation and empathetic learning in effective decision-making. By understanding the team dynamics and project requirements, leaders can make precise adjustments, ensuring the team's success. 
+
+**Always be Leaving:** Creating a self-sufficient team is important to prevent a single point of failure, where the team's functionality relies heavily on the leader. This dependencies poses a significant risk, as outlined in the concept of ["bus factor"](https://en.wikipedia.org/wiki/Bus_factor). Leader must empower their teams to operate independently, fostering a culture of knowledge sharing and collaboration. This approach not only ensure the team's resilience but also nurtures a sense of collective ownership and responsibility.
+
+**Always be Scalling:** The chapter mentions the cycle of success in an organization. Over the time, organizations continually face new challenges and opportunities. Effective leadership involves guiding the team through this cycle of growth, wherein each successfully tackled problem becomes a foundation for handling more complex, parallel struggles. This bittersweet truth underscores the nature of leadership. Managers must balance the team's capabilities with the demands of new projects, ensuring the organization evolves sustainably.
+
+Lastly, leaders must recognize their limited resources of time, energy, and attention. Effective management involves discerning between urgent and important tasks, ensuring that critical issues get solve while blocking time for not-urgent-but-important tasks. Additionally, learning to delegate tasks not only allows leaders to focus on strategic management development but also nurtures emerging leaders within the team.
 
 ## Reflection
 

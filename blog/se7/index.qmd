@@ -4,7 +4,7 @@ title: 'Leading at Scale'
 date: '2023-10-30'
 date-format: long
 categories: [post, professional development, software engineering]
-description: 
+description: <em>Leadership strategies for scaling the team effectively</em>
 toc: true
 page-layout: full
 ---

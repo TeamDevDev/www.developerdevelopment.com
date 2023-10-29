@@ -33,5 +33,9 @@ Lastly, leaders must recognize their limited resources of time, energy, and atte
 
 ## Action Items
 
+In our team, leadership roles may not be formally defined, but this doesn't hinder our ability to boost productivity and efficiency. Every team member can adopt leadership strategies, avoiding the need for micromanagement, which can stifle progress. Embracing failure as part of the learning process is essential. Even in smaller projects, we should keep these principles in mind.
+
+While we currently operate without specific leaders, it might be beneficial to introduce more formal leadership roles in the future. This will help ensure alignment and direction, but it's also important that each team member has the opportunity to lead at some point. After all, our group is not just a software engineering team; it's a class, and leadership development is a key part of our collective growth. 
+
 
 {{< include /_back-blog.qmd >}}

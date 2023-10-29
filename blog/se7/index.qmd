@@ -31,6 +31,8 @@ Lastly, leaders must recognize their limited resources of time, energy, and atte
 
 ## Reflection
 
+The text talked about how we can create success in our team through leadership and underlines the three main areas to focus on to lead. The three main points addressed above show us what must be done in order to for us in the developer development team to have success and accomplish the goal to finish our projects by the end of the semester. Within each point it gives key insight such as examples and other notes and goes in depth for what is meant to be taken. An example is the cycle of success and the case study: Addressing the "Latency" of Web Search. Both of these gave a clear insight of systems that could be implemented in the team. This also gave more additionally from last week's SE6 discussion about how to lead a team as that offered a base for the SE7 discussion on leading at a scale. It adds on to the points given previously and proceeds to give more advice that could be grasped for leading in our team.
+
 ## Action Items
 
 

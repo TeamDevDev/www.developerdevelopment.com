@@ -39,9 +39,9 @@ articles. Our primary focus is to *develop software*. While we can still seek to
 improve our technical literacy and learn, we have created a considerable
 overhead for ourselves. Doing away with this weekly responsibility will mitigate
 problems such as this. Additionally, this will yield more time that can be
-dedicated to developing chasten.
+dedicated to developing software.
 
-Finally, it is worth noting that such a circumstance can easily happen again if
-a team is not willing to devote their personal time to working on review. We as
-a team need to own up to managing our time and balancing it with developing the
-Chasten code base.
+Finally, it is worth noting that such a circumstance as was documented in this
+incident report can easily happen again if a team is not willing to devote their
+personal time to working on review. We, as a team, need to own up to managing our
+time and balancing it with developing of software tools!

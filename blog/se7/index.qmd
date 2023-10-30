@@ -39,12 +39,13 @@ effective decision-making. By understanding the team dynamics and project
 requirements, leaders can make precise adjustments, thereby better ensuring the
 team's success.
 
-**Always be Leaving:** Creating a self-sufficient team is important to prevent a
-single point of failure, where the team's functionality relies heavily on the
-leader. This dependencies poses a significant risk, as outlined in the concept
-of ["bus factor"](https://en.wikipedia.org/wiki/Bus_factor). Leader must empower
-their teams to operate independently, fostering a culture of knowledge sharing
-and collaboration. This approach not only ensure the team's resilience but also
+**Always be Leaving:** Creating a self-sufficient team is an important way to
+prevent a single point of failure, where the team's functionality relies heavily
+on a leader or some other core contributor. This dependencies poses a
+significant risk, as illustrated in the concept of ["bus
+factor"](https://en.wikipedia.org/wiki/Bus_factor). A leader must empower their
+teams to operate independently, fostering a culture of knowledge sharing and
+collaboration. This approach not only ensures the team's resilience but also
 nurtures a sense of collective ownership and responsibility.
 
 **Always be Scaling:** The chapter mentions the cycle of success in an

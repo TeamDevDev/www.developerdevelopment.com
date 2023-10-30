@@ -21,8 +21,8 @@ few issues:
 
 - Rare circumstances prevented us from meeting in person.
 - Not all team members were aware of the deadlines we have for the summaries.
-- There are varying levels of background on our writing team, meaning that
-some of us may not produce a summary that sufficiently describes the technical
+- There are varying levels of background on our writing team, meaning that some
+of us may not produce a summary that sufficiently describes the technical
 subject we are reviewing, making significant revisions often needed.
 
 Needless to say, sickness and personal circumstances will always "throw a

@@ -1,10 +1,13 @@
 ---
 title: ""
+page-layout: article
 title-block-style: default
 title-block-banner: false
 ---
 
 ![**Developing developers so that they can develop better software!**](images/Developer-Development-Horizontal-Logo.svg){fig-align="center"}
+
+## Introduction
 
 Regardless of the role or the company or the project in which they find
 themselves, a software engineer is always a *developing developer*. Like the
@@ -16,6 +19,8 @@ nefarious bugs that they have not yet found and fixed! Always working to
 establish a confidence in their program's correctness, a developing developer
 aims to engineer and ship high-quality software that is designed, documented,
 tested, and maintained according to industry best practices.
+
+## Schedule
 
 With the goal of enabling effective developer development, this web site
 features a sixteen-week schedule filled with activities that support
@@ -49,6 +54,8 @@ participants of this sixteen-week course will gain valuable perspectives and
 practical skills to enhance their software engineering skills while
 collaboratively building and releasing two open-source tools.
 
+## Adventure
+
 Interested in getting started on a developer development adventure? Begin here:
 
 - The [sixteen-week course schedule](./schedule/index.qmd) offers detailed
@@ -66,3 +73,16 @@ learned when actively engaging with the content in **SE**, **FB**, and **DB**.
 The blog also contains reports from the design, implementation, testing,
 documentation, and deployment of two software projects. Read more to watch us
 develop as developers!
+
+::: {.callout-note appearance="minimal" title="Developer Development Community"}
+
+Interested in connecting with other like-minded developing developers? Please
+join the [Developer Development Discord Server](https://discord.gg/aNfn8DNEMx)
+and join the conversation! If you are an on-campus learning at Allegheny
+College, you may also join the [Allegheny College Computer Science Discord
+Server](https://discord.gg/CS2h9kXzX6). Finally, if you are an on-campus
+learner, then you may schedule a meeting with the course instructor during
+office hours by visiting the [Course Instructor's Appointment
+Scheduler](https://www.gregorykapfhammer.com/schedule/).
+
+:::

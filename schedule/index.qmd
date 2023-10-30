@@ -249,7 +249,7 @@ regards to all content previously covered between week one and week five.
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - *Discuss the team's executive summary and write a professional précis*:
-    - **Team-based Discussion of SE5**: How to Work Well on Teams
+    - **Team-based Discussion of SE5**: Engineering for Equity
     - **Preparation for SE6**: How to Lead a Team
 - {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:

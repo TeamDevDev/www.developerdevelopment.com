@@ -1,0 +1,39 @@
+---
+title: "Team Policies"
+toc: true
+page-layout: full
+---
+
+- Blog posts for the Developer Development website will be created by a committee
+of three people. Committees will be assigned for the week on Mondays at 9:35am.
+
+- The committees will be expected to have final/working drafts by 9:00pm on
+Sundays for the post reviewed on Monday, and at 9:00pm on Tuesday for the post
+reviewed on Wednesday. Because of this, individual team members are expected to
+complete their first professional precis of the week by Wednesdays 9:00am, and
+the second by Fridays at 9:00am.
+
+- Committees are encouraged to seek help from the team at large if they feel
+that they cannot complete their work on time. They are encouraged to do so
+at least nine hours prior to their deadline.
+
+- Failure to meet the goals necessitates that one or more committee members
+must write an incident report, to be published as a blog post, and must
+within 24 hours of that initial deadline have something to show for their work.
+In 48 hours, it must be complete.
+
+- Incident reports must consist of a review of the cause of the issue, the
+issue itself, and how to resolve/prevent the issue from occurring again.
+
+- Pull requests to the team's project require three reviewers before they can
+be merged. This should be done within a week of a pull request leaving the
+'draft' state.
+
+- We have assigned Policy and Schedule Maintainers, who will be in charge of
+updating their corresponding responsibilities weekly and/or as needed.
+
+- At minimum, five issues in the Chasten repository must be worked on per week.
+Ideally, ten to twelve will see progress, if not total completion.
+
+- Each pull request must receive three reviews, two of which must be from team
+leaders or the course instructor.

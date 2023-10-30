@@ -13,9 +13,10 @@ page-layout: full
 
 This is our first post about the [Software Engineering at Google
 book](https://abseil.io/resources/swe-book)! The goal of this post is to relate
-the material from the book to our progress on our Chasten tool, with the hope
-that it will provide valuable lessons on how we approach designing and
-developing our own software.
+the material from the book to our progress on our
+[Chasten](https://github.com/AstuteSource/chasten) tool, with the hope that it
+will provide valuable lessons on how we approach designing and developing our
+own software.
 
 ## Summary
 
@@ -24,9 +25,9 @@ Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time
 section introduces the idea that software engineering encompasses more than just
 writing code &mdash; it also involves creating processes that enable the
 development of maintainable and sustainable software. The preface makes it clear
-that, instead of viewing a software release as the final version, it should be
-seen as a foundation for continuous improvement. To achieve sustainability and
-growth, the book emphasizes three key aspects:
+that, instead of viewing a software release as the "final version," we should
+see it as a foundation for continuous improvement. The book's preface emphasizes
+three key concepts:
 
 - **Time**: To ensure that software is designed for future enhancements, it's
 crucial to plan how it will evolve from project inception to completion. This
@@ -46,28 +47,27 @@ importance of making well-informed trade-offs when necessary.
 
 ## Reflection
 
-Reflecting on our project's progress, we've recognized the need to prioritize
-scaling, emphasizing clear planning, and communication as our team tackles a
-significant project with limited experience. Given our constrained time-frame,
-we must carefully weigh the importance of features against their implementation
-cost. Google's software engineering practices emphasize the importance of a
-shared team goal and code durability, guiding us in building a resilient and
-adaptable product. This feedback is relevant to
-[Chasten](https://github.com/AstuteSource/chasten), our Python program, which
-uses XPath expressions to enhance code analysis, ensuring its continued success.
+As outlined in the [developer development schedule](../../schedule/index.qmd),
+we are embarking on a sixteen-week adventure to build two production-quality
+software tools. This reflective content is relevant to
+[Chasten](https://github.com/AstuteSource/chasten), a tool that we are building
+to automatically search for source code patterns using XPath expressions.
+Reflecting on our project's progress so far, we've recognized the need to
+prioritize scaling, emphasizing clear planning and communication as our team
+tackles a significant project with limited experience. Given our constrained
+time-frame, we must carefully weigh the importance of features against their
+implementation cost. Google's software engineering practices emphasize the
+importance of a shared team goal and code durability --- they will serve as a
+worthy guide as we build a resilient and adaptable tool.
 
 ## Action Items
 
-The principles and concepts from the [SE at Google
-book](https://abseil.io/resources/swe-book/html/pr01.html) can be adapted to
-enhance the development and maintenance of Chasten as a critical computational
-biology and physiology library. By focusing on sustainability, adaptability, and
-rigorous engineering practices, Chasten can continue to serve the scientific
-community effectively. By adapting the principles and concepts from "Software
-Engineering at Google," Chasten can enhance its development and maintenance,
-making it more sustainable, adaptable, and robust. This approach will enable
-Chasten to continue serving the scientific community effectively, meet evolving
-computational biology and physiology needs, and maintain its relevance in the
-long term.
+We can adopt the principles and concepts from the [preface of the Software
+Engineering at Google book](https://abseil.io/resources/swe-book/html/pr01.html)
+to enhance the development and maintenance of Chasten as a critical
+computational biology and physiology library. By focusing on sustainability,
+adaptability, and rigorous engineering practices, we improve the likelihood that
+Chasten will serve the Python community. We have a lot to learn about this
+process --- but we look forward to the adventure!
 
 {{< include /_back-blog.qmd >}}

@@ -53,9 +53,9 @@ that, by necessity, the meeting before yours may sometimes run late.
   - *Developing as Developers*: Friday, 9:00 AM -- 9:50 AM, Alden 109
       - Review the professional précis documents written by team members
       - Create an executive summary for the week's professional skills
-      - Create an executive summary for the week's professional skills
+      - Create an executive summary for the week's technical skills
       - Publish the executive summaries to the Developer Development web site
-      - Confirmation of readiness for next week's in-class discussions
+      - Confirm our team's readiness for next week's in-class discussions
       - When needed, implement and demonstrate software engineering project
 - **Collaborative Software Engineering**: Tuesday, 2:30 PM -- 4:20 PM, Alden 109
 
@@ -145,40 +145,45 @@ maintainable software system.
 - **SE-2**: Demonstrates competency in the theories, models, and practices of
 project domains that require the engineering of software.
 
-  - Enables the attainment of **AC-1** and **AC-3**
+  - Enables the attainment of **AC-2** and **AC-3**
 
-- **SE-3**: Can effectively manage and predict the cost, scope, and deadline of
+- **SE-3**: Can effectively create and use software engineering tools that
+support software engineering activities like testing and debugging.
+
+  - Enables the attainment of **AC-1** and **AC-4**
+
+- **SE-4**: Can effectively manage and predict the cost, scope, and deadline of
 a software engineering project.
 
-  - Enables the attainment of **AC-2** and **AC-4**
+  - Enables the attainment of **AC-2** and **AC-3**
 
-- **SE-4**: Uses effective oral and written communication methods to explain
+- **SE-5**: Uses effective oral and written communication methods to explain
 both the technical and product-use details of a software artifact.
 
-  - Enables the attainment of **AC-2** and **AC-3**
+  - Enables the attainment of **AC-1** through **AC-5**
 
 The following list itemizes the three types of activities and two types of
 assessments in Computer Science 203 and illustrates their connection to the
 course learning objectives:
 
 - *Course Activities*:
-  - **Technical Development**: Develops **SE-1** and **SE-2**
-  - **Professional Development**: Develops **SE-3** and **SE-4**
-  - **Project Development**: Develops **SE-1** through **SE-4**
+  - **Technical Development**: Develops **SE-1**, **SE-2**, **SE-3**
+  - **Professional Development**: Develops **SE-3**, **SE-4**, **SE-5**
+  - **Project Development**: Develops **SE-1**, **SE-2**, **SE-3**, **SE-4**, **SE-5**
 - *Course Assessments*:
-  - **Executable Examinations**: Assesses **SE-1** and **SE-2**
-  - **In-Person Assessments**: Assesses **SE-3** and **SE-4**
+  - **Executable Examinations**: Assesses **SE-1**, **SE-2**, **SE-3**
+  - **In-Person Assessments**: Assesses **SE-3**, **SE-4**, **SE-5**
 
 Finally, the following list illustrates how the learning objectives for
 Allegheny College are attained through the successful completion of Computer
 Science 203.
 
-- **AC-1** is attained through the course learning objectives **SE-1** and **SE-2**
-- **AC-2** is attained through the course learning objectives **SE-3** and **SE-4**
-- **AC-3** is attained through the course learning objectives **SE-2** and **SE-4**
-- **AC-4** is attained through the course learning objectives **SE-1** and **SE-3**
+- **AC-1** is attained through the course learning objectives **SE-1**, **SE-3**, **SE-5**
+- **AC-2** is attained through the course learning objectives **SE-2**, **SE-4**, **SE-5**
+- **AC-3** is attained through the course learning objectives **SE-2**, **SE-4**, **SE-5**
+- **AC-4** is attained through the course learning objectives **SE-1**, **SE-3**, **SE-5**
 
-All four of the course's learning objectives support the **SP** and **SB**
+All five of the course's learning objectives support the **SP** and **SB**
 distribution requirements.
 
 ::: {.callout-note appearance="minimal" title="Developing as Developers" collapse="false"}
@@ -252,7 +257,7 @@ The course will also leverage excerpts from the following supporting text books:
 
 ::: {.callout-note appearance="minimal" title="Accessing the Supporting Textbooks" collapse="false"}
 
-Since the latter four books in the above list are not open-access, the course
+Since the latter three books in the above list are not open-access, the course
 instructor will maintain a copy on reserve that will be available during the
 class and laboratory sessions.
 
@@ -341,19 +346,19 @@ in **FB**/**DB** and (ii) allow a learner to demonstrate an understanding of
 facts and ideas by interpreting and implementing the main technical ideas
 presented in either **FB** or **DB**.
 
-- **Project Development**: These assignments invite students to explore
-different techniques for specifying, designing, implementing, testing,
+- **Project Development**: These team-based assignments invite students to
+explore different techniques for specifying, designing, implementing, testing,
 documenting, deploying, and maintaining real-world, open-source Python programs.
-These assignments also encourage students to use software engineering tools to
-complete tasks like debugging, testing, and refactoring. The technical work that
-a student completes during project development will take place in a public
-GitHub repository and will be further documented and reflected on in a private
-GitHub repository that the instructor will use to furnish feedback to the
-student. Finally, the professional work that a student undertakes as part of
-project development will occur in both an in-person setting and through a public
-GitHub repository, with the use of a private GitHub repository offering the
-opportunity for the student to document and reflect on their contributions and
-for the instructor to offer feedback.
+These assignments also encourage students to use and build software engineering
+tools to complete tasks like debugging and testing. The technical work that a
+student completes during project development will take place in a public GitHub
+repository and will be further documented and reflected on in a private GitHub
+repository that the instructor will use to furnish feedback to the student.
+Finally, the professional work that a student undertakes as part of project
+development will occur in both an in-person setting and through a public GitHub
+repository, with the use of a private GitHub repository offering the opportunity
+for the student to document and reflect on their contributions and for the
+instructor to offer detailed feedback.
 
 Both the **Professional Development** and **Technical Development** assessment
 categories require students to complete the following tasks on a weekly basis:
@@ -373,9 +378,9 @@ minimum, the following document sections:
   Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
 - Working in a partner-based fashion, the review of your partner's professional
-précis for either an **SE** or **FB**/**DB**, resulting in the creation of an
-issue in the GitHub issue tracker for your partner's web site that summarizes
-your essence of your suggestions.
+précis for either an **SE** or **FB**/**DB** article, resulting in the creation
+of an issue in the GitHub issue tracker for your partner's web site that
+summarizes the essence of your suggestions.
 - Using GitHub, a response to the suggestions that your partner made in the
 GitHub issue tracker and a summary of the steps taken to improve your
 professional précis.
@@ -427,7 +432,8 @@ is merged into main branch of a GitHub repository.
 
 #### Assessment Policies
 
-Students must abide by the following assessment policies:
+Unless exempted by the instructor, students must abide by the following
+assessment policies:
 
 ##### Assignment Submission
 

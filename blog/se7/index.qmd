@@ -24,19 +24,20 @@ embracing these principles, leaders can navigate the complexities of growth,
 ensuring the longevity and effectiveness of both their teams and the
 organization as a whole.
 
-**Always be Deciding:** Effective decision-making is paramount for leaders. They
-must assess trade-offs, considering both immediate and long-term consequences.
-Leaders need to identify blind spots within their team, where prolonged focus on
-a specific project can hinder a broader perspective. The chapter emphasizes the
-significance of keen observation and active listening, as the following
-statement:
+**Always be Deciding:** Effective decision-making is paramount for leaders in
+software organizations. They must assess trade-offs, considering both immediate
+and long-term consequences. Leaders need to identify blind spots within their
+team, where prolonged focus on a specific project can hinder a broader
+perspective. The chapter emphasizes the significance of keen observation and
+active listening, as evidenced by the following statement:
 
 > This is what good management is about: 95% observation and listening, and 5%
 > making critical adjustments in just the right place.
 
 This quote underscores the importance of observation and empathetic learning in
 effective decision-making. By understanding the team dynamics and project
-requirements, leaders can make precise adjustments, ensuring the team's success.
+requirements, leaders can make precise adjustments, thereby better ensuring the
+team's success.
 
 **Always be Leaving:** Creating a self-sufficient team is important to prevent a
 single point of failure, where the team's functionality relies heavily on the

@@ -27,7 +27,7 @@ subject we are reviewing, making significant revisions often needed.
 
 Needless to say, sickness and personal circumstances will always "throw a
 wrench" in the collaborative writing process. Given that we are currently
-working to put our team policies on [our
+working to put our [team policies](../../policies/index.qmd) on [our
 website](https://www.developerdevelopment.com/), we may see the issue regarding
 the lack of informed team members disappear in the following weeks. Lastly, as
 long as we continue to meet together and read these articles, the general

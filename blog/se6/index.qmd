@@ -64,7 +64,7 @@ contributor to taking on a leadership position, particularly in the software
 development world that is focused on creating
 [Chasten](https://github.com/AstuteSource/chasten). It overviews the challenges,
 responsibilities, and misconceptions of becoming a manager or technical leader.
-The text is a well-structured and informative article that guides anyone on the
+The chapter is a well-structured and informative article that guides anyone on the
 path to leadership. It stresses the importance of leadership principles and
 provides insights into modern leadership expectations, all while addressing
 common pitfalls to avoid. In conclusion, article provides valuable guidance for

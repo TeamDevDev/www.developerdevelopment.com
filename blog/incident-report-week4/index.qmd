@@ -44,4 +44,4 @@ dedicated to developing software.
 Finally, it is worth noting that such a circumstance as was documented in this
 incident report can easily happen again if a team is not willing to devote their
 personal time to working on review. We, as a team, need to own up to managing our
-time and balancing it with developing of software tools!
+time and balancing it with the task of developing software tools!

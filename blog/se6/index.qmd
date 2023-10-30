@@ -17,7 +17,7 @@ Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter in the
 chapter delves into effective leadership within software development teams,
 highlighting key principles, strategies, and the transition from individual
 contributor roles to leadership positions. Let's dive into how we can apply this
-article!
+article to software engineering!
 
 ## Summary
 

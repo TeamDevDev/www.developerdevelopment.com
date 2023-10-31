@@ -95,7 +95,12 @@ over.
 
 ## Reflection
 
+This chapter helped to grow my understanding of grammar-based fuzzing. Before, I would not have known that there were more ways to perform grammar-based fuzzing. Grammar Fuzzing focuses on the concept of grammar-based fuzzing and highlights some of its initial flaws as well as how to address and debug them. There are also many cons to grammar-based fuzzing, such as efficiency, infinite loops, and bugs that can occur by not paying careful attention to the grammar rules set in place.
 
+1. Deviation Trees: Deviation trees are a visual representation of the grammar of a string. They create a tree-like structure that breaks down the grammar into smaller and smaller components until you reach the end of the tree. Deviation trees are useful for understanding how a string conforms to its grammar and identifying deviations or errors.
+2. Implementation of Grammars: The chapter discusses how to implement grammars in data structures such as tuples and lists. This is a crucial step in grammar-based fuzzing, as it defines the rules and structures that the fuzzer will use to generate test cases.
+
+The use of grammar-based fuzzing can be a powerful tool for testing software, but this also has many tradeoffs. Simple grammer fuzzing can be really inefficient, especially when dealing with large grammars and complex language structures. These inefficiencies become apparent as the function has to iterate over the generated string, searching for symbols
 
 ## Use Cases
 

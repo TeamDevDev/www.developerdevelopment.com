@@ -1,0 +1,28 @@
+---
+author: [Hank Gref, Jason Gyamfi, Haylee Pierce]
+title: Parsing Inputs
+date: '2023-11-'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em></em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+
+
+## Summary
+
+
+
+## Reflection
+
+
+
+## Use Cases
+
+
+
+{{< include /_back-blog.qmd >}}

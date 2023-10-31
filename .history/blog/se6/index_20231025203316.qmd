@@ -17,7 +17,7 @@ Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter in the
 chapter delves into effective leadership within software development teams,
 highlighting key principles, strategies, and the transition from individual
 contributor roles to leadership positions. Let's dive into how we can apply this
-article to software engineering!
+article!
 
 ## Summary
 
@@ -64,7 +64,7 @@ contributor to taking on a leadership position, particularly in the software
 development world that is focused on creating
 [Chasten](https://github.com/AstuteSource/chasten). It overviews the challenges,
 responsibilities, and misconceptions of becoming a manager or technical leader.
-The chapter is a well-structured and informative article that guides anyone on the
+The text is a well-structured and informative article that guides anyone on the
 path to leadership. It stresses the importance of leadership principles and
 provides insights into modern leadership expectations, all while addressing
 common pitfalls to avoid. In conclusion, article provides valuable guidance for

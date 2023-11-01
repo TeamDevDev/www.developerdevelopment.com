@@ -104,10 +104,10 @@ There are also many drawbacks associated with grammar-based fuzzing, such as
 efficiency, infinite loops, and bugs that can occur by not paying careful
 attention to the grammar rules set in place. Here are two concepts to remember:
 
-- **Derivation Trees**: Deviation trees are a visual representation of the grammar
-of a string. They create a tree-like structure that breaks down the grammar
-into smaller and smaller components until you reach the end of the tree.
-Deviation trees are useful for understanding how a string conforms to its
+- **Derivation Trees**: Deviation trees are a visual representation of the
+grammar of a string. They create a tree-like structure that breaks down the
+grammar into smaller and smaller components until you reach the end of the
+tree. Deviation trees are useful for understanding how a string conforms to its
 grammar and identifying deviations or errors.
 
 - **Grammar Implementation**: The chapter discusses how to implement grammars

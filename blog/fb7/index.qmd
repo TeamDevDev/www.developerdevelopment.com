@@ -91,13 +91,13 @@ class GrammarFuzzer(GrammarFuzzer):
 These three forms of expansion can be applied together in order to achieve a
 more efficient form of fuzzing with grammars. By using the `GrammarFuzzer`
 class and the methods created for it, tests can be generated much more quickly,
-with the trade-off of creating smaller inputs that we have increased control
-over.
+with the additional benefit of creating smaller inputs over which we have
+increased control.
 
 ## Reflection
 
-This chapter helped to grow my understanding of grammar-based fuzzing. Before,
-I would not have known that there were more ways to perform grammar-based
+This chapter helped to grow our understanding of grammar-based fuzzing. Before,
+we would not have known that there were more ways to perform grammar-based
 fuzzing. Grammar Fuzzing focuses on the concept of grammar-based fuzzing and
 highlights some of its initial flaws as well as how to address and debug them.
 There are also many drawbacks associated with grammar-based fuzzing, such as

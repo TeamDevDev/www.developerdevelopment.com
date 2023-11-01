@@ -17,18 +17,18 @@ Fuzzing Book](https://www.fuzzingbook.org/), exploring how its content could
 potentially be useful to the development of our tool,
 [chasten](https://github.com/AstuteSource/chasten). This article builds on the
 [Fuzzing with Grammars](https://www.fuzzingbook.org/html/Grammars.html), aiming
-for a better implementation. Let's dive into the details!
+for a better implementation. Let's learn more!
 
 ## Summary
 
 This chapter opens with outlining the issues with the `simple_grammar_fuzzer`
 introduced previously, which are that it is inefficient and hard to control. It
 can continue adding parentheses indefinitely, for example, and has a complexity
-of $O(n^2)$ as part of this. Therefore **derivation trees** are now introduced,
-which are a form of visualization for the steps of a grammar. Below is an
-example of a tree built from the expression `2 + 2`.
+of $O(n^2)$ as part of this. Therefore, **derivation trees** are now
+introduced, which are a form of visualization for the steps of a grammar. Below
+is an example of a tree built from the expression `2 + 2`.
 
-![DerivationTreeExample](derivation_tree.PNG)
+![A Graphical Depiction of a Derivation Tree](derivation_tree.PNG)
 
 This representation works well for a higher-level understanding, but is not a
 feasible way to show in code as that stands. The code representation is
@@ -134,6 +134,6 @@ structure, exploring different variations or alterations of this pattern is
 essential in testing to cover diverse scenarios. An efficient fuzzer can
 generate a multitude of XPath expressions with various modifications, like
 changing the positional value, using different node types, or incorporating
-additional conditions.
+more conditions.
 
 {{< include /_back-blog.qmd >}}

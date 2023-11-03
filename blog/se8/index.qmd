@@ -1,0 +1,29 @@
+---
+author: [Vital Joseph, Sabrina Rodriguez, Alish Chhetri]
+title: 'Style Guides and Rules'
+date: '2023-11-03'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How do Guiding Leadership Strategies Scale and Sustain Engineering Teams?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+TODO
+
+## Summary
+
+TODO
+
+## Reflection
+
+TODO
+
+## Action Items
+
+TODO
+
+
+{{< include /_back-blog.qmd >}}

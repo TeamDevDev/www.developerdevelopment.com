@@ -11,7 +11,9 @@ page-layout: full
 
 ## Overview
 
-This blog post discusses the [Style Guides and Rules](https://abseil.io/resources/swe-book/html/ch08.html) chapter in the [Software Engineering at Google](https://abseil.io/resources/swe-book) book! This article’s goal is to highlight the significance of rules and guidelines in coding practices within engineering organizations, and the importance of adapting to the rapidly evolving industry.
+This blog post discusses the [Style Guides and Rules](https://abseil.io/resources/swe-book/html/ch08.html) chapter in the 
+[Software Engineering at Google](https://abseil.io/resources/swe-book) book! This article’s goal is to highlight the significance of rules and guidelines in coding 
+practices within engineering organizations, and the importance of adapting to the rapidly evolving industry.
 
 ## Summary
 

@@ -89,8 +89,18 @@ for tree in earley.parse(mystring):
 
 ## Use Cases
 
-Utilization and implementation of PEGParser and EarleyParser can be an effective way to improve the Chasten tool. Both of these functions are easy to import and utilize, and because of the fact that these parsers write simple branched grammars that end once a run is established in a list, this results in our tool having faster grammar times.
+Utilization and implementation of PEGParser and EarleyParser
+can be an effective way to improve the Chasten tool. Both of
+these functions are easy to import and utilize, and because
+of the fact that these parsers write simple branched grammars
+that end once a run is established in a list, this results in
+our tool having faster grammar times.
 
-Combinations of more complicated parsers such as an Ad Hoc parser and formal parsers can also benefit our tools. By utilizing these nodes we can "compose" grammars, or introduce finer and finer details to our grammars to influence their significance in our programs without affecting their external structures or significance.
+Combinations of more complicated parsers such as an
+Ad Hoc parser and formal parsers can also benefit our
+tools. By utilizing these nodes we can "compose" grammars,
+or introduce finer and finer details to our grammars to
+influence their significance in our programs without affecting
+their external structures or significance.
 
 {{< include /_back-blog.qmd >}}

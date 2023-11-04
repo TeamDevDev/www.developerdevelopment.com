@@ -15,7 +15,16 @@ TODO
 
 ## Summary
 
-The [Style Guides and Rules](https://abseil.io/resources/swe-book/html/ch08.html) chapter in the [Software Engineering at Google](https://abseil.io/resources/swe-book) book delves into the significance of rules and guidelines in coding practices within engineering organizations, using Google's approach as a prime example. It emphasizes tailored style guides for various programming languages, adapting to language traits and evolving industry standards. The chapter showcases the adaptive nature of rules, allowing for periodic changes, such as Google's shift in Python naming conventions from CamelCase to snake_case, highlighting the need for adaptability in maintaining effective guidelines. A specific case study illustrates how rules adapt, such as the allowance of std::unique_ptr in C++11 after aligning with style guidance. With over two billion lines of code and thousands of daily submissions, Google emphasizes standardization for codebase sustainability. Their focus on local reasoning, readability, and consistency aims to ensure a clear understanding of code without extensive cross-referencing. While rules are enforced, guides serve as best practices, balancing readability with some trade-offs for engineers. Adaptability is crucial, considering evolving languages and functionalities. Automation through formatting linters and tests aids in maintaining consistency and adhering to guidelines. In essence, the chapter offers valuable insights into the dynamic nature of rules and guidance, crucial for sustaining an efficient codebase in an ever-evolving engineering landscape.
+The [Style Guides and Rules](https://abseil.io/resources/swe-book/html/ch08.html) chapter in the [Software Engineering at Google](https://abseil.io/resources/swe-book)
+book delves into the significance of rules and guidelines in coding practices within engineering organizations, using Google's approach as a prime example. It 
+emphasizes tailored style guides for various programming languages, adapting to language traits and evolving industry standards. The chapter showcases the adaptive 
+nature of rules, allowing for periodic changes, such as Google's shift in Python naming conventions from CamelCase to snake_case, highlighting the need for 
+adaptability in maintaining effective guidelines. A specific case study illustrates how rules adapt, such as the allowance of std::unique_ptr in C++11 after aligning 
+with style guidance. With over two billion lines of code and thousands of daily submissions, Google emphasizes standardization for codebase sustainability. Their 
+focus on local reasoning, readability, and consistency aims to ensure a clear understanding of code without extensive cross-referencing. While rules are enforced, 
+guides serve as best practices, balancing readability with some trade-offs for engineers. Adaptability is crucial, considering evolving languages and functionalities. 
+Automation through formatting linters and tests aids in maintaining consistency and adhering to guidelines. In essence, the chapter offers valuable insights into the 
+dynamic nature of rules and guidance, crucial for sustaining an efficient codebase in an ever-evolving engineering landscape.
 
 ## Reflection
 

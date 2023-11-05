@@ -4,7 +4,7 @@ title: Parsing Inputs
 date: '2023-11-'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em></em>
+description: <em>How can parsers help with fuzzing?</em>
 toc: true
 page-layout: full
 ---
@@ -85,13 +85,23 @@ for tree in earley.parse(mystring):
 
 ## Reflection
 
-In the chapter about how we use rules to create languages, we learned that these rules, which we call grammars, are really powerful. They are not just for making up sentences in a language. They can also take apart a sentence to show us how it was built.
+In the chapter about how we use rules to create languages, we learned that 
+these rules, which we call grammars, are really powerful. They are not just 
+for making up sentences in a language. They can also take apart a sentence 
+to show us how it was built.
 
-When we look at a sentence, we can break it down into different parts that match up with the grammar rules. It is similar to a puzzle, this meaning where each piece is a part of the sentence, and when you put them all together, you see the whole picture.
+When we look at a sentence, we can break it down into different parts that 
+match up with the grammar rules. It is similar to a puzzle, this meaning 
+where each piece is a part of the sentence, and when you put them all 
+together, you see the whole picture.
 
-This time, we focused on taking sentences that follow the rules and breaking them down into these puzzle pieces, which we call derivation trees. This is helpful because once we know how the pieces fit together, we can switch them around to make new sentences.
+This time, we focused on taking sentences that follow the rules and breaking 
+them down into these puzzle pieces, which we call derivation trees. This is 
+helpful because once we know how the pieces fit together, we can switch them 
+around to make new sentences.
 
-By changing the pieces just a little bit, we can create new sentences that still make sense according to the rules.
+By changing the pieces just a little bit, we can create new sentences that 
+still make sense according to the rules.
 
 ## Use Cases
 

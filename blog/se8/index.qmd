@@ -55,14 +55,15 @@ the challenges of using features of the tools correctly, which can introduce
 bugs if not applied properly. We have a built in interactive feature for the
 command line interface that assists in writing correct arguments so that the
 tools run correctly. Rules should also enforce best practices, rules should be
-aimed to make source code more readable. We have automatic linters that will
-reformat any code implemented to match the standard for the whole project. As
-software engineers, we all have a different style of writing code, so to make
-code more readable and understandable it is important to establish consistency
-within formatting and syntax. Said consistency will also help with better
-scalability and debugging. As software projects become larger and more complex,
-establishing a set of style guides and rules becomes more important. These
-rules play a crucial role in keeping the code structured and easily
+aimed to make source code more readable. We also have automatic linters that
+will reformat any code implemented to match the standard for the whole project!
+
+As software engineers, we all have a different style of writing code, so to
+make code more readable and understandable it is important to establish
+consistency within formatting and syntax. This consistency will also help with
+better scalability and debugging. As software projects become larger and more
+complex, establishing a set of style guides and rules becomes more important.
+These rules play a crucial role in keeping the code structured and easily
 maintainable. They act as a safeguard against the code becoming chaotic, which
 would make it challenging to make modifications to the software. Also, when
 code follows a predictable pattern, it becomes easier to recognize and address

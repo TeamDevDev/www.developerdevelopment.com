@@ -1,10 +1,10 @@
 ---
-author: [Vital Joseph, Sabrina Rodriguez, Alish Chhetri]
+author: [Vital Joseph, Sabrina Rodriguez, Alish Chhetri, Gregory M. Kapfhammer]
 title: 'Style Guides and Rules'
 date: '2023-11-03'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>How do Guiding Leadership Strategies Scale and Sustain Engineering Teams?</em>
+description: <em>How can rules scale and sustain engineering teams?</em>
 toc: true
 page-layout: full
 ---
@@ -15,8 +15,9 @@ This blog post discusses the [Style Guides and
 Rules](https://abseil.io/resources/swe-book/html/ch08.html) chapter in the
 [Software Engineering at Google](https://abseil.io/resources/swe-book) book!
 This article’s goal is to highlight the significance of rules and guidelines in
-coding practices within engineering organizations, and the importance of
-adapting to the rapidly evolving industry.
+coding practices within engineering organizations. It also highlights the
+importance of adapting to the rapidly evolving demands of technology industry.
+Let's explore it in greater detail!
 
 ## Summary
 
@@ -28,20 +29,22 @@ engineering organizations, using Google's approach as a prime example. It
 emphasizes tailored style guides for various programming languages, adapting to
 language traits and evolving industry standards. The chapter showcases the
 adaptive nature of rules, allowing for periodic changes, such as Google's shift
-in Python naming conventions from CamelCase to snake_case, highlighting the
-need for adaptability in maintaining effective guidelines. A specific case
-study illustrates how rules adapt, such as the allowance of std::unique_ptr in
-C++11 after aligning with style guidance. With over two billion lines of code
-and thousands of daily submissions, Google emphasizes standardization for
-codebase sustainability. Their focus on local reasoning, readability, and
-consistency aims to ensure a clear understanding of code without extensive
-cross-referencing. While rules are enforced, guides serve as best practices,
-balancing readability with some trade-offs for engineers. Adaptability is
-crucial, considering evolving languages and functionalities. Automation through
-formatting linters and tests aids in maintaining consistency and adhering to
-guidelines. In essence, the chapter offers valuable insights into the dynamic
-nature of rules and guidance, crucial for sustaining an efficient codebase in
-an ever-evolving engineering landscape.
+in Python naming conventions from CamelCase to `snake_case`, highlighting the
+need for adaptability in maintaining effective guidelines for software
+engineering.
+
+A specific case study illustrates how rules adapt, such as the allowance of
+`std::unique_ptr` in C++11 after aligning with style guidance. With over two
+billion lines of code and thousands of daily submissions, Google emphasizes
+standardization for codebase sustainability. Their focus on local reasoning,
+readability, and consistency aims to ensure a clear understanding of code
+without extensive cross-referencing. While rules are enforced, guides serve as
+best practices, balancing readability with some trade-offs for engineers.
+Adaptability is crucial, considering evolving languages and functionalities.
+Automation through formatting linters and tests aids in maintaining consistency
+and adhering to guidelines. In essence, the chapter offers valuable insights
+into the dynamic nature of rules and guidance, crucial for sustaining an
+efficient codebase in an ever-evolving engineering landscape.
 
 ## Reflection
 
@@ -61,16 +64,17 @@ scalability and debugging. As software projects become larger and more complex,
 establishing a set of style guides and rules becomes more important. These
 rules play a crucial role in keeping the code structured and easily
 maintainable. They act as a safeguard against the code becoming chaotic, which
-would make it challenging to make modifications to the software. Also when code
-follows a predictable pattern, it becomes easier to recognize and address
+would make it challenging to make modifications to the software. Also, when
+code follows a predictable pattern, it becomes easier to recognize and address
 problems or errors for debugging.
 
 ## Action Items
 
 To put action items into practice for evaluating engineering productivity using
-the Goals/Signals/Metrics (GSM) framework, it's essential to follow a two- step
-process, beginning with the assessment of the value of measurement. The first
-step involves the **"Initial Evaluation: Establishing the Worth of
+the Goals/Signals/Metrics (GSM) framework, it's essential to follow a two-step
+process, beginning with the assessment of the value of measurement.
+
+The first step involves the **"Initial Evaluation: Establishing the Worth of
 Measurement."** This entails initiating the process by clearly defining a
 specific question or objective for measurement. It requires a thorough
 deliberation on various aspects of the inquiry, including the anticipated

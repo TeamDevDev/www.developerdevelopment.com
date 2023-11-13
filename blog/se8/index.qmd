@@ -1,7 +1,7 @@
 ---
 author: [Vital Joseph, Sabrina Rodriguez, Alish Chhetri, Gregory M. Kapfhammer]
 title: 'Style Guides and Rules'
-date: '2023-11-03'
+date: '2023-11-13'
 date-format: long
 categories: [post, professional development, software engineering]
 description: <em>How can rules scale and sustain engineering teams?</em>
@@ -80,26 +80,32 @@ Measurement."** This entails initiating the process by clearly defining a
 specific question or objective for measurement. It requires a thorough
 deliberation on various aspects of the inquiry, including the anticipated
 outcome and the rationale behind it. Identifying the key decision-makers and
-establishing a timeline for implementing actions is also crucial. The
-assessment of measurement's feasibility should be based on the responses to
-these considerations, accounting for factors such as budget constraints,
-impending changes,and the challenges associated with convincing
-decision-makers. The second step revolves around the "Selection of Relevant
-Metrics with Clear Goals and Signals." This process commences with the
-articulation of a high-level objective that refrains from referencing specific
-measurement methods. The identification of signals, which serve as valuable
-indicators of progress toward the final objective, is another vital component.
-While these signals may not always be directly quantifiable, they play a
-significant role. Subsequently, metrics, which serve as proxies for the
-signals, are formulated. These metrics are designed to provide measurable data,
-even if they aren't flawless measurements. The GSM framework is instrumental in
-averting the "streetlight effect" by ensuring that chosen metrics align with
-the objectives, rather than relying solely on readily available but possibly
-irrelevant metrics. In the context presented in the text, Google applies this
-framework to assess engineering productivity, with a particular emphasis on
-clearly defined objectives,signals, and metrics, especially in enhancing areas
-such as programming language readability. This framework can be implemented in
-various domains to facilitate data-driven decision-making and effective action
-implementation.
+establishing a timeline for implementing actions is also crucial. The assessment
+of measurement's feasibility should be based on the responses to these
+considerations, accounting for factors such as budget constraints, impending
+changes, and the challenges associated with convincing decision-makers.
+
+The second step revolves around the **"Selection of Relevant Metrics with Clear
+Goals and Signals."** This process commences with the articulation of a
+high-level objective that refrains from referencing specific measurement
+methods. The identification of signals, which serve as valuable indicators of
+progress toward the final objective, is another vital component. While these
+signals may not always be directly quantifiable, they play a significant role.
+Subsequently, metrics, which serve as proxies for the signals, are formulated.
+These metrics are designed to provide measurable data, even if they aren't
+flawless measurements. The GSM framework is instrumental in averting the
+"streetlight effect" by ensuring that chosen metrics align with the objectives,
+rather than relying solely on readily available but possibly irrelevant
+metrics.
+
+In the context presented in the text, Google applies this framework to assess
+engineering productivity, with a particular emphasis on clearly defined
+objectives, signals, and metrics, especially in enhancing areas such as
+programming language readability. This framework can be implemented in various
+domains to facilitate data-driven decision-making and effective action
+implementation. At the conclusion of this article, we encourage our team to
+think of ways in which we can standardize our implementation and code review
+practices to improve the overall quality of both our teams and the software that
+our teams produce.
 
 {{< include /_back-blog.qmd >}}

@@ -50,13 +50,13 @@ for tree in peg.parse(mystring):
 
 ![The PEGParser Derivation Tree](derivation_tree1.PNG)
 
-For the purpose of _fuzzing_, generation of strings, the use of the PEGParser 
-is very effective. This is because a PEG cannot be reinterpretated as a CFG; 
+For the purpose of _fuzzing_, generation of strings, the use of the PEGParser is
+very effective. This is because a PEG cannot be re-interpreted as a CFG;
 therefore, a parser that uses CFGs is the best option.
 
-The **EarleyParser** can use any CFG to parse. This parser will return all the 
-possible derivation tree as a way to resolve ambiguities. These trees are 
-returned in a list. An example of the EarleyParser is below:
+The `EarleyParser` can use any CFG to parse. This parser will return all the
+possible derivation tree as a way to resolve ambiguities. These trees are
+returned in a list. An example of the `EarleyParser` is below:
 
 ```python
 class EarleyParser(EarleyParser):
@@ -86,38 +86,36 @@ for tree in earley.parse(mystring):
 
 ## Reflection
 
-In the chapter about how we use rules to create languages, we learned that 
-these rules, which we call grammars, are really powerful. They are not just 
-for making up sentences in a language. They can also take apart a sentence 
-to show us how it was built.
+In the chapter about how we use rules to create languages, we learned that these
+rules, which we call grammars, are really powerful. They are not just for making
+up sentences in a language. They can also take apart a sentence to show us how
+it was built.
 
-When we look at a sentence, we can break it down into different parts that 
-match up with the grammar rules. It is similar to a puzzle, this meaning 
-where each piece is a part of the sentence, and when you put them all 
-together, you see the whole picture.
+When we look at a sentence, we can break it down into different parts that match
+up with the grammar rules. It is similar to a puzzle! This means that where each
+piece is a part of the sentence, and when you put them all together, you see the
+whole picture.
 
-This time, we focused on taking sentences that follow the rules and breaking 
-them down into these puzzle pieces, which we call derivation trees. This is 
-helpful because once we know how the pieces fit together, we can switch them 
+This time, we focused on taking sentences that follow the rules and breaking
+them down into these puzzle pieces, which we call derivation trees. This is
+helpful because once we know how the pieces fit together, we can switch them
 around to make new sentences.
 
-By changing the pieces just a little bit, we can create new sentences that 
-still make sense according to the rules.
+By changing the pieces just a little bit, we can create new sentences that still
+make sense according to the rules.
 
 ## Use Cases
 
-Utilization and implementation of PEGParser and EarleyParser
-can be an effective way to improve the Chasten tool. Both of
-these functions are easy to import and utilize, and because
-of the fact that these parsers write simple branched grammars
-that end once a run is established in a list, this results in
-our tool having faster grammar times.
+Utilization and implementation of PEGParser and EarleyParser can be an effective
+way to improve the Chasten tool. Both of these functions are easy to import and
+utilize, and because of the fact that these parsers write simple branched
+grammars that end once a run is established in a list, this results in our tool
+having faster grammar times.
 
-Combinations of more complicated parsers such as an
-Ad Hoc parser and formal parsers can also benefit our
-tools. By utilizing these nodes we can "compose" grammars,
-or introduce finer and finer details to our grammars to
-influence their significance in our programs without affecting
-their external structures or significance.
+Combinations of more complicated parsers such as an Ad-Hoc parser and formal
+parsers can also benefit our tools. By utilizing these nodes we can "compose"
+grammars, or introduce finer and finer details to our grammars to influence
+their significance in our programs without affecting their external structures
+or significance.
 
 {{< include /_back-blog.qmd >}}

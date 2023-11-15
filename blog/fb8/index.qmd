@@ -1,7 +1,7 @@
 ---
 author: [Hank Gref, Jason Gyamfi, Haylee Pierce]
 title: Parsing Inputs
-date: '2023-11-'
+date: '2023-11-15'
 date-format: long
 categories: [post, software engineering, fuzzing book]
 description: <em>How can parsers help with fuzzing?</em>
@@ -12,23 +12,24 @@ page-layout: full
 ## Overview
 
 This article covers the ["Parsing Inputs"](https://www.fuzzingbook.org/html/
-Parser.html) chapter from [_Fuzzing Book_](https://www.fuzzingbook.org/). This 
-chapter builds on the concepts from the ["Fuzzing with Grammars"](https://www.
-fuzzingbook.org/html/Grammars.html) chapter and the ["Efficient Grammar 
+Parser.html) chapter from [_Fuzzing Book_](https://www.fuzzingbook.org/). This
+chapter builds on the concepts from the ["Fuzzing with
+Grammars"](https://www.fuzzingbook.org/html/Grammars.html) chapter and the
+["Efficient Grammar
 Fuzzing"](https://www.fuzzingbook.org/html/GrammarFuzzer.html) chapter.
 
 ## Summary
 
-This chapter uses grammars to parse a set of valid inputs and create derivation 
-trees that can be used to fuzz, generate new valid inputs for testing. Two 
-specific parsers are covered by the chapter: PEGParser and EarleyParser.
+This chapter uses grammars to parse a set of valid inputs and create derivation
+trees that can be used to fuzz, generate new valid inputs for testing. Two
+specific parsers are covered by the chapter: `PEGParser` and `EarleyParser`.
 
-The **PEGParser** utilizes _predicate expression grammars (PEGs)_, which are 
-very similar to _context-free grammars (CFGs)_. The one key difference between 
-the two types of grammars is that PEGs will stop at the first rule that 
-matches, while CFGs will match will all possible rules. Building the derivation 
-tree with only the first matches is the PEGParser's way of resolving 
-ambiguities. Below is an example of the PEGParser:
+The `PEGParser` utilizes _predicate expression grammars (PEGs)_, which are very
+similar to _context-free grammars (CFGs). The one key difference between the two
+types of grammars is that PEGs will stop at the first rule that matches, while
+CFGs will match will all possible rules. Building the derivation tree with only
+the first matches is the PEGParser's way of resolving ambiguities. Below is an
+example of the `PEGParser`:
 
 ```python
 class PEGParser(Parser):

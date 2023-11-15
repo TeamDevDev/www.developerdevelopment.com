@@ -26,11 +26,11 @@ trees that can be used to fuzz, generate new valid inputs for testing. Two
 specific parsers are covered by the chapter: `PEGParser` and `EarleyParser`.
 
 The `PEGParser` utilizes _predicate expression grammars (PEGs)_, which are very
-similar to _context-free grammars (CFGs). The one key difference between the two
-types of grammars is that PEGs will stop at the first rule that matches, while
-CFGs will match will all possible rules. Building the derivation tree with only
-the first matches is the PEGParser's way of resolving ambiguities. Below is an
-example of the `PEGParser`:
+similar to _context-free grammars_ (CFGs). The one key difference between the
+two types of grammars is that PEGs will stop at the first rule that matches,
+while CFGs will match will all possible rules. Building the derivation tree with
+only the first matches is the PEGParser's way of resolving ambiguities. Below is
+an example of the `PEGParser`:
 
 ```python
 class PEGParser(Parser):
@@ -53,11 +53,10 @@ for tree in peg.parse(mystring):
 
 For the purpose of _fuzzing_, generation of strings, the use of the PEGParser is
 very effective. This is because a PEG cannot be re-interpreted as a CFG;
-therefore, a parser that uses CFGs is the best option.
-
-The `EarleyParser` can use any CFG to parse. This parser will return all the
-possible derivation tree as a way to resolve ambiguities. These trees are
-returned in a list. An example of the `EarleyParser` is below:
+therefore, a parser that uses CFGs is the best option. The `EarleyParser` can
+use any CFG to parse. This parser will return all the possible derivation tree
+as a way to resolve ambiguities. These trees are returned in a list. An example
+of the `EarleyParser` is below:
 
 ```python
 class EarleyParser(EarleyParser):

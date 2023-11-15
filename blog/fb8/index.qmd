@@ -11,12 +11,13 @@ page-layout: full
 
 ## Overview
 
-This article covers the ["Parsing Inputs"](https://www.fuzzingbook.org/html/
-Parser.html) chapter from [_Fuzzing Book_](https://www.fuzzingbook.org/). This
-chapter builds on the concepts from the ["Fuzzing with
-Grammars"](https://www.fuzzingbook.org/html/Grammars.html) chapter and the
-["Efficient Grammar
-Fuzzing"](https://www.fuzzingbook.org/html/GrammarFuzzer.html) chapter.
+This article covers the ["Parsing
+Inputs"](https://www.fuzzingbook.org/html/Parser.html) chapter from [Fuzzing
+Book](https://www.fuzzingbook.org/). This chapter builds on the concepts from
+the ["Fuzzing with Grammars"](https://www.fuzzingbook.org/html/Grammars.html)
+chapter and the ["Efficient Grammar
+Fuzzing"](https://www.fuzzingbook.org/html/GrammarFuzzer.html) chapter. Let's
+dive in to learn more about how input parsing can help us as software engineers!
 
 ## Summary
 
@@ -99,10 +100,8 @@ whole picture.
 This time, we focused on taking sentences that follow the rules and breaking
 them down into these puzzle pieces, which we call derivation trees. This is
 helpful because once we know how the pieces fit together, we can switch them
-around to make new sentences.
-
-By changing the pieces just a little bit, we can create new sentences that still
-make sense according to the rules.
+around to make new sentences. By changing the pieces just a little bit, we can
+create new sentences that still make sense according to the rules.
 
 ## Use Cases
 

@@ -1,0 +1,119 @@
+---
+author: [Hank Gref, Jason Gyamfi, Haylee Pierce]
+title: Parsing Inputs
+date: '2023-11-15'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can parsers help with fuzzing?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This article covers the ["Parsing
+Inputs"](https://www.fuzzingbook.org/html/Parser.html) chapter from [Fuzzing
+Book](https://www.fuzzingbook.org/). This chapter builds on the concepts from
+the ["Fuzzing with Grammars"](https://www.fuzzingbook.org/html/Grammars.html)
+chapter and the ["Efficient Grammar
+Fuzzing"](https://www.fuzzingbook.org/html/GrammarFuzzer.html) chapter. Let's
+dive in to learn more about how input parsing can help us as software engineers!
+
+## Summary
+
+This chapter uses grammars to parse a set of valid inputs and create derivation
+trees that can be used to fuzz, generate new valid inputs for testing. Two
+specific parsers are covered by the chapter: `PEGParser` and `EarleyParser`.
+
+The `PEGParser` utilizes _predicate expression grammars (PEGs)_, which are very
+similar to _context-free grammars_ (CFGs). The one key difference between the
+two types of grammars is that PEGs will stop at the first rule that matches,
+while CFGs will match will all possible rules. Building the derivation tree with
+only the first matches is the PEGParser's way of resolving ambiguities. Below is
+an example of the `PEGParser`:
+
+```python
+class PEGParser(Parser):
+    def parse_prefix(self, text):
+        cursor, tree = self.unify_key(self.start_symbol(), text, 0)
+        return cursor, [tree]
+```
+
+We can use this parser to create a derivation tree:
+
+```python
+mystring = "1 + (2 * 3)"
+peg = PEGParser(EXPR_GRAMMAR)
+for tree in peg.parse(mystring):
+    assert tree_to_string(tree) == mystring
+    display(display_tree(tree))
+```
+
+![The PEGParser Derivation Tree](derivation_tree1.PNG)
+
+For the purpose of _fuzzing_, generation of strings, the use of the PEGParser is
+very effective. This is because a PEG cannot be re-interpreted as a CFG;
+therefore, a parser that uses CFGs is the best option. The `EarleyParser` can
+use any CFG to parse. This parser will return all the possible derivation tree
+as a way to resolve ambiguities. These trees are returned in a list. An example
+of the `EarleyParser` is below:
+
+```python
+class EarleyParser(EarleyParser):
+    def parse(self, text):
+        cursor, states = self.parse_prefix(text)
+        start = next((s for s in states if s.finished()), None)
+
+        if cursor < len(text) or not start:
+            raise SyntaxError("at " + repr(text[cursor:]))
+
+        forest = self.parse_forest(self.table, start)
+        for tree in self.extract_trees(forest):
+            yield self.prune_tree(tree)
+```
+
+We can use this parser to create derivation trees:
+
+```python
+mystring = "1 + (2 * 3)"
+earley = EarleyParser(EXPR_GRAMMAR)
+for tree in earley.parse(mystring):
+    assert tree_to_string(tree) == mystring
+    display(display_tree(tree))
+```
+
+![The EarleyParser Derivation Tree](derivation_tree2.PNG)
+
+## Reflection
+
+In the chapter about how we use rules to create languages, we learned that these
+rules, which we call grammars, are really powerful. They are not just for making
+up sentences in a language. They can also take apart a sentence to show us how
+it was built.
+
+When we look at a sentence, we can break it down into different parts that match
+up with the grammar rules. It is similar to a puzzle! This means that where each
+piece is a part of the sentence, and when you put them all together, you see the
+whole picture.
+
+This time, we focused on taking sentences that follow the rules and breaking
+them down into these puzzle pieces, which we call derivation trees. This is
+helpful because once we know how the pieces fit together, we can switch them
+around to make new sentences. By changing the pieces just a little bit, we can
+create new sentences that still make sense according to the rules.
+
+## Use Cases
+
+Utilization and implementation of PEGParser and EarleyParser can be an effective
+way to improve the Chasten tool. Both of these functions are easy to import and
+utilize, and because of the fact that these parsers write simple branched
+grammars that end once a run is established in a list, this results in our tool
+having faster grammar times.
+
+Combinations of more complicated parsers such as an Ad-Hoc parser and formal
+parsers can also benefit our tools. By utilizing these nodes we can "compose"
+grammars, or introduce finer and finer details to our grammars to influence
+their significance in our programs without affecting their external structures
+or significance.
+
+{{< include /_back-blog.qmd >}}

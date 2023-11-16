@@ -1,0 +1,23 @@
+---
+author: [Finely, Preston Smith, Keven Michel Duverglas, Gregory M. Kapfhammer]
+title: 'Style Guides and Rules'
+date: '2023-11-13'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+## Summary
+
+
+## Reflection
+
+
+## Action Items
+
+
+{{< include /_back-blog.qmd >}}

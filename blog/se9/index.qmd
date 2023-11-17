@@ -34,6 +34,10 @@ is also stressed, suggesting a single reviewer where possible and leveraging aut
 
 ## Action Items
 
-TODO
+In our current projects, we do a lot of code review before pushing an issue. We, on average, have 3-5 reviewers looking over 
+an issue before it is added. We require approval from the Chief Software Architect, a Technical Leader or Professor, and a class 
+member. The chapter states that having more than three reviewers is inefficient because some reviewers will simply skim through 
+to see if the code runs rather than seeing if it works. If we want to fix this problem and make this process more efficient, 
+we can have reviews done by one person who would complete the assessment on time and ensure the change is done correctly. 
 
 {{< include /_back-blog.qmd >}}

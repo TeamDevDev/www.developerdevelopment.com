@@ -1,5 +1,5 @@
 ---
-author: []
+author: [Mordred Boulais, Jaclyn Pham, Naboni Thomas]
 title: Parsing Inputs
 date: '2023-11-22'
 date-format: long
@@ -11,10 +11,13 @@ page-layout: full
 
 ## Overview
 
-This article covers the []() chapter from [Fuzzing
-Book](https://www.fuzzingbook.org/). This chapter builds on the concepts from
-the  chapter. Let's
-dive in to learn more about 
+This article covers the
+[Reducing Failure-Inducing Inputs](https://www.fuzzingbook.org/html/Reducer.html)
+chapter from [Fuzzing Book](https://www.fuzzingbook.org/). This chapter builds
+on the concepts from the [Fuzzing](https://www.fuzzingbook.org/html/Fuzzer.html)
+and [Fuzzing With Grammars](https://www.fuzzingbook.org/html/Grammars.html)
+chapters. Let's dive in to learn more about increasing the efficiency of fuzzed
+inputs!
 
 ## Summary
 

@@ -82,7 +82,15 @@ Also like the simple grammar fuzzer, there is a more efficient, although more
 complex, strategy. This is Grammar Based Input Reduction. Using a grammar can,
 as previously explred, help with ensuring that the inputs are syntactically
 valid for the sake of a program that may outright reject inputs that cannot be
-parsed. 
+parsed, or inputs where Delta Debugging would not be able to comply with the
+constraints of the input's syntax. Using Grammar Based Reduction, the input can
+be reduced grammatically instead of via binary, either by replacing subtrees or
+by alternative expansion.
+
+Replacing subtrees is done by picking a subtree from the same token and
+replacing one higher up with that subtree. Alternative expansion is
+checking for alternate children can be chosen that would led to a smaller
+overall tree.
 
 ## Reflection
 

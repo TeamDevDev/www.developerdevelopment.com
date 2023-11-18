@@ -1,6 +1,6 @@
 ---
 author: [Mordred Boulais, Jaclyn Pham, Naboni Thomas]
-title: Parsing Inputs
+title: Reducing Failure-Inducing Inputs
 date: '2023-11-22'
 date-format: long
 categories: [post, software engineering, fuzzing book]
@@ -17,11 +17,72 @@ chapter from [Fuzzing Book](https://www.fuzzingbook.org/). This chapter builds
 on the concepts from the [Fuzzing](https://www.fuzzingbook.org/html/Fuzzer.html)
 and [Fuzzing With Grammars](https://www.fuzzingbook.org/html/Grammars.html)
 chapters. Let's dive in to learn more about increasing the efficiency of fuzzed
-inputs!
+inputs for debugging!
 
 ## Summary
 
+This chapter highlights how testing fuzzed inputs can be unreliable when it
+comes time to trace the error back to its source. As such, some steps can be
+taken to break the inputs down and find where the error is. This is where the
+reductions come into play, wherein the input is split in half and each half is
+tested until the source of the error is determined. This can be automated using
+a strategy called Delta Debugging, which uses a binary search strategy to
+implement the reductions. The class below is built on two created previously in
+the chapter, the `Reducer` and the `CachingReducer`, which builds the
+functionality for the splitting and for saving the results.
 
+```python
+class DeltaDebuggingReducer(CachingReducer):
+    """Reduce inputs using delta debugging."""
+
+    def reduce(self, inp: str) -> str:
+        """Reduce input `inp` using delta debugging. Return reduced input."""
+
+        self.reset()
+        assert self.test(inp) != Runner.PASS
+
+        n = 2     # Initial granularity
+        while len(inp) >= 2:
+            start = 0.0
+            subset_length = len(inp) / n
+            some_complement_is_failing = False
+
+            while start < len(inp):
+                complement = inp[:int(start)] + \
+                    inp[int(start + subset_length):]
+
+                if self.test(complement) == Runner.FAIL:
+                    inp = complement
+                    n = max(n - 1, 2)
+                    some_complement_is_failing = True
+                    break
+
+                start += subset_length
+
+            if not some_complement_is_failing:
+                if n == len(inp):
+                    break
+                n = min(n * 2, len(inp))
+
+        return inp
+```
+
+In running the `reduce` method of the class presented above, one can find the
+character(s) responsible for the error. This form of reducing the failing inputs
+also reduces the cognitive load on the programmer, since it is a relatively
+simple and straightforward form of testing. It also is, as previously
+highlighted, quite clear on the source of the failure. This aids in identifying
+duplicates of an issue as well.
+
+Th downside is that this is not the a particularly efficient approach. The best
+case for complexity is O(log2n), and the worst is O(n^2), similar to the simple
+grammar fuzzer that was explored in a previous chapter.
+
+Also like the simple grammar fuzzer, there is a more efficient, although more
+complex, strategy. This is Grammar Based Input Reduction. Using a grammar can,
+as previously explred, help with ensuring that the inputs are syntactically
+valid for the sake of a program that may outright reject inputs that cannot be
+parsed. 
 
 ## Reflection
 

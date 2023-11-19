@@ -97,7 +97,8 @@ overall tree.
 
 
 ## Use Cases
-
+Addressing the challenge posed by fuzz testing, which generates inputs triggering errors without clear localization of the faulty code, `DeltaDebuggingReducer` automates the reduction process. By utilizing the `reduce` function of this class, Chasten can automatically identify and isolate the character(s) responsible for errors in the input. This approach would simplify the testing process and reduces the cognitive load on the software engineer, helping us pinpoint the source of failures. However, it is essential to acknowledge of the trade-off, as the method's efficiency is not optimal, with worst-case complexity of O(n^2). 
+To address this limitation, a more sophisticated strategy, Grammar-Based Input Reduction, can be considered. This technique is more efficient compared to the binary search strategy of Delta Debugging. 
 
 
 {{< include /_back-blog.qmd >}}

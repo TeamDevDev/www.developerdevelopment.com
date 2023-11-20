@@ -1,0 +1,99 @@
+---
+author: [Finley Banas, Preston Smith, Keven Michel Duverglas, Gregory M. Kapfhammer]
+title: 'Code Review'
+date: '2023-11-20'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can our team properly code review?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post discusses the [Code
+Review](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book). The
+Chapter delves into the importance of reviewing code before merging and ensuring
+quality and consistency in a project. Let's dive into the chapter and see what
+constructive tips we can take away from it so that we can improve the work of
+our engineering team!
+
+## Summary
+
+This chapter talks about how Google goes about reviewing code and the importance
+of it in general. Code review is an important step in ensuring consistency and
+quality in a software engineering project and should be taken seriously. At
+Google they split it up into three parts:
+
+- **Correctness and Comprehension**: Does the code do what it's supposed to do?
+Does it have a clear purpose?
+
+- **Appropriateness for the Code base**: Does the code fit the project? Is it
+useful or redundant?
+
+- **Readability**: Is the code readable and does it follow the standard style
+rules and practices defined for the project?
+
+These are all important to keep in mind when reviewing a change as it helps
+ensure consistency and quality helping make sure everyone is on the same page.
+To ensure that these three things are taken into account google has split the
+process into steps:
+
+- The change is made and the author creates a summary and explanation of the
+change. They can write comments or do a self review for clarity.
+
+- Someone else reviews the code and writes comments and feedback on the changes
+
+- Changes are than made if there required base on the reviews.
+
+- The code base is than reviewed again this step can be repeated as many times
+as needed Once the changes are approved they'll mark it with **LGTM**, or "Looks
+good to me", and then multiple people need to review the change.
+
+- Once everything has been approved the changes are then implemented.
+
+The importance of professionalism and clear communication are important as it
+allow for less room for interpretation and can lead to a more efficient work
+environment because the process of reviewing significantly slows down changes
+being made. However, the chapter reports that, at least at Google, the benefits
+far outweigh the negatives!
+
+## Reflection
+
+In this section about Google's practices for software engineering, the focus is
+on the critical practice of code review before integrating changes into the main
+product, highlighting Google's comprehensive approach which emphasizes accuracy,
+uniformity, knowledge transfer among developers, and thorough documentation for
+tracking modifications. Despite the significant resources required, this
+meticulous process is vital for upholding Google's high standards of code
+quality. The journey of code review isn't always straightforward, and the
+section provides practical advice for conducting effective reviews.
+
+Key among these is maintaining polite and professional interactions to ensure
+timely reviews and avoid conflicts, with reviewers needing to communicate their
+schedules clearly and adhere to them to prevent delays. In instances of
+disagreement, both reviewers and developers must engage constructively to reach
+a consensus on necessary changes. Another important tip is to keep changes
+manageable in size, aiding reviewers in their task and preventing the reviewer
+from becoming overwhelmed, with detailed commit messages and clear descriptions
+of changes being crucial for reviewers to understand the purpose and impact of
+the changes. Efficient resource use is also stressed, suggesting a single
+reviewer where possible and leveraging automation to streamline the process.
+
+## Action Items
+
+In our current projects, we do a lot of code review before pushing an issue. We,
+on average, have 3-5 reviewers looking over an issue before it is added. We
+require approval from the Chief Software Architect, a Technical Leader or
+Professor, and a class member. The chapter states that having more than three
+reviewers is inefficient because some reviewers will simply skim through to see
+if the code runs rather than seeing if it works. If we want to fix this problem
+and make this process more efficient, we can have reviews done by one person who
+would complete the assessment on time and ensure the change is done correctly.
+It is likely that at least some of our reviews are not thorough enough because
+the reviewer either does not read every changed line or does not run the
+program. In some situations we might be able to solve this problem by
+encouraging the reviewer to actually run the project in GitHub Codespaces.
+
+{{< include /_back-blog.qmd >}}

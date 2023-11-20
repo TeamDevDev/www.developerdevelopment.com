@@ -56,7 +56,8 @@ good to me", and then multiple people need to review the change.
 The importance of professionalism and clear communication are important as it
 allow for less room for interpretation and can lead to a more efficient work
 environment because the process of reviewing significantly slows down changes
-being made however the benefits far outweigh the negatives.
+being made. However, the chapter reports that, at least at Google, the benefits
+far outweigh the negatives!
 
 ## Reflection
 

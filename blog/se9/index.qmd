@@ -48,8 +48,8 @@ change. They can write comments or do a self review for clarity.
 - Changes are than made if there required base on the reviews.
 
 - The code base is than reviewed again this step can be repeated as many times
-as needed Once the changes are approved they'll mark it with **LGTM** (Looks
-good to me) multiple people need to review the change.
+as needed Once the changes are approved they'll mark it with **LGTM**, or "Looks
+good to me", and then multiple people need to review the change.
 
 - Once everything has been approved the changes are then implemented.
 

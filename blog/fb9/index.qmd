@@ -94,19 +94,29 @@ overall tree.
 
 ## Reflection
 
-The chapter on `Reducing Failure-Inducing Inputs` provides a comprehensive overview 
+The chapter on `Reducing Failure-Inducing Inputs` provides a comprehensive overview
 of different strategies for identifying errors in fuzzed inputs in software testing. 
 It emphasizes the need for a tailored approach, considering the unique aspects of each 
-program. The chapter introduces two main strategies: Delta Debugging, a simple but 
-effective method, and Grammar-Based Input Reduction, a more complex but efficient 
-alternative. The choice between these depends on the balance a programmer seeks between 
-simplicity and efficiency. The chapter serves as a valuable guide for enhancing testing 
+program. The chapter introduces two main strategies: Delta Debugging, a simple but
+effective method, and Grammar-Based Input Reduction, a more complex but efficient
+alternative. The choice between these depends on the balance a programmer seeks between
+simplicity and efficiency. The chapter serves as a valuable guide for enhancing testing
 skills and simplifying error detection.
 
 
 ## Use Cases
-Addressing the challenge posed by fuzz testing, which generates inputs triggering errors without clear localization of the faulty code, `DeltaDebuggingReducer` automates the reduction process. By utilizing the `reduce` function of this class, Chasten can automatically identify and isolate the character(s) responsible for errors in the input. This approach would simplify the testing process and reduces the cognitive load on the software engineer, helping us pinpoint the source of failures. However, it is essential to acknowledge of the trade-off, as the method's efficiency is not optimal, with worst-case complexity of O(n^2). 
-To address this limitation, a more sophisticated strategy, Grammar-Based Input Reduction, can be considered. This technique is more efficient compared to the binary search strategy of Delta Debugging. 
+Addressing the challenge posed by fuzz testing, which generates inputs
+triggering errors without clear localization of the faulty code,
+`DeltaDebuggingReducer` automates the reduction process. By utilizing the
+`reduce` function of this class, Chasten can automatically identify and isolate
+the character(s) responsible for errors in the input. This approach would
+simplify the testing process and reduces the cognitive load on the software
+engineer, helping us pinpoint the source of failures. However, it is essential
+to acknowledge of the trade-off, as the method's efficiency is not optimal, with
+worst-case complexity of O(n^2). To address this limitation, a more
+sophisticated strategy, Grammar-Based Input Reduction, can be considered. This
+technique is more efficient compared to the binary search strategy of Delta
+Debugging.
 
 
 {{< include /_back-blog.qmd >}}

@@ -66,16 +66,17 @@ class DeltaDebuggingReducer(CachingReducer):
         return inp
 ```
 
-In running the `reduce` method of the class presented above, one can find the
-character(s) responsible for the error. This form of reducing the failing inputs
-also reduces the cognitive load on the programmer, since it is a relatively
-simple and straightforward form of testing. It also is, as previously
-highlighted, quite clear on the source of the failure. This aids in identifying
-duplicates of an issue as well.
+When a tester runs the `reduce` method of the class presented above, they can
+hopefully find a minimal representation of the character(s) responsible for the
+error. This form of reducing the failing inputs also reduces the cognitive load
+on the programmer, since it is a relatively simple and straightforward form of
+testing. It also is, as previously highlighted, quite clear on the source of the
+failure. This aids in identifying duplicates of an issue as well.
 
-Th downside is that this is not a particularly efficient approach. The best
-case for complexity is $O(log_2(n))$, and the worst is O(n^2), similar to the simple
-grammar fuzzer that was explored in a previous chapter.
+Th downside is that this is not a particularly efficient approach! The best case
+for complexity is $O(log_2(n))$, and the worst is $O(n^2)$, which is similar to
+the simple grammar fuzzer that we explored in a previous chapter. Can we improve
+this approach to automated debugging?
 
 Also like the simple grammar fuzzer, there is a more efficient, although more
 complex, strategy. This is Grammar Based Input Reduction. Using a grammar can,

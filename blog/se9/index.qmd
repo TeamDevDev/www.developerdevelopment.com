@@ -60,25 +60,34 @@ being made however the benefits far outweigh the negatives.
 
 ## Reflection
 
-In this section about Google's software engineering, the focus is on the critical practice of code review
-before integrating changes into the main product, highlighting Google's comprehensive approach which emphasizes accuracy,
-uniformity, knowledge transfer among developers, and thorough documentation for tracking modifications. Despite
-the significant resources required, this meticulous process is vital for upholding Google's high standards of
-code quality. The journey of code review isn't always straightforward, and the section provides practical
-advice for conducting effective reviews. Key among these is maintaining polite and professional interactions
-to ensure timely reviews and avoid conflicts, with reviewers needing to communicate their schedules clearly
-and adhere to them to prevent delays. In instances of disagreement, both reviewers and developers must engage
-constructively to reach a consensus on necessary changes. Another important tip is to keep changes manageable in
-size, aiding reviewers in their task and preventing overwhelm, with detailed commit messages and clear descriptions
-of changes being crucial for reviewers to understand the purpose and impact of the changes. Efficient resource use 
-is also stressed, suggesting a single reviewer where possible and leveraging automation to streamline the process.
+In this section about Google's software engineering, the focus is on the
+critical practice of code review before integrating changes into the main
+product, highlighting Google's comprehensive approach which emphasizes accuracy,
+uniformity, knowledge transfer among developers, and thorough documentation for
+tracking modifications. Despite the significant resources required, this
+meticulous process is vital for upholding Google's high standards of code
+quality. The journey of code review isn't always straightforward, and the
+section provides practical advice for conducting effective reviews. Key among
+these is maintaining polite and professional interactions to ensure timely
+reviews and avoid conflicts, with reviewers needing to communicate their
+schedules clearly and adhere to them to prevent delays. In instances of
+disagreement, both reviewers and developers must engage constructively to reach
+a consensus on necessary changes. Another important tip is to keep changes
+manageable in size, aiding reviewers in their task and preventing overwhelm,
+with detailed commit messages and clear descriptions of changes being crucial
+for reviewers to understand the purpose and impact of the changes. Efficient
+resource use is also stressed, suggesting a single reviewer where possible and
+leveraging automation to streamline the process.
 
 ## Action Items
 
-In our current projects, we do a lot of code review before pushing an issue. We, on average, have 3-5 reviewers looking over 
-an issue before it is added. We require approval from the Chief Software Architect, a Technical Leader or Professor, and a class 
-member. The chapter states that having more than three reviewers is inefficient because some reviewers will simply skim through 
-to see if the code runs rather than seeing if it works. If we want to fix this problem and make this process more efficient, 
-we can have reviews done by one person who would complete the assessment on time and ensure the change is done correctly. 
+In our current projects, we do a lot of code review before pushing an issue. We,
+on average, have 3-5 reviewers looking over an issue before it is added. We
+require approval from the Chief Software Architect, a Technical Leader or
+Professor, and a class member. The chapter states that having more than three
+reviewers is inefficient because some reviewers will simply skim through to see
+if the code runs rather than seeing if it works. If we want to fix this problem
+and make this process more efficient, we can have reviews done by one person who
+would complete the assessment on time and ensure the change is done correctly.
 
 {{< include /_back-blog.qmd >}}

@@ -1,0 +1,11 @@
+::: {.callout-note appearance="minimal" title="Reference" collapse="false"}
+
+Unless otherwise noted, the source code segments in this article are excerpted
+directly from the [Fuzzing Book](https://www.fuzzingbook.org/). The authors of
+this online book licensed the source code and its written content under the
+[BY-NC-SA 4.0 Creative Commons License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+More details about the license for the Fuzzing Book are available in the [The
+Fuzzing Book
+License](https://github.com/uds-se/fuzzingbook/blob/master/LICENSE.md).
+
+:::

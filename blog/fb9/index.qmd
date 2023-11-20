@@ -89,9 +89,9 @@ by replacing subtrees or by alternative expansion. Let's explore these
 approaches in greater detail!
 
 Replacing subtrees is done by picking a subtree from the same token and
-replacing one higher up with that subtree. Alternative expansion is
-checking for alternate children can be chosen that would led to a smaller
-overall tree. Combining these with a depth parameter also facilitates further
+replacing one higher up with that subtree. Alternative expansion is checking for
+alternate children that can be chosen and would thus would led to a smaller
+overall tree. Combining these with a `depth` parameter also facilitates further
 reduction, as it then only returns trees of a certain depth to refine where
 replacements or alternative expansions can be done.
 

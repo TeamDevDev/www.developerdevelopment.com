@@ -91,8 +91,8 @@ if the code runs rather than seeing if it works. If we want to fix this problem
 and make this process more efficient, we can have reviews done by one person who
 would complete the assessment on time and ensure the change is done correctly.
 It is likely that at least some of our reviews are not thorough enough because
-the reviewer either does not read every changed line or does not actually run
-the program. In some situations we might be able to solve this problem by
+the reviewer either does not read every changed line or does not run the
+program. In some situations we might be able to solve this problem by
 encouraging the reviewer to actually run the project in GitHub Codespaces.
 
 {{< include /_back-blog.qmd >}}

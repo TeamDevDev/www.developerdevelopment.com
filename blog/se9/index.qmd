@@ -38,14 +38,14 @@ rules and practices defined for the project?
 These are all important to keep in mind when reviewing a change as it helps
 ensure consistency and quality helping make sure everyone is on the same page.
 To ensure that these three things are taken into account google has split the
-process into steps
+process into steps:
 
-- The change is made and the author creates a summary and explanation of the change.
-They can write comments or do a self review for clarity
+- The change is made and the author creates a summary and explanation of the
+change. They can write comments or do a self review for clarity.
 
 - Someone else reviews the code and writes comments and feedback on the changes
 
-- Changes are than made if there required base on the reviews
+- Changes are than made if there required base on the reviews.
 
 - The code base is than reviewed again this step can be repeated as many times
 as needed Once the changes are approved they'll mark it with **LGTM** (Looks

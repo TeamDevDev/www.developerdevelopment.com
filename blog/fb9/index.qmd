@@ -78,14 +78,15 @@ for complexity is $O(log_2(n))$, and the worst is $O(n^2)$, which is similar to
 the simple grammar fuzzer that we explored in a previous chapter. Can we improve
 this approach to automated debugging?
 
-Also like the simple grammar fuzzer, there is a more efficient, although more
-complex, strategy. This is Grammar Based Input Reduction. Using a grammar can,
-as previously explored, help with ensuring that the inputs are syntactically
-valid for the sake of a program that may outright reject inputs that cannot be
-parsed, or inputs where Delta Debugging would not be able to comply with the
-constraints of the input's syntax. Using Grammar Based Reduction, the input can
-be reduced grammatically instead of via binary, either by replacing subtrees or
-by alternative expansion.
+Again similar to the simple grammar fuzzer, there is a more efficient, although
+more complex, strategy, called grammar-based input reduction. Using a grammar
+can, as previously explored, help with ensuring that the inputs are
+syntactically valid for the sake of a program that may outright reject inputs
+that cannot be parsed, or inputs where delta debugging would not be able to
+comply with the constraints of the input's syntax. Using grammar-based
+reduction, the input can be reduced grammatically instead of via binary, either
+by replacing subtrees or by alternative expansion. Let's explore these
+approaches in greater detail!
 
 Replacing subtrees is done by picking a subtree from the same token and
 replacing one higher up with that subtree. Alternative expansion is
@@ -96,17 +97,19 @@ replacements or alternative expansions can be done.
 
 ## Reflection
 
-The chapter on `Reducing Failure-Inducing Inputs` provides a comprehensive overview
-of different strategies for identifying errors in fuzzed inputs in software testing. 
-It emphasizes the need for a tailored approach, considering the unique aspects of each 
-program. The chapter introduces two main strategies: Delta Debugging, a simple but
-effective method, and Grammar-Based Input Reduction, a more complex but efficient
-alternative. The choice between these depends on the balance a programmer seeks between
-simplicity and efficiency. The chapter serves as a valuable guide for enhancing testing
-skills and simplifying error detection.
-
+The chapter on [Reducing Failure-Inducing
+Inputs](https://www.fuzzingbook.org/html/Reducer.html) provides a comprehensive
+overview of different strategies for identifying the key parts of a fuzzed input
+that leads to an error during software testing. It emphasizes the need for a
+tailored approach, considering the unique aspects of each program. The chapter
+introduces two main strategies: Delta Debugging, a simple but effective method,
+and Grammar-Based Input Reduction, a more complex but efficient alternative. The
+choice between these depends on the balance a programmer seeks between
+simplicity and efficiency. The chapter serves as a valuable guide for enhancing
+testing skills and simplifying error detection.
 
 ## Use Cases
+
 Addressing the challenge posed by fuzz testing, which generates inputs
 triggering errors without clear localization of the faulty code,
 `DeltaDebuggingReducer` automates the reduction process. By utilizing the
@@ -115,10 +118,14 @@ the character(s) responsible for errors in the input. This approach would
 simplify the testing process and reduces the cognitive load on the software
 engineer, helping us pinpoint the source of failures. However, it is essential
 to acknowledge of the trade-off, as the method's efficiency is not optimal, with
-worst-case complexity of O(n^2). To address this limitation, a more
-sophisticated strategy, Grammar-Based Input Reduction, can be considered. This
-technique is more efficient compared to the binary search strategy of Delta
-Debugging.
+worst-case complexity of $O(n^2)$. To address this limitation, a more
+sophisticated strategy, grammar-based input reduction, can be considered. This
+technique is more efficient compared to the binary search strategy of delta
+debugging. Ultimately, we should consider implementing an automated debugging
+strategy like delta debugging --- this might be helpful because it would enable
+us to quickly and automatically find bugs in, for instance, XPath expressions
+that do not find any matches. It is also possible that we could apply delta
+debugging to the automated test and debugging of the `chasten` tool!
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

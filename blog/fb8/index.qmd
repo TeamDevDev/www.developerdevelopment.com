@@ -116,4 +116,8 @@ grammars, or introduce finer and finer details to our grammars to influence
 their significance in our programs without affecting their external structures
 or significance.
 
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
 {{< include /_back-blog.qmd >}}

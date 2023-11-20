@@ -1,0 +1,134 @@
+---
+author: [Mordred Boulais, Jaclyn Pham, Naboni Thomas, Gregory M. Kapfhammer]
+title: Reducing Failure-Inducing Inputs
+date: '2023-11-22'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can we identify simple crash-causing inputs?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This article covers the [Reducing Failure-Inducing
+Inputs](https://www.fuzzingbook.org/html/Reducer.html) chapter from [Fuzzing
+Book](https://www.fuzzingbook.org/). This chapter builds on the concepts from
+the [Fuzzing](https://www.fuzzingbook.org/html/Fuzzer.html) and [Fuzzing With
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapters. Let's dive
+in to learn more about increasing the efficiency of fuzzed inputs for debugging!
+
+## Summary
+
+This chapter highlights how testing fuzzed inputs can be unreliable when it
+comes time to trace the error back to its source. As such, some steps can be
+taken to break the inputs down and find where the error is. This is where the
+reductions come into play, wherein the input is split in half and each half is
+tested until the source of the error is determined. This can be automated using
+a strategy called Delta Debugging, which uses a binary search strategy to
+implement the reductions. The class below is built on two created previously in
+the chapter, the `Reducer` and the `CachingReducer`, which builds the
+functionality for the splitting and for saving the results.
+
+```python
+class DeltaDebuggingReducer(CachingReducer):
+    """Reduce inputs using delta debugging."""
+
+    def reduce(self, inp: str) -> str:
+        """Reduce input `inp` using delta debugging. Return reduced input."""
+
+        self.reset()
+        assert self.test(inp) != Runner.PASS
+
+        n = 2     # Initial granularity
+        while len(inp) >= 2:
+            start = 0.0
+            subset_length = len(inp) / n
+            some_complement_is_failing = False
+
+            while start < len(inp):
+                complement = inp[:int(start)] + \
+                    inp[int(start + subset_length):]
+
+                if self.test(complement) == Runner.FAIL:
+                    inp = complement
+                    n = max(n - 1, 2)
+                    some_complement_is_failing = True
+                    break
+
+                start += subset_length
+
+            if not some_complement_is_failing:
+                if n == len(inp):
+                    break
+                n = min(n * 2, len(inp))
+
+        return inp
+```
+
+When a tester runs the `reduce` method of the class presented above, they can
+hopefully find a minimal representation of the character(s) responsible for the
+error. This form of reducing the failing inputs also reduces the cognitive load
+on the programmer, since it is a relatively simple and straightforward form of
+testing. It also is, as previously highlighted, quite clear on the source of the
+failure. This aids in identifying duplicates of an issue as well.
+
+Th downside is that this is not a particularly efficient approach! The best case
+for complexity is $O(log_2(n))$, and the worst is $O(n^2)$, which is similar to
+the simple grammar fuzzer that we explored in a previous chapter. Can we improve
+this approach to automated debugging?
+
+Again similar to the simple grammar fuzzer, there is a more efficient, although
+more complex, strategy, called grammar-based input reduction. Using a grammar
+can, as previously explored, help with ensuring that the inputs are
+syntactically valid for the sake of a program that may outright reject inputs
+that cannot be parsed, or inputs where delta debugging would not be able to
+comply with the constraints of the input's syntax. Using grammar-based
+reduction, the input can be reduced grammatically instead of via binary, either
+by replacing subtrees or by alternative expansion. Let's explore these
+approaches in greater detail!
+
+Replacing subtrees is done by picking a subtree from the same token and
+replacing one higher up with that subtree. Alternative expansion is checking for
+alternate children that can be chosen and would thus would led to a smaller
+overall tree. Combining these with a `depth` parameter also facilitates further
+reduction, as it then only returns trees of a certain depth to refine where
+replacements or alternative expansions can be done.
+
+## Reflection
+
+The chapter on [Reducing Failure-Inducing
+Inputs](https://www.fuzzingbook.org/html/Reducer.html) provides a comprehensive
+overview of different strategies for identifying the key parts of a fuzzed input
+that leads to an error during software testing. It emphasizes the need for a
+tailored approach, considering the unique aspects of each program and the
+program's input(s). The chapter introduces two main strategies: delta debugging,
+a simple but effective method, and grammar-based input reduction, a more complex
+but efficient alternative. The choice between these depends on the balance a
+programmer seeks between simplicity and efficiency. The chapter serves as a
+valuable guide for enhancing testing skills and simplifying error detection.
+
+## Use Cases
+
+Addressing the challenge posed by fuzz testing, which generates inputs
+triggering errors without clear localization of the faulty code,
+`DeltaDebuggingReducer` automates the reduction process. By utilizing the
+`reduce` function of this class, the tests for `chasten` could automatically
+identify and isolate the character(s) responsible for errors in the input. This
+approach would simplify the testing process and reduces the cognitive load on
+the software engineer, helping us pinpoint the source of failures. However, it
+is essential to acknowledge of the trade-off, as the method's efficiency is not
+optimal, with worst-case complexity of $O(n^2)$. To address this limitation, a
+more sophisticated strategy, grammar-based input reduction, can be considered.
+This technique is more efficient compared to the binary search strategy of delta
+debugging. Ultimately, we should consider implementing an automated debugging
+strategy like delta debugging --- this might be helpful because it would enable
+us to quickly and automatically find bugs in, for instance, XPath expressions
+that do not find any matches. It is also possible that we could apply delta
+debugging to the automated test and debugging of the `chasten` tool!
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

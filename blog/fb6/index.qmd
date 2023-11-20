@@ -249,4 +249,8 @@ schema for `XPath` expressions, then we could use `hypothesis` to automatically
 generate inputs that adhere to the schema and then add our own mutations when
 we want to see how well our program handles abnormal inputs. Sounds useful!
 
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
 {{< include /_back-blog.qmd >}}

@@ -278,4 +278,8 @@ input.
 - **Be curious:** Explore tooling that exists in order to know "every inch" of
 its feature set. This way, we can approach our testing the most effectively.
 
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
 {{< include /_back-blog.qmd >}}

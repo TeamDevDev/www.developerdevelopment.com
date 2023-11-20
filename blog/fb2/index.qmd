@@ -155,4 +155,8 @@ have test cases that cover source code for existing and new functionality and/or
 bug fixes in [Chasten](https://github.com/AstuteSource/chasten) then we don't
 have a good way to know whether or not these code segments are correct!
 
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
 {{< include /_back-blog.qmd >}}

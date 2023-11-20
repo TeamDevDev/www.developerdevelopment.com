@@ -1,32 +1,43 @@
 ---
 author: [Finley Banas, Preston Smith, Keven Michel Duverglas, Gregory M. Kapfhammer]
 title: 'Code Review'
-date: '2023-11-13'
+date: '2023-11-20'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>How to properly code review?</em>
+description: <em>How can our team properly code review?</em>
 toc: true
 page-layout: full
 ---
 
 ## Overview
 
-This blog post discusses the ["Code Review"](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
-[Software Engineering at Google book](https://abseil.io/resources/swe-book). The Chapter delves into the importance
-of reviewing code before merging and ensuring quality and consistency in a project.
+This blog post discusses the [Code
+Review](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book). The
+Chapter delves into the importance of reviewing code before merging and ensuring
+quality and consistency in a project. Let's dive into the chapter and see what
+constructive tips we can take away from it!
 
 ## Summary
 
-This chapter talks about how google goes about reviewing code and the importance of it in general. Code review is an
-important step in ensuring consistency and quality in a software engineering project and should be taken seriously.
-At google they split it up into three different parts.
+This chapter talks about how Google goes about reviewing code and the importance
+of it in general. Code review is an important step in ensuring consistency and
+quality in a software engineering project and should be taken seriously. At
+Google they split it up into three different parts.
 
-- **Correctness and Comprehension**: Does the code do what it's supposed too. Does it have a clear purpose
-- **Appropriatness for the Code base**: Does the code fit the project is it useful or redundant.
-- **Readability**: Is the code readable and does it follow the standard style rules and practices defined for the project
+- **Correctness and Comprehension**: Does the code do what it's supposed too.
+Does it have a clear purpose
 
-These are all important to keep in mind when reviewing a change as it help ensure consistency and quality helping make sure
-everyone is on the same page. To ensure that these three things are taken into account google has split the process into steps
+- **Appropriateness for the Code base**: Does the code fit the project is it
+useful or redundant.
+
+- **Readability**: Is the code readable and does it follow the standard style
+rules and practices defined for the project
+
+These are all important to keep in mind when reviewing a change as it help
+ensure consistency and quality helping make sure everyone is on the same page.
+To ensure that these three things are taken into account google has split the
+process into steps
 
 - The change is made and the author creates a summary and explanation of the change.
 They can write comments or do a self review for clarity

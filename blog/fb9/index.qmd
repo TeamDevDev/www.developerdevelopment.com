@@ -1,23 +1,22 @@
 ---
-author: [Mordred Boulais, Jaclyn Pham, Naboni Thomas]
+author: [Mordred Boulais, Jaclyn Pham, Naboni Thomas, Gregory M. Kapfhammer]
 title: Reducing Failure-Inducing Inputs
 date: '2023-11-22'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em></em>
+description: <em>How can we automatically identify simple crash-causing inputs?</em>
 toc: true
 page-layout: full
 ---
 
 ## Overview
 
-This article covers the
-[Reducing Failure-Inducing Inputs](https://www.fuzzingbook.org/html/Reducer.html)
-chapter from [Fuzzing Book](https://www.fuzzingbook.org/). This chapter builds
-on the concepts from the [Fuzzing](https://www.fuzzingbook.org/html/Fuzzer.html)
-and [Fuzzing With Grammars](https://www.fuzzingbook.org/html/Grammars.html)
-chapters. Let's dive in to learn more about increasing the efficiency of fuzzed
-inputs for debugging!
+This article covers the [Reducing Failure-Inducing
+Inputs](https://www.fuzzingbook.org/html/Reducer.html) chapter from [Fuzzing
+Book](https://www.fuzzingbook.org/). This chapter builds on the concepts from
+the [Fuzzing](https://www.fuzzingbook.org/html/Fuzzer.html) and [Fuzzing With
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapters. Let's dive
+in to learn more about increasing the efficiency of fuzzed inputs for debugging!
 
 ## Summary
 
@@ -74,13 +73,13 @@ simple and straightforward form of testing. It also is, as previously
 highlighted, quite clear on the source of the failure. This aids in identifying
 duplicates of an issue as well.
 
-Th downside is that this is not the a particularly efficient approach. The best
+Th downside is that this is not a particularly efficient approach. The best
 case for complexity is O(log2n), and the worst is O(n^2), similar to the simple
 grammar fuzzer that was explored in a previous chapter.
 
 Also like the simple grammar fuzzer, there is a more efficient, although more
 complex, strategy. This is Grammar Based Input Reduction. Using a grammar can,
-as previously explred, help with ensuring that the inputs are syntactically
+as previously explored, help with ensuring that the inputs are syntactically
 valid for the sake of a program that may outright reject inputs that cannot be
 parsed, or inputs where Delta Debugging would not be able to comply with the
 constraints of the input's syntax. Using Grammar Based Reduction, the input can
@@ -90,9 +89,9 @@ by alternative expansion.
 Replacing subtrees is done by picking a subtree from the same token and
 replacing one higher up with that subtree. Alternative expansion is
 checking for alternate children can be chosen that would led to a smaller
-overall tree. Combining these with a depth parameter also facillitates further
+overall tree. Combining these with a depth parameter also facilitates further
 reduction, as it then only returns trees of a certain depth to refine where
-replacements or alternative expansions can be done. 
+replacements or alternative expansions can be done.
 
 ## Reflection
 

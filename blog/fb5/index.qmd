@@ -186,4 +186,8 @@ need to run that input through a function such as `mutate` or `multi_mutate` to
 add mutations to the input. Then we would be able run the mutated version of
 the input through the program to test for any errors.
 
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
 {{< include /_back-blog.qmd >}}

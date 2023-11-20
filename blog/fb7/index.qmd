@@ -136,4 +136,8 @@ generate a multitude of XPath expressions with various modifications, like
 changing the positional value, using different node types, or incorporating
 more conditions.
 
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
 {{< include /_back-blog.qmd >}}

@@ -207,4 +207,8 @@ are identified beforehand. As discussed earlier in this article, we can utilize
 the formula provided through Chao's estimator to create an "immortal mutant
 estimate" and approach a true estimate of the equivalent mutant level.
 
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
 {{< include /_back-blog.qmd >}}

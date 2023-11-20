@@ -4,7 +4,7 @@ title: Reducing Failure-Inducing Inputs
 date: '2023-11-22'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>How can we automatically identify simple crash-causing inputs?</em>
+description: <em>How can we identify simple crash-causing inputs?</em>
 toc: true
 page-layout: full
 ---
@@ -74,7 +74,7 @@ highlighted, quite clear on the source of the failure. This aids in identifying
 duplicates of an issue as well.
 
 Th downside is that this is not a particularly efficient approach. The best
-case for complexity is O(log2n), and the worst is O(n^2), similar to the simple
+case for complexity is $O(log_2(n))$, and the worst is O(n^2), similar to the simple
 grammar fuzzer that was explored in a previous chapter.
 
 Also like the simple grammar fuzzer, there is a more efficient, although more

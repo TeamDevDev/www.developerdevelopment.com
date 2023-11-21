@@ -1,5 +1,5 @@
 ---
-author: [Caleb Kendra, Gregory M. Kapfhammer]
+author: [Caleb Kendra, Henry Grefenstette, Gregory M. Kapfhammer]
 title: 'Documentation'
 date: '2023-11-21'
 date-format: long
@@ -25,7 +25,14 @@ work of our engineering team!
 
 ## Reflection
 
-
+The chapter on [Code Documentation](https://abseil.io/resources/swe-book/html/ch10.html) provides 
+us with important information on how documentation is important, despite the
+fact that some engineers consider it "downstream" or unimportant. Nonetheless,
+despite its appearance of unimportance due to its lack of immediate benefits, the article
+shows us how documentation is an extremely important aspect of programming and software
+engineering by explaining how it promotes education among software teams as to what the
+code does and answering questions about its effectiveness, as well as increasing
+professionalism and allowing the formulation of plans related to the rest of the project.
 
 ## Action Items
 

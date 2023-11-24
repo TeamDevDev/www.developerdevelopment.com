@@ -94,6 +94,11 @@ professionalism and allowing the formulation of plans related to the rest of the
 
 ## Action Items
 
+We should establish a universal outline or format for documenting code that ensures consistency across both projects,
+making it easier for team members to navigate and understand the code. Since different team members might contribute in
+various waysor focus on different aspects of the code, having a flexible yet standardized documentation format allows 
+for a cohesive and comprehensive overview. Doing this ensures that our code will be more accessible to people
+working on the tool now and people who will work on it in the future. 
 
 
 {{< include /_back-blog.qmd >}}

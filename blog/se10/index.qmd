@@ -21,21 +21,65 @@ work of our engineering team!
 
 ## Summary
 
-This section of `Software Engineering at Google` deals with the importance of documentation and how it makes the usage and maintenance of code much easier when you can read about the processes that a codebase takes. Documentation in this sense is not just about how the code is run, but all of the work put into the code to make it readable such as descriptive notes and tutorials. Good documentation makes code more comprehensible and allows for quicker transitions for new developers working on the project. This not only gives your project a cleaner look but also allows for fewer questions and confusion which could save a lot of time down the road. One of the main problem with the documentation, however, is that the benefits of writing it are not immediately known and it is very time-consuming to make. This causes a lot of developers to write it off or delay it, then when other developers need to understand this code there is nothing to help them. However, the writing of documentation is vital to a project's long-term success for users to understand changes and features in code.
+This section of `Software Engineering at Google` deals with the importance of 
+documentation and how it makes the usage and maintenance of code much easier 
+when you can read about the processes that a codebase takes. Documentation in 
+this sense is not just about how the code is run, but all of the work put into 
+the code to make it readable such as descriptive notes and tutorials. Good 
+documentation makes code more comprehensible and allows for quicker transitions 
+for new developers working on the project. This not only gives your project a 
+cleaner look but also allows for fewer questions and confusion which could save 
+a lot of time down the road. One of the main problem with the documentation, 
+however, is that the benefits of writing it are not immediately known and it 
+is very time-consuming to make. This causes a lot of developers to write it 
+off or delay it, then when other developers need to understand this code there 
+is nothing to help them. However, the writing of documentation is vital to a 
+project's long-term success for users to understand changes and features in code.
 
-According to those working at Google, documentation should be treated the same way as code is. In this way, documentation needs to be maintained, have a consistent style, and should avoid grammar errors. Ensuring that documentation is periodically tested and reviewed to make sure that they are accurate and follows the modern goals of the tool. To do this each section of documentation needs an owner or a group of owners that are responsible for creating documentation for commands. These groups would be responsible for their sections of code to be clear and maintained, allowing for long-term maintenance of each section of documentation.
+According to those working at Google, documentation should be treated the same 
+way as code is. In this way, documentation needs to be maintained, have a 
+consistent style, and should avoid grammar errors. Ensuring that documentation 
+is periodically tested and reviewed to make sure that they are accurate and 
+follows the modern goals of the tool. To do this each section of documentation 
+needs an owner or a group of owners that are responsible for creating documentation 
+for commands. These groups would be responsible for their sections of code to be 
+clear and maintained, allowing for long-term maintenance of each section of this 
+documentation.
 
-Another point to consider when making documentation is to know who you are writing your documentation for. Often writers of documentation write it only with their own goals in mind, here are some questions writers need to think of:
+Another point to consider when making documentation is to know who you are writing 
+your documentation for. Often writers of documentation write it only with their 
+own goals in mind, here are some questions writers need to think of:
 
  - Are you writing for someone with many years of development experience or only a few weeks? 
  - Are you writing for a developer on your team or the general public? 
  - What information do your users need to know first and what last? 
 
-All of these questions need to be considered when making documentation to make this writing as useful as possible to your users as documentation that is too complicated could confuse people outside of your team if you are not specific enough. 
+All of these questions need to be considered when making documentation to make this
+ writing as useful as possible to your users as documentation that is too complicated 
+ could confuse people outside of your team if you are not specific enough. 
 
-The type of documentation style you use is also something that needs to be considered as different types of notes can help with different internal issues. Reference documentation is one of the most important versions of documentation as it references direct code sources in code segments. File, class, and function comments are some of the most common that help us explicitly state what different sections of code do. Design documents are another type of documentation that enforces design choices made for different projects, these documents are made before projects are started so that code can be standardized in the entire project. In-depth tutorials are also very helpful as they can explain exactly how processes are run which can help new users get up to running quickly. Conceptual documentation is high-level documentation that gives less in-depth information as it is an issue that is more complicated than reference documentation. These documents cover processes that cannot be lowered down to specific sections of code but rather a larger, more theoretical process. Finally, landing pages are good documents to make to ensure that developers going to your documents for the first time have a guide on where they should go to best fix their issues.
+The type of documentation style you use is also something that needs to be considered 
+as different types of notes can help with different internal issues. Reference 
+documentation is one of the most important versions of documentation as it references 
+direct code sources in code segments. File, class, and function comments are some of 
+the most common that help us explicitly state what different sections of code do. 
+Design documents are another type of documentation that enforces design choices made 
+for different projects, these documents are made before projects are started so that 
+code can be standardized in the entire project. In-depth tutorials are also very helpful 
+as they can explain exactly how processes are run which can help new users get up to 
+running quickly. Conceptual documentation is high-level documentation that gives less 
+in-depth information as it is an issue that is more complicated than reference 
+documentation. These documents cover processes that cannot be lowered down to specific 
+sections of code but rather a larger, more theoretical process. Finally, landing pages 
+are good documents to make to ensure that developers going to your documents for the 
+first time have a guide on where they should go to best fix their issues.
 
-In the end, The creation of documentation is a team-based endeavor that requires a lot of effort to set up but is worth it in the long run. Good documentation should have a clear intended audience while also trying to balance accuracy and completeness to be as helpful as possible for your audience. This documentation needs to be maintained also it needs to be able to stay up to date as new features are added, ensuring that all features of your tool will be understood by your audience.
+In the end, The creation of documentation is a team-based endeavor that requires a lot 
+of effort to set up but is worth it in the long run. Good documentation should have a 
+clear intended audience while also trying to balance accuracy and completeness to be 
+as helpful as possible for your audience. This documentation needs to be maintained 
+also it needs to be able to stay up to date as new features are added, ensuring that 
+all features of your tool will be understood by your audience.
 
 ## Reflection
 

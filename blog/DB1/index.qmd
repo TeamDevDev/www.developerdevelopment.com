@@ -1,0 +1,25 @@
+---
+author: [Jason Gyamfi, Sabrina Rodriguez, Keller Liptrap, Gregory M. Kapfhammer]
+title: Introduction to Debugging
+date: '2023-11-27'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can a team best share project knowledge?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+
+## Summary
+
+
+
+## Reflection
+
+
+## Action Items
+
+
+

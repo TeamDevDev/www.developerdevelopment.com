@@ -11,9 +11,64 @@ page-layout: full
 
 ## Overview
 
+This is our first post about the [The Debugging
+Book](https://www.debuggingbook.org/html/Intro_Debugging.html)! The goal of this post is to 
+introduce different debugging methods and utilize these methods within our [Chasten](https://
+github.com/AstuteSource/chasten) tool and [Cellveyor](https://github.com/GatorEducator/
+cellveyor). 
 
 ## Summary
 
+The ["Introduction to Debudding"](https://www.debuggingbook.org/html/Intro_Debugging.html) 
+is about fixing issues in a Python program that removes HTML tags. It explores common 
+debugging challenges and introduces a systematic approach using the scientific method. A 
+specific example involves testing a hypothesis about quote handling and using assertions for 
+confirmation. The importance of a clear diagnosis and post-fix steps like testing, adding 
+assertions, committing changes, and closing bug reports is emphasized. Overall, it provides
+ insights into effective debugging strategies and the significance of thorough documentation 
+ in the process.
+
+The author also introduces a systematic debugging strategy based on the scientific method. 
+It emphasizes the importance of understanding the code, fixing the problem instead of 
+symptoms, and proceeding systematically. The scientific method is applied to debugging, 
+involving formulating hypotheses, making predictions, testing hypotheses through 
+experiments, and refining hypotheses based on observations.
+
+A specific example is provided where a hypothesis about the removal of double quotes from 
+tagged input is tested and confirmed using the assert statement. The debugging process 
+involves identifying defects, faults, and failures, and tracing the cause-effect chain to 
+locate and fix the underlying issues. The passage concludes by highlighting the challenges 
+of debugging, including the complexity of program states and the lack of specifications: 
+
+```python
+# Initial code segment with the hypothesis
+elif c == '"' or c == "'" and tag:
+    assert False  # <=== Just added
+    quote = not quote
+```
+
+To test the hypothesis, the author introduces an 'assert' statement to check whether the 
+condition is faulty. They run the program with an input that triggers this condition:
+
+```python
+result = remove_html_markup_with_quote_assert('"foo"')
+```
+
+The correct fix involves adding parentheses to ensure the corrected condition:
+
+```python
+elif (c == '"' or c == "'") and tag:
+    quote = not quote
+```
+
+The incorrect condition fails to handle single and double quotes correctly. The corrected 
+condition ensures that the code inside the block is executed only when either a single or 
+double quote is encountered and the `tag` variable is true.
+
+After fixing the code, the author suggests post-fix activities, including checking for 
+further occurrences of the defect, validating tests, adding assertions for future 
+correctness checks, committing the fix to the code repository, and closing the bug report. 
+These activities ensure the long-term health and correctness of the codebase.
 
 
 ## Reflection

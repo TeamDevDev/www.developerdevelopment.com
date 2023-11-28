@@ -61,7 +61,7 @@ elif (c == '"' or c == "'") and tag:
     quote = not quote
 ```
 
-The incorrect condition fails to handle single and double quotes correctly. The corrected 
+The incorrect condition fails to handle single and double quotes correctly. The corrected
 condition ensures that the code inside the block is executed only when either a single or 
 double quote is encountered and the `tag` variable is true.
 
@@ -76,5 +76,5 @@ These activities ensure the long-term health and correctness of the codebase.
 
 ## Action Items
 
-
+The cause-and-effect chain can be helpful to keep in mind when writing test cases for our code. Having a deeper understanding of the steps in the cause-and-effect chain can allow us to write better test cases to debug our program. Knowing that the chain starts with a human action that results in an error which then results in errors in the code may help us figure out how to debug a section of the program or an input that causes an error. Using the idea of the scientific method in this chapter can also be beneficial to look at bugs that are within the program or function. Taking the approach of the scientific method and creating a hypothesis as to what might be causing the error that the program or function is producing is a good first step in diagnosing the bug. Predicting what may happen when you modify a section or piece of code and checking it to see if the output is what you predicted it to be will help us debug a program or function. Overall this chapter gives key insights into the ideology to use when debugging a function or program.
 

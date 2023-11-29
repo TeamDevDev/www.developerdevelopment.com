@@ -81,13 +81,13 @@ Finally, landing pages are good documents to make to ensure that developers
 going to your documents for the first time have a guide on where they should go
 to best fix their issues.
 
-In the end, The creation of documentation is a team-based endeavor that requires
+Ultimately, the creation of documentation is a team-based endeavor that requires
 a lot of effort to set up but is worth it in the long run. Good documentation
 should have a clear intended audience while also trying to balance accuracy and
-completeness to be as helpful as possible for your audience. This documentation
-needs to be maintained also it needs to be able to stay up to date as new
-features are added, ensuring that all features of your tool will be understood
-by your audience.
+completeness so that it is as helpful as possible for the intended audience.
+Software engineers must maintain and update documentation so that it stays up to
+date as new features are added, thereby ensuring that all features of a software
+tool will be understood by its audience.
 
 ## Reflection
 

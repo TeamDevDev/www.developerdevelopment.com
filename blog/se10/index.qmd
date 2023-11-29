@@ -51,9 +51,10 @@ Another point to consider when making documentation is to know who you are
 writing your documentation for. Often writers of documentation write it only
 with their own goals in mind, here are some questions writers need to think of:
 
- - Are you writing for someone with many years of development experience or only a few weeks?
- - Are you writing for a developer on your team or the general public?
- - What information do your users need to know first and what last?
+ - Are you writing for someone with many years of development experience or only
+ a few weeks?
+- Are you writing for a developer on your team or the general public?
+- What information do your users need to know first and what last?
 
 All of these questions need to be considered when making documentation to make
 this writing as useful as possible to your users as documentation that is too

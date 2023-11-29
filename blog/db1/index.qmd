@@ -113,3 +113,6 @@ Predicting what may happen when you modify a section or piece of code and
 checking it to see if the output is what you predicted it to be will help us
 debug a program or function. Overall this chapter gives key insights into the
 ideology to use when debugging a function or program.
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

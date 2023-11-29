@@ -51,7 +51,7 @@ elif c == '"' or c == "'" and tag:
     quote = not quote
 ```
 
-To test the hypothesis, the author introduces an 'assert' statement to check
+To test the hypothesis, the author introduces an `assert` statement to check
 whether the condition is faulty. They run the program with an input that
 triggers this condition:
 

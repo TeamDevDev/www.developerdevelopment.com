@@ -38,7 +38,7 @@ making predictions, testing hypotheses through experiments, and refining
 hypotheses based on observations.
 
 The chapter provides a specific example where a hypothesis about the removal of
-double quotes from tagged input is tested and confirmed using the assert
+double quotes from tagged input is tested and confirmed using the `assert`
 statement. The debugging process involves identifying defects, faults, and
 failures, and tracing the cause-effect chain to locate and fix the underlying
 issues. The passage concludes by highlighting the challenges of debugging,

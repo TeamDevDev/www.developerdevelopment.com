@@ -85,17 +85,12 @@ make it legible with Python. Debugging means to simultaneously find and fix
 problems within our code. The author wants developers to approach debugging by
 using the scientific method.
 
-In the chapter, a Python function is used to explore the debugging process. In
-the function there is a bug which causes the function to not work properly. The
-article shows step by step whats wrong and how to debug this function. The
-message being conveyed in this article is to simply use a systematic and
-methodical approach when going about debugging.
-
-To conclude, the article talks about how to find and debug errors in different
-programs. It talks about how to go about debugging in order to get the best
-results possible. Ultimately, the article makes it clear both what a software
-engineer does during the process of debugging and how debugging improves the
-overall quality of software.
+This chapter uses a Python function to concretely explore the debugging
+process. In the provided function there is a bug that causes it to not work
+properly. The article shows in a step-by-step fashion what is wrong and
+explains how to debug this function. The message being conveyed in this article
+is to simply use a systematic and methodical approach when going about
+debugging. Of course, this is often easier said than done!
 
 ## Action Items
 

@@ -21,35 +21,36 @@ of our engineering team!
 
 ## Summary
 
-This section of `Software Engineering at Google` deals with the importance of
-documentation and how it makes the usage and maintenance of code much easier
-when you can read about the processes that a codebase takes. Documentation in
-this sense is not just about how the code is run, but all of the work put into
-the code to make it readable such as descriptive notes and tutorials. Good
+This section of [Software Engineering at Google
+book](https://abseil.io/resources/swe-book) deals with the importance of
+documentation and how it makes the use and maintenance of code much easier when
+you can read about the processes that a codebase takes. Documentation in this
+sense is not just about how the code is run, but all of the work put into the
+code to make it readable such as descriptive notes and tutorials. Good
 documentation makes code more comprehensible and allows for quicker transitions
 for new developers working on the project. This not only gives your project a
 cleaner look but also allows for fewer questions and confusion which could save
-a lot of time down the road. One of the main problem with the documentation,
-however, is that the benefits of writing it are not immediately known and it is
-very time-consuming to make. This causes a lot of developers to write it off or
-delay it, then when other developers need to understand this code there is
+a lot of time down the road. One of the main problem with documentation,
+however, is that the benefits of writing it are not immediately evident and it
+may be time-consuming to make. This causes a lot of developers to write it off
+or delay it, then when other developers need to understand this code there is
 nothing to help them. However, the writing of documentation is vital to a
 project's long-term success for users to understand changes and features in
 code.
 
-According to those working at Google, documentation should be treated the same
-way as code is. In this way, documentation needs to be maintained, have a
-consistent style, and should avoid grammar errors. Ensuring that documentation
-is periodically tested and reviewed to make sure that they are accurate and
-follows the modern goals of the tool. To do this each section of documentation
-needs an owner or a group of owners that are responsible for creating
-documentation for commands. These groups would be responsible for their sections
-of code to be clear and maintained, allowing for long-term maintenance of each
-section of this documentation.
+This article explains that we should treat documentation the same way as we
+treat code. This means that documentation must be maintained, have a consistent
+style, and should avoid grammar errors. Software engineers should periodically
+review and test their documentation to make sure that it is accurate and follows
+the current goals of the tool. To do this each section of documentation needs an
+owner or a group of owners who are responsible for creating documentation for
+commands. These groups would be responsible for their sections of code to be
+clear and maintained, allowing for long-term maintenance of each section of this
+documentation.
 
-Another point to consider when making documentation is to know who you are
-writing your documentation for. Often writers of documentation write it only
-with their own goals in mind, here are some questions writers need to think of:
+Another point to consider when making documentation is to know for whom you are
+writing your documentation. Often writers of documentation write it only with
+their own goals in mind, here are some questions writers need to think of:
 
  - Are you writing for someone with many years of development experience or only
  a few weeks?

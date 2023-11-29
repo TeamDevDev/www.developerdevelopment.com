@@ -1,7 +1,7 @@
 ---
 author: [Jason Gyamfi, Sabrina Rodriguez, Keller Liptrap, Gregory M. Kapfhammer]
-title: Introduction to Debugging
-date: '2023-11-27'
+title: Program Debugging
+date: '2023-11-29'
 date-format: long
 categories: [post, professional development, software engineering]
 description: <em>How can a team best share project knowledge?</em>
@@ -12,33 +12,35 @@ page-layout: full
 ## Overview
 
 This is our first post about the [The Debugging
-Book](https://www.debuggingbook.org/html/Intro_Debugging.html)! The goal of this post is to 
-introduce different debugging methods and utilize these methods within our [Chasten](https://
-github.com/AstuteSource/chasten) tool and [Cellveyor](https://github.com/GatorEducator/
-cellveyor). 
+Book](https://www.debuggingbook.org/html/Intro_Debugging.html)! The goal of
+this post is to introduce different debugging methods and utilize these methods
+within our [Chasten](https://github.com/AstuteSource/chasten) and
+[Cellveyor](https://github.com/GatorEducator/cellveyor) tools.
 
 ## Summary
 
-The ["Introduction to Debudding"](https://www.debuggingbook.org/html/Intro_Debugging.html) 
-is about fixing issues in a Python program that removes HTML tags. It explores common 
-debugging challenges and introduces a systematic approach using the scientific method. A 
-specific example involves testing a hypothesis about quote handling and using assertions for 
-confirmation. The importance of a clear diagnosis and post-fix steps like testing, adding 
-assertions, committing changes, and closing bug reports is emphasized. Overall, it provides
- insights into effective debugging strategies and the significance of thorough documentation 
- in the process.
+The ["Introduction to
+Debugging"](https://www.debuggingbook.org/html/Intro_Debugging.html) chapter is
+about fixing issues in a Python program that removes HTML tags. It explores
+common debugging challenges and introduces a systematic approach using the
+scientific method. A specific example involves testing a hypothesis about quote
+handling and using assertions for confirmation. The importance of a clear
+diagnosis and post-fix steps like testing, adding assertions, committing
+changes, and closing bug reports is emphasized. Overall, it provides insights
+into effective debugging strategies and the significance of thorough
+documentation in the process.
 
-The author also introduces a systematic debugging strategy based on the scientific method. 
-It emphasizes the importance of understanding the code, fixing the problem instead of 
-symptoms, and proceeding systematically. The scientific method is applied to debugging, 
-involving formulating hypotheses, making predictions, testing hypotheses through 
+The author also introduces a systematic debugging strategy based on the scientific method.
+It emphasizes the importance of understanding the code, fixing the problem instead of
+symptoms, and proceeding systematically. The scientific method is applied to debugging,
+involving formulating hypotheses, making predictions, testing hypotheses through
 experiments, and refining hypotheses based on observations.
 
-A specific example is provided where a hypothesis about the removal of double quotes from 
-tagged input is tested and confirmed using the assert statement. The debugging process 
-involves identifying defects, faults, and failures, and tracing the cause-effect chain to 
-locate and fix the underlying issues. The passage concludes by highlighting the challenges 
-of debugging, including the complexity of program states and the lack of specifications: 
+A specific example is provided where a hypothesis about the removal of double quotes from
+tagged input is tested and confirmed using the assert statement. The debugging process
+involves identifying defects, faults, and failures, and tracing the cause-effect chain to
+locate and fix the underlying issues. The passage concludes by highlighting the challenges
+of debugging, including the complexity of program states and the lack of specifications:
 
 ```python
 # Initial code segment with the hypothesis
@@ -47,8 +49,9 @@ elif c == '"' or c == "'" and tag:
     quote = not quote
 ```
 
-To test the hypothesis, the author introduces an 'assert' statement to check whether the 
-condition is faulty. They run the program with an input that triggers this condition:
+To test the hypothesis, the author introduces an 'assert' statement to check
+whether the condition is faulty. They run the program with an input that
+triggers this condition:
 
 ```python
 result = remove_html_markup_with_quote_assert('"foo"')
@@ -61,31 +64,48 @@ elif (c == '"' or c == "'") and tag:
     quote = not quote
 ```
 
-The incorrect condition fails to handle single and double quotes correctly. The corrected
-condition ensures that the code inside the block is executed only when either a single or 
-double quote is encountered and the `tag` variable is true.
+The incorrect condition fails to handle single and double quotes correctly. The
+corrected condition ensures that the code inside the block is executed only
+when either a single or double quote is encountered and the `tag` variable is
+true.
 
-After fixing the code, the author suggests post-fix activities, including checking for 
-further occurrences of the defect, validating tests, adding assertions for future 
-correctness checks, committing the fix to the code repository, and closing the bug report. 
-These activities ensure the long-term health and correctness of the codebase.
-
+After fixing the code, the author suggests post-fix activities, including
+checking for further occurrences of the defect, validating tests, adding
+assertions for future correctness checks, committing the fix to the code
+repository, and closing the bug report. These activities ensure the long-term
+health and correctness of the codebase.
 
 ## Reflection
 
-After reading and interpreting this article this article, we as programmers learn more about debugging.
-We learn about how simple debugging is and how we can make it legibe with Python. Debugging means to simultaneously
-find and fix problems within our code.  The author wants programmers to approach debugging by using the Scientific Method.
+After reading and interpreting this article this article, we as programmers
+learn more about debugging. We learn about how simple debugging is and how we
+can make it legible with Python. Debugging means to simultaneously find and fix
+problems within our code.  The author wants programmers to approach debugging
+by using the Scientific Method.
 
-In the chapter, a Python function is used to represent how debugging would look. In the function there is a bug which causes
-the function to not work properly. The article shows step by step whats wrong and how to debug this function. The message being
-conveyed in this article is to simply use a systematic and methodical approach when going about debugging.
+In the chapter, a Python function is used to represent how debugging would
+look. In the function there is a bug which causes the function to not work
+properly. The article shows step by step whats wrong and how to debug this
+function. The message being conveyed in this article is to simply use a
+systematic and methodical approach when going about debugging.
 
-To conclude, the article talks about how to find and debug errors in different in different programs. It talks about how to go about
-debugging in order to get the best results possible.
-
+To conclude, the article talks about how to find and debug errors in different
+in different programs. It talks about how to go about debugging in order to get
+the best results possible.
 
 ## Action Items
 
-The cause-and-effect chain can be helpful to keep in mind when writing test cases for our code. Having a deeper understanding of the steps in the cause-and-effect chain can allow us to write better test cases to debug our program. Knowing that the chain starts with a human action that results in an error which then results in errors in the code may help us figure out how to debug a section of the program or an input that causes an error. Using the idea of the scientific method in this chapter can also be beneficial to look at bugs that are within the program or function. Taking the approach of the scientific method and creating a hypothesis as to what might be causing the error that the program or function is producing is a good first step in diagnosing the bug. Predicting what may happen when you modify a section or piece of code and checking it to see if the output is what you predicted it to be will help us debug a program or function. Overall this chapter gives key insights into the ideology to use when debugging a function or program.
-
+The cause-and-effect chain can be helpful to keep in mind when writing test
+cases for our code. Having a deeper understanding of the steps in the
+cause-and-effect chain can allow us to write better test cases to debug our
+program. Knowing that the chain starts with a human action that results in an
+error which then results in errors in the code may help us figure out how to
+debug a section of the program or an input that causes an error. Using the idea
+of the scientific method in this chapter can also be beneficial to look at bugs
+that are within the program or function. Taking the approach of the scientific
+method and creating a hypothesis as to what might be causing the error that the
+program or function is producing is a good first step in diagnosing the bug.
+Predicting what may happen when you modify a section or piece of code and
+checking it to see if the output is what you predicted it to be will help us
+debug a program or function. Overall this chapter gives key insights into the
+ideology to use when debugging a function or program.

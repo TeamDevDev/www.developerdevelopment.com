@@ -19,8 +19,8 @@ within our [Chasten](https://github.com/AstuteSource/chasten) and
 
 ## Summary
 
-The ["Introduction to
-Debugging"](https://www.debuggingbook.org/html/Intro_Debugging.html) chapter
+The [Introduction to
+Debugging](https://www.debuggingbook.org/html/Intro_Debugging.html) chapter
 explores the topic of debugging through the example of fixing issues in a
 Python program that removes HTML tags. It explores common debugging challenges
 and introduces a systematic approach using the scientific method. A specific
@@ -28,7 +28,8 @@ example involves testing a hypothesis about quote handling and using assertions
 for confirmation. The importance of a clear diagnosis and post-fix steps like
 testing, adding assertions, committing changes, and closing bug reports is
 emphasized. Overall, it provides insights into effective debugging strategies
-and the significance of thorough documentation in the process.
+while highlighting the significance of thorough documentation and clear
+thinking during the debugging process.
 
 The chapter also introduces a systematic debugging strategy based on the
 scientific method. It emphasizes the importance of understanding the code,

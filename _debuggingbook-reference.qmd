@@ -3,7 +3,7 @@
 Unless otherwise noted, the source code segments in this article are excerpted
 directly from the [Debugging Book](https://www.debuggingbook.com/). The authors
 of this online book licensed the source code and its written content under the
-[BY-NC-SA 4.0 Creative Commons
+[Attribution-NonCommercial-ShareAlike 4.0 International Creative Commons
 License](https://creativecommons.org/licenses/by-nc-sa/4.0/). More details
 about the license for the Fuzzing Book are available in the [The Debugging Book
 License](https://github.com/uds-se/debuggingbook/blob/master/LICENSE.md).

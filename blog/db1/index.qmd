@@ -20,27 +20,29 @@ within our [Chasten](https://github.com/AstuteSource/chasten) and
 ## Summary
 
 The ["Introduction to
-Debugging"](https://www.debuggingbook.org/html/Intro_Debugging.html) chapter is
-about fixing issues in a Python program that removes HTML tags. It explores
-common debugging challenges and introduces a systematic approach using the
-scientific method. A specific example involves testing a hypothesis about quote
-handling and using assertions for confirmation. The importance of a clear
-diagnosis and post-fix steps like testing, adding assertions, committing
-changes, and closing bug reports is emphasized. Overall, it provides insights
-into effective debugging strategies and the significance of thorough
-documentation in the process.
+Debugging"](https://www.debuggingbook.org/html/Intro_Debugging.html) chapter
+explores the topic of debugging through the example of fixing issues in a
+Python program that removes HTML tags. It explores common debugging challenges
+and introduces a systematic approach using the scientific method. A specific
+example involves testing a hypothesis about quote handling and using assertions
+for confirmation. The importance of a clear diagnosis and post-fix steps like
+testing, adding assertions, committing changes, and closing bug reports is
+emphasized. Overall, it provides insights into effective debugging strategies
+and the significance of thorough documentation in the process.
 
-The author also introduces a systematic debugging strategy based on the scientific method.
-It emphasizes the importance of understanding the code, fixing the problem instead of
-symptoms, and proceeding systematically. The scientific method is applied to debugging,
-involving formulating hypotheses, making predictions, testing hypotheses through
-experiments, and refining hypotheses based on observations.
+The chapter also introduces a systematic debugging strategy based on the
+scientific method. It emphasizes the importance of understanding the code,
+fixing the problem instead of symptoms, and proceeding systematically. The
+scientific method is applied to debugging, involving formulating hypotheses,
+making predictions, testing hypotheses through experiments, and refining
+hypotheses based on observations.
 
-A specific example is provided where a hypothesis about the removal of double quotes from
-tagged input is tested and confirmed using the assert statement. The debugging process
-involves identifying defects, faults, and failures, and tracing the cause-effect chain to
-locate and fix the underlying issues. The passage concludes by highlighting the challenges
-of debugging, including the complexity of program states and the lack of specifications:
+The chapter provides a specific example where a hypothesis about the removal of
+double quotes from tagged input is tested and confirmed using the assert
+statement. The debugging process involves identifying defects, faults, and
+failures, and tracing the cause-effect chain to locate and fix the underlying
+issues. The passage concludes by highlighting the challenges of debugging,
+including the complexity of program states and the lack of specifications:
 
 ```python
 # Initial code segment with the hypothesis

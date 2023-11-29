@@ -1,7 +1,7 @@
 ---
 author: [Caleb Kendra, Henry Grefenstette, Gregory M. Kapfhammer]
 title: 'Documentation'
-date: '2023-11-21'
+date: '2023-11-27'
 date-format: long
 categories: [post, professional development, software engineering]
 description: <em>How can our team effectively document code?</em>

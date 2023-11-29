@@ -4,7 +4,7 @@ title: Program Debugging
 date: '2023-11-29'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>How can a team best share project knowledge?</em>
+description: <em>How can apply systematic debugging practices?</em>
 toc: true
 page-layout: full
 ---
@@ -113,6 +113,9 @@ Predicting what may happen when you modify a section or piece of code and
 checking it to see if the output is what you predicted it to be will help us
 debug a program or function. Overall this chapter gives key insights into the
 ideology to use when debugging a function or program.
+
+<!-- Include the license statement for the online book -->
+{{< include /_debuggingbook-reference.qmd >}}
 
 <!-- Include reference back to the listing of blog posts -->
 {{< include /_back-blog.qmd >}}

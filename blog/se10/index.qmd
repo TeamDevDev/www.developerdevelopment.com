@@ -11,13 +11,13 @@ page-layout: full
 
 ## Overview
 
-This blog post discusses the [Documentation
-](https://abseil.io/resources/swe-book/html/ch10.html) chapter in the
-[Software Engineering at Google book](https://abseil.io/resources/swe-book). The
-chapter looks into the importance of documentation in order to ensure that 
-ideas in code  are communicated efficiently. Let's dive into the chapter and 
-see what constructive tips we can take away from it so that we can improve the 
-work of our engineering team!
+This blog post discusses the
+[Documentation](https://abseil.io/resources/swe-book/html/ch10.html) chapter in
+the [Software Engineering at Google book](https://abseil.io/resources/swe-book).
+The chapter looks into the importance of documentation in order to ensure that
+ideas in code are communicated efficiently. Let's dive into the chapter and see
+what constructive tips we can take away from it so that we can improve the work
+of our engineering team!
 
 ## Summary
 

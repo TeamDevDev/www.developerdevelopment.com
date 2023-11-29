@@ -48,16 +48,17 @@ commands. These groups would be responsible for their sections of code to be
 clear and maintained, allowing for long-term maintenance of each section of this
 documentation.
 
-Another point to consider when making documentation is to know for whom you are
-writing your documentation. Often writers of documentation write it only with
-their own goals in mind, here are some questions writers need to think of:
+Another point to consider when writing documentation is to know for whom you are
+writing your documentation. Since often writers of documentation write it only
+with their own goals in mind, here are some questions that the should consider
+when documenting source code:
 
  - Are you writing for someone with many years of development experience or only
  a few weeks?
 - Are you writing for a developer on your team or the general public?
 - What information do your users need to know first and what last?
 
-All of these questions need to be considered when making documentation to make
+All of these questions need to be considered when creating documentation to make
 this writing as useful as possible to your users as documentation that is too
 complicated could confuse people outside of your team if you are not specific
 enough.

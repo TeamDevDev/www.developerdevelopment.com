@@ -75,25 +75,27 @@ After fixing the code, the author suggests post-fix activities, including
 checking for further occurrences of the defect, validating tests, adding
 assertions for future correctness checks, committing the fix to the code
 repository, and closing the bug report. These activities ensure the long-term
-health and correctness of the codebase.
+health and correctness of a software application.
 
 ## Reflection
 
-After reading and interpreting this article this article, we as programmers
-learn more about debugging. We learn about how simple debugging is and how we
-can make it legible with Python. Debugging means to simultaneously find and fix
-problems within our code.  The author wants programmers to approach debugging
-by using the Scientific Method.
+After reading and interpreting this article, we as software engineers can learn
+more about debugging. We learn about how simple debugging is and how we can
+make it legible with Python. Debugging means to simultaneously find and fix
+problems within our code. The author wants developers to approach debugging by
+using the scientific method.
 
-In the chapter, a Python function is used to represent how debugging would
-look. In the function there is a bug which causes the function to not work
-properly. The article shows step by step whats wrong and how to debug this
-function. The message being conveyed in this article is to simply use a
-systematic and methodical approach when going about debugging.
+In the chapter, a Python function is used to explore the debugging process. In
+the function there is a bug which causes the function to not work properly. The
+article shows step by step whats wrong and how to debug this function. The
+message being conveyed in this article is to simply use a systematic and
+methodical approach when going about debugging.
 
 To conclude, the article talks about how to find and debug errors in different
-in different programs. It talks about how to go about debugging in order to get
-the best results possible.
+programs. It talks about how to go about debugging in order to get the best
+results possible. Ultimately, the article makes it clear both what a software
+engineer does during the process of debugging and how debugging improves the
+overall quality of software.
 
 ## Action Items
 

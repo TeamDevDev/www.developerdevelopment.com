@@ -1,0 +1,37 @@
+---
+author: [Keven Duverglas, Haylee Pierce, Will Wolf]
+title: Tracing Executions
+date: '2023-11-'
+date-format: long
+categories: [post, software engineering, debugging book]
+description: <em>How can tracing be used to debug code?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This article covers the ["Tracing Executions"]
+(https://www.debuggingbook.org/html/Tracer.html) chapter from [The Debugging
+Book](https://www.debuggingbook.org/html/Intro_Debugging.html). In this article
+we will summarize the chapter and discuss how its content could be utilized
+within the context of our [Chasten](https://github.com/AstuteSource/chasten)
+and [Cellveyor](https://github.com/GatorEducator/cellveyor) tools.
+
+## Summary
+
+
+
+## Reflection
+
+
+
+## Action Items
+
+
+
+<!-- Include the license statement for the online book -->
+{{< include /_debuggingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

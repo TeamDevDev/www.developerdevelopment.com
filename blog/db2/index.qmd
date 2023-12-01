@@ -24,7 +24,13 @@ and [Cellveyor](https://github.com/GatorEducator/cellveyor) tools.
 
 ## Reflection
 
-
+After reading this chapter, we have a better understanding of what tracing
+entails. We have learned that there are several different ways to trace, from
+simply using the `settrace()` function to writing a complex `Tracer` class with
+conditional logic. We learned about frames and all the different variables
+within them. We learned how tracing can help improve the efficency of the
+debugging process. With this knowledge, we can better understand the process of
+tracing and be able to implement tracing into our own programs.
 
 ## Action Items
 

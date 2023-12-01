@@ -1,0 +1,28 @@
+---
+author: [Naboni Thomas, Simon Jones, Evan Nelson, Gregory Kapfhammer]
+title: 'Testing Overview'
+date: '2023-12-04'
+date-format: long
+categories: [post, professional development, software engineering, testing]
+description: <em>How can our team incorporate testing into our workflow?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+FIXME
+
+## Summary
+
+FIXME
+
+## Reflection
+
+FIXME
+
+## Action Items
+
+FIXME
+
+{{< include /_back-blog.qmd >}}

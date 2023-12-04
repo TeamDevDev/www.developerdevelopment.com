@@ -33,6 +33,6 @@ way of making sure that these test cases become as efficient as possible.
 
 ## Action Items
 
-FIXME
+**Iterative Testing Process:** Encourage the team to adopt an iterative testing process. This involves writing test cases, running them, and reacting to the results. This process should be repeated until the code is well-written and effective.
 
 {{< include /_back-blog.qmd >}}

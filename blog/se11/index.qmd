@@ -149,13 +149,16 @@ means writing a good test suit).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-* https://keller-liptrap.netlify.app/ Summary In this section of the software
-  engineering at google book we are getting an overview in testing. Testing in
-  software has been an important task even from the begining of coding and used
-  to be a manuel step we had to take but now we can automate these tests. This
-  allows software engineers to change and adapt code quickly. Althoough testing
-  is used very often it is very hard to master. There are four bulltet points
-  the author uses to desribe a simple test:
+* https://keller-liptrap.netlify.app/
+
+Summary
+
+In this section of the software engineering at google book we are getting an
+overview in testing. Testing in software has been an important task even from
+the begining of coding and used to be a manuel step we had to take but now we
+can automate these tests. This allows software engineers to change and adapt
+code quickly. Althoough testing is used very often it is very hard to master.
+There are four bulltet points the author uses to desribe a simple test:
 
 A single behavior you are testing, usually a method or API that you are calling
 
@@ -180,7 +183,10 @@ to know that the tool is working as intended. -->
 This blog post discusses the [Testing
 Overview](https://abseil.io/resources/swe-book/html/ch11.html) chapter in the
 [Software Engineering at
-Google](https://abseil.io/resources/swe-book/html/toc.html) book.
+Google](https://abseil.io/resources/swe-book/html/toc.html) book. The principles
+of testing can be applied to numerous areas in Software Engineering, and they
+work to achieve a robust code base that frees engineers to work to their
+fullest. Let's begin learning about software testing!
 
 ## Summary
 
@@ -190,6 +196,17 @@ Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html) book
 provides us with an overview of the process of testing. Testing frees the
 developer to make changes with confidence, as they can quickly diagnose and see
 which functionality is broken by their changes.
+
+In its early years, Google's test suite did not exist. After a eye-opening
+realization that over 80% of their production pushes contained user-affecting
+bugs, one of their tech leads decided to enforce automated testing in tandem
+with pushes to production. They found that the number of emergency pushes
+dropped by half, despite the fact that the changes to their codebase increased.
+This is just one example of the power of enforcing a test suite.
+
+As stated, testing code comes with numerous benefits. Some of the benefits
+listed in this chapter are as follows:
+
 
 * **Less debugging**: Given that tested code has fewer defects, there is
   naturally less debugging required after shipping code that has already been
@@ -213,6 +230,74 @@ which functionality is broken by their changes.
 * **Fast, high-quality releases**: In addition to having increased confidence in
   changes, new releases of a codebase that has a healthy group of test cases
   will be atomic, correct, and explainable.
+
+An important design consideration in testing is the **test size**. Google
+considers three different sizes of tests: small, medium, and large.
+
+1. *Small tests* are tests that do not interact with any other process and are
+   confined to a single thread. These tests are usually the most helpful,
+   because they ensure functionality at the most basic level.
+2. *Medium tests* are tests that can run multithreaded, can interact with web
+   requests, and can make other types of blocking calls. These tests may not
+   interact with any other machine, however.
+3. *Large tests* are tests that may span across multiple machines. There is
+   little restriction placed on this class of test. The caveat with these tests
+   is that they are usually inflexible, meaning that, when changes occur, they
+   do not cooperate as easily. These kinds of tests are also flakier, because of
+   their reliance on multiple systems.
+
+> As a very rough guideline, we tend to aim to have a mix of around 80% of our
+> tests being narrow-scoped unit tests that validate the majority of our
+> business logic; 15% medium-scoped integration tests that validate the
+> interactions between two or more components; and 5% end-to-end tests that
+> validate the entire system.
+
+This distribution can be represented in the form of a pyramid, with unit tests
+forming the base. Two antipatterns of this are:
+
+1. Loading up on manual testing, resulting in a weak formation of unit tests.
+2. Prioritizing unit and end-to-end tests equally, resulting in a weak
+   bug-catching strategy.
+
+> The Beyoncé Rule
+>
+> If you liked it, then you shoulda put a test on it.
+
+**The Beyoncé Rule** is an important philosophy to apply when working on a
+valuable feature in the context of a team. Creating test cases around the
+feature you are proposing validates its existence and allows for future
+developers to easily understand it. This *greatly reduces* the chances of your
+feature being removed or overridden by a new feature.
+
+Testing does come with its share of limitations. As an example, not every test
+will be equally useful, and determining its value is by nature a human-led task.
+There are also different kinds of programs, such as real-time systems, in which
+the best measure of its functionality is to have a human experiment with it.
+
+### Software Testing for Ethics
+
+Our team member [Keller Liptrap](https://keller-liptrap.netlify.app/) explains
+how testing can affect other areas that just software:
+
+> Testing also provides safety for a program making sure no harm will be done or
+> any unethical events occur from the code that was written.
+>
+> - Keller Liptrap, 2023
+
+Liptrap's point is brewed from the extensive thinking that the `chasten` and
+`cellveyor` teams have put into trying to answer the question *"How is software
+engineering able to answer ethical questions?"* Although the idea of software
+testing may sound detached from the sphere of ethics, Liptrap is saying that
+software testing can actually help provide ethical security. This may take many
+forms; it could be ensuring the representation captured in outputs of functions
+dealing with human-centered data, or it could be ensuring that a program does
+not fail to restrict content on the basis of age. Software testing can aid in
+ensuring that the intended functionality *is* indeed the observed functionality.
+
+In the end, testing is a valuable asset to any company in ensuring it can brave
+the trials of the future and outlive its competitors. In a team, it fosters
+inclusiveness between teammates, as it is a basis of knowledge sharing.
+
 
 ## Reflection
 

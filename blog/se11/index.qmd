@@ -118,14 +118,16 @@ Liptrap's point is brewed from the extensive thinking that the `chasten` and
 engineering able to answer ethical questions?"* Although the idea of software
 testing may sound detached from the sphere of ethics, Liptrap is saying that
 software testing can actually help provide ethical security. This may take many
-forms; it could be ensuring the representation captured in outputs of functions
+forms: it could be ensuring the representation captured in outputs of functions
 dealing with human-centered data, or it could be ensuring that a program does
 not fail to restrict content on the basis of age. Software testing can aid in
-ensuring that the intended functionality *is* indeed the observed functionality.
+ensuring that the intended functionality is, in fact, the observed
+functionality.
 
-In the end, testing is a valuable asset to any company in ensuring it can brave
-the trials of the future and outlive its competitors. In a team, it fosters
-inclusiveness between teammates, as it is a basis of knowledge sharing.
+Ultimately, software testing is a valuable asset to any company because it
+allows the engineers to brave the trials of the future and the organization to
+outlive its competitors. In a team, it fosters inclusiveness between teammates,
+as it is a basis of knowledge sharing.
 
 ## Reflection
 

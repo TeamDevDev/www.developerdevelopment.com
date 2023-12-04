@@ -128,7 +128,7 @@ inclusiveness between teammates, as it is a basis of knowledge sharing.
 
 ## Reflection
 
-While refelcting on ths section called "Tesing Overview", its important to
+While reflecting on this section called "Testing Overview", its important to
 remember a few things that this section has covered. The process of testing is
 something that is super important to remember and utilize.
 

@@ -104,8 +104,6 @@ will be equally useful, and determining its value is by nature a human-led task.
 There are also different kinds of programs, such as real-time systems, in which
 the best measure of its functionality is to have a human experiment with it.
 
-### Software Testing for Ethics
-
 Our team member [Keller Liptrap](https://keller-liptrap.netlify.app/) explains
 how testing can affect other areas that just software:
 

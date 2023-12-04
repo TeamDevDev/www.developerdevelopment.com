@@ -19,7 +19,17 @@ FIXME
 
 ## Reflection
 
-FIXME
+While refelcting on ths section called "Tesing Overview", its important to remember a few things that this section has covered. The
+process of testing is something that is super important to remember and utilize.
+1. Write test cases
+2. Run
+3. React to the result
+
+First we write these test cases to make sure that the code we write is well written and very effective. Second we run the
+test cases to see what the output or result of these test cases are. And finally we react to what the outcome of the run is. We
+change the test cases or complete any task needed that we find from the result of the run. Testing is a super important part of
+coding and the way we complete this is also very important. Making this process almost like a trial and error process is a good
+way of making sure that these test cases become as efficient as possible.
 
 ## Action Items
 

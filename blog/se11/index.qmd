@@ -132,7 +132,8 @@ inclusiveness between teammates, as it is a basis of knowledge sharing.
 While reflecting on this section called [Testing
 Overview](https://abseil.io/resources/swe-book/html/ch11.html), its important
 to remember a few things that this section has covered. The process of testing
-is something that is super important to remember and utilize.
+is something that is important to remember and utilize. These are the overall
+steps for software testing:
 
 1. Write test cases
 2. Run the test cases

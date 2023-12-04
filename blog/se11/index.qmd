@@ -1,9 +1,9 @@
 ---
 author: [Naboni Thomas, Simon Jones, Evan Nelson, Gregory Kapfhammer]
-title: 'Testing Overview'
+title: 'Testing Techniques'
 date: '2023-12-04'
 date-format: long
-categories: [post, professional development, software engineering, testing]
+categories: [post, professional development, software engineering]
 description: <em>How can our team incorporate testing into our workflow?</em>
 toc: true
 page-layout: full
@@ -14,10 +14,11 @@ page-layout: full
 This blog post discusses the [Testing
 Overview](https://abseil.io/resources/swe-book/html/ch11.html) chapter in the
 [Software Engineering at
-Google](https://abseil.io/resources/swe-book/html/toc.html) book. The principles
-of testing can be applied to numerous areas in Software Engineering, and they
-work to achieve a robust code base that frees engineers to work to their
-fullest. Let's begin learning about software testing!
+Google](https://abseil.io/resources/swe-book/html/toc.html) book. The
+principles of testing can be applied to numerous areas in Software Engineering,
+and they work to achieve a robust code base that frees engineers to work to
+their fullest. Even though we have been testing for many weeks, let's learn
+more about software testing!
 
 ## Summary
 

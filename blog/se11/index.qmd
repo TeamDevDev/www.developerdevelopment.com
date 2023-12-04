@@ -66,16 +66,16 @@ An important design consideration in testing is the **test size**. Google
 considers three different sizes of tests: small, medium, and large.
 
 1. *Small tests* are tests that do not interact with any other process and are
-   confined to a single thread. These tests are usually the most helpful,
-   because they ensure functionality at the most basic level.
-2. *Medium tests* are tests that can run multithreaded, can interact with web
-   requests, and can make other types of blocking calls. These tests may not
-   interact with any other machine, however.
+  confined to a single thread. These tests are usually the most helpful,
+  because they ensure functionality at the most basic level.
+2. *Medium tests* are tests that can run in a multi-threaded fashion, can
+  interact with web requests, and can make other types of blocking calls.
+  These tests may not interact with any other machine, however.
 3. *Large tests* are tests that may span across multiple machines. There is
-   little restriction placed on this class of test. The caveat with these tests
-   is that they are usually inflexible, meaning that, when changes occur, they
-   do not cooperate as easily. These kinds of tests are also flakier, because of
-   their reliance on multiple systems.
+  little restriction placed on this class of test. The caveat with these tests
+  is that they are usually inflexible, meaning that, when changes occur, they do
+  not cooperate as easily. These kinds of tests are also flakier, because of
+  their reliance on multiple systems.
 
 > As a very rough guideline, we tend to aim to have a mix of around 80% of our
 > tests being narrow-scoped unit tests that validate the majority of our
@@ -84,7 +84,7 @@ considers three different sizes of tests: small, medium, and large.
 > validate the entire system.
 
 This distribution can be represented in the form of a pyramid, with unit tests
-forming the base. Two antipatterns of this are:
+forming the base. Two anti-patterns of this are:
 
 1. Loading up on manual testing, resulting in a weak formation of unit tests.
 2. Prioritizing unit and end-to-end tests equally, resulting in a weak
@@ -129,28 +129,29 @@ inclusiveness between teammates, as it is a basis of knowledge sharing.
 
 ## Reflection
 
-While reflecting on this section called "Testing Overview", its important to
-remember a few things that this section has covered. The process of testing is
-something that is super important to remember and utilize.
+While reflecting on this section called [Testing
+Overview](https://abseil.io/resources/swe-book/html/ch11.html), its important
+to remember a few things that this section has covered. The process of testing
+is something that is super important to remember and utilize.
 
 1. Write test cases
-2. Run
+2. Run the test cases
 3. React to the result
 
 First we write these test cases to make sure that the code we write is well
 written and very effective. Second we run the test cases to see what the output
 or result of these test cases are. And finally we react to what the outcome of
 the run is. We change the test cases or complete any task needed that we find
-from the result of the run. Testing is a super important part of coding and the
-way we complete this is also very important. Making this process almost like a
+from the result of the run. Testing is an important part of coding and the way
+we complete this is also very important. Making this process almost like a
 trial and error process is a good way of making sure that these test cases
 become as efficient as possible.
 
 ## Action Items
 
-**Iterative Testing Process:** Encourage the team to adopt an iterative testing
-process. This involves writing test cases, running them, and reacting to the
-results. This process should be repeated until the code is well-written and
-effective.
+We encourage our team to adopt an iterative testing process. This involves
+writing test cases, running them, and reacting to the results. This process
+should be repeated until the code is well-written and effective, as shown
+through tests passing in GitHub Actions.
 
 {{< include /_back-blog.qmd >}}

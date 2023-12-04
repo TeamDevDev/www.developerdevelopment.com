@@ -11,29 +11,233 @@ page-layout: full
 
 ## Overview
 
-FIXME
+<!--
+* https://simon-jones.netlify.app/#se11-testing-overview
+
+This chapter of the Software Engineering Book at Google discusses the value of
+testing. Testing frees the developer to make changes with confidence, as they
+can quickly diagnose and see which functionality is broken by their changes.
+
+In its early years, Google’s test suite did not exist. After a eye-opening
+realization that over 80% of their production pushes contained user-affecting
+bugs, one of their tech leads decided to enforce automated testing in tandem
+with pushes to production. They found that the number of emergency pushes
+dropped by half, despite the fact that the changes to their codebase increased.
+This is just one example of the power of enforcing a test suite.
+
+As stated, testing code comes with numerous benefits. Some of the benefits
+listed in this chapter are as follows:
+
+Less debugging: Given that tested code has fewer defects, there is naturally
+less debugging required after shipping code that has already been tested. This
+frees the developer to focus on other things. Increased confidence in changes:
+Developers will notice the robustness of their code after spending some time
+working under the premise of test-driven development. Improved Documentation:
+Concise tests will “function as executable documentation,” as stated in the
+book. This means that developers can rely partially on the test cases to provide
+insight that would normally be provided by documentation. Simpler reviews:
+Because the code being written will have a (presumably) comprehensive list of
+each expected behavior embedded in its test cases, the reviewer will not need to
+examine the code as closely when reviewing. If they see all of the test cases
+that test the expected functionality, they can have confidence that a passing
+test suite means that the code is well written, especially if it has fuzzed test
+cases. Thoughtful design: If code is difficult to test, this usually means that
+its design is confusing. Designing code that can easily be tested passively
+forces the developer to create modular, readable code. Fast, high-quality
+releases: In addition to having increased confidence in changes, new releases of
+a codebase that has a healthy group of test cases will be atomic, correct, and
+explainable. An important design consideration in testing is the test size.
+Google considers three different sizes of tests: small, medium, and large.
+
+Small tests are tests that do not interact with any other process and are
+confined to a single thread. These tests are usually the most helpful, because
+they ensure functionality at the most basic level. Medium tests are tests that
+can run multithreaded, can interact with web requests, and can make other types
+of blocking calls. These tests may not interact with any other machine, however.
+Large tests are tests that may span across multiple machines. There is little
+restriction placed on this class of test. The caveat with these tests is that
+they are usually inflexible, meaning that, when changes occur, they do not
+cooperate as easily. These kinds of tests are also flakier, because of their
+reliance on multiple systems. As a very rough guideline, we tend to aim to have
+a mix of around 80% of our tests being narrow-scoped unit tests that validate
+the majority of our business logic; 15% medium-scoped integration tests that
+validate the interactions between two or more components; and 5% end-to-end
+tests that validate the entire system.
+
+This distribution can be represented in the form of a pyramid, with unit tests
+forming the base. Two antipatterns of this are:
+
+Loading up on manual testing, resulting in a weak formation of unit tests.
+Prioritizing unit and end-to-end tests equally, resulting in a weak bug-catching
+strategy. The Beyoncé Rule
+
+If you liked it, then you shoulda put a test on it.
+
+The Beyoncé Rule is an important philosophy to apply when working on a valuable
+feature in the context of a team. Creating test cases around the feature you are
+proposing validates its existence and allows for future developers to easily
+understand it. This greatly reduces the chances of your feature being removed or
+overridden by a new feature.
+
+Testing does come with its share of limitations. As an example, not every test
+will be equally useful, and determining its value is by nature a human-led task.
+There are also different kinds of programs, such as real-time systems, in which
+the best measure of its functionality is to have a human experiment with it.
+
+In the end, testing is a valuable asset to any company in ensuring it can brave
+the trials of the future and outlive its competitors. In a team, it fosters
+inclusiveness between teammates, as it is a basis of knowledge sharing.
+
+Summary The chasten and cellveyor teams have already exercised the use of
+testing extensively. I have even seen accounts of individuals putting pressure
+on their teammates to add testing to a new feature. The culture that we have
+concerning testing is, in my opinion, very healthy. While not everyone may seek
+to create tests or need to create tests for every feature, the majority of our
+operations involve the application of testing. From my own experience, adding
+test cases to my chasten feature allowed me to feel confident subjecting it to
+review, which allows me to move forward without looking back!
+
+Action Items & Reflection Start doing: Ensuring each person is adding test cases
+to their new feature and that the test cases are well-explained. Stop doing: N/A
+Keep doing: Implementing testing in our tools and referencing test cases as a
+way to validate someone else’s work.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+* https://mbcompsci203.netlify.app/precis/#testing-overview:
+
+This chapter covers how robust testing practices can also help with creating a
+more malleable project, as changes can better be made quicker. Testing is a way
+to build sharing the insights of one engineer with the team as well, as it
+provides an opportunity to monitor their own and others’ code. One way that the
+engineers at Google try to ensure that their tests are as effcient as possible
+is by categorizing them as small, medium, or large, based off of their scope and
+scale. There are also points made for keeping tests as clear and contained as
+possible.
+
+Overall, this chapter details how testing works and has developed at Google.
+While few of the notes are new and/or applicable information for our projects,
+it still is something that can be good to know in industry. I have little
+experience with creating tests as part of something larger, but I do in general
+enjoy writing little tests, when I have the resources to do so.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+* https://hayleepierce.netlify.app/blog/SE11/ The “Testing Overview” chapter of
+  Software Engineering gives an overview of the process of testing.
+
+Testing is an extremely important part of developing a program. Testing your
+program greatly reduces the likelyhood of the users running into errors after
+the program is deployed. Tests are often done via a test suit, hundreds or
+thousands of simple tests that cover a good portion of the program’s code. The
+cosequences of bad tests, or no tests at all, can include loss of money,
+property, or even lives.
+
+Testing code comes with many benefits:
+
+Less debugging Increaded confidence in changes Improved documentation Simpler
+reviews Thoughtful design Fast, high-quality releases While our tools, Chasten
+and Cellveyor, are pretty small and simple when compared to the work of Google,
+ensuring that we test our code is important. This course is used to simulate a
+software start-up company, the tools we are working on could benefit the
+computer science faculty and students that come after us; therefore, we should
+ensure the we make the best quality of tools we can with our limited time (that
+means writing a good test suit).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+* https://keller-liptrap.netlify.app/ Summary In this section of the software
+  engineering at google book we are getting an overview in testing. Testing in
+  software has been an important task even from the begining of coding and used
+  to be a manuel step we had to take but now we can automate these tests. This
+  allows software engineers to change and adapt code quickly. Althoough testing
+  is used very often it is very hard to master. There are four bulltet points
+  the author uses to desribe a simple test:
+
+A single behavior you are testing, usually a method or API that you are calling
+
+A specific input, some value that you pass to the API
+
+An observable output or behavior
+
+A controlled environment such as a single isolated process
+
+While testing using a input and output expectaion type of test can check the how
+the function is designated to act and produce an output. Testing also provides
+safety for a program making sure no harm will be done or any unethical events
+occur from the code that was written.
+
+Use Case and Reflection The use of testing is important to include in your
+software engineering project. Making sure your tool and functions within this
+tool produce the expected outcome. If not this will render your tool not useable
+and users will not be inclined to figure your tool out. Tests in chasten are
+important since we are shipping it to the computer science department so we need
+to know that the tool is working as intended. -->
+
+This blog post discusses the [Testing
+Overview](https://abseil.io/resources/swe-book/html/ch11.html) chapter in the
+[Software Engineering at
+Google](https://abseil.io/resources/swe-book/html/toc.html) book.
 
 ## Summary
 
-FIXME
+The chapter titled [Testing
+Overview](https://abseil.io/resources/swe-book/html/ch11.html) of the [Software
+Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html) book
+provides us with an overview of the process of testing. Testing frees the
+developer to make changes with confidence, as they can quickly diagnose and see
+which functionality is broken by their changes.
+
+* **Less debugging**: Given that tested code has fewer defects, there is
+  naturally less debugging required after shipping code that has already been
+  tested. This frees the developer to focus on other things.
+* **Increased confidence in changes**: Developers will notice the robustness of
+  their code after spending some time working under the premise of test-driven
+  development.
+* **Improved Documentation**: Concise tests will "function as executable
+  documentation," as stated in the book. This means that developers can rely
+  partially on the test cases to provide insight that would normally be provided
+  by documentation.
+* **Simpler reviews**: Because the code being written will have a (presumably)
+  comprehensive list of each expected behavior embedded in its test cases, the
+  reviewer will not need to examine the code as closely when reviewing. If they
+  see all of the test cases that test the expected functionality, they can have
+  confidence that a passing test suite means that the code is well written,
+  especially if it has fuzzed test cases.
+* **Thoughtful design**: If code is difficult to test, this usually means that
+  its design is confusing. Designing code that can easily be tested passively
+  forces the developer to create modular, readable code.
+* **Fast, high-quality releases**: In addition to having increased confidence in
+  changes, new releases of a codebase that has a healthy group of test cases
+  will be atomic, correct, and explainable.
 
 ## Reflection
 
-While refelcting on ths section called "Tesing Overview", its important to remember a few things that this section has covered. The
-process of testing is something that is super important to remember and utilize.
+While refelcting on ths section called "Tesing Overview", its important to
+remember a few things that this section has covered. The process of testing is
+something that is super important to remember and utilize.
+
 1. Write test cases
 2. Run
 3. React to the result
 
-First we write these test cases to make sure that the code we write is well written and very effective. Second we run the
-test cases to see what the output or result of these test cases are. And finally we react to what the outcome of the run is. We
-change the test cases or complete any task needed that we find from the result of the run. Testing is a super important part of
-coding and the way we complete this is also very important. Making this process almost like a trial and error process is a good
-way of making sure that these test cases become as efficient as possible.
+First we write these test cases to make sure that the code we write is well
+written and very effective. Second we run the test cases to see what the output
+or result of these test cases are. And finally we react to what the outcome of
+the run is. We change the test cases or complete any task needed that we find
+from the result of the run. Testing is a super important part of coding and the
+way we complete this is also very important. Making this process almost like a
+trial and error process is a good way of making sure that these test cases
+become as efficient as possible.
 
 ## Action Items
 
-**Iterative Testing Process:** Encourage the team to adopt an iterative testing process. This involves writing test cases, running 
-them, and reacting to the results. This process should be repeated until the code is well-written and effective.
+**Iterative Testing Process:** Encourage the team to adopt an iterative testing
+process. This involves writing test cases, running them, and reacting to the
+results. This process should be repeated until the code is well-written and
+effective.
 
 {{< include /_back-blog.qmd >}}

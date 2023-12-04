@@ -138,14 +138,14 @@ is something that is super important to remember and utilize.
 2. Run the test cases
 3. React to the result
 
-First we write these test cases to make sure that the code we write is well
-written and very effective. Second we run the test cases to see what the output
-or result of these test cases are. And finally we react to what the outcome of
-the run is. We change the test cases or complete any task needed that we find
-from the result of the run. Testing is an important part of coding and the way
-we complete this is also very important. Making this process almost like a
-trial and error process is a good way of making sure that these test cases
-become as efficient as possible.
+First we write these test cases to make sure our code is well written and very
+effective. Second we run the test cases to see what the output or result of
+these test cases are. And finally we react to what the outcome of the run is.
+We change the test cases or complete any task needed that we find from the
+result of the run. Testing is an important part of coding and the way we
+complete this is also very important. Making this process almost like a trial
+and error process is a good way of making sure that these test cases become as
+efficient as possible.
 
 ## Action Items
 

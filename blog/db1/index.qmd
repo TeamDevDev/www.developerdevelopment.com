@@ -4,7 +4,7 @@ title: Program Debugging
 date: '2023-11-29'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>How can apply systematic debugging practices?</em>
+description: <em>How can we apply systematic debugging practices?</em>
 toc: true
 page-layout: full
 ---

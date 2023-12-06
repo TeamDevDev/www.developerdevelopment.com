@@ -22,17 +22,18 @@ context of the implementation and testing of the
 ## Summary
 
 This chapter in The Debugging Book talked about `Tracer` and it's capabilities
-to monitor and show how a function is acting and producing. Tracer allows you
-to observe many features of a program as it runs such as gives you access to
-see the current line number, variables, and more without having to write out
-numerous print statements using the command `sys.settrace`. This command gives
-us the ability to trace everything and makes it very simple to the user.
+to monitor and show how a function behaviors and what are its inputs and
+outputs. `Tracer` allows you to observe many features of a program as it runs
+such as gives you access to see the current line number, variables, and more
+without having to write out numerous print statements using the command
+`sys.settrace`. This command gives us the ability to trace everything and makes
+it very simple to the user.
 
 The `frame` argument holds the function and its local variables, working in this fashion:
 
 - `frame.f_lineno`: the current line
-- `frame.f_locals`: the current variables (as a Python dictionary)
-- `frame.f_code`: the current code (as a Code object), with attributes such as
+- `frame.f_locals`: the current variables, as a Python dictionary
+- `frame.f_code`: the current code, as a `Code` object, with attributes such as
 `frame.f_code.co_name`, or the name of the current function
 
 ```python

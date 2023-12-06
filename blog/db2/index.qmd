@@ -1,5 +1,5 @@
 ---
-author: [Keven Duverglas, Haylee Pierce, Will Wolf]
+author: [Keven Duverglas, Haylee Pierce, Will Wolf, Gregory M. Kapfhammer]
 title: Tracing Executions
 date: '2023-12-6'
 date-format: long
@@ -28,12 +28,12 @@ see the current line number, variables, and more without having to write out
 numerous print statements using the command `sys.settrace`. This command gives
 us the ability to trace everything and makes it very simple to the user.
 
-The `frame` argument holds the function, and its local variables:
+The `frame` argument holds the function and its local variables, working in this fashion:
 
-frame.f_lineno - the current line
-frame.f_locals - the current variables (as a Python dictionary)
-frame.f_code - the current code (as a Code object), with attributes such as
-    frame.f_code.co_name - the name of the current function
+- `frame.f_lineno`: the current line
+- `frame.f_locals`: the current variables (as a Python dictionary)
+- `frame.f_code`: the current code (as a Code object), with attributes such as
+- `frame.f_code.co_name`: the name of the current function
 
 ```python
 def traceit(frame: FrameType, event: str, arg: Any) -> Optional[Callable]:
@@ -41,9 +41,9 @@ def traceit(frame: FrameType, event: str, arg: Any) -> Optional[Callable]:
     return traceit
 ```
 
-The function above traces the program relevant and prints out the event, which tells
-us what happens in the program line by line. The trace function returns the most 
-important values of the function.
+The above function traces the program relevant and prints out the event, which
+tells us what happens in the program line by line. The `trace` function returns
+the most important values of the function.
 
 ```python
 import sys
@@ -55,16 +55,18 @@ def remove_html_markup_traced(s):
     return ret
 ```
 
-The tracing function as well can be applied in a class and can work the same as before
-but on a much bigger scale and can improve the efficency of a code and can easily work
-and perform the trace function. The typical usage of Tracer though in a class is done 
-using the `with` command. Wich traces everything indented within the with and everything 
-that is not indented inside of the with is not read.
+The tracing function as well can be applied in a class and can work the same as
+before but on a much bigger scale and can improve the efficiency of a code and
+can easily work and perform the trace function. The typical usage of Tracer
+though in a class is done using the `with` command. This would trace everything
+indented within the with and everything that is not indented inside of the with
+is not read.
 
-Tracing can also log while making sure the specific conditional expression does not get
-changed. The conditional tracer gets a conditional expression to be checked during executions. 
-But only if this condition holds will it list the current status. you can use this for
-many different expressions and will only get the lines executed that are true to a statement.
+Tracing can also log while making sure the specific conditional expression does
+not get changed. The conditional tracer gets a conditional expression to be
+checked during executions. But only if this condition holds will it list the
+current status. You can use this for many different expressions and will only
+get the lines executed that are true to a statement.
 
 ```python
 with ConditionalTracer(condition='quote'):
@@ -77,7 +79,7 @@ After reading this chapter, we have a better understanding of what tracing
 entails. We have learned that there are several different ways to trace, from
 simply using the `settrace()` function to writing a complex `Tracer` class with
 conditional logic. We learned about frames and all the different variables
-within them. We learned how tracing can help improve the efficency of the
+within them. We learned how tracing can help improve the efficiency of the
 debugging process. With this knowledge, we can better understand the process of
 tracing and be able to implement tracing into our own programs.
 

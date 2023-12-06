@@ -33,7 +33,7 @@ The `frame` argument holds the function and its local variables, working in this
 - `frame.f_lineno`: the current line
 - `frame.f_locals`: the current variables (as a Python dictionary)
 - `frame.f_code`: the current code (as a Code object), with attributes such as
-- `frame.f_code.co_name`: the name of the current function
+`frame.f_code.co_name`, or the name of the current function
 
 ```python
 def traceit(frame: FrameType, event: str, arg: Any) -> Optional[Callable]:
@@ -41,9 +41,9 @@ def traceit(frame: FrameType, event: str, arg: Any) -> Optional[Callable]:
     return traceit
 ```
 
-The above function traces the program relevant and prints out the event, which
-tells us what happens in the program line by line. The `trace` function returns
-the most important values of the function.
+The aforementioned function traces the input program and prints out the event,
+which tells us what happens in the program line by line. The `trace` function
+returns the most important values of the function.
 
 ```python
 import sys
@@ -56,11 +56,11 @@ def remove_html_markup_traced(s):
 ```
 
 The tracing function as well can be applied in a class and can work the same as
-before but on a much bigger scale and can improve the efficiency of a code and
-can easily work and perform the trace function. The typical usage of Tracer
-though in a class is done using the `with` command. This would trace everything
-indented within the with and everything that is not indented inside of the with
-is not read.
+before but on a much more expansive scale. This may improve the efficiency of a
+program and can easily work and perform the `trace` function. The typical usage
+of `Tracer` though in a class is done using the `with` command. This would
+trace everything indented within the `with` and everything that is not indented
+inside of the `with` is not subject to tracing.
 
 Tracing can also log while making sure the specific conditional expression does
 not get changed. The conditional tracer gets a conditional expression to be
@@ -83,19 +83,17 @@ within them. We learned how tracing can help improve the efficiency of the
 debugging process. With this knowledge, we can better understand the process of
 tracing and be able to implement tracing into our own programs.
 
-
 ## Action Items
 
-After reading the article, our focus is on refining debugging by emphasizing the 
-cause-and-effect chain, enhancing test case development, and integrating the 
-scientific method. This approach proves beneficial in diagnosing and resolving
-bugs, fostering a methodical and systematic debugging process. Documentation 
-practices will be updated, and a commitment to continuous learning will be 
-realized through training programs. These actions aim to empower our team with
-a robust methodology, drawn from the insights of this chapter, enhancing our 
-ability to debug code effectively. And help us to foster new ideas for ways to 
-improve Chasten and Cellveyor.
-
+After reading the article, our focus is on refining debugging by emphasizing
+the cause-and-effect chain, enhancing test case development, and integrating
+the scientific method. This approach proves beneficial in diagnosing and
+resolving bugs, fostering a methodical and systematic debugging process.
+Documentation practices will be updated, and a commitment to continuous
+learning will be realized through training programs. These actions aim to
+empower our team with a robust methodology, drawn from the insights of this
+chapter, enhancing our ability to debug code effectively because we will have
+more insights into a program's behavior.
 
 <!-- Include the license statement for the online book -->
 {{< include /_debuggingbook-reference.qmd >}}

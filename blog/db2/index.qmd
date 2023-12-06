@@ -1,7 +1,7 @@
 ---
 author: [Keven Duverglas, Haylee Pierce, Will Wolf]
 title: Tracing Executions
-date: '2023-11-'
+date: '2023-12-6'
 date-format: long
 categories: [post, software engineering, debugging book]
 description: <em>How can tracing be used to debug code?</em>

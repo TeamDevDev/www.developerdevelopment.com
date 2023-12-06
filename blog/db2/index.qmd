@@ -13,9 +13,9 @@ page-layout: full
 
 This article covers the ["Tracing
 Executions"](https://www.debuggingbook.org/html/Tracer.html) chapter from [The
-Debugging Book](https://www.debuggingbook.org/html/Intro_Debugging.html). In
-this article we will summarize the chapter and discuss how its content could be
-utilized within the context of the implementation and testing of the
+Debugging Book](https://www.debuggingbook.org/). In this article we will
+summarize the chapter and discuss how its content could be utilized within the
+context of the implementation and testing of the
 [Chasten](https://github.com/AstuteSource/chasten) and
 [Cellveyor](https://github.com/GatorEducator/cellveyor) tools.
 

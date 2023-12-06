@@ -1,5 +1,5 @@
 ---
-author: [Keven Duverglas, Haylee Pierce, Will Wolf, Gregory M. Kapfhammer]
+author: [Keven Michel Duverglas, Haylee Pierce, Will Wolf, Gregory M. Kapfhammer]
 title: Tracing Executions
 date: '2023-12-6'
 date-format: long

@@ -15,19 +15,18 @@ This article covers the ["Tracing
 Executions"](https://www.debuggingbook.org/html/Tracer.html) chapter from [The
 Debugging Book](https://www.debuggingbook.org/html/Intro_Debugging.html). In
 this article we will summarize the chapter and discuss how its content could be
-utilized within the context of our
+utilized within the context of the implementation and testing of the
 [Chasten](https://github.com/AstuteSource/chasten) and
 [Cellveyor](https://github.com/GatorEducator/cellveyor) tools.
 
 ## Summary
 
-
-This chapter in The Debugging Book talked about `Tracer` and it's capabilities to 
-monitor and show how a function is acting and producing. Tracer allows you to observe 
-many features of a program as it runs such as gives you access to see the current line 
-number, variables, and more without having to write out numerous print statements using 
-the command `sys.settrace`. This command gives us the ability to trace everything and 
-makes it very simple to the user.
+This chapter in The Debugging Book talked about `Tracer` and it's capabilities
+to monitor and show how a function is acting and producing. Tracer allows you
+to observe many features of a program as it runs such as gives you access to
+see the current line number, variables, and more without having to write out
+numerous print statements using the command `sys.settrace`. This command gives
+us the ability to trace everything and makes it very simple to the user.
 
 The `frame` argument holds the function, and its local variables:
 

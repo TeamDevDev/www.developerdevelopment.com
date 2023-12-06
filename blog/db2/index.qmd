@@ -21,6 +21,55 @@ and [Cellveyor](https://github.com/GatorEducator/cellveyor) tools.
 ## Summary
 
 
+This chapter in The Debugging Book talked about `Tracer` and it's capabilities to 
+monitor and show how a function is acting and producing. Tracer allows you to observe 
+many features of a program as it runs such as gives you access to see the current line 
+number, variables, and more without having to write out numerous print statements using 
+the command `sys.settrace`. This command gives us the ability to trace everything and 
+makes it very simple to the user.
+
+The `frame` argument holds the function, and its local variables:
+
+frame.f_lineno - the current line
+frame.f_locals - the current variables (as a Python dictionary)
+frame.f_code - the current code (as a Code object), with attributes such as
+    frame.f_code.co_name - the name of the current function
+
+```python
+def traceit(frame: FrameType, event: str, arg: Any) -> Optional[Callable]:
+    print(event, frame.f_lineno, frame.f_code.co_name, frame.f_locals)
+    return traceit
+```
+
+The function above traces the program relevant and prints out the event, which tells
+us what happens in the program line by line. The trace function returns the most 
+important values of the function.
+
+```python
+import sys
+
+def remove_html_markup_traced(s):
+    sys.settrace(traceit)
+    ret = remove_html_markup(s)
+    sys.settrace(None)
+    return ret
+```
+
+The tracing function as well can be applied in a class and can work the same as before
+but on a much bigger scale and can improve the efficency of a code and can easily work
+and perform the trace function. The typical usage of Tracer though in a class is done 
+using the `with` command. Wich traces everything indented within the with and everything 
+that is not indented inside of the with is not read.
+
+Tracing can also log while making sure the specific conditional expression does not get
+changed. The conditional tracer gets a conditional expression to be checked during executions. 
+But only if this condition holds will it list the current status. you can use this for
+many different expressions and will only get the lines executed that are true to a statement.
+
+```python
+with ConditionalTracer(condition='quote'):
+    remove_html_markup(...)
+```
 
 ## Reflection
 

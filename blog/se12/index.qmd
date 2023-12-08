@@ -14,7 +14,9 @@ page-layout: full
 This blog post discusses the
 [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in
 the [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html)
-book. 
+book, which is a continuation of the
+[Testing Overview](https://abseil.io/resources/swe-book/html/ch11.html) chapter,
+focused on the small tests. 
 
 ## Summary
 
@@ -26,6 +28,13 @@ book.
 
 ## Action Items
 
-
+The concepts and information presented into this chapter relate to the work done
+recently in [The Debugging Book](https://www.debuggingbook.org/) as well, in
+that it concerns the creation and execution of tests. In particular, the
+guidelines presented in this chapter can be employed alongside the techniques
+being studied from that other source in order to develop the most efficient
+tests possible. Demystifying tests in this way will also serve to encourage test
+writing among our engineers, allowing them to create clear tests that will last
+for hopefully as long as necessary. 
 
 {{< include /_back-blog.qmd >}}

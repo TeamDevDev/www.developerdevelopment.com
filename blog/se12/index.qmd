@@ -1,0 +1,31 @@
+---
+author: [Mordred Boulais,]
+title: 'Unit Testing'
+date: '2023-12-04'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>Investigating small-scale tests</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post discusses the
+[Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in
+the [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html)
+book. 
+
+## Summary
+
+
+
+## Reflection
+
+
+
+## Action Items
+
+
+
+{{< include /_back-blog.qmd >}}

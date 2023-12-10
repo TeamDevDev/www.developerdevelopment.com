@@ -1,5 +1,5 @@
 ---
-author: [Mordred Boulais,Jaclyn Pham]
+author: [Mordred Boulais,Jaclyn Pham, Alish Chhetri]
 title: 'Unit Testing'
 date: '2023-12-04'
 date-format: long
@@ -35,7 +35,14 @@ The chapter concludes with the recommendation for tests to be DAMP(Descriptive a
 
 ## Reflection
 
-
+The [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html) does a phenomenal job of showcasing 
+valuable strategies for effective unit testing. It emphasizes the significant role unit tests play in ensuring system resilience against unforeseen changes, yet highlights the need for responsible and careful 
+application. Google acknowledges that while their unit testing practices aren't flawless, adhering to the outlined principles in this chapter results in significantly more valuable tests. It underscores the 
+pivotal role of unit tests in ensuring system stability amidst unforeseen changes while cautioning against their careless application. Google acknowledges that their testing methods aren't flawless, yet they 
+emphasize the substantial value of tests aligned with the chapter's outlined practices. The main highlights encompass maintaining stable tests, utilizing public APIs for testing, prioritizing state over 
+interactions, striving for completeness and brevity, focusing on behavioral testing, structuring tests to emphasize behaviors, employing clear and descriptive test names, avoiding logic within tests, crafting 
+explicit failure messages, and preferring a "DAMP" (Descriptive And Meaningful Phrases) approach over "DRY" (Don't Repeat Yourself) for code sharing in tests. These insights collectively promote the 
+enhancement of test quality, fostering robust software engineering practices and ensuring systems remain resilient and adaptable over time.
 
 ## Action Items
 

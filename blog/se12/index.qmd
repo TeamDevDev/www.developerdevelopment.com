@@ -19,7 +19,11 @@ book, which is a continuation of the
 focused on the small tests. 
 
 ## Summary
-The [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html) delves into the implementation and importance of unit tests, emphasizing their role in optimizing productivity and codebase maintainability. 
+The [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html) delves into the implementation and importance of unit tests, emphasizing their role in optimizing productivity and codebase maintainability. Unit tests, defined as tests for smaller portions of the codebase, such as a single class or method, are highlights for their speed in both execution and creation. They contribute to higher test coverage and act as documentation, illustrating how code is intended to function. 
+
+The chapter underscores the critical need for unit tests to be neither brittle nor unclear. Brittle tests, which fail when code changes occur without introducing actual bugs, can be aoided by ensuring that tests remain unchanged after their initial creation. Unclear tests, lackng output explanations for failures, hinder effective issue diagnosis and resolution. Google's commitment to test maintainability is emphasized, with a focus on tests that remain stable and require minimal modification. 
+
+
 
 
 ## Reflection

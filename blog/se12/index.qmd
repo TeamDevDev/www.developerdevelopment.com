@@ -1,5 +1,5 @@
 ---
-author: [Mordred Boulais,]
+author: [Mordred Boulais,Jaclyn Pham]
 title: 'Unit Testing'
 date: '2023-12-04'
 date-format: long
@@ -19,7 +19,7 @@ book, which is a continuation of the
 focused on the small tests. 
 
 ## Summary
-
+The [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html) delves into the implementation and importance of unit tests, emphasizing their role in optimizing productivity and codebase maintainability. 
 
 
 ## Reflection

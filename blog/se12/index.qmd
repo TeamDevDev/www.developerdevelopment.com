@@ -26,6 +26,9 @@ The chapter underscores the critical need for unit tests to be neither brittle n
 > After preventing bugs, the most important purpose of
 > a test is to improve engineers' productivity. 
 
+The chapter introduces the idea that an ideal test remains unchanged after it's written, emphasizing four types of changes: pure factoring, new features, bug fixes, and behavior changes. 
+
+Clear testing is demmed crucial, and the characteristics of a clear test are outlined: immediate clarity of purpose and reason for failure to the diagnosing engineer. Completeness and conciseness are underscored, urging writers to include all necessary information while avoiding distracting or irrelevant details. 
 
 
 

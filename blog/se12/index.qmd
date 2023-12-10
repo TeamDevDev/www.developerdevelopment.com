@@ -19,16 +19,23 @@ book, which is a continuation of the
 focused on the small tests. 
 
 ## Summary
-The [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html) delves into the implementation and importance of unit tests, emphasizing their role in optimizing productivity and codebase maintainability. Unit tests, defined as tests for smaller portions of the codebase, such as a single class or method, are highlights for their speed in both execution and creation. They contribute to higher test coverage and act as documentation, illustrating how code is intended to function.Due to their properties that make them excellent for productivity optimization, Google recommends a balanced approach of 80% unit tests and 20% broader-scoped tests. 
+The [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html) delves into the implementation and 
+importance of unit tests, emphasizing their role in optimizing productivity and codebase maintainability. Unit tests, defined as tests for smaller portions of the codebase, such as a single class or method, 
+are highlights for their speed in both execution and creation. They contribute to higher test coverage and act as documentation, illustrating how code is intended to function.Due to their properties that make 
+them excellent for productivity optimization, Google recommends a balanced approach of 80% unit tests and 20% broader-scoped tests. 
 
-The chapter underscores the critical need for unit tests to be neither brittle nor unclear. Brittle tests, which fail when code changes occur without introducing actual bugs, can be avoided by ensuring that tests remain unchanged after their initial creation. Unclear tests, lackng output explanations for failures, hinder effective issue diagnosis and resolution. Google's commitment to test maintainability is emphasized, with a focus on tests that remain stable and require minimal modification. Maintainable tests are those that "just work" wihout requiring constant attention. The chapter argues that without maintainability, testing could become a drain on productivity, as quoted as the following statment: 
+The chapter underscores the critical need for unit tests to be neither brittle nor unclear. Brittle tests, which fail when code changes occur without introducing actual bugs, can be avoided by ensuring that 
+tests remain unchanged after their initial creation. Unclear tests, lackng output explanations for failures, hinder effective issue diagnosis and resolution. Google's commitment to test maintainability is 
+emphasized, with a focus on tests that remain stable and require minimal modification. Maintainable tests are those that "just work" wihout requiring constant attention. The chapter argues that without 
+maintainability, testing could become a drain on productivity, as quoted as the following statment: 
 
 > After preventing bugs, the most important purpose of
 > a test is to improve engineers' productivity. 
 
 The chapter introduces the idea that an ideal test remains unchanged after it's written, emphasizing four types of changes: pure factoring, new features, bug fixes, and behavior changes. 
 
-Clear testing is demmed crucial, and the characteristics of a clear test are outlined: immediate clarity of purpose and reason for failure to the diagnosing engineer. Completeness and conciseness are underscored, urging writers to include all necessary information while avoiding distracting or irrelevant details. 
+Clear testing is demmed crucial, and the characteristics of a clear test are outlined: immediate clarity of purpose and reason for failure to the diagnosing engineer. Completeness and conciseness are 
+underscored, urging writers to include all necessary information while avoiding distracting or irrelevant details. 
 
 The chapter concludes with the recommendation for tests to be DAMP(Descriptive and Meaningful Phrases) over DRY(Don't Repeat Yourself) principles. 
 

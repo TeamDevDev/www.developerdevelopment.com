@@ -92,6 +92,9 @@ guidelines presented in this chapter can be employed alongside the techniques
 being studied from that other source in order to develop the most efficient
 tests possible. Demystifying tests in this way will also serve to encourage
 test writing among our engineers, allowing them to create clear tests that will
-last for hopefully as long as necessary.
+last for hopefully as long as necessary. At this point, it is clear that there
+is a convergence in the content in the three books we have studied this
+semester! Ultimately, the key action item is a renewed focus on software
+testing.
 
 {{< include /_back-blog.qmd >}}

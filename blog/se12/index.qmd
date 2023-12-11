@@ -28,7 +28,7 @@ optimizing productivity and codebase maintainability. Unit tests, defined as
 tests for smaller portions of the codebase, such as a single class or method,
 are highlights for their speed in both execution and creation. They contribute
 to higher test coverage and act as documentation, illustrating how code is
-intended to function.Due to their properties that make them excellent for
+intended to function. Due to their properties that make them excellent for
 productivity optimization, Google recommends a balanced approach of 80% unit
 tests and 20% broader-scoped tests.
 

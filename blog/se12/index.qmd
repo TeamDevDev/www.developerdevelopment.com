@@ -48,16 +48,14 @@ following statement:
 
 The chapter introduces the idea that an ideal test remains unchanged after it's
 written, emphasizing four types of changes: pure factoring, new features, bug
-fixes, and behavior changes.
-
-Clear testing is deemed crucial, and the characteristics of a clear test are
-outlined: immediate clarity of purpose and reason for failure to the diagnosing
-engineer. Completeness and conciseness are underscored, urging writers to
-include all necessary information while avoiding distracting or irrelevant
-details.
+fixes, and behavior changes. The author explain that clear testing is crucial.
+Next, they outline the characteristics of a clear test are outlined: immediate
+clarity of purpose and reason for failure to the diagnosing engineer.
+Completeness and conciseness are underscored, urging writers to include all
+necessary information while avoiding distracting or irrelevant details.
 
 The chapter concludes with the recommendation for tests to be DAMP (Descriptive
-and Meaningful Phrases) over DRY(Don't Repeat Yourself) principles.
+and Meaningful Phrases) over DRY (Don't Repeat Yourself) principles.
 
 ## Reflection
 

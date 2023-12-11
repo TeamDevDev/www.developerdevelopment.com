@@ -71,7 +71,7 @@ significantly more valuable tests. It underscores the pivotal role of unit
 tests in ensuring system stability amidst unforeseen changes while cautioning
 against their careless application.
 
-Google acknowledges that their testing methods aren't flawless, yet they
+Although Google acknowledges that their testing methods aren't flawless, they
 emphasize the substantial value of tests aligned with the chapter's outlined
 practices. The main highlights encompass maintaining stable tests, utilizing
 public APIs for testing, prioritizing state over interactions, striving for

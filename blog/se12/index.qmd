@@ -1,0 +1,100 @@
+---
+author: [Mordred Boulais, Jaclyn Pham, Alish Chhetri, Gregory M. Kapfhammer]
+title: 'Unit Testing'
+date: '2023-12-11'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>What are the benefits of small-scale tests?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post discusses the
+[Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter in
+the [Software Engineering at Google](https://abseil.io/resources/swe-book/html/toc.html)
+book, which is a continuation of the
+[Testing Overview](https://abseil.io/resources/swe-book/html/ch11.html) chapter,
+focused on the small tests.
+
+## Summary
+
+The [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter
+in [Software Engineering at
+Google](https://abseil.io/resources/swe-book/html/toc.html) delves into the
+implementation and importance of unit tests, emphasizing their role in
+optimizing productivity and codebase maintainability. Unit tests, defined as
+tests for smaller portions of the codebase, such as a single class or method,
+are highlights for their speed in both execution and creation. They contribute
+to higher test coverage and act as documentation, illustrating how code is
+intended to function. Due to their properties that make them excellent for
+productivity optimization, Google recommends a balanced approach of 80% unit
+tests and 20% broader-scoped tests.
+
+The chapter underscores the critical need for unit tests to be neither brittle
+nor unclear. Brittle tests, which fail when code changes occur without
+introducing actual bugs, can be avoided by ensuring that tests remain unchanged
+after their initial creation. Unclear tests, lacking output explanations for
+failures, hinder effective issue diagnosis and resolution. Google's commitment
+to test maintainability is emphasized, with a focus on tests that remain stable
+and require minimal modification. Maintainable tests are those that "just work"
+without requiring constant attention. The chapter argues that without
+maintainability, testing could become a drain on productivity, as quoted as the
+following statement:
+
+> After preventing bugs, the most important purpose of
+> a test is to improve engineers' productivity.
+
+The chapter introduces the idea that an ideal test remains unchanged after it's
+written, emphasizing four types of changes: pure factoring, new features, bug
+fixes, and behavior changes. The author explain that clear testing is crucial.
+Next, they outline the characteristics of a clear test are outlined: immediate
+clarity of purpose and reason for failure to the diagnosing engineer.
+Completeness and conciseness are underscored, urging writers to include all
+necessary information while avoiding distracting or irrelevant details.
+
+The chapter concludes with the recommendation for tests to be DAMP (Descriptive
+and Meaningful Phrases) over DRY (Don't Repeat Yourself) principles.
+
+## Reflection
+
+The [Unit Testing](https://abseil.io/resources/swe-book/html/ch12.html) chapter
+in [Software Engineering at
+Google](https://abseil.io/resources/swe-book/html/toc.html) does a phenomenal
+job of showcasing valuable strategies for effective unit testing. It emphasizes
+the significant role unit tests play in ensuring system resilience against
+unforeseen changes, yet highlights the need for responsible and careful
+application. Google acknowledges that while their unit testing practices aren't
+flawless, adhering to the outlined principles in this chapter results in
+significantly more valuable tests. It underscores the pivotal role of unit
+tests in ensuring system stability amidst unforeseen changes while cautioning
+against their careless application.
+
+Although Google acknowledges the limits of their  testing methods, they
+emphasize the substantial value of tests aligned with the chapter's outlined
+practices. The main highlights encompass maintaining stable tests, utilizing
+public APIs for testing, prioritizing state over interactions, striving for
+completeness and brevity, focusing on behavioral testing, structuring tests to
+emphasize behaviors, employing clear and descriptive test names, avoiding logic
+within tests, crafting explicit failure messages, and preferring a "DAMP"
+(Descriptive And Meaningful Phrases) approach over "DRY" (Don't Repeat
+Yourself) for code sharing in tests. These insights collectively promote the
+enhancement of test quality, fostering robust software engineering practices
+and ensuring systems remain resilient and adaptable over time.
+
+## Action Items
+
+The concepts and information presented into this chapter relate to the work
+done recently in [The Debugging Book](https://www.debuggingbook.org/) as well,
+in that it concerns the creation and execution of tests. In particular, the
+guidelines presented in this chapter can be employed alongside the techniques
+being studied from that other source in order to develop the most efficient
+tests possible. Demystifying tests in this way will also serve to encourage
+test writing among our engineers, allowing them to create clear tests that will
+last for hopefully as long as necessary. At this point, it is clear that there
+is a convergence in the content in the three books we have studied this
+semester! Ultimately, the key action item is a renewed focus on software
+testing.
+
+{{< include /_back-blog.qmd >}}

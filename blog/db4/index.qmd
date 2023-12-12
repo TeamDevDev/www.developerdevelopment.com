@@ -1,5 +1,5 @@
 ---
-author: [Preston Smith]
+authors: [Preston Smith, Vital Joseph]
 title: Statistical Debugging
 date: '2023-12-6'
 date-format: long
@@ -97,7 +97,20 @@ After being grouped the results are then ready to be analyzed and ranked. Making
 
 ## Reflection
 
+Statistical debugging is a powerful method for troubleshooting programs with failures. Its key objective is to establish a connection between program failures and specific parts of the code. The process involves collecting data during program execution, ranking lines of code by failure possibility, and analyzing the differences between passing and failing runs.
+
+The provided code snippets illustrate a basic framework for statistical debugging, using a Collector class to gather information during execution. This class can be extended and customized to suit specific debugging needs.
+
+The concept of code coverage plays a crucial role in statistical debugging. The CoverageCollector subclass is introduced to track which lines of code are executed and returns a formatted set of tuples with function names and corresponding line numbers. This coverage information is essential for understanding what parts of the code are contributing to program failures.
+
+The StatisticalDebugger class is then presented as a way to organize and analyze the collected data. It uses different collectors for passing and failing outcomes and facilitates the grouping of results for further analysis. This multistep process involves significant computation but provides insights into the behavior of the program over multiple runs.
+
+In summary, statistical debugging is a complex approach that requires careful instrumentation of code and analysis of collected data. Despite its computational complexity, it offers valuable benefits, especially in large projects where efficiently identifying and resolving bugs is crucial. The ability to analyze a codebase over multiple runs provides developers with a deeper understanding of the program's behavior, ultimately aiding in the identification of root causes for intermittent failures.
+
 ## Action Items
+
+Statistical debugging is like having a special tool to find and fix mistakes in big and complicated computer programs. Imagine if you had a really huge puzzle, and instead of looking at each piece one by one, you use a smart method to see which pieces are most likely to be part of a problem. Statistical debugging does something similar for computer programs. It helps developers understand how the program behaves and where mistakes might be hiding. This way, they can find and fix the issues faster, especially when dealing with large and complex code. Our development teams could incorporate this technique for debugging, but ultimatley would have to decide as a team if implementing this type of code would be necessary for our tools chasten and cellveyor specfically. It might prove to be more benefical in the future though, as our code becomes more and more complex.
+
 
 <!-- Include the license statement for the online book -->
 {{< include /_debuggingbook-reference.qmd >}}

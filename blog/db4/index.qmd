@@ -146,7 +146,7 @@ the behavior of the program over multiple runs.
 
 In summary, statistical debugging is a complex approach that requires careful
 instrumentation of code and analysis of collected data. Despite its
-computational complexity, it offers valuable benefits, especially in large
+implementation complexity, it offers valuable benefits, especially in large
 projects where efficiently identifying and resolving bugs is crucial. The
 ability to analyze a codebase over multiple runs provides developers with a
 deeper understanding of the program's behavior, ultimately aiding in the

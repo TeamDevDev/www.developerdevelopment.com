@@ -1,5 +1,5 @@
 ---
-author: [Caleb Kendra, Henry Grefenstette, Gregory M. Kapfhammer]
+author: [Caleb Kendra, Henry Grefenstette, Miles Franck, Gregory M. Kapfhammer]
 title: 'Documentation'
 date: '2023-11-27'
 date-format: long

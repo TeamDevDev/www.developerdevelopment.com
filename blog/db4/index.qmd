@@ -99,6 +99,9 @@ After being grouped the results are then ready to be analyzed and ranked. Making
 
 ## Action Items
 
+Statistical debugging is like having a special tool to find and fix mistakes in big and complicated computer programs. Imagine if you had a really huge puzzle, and instead of looking at each piece one by one, you use a smart method to see which pieces are most likely to be part of a problem. Statistical debugging does something similar for computer programs. It helps developers understand how the program behaves and where mistakes might be hiding. This way, they can find and fix the issues faster, especially when dealing with large and complex code. Our development teams could incorporate this technique for debugging, but ultimatley would have to decide as a team if implementing this type of code would be necessary for our tools chasten and cellveyor specfically. It might prove to be more benefical in the future though, as our code becomes more and more complex.
+
+
 <!-- Include the license statement for the online book -->
 {{< include /_debuggingbook-reference.qmd >}}
 

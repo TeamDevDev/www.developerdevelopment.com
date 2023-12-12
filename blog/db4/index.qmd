@@ -23,8 +23,8 @@ the context of the implementation and testing of the
 
 Statistical Debugging is a method used to troubleshoot programs that exhibit
 both passing and failing behavior depending on the inputs they receive. The
-primary objective is to establish a connection between program failures and
-specific parts of the code, whether it's a single line or multiple lines. The
+primary objective is to establish a connection between program failure(s) and
+specific part(s) of the code, whether it's a single line or multiple lines. The
 process starts with a **collector**, a class responsible for gathering
 information about each line of the program's execution.
 
@@ -162,7 +162,7 @@ something similar for computer programs. It helps developers understand how the
 program behaves and where mistakes might be hiding. This way, they can find and
 fix the issues faster, especially when dealing with large and complex code. Our
 development teams could incorporate this technique for debugging, but ultimately
-would have to decide as a team if implementing this type of code would be
+would have to decide as a team if implementing this type of technique would be
 necessary for our tools chasten and cellveyor specifically. It might prove to be
 more beneficial in the future though, as our code becomes more and more complex.
 

@@ -1,5 +1,5 @@
 ---
-author: [Preston Smith]
+authors: [Preston Smith, Vital Joseph]
 title: Statistical Debugging
 date: '2023-12-6'
 date-format: long

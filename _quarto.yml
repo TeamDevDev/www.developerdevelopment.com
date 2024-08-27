@@ -4,21 +4,18 @@ project:
     - "*.qmd"
     - "!_resources/"
   preview:
-    port: 5550
+    port: 5540
     browser: false
     watch-inputs: true
     navigate: false
 
 website:
-  title: "Developer Development"
+  title: "{{< iconify fa6-solid people-line size=30px >}} &nbsp; Developer Development"
   page-navigation: true
   favicon: "icons/devdev-logo-favicon.svg"
   open-graph: true
   site-url: https://www.developerdevelopment.com/
   repo-url: https://github.com/TeamDevDev/www.developerdevelopment.com
-  issue-url: https://github.com/TeamDevDev/www.developerdevelopment.com/issues/new
-  repo-actions: [source, edit, issue]
-  repo-branch: "master"
   search:
     location: navbar
     type: textbox
@@ -32,8 +29,8 @@ website:
         text: Schedule
       - href: syllabus/index.qmd
         text: Syllabus
-      - href: policies/index.qmd
-        text: Policies
+      # - href: policies/index.qmd
+      #   text: Policies
 
   page-footer:
     left: '<a href="https://github.com/TeamDevDev/www.developerdevelopment.com/graphs/contributors" aria-label="DevDevTeam Maintainers">{{< fa copyright >}} DevDev</a>'

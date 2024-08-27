@@ -1,0 +1,62 @@
+---
+title: Technical and Professional Onboarding
+description: "Equipping our software engineering team"
+date: 2024-08-26
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Week One
+
+### Tuesday, August 26 -- Friday, August 30
+
+- {{< iconify fa-regular sad-tear size=19px >}} **Monday**: No class
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical preparation for joining a software startup
+- {{< iconify fa-solid laptop-code size=18px >}} **Thursday**: Technical preparation for joining a software startup
+- {{< iconify fa-solid laptop-code size=18px >}} **Friday**: Technical and professional preparation for joining a software startup
+
+::: {.callout-note appearance="minimal" title="Onboarding Tasks" collapse="false"}
+
+- Join the [Developer Development Discord](https://discord.gg/aNfn8DNEMx)
+- Install [Python 3.10 and/or 3.11](https://www.python.org/) on your development workstation
+    - Use [asdf-vm](https://asdf-vm.com/) or [rtx](https://github.com/jdx/rtx) to install Python on MacOS or Linux
+    - Use [asdf-vm](https://asdf-vm.com/more/faq.html#wsl2-support) on Windows with WSL2 support
+    - Use the official [installers](https://www.python.org/downloads/) for Windows 10 or Windows 11
+    - Install the full Python version supporting C and Rust binding and SQLite 3
+    - Ensure that you can seamlessly switch between different versions of Python
+- Install the [Poetry](https://python-poetry.org/) and [Pipx](https://github.com/pypa/pipx) tools to support Python development
+- Access both the [Fuzzing Book (FB)](https://www.fuzzingbook.org/) and the [Debugging Book (DB)](https://www.debuggingbook.org/)
+    - Fork the GitHub repositories for these two books
+    - Clone the forked GitHub repositories to your workstation
+    - Use `pip` to install each books' dependencies
+    - Run a local Jupyter Lab server that can access a book's Jupyter notebooks
+    - Correctly run the Jupyter notebook for at least one chapter in FB or DB
+- Locate and bookmark the [Software Engineering at Google](https://abseil.io/resources/swe-book) book
+- Install the [Quarto](https://quarto.org/) system for scientific and technical publishing
+- Learn how to use [Quarto](https://quarto.org/) to create a [web site](https://quarto.org/docs/websites/) with executable Python code
+- Install and learn how to use the [Chasten](https://github.com/AstuteSource/chasten) tool for analyzing Python ASTs
+- Raise issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues) for any problems you encounter
+- Attach labels to all of the issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues)
+- Assign team members to all of the issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues)
+
+:::
+
+
+## Exploration
+
+- {{< iconify fa6-solid book-open size=18px >}} Read chapter 1 of [A First
+Course on Data Structures in
+Python](https://donsheehy.github.io/datastructures/)
+- {{< iconify fa6-brands github size=18px >}} Overview the `ds2` package in
+[donsheehy/datastructures](https://github.com/donsheehy/datastructures)
+
+## Activities
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday and Wednesday**: Course introduction
+  - No class on Monday
+  - Introduction to algorithm engineering
+  - Overview of a course on algorithm analysis
+  - Prepare for an algorithm engineering project
+- {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Algorithm engineering project
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Continue the algorithm engineering project

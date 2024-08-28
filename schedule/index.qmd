@@ -76,3 +76,23 @@ listing:
         - Demonstration of project development for the week
         - Confirmation of readiness for next week's in-class discussions
         - Every other week, complete an in-class programming skill-check
+
+::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
+
+The Fall 2024 edition of Computer Science 203 has  **Exam Code G**, which means
+that the final examination will take place on Thursday, December 11, 2024 at
+9:00 AM. The final executable examination is cumulative in regards to all of the
+technical, professional, and project content previously covered between week one
+and week sixteen. As a reminder, the following list describes the content that
+will be covered on the final executable examination.
+
+- {{< iconify fa6-solid flag-checkered size=18px >}} **Thursday, December 11, 2024 at 9:00 AM**: Executable Examination
+  - *Demonstrate technical skills in software engineering*:
+    - Use GitHub and GitHub Actions
+    - Use text editor and terminal window
+    - Implement and test Python functions
+    - Debug defective Python functions
+    - Confirm output of Python functions
+    - Covers all content in SE, FB, and DB
+
+:::

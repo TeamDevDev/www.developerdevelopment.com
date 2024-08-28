@@ -31,3 +31,9 @@ toc-expand: 3
     - *Publish executive summaries to the Developer Development blog*:
         - **Publication of SE2**: What is Software Engineering?
         - **Publication of FB2**: Coverage
+    - *Confirm that all team members can use the following tools*:
+      - GitHub and GitHub Flow
+      - Python, Poetry, and Pipx
+      - VSCode and Python programming tools
+      - VSCode and the Quarto publishing tool
+      - Demonstrate the use of the first software tool

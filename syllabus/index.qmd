@@ -302,7 +302,7 @@ schedule](../schedule/index.qmd). Unless prior arrangements are made with the
 instructor, all students should use their computer to take these tests on the
 scheduled date and to complete it in the stated location while taking no more
 than the required amount of time. Each midterm is an executable examination
-that a student will complete through the use of GitHub, VS Code, and the Python
+that students will complete through the use of GitHub, VS Code, and the Python
 programming tools installed on their laptops.
 
 - **Final Examination**: The final examination is an online cumulative
@@ -312,26 +312,26 @@ schedule](../schedule/index.qmd). Unless prior arrangements are made with the
 course instructor, all students should use their computer to take the final
 examination on the scheduled date and to complete it in the stated location
 while taking no more than the required amount of time. The cumulative final is
-an executable examination that a student will complete through the use of
+an executable examination that students complete through the use of
 GitHub, VS Code, and the Python programming tools installed on their laptops.
 
 - **Programming Skill-Checks**: The programming skill-checks are in-class
-online cumulative assessments covering all prior material from the course
-sessions, as outlined on the [course schedule](../schedule/index.qmd). Unless
-prior arrangements are made with the instructor, all students should use their
-computer to take these tests on the scheduled date and to complete it in the
-stated location while taking no more than the required amount of time. Designed
-to prepare learners for an examination, each skill-check is an in-class
-executable assessment that a student will complete through the use of GitHub,
-VS Code, and the Python programming tools on their laptops.
+online cumulative assessments covering all prior technical material from the
+course sessions, as outlined on the [course schedule](../schedule/index.qmd).
+Unless prior arrangements are made with the instructor, all students should use
+their computer to take these skill-checks on the scheduled date and to complete
+it in the stated location while taking no more than the required amount of
+time. Designed to prepare learners for an examination, each skill-check is an
+in-class executable assessment that students complete through the use of
+GitHub, VS Code, and the Python programming tools on their laptops.
 
 - **In-Person Assessments**: The two in-person assessments are cumulative
-evaluations of technical and professional knowledge conducted through an
+evaluations of both technical and professional knowledge conducted through an
 in-person conversation with the course instructor. All students should be
 prepared to answer at least one question each about their attainment of
 professional and technical skills and the source code and documentation of the
-software project(s). A question response will be assessed by the instructor on
-a checkmark basis.
+software project(s). The instructor will assess each student response on a
+checkmark basis.
 
 - **Professional Development**: Graded on a checkmark basis and building on
 material in the [Software Engineering at
@@ -356,27 +356,30 @@ to questions presented in **FB**/**DB** and (ii) allow a learner to demonstrate
 an understanding of facts and ideas by interpreting and implementing the main
 technical ideas presented in either **FB** or **DB**.
 
-- **Project Development**: These team-based assignments invite students to
-explore different techniques for specifying, designing, implementing, testing,
-documenting, deploying, and maintaining real-world, open-source Python
-programs. These assignments also encourage students to use and build software
-engineering tools to complete tasks like debugging and testing. The technical
-work that a student completes during project development will take place in a
-public GitHub repository and will be further documented and reflected on in a
-private GitHub repository that the instructor will use to furnish feedback to
-the student. Finally, the professional work that a student undertakes as part
-of project development will occur in both an in-person setting and through a
-public GitHub repository, with the use of a private GitHub repository offering
-the opportunity for the student to document and reflect on their contributions
-and for the instructor to offer detailed feedback.
+- **Project Development**: These team-based projects invite students to explore
+different techniques for specifying, designing, implementing, testing,
+documenting, deploying, and maintaining real-world, open-source Python-based
+software tools. These projects also encourage students to use and build
+software engineering tools to complete tasks like debugging and testing. The
+technical work that a student completes during project development will take
+place in a public GitHub repository and will be further documented and
+reflected on in a private GitHub repository that the instructor will use to
+furnish assessments and feedback to the student. Finally, the professional work
+that a student undertakes as part of project development will occur in both an
+in-person setting and through a public GitHub repository, with the use of a
+private GitHub repository offering the opportunity for the student to document
+and reflect on their contributions and for the instructor to offer detailed
+feedback and assessments.
 
 When you are assigned to the discussion lead, both the **Professional
 Development** and **Technical Development** assessment categories require
 students to complete the following tasks for that week:
 
 - In collaboration with an assigned discussion lead partner, read an assigned
-article in **SE**, **FB**, or **DB** and write an executive summary, that
-should contain, at minimum, the following document sections:
+article in **SE**, **FB**, or **DB** (recall that the course features one
+article from **SE** and one article from either **FB** or **DB** every week)
+and write an executive summary, that should contain, at minimum, these
+components:
   - Summary of the article in a fashion that clearly explains its key points.
   - Analysis of the article through the translation and/or re-interpretation of
   its central points into a context that is relevant for you as a developing

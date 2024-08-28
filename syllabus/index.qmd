@@ -42,17 +42,17 @@ that, by necessity, the meeting before yours may sometimes run late.
 
 - **Discussion, Writing, and Programming Sessions**
   - *Developing Professional Skills*: Monday, 10:00 AM -- 10:50 AM, Alden 109
-    - SE Book: [Software Engineering at Google](https://abseil.io/resources/swe-book)
-    - First half of class: Discuss executive summaries for chapters read last week
-    - Second half of class: Publish a professional précis for next week's chapters
+    - **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)
+    - **Majority of the class**: Discuss executive summaries for chapters read last week
+    - **One-quarter of the class**: Prepare for the executive summary for next week's chapters
   - *Developing Technical Skills*: Wednesday, 10:00 AM -- 10:50 AM, Alden 109
-    - FB Book: [Fuzzing Book](https://www.fuzzingbook.org/)
-    - DB Book: [Debugging Book](https://www.debuggingbook.org/)
-    - Majority of class: Discuss executive summaries for chapters read last week
-    - End of class: Prepare the executive summary for next week's chapters
+    - **FB Book**: [Fuzzing Book](https://www.fuzzingbook.org/)
+    - **DB Book**: [Debugging Book](https://www.debuggingbook.org/)
+    - **Majority of the class**: Discuss executive summaries for chapters read last week
+    - **One-quarter of the class**: Prepare for the executive summary for next week's chapters
   - *Developing as Developers*: Friday, 10:00 AM -- 10:50 AM, Alden 109
-      - Publish an executive summary for the week's technical skills
-      - Publish an executive summary for the week's professional skills
+      - Publish an executive summary for next week's technical skills
+      - Publish an executive summary for next week's professional skills
       - Confirm our team's readiness for next week's in-class discussions
       - *When necessary*: implement and demonstrate software engineering project
       - *Every other week*: take an in-class programming skill-check

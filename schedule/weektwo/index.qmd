@@ -13,14 +13,14 @@ published-title: "Starting Date"
 ### Monday, September 2 -- Friday, September 6
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
-  - {{< iconify fa-regular sad-tear size=19px >}} No class, will be moved to Wednesday
+  - {{< iconify fa-regular sad-tear size=19px >}} No class, discussion to occur on Wednesday
   - *Discussion leads facilitate the discussion of a published executive summary*:
     - **SE1**: Preface - Programming Over Time
     - **Preparation for SE2**: What is Software Engineering?
 
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
   - *Discussion leads facilitate the discussion of a published executive summary*:
-    - {{< iconify fa-regular sad-tear size=19px >}} Due to no class on Monday, will be moved to lab session
+    - {{< iconify fa-regular sad-tear size=19px >}} Due to no class on Monday, discussion moved to the lab session
     - **Team-based Discussion of FB1**: Introduction to Software Testing
     - **Preparation for FB2**: Coverage
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development

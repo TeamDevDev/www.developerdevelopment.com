@@ -391,19 +391,6 @@ components:
   doing**, **start doing**, and **keep doing**, as described in [The Ultimate
   Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
-- Working in a partner-based fashion, the review of your partner's
-contributions to the executive summary for either an **SE** or **FB**/**DB**
-article, resulting in the creation of an issue in the GitHub issue tracker for
-your partner's web site that summarizes the essence of your suggestions.
-- Using GitHub, a response to the suggestions that your partner made in the
-GitHub issue tracker and a summary of the steps taken to improve your
-professional précis.
-- The publication of the professional précis to a Netlify-hosted web site using
-Quarto.
-- A team-based, in-class review of the professional précis that was written by
-each student in the course and then a synthesis of the key ideas that
-ultimately results in the collaborative publication of a team-based executive
-summary of the technical or professional content.
 - For the executive summary, the assigned partnership of students must complete
 their work in advance of the class session during which the content will be
 discussed, as outlined in the [course schedule](../schedule/index.qmd). When an

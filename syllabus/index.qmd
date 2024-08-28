@@ -279,8 +279,8 @@ during the academic semester.
   - **In-Person Assessments**: 10%
   - **Programming Skill-Checks**: 10%
   - **Midterm Examinations**: 10%
-  - **Final Examination**: 10%
-- **Project Development**: 20%
+  - **Final Examination**: 15%
+- **Project Development**: 30%
 
 These assessment categories have the following definitions:
 

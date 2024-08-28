@@ -1,0 +1,32 @@
+---
+title: Programming Over Time
+description: "Developing a basic understanding of software engineering"
+date: 2024-09-02
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Week Two
+
+### Monday, September 4 -- Friday, September 8
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discussion leads facilitate the discussion of a published executive summary*:
+    - **SE1**: Preface - Programming Over Time
+- {{< iconify fa6-solid diagram-project size=18px >}} **Tuesday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Demonstrate installation and use of the following artifacts:
+        - [Chasten](https://github.com/AstuteSource/chasten): tool for analyzing Python abstract syntax trees
+        - [Fuzzing Book (FB)](https://www.fuzzingbook.org/): tools and techniques for generating tests
+        - [Debugging Book (DB)](https://www.debuggingbook.org/): tools and techniques for automated debugging
+    - Label all of the issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues)
+    - Assign team members to all of the issues in the [Chasten issue tracker](https://github.com/AstuteSource/chasten/issues)
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+    - *Write a professional précis and publish the team's executive summary*:
+        - **Preparation for FB1**: Introduction to Software Testing
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE1**: Preface - Programming Over Time
+        - **Publication of FB1**: Introduction to Software Testing
+

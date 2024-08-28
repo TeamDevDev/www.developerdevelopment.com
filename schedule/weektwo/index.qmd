@@ -25,8 +25,8 @@ published-title: "Starting Date"
     - **Preparation for FB2**: Coverage
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
-    - Explore the use of the first software tool
-    - Elicit requirements for the second software tool
+    - Explore the use of the software tools
+    - Elicit requirements for the software tool
     - Create issues in the issue tracker to describe new features
     - Assign tasks to each team member
     - Set deadlines for the completion of the tasks

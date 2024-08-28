@@ -17,7 +17,7 @@ toc-expand: 3
     - **Preparation for SE2**: What is Software Engineering?
 
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
-  - *Discuss the team's executive summary and write a professional précis*:
+  - *Discussion leads facilitate the discussion of a published executive summary*:
     - **Team-based Discussion of FB1**: Introduction to Software Testing
     - **Preparation for FB2**: Coverage
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
@@ -29,6 +29,5 @@ toc-expand: 3
     - Set deadlines for the completion of the tasks
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
     - *Publish executive summaries to the Developer Development blog*:
-        - **Publication of SE1**: Preface - Programming Over Time
-        - **Publication of FB1**: Introduction to Software Testing
-
+        - **Publication of SE2**: What is Software Engineering?
+        - **Publication of FB2**: Coverage

@@ -9,6 +9,7 @@ listing:
     filter-ui: true
     fields: [date,title,description]
     field-display-names:
+      date: "Starting Date"
       description: "Objective"
     contents:
       - "week*/**/*.qmd"

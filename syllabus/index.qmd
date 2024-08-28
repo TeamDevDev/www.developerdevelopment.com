@@ -297,108 +297,120 @@ non-course-related activities like viewing email, social media, or other content
 not about software engineering.
 
 - **Midterm Examinations**: The two midterm examinations are online cumulative
-assessments covering all prior material from the course sessions, as outlined on
-the [course schedule](../schedule/index.qmd). Unless prior arrangements are made
-with the instructor, all students should use their computer to take these tests
-on the scheduled date and to complete it in the stated location while taking no
-more than the required amount of time. Each midterm is an executable examination
-that a student will complete through the use of GitHub, VS Code, and the
-Python programming tools installed on their laptops.
+assessments, taken during the laboratory session, that cover all prior
+technical material from the course sessions, as outlined on the [course
+schedule](../schedule/index.qmd). Unless prior arrangements are made with the
+instructor, all students should use their computer to take these tests on the
+scheduled date and to complete it in the stated location while taking no more
+than the required amount of time. Each midterm is an executable examination
+that a student will complete through the use of GitHub, VS Code, and the Python
+programming tools installed on their laptops.
 
 - **Final Examination**: The final examination is an online cumulative
-assessment covering all of the material during all of the course sessions, as
-outlined on the [course schedule](../schedule/index.qmd). Unless prior
-arrangements are made with the course instructor, all students should use their
-computer to take the final examination on the scheduled date and to complete it
-in the stated location while taking no more than the required amount of time.
-The cumulative final is an executable examination that a student will complete
-through the use of GitHub, VS Code, and the Python programming tools installed
-on their laptops.
+assessment, taken during the final examination session, that cover all of the
+material during all of the course sessions, as outlined on the [course
+schedule](../schedule/index.qmd). Unless prior arrangements are made with the
+course instructor, all students should use their computer to take the final
+examination on the scheduled date and to complete it in the stated location
+while taking no more than the required amount of time. The cumulative final is
+an executable examination that a student will complete through the use of
+GitHub, VS Code, and the Python programming tools installed on their laptops.
+
+- **Programming Skill-Checks**: The programming skill-checks are in-class
+online cumulative assessments covering all prior material from the course
+sessions, as outlined on the [course schedule](../schedule/index.qmd). Unless
+prior arrangements are made with the instructor, all students should use their
+computer to take these tests on the scheduled date and to complete it in the
+stated location while taking no more than the required amount of time. Designed
+to prepare learners for an examination, each skill-check is an in-class
+executable assessment that a student will complete through the use of GitHub,
+VS Code, and the Python programming tools on their laptops.
 
 - **In-Person Assessments**: The two in-person assessments are cumulative
-evaluations conducted through an in-person conversation with the course
-instructor. All students should be prepared to answer at least one question each
-about their attainment of professional and technical skills and the source code
-and documentation of the software project(s). Each question response will be
-assessed by the instructor on a checkmark basis.
+evaluations of technical and professional knowledge conducted through an
+in-person conversation with the course instructor. All students should be
+prepared to answer at least one question each about their attainment of
+professional and technical skills and the source code and documentation of the
+software project(s). A question response will be assessed by the instructor on
+a checkmark basis.
 
 - **Professional Development**: Graded on a checkmark basis and building on
 material in the [Software Engineering at
 Google](https://abseil.io/resources/swe-book) textbook (i.e., **SE**) and the
 content covered during that week's in-person classroom sessions, the
-professional development tasks, namely the publication of an individual
-professional précis and a team-based executive summary, both have the following
-goals: (i) help a learner to demonstrate that they can remember the learned
-material by recalling facts, basic concepts, and answers to questions presented
-in **SE** and (ii) allow a learner to demonstrate an understanding of facts and
-ideas by translating, interpreting, and contextualizing the main professional concepts
-found in **SE**.
+professional development tasks, namely the publication of a team-based
+executive summary, both have the following goals: (i) help a learner to
+demonstrate that they can remember the learned material by recalling facts,
+basic concepts, and answers to questions presented in **SE** and (ii) allow a
+learner to demonstrate an understanding of facts and ideas by translating,
+interpreting, and contextualizing the main professional concepts found in
+**SE**.
 
 - **Technical Development**: Graded on a checkmark basis and building on
 material in the [Fuzzing Book](https://www.fuzzingbook.org/) (i.e., **FB**) and
 [Debugging Book](https://www.debuggingbook.org/) textbooks (i.e., **DB**) and
 the content covered during that week's in-person classroom sessions, the
-technical development tasks, namely the publication of an individual
-professional précis and a team-based executive summary, have the following
-goals: (i) help a learner to demonstrate that they can remember the learned
-material by recalling facts, basic concepts, and answers to questions presented
-in **FB**/**DB** and (ii) allow a learner to demonstrate an understanding of
-facts and ideas by interpreting and implementing the main technical ideas
-presented in either **FB** or **DB**.
+technical development tasks, namely the publication of a team-based executive
+summary, have the following goals: (i) help a learner to show that they can
+remember the learned material by recalling facts, basic concepts, and answers
+to questions presented in **FB**/**DB** and (ii) allow a learner to demonstrate
+an understanding of facts and ideas by interpreting and implementing the main
+technical ideas presented in either **FB** or **DB**.
 
 - **Project Development**: These team-based assignments invite students to
 explore different techniques for specifying, designing, implementing, testing,
-documenting, deploying, and maintaining real-world, open-source Python programs.
-These assignments also encourage students to use and build software engineering
-tools to complete tasks like debugging and testing. The technical work that a
-student completes during project development will take place in a public GitHub
-repository and will be further documented and reflected on in a private GitHub
-repository that the instructor will use to furnish feedback to the student.
-Finally, the professional work that a student undertakes as part of project
-development will occur in both an in-person setting and through a public GitHub
-repository, with the use of a private GitHub repository offering the opportunity
-for the student to document and reflect on their contributions and for the
-instructor to offer detailed feedback.
+documenting, deploying, and maintaining real-world, open-source Python
+programs. These assignments also encourage students to use and build software
+engineering tools to complete tasks like debugging and testing. The technical
+work that a student completes during project development will take place in a
+public GitHub repository and will be further documented and reflected on in a
+private GitHub repository that the instructor will use to furnish feedback to
+the student. Finally, the professional work that a student undertakes as part
+of project development will occur in both an in-person setting and through a
+public GitHub repository, with the use of a private GitHub repository offering
+the opportunity for the student to document and reflect on their contributions
+and for the instructor to offer detailed feedback.
 
-Both the **Professional Development** and **Technical Development** assessment
-categories require students to complete the following tasks on a weekly basis:
+When you are assigned to the discussion lead, both the **Professional
+Development** and **Technical Development** assessment categories require
+students to complete the following tasks for that week:
 
-- In collaboration with a partner, read an assigned article in **SE**, **FB**,
-or **DB** and write your own professional précis, that should contain, at
-minimum, the following document sections:
+- In collaboration with an assigned discussion lead partner, read an assigned
+article in **SE**, **FB**, or **DB** and write an executive summary, that
+should contain, at minimum, the following document sections:
   - Summary of the article in a fashion that clearly explains its key points.
   - Analysis of the article through the translation and/or re-interpretation of
   its central points into a context that is relevant for you as a developing
   developer.
   - Description of actions items that will help you and the team of software
-  engineers to enhance their development as developers and the completion of the
-  long-term software engineering projects. Each action item should have a clear
-  description of the steps that the author and/or the team should **stop
+  engineers to enhance their development as developers and the completion of
+  the long-term software engineering projects. Each action item should have a
+  clear description of the steps that the author and/or the team should **stop
   doing**, **start doing**, and **keep doing**, as described in [The Ultimate
   Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
-- Working in a partner-based fashion, the review of your partner's professional
-précis for either an **SE** or **FB**/**DB** article, resulting in the creation
-of an issue in the GitHub issue tracker for your partner's web site that
-summarizes the essence of your suggestions.
+- Working in a partner-based fashion, the review of your partner's
+contributions to the executive summary for either an **SE** or **FB**/**DB**
+article, resulting in the creation of an issue in the GitHub issue tracker for
+your partner's web site that summarizes the essence of your suggestions.
 - Using GitHub, a response to the suggestions that your partner made in the
 GitHub issue tracker and a summary of the steps taken to improve your
 professional précis.
 - The publication of the professional précis to a Netlify-hosted web site using
 Quarto.
 - A team-based, in-class review of the professional précis that was written by
-each student in the course and then a synthesis of the key ideas that ultimately
-results in the collaborative publication of a team-based executive summary of
-the technical or professional content.
-- For both the professional précis and the executive summary, either an
+each student in the course and then a synthesis of the key ideas that
+ultimately results in the collaborative publication of a team-based executive
+summary of the technical or professional content.
+- For the executive summary, either an
 individual student or a team of students must complete their work in advance of
-the class session during which the content will be discussed, as outlined in the
-[course schedule](../schedule/index.qmd). When an individual does not complete
-their professional précis according to the agreed on schedule this will result
-in a reduction of either their technical or professional development score. When
-an executive summary is not completed according to the agreed on schedule this
-will result in a reduction in either the technical or professional development
-score for every student.
+the class session during which the content will be discussed, as outlined in
+the [course schedule](../schedule/index.qmd). When an individual does not
+complete their professional précis according to the agreed on schedule this
+will result in a reduction of either their technical or professional
+development score. When an executive summary is not completed according to the
+agreed on schedule this will result in a reduction in either the technical or
+professional development score for every student.
 
 The **Project Development** assessment category requires students to complete,
 on a weekly basis, both team-based and individual tasks like the following:
@@ -420,15 +432,15 @@ professional development, and project development. Every student is also
 required to document their activities in each of these three categories,
 including links to relevant artifacts in a GitHub repository. In addition to
 regularly providing project- and course-relevant feedback in the appropriate
-public GitHub repository (e.g., the GitHub for a course project), the instructor
-will furnish individualized feedback to each student in a private GitHub
-repository used for documentation and reflection. Unless there is a documented
-extenuating circumstance, the course instructor will not assess a student's
-contribution to technical, professional, or project development tasks unless it
-is evident in a GitHub repository in the form of, for instance, written work in
-the GitHub issue tracker, project management through the review of a pull
-request, or contribution of source code or documentation to a pull request that
-is merged into main branch of a GitHub repository.
+public GitHub repository (e.g., the GitHub for a course project), the
+instructor will furnish individualized feedback to each student in a private
+GitHub repository used for documentation and reflection. Unless there is a
+documented extenuating circumstance, the course instructor will not assess a
+student's contribution to technical, professional, or project development tasks
+unless it is evident in a GitHub repository in the form of, for instance,
+written work in the GitHub issue tracker, project management through the review
+of a pull request, or contribution of source code or documentation to a pull
+request that is merged into main branch of a GitHub repository.
 
 #### Assessment Policies
 
@@ -441,17 +453,17 @@ All assignments will have a stated due date shared through GitHub, GitHub
 Classroom, and/or the [Developer Development Discord
 Server](https://discord.gg/aNfn8DNEMx). All reflections on and documentation of
 professional development, technical development, and project development should
-be committed to private GitHub repositories. In contrast, the publication of the
-professional précis that a student writes each week should be published to their
-Quarto-based web site hosted on Netlify. The feedback that a student shares with
-their professional précis partner should be evident in the GitHub repository for
-that partner's web site. Finally, the collaboratively published executive
-summaries should be reviewed and discussed through GitHub and published on the
-Developer Development web site and the completed version of each software
-project should be available in the project's public GitHub repository. No credit
-will be awarded for any course work that you submit to the incorrect GitHub
-repository or web site. Unless special arrangements are made with the
-instructor, no work will be accepted after the deadline.
+be committed to private GitHub repositories. In contrast, the publication of
+the professional précis that a student writes each week should be published to
+their Quarto-based web site hosted on Netlify. The feedback that a student
+shares with their professional précis partner should be evident in the GitHub
+repository for that partner's web site. Finally, the collaboratively published
+executive summaries should be reviewed and discussed through GitHub and
+published on the Developer Development web site and the completed version of
+each software project should be available in the project's public GitHub
+repository. No credit will be awarded for any course work that you submit to
+the incorrect GitHub repository or web site. Unless special arrangements are
+made with the instructor, no work will be accepted after the deadline.
 
 ##### Assignment Evaluation
 
@@ -465,7 +477,7 @@ site).
 
 ##### Developer Development Tokens
 
-Students may "spend" up to five developer development "tokens" that they may use
+Students may "spend" up to two developer development "tokens" that they may use
 to either (i) secure 48 hours of additional time to complete an assigned task or
 (ii) request a reassessment of an already graded project. You may use a token to
 request the reassessment of work that you completed as part of tasks in the

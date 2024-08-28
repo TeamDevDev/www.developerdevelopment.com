@@ -54,6 +54,14 @@ listing:
           - Confirm output of Python functions
           - Covers all content in SE, FB, and DB
 
+::: {.callout-note appearance="minimal" title="Textbook Abbreviations" collapse="false"}
+
+- SE: [Software Engineering at Google](https://abseil.io/resources/swe-book)
+- FB: [Fuzzing Book](https://www.fuzzingbook.org/)
+- DB: [Debugging Book](https://www.debuggingbook.org/)
+
+:::
+
 ### Weekly Cadence
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development

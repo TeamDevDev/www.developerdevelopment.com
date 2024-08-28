@@ -197,9 +197,9 @@ goal of this web site's content!
 
 ### Course Textbooks
 
-- [Software Engineering at Google](https://abseil.io/resources/swe-book) - abbreviated on this site as **SE**
-- [Fuzzing Book](https://www.fuzzingbook.org/) -- abbreviated on this site as **FB**
-- [Debugging Book](https://www.debuggingbook.org/) -- abbreviated on this site as **DB**
+- [Software Engineering at Google](https://abseil.io/resources/swe-book): abbreviated on this site as **SE**
+- [Fuzzing Book](https://www.fuzzingbook.org/): abbreviated on this site as **FB**
+- [Debugging Book](https://www.debuggingbook.org/): abbreviated on this site as **DB**
 
 Students who complete all of the work on the [course
 schedule](../schedule/index.qmd) will complete **twelve** reading assignments
@@ -244,7 +244,7 @@ and **DB**:
     - Coordinate with your discussion lead partner to write and revise an executive summary
     - Use [Quarto](https://quarto.org/) to write and revise an executive summary for the reading assignment
     - Create a pull request from your fork of the course web site and coordinate its review
-    - Leadership team uses [GitHub Actions](https://docs.github.com/en/actions) and [Netlify](https://www.netlify.com/) publish the Quarto-based web site
+    - Leadership team uses [GitHub Actions](https://docs.github.com/en/actions) and [Netlify](https://www.netlify.com/) to publish the Quarto-based web site
 
 The course will also leverage excerpts from the following supporting text books:
 

@@ -32,26 +32,27 @@ listing:
     - **Week Two through Week Five**: Establish your technical and professional skills
     - **Week Six**:
       - **Monday**: in-person assessment of individual developer development
-      - **Tuesday**: take the first executable examination during laboratory session
       - **Wednesday**: in-person assessment of individual developer development
+      - **Thursday**: take an executable examination during the laboratory session
       - **Friday**:  in-person assessment of individual developer development
 - **Module Two**: *Practical Software Engineering Knowledge and Skills*
     - **Week Seven through Week Ten**: Enhance your technical and professional skills
     - **Week Six**:
       - **Monday**: in-person assessment of individual developer development
-      - **Tuesday**: take the second first executable examination during laboratory session
       - **Wednesday**: in-person assessment of individual developer development
+      - **Thursday**: take an executable examination during the laboratory session
       - **Friday**:  in-person assessment of individual developer development
 - **Module Three**: *Advanced Software Engineering Knowledge and Skills*
-    - **Week Eleven through Week Sixteen**: Enhance your technical and professional skills
-    - **Week Seventeen**:
-      - **Thursday, December 14, 2023 at 9:00 AM**: Executable Examination
+    - **Week Eleven through Week Fifteen**: Enhance your technical and professional skills
+    - **Week Sixteen**:
+      - **Wednesday, December 11, 2024 at 9:00 AM**: Executable Examination
         - *Demonstrate technical skills in software engineering*:
           - Use GitHub and GitHub Actions
           - Use text editor and terminal window
           - Implement and test Python functions
           - Debug defective Python functions
           - Confirm output of Python functions
+          - Covers all content in SE, FB, and DB
 
 ### Weekly Cadence
 

@@ -38,4 +38,13 @@ toc-expand: 3
 - Install Quarto's plugin for [VSCode](https://quarto.org/docs/editors/vscode/) or your chosen text editor
 - Learn how to clone and run the source code in the course Web site
 - Practice using commands like `quarto preview` and `quarto render`
-- Practice all of the tasks in the [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow) model for software development
+- Practice all of the tasks in the [GitHub
+Flow](https://docs.github.com/en/get-started/using-github/github-flow) model
+for software development
+
+### Module One Discussion Leads
+
+- **Week Two**: Pallas-Athena Cain and Hemani Alaparthi
+- **Week Three**: Rebekah Rudd and Chezka Quinola
+- **Week Four**: Aidan Dyga and Hannah Brown
+- **Week Five**: Molly Suppo and Titus Smith

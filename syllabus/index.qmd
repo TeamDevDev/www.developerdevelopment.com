@@ -283,17 +283,17 @@ during the academic semester.
 
 These assessment categories have the following definitions:
 
-- **Team Participation**: Students are expected to regularly attend and actively
-participate in all class and project development sessions. After either an
-unexcused absence or a late attendance to either a class or project development
-session on two separate occasions, a student's overall team participation grade
-will be reduced by half a percentage for each additional time they are absent or
-late in an unexcused fashion. Students who need to miss class or attend class
-late for an excused reason should communicate their situation to the instructor
-in a timely fashion. After one warning per week, a student's weekly team
-participation grade will be reduced if they are observed undertaking
-non-course-related activities like viewing email, social media, or other content
-not about software engineering.
+- **Team Participation**: Students are expected to regularly attend and
+actively participate in all class and project development sessions. After
+either an unexcused absence or a late attendance to either a class or project
+development session on two separate occasions, a student's overall team
+participation grade will be reduced by half a percentage for each additional
+time they are absent or late in an unexcused fashion. Students who need to miss
+class or attend class late for an excused reason should communicate their
+situation to the instructor in a timely fashion. After one warning per week, a
+student's weekly team participation grade will be reduced if they are observed
+undertaking non-course-related activities like viewing email, social media, or
+other content not connected to the software engineering course.
 
 - **Midterm Examinations**: The two midterm examinations are online cumulative
 assessments, taken during the laboratory session, that cover all prior
@@ -306,7 +306,7 @@ that a student will complete through the use of GitHub, VS Code, and the Python
 programming tools installed on their laptops.
 
 - **Final Examination**: The final examination is an online cumulative
-assessment, taken during the final examination session, that cover all of the
+assessment, taken during the final examination session, that covers all of the
 material during all of the course sessions, as outlined on the [course
 schedule](../schedule/index.qmd). Unless prior arrangements are made with the
 course instructor, all students should use their computer to take the final

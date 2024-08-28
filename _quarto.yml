@@ -18,7 +18,6 @@ website:
   repo-url: https://github.com/TeamDevDev/www.developerdevelopment.com
   search:
     location: navbar
-    type: textbox
   reader-mode: false
   back-to-top-navigation: false
   navbar:

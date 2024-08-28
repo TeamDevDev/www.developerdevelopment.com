@@ -14,7 +14,7 @@ listing:
     contents:
       - "week*/**/*.qmd"
     sort:
-      - "date desc"
+      - "date"
       - "title"
       - "description"
 ---

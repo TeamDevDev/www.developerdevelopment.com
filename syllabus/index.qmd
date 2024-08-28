@@ -60,18 +60,18 @@ that, by necessity, the meeting before yours may sometimes run late.
 
 ::: {.callout-note appearance="minimal" title="Active Learning"}
 
-With the goal of ensuring that every student develops as a developer, active
-learning plays a central role in the Software Engineering course. This means
-that you will be actively publishing your insights through blog post articles,
-in accordance with advice from well-known software engineers like [Addy
-Osmani](https://addyosmani.com/), who recently published a blog post entitled
-["Write about what you learn. It pushes you to understand topics
+With the goal of ensuring that every student develops as a software developer,
+active learning plays a central role in the Software Engineering course. This
+means that you will be actively publishing your insights through blog post
+articles, in accordance with advice from well-known software engineers like
+[Addy Osmani](https://addyosmani.com/), who recently published a blog post
+entitled ["Write about what you learn. It pushes you to understand topics
 better."](https://addyosmani.com/blog/write-learn/) You will also be called on
 to actively lead and participate in class discussions every week. One key task
 that you will complete every week involves running, writing about, and
 implementing program source code and publishing program documentation. Aligned
-with the course goals, you will complete out-of-class programming and writing in
-preparation for in-class discussions.
+with the course goals, you will complete out-of-class programming and writing
+in preparation for in-class discussions.
 
 :::
 
@@ -166,10 +166,12 @@ assessments in Computer Science 203 and illustrates their connection to the
 course learning objectives:
 
 - *Course Activities*:
-  - **Technical Development**: Develops **SE-1**, **SE-2**, **SE-3**
-  - **Professional Development**: Develops **SE-3**, **SE-4**, **SE-5**
+  - **Executive Summaries**:
+    - **Technical Development**: Develops **SE-1**, **SE-2**, **SE-3**
+    - **Professional Development**: Develops **SE-3**, **SE-4**, **SE-5**
   - **Project Development**: Develops **SE-1**, **SE-2**, **SE-3**, **SE-4**, **SE-5**
 - *Course Assessments*:
+  - **Programming Skill-Checks**: Assesses **SE-3**
   - **Executable Examinations**: Assesses **SE-1**, **SE-2**, **SE-3**
   - **In-Person Assessments**: Assesses **SE-3**, **SE-4**, **SE-5**
 

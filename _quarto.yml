@@ -29,8 +29,6 @@ website:
         text: Schedule
       - href: syllabus/index.qmd
         text: Syllabus
-      # - href: policies/index.qmd
-      #   text: Policies
 
   page-footer:
     left: '<a href="https://github.com/TeamDevDev/www.developerdevelopment.com/graphs/contributors" aria-label="DevDevTeam Maintainers">{{< fa copyright >}} DevDev</a>'

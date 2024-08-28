@@ -25,8 +25,8 @@ published-title: "Starting Date"
     - **Preparation for FB2**: Coverage
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
-    - Explore the use of the software tools
-    - Elicit requirements for the software tool
+    - Explore the use of the software tools subject to development
+    - Elicit requirements for the software tools subject to development
     - Create issues in the issue tracker to describe new features
     - Assign tasks to each team member
     - Set deadlines for the completion of the tasks
@@ -39,4 +39,4 @@ published-title: "Starting Date"
       - Python, Poetry, and Pipx
       - VSCode and Python programming tools
       - VSCode and the Quarto publishing tool
-      - Demonstrate the use of the first software tool
+      - Demonstrate the use of the software tools subject to development

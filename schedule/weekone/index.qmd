@@ -1,10 +1,11 @@
 ---
 title: Technical and Professional Onboarding
-description: "Equip our software engineering team"
+description: "Equipping our software engineering team"
 date: 2024-08-26
 layout: full
 toc: true
 toc-expand: 3
+published-title: ""
 ---
 
 ## Week One

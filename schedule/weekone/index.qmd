@@ -32,7 +32,7 @@ published-title: ""
     - Clone the forked GitHub repositories to your workstation
     - Use `pip` to install each books' dependencies
     - Run a local Jupyter Lab server that can access a book's Jupyter notebooks
-    - Correctly run the Jupyter notebook for at least one chapter in FB or DB
+    - Correctly run the Jupyter notebook for at least one chapter in FB and DB
 - Locate and bookmark the [Software Engineering at Google](https://abseil.io/resources/swe-book) book
 - Install the [Quarto](https://quarto.org/) system for scientific and technical publishing
 - Learn how to use [Quarto](https://quarto.org/) to create a [web site](https://quarto.org/docs/websites/) with executable Python code

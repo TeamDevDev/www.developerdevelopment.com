@@ -68,11 +68,11 @@ listing:
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - *Discuss the team's executive summary and write a professional précis*:
     - Team-based discussion of the week's reading in SE
-    - Focused individual preparation for next week's SE reading
+    - Individual and team-based preparation for next week's SE reading
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
   - *Discuss the team's executive summary and write a professional précis*:
     - Team-based discussion of prior week's reading in either FB or DB
-    - Focused individual preparation for next week's FB or DB reading
+    - Individual and team-based preparation for next week's FB or DB reading
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
     - Sprint planning

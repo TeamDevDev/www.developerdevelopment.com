@@ -1,6 +1,6 @@
 ---
 title: Programming Over Time
-description: "Developing a basic understanding of software engineering"
+description: "Start to explore software engineering"
 date: 2024-09-02
 layout: full
 toc: true

@@ -1,6 +1,6 @@
 ---
 title: Technical and Professional Onboarding
-description: "Equipping the members of our software engineering team"
+description: "Equip our software engineering team"
 date: 2024-08-26
 layout: full
 toc: true

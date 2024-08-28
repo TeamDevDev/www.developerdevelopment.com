@@ -67,7 +67,7 @@ projects.
 learning objectives and explains how on-campus learners will be assessed by the
 course instructor.
 
-- The [developer development blog](./syllabus/index.qmd) includes executive
+- The [developer development blog](./blog/index.qmd) includes executive
 summaries of all of the key professional and technical insights that students
 learned when actively engaging with the content in **SE**, **FB**, and **DB**.
 The blog also contains reports from the design, implementation, testing,

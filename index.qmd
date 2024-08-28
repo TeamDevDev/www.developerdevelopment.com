@@ -44,15 +44,17 @@ techniques for generating software tests.
 errors and their causes.
 
 As the developing developers in the on-campus course read twelve articles in
-**SE**, nine articles in **FB**, and four articles in **DB**, they will write a
-professional précis that summarizes and contextualizes the material and points
-towards a way in the lessons from these books can be applied to two long-term
-software development projects. Is this challenging? *Yep*! Will learners make
-mistakes along the way to developing as a software developer? *Of course*! Are
-there many benefits to being a developing developer? *Yes*! For instance, the
-participants of this sixteen-week course will gain valuable perspectives and
-practical skills to enhance their software engineering skills while
-collaboratively building and releasing two open-source tools.
+**SE**, nine articles in **FB**, and four articles in **DB**, they will
+collaboratively write and publish that summarizes and contextualizes
+the material and points towards a way in the lessons from these books can be
+applied to two long-term software development projects.
+
+Is this challenging? *Yep*! Will learners make mistakes along the way to
+developing as a software developer? *Of course*! Are there many benefits to
+being a developing developer? *Yes*! For instance, the participants of this
+sixteen-week course will gain valuable perspectives and practical skills to
+enhance their abilities as a software engineering while collaboratively
+building and releasing two open-source tools.
 
 ## Adventure
 

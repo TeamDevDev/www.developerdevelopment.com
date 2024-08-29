@@ -394,13 +394,18 @@ components:
   should **stop doing**, **start doing**, and **keep doing**, as described in
   [The Ultimate Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
+  - An executive summary for an article from either **FB** or **DB** must also
+  contain executable Python source code and the output from running the code.
+  Specifically, the source code segments must appear in fenced code blocks and
+  be directly executable in GitHub Actions and capable of correctly producing
+  output when the web site is built and deployed to Netlify.
 - For each the executive summary, the assigned partnership of students must
 complete their work in advance of the class session during which the content
 will be discussed, as outlined in the [course schedule](../schedule/index.qmd).
-When an executive summary is not completed according to the agreed on schedule
-or not completed according to the agreed-on level of quality, this will result
-in a reduction in corresponding technical or professional development score for
-the assigned students.
+When an executive summary is not completed according to stated schedule or not
+completed at the agreed-on level of quality, this will result in a reduction in
+the corresponding technical or professional development score for the assigned
+students.
 
 The **Project Development** assessment category requires students to complete,
 on a weekly basis, both team-based and individual tasks like the following:

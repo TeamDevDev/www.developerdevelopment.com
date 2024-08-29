@@ -514,15 +514,16 @@ descriptions, and discussion lead assignments for the executive summaries.
 Students who are struggling to understand the knowledge and skills developed in
 any of the course sessions are encouraged to seek assistance from the course
 instructor and/or the student technical leaders. Students should, within the
-bounds of the Honor Code, ask and answer questions on the [Developer Development
-Discord Server](https://discord.gg/aNfn8DNEMx); please request assistance from
-the instructor and student technical leaders first through public Discord
-channels before sending an email. Students who need the course instructor's
-assistance are invited to schedule a meeting through the [course instructor's
-appointment scheduler](https://www.gregorykapfhammer.com/schedule/) and come to
-the meeting with all of the details needed to discuss their question. Students
-can find out the office hour schedule for student technical leaders by viewing
-the list of [student technical
+bounds of the Honor Code, ask and answer questions on the [Developer
+Development Discord Server](https://discord.gg/aNfn8DNEMx). Instead of sending
+either an email or a direct message, please request assistance from the
+instructor and student technical leaders through public Discord channels before
+sending an email. Students who need the course instructor's assistance are
+invited to schedule a meeting through the [course instructor's appointment
+scheduler](https://www.gregorykapfhammer.com/schedule/) and come to the meeting
+with all of the details needed to discuss their question. Students can find out
+the office hour schedule for student technical leaders by viewing the list of
+[student technical
 leaders](https://www.cis.allegheny.edu/teaching/technicalleaders/).
 
 #### Using GitHub and Discord

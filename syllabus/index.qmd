@@ -448,17 +448,32 @@ All assignments will have a stated due date shared through GitHub, GitHub
 Classroom, and/or the [Developer Development Discord
 Server](https://discord.gg/aNfn8DNEMx). All reflections on and documentation of
 professional development, technical development, and project development should
-be committed to private GitHub repositories. In contrast, the publication of
-the professional précis that a student writes each week should be published to
-their Quarto-based web site hosted on Netlify. The feedback that a student
-shares with their professional précis partner should be evident in the GitHub
-repository for that partner's web site. Finally, the collaboratively published
-executive summaries should be reviewed and discussed through GitHub and
-published on the Developer Development web site and the completed version of
-each software project should be available in the project's public GitHub
-repository. No credit will be awarded for any course work that you submit to
-the incorrect GitHub repository or web site. Unless special arrangements are
-made with the instructor, no work will be accepted after the deadline.
+be committed to private GitHub repositories. Finally, the collaboratively
+published executive summaries should be reviewed and discussed through GitHub
+and published on the Developer Development web site and the completed version
+of each software project should be available in the project's public GitHub
+repository. No credit will be awarded for any course work that a student
+submits to the incorrect GitHub repository or web site. Unless special
+arrangements are made with the instructor due to extenuating circumstances or a
+student uses a token, no work will be accepted after the deadline.
+
+##### Developer Development Tokens
+
+Students may "spend" up to three "developer development tokens" that they may
+use to secure seven calendar days of time to revise an already assessed project
+and subsequently request a reassessment of it and receive a new assessment
+score. You may use a token to request the reassessment of revised work that you
+completed as part of specific tasks in the professional development, technical
+development, or project development categories. For instance, you may choose to
+spend a token by asking the instructor to reevaluate one of the executive
+summaries that they posted to the Quarto-based web site. Outside of these three
+tokens, the instructor will not consider any additional requests for deadline
+extensions or project reassessment. Students may not request to use a token to
+re-assess their team participation, their work for a completed phase of a
+long-term software engineering project, or the final examination. However, they
+may apply tokens to the midterm examinations, the programming skill-checks, and
+the executive summaries. The instructor will submit to a student the assessment
+for work revised as part of token use at the end of a course module.
 
 ##### Assignment Evaluation
 
@@ -469,19 +484,6 @@ project development. Your grade will be a function of whether or not you
 completed work that fulfills the project's specification and submitted it by the
 deadline to the stated platform (e.g., a GitHub repository or Netlify-hosted web
 site).
-
-##### Developer Development Tokens
-
-Students may "spend" up to two developer development "tokens" that they may use
-to either (i) secure 48 hours of additional time to complete an assigned task or
-(ii) request a reassessment of an already graded project. You may use a token to
-request the reassessment of work that you completed as part of tasks in the
-professional development, technical development, or project development
-categories. For instance, a student may choose to spend a token by asking the
-course instructor to reevaluate one of the professional précis articles that
-they posted to their Quarto-based web site. Outside of these five tokens, the
-instructor will not consider any additional requests for deadline extensions or
-assignment reassessment.
 
 ##### Course Attendance
 

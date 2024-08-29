@@ -380,24 +380,27 @@ article in **SE**, **FB**, or **DB** (recall that the course features one
 article from **SE** and one article from either **FB** or **DB** every week)
 and write an executive summary, that should contain, at minimum, these
 components:
-  - Summary of the article in a fashion that clearly explains its key points.
-  - Analysis of the article through the translation and/or re-interpretation of
-  its central points into a context that is relevant for you as a developing
-  developer.
-  - Description of actions items that will help you and the team of software
-  engineers to enhance their development as developers and the completion of
-  the long-term software engineering projects. Each action item should have a
-  clear description of the steps that the author and/or the team should **stop
-  doing**, **start doing**, and **keep doing**, as described in [The Ultimate
-  Guide to the Start, Stop, Continue
+  - Brief overview of the executive summary and the contributions that it
+  makes.
+  - Detailed analysis of the article in a fashion that clearly explains its key
+  points, featuring the translation and/or re-interpretation of its central
+  points into a context that is relevant for you as a developing developer. The
+  executive summary should connect to both prior executive summaries and to the
+  ongoing work on the long-term software engineering projects.
+  - Detailed description of actions items that will help you and the team of
+  software engineers to enhance their development as developers and the
+  completion of the long-term software engineering projects. Each action item
+  should have a clear description of the steps that the author and/or the team
+  should **stop doing**, **start doing**, and **keep doing**, as described in
+  [The Ultimate Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
-- For the executive summary, the assigned partnership of students must complete
-their work in advance of the class session during which the content will be
-discussed, as outlined in the [course schedule](../schedule/index.qmd). When an
-executive summary is not completed according to the agreed on schedule or not
-completed according to the agreed-on level of quality, this will result in a
-reduction in corresponding technical or professional development score for the
-students assigned to complete those tasks.
+- For each the executive summary, the assigned partnership of students must
+complete their work in advance of the class session during which the content
+will be discussed, as outlined in the [course schedule](../schedule/index.qmd).
+When an executive summary is not completed according to the agreed on schedule
+or not completed according to the agreed-on level of quality, this will result
+in a reduction in corresponding technical or professional development score for
+the assigned students.
 
 The **Project Development** assessment category requires students to complete,
 on a weekly basis, both team-based and individual tasks like the following:

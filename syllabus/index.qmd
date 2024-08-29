@@ -523,7 +523,7 @@ appointment scheduler](https://www.gregorykapfhammer.com/schedule/) and come to
 the meeting with all of the details needed to discuss their question. Students
 can find out the office hour schedule for student technical leaders by viewing
 the list of [student technical
-leaders](https://www.cs.allegheny.edu/teaching/technicalleaders/).
+leaders](https://www.cis.allegheny.edu/teaching/technicalleaders/).
 
 #### Using GitHub and Discord
 

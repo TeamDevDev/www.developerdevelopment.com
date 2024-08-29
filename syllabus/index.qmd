@@ -466,7 +466,7 @@ score. You may use a token to request the reassessment of revised work that you
 completed as part of specific tasks in the professional development, technical
 development, or project development categories. For instance, you may choose to
 spend a token by asking the instructor to reevaluate one of the executive
-summaries that they posted to the Quarto-based web site. Outside of these three
+summaries that you posted to the Quarto-based web site. Outside of these three
 tokens, the instructor will not consider any additional requests for deadline
 extensions or project reassessment. Students may not request to use a token to
 re-assess their team participation, their work for a completed phase of a

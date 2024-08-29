@@ -493,21 +493,21 @@ whenever possible, please communicate with the instructor at least one week in
 advance to describe your situation. Students who have any signs of illness
 should not attend any in-person course sessions.
 
-##### Class Preparation
+##### Team Preparation
 
 In order to minimize confusion and maximize learning, students must invest time
 to prepare for the class sessions that focus on professional development,
 technical development, and project development. Although the course instructor
-and the student technical leaders will always be available to serve as guide for
-individual students, teams of students, and the entire class, it is expected
-that students will volunteer to lead and actively contribute to all class
-sessions. Only those students who have prepared for class by reading the
-assigned material, writing the required articles, and reviewing the content
-written by other students will be able to effectively participate in these class
-discussions. In order to help students remain organized and to effectively
-prepare for classes, the course instructor will maintain a [course
-schedule](../schedule/index.qmd) with reading assignments, project descriptions,
-and executive summaries, available on this site.
+and the student technical leaders will always be available to serve as guide
+for individual students, teams of students, and the entire class, it is
+expected that students will volunteer to lead and actively contribute to all
+class sessions. Only those students who have prepared for class by reading the
+assigned material, writing the required executive summaries, and reviewing the
+content written by other students will be able to effectively participate in
+these class discussions. In order to help students remain organized and to
+effectively prepare for classes, the course instructor will maintain a [course
+schedule](../schedule/index.qmd) with reading assignments, project
+descriptions, and discussion lead assignments for the executive summaries.
 
 #### Seeking Assistance
 

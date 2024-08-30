@@ -29,14 +29,13 @@ published-title: "Starting Date"
     - Set deadlines for the completion of the tasks
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
     - *Publish executive summaries to the Developer Development blog*:
-        - **Publication of SE4**: Knowledge Sharing
-        - **Publication of FB4**: Mutation Analysis
-    - *Software Engineering Checkup*:
-      - Demonstration the following software tools:
-        - GatorGrade
-        - GatorGrader
-        - ExecExam
-      - Each team member must:
-        - Demonstrate at least one feature in one software tool
-        - Show that they have an effective engineering tool setup
-        - Share their plan for continued progress on their features
+        - **Publication of SE5**: Engineering for Equity
+        - **Publication of FB5**: Mutation-Based Fuzzing
+    - *Programming Skill-Check*:
+      - Use of the following software tools:
+        - GitHub and GitHub Classroom
+        - Python, Poetry, and Pipx
+        - VSCode and Python programming tools
+        - GatorGrade, GatorGrader, and ExecExam
+      - Basic Python programming knowledge and skills
+      - All covered source code and technical concepts in **FB**

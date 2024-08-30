@@ -406,10 +406,10 @@ components:
 - For each the executive summary, the assigned partnership of students must
 complete their work in advance of the class session during which the content
 will be discussed, as outlined in the [course schedule](../schedule/index.qmd).
-When an executive summary is not completed according to stated schedule or not
-completed at the agreed-on level of quality, this will result in a reduction in
-the corresponding technical or professional development score for the assigned
-students.
+When an executive summary is not completed according to the stated schedule or
+not completed at the agreed-on level of quality, this will result in a reduction
+in the corresponding technical or professional development score for the
+assigned students.
 
 The **Project Development** assessment category requires students to complete,
 on a weekly basis, both team-based and individual tasks like the following:

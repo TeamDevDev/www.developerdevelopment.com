@@ -14,12 +14,12 @@ published-title: "Starting Date"
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - *Discussion leads facilitate the discussion of a published executive summary*:
-    - **Team-based Discussion of SE3**: How to Work Well on Teams
-    - **Preparation for SE4**: Knowledge Sharing
+    - **Team-Based Discussion of SE4**: Knowledge Sharing
+    - **Preparation for SE5**: Engineering for Equity
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
   - *Discussion leads facilitate the discussion of a published executive summary*:
-    - **Team-Based Discussion of FB3**: Fuzzing: Breaking Things with Random Inputs
-    - **Preparation for FB4**: Mutation Analysis
+    - **Team-Based Discussion of FB4**: Mutation Analysis
+    - **Preparation for for FB5**: Mutation-Based Fuzzing
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
     - Explore the use of the software tools subject to development

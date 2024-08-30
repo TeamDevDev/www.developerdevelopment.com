@@ -239,12 +239,16 @@ and **DB**:
   - Run a Jupyter Lab server using a command like `venv/bin/jupyter-lab`
   - Use the Jupyter Lab server to locate and execute notebooks for chapters in **FB** and **DB**
   - Watch the embedded video(s) and run all of the providing source code segments
-  - Discussion leads for a weekly reading assignment complete the following tasks:
+  - Discussion leads for a weekly reading assignment additionally complete the following tasks:
     - Create a fork of the course web site into a publicly available GitHub repository
     - Coordinate with your discussion lead partner to write and revise an executive summary
     - Use [Quarto](https://quarto.org/) to write and revise an executive summary for the reading assignment
     - Create a pull request from your fork of the course web site and coordinate its review
-    - Leadership team uses [GitHub Actions](https://docs.github.com/en/actions) and [Netlify](https://www.netlify.com/) to publish the Quarto-based web site
+  - The leadership team (i.e., the student technical leader(s) and the course
+  instructor) will then review and comment on your work (and often require
+  revisions to the executive summary), ultimately using [GitHub
+  Actions](https://docs.github.com/en/actions) and
+  [Netlify](https://www.netlify.com/) to publish the Quarto-based web site
 
 The course will also leverage excerpts from the following supporting text books:
 

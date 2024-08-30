@@ -39,5 +39,5 @@ published-title: "Starting Date"
         - Python, Poetry, and Pipx
         - VSCode and Python programming tools
         - GatorGrade, GatorGrader, and ExecExam
-      - Basic Python programming skills
+      - Basic Python programming knowledge and skills
       - All covered source code and technical concepts in **FB**

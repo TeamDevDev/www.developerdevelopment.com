@@ -43,9 +43,14 @@ published-title: ""
 Flow](https://docs.github.com/en/get-started/using-github/github-flow) model
 for software development
 
+::: {.callout-note appearance="minimal" title=""}
+
 ### Module One Discussion Leads
 
 - **Week Two**: Pallas-Athena Cain and Hemani Alaparthi
 - **Week Three**: Rebekah Rudd and Chezka Quinola
 - **Week Four**: Aidan Dyga and Hannah Brown
 - **Week Five**: Molly Suppo and Titus Smith
+- **Week Six**: In-person assessments and executable examination one
+
+:::

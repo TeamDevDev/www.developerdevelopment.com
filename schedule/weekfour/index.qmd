@@ -37,6 +37,6 @@ published-title: "Starting Date"
         - GatorGrader
         - ExecExam
       - Each team member must:
-        - Demonstrates at least one feature in one software tool
+        - Demonstrate at least one feature in one software tool
         - Show that they have an effective engineering tool setup
         - Share their plan for continued progress on their features

@@ -32,7 +32,7 @@ published-title: "Starting Date"
         - **Publication of SE4**: Knowledge Sharing
         - **Publication of FB4**: Mutation Analysis
     - *Software Engineering Checkup*:
-      - Demonstration the following software tools:
+      - Demonstrate the following software tools:
         - GatorGrade
         - GatorGrader
         - ExecExam

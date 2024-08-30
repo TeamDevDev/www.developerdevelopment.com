@@ -1,0 +1,43 @@
+---
+title: What is Software Engineering?
+description: "What trade-offs do software engineers make?"
+date: 2024-09-09
+layout: full
+toc: true
+toc-expand: 3
+published-title: "Starting Date"
+---
+
+## Week Three
+
+### Monday, September 9 -- Friday, September 13
+
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
+  - *Discussion leads facilitate the discussion of a published executive summary*:
+    - **SE2**: What is Software Engineering?
+    - **Preparation for SE3**: How to Work Well on Teams
+
+- {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
+  - *Discussion leads facilitate the discussion of a published executive summary*:
+    - **Team-based Discussion of FB1**: Introduction to Software Testing
+    - **FB2**: Code Coverage
+    - **Preparation for FB3**: Fuzzing: Breaking Things with Random Inputs
+- {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Explore the use of the software tools subject to development
+    - Elicit requirements for the software tools subject to development
+    - Create issues in the issue tracker to describe new features
+    - Assign tasks to each team member
+    - Set deadlines for the completion of the tasks
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+    - *Publish executive summaries to the Developer Development blog*:
+        - **Publication of SE3**: How to Work Well on Teams
+        - **Publication of FB4**: Mutation Analysis
+    - *Programming Skill-Check*:
+      - Use of the following software tools:
+        - GitHub and GitHub Classroom
+        - Python, Poetry, and Pipx
+        - VSCode and Python programming tools
+        - GatorGrade, GatorGrader, and ExecExam
+      - Basic Python programming skills
+      - All covered source code and technical concepts in **FB**

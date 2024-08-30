@@ -15,7 +15,7 @@ published-title: "Starting Date"
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - {{< iconify fa-regular sad-tear size=19px >}} No class, discussion to occur on Wednesday
   - *Discussion leads facilitate the discussion of a published executive summary*:
-    - **SE1**: Preface - Programming Over Time
+    - **Team-Based Discussion of SE1**: Preface - Programming Over Time
     - **Preparation for SE2**: What is Software Engineering?
 
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development

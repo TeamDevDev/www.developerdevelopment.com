@@ -524,6 +524,10 @@ div.quarto-post .thumbnail {
   font-style: italic;
 }
 
+.quarto-listing {
+  padding-bottom: 0em;
+}
+
 /* }}} */
 
 /* Papers and Presentations {{{ */

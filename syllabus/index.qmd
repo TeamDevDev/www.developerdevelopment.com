@@ -483,7 +483,9 @@ re-assess their team participation, their work for a completed phase of a
 long-term software engineering project, or the final examination. However, they
 may apply tokens to the midterm examinations, the programming skill-checks, and
 the executive summaries. The instructor will submit to a student the assessment
-for work revised as part of token use at the end of a course module.
+for work revised as part of token used at the end of a course module. Unless
+there are extenuating circumstances, you may not spend any tokens in the last
+two weeks of the semester.
 
 ##### Assignment Evaluation
 

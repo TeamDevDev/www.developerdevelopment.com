@@ -1,5 +1,5 @@
 ---
-author: [Pallas-Athena Cain, Hemani Alaparthi Gregory M. Kapfhammer]
+author: [Pallas-Athena Cain, Hemani Alaparthi, Gregory M. Kapfhammer]
 title: Programming Over Time
 date: '2024-9-4'
 date-format: long
@@ -10,6 +10,8 @@ page-layout: full
 ---
 
 ## Overview
+
+This is the first post for the Fall 2024 Software Engineering class about the [Software Engineering at Google book](https://abseil.io/resources/swe-book)
 
 
 ## Summary

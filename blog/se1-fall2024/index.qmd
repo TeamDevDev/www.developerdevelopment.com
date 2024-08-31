@@ -1,0 +1,24 @@
+---
+author: [Pallas-Athena Cain, Hemani Alaparthi Gregory M. Kapfhammer]
+title: Programming Over Time
+date: '2024-9-4'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>Software engineering versus programming and Software Engineering Fundamentals</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+
+## Summary
+
+
+## Reflection
+
+
+## Action Items
+
+
+{{< include /_back-blog.qmd >}}

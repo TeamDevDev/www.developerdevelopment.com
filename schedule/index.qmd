@@ -9,6 +9,7 @@ listing:
     filter-ui: true
     fields: [date,title,description]
     field-display-names:
+      date: "Starting Date"
       description: "Objective"
     contents:
       - "week*/**/*.qmd"
@@ -67,11 +68,11 @@ listing:
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - *Discuss the team's executive summary and write a professional précis*:
     - Team-based discussion of the week's reading in SE
-    - Focused individual preparation for next week's SE reading
+    - Individual and team-based preparation for next week's SE reading
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
   - *Discuss the team's executive summary and write a professional précis*:
     - Team-based discussion of prior week's reading in either FB or DB
-    - Focused individual preparation for next week's FB or DB reading
+    - Individual and team-based preparation for next week's FB or DB reading
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
     - Sprint planning
@@ -89,13 +90,17 @@ listing:
 
 The Fall 2024 edition of Computer Science 203 has  **Exam Code G**, which means
 that the final examination will take place on Thursday, December 11, 2024 at
-9:00 AM. The final executable examination is cumulative in regards to all of the
-technical, professional, and project content previously covered between week one
-and week sixteen. As a reminder, the following list describes the content that
-will be covered on the final executable examination.
+9:00 AM. Completion of the final examination must adhere to all of the policies
+in the Allegheny College Academic Bulletin and the Allegheny College Faculty
+Handbook.
+The final executable examination is cumulative in regards to the technical,
+professional, and project content previously covered between week one and week
+sixteen. 
+This list describes the content that will be covered on the final executable
+examination.
 
 - {{< iconify fa6-solid flag-checkered size=18px >}} **Thursday, December 11, 2024 at 9:00 AM**: Executable Examination
-  - *Demonstrate technical skills in software engineering*:
+  - *Demonstrate technical and professional skills in software engineering*:
     - Use GitHub and GitHub Actions
     - Use text editor and terminal window
     - Implement and test Python functions

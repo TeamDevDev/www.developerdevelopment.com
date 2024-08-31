@@ -1,28 +1,26 @@
 ---
-title: Programming Over Time
-description: "Let's explore software engineering!"
-date: 2024-09-02
+title: What is Software Engineering?
+description: "What trade-offs do software engineers make?"
+date: 2024-09-09
 layout: full
 toc: true
 toc-expand: 3
 published-title: "Starting Date"
 ---
 
-## Week Two
+## Week Three
 
-### Monday, September 2 -- Friday, September 6
+### Monday, September 9 -- Friday, September 13
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
-  - {{< iconify fa-regular sad-tear size=19px >}} No class, discussion to occur on Wednesday
   - *Discussion leads facilitate the discussion of a published executive summary*:
-    - **Team-Based Discussion of SE1**: Preface - Programming Over Time
-    - **Preparation for SE2**: What is Software Engineering?
+    - **Team-Based Discussion of SE2**: What is Software Engineering?
+    - **Preparation for SE3**: How to Work Well on Teams
 
 - {{< iconify fa-solid laptop-code size=18px >}} **Wednesday**: Technical Development
   - *Discussion leads facilitate the discussion of a published executive summary*:
-    - {{< iconify fa-regular sad-tear size=19px >}} Due to no class on Monday, discussion moved to the lab session
-    - **Team-based Discussion of FB1**: Introduction to Software Testing
-    - **Preparation for FB2**: Code Coverage
+    - **Team-Based Discussion of FB2**: Code Coverage
+    - **Preparation for FB3**: Fuzzing: Breaking Things with Random Inputs
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
     - Explore the use of the software tools subject to development
@@ -32,11 +30,13 @@ published-title: "Starting Date"
     - Set deadlines for the completion of the tasks
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
     - *Publish executive summaries to the Developer Development blog*:
-        - **Publication of SE2**: What is Software Engineering?
-        - **Publication of FB2**: Code Coverage
-    - *Confirm that all team members can use the following tools*:
-      - GitHub and GitHub Flow
-      - Python, Poetry, and Pipx
-      - VSCode and Python programming tools
-      - VSCode and the Quarto publishing tool
-      - Demonstrate the use of the software tools subject to development
+        - **Publication of SE3**: How to Work Well on Teams
+        - **Publication of FB3**: Fuzzing: Breaking Things with Random Inputs
+    - *Programming Skill-Check*:
+      - Use of the following software tools:
+        - GitHub and GitHub Classroom
+        - Python, Poetry, and Pipx
+        - VSCode and Python programming tools
+        - GatorGrade, GatorGrader, and ExecExam
+      - Basic Python programming knowledge and skills
+      - All covered source code and technical concepts in **FB**

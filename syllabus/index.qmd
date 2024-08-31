@@ -42,17 +42,17 @@ that, by necessity, the meeting before yours may sometimes run late.
 
 - **Discussion, Writing, and Programming Sessions**
   - *Developing Professional Skills*: Monday, 10:00 AM -- 10:50 AM, Alden 109
-    - SE Book: [Software Engineering at Google](https://abseil.io/resources/swe-book)
-    - First half of class: Discuss executive summaries for chapters read last week
-    - Second half of class: Publish a professional précis for next week's chapters
+    - **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)
+    - **Majority of the class**: Discuss executive summaries for chapters read last week
+    - **One-quarter of the class**: Prepare for the executive summary for next week's chapters
   - *Developing Technical Skills*: Wednesday, 10:00 AM -- 10:50 AM, Alden 109
-    - FB Book: [Fuzzing Book](https://www.fuzzingbook.org/)
-    - DB Book: [Debugging Book](https://www.debuggingbook.org/)
-    - Majority of class: Discuss executive summaries for chapters read last week
-    - End of class: Prepare the executive summary for next week's chapters
+    - **FB Book**: [Fuzzing Book](https://www.fuzzingbook.org/)
+    - **DB Book**: [Debugging Book](https://www.debuggingbook.org/)
+    - **Majority of the class**: Discuss executive summaries for chapters read last week
+    - **One-quarter of the class**: Prepare for the executive summary for next week's chapters
   - *Developing as Developers*: Friday, 10:00 AM -- 10:50 AM, Alden 109
-      - Publish an executive summary for the week's technical skills
-      - Publish an executive summary for the week's professional skills
+      - Publish an executive summary for next week's technical skills
+      - Publish an executive summary for next week's professional skills
       - Confirm our team's readiness for next week's in-class discussions
       - *When necessary*: implement and demonstrate software engineering project
       - *Every other week*: take an in-class programming skill-check
@@ -60,18 +60,18 @@ that, by necessity, the meeting before yours may sometimes run late.
 
 ::: {.callout-note appearance="minimal" title="Active Learning"}
 
-With the goal of ensuring that every student develops as a developer, active
-learning plays a central role in the Software Engineering course. This means
-that you will be actively publishing your insights through blog post articles,
-in accordance with advice from well-known software engineers like [Addy
-Osmani](https://addyosmani.com/), who recently published a blog post entitled
-["Write about what you learn. It pushes you to understand topics
+With the goal of ensuring that every student develops as a software developer,
+active learning plays a central role in the Software Engineering course. This
+means that you will be actively publishing your insights through blog post
+articles, in accordance with advice from well-known software engineers like
+[Addy Osmani](https://addyosmani.com/), who recently published a blog post
+entitled ["Write about what you learn. It pushes you to understand topics
 better."](https://addyosmani.com/blog/write-learn/) You will also be called on
 to actively lead and participate in class discussions every week. One key task
 that you will complete every week involves running, writing about, and
 implementing program source code and publishing program documentation. Aligned
-with the course goals, you will complete out-of-class programming and writing in
-preparation for in-class discussions.
+with the course goals, you will complete out-of-class programming and writing
+in preparation for in-class discussions.
 
 :::
 
@@ -166,10 +166,12 @@ assessments in Computer Science 203 and illustrates their connection to the
 course learning objectives:
 
 - *Course Activities*:
-  - **Technical Development**: Develops **SE-1**, **SE-2**, **SE-3**
-  - **Professional Development**: Develops **SE-3**, **SE-4**, **SE-5**
+  - **Executive Summaries**:
+    - **Technical Development**: Develops **SE-1**, **SE-2**, **SE-3**
+    - **Professional Development**: Develops **SE-3**, **SE-4**, **SE-5**
   - **Project Development**: Develops **SE-1**, **SE-2**, **SE-3**, **SE-4**, **SE-5**
 - *Course Assessments*:
+  - **Programming Skill-Checks**: Assesses **SE-3**
   - **Executable Examinations**: Assesses **SE-1**, **SE-2**, **SE-3**
   - **In-Person Assessments**: Assesses **SE-3**, **SE-4**, **SE-5**
 
@@ -195,15 +197,15 @@ goal of this web site's content!
 
 ### Course Textbooks
 
-- [Software Engineering at Google](https://abseil.io/resources/swe-book) - abbreviated on this site as **SE**
-- [Fuzzing Book](https://www.fuzzingbook.org/) -- abbreviated on this site as **FB**
-- [Debugging Book](https://www.debuggingbook.org/) -- abbreviated on this site as **DB**
+- [Software Engineering at Google](https://abseil.io/resources/swe-book): abbreviated on this site as **SE**
+- [Fuzzing Book](https://www.fuzzingbook.org/): abbreviated on this site as **FB**
+- [Debugging Book](https://www.debuggingbook.org/): abbreviated on this site as **DB**
 
 Students who complete all of the work on the [course
-schedule](../schedule/index.qmd) will read and write a professional précis for
-**twelve** reading assignments in **SE** (i.e., **SE1** through **SE12**),
-**nine** reading assignments in **FB** (i.e., **FB1** through **FB9**), and
-**four** reading assignments in **DB** (i.e., **DB1** through **DB4**).
+schedule](../schedule/index.qmd) will complete **twelve** reading assignments
+in **SE** (i.e., **SE1** through **SE12**), **nine** reading assignments in
+**FB** (i.e., **FB1** through **FB9**), and **four** reading assignments in
+**DB** (i.e., **DB1** through **DB4**).
 
 The course textbooks are connected to the three main type of course activities
 in these ways:
@@ -231,15 +233,22 @@ and **DB**:
   - Troubleshoot all of the issues that arise during the installation of the book's dependencies (e.g., one or more
   missing dependencies cause a Jupyter Notebook cell to produce a stack trace when you press {{< kbd Shift-Enter >}} to
   run the cell)
-- Repeatedly perform the following steps when writing a professional précis:
-  - Change into the directory that contains the contents of **FB** or **DB**
+- Perform these steps both when reading an article and writing an executive summary:
+  - Change into the directory that contains the contents of either **FB** or **DB**
   - Enter into the virtual environment for a textbook with `source venv/bin/activate`
   - Run a Jupyter Lab server using a command like `venv/bin/jupyter-lab`
   - Use the Jupyter Lab server to locate and execute notebooks for chapters in **FB** and **DB**
   - Watch the embedded video(s) and run all of the providing source code segments
-  - Use the [Quarto](https://quarto.org/) system to publish a professional précis for each reading assignment
-  - Use GitHub Actions and [Netlify](https://www.netlify.com/) to host and publish your Quarto-based web site
-  - Collaboratively use [Quarto](https://quarto.org/) to publish an article's executive summary to this web site
+  - Discussion leads for a weekly reading assignment additionally complete the following tasks:
+    - Create a fork of the course web site into a publicly available GitHub repository
+    - Coordinate with your discussion lead partner to write and revise an executive summary
+    - Use [Quarto](https://quarto.org/) to write and revise an executive summary for the reading assignment
+    - Create a pull request from your fork of the course web site and coordinate its review
+  - The leadership team (i.e., the student technical leader(s) and the course
+  instructor) will then review and comment on your work (and often require
+  revisions to the executive summary), ultimately using [GitHub
+  Actions](https://docs.github.com/en/actions) and
+  [Netlify](https://www.netlify.com/) to publish the Quarto-based web site
 
 The course will also leverage excerpts from the following supporting text books:
 
@@ -278,17 +287,17 @@ during the academic semester.
 
 These assessment categories have the following definitions:
 
-- **Team Participation**: Students are expected to regularly attend and actively
-participate in all class and project development sessions. After either an
-unexcused absence or a late attendance to either a class or project development
-session on two separate occasions, a student's overall team participation grade
-will be reduced by half a percentage for each additional time they are absent or
-late in an unexcused fashion. Students who need to miss class or attend class
-late for an excused reason should communicate their situation to the instructor
-in a timely fashion. After one warning per week, a student's weekly team
-participation grade will be reduced if they are observed undertaking
-non-course-related activities like viewing email, social media, or other content
-not about software engineering.
+- **Team Participation**: Students are expected to regularly attend and
+actively participate in all class and project development sessions. After
+either an unexcused absence or a late attendance to either a class or project
+development session on two separate occasions, a student's overall team
+participation grade will be reduced by half a percentage for each additional
+time they are absent or late in an unexcused fashion. Students who need to miss
+class or attend class late for an excused reason should communicate their
+situation to the instructor in a timely fashion. After one warning per week, a
+student's weekly team participation grade will be reduced if they are observed
+undertaking non-course-related activities like viewing email, social media, or
+other content not connected to the software engineering course.
 
 - **Midterm Examinations**: The two midterm examinations are online cumulative
 assessments, taken during the laboratory session, that cover all prior
@@ -297,36 +306,36 @@ schedule](../schedule/index.qmd). Unless prior arrangements are made with the
 instructor, all students should use their computer to take these tests on the
 scheduled date and to complete it in the stated location while taking no more
 than the required amount of time. Each midterm is an executable examination
-that a student will complete through the use of GitHub, VS Code, and the Python
+that students will complete through the use of GitHub, VS Code, and the Python
 programming tools installed on their laptops.
 
 - **Final Examination**: The final examination is an online cumulative
-assessment, taken during the final examination session, that cover all of the
+assessment, taken during the final examination session, that covers all of the
 material during all of the course sessions, as outlined on the [course
 schedule](../schedule/index.qmd). Unless prior arrangements are made with the
 course instructor, all students should use their computer to take the final
 examination on the scheduled date and to complete it in the stated location
 while taking no more than the required amount of time. The cumulative final is
-an executable examination that a student will complete through the use of
+an executable examination that students complete through the use of
 GitHub, VS Code, and the Python programming tools installed on their laptops.
 
 - **Programming Skill-Checks**: The programming skill-checks are in-class
-online cumulative assessments covering all prior material from the course
-sessions, as outlined on the [course schedule](../schedule/index.qmd). Unless
-prior arrangements are made with the instructor, all students should use their
-computer to take these tests on the scheduled date and to complete it in the
-stated location while taking no more than the required amount of time. Designed
-to prepare learners for an examination, each skill-check is an in-class
-executable assessment that a student will complete through the use of GitHub,
-VS Code, and the Python programming tools on their laptops.
+online cumulative assessments covering all prior technical material from the
+course sessions, as outlined on the [course schedule](../schedule/index.qmd).
+Unless prior arrangements are made with the instructor, all students should use
+their computer to take these skill-checks on the scheduled date and to complete
+it in the stated location while taking no more than the required amount of
+time. Designed to prepare learners for an examination, each skill-check is an
+in-class executable assessment that students complete through the use of
+GitHub, VS Code, and the Python programming tools on their laptops.
 
 - **In-Person Assessments**: The two in-person assessments are cumulative
-evaluations of technical and professional knowledge conducted through an
+evaluations of both technical and professional knowledge conducted through an
 in-person conversation with the course instructor. All students should be
 prepared to answer at least one question each about their attainment of
 professional and technical skills and the source code and documentation of the
-software project(s). A question response will be assessed by the instructor on
-a checkmark basis.
+software project(s). The instructor will assess each student response on a
+checkmark basis.
 
 - **Professional Development**: Graded on a checkmark basis and building on
 material in the [Software Engineering at
@@ -351,58 +360,62 @@ to questions presented in **FB**/**DB** and (ii) allow a learner to demonstrate
 an understanding of facts and ideas by interpreting and implementing the main
 technical ideas presented in either **FB** or **DB**.
 
-- **Project Development**: These team-based assignments invite students to
-explore different techniques for specifying, designing, implementing, testing,
-documenting, deploying, and maintaining real-world, open-source Python
-programs. These assignments also encourage students to use and build software
-engineering tools to complete tasks like debugging and testing. The technical
-work that a student completes during project development will take place in a
-public GitHub repository and will be further documented and reflected on in a
-private GitHub repository that the instructor will use to furnish feedback to
-the student. Finally, the professional work that a student undertakes as part
-of project development will occur in both an in-person setting and through a
-public GitHub repository, with the use of a private GitHub repository offering
-the opportunity for the student to document and reflect on their contributions
-and for the instructor to offer detailed feedback.
+- **Project Development**: These team-based projects invite students to explore
+different techniques for specifying, designing, implementing, testing,
+documenting, deploying, and maintaining real-world, open-source Python-based
+software tools. These projects also encourage students to use and build
+software engineering tools to complete tasks like debugging and testing. The
+technical work that a student completes during project development will take
+place in a public GitHub repository and will be further documented and
+reflected on in a private GitHub repository that the instructor will use to
+furnish assessments and feedback to the student. Finally, the professional work
+that a student undertakes as part of project development will occur in both an
+in-person setting and through a public GitHub repository, with the use of a
+private GitHub repository offering the opportunity for the student to document
+and reflect on their contributions and for the instructor to offer detailed
+feedback and assessments.
 
 When you are assigned to the discussion lead, both the **Professional
 Development** and **Technical Development** assessment categories require
 students to complete the following tasks for that week:
 
 - In collaboration with an assigned discussion lead partner, read an assigned
-article in **SE**, **FB**, or **DB** and write an executive summary, that
-should contain, at minimum, the following document sections:
-  - Summary of the article in a fashion that clearly explains its key points.
-  - Analysis of the article through the translation and/or re-interpretation of
-  its central points into a context that is relevant for you as a developing
-  developer.
-  - Description of actions items that will help you and the team of software
-  engineers to enhance their development as developers and the completion of
-  the long-term software engineering projects. Each action item should have a
-  clear description of the steps that the author and/or the team should **stop
-  doing**, **start doing**, and **keep doing**, as described in [The Ultimate
-  Guide to the Start, Stop, Continue
+article in **SE**, **FB**, or **DB** (recall that the course features one
+article from **SE** and one article from either **FB** or **DB** every week)
+and write an executive summary, that should contain, at minimum, these
+components:
+  - Brief overview of the executive summary and the contributions that it
+  makes.
+  - Detailed analysis of the article in a fashion that clearly explains its key
+  points, featuring the translation and/or re-interpretation of its central
+  points into a context that is relevant for you as a developing developer. The
+  executive summary should connect to both prior executive summaries and to the
+  ongoing work on the long-term software engineering projects.
+  - Detailed description of actions items that will help you and the team of
+  software engineers to enhance their development as developers and the
+  completion of the long-term software engineering projects. Each action item
+  should have a clear description of the steps that the author and/or the team
+  should **stop doing**, **start doing**, and **keep doing**, as described in
+  [The Ultimate Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
-- Working in a partner-based fashion, the review of your partner's
-contributions to the executive summary for either an **SE** or **FB**/**DB**
-article, resulting in the creation of an issue in the GitHub issue tracker for
-your partner's web site that summarizes the essence of your suggestions.
-- Using GitHub, a response to the suggestions that your partner made in the
-GitHub issue tracker and a summary of the steps taken to improve your
-professional précis.
-- The publication of the professional précis to a Netlify-hosted web site using
-Quarto.
-- A team-based, in-class review of the professional précis that was written by
-each student in the course and then a synthesis of the key ideas that
-ultimately results in the collaborative publication of a team-based executive
-summary of the technical or professional content.
-- For the executive summary, the assigned partnership of students must complete
-their work in advance of the class session during which the content will be
-discussed, as outlined in the [course schedule](../schedule/index.qmd). When an
-executive summary is not completed according to the agreed on schedule or not
-completed according to the agreed-on level of quality, this will result in a
-reduction in corresponding technical or professional development score for the
-students assigned to complete those tasks.
+  - An executive summary for an article from either **FB** or **DB** must also
+  contain executable Python source code and the output from running the code.
+  Specifically, the source code segments must appear in fenced code blocks and
+  be directly executable in GitHub Actions and capable of correctly producing
+  output when the web site is built and deployed to Netlify.
+  - All executive summaries should have a commit message history that clearly
+  explain the changes made to the technical and professional content content.
+  Importantly, the discussion leaders for each executive summary should ensure
+  that all commit messages adhere to the [conventional
+  commit](https://www.conventionalcommits.org/en/v1.0.0/) format as evidenced by
+  prior commits to this site's GitHub repository.
+- For each the executive summary, the assigned partnership of students must
+complete their work in advance of the class session during which the content
+will be discussed, as outlined in the [course schedule](../schedule/index.qmd).
+When an executive summary is not completed according to the stated schedule or
+not completed at the agreed-on level of quality, this will result in a reduction
+in the corresponding technical or professional development score for the
+assigned students.
 
 The **Project Development** assessment category requires students to complete,
 on a weekly basis, both team-based and individual tasks like the following:
@@ -445,17 +458,34 @@ All assignments will have a stated due date shared through GitHub, GitHub
 Classroom, and/or the [Developer Development Discord
 Server](https://discord.gg/aNfn8DNEMx). All reflections on and documentation of
 professional development, technical development, and project development should
-be committed to private GitHub repositories. In contrast, the publication of
-the professional précis that a student writes each week should be published to
-their Quarto-based web site hosted on Netlify. The feedback that a student
-shares with their professional précis partner should be evident in the GitHub
-repository for that partner's web site. Finally, the collaboratively published
-executive summaries should be reviewed and discussed through GitHub and
-published on the Developer Development web site and the completed version of
-each software project should be available in the project's public GitHub
-repository. No credit will be awarded for any course work that you submit to
-the incorrect GitHub repository or web site. Unless special arrangements are
-made with the instructor, no work will be accepted after the deadline.
+be committed to private GitHub repositories. Finally, the collaboratively
+published executive summaries should be reviewed and discussed through GitHub
+and published on the Developer Development web site and the completed version
+of each software project should be available in the project's public GitHub
+repository. No credit will be awarded for any course work that a student
+submits to the incorrect GitHub repository or web site. Unless special
+arrangements are made with the instructor due to extenuating circumstances or a
+student uses a token, no work will be accepted after the deadline.
+
+##### Developer Development Tokens
+
+Students may "spend" up to three "developer development tokens" that they may
+use to secure seven calendar days of time to revise an already assessed project
+and subsequently request a reassessment of it and receive a new assessment
+score. You may use a token to request the reassessment of revised work that you
+completed as part of specific tasks in the professional development, technical
+development, or project development categories. For instance, you may choose to
+spend a token by asking the instructor to reevaluate one of the executive
+summaries that you posted to the Quarto-based web site. Outside of these three
+tokens, the instructor will not consider any additional requests for deadline
+extensions or project reassessment. Students may not request to use a token to
+re-assess their team participation, their work for a completed phase of a
+long-term software engineering project, or the final examination. However, they
+may apply tokens to the midterm examinations, the programming skill-checks, and
+the executive summaries. The instructor will submit to a student the assessment
+for work revised as part of token used at the end of a course module. Unless
+there are extenuating circumstances, you may not spend any tokens in the last
+two weeks of the semester.
 
 ##### Assignment Evaluation
 
@@ -467,19 +497,6 @@ completed work that fulfills the project's specification and submitted it by the
 deadline to the stated platform (e.g., a GitHub repository or Netlify-hosted web
 site).
 
-##### Developer Development Tokens
-
-Students may "spend" up to two developer development "tokens" that they may use
-to either (i) secure 48 hours of additional time to complete an assigned task or
-(ii) request a reassessment of an already graded project. You may use a token to
-request the reassessment of work that you completed as part of tasks in the
-professional development, technical development, or project development
-categories. For instance, a student may choose to spend a token by asking the
-course instructor to reevaluate one of the professional précis articles that
-they posted to their Quarto-based web site. Outside of these five tokens, the
-instructor will not consider any additional requests for deadline extensions or
-assignment reassessment.
-
 ##### Course Attendance
 
 It is mandatory for all students to attend the course sessions. If, due to
@@ -488,37 +505,38 @@ whenever possible, please communicate with the instructor at least one week in
 advance to describe your situation. Students who have any signs of illness
 should not attend any in-person course sessions.
 
-##### Class Preparation
+##### Team Preparation
 
 In order to minimize confusion and maximize learning, students must invest time
 to prepare for the class sessions that focus on professional development,
 technical development, and project development. Although the course instructor
-and the student technical leaders will always be available to serve as guide for
-individual students, teams of students, and the entire class, it is expected
-that students will volunteer to lead and actively contribute to all class
-sessions. Only those students who have prepared for class by reading the
-assigned material, writing the required articles, and reviewing the content
-written by other students will be able to effectively participate in these class
-discussions. In order to help students remain organized and to effectively
-prepare for classes, the course instructor will maintain a [course
-schedule](../schedule/index.qmd) with reading assignments, project descriptions,
-and executive summaries, available on this site.
+and the student technical leaders will always be available to serve as guide
+for individual students, teams of students, and the entire class, it is
+expected that students will volunteer to lead and actively contribute to all
+class sessions. Only those students who have prepared for class by reading the
+assigned material, writing the required executive summaries, and reviewing the
+content written by other students will be able to effectively participate in
+these class discussions. In order to help students remain organized and to
+effectively prepare for classes, the course instructor will maintain a [course
+schedule](../schedule/index.qmd) with reading assignments, project
+descriptions, and discussion lead assignments for the executive summaries.
 
 #### Seeking Assistance
 
 Students who are struggling to understand the knowledge and skills developed in
 any of the course sessions are encouraged to seek assistance from the course
 instructor and/or the student technical leaders. Students should, within the
-bounds of the Honor Code, ask and answer questions on the [Developer Development
-Discord Server](https://discord.gg/aNfn8DNEMx); please request assistance from
-the instructor and student technical leaders first through public Discord
-channels before sending an email. Students who need the course instructor's
-assistance are invited to schedule a meeting through the [course instructor's
-appointment scheduler](https://www.gregorykapfhammer.com/schedule/) and come to
-the meeting with all of the details needed to discuss their question. Students
-can find out the office hour schedule for student technical leaders by viewing
-the list of [student technical
-leaders](https://www.cs.allegheny.edu/teaching/technicalleaders/).
+bounds of the Honor Code, ask and answer questions on the [Developer
+Development Discord Server](https://discord.gg/aNfn8DNEMx). Instead of sending
+either an email or a direct message, please request assistance from the
+instructor and student technical leaders through public Discord channels.
+Students who need the course instructor's assistance are invited to schedule a
+meeting through the [course instructor's appointment
+scheduler](https://www.gregorykapfhammer.com/schedule/) and come to the meeting
+with all of the details needed to discuss their question(s) about developer
+development. Students can find out the office hour schedule for student
+technical leaders by viewing the list of [student technical
+leaders](https://www.cis.allegheny.edu/teaching/technicalleaders/).
 
 #### Using GitHub and Discord
 
@@ -528,12 +546,14 @@ for reporting issues in those materials. We will use two distinct Discord
 servers for all course discussions. The [Developer Development Discord
 Server](https://discord.gg/aNfn8DNEMx) provides a way for members of the
 developer development community to use text and video to chat with each other
-and will be the main forum for discussing the professional and technical content
-in software engineering. The [Allegheny College Computer Science Discord
-Server](https://discord.gg/CS2h9kXzX6) will be the main forum for Department of
-Computer Science announcements. Any content that a student wants the instructor
-to assess (e.g., a professional précis or a contribution to a course project)
-must be in a GitHub repository.
+and will be the main forum for discussing the professional and technical
+content in software engineering. The [Allegheny College Computer Science
+Discord Server](https://discord.gg/CS2h9kXzX6) will be the main forum for
+Department of Computer and Information Science announcements. Any content that
+a student wants the instructor to assess (e.g., an executive summary or a
+contribution to a long-term software engineering project) must be in a GitHub
+repository. Unless a student needs to share private information with the course
+instructor, they should not use Discord to send him direct messages.
 
 #### Using Email
 
@@ -544,7 +564,7 @@ matters such as changes in the schedule. It is your responsibility to check your
 email at least once a day and to ensure that you can reliably send and receive
 emails. This class policy is based on the statement about the use of email that
 appears in *The Compass*, the College's student handbook; please see the course
-instructor if you do not have this handbook.
+instructor if you do not have this handbook or you cannot access your email.
 
 #### Honor Code
 
@@ -563,35 +583,35 @@ pledge:
 
 #### Effective Engineering
 
-Students who engineer the source code and documentation for their Netlify-hosted
-web sites, the Developer Development web site, and the two long-term course
-projects should ensure the implementation of a high-quality final product. While
-students are permitted to use a wide variety of software engineering tools, such
-as integrated development environments, testing frameworks, automated debuggers,
-and code generators (e.g., systems that leverage large language models like
-GitHub Copilot) and documentation sites such as StackOverflow, they must take
-responsibility for all of the source code and documentation that they submit for
-this course, including artifacts that are automatically generated by a software
-tool.
+Students who engineer the source code and documentation for their
+Netlify-hosted web sites, the Developer Development web site, and the two
+long-term course projects should ensure the implementation of a high-quality
+final product. While students are permitted to use a wide variety of software
+engineering tools, such as integrated development environments, testing
+frameworks, automated debuggers, and code generators (e.g., artificial
+intelligence systems that leverage large language models like GitHub Copilot)
+and documentation sites such as StackOverflow, they must take responsibility
+for all of the source code and documentation that they submit for this course,
+including artifacts that are automatically generated by a software tool that
+leverages artificial intelligence.
 
-This means that every student must work as an effective engineer by documenting
-the sources for their work and verifying the correctness, maintainability, and
-long-term reliability of all source code and documentation that they submit. As
-such, a student who uses software tools to create content is responsible for
-citing their sources and demonstrating their understanding of it during the
-in-person assessments. Moreover, all students in the class are responsible for
-all of the source code and documentation submitted to the GitHub repository that
-hosts the course projects, including any tool-generated software artifacts. This
-means that every student should be able to answer questions, during an in-person
-assessment, about any technical or professional content, including that which
-was automatically generated by a software tool.
+This policy means that every student must work as an ethical and professional
+software engineer by documenting the sources for their work and verifying the
+correctness, maintainability, and long-term reliability of all source code and
+documentation that they submit. As such, a student who uses software tools to
+create content is responsible for citing their sources and demonstrating their
+understanding of it during the in-person assessments. Moreover, all students in
+the class are responsible for all of the source code and documentation
+submitted to the GitHub repository that hosts the course projects, including
+any tool-generated software artifacts. This means that every student should be
+able to answer questions, during an in-person assessment, about any technical
+or professional content, including that which was automatically generated by a
+software tool.
 
 Students who are effective engineers also pledge to abide by the [ACM Code of
-Ethics and Professional Conduct](https://www.acm.org/code-of-ethics). Unless the
-students in this course furnish a different governing contract, they also pledge
-to follow the principles espoused by exemplary technical organizations, such as
-[Oxide Computer](https://oxide.computer/) and its public statement of [mission
-and principles](https://oxide.computer/principles).
+Ethics and Professional Conduct](https://www.acm.org/code-of-ethics) and the
+[Policies of the Department of Computer and Information
+Science](https://www.cis.allegheny.edu/teaching/policies/).
 
 #### Disability Services
 
@@ -612,7 +632,7 @@ the lives of many people. Moreover, the specification, design, implementation,
 testing, maintenance, and documentation of software are exciting and rewarding
 activities! At the start of this class, I invite you to pursue, with great
 enthusiasm and vigor, an adventure in software engineering as you develop as
-developers.
+developers and design, implement, and release production-quality software.
 
 ::: {.callout-note appearance="minimal" title="External Learners"}
 

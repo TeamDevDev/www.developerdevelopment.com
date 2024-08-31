@@ -1,10 +1,11 @@
 ---
 title: Technical and Professional Onboarding
-description: "Equip our software engineering team"
+description: "Let's equipping our software engineering team!"
 date: 2024-08-26
 layout: full
 toc: true
 toc-expand: 3
+published-title: ""
 ---
 
 ## Week One
@@ -31,7 +32,7 @@ toc-expand: 3
     - Clone the forked GitHub repositories to your workstation
     - Use `pip` to install each books' dependencies
     - Run a local Jupyter Lab server that can access a book's Jupyter notebooks
-    - Correctly run the Jupyter notebook for at least one chapter in FB or DB
+    - Correctly run the Jupyter notebook for at least one chapter in FB and DB
 - Locate and bookmark the [Software Engineering at Google](https://abseil.io/resources/swe-book) book
 - Install the [Quarto](https://quarto.org/) system for scientific and technical publishing
 - Learn how to use [Quarto](https://quarto.org/) to create a [web site](https://quarto.org/docs/websites/) with executable Python code
@@ -42,9 +43,14 @@ toc-expand: 3
 Flow](https://docs.github.com/en/get-started/using-github/github-flow) model
 for software development
 
+::: {.callout-note appearance="minimal" title=""}
+
 ### Module One Discussion Leads
 
 - **Week Two**: Pallas-Athena Cain and Hemani Alaparthi
 - **Week Three**: Rebekah Rudd and Chezka Quinola
 - **Week Four**: Aidan Dyga and Hannah Brown
 - **Week Five**: Molly Suppo and Titus Smith
+- **Week Six**: In-person assessments and executable examination one
+
+:::

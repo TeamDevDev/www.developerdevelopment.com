@@ -1,0 +1,45 @@
+---
+title: Team Assessment
+description: "How are we developing as software developers?"
+date: 2024-09-30
+layout: full
+toc: true
+toc-expand: 3
+published-title: "Starting Date"
+---
+
+## Week Six
+
+### Monday, September 30 -- Friday, October 4
+
+- {{< iconify fa6-solid list-check size=18px >}} **Monday and Wednesday**: People Operations
+  - *In-person technical and professional assessment of all student team members*:
+    - {{< iconify fa6-solid people-line size=18px >}} Answer at least one question about professional skills
+    - {{< iconify fa-solid laptop-code size=18px >}} Answer at least one question about technical skills
+    - {{< iconify fa6-solid diagram-project size=18px >}} Answer at least one technical question about the project
+    - {{< iconify game-icons team-idea size=18px >}} Document professional insights in an assessment report
+- {{< iconify fa6-solid flag-checkered size=18px >}} **Thursday**: Executable Examination
+  - *Demonstrate technical skills in software engineering*:
+    - Use GitHub and GitHub Actions
+    - Use text editor and terminal window
+    - Implement and test Python functions
+    - Debug defective Python functions
+    - Confirm output of Python functions
+- {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
+  - *Software Engineering Checkup*:
+      - Demonstrate the following software tools:
+        - GatorGrade
+        - GatorGrader
+        - ExecExam
+      - Each team member must:
+        - Demonstrate at least one feature in one software tool
+        - Show that they have an effective engineering tool setup
+        - Share their plan for continued progress on their features
+
+
+::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
+
+Both the in-person assessment and the executable examination are cumulative in
+regards to all course content previously covered between week one and week five.
+
+:::

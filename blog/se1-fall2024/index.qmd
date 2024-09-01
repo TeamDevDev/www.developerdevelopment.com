@@ -15,7 +15,7 @@ This is our first post for the Fall 2024 Software Engineering class about the [S
 Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) section of the book. 
 
 ## Key Concept: Programming Over Time
-Software engineering isn’t just about writing code—it's about maintaining that code over time. This involves considering sustainability, adaptability, and reliability, especially in large-scale organizations like Google. How can we ensure that the code we write today will remain valuable tomorrow?
+Software engineering isn’t just about writing code—it includes the tools and processes an organization uses to maintain that code over time. As Hyrum Wright discusses in Prof. Kapfhammer's podcast (00:50:37), "As you write software, think about how long this software has to last." At Google, the focus is on whether the software will be needed for the next decade or just temporarily.
 
 ## Summary
 

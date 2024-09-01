@@ -93,6 +93,10 @@ The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrad
 
 ## Reflection
 
+Overall, it is important to consider the theoretical knowledge we know about the most reliable software engineering practices throughout the entire time we are working. It is importnant to make sustainable code that is readable and capable of being adapted.
+
+Software Engineering is about programming integrated overtime so quality code and documentation take priority!
+
 ## Action Items
 
 {{< include /_back-blog.qmd >}}

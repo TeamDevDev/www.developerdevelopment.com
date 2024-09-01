@@ -11,16 +11,88 @@ page-layout: full
 
 ## Overview
 
-This is the first post for the Fall 2024 Software Engineering class about the [Software Engineering at Google book](https://abseil.io/resources/swe-book)
-
+This is our first post for the Fall 2024 Software Engineering class about the [Software Engineering at Google book](https://abseil.io/resources/swe-book)! This article will relate our work with [Gatorgrade](https://github.com/GatorEducator/gatorgrade) with the practical skills featured in the ["Programming Over
+Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) section of the book. 
 
 ## Summary
 
+**"Code is written once but read many times" - Hyrum Wright**
+
+## Quiz Time 
+
+### **1. Which way should we write our comments, functions, and variables in our code?**
+
+**Bonus points** How many things can you list to improve in both pieces of code?
+
+```python 
+# OPTION A 
+
+def best_function_ever(
+    names, something
+):
+    files_list = []
+    # create a thing
+    for i in names:
+        # iterate through stuff 
+        if i.endswith(os.path.sep):
+            i= i[0:-1]
+        # fix theee thing to be better.
+        i2 = i.replace(os.path.sep, "/")
+        thing3 = {
+            # Random Dictionary 
+            i2: [
+                # Important strings!!! <----- Look at them
+                {
+                    "description": f"Complete all TODOs in {i2}",
+                    "check": "MatchFileFragment",
+                    "options": {"fragment": "TODO", "count": 0, "exact": True},
+                }
+            ]
+        }
+...
+```
+```python
+# OPTION B
+
+def write_yaml_of_paths_list(
+    path_names: List[str], search_root: str
+):  # expected input: A path list
+    """Write YAML file to create gatorgrade file and set default messages."""
+    files_list = []
+    # Create an empty list to store dictionaries
+    for file_path in path_names:
+        # Iterate through items in path_names
+        if file_path.endswith(os.path.sep):
+            file_path = file_path[0:-1]
+        # Convert file separators to '/'
+        file_path_fixed = file_path.replace(os.path.sep, "/")
+        # Make file_path easier to read by removing unnecessary characters
+        file_path_dict = {
+            # Dictionary to store the file paths
+            file_path_fixed: [
+                # List which stores strings which will be in gatorgrade.yml file
+                {
+                    "description": f"Complete all TODOs in {file_path_fixed}",
+                    "check": "MatchFileFragment",
+                    "options": {"fragment": "TODO", "count": 0, "exact": True},
+                }
+            ]
+        }
+...
+```
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer: B!**  
+We should write our comments in a way that is informational and useful. Additionally, variables should be named in such a way that they can be related back and provide insight to the program. This will help with the **sustainability** of our project in the long run. If someone is providing maintenance, it is a lot more helpful to have named variables like `output1 + output2 = ans` than `a + b = c`.
+
+The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
+
+</details>
 
 ## Reflection
 
-
 ## Action Items
-
 
 {{< include /_back-blog.qmd >}}

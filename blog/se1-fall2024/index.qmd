@@ -100,6 +100,11 @@ Overall, it is important to consider the theoretical knowledge we know about the
 
 Software Engineering is about programming integrated overtime so quality code and documentation take priority!
 
+### Key Takeaways for Class Discussion
+* **Sustainability**: Think about how our code will be maintained over time. How can we make it easier for others (and ourselves) to work with the code in the future?
+* **Communication**: Good code communicates its intent clearly. Whether through meaningful variable names, informative comments, or well-structured functions, it is essential for our code to be easy to understand
+* **Constraints**: In a large project, constraints can help guide the development process. How can we use constraints to make our code more scalable and maintainable?
+
 ## Action Items
 
 {{< include /_back-blog.qmd >}}

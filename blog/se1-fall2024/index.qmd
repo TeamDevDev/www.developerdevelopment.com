@@ -19,7 +19,8 @@ Software engineering isn’t just about writing code—it's about maintaining th
 
 ## Summary
 
-**"Code is written once but read many times" - Hyrum Wright**
+### **"Code is written once but read many times" - Hyrum Wright**
+This highlights the importance of writing clear, maintainable code. In large organizations, code is often read and modified by many different people over time. As a result, making sure that code is understandable and well-documented is critical to the long-term success of a project.
 
 ## Quiz Time 
 

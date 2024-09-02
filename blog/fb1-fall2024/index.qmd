@@ -12,10 +12,10 @@ page-layout: full
 ## Overview
 
 ### What is software testing?
-Software testing is the process of evaluating and verifying that a software application or system meets specified requirements. It involves executing code in a controlled environment to check for errors, gaps, or missing requirements. Why is it important?
+Software testing is the process of evaluating and verifying that a software application or system meets specified requirements. It involves executing code in a controlled environment to check for errors, gaps, or missing requirements. So, why is it important?
 
 * Helps identify bugs, errors, or issues in the software before it is released to users. 
-* Ensures that the application behaves as expected in different scenarios.
+* Ensures that the program behaves as expected.
 * Provides feedback that helps developers improve the software iteratively, making it better with every update.
 
 ## Summary

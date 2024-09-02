@@ -14,8 +14,8 @@ page-layout: full
 This is our first post for the Fall 2024 Software Engineering class about the [Software Engineering at Google book](https://abseil.io/resources/swe-book)! This article will relate our work with [Gatorgrade](https://github.com/GatorEducator/gatorgrade) with the practical skills featured in the ["Programming Over
 Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time) section of the book. 
 
-## Key Concept: Programming Over Time
-Software engineering isn’t just about writing code—it includes the tools and processes an organization uses to maintain that code over time. As Hyrum Wright discusses in Prof. Kapfhammer's podcast (00:50:37), "As you write software, think about how long this software has to last." At Google, the focus is on whether the software will be needed for the next decade or just temporarily.
+### Key Concept
+Software engineering isn’t just about writing code—it includes the tools and processes an organization uses to maintain that code over time. As Hyrum Wright discusses in [Prof. Kapfhammer's podcast](https://www.gregorykapfhammer.com/blog/se-radio-hyrum-wright-google/#listen) (00:50:37), "As you write software, think about how long this software has to last." At Google, the focus is on whether the software will be needed for the next decade or just temporarily.
 
 ## Summary
 

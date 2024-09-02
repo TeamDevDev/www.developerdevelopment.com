@@ -18,6 +18,14 @@ Software testing is the process of evaluating and verifying that a software appl
 * Ensures that the program behaves as expected.
 * Provides feedback that helps developers improve the software iteratively, making it better with every update.
 
+### Simple Testing in Python
+
+To perform effective testing in Python, you need to understand three fundamental things:
+
+* Python uses indentation for defining code blocks.
+* Python is dynamically typed, meaning variables do not have fixed types.
+* Python borrows syntax from other common languages, making it easier to grasp for those familiar with programming.
+
 ## Summary
 
 

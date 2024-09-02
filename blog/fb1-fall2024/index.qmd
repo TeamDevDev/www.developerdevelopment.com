@@ -34,6 +34,10 @@ Automated tests can check if results are as expected using assertions. For examp
 * Handle floating-point precision issues with a small epsilon value.
 * Write reusable test functions to simplify and streamline testing.
 
+### Limitations of testing
+
+Testing, no matter how thorough, can't guarantee that the software is 100% free of errors. It can, however, significantly reduce the likelihood of issues by catching them early in the development process. Testing provides confidence that the program works as intended but does not promise a perfect program.
+
 ## Summary
 
 

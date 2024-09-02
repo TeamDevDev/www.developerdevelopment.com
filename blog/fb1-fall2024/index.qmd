@@ -1,4 +1,3 @@
----
 author: [Pallas-Athena Cain, Hemani Alaparthi, Gregory M. Kapfhammer]
 title: Introduction to Software Testing
 date: '2023-9-16'
@@ -39,6 +38,56 @@ Automated tests can check if results are as expected using assertions. For examp
 Testing, no matter how thorough, can't guarantee that the software is 100% free of errors. It can, however, significantly reduce the likelihood of issues by catching them early in the development process. Testing provides confidence that the program works as intended but does not promise a perfect program.
 
 ## Summary
+
+
+## Quiz Time 
+
+### 1. Which of these is the proper way to test code?
+
+**Bonus points** How many things can you list to improve in both test cases?
+
+```python 
+# OPTION A 
+
+def test_the_function(
+    testing_dir,
+):
+    generate_config(["writing"], str(testing_dir))
+    gatorgrade_yml = testing_dir / "gatorgrade.yml"
+    if "src/test.py" not ingatorgrade_yml.open().read():
+        print("Yay it worked!")
+    else: 
+        print("sad days")
+    if "writing/reflection.md" in gatorgrade_yml.open().read():
+        print("(◠‿◠)")
+
+```
+
+```python
+# OPTION B
+
+def test_generate_config_creates_gatorgrade_yml_without_dir_not_in_user_input(
+    testing_dir,
+):
+    """Test to see if input does not match directory"""
+    # When generate_config is called
+    generate_config(["writing"], str(testing_dir))
+    # Then gatorgrade.yml is created
+    gatorgrade_yml = testing_dir / "gatorgrade.yml"
+    assert "src/test.py" not in gatorgrade_yml.open().read()
+    assert "writing/reflection.md" in gatorgrade_yml.open().read()
+
+```
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer: B!**  
+The second test case is better than the first one because it is a lot more descriptive and automatically passes or fails through the use of `assert` statements. There are things to be improved in both cases but in general the more understandable the test case the better. It is important that future contributors know what the test cases are actually doing through comments and docstrings. Assert statements are also important for automatic testing so that the checks do not need to be done manually.
+
+The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
+
+</details>
 
 
 ## Reflection

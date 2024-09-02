@@ -26,6 +26,14 @@ To perform effective testing in Python, you need to understand three fundamental
 * Python is dynamically typed, meaning variables do not have fixed types.
 * Python borrows syntax from other common languages, making it easier to grasp for those familiar with programming.
 
+### Automating Tests
+
+Automated tests can check if results are as expected using assertions. For example, assert statements take a condition and raise an exception if the condition is false This helps automate the validation process and identify issues early on. A few examples for effective automating tests include:
+
+* Use assertions to automatically check if results are as expected.
+* Handle floating-point precision issues with a small epsilon value.
+* Write reusable test functions to simplify and streamline testing.
+
 ## Summary
 
 

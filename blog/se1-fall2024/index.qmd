@@ -19,12 +19,34 @@ Software engineering isn’t just about writing code—it includes the tools and
 
 ## Summary
 
-### **"Code is written once but read many times" - Hyrum Wright**
+Software Engineering is not just computer science. It involves the application of theoretical knowledge to build something real to be used by other developers, consumers, and anyone else who might be interested. With this in mind it is important to integrate the more rigorous engineering methods used by other professions to help improve the quaility of code made by software engineers overall. With the helpful tips from the [Software Engineering at Google book](https://abseil.io/resources/swe-book) we will be able to make and improve features from Gatorgrade with a lot more quailty.
+
+Software Engineering is not just writing the code but it is also all the tools and processes an organization uses to build and maintain that same code over time. For example, by working to update and improve Gatorgrade's features we are participating in Software Engineering and the Gatorgrade legacy.
+
+Our goal is to **Make code valuable in the long term !!**  Think 10-20 years from now after we have long graduated our code will still be used to grade students work and we have make sure we leave behind code that is readable and understandable.
+
+### "Code is written once but read many times" - Hyrum Wright
+
 This highlights the importance of writing clear, maintainable code. In large organizations, code is often read and modified by many different people over time. As a result, making sure that code is understandable and well-documented is critical to the long-term success of a project.
+
+### Three Fundamental Principles Software Engineering
+
+#### Time and Change 
+
+How will the code need to adapt over the length of its life? Take into consideration the future of the CIS department at Allegheny College and how future assignments might look. For example, integrating AI into our code is something to discuss thoroughly especially now that professors are putting in their syllabi proper use of AI.
+
+#### Scale and Growth
+
+How will the organization need to adapt as it evolves. Will our system be able to handle more users or more collaborators? Can our system help with grading more types of assignments? As the CIS department grows in majors the variety in assignments will grow and it is important to consider the future major's size and assignments.
+
+#### Trade-offs and Costs
+
+How are resources such as time or storage impacted by our decisions? It is important to come up with low cost solutions that still get the job done.
+
 
 ## Quiz Time 
 
-### **1. Which way should we write our comments, functions, and variables in our code?**
+### 1. Which way should we write our comments, functions, and variables in our code?
 
 **Bonus points** How many things can you list to improve in both pieces of code?
 
@@ -95,17 +117,78 @@ The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrad
 
 </details>
 
+### 2. Pick from the list the three fundamental principles to keep in mind when in the process of software engineering?
+
+- Your pay per line of code
+- Trade-offs and costs of decisions
+- Knowing who is doing the most work
+- Time and Change of software or needs
+- Scale and Growth of organization
+- Making your code not boring
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answers: Trade-offs and costs of decisions, Time and Change of software or needs, and Scale and Growth of organization** 
+
+While developing Gatorgrade we will have to keep on mind these principles. First of all the trade-offs our decisions are super important because certain functions may cost a lot of time or computer storage so making decisions that are low-cost but are also practical is important. Ask ourselves is there a way to improve this code either worst-case time complexity wise or by choosing better object types to suit the task at hand. 
+
+Secondly, we need to consider how time and change will impact our code. For example, will a software update break our code? Or are we able to set up an environment to prevent that. How will the needs of the class change overtime? Will Gatorgrade need to be able to correct more than just Python in the future? The future of the software has to be considered throughout the process of development and deployment. 
+
+Lastly, how does scale and growth of the organization or user-base impact our code? If the CIS department at Allegheny College grows by 1000 students are we able to handle that user-base? Or if we get more student develops to work on GatorGrade is our branch/fork/management system understandable enough to allow for more people to join our team? We want our code to handle lots of users and be able to understood by new developers at any time.
+
+</details>
+
+### 3. Which is the best commit message out of these options?
+
+**Bonus points** How would you improve each of these commit messages?
+
+
+**OPTION A:**
+`make post better`
+
+**OPTION B:**
+`add a summary and blog page`
+
+**OPTION c:**
+`feat(blog): add se1 page and write se1 summary`
+
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer: C!**  
+C is the best option because it is informative and uses the Conventional Commit specification. It is specific and descriptive which is important especially if you or another person are reviewing old changes. Descriptive commits can save time and resources when it comes to reviews and bug fixes.
+
+Other example key words that can be used for the front of commit messages are as follows (see if you can figure out what instance each is used for):
+
+- `feat`
+- `fix`
+- `docs`
+- `style` 
+- `refactor`
+- `perf`
+- `test`
+- `build` 
+- `chore`
+- `revert`
+
+</details>
+
 ## Reflection
 
-Overall, it is important to consider the theoretical knowledge we know about the most reliable software engineering practices throughout the entire time we are working. It is importnant to make sustainable code that is readable and capable of being adapted.
+Overall, it is important to consider the theoretical knowledge we know about the most reliable software engineering practices throughout the entire time we are working. It is important to make sustainable code that is readable and capable of being adapted.
 
 Software Engineering is about programming integrated overtime so quality code and documentation take priority!
 
 ### Key Takeaways for Class Discussion
+
 * **Sustainability**: Think about how our code will be maintained over time. How can we make it easier for others (and ourselves) to work with the code in the future?
 * **Communication**: Good code communicates its intent clearly. Whether through meaningful variable names, informative comments, or well-structured functions, it is essential for our code to be easy to understand
 * **Constraints**: In a large project, constraints can help guide the development process. How can we use constraints to make our code more scalable and maintainable?
 
 ## Action Items
+
+It is important that throughout our time working on this project and beyond that we keep in mind writing quality code that is sustainable. It is important to hold yourself and your teamates to a high standard of code and documentation. Writing code that is understandable is key to making our tool capable of serving the Allgheny College community and beyond.
 
 {{< include /_back-blog.qmd >}}

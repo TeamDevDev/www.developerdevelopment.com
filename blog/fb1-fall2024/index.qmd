@@ -77,7 +77,6 @@ But what if the input is `-1`? It could cause problems because `my_sqrt()` might
 ```python
 from ExpectError import ExpectTimeout
 
-
 with ExpectTimeout(1):
    sqrt_program("-1")
 ```

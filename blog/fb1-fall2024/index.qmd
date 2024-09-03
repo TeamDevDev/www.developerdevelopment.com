@@ -58,12 +58,10 @@ While run-time verification is a powerful tool for ensuring correctness, it does
 
 ### System Input vs Function Input
 
-
 When developing software, it's crucial to distinguish between the types of inputs a program might handle. This section explores how handling system input differs from managing function input and highlights the importance of validating external inputs to ensure robust program behavior.
 
 
 #### Handling System Input
-
 
 Imagine a function `my_sqrt()` that calculates the square root of a number. If we have a program `sqrt_program()` that takes user input as a string:
 
@@ -90,38 +88,41 @@ But what if the input is `-1`? It could cause problems because `my_sqrt()` might
 from ExpectError import ExpectTimeout
 
 with ExpectTimeout(1):
-   sqrt_program("-1")
+    sqrt_program("-1")
 ```
-
 
 This way, we will get a TimeoutError, showing that our program didn’t handle the input well.
 
 
 #### Function Input
 
+Function inputs are the values you provide to a function so it can perform its task. For instance, consider the `sqrt()` function, which is designed to compute the square root of a number. This function expects a single input value, which should be a non-negative number.
 
-Function inputs are the values you provide to a function so it can perform its task. For instance, consider the sqrt() function, which is designed to compute the square root of a number. This function expects a single input value, which should be a non-negative number.
 
-
-Here's how `sqrt()` handles its input:
+Here's how `sqrt_program()` manages its input:
 
 
 ```python
-def sqrt(x):
-    if x < 0:
-        raise ValueError("Cannot calculate square root of a negative number")
-    return my_sqrt(x)
+def sqrt_program(arg: str) -> None:
+    try:
+        x = float(arg)
+    except ValueError:
+        print("Illegal Input")
+    else:
+        if x < 0:
+            print("Illegal Number")
+        else:
+            print('The root of', x, 'is', my_sqrt(x))
 ```
 In this example:
 
+- **Input Conversion**: The function first tries to convert the input arg to a floating-point number. If this conversion fails (e.g., if arg is not a valid number), it prints "Illegal Input".
+- **Value Validation**: If the conversion succeeds, the function then checks if the number is negative. If it is, it prints "Illegal Number" to indicate that the input is not suitable for square root calculation.
+- **Computation**: If the input is a valid non-negative number, the function proceeds to compute the square root using `my_sqrt()` and prints the result.
 
-- x is the input to the sqrt() function.
-- Before computing the square root, sqrt() checks if x is negative. If it is, it raises an error to prevent invalid calculations, similar to how sqrt_program() handles inputs from the previous section.
-- If x is a valid non-negative number, the function proceeds to calculate the square root using my_sqrt().
-
+This approach ensures that the function manages various inputs effectively and prevents uncontrolled states. Robust input handling is essential for reliable software and facilitates comprehensive testing by allowing the function to process diverse input scenarios with clear error messages.
 
 ![](software testing-10.png)
-
 
 ## Quiz Time 
 

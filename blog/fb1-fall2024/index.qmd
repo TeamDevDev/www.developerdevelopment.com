@@ -98,9 +98,7 @@ This way, we will get a TimeoutError, showing that our program didn’t handle t
 
 Function inputs are the values you provide to a function so it can perform its task. For instance, consider the `sqrt()` function, which is designed to compute the square root of a number. This function expects a single input value, which should be a non-negative number.
 
-
 Here's how `sqrt_program()` manages its input:
-
 
 ```python
 def sqrt_program(arg: str) -> None:
@@ -228,7 +226,6 @@ ValueError: invalid literal for int() with base 10: 'xyzzy' (expected)
 **Answer!** 
 
 That error means that an invalid input was given to the program! It was expecting an integer but recieved `xyzzy` which is a string. This caused a `ValueError`. These errors can be prevented by writing code that checks the input to see if it is valid or not (sanitize it). You can do this in a variety of ways such as `if` statements or assertions. Use type annotations as well to avoid confusion between collaborators. You can also use `try-except` cases to handle code and not crash the program if there is an issue. Writing custom error messages can also be helpful to future users because they can be more description of where the problem stems from. 
-
 
 </details>
 

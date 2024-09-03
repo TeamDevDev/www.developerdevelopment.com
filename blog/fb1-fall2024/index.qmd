@@ -49,7 +49,7 @@ Testing, no matter how thorough, can't guarantee that the software is 100% free 
 
 ## Quiz Time 
 
-### 1. Which of these is the proper way to test code?
+### 1. Which of these is the prefered way to test code? Why?
 
 **Bonus points** How many things can you list to improve in both test cases?
 
@@ -93,6 +93,65 @@ def test_generate_config_creates_gatorgrade_yml_without_dir_not_in_user_input(
 The second test case is better than the first one because it is a lot more descriptive and automatically passes or fails through the use of `assert` statements. There are things to be improved in both cases but in general the more understandable the test case the better. It is important that future contributors know what the test cases are actually doing through comments and docstrings. Assert statements are also important for automatic testing so that the checks do not need to be done manually.
 
 The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
+
+</details>
+
+### 2. Why do we want to put the `if key not in targeted_paths_string:` in the following code?
+
+```python
+...
+    targeted_paths_string = " ".join(targeted_paths)
+    for key in target_path_list:
+        if key not in targeted_paths_string:
+            typer.secho(
+                f"WARNING \u26A0: '{key}' file path is not FOUND!"
+                f"\nAll file paths except '{key}' are successfully"
+                " generated in the 'gatorgrade.yml' file",
+                fg=typer.colors.YELLOW,
+            )
+            return targeted_paths
+
+    # If all the files exist in the root directory, print out a success message
+    if targeted_paths:
+        typer.secho(
+            "SUCCESS \U0001F525: All the file paths were"
+            " successfully generated in the 'gatorgrade.yml' file!",
+            fg=typer.colors.GREEN,
+        )
+
+    return targeted_paths
+```
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!**  
+That `if` statement helps to catch an error with the files! If it isnt found the user will get a warning message to say that there was an issue. Warning messages are important because they give more detailed information on why something went wrong with the code. While developing code keep in mind these cases where something can go wrong and make error messages that will go towards fixing those issues. Or catch specific instances where an input might not work. For example a divide by 0 error can be prevented by adding an `if` statement that catches if 0 was the input.
+
+This code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrade) in the `generate.py` file! So exciting!
+
+</details>
+
+### 3. What deoes this error message mean?
+
+**Bonus points** How could you prevent this error from happening as the software engineer?
+
+```
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_56828/1336991207.py", line 2, in <cell line: 1>
+    sqrt_program("xyzzy")
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_56828/3211514011.py", line 2, in sqrt_program
+    x = int(arg)
+ValueError: invalid literal for int() with base 10: 'xyzzy' (expected)
+```
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!** 
+
+That error means that an invalid input was given to the program! It was expecting an integer but recieved `xyzzy` which is a string. This caused a `ValueError`. These errors can be prevented by writing code that checks the input to see if it is valid or not (sanitize it). You can do this in a variety of ways such as `if` statements or assertions. Use type annotations as well to avoid confusion between collaborators. You can also use `try-except` cases to handle code and not crash the program if there is an issue. Writing custom error messages can also be helpful to future users because they can be more description of where the problem stems from. 
+
 
 </details>
 

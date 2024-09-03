@@ -92,6 +92,8 @@ The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrad
 
 ## Reflection
 
+One key takeaway is how testing not only helps catch bugs but also provides a structured way to think about code quality and reliability. As we move forward in our software engineering journeys, the importance of integrating testing into our workflow early and often is clear.
+
 
 ## Action Items
 

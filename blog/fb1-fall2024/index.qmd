@@ -155,7 +155,7 @@ That error means that an invalid input was given to the program! It was expectin
 
 </details>
 
-![](software testing-4.png)
+![](software testing-04.png)
 
 ## Reflection
 

@@ -1,3 +1,4 @@
+---
 author: [Pallas-Athena Cain, Hemani Alaparthi, Gregory M. Kapfhammer]
 title: Introduction to Software Testing
 date: '2023-9-16'
@@ -36,6 +37,8 @@ Automated tests can check if results are as expected using assertions. For examp
 ### Limitations of testing
 
 Testing, no matter how thorough, can't guarantee that the software is 100% free of errors. It can, however, significantly reduce the likelihood of issues by catching them early in the development process. Testing provides confidence that the program works as intended but does not promise a perfect program.
+
+![](software testing-10.png)
 
 ## Summary
 
@@ -89,6 +92,7 @@ The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrad
 
 </details>
 
+![](software testing-4.png)
 
 ## Reflection
 

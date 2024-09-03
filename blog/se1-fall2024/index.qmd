@@ -17,6 +17,8 @@ Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time
 ### Key Concept
 Software engineering isn’t just about writing code—it includes the tools and processes an organization uses to maintain that code over time. As Hyrum Wright discusses in [Prof. Kapfhammer's podcast](https://www.gregorykapfhammer.com/blog/se-radio-hyrum-wright-google/#listen) (00:50:37), "As you write software, think about how long this software has to last." At Google, the focus is on whether the software will be needed for the next decade or just temporarily.
 
+![](software testing-12.png)
+
 ## Summary
 
 Software Engineering is not just computer science. It involves the application of theoretical knowledge to build something real to be used by other developers, consumers, and anyone else who might be interested. With this in mind it is important to integrate the more rigorous engineering methods used by other professions to help improve the quaility of code made by software engineers overall. With the helpful tips from the [Software Engineering at Google book](https://abseil.io/resources/swe-book) we will be able to make and improve features from Gatorgrade with a lot more quailty.
@@ -43,6 +45,7 @@ How will the organization need to adapt as it evolves. Will our system be able t
 
 How are resources such as time or storage impacted by our decisions? It is important to come up with low cost solutions that still get the job done.
 
+![](software testing-09.png)
 
 ## Quiz Time 
 

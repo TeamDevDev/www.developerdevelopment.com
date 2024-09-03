@@ -44,6 +44,18 @@ Automated tests can check if results are as expected using assertions. For examp
 
 Testing, no matter how thorough, can't guarantee that the software is 100% free of errors. It can, however, significantly reduce the likelihood of issues by catching them early in the development process. Testing provides confidence that the program works as intended but does not promise a perfect program.
 
+### Run-Time Verification
+
+Run-time verification involves integrating checks directly into your function's code to automatically verify its correctness each time it is called. This approach provides continuous validation of your code, ensuring that results meet expected criteria during execution.
+
+Benefits of Run-Time Verification include:
+
+- **Immediate Feedback**: You get real-time feedback on the correctness of your functions which can help quickly identify and address issues as they arise.
+
+- **Continuous Validation**: Each call to the function is validated, providing ongoing assurance that the function behaves as expected.
+
+While run-time verification is a powerful tool for ensuring correctness, it does not replace the need for comprehensive testing. It provides valuable immediate feedback and ongoing validation but should be complemented with well-chosen test cases and other verification methods to ensure overall software quality.
+
 ### System Input vs Function Input
 
 

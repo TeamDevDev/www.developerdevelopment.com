@@ -159,7 +159,13 @@ That error means that an invalid input was given to the program! It was expectin
 
 ## Reflection
 
-One key takeaway is how testing not only helps catch bugs but also provides a structured way to think about code quality and reliability. As we move forward in our software engineering journeys, the importance of integrating testing into our workflow early and often is clear.
+A few takeaways from this chapter include:
+
+- **Integrate Testing Early**: Start incorporating testing in the development process as early as possible. This helps identify issues sooner, improving the quality of your software over time.
+
+- **Automate Your Tests**: Set up automated tests using assertions to make sure the code behaves as expected. This can save time and reduce the chance of errors slipping through.
+
+- **Improve Test Readability**: Write clear and concise test cases with proper comments and docstrings. This helps future contributors and teammates understand what each test does.
 
 
 ## Action Items

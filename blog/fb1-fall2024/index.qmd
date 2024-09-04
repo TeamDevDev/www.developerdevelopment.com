@@ -1,0 +1,353 @@
+---
+author: [Pallas-Athena Cain, Hemani Alaparthi, Gregory M. Kapfhammer]
+title: Introduction to Software Testing
+date: '2024-9-4'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>What is software testing and why is it importtant?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This is our first post for the Fall 2024 Software Engineering class about the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book)!
+This article will relate to our work with
+[GatorGrade](https://github.com/GatorEducator/gatorgrade) (and its affiliated
+tools) with the technical skills from the [Introduction to Software
+Testing](https://www.fuzzingbook.org/html/Intro_Testing.html) section of [The
+Fuzzing Book](https://www.fuzzingbook.org/).
+
+While developing GatorGrade and it's features we will be using an automatic
+method to check our code as well as develop a way to automatically "grade" the
+programs of other people. Software testing is key to our work so it is important
+to understand the basics of testing and why we do it.
+
+## Summary
+
+### What is Software Testing?
+
+Software testing is the process of evaluating and verifying that a software
+application or system meets specified requirements. It involves executing code
+in a controlled environment to check for errors, gaps, or missing requirements.
+So, why is it important?
+
+* Helps identify bugs, errors, or issues in the software before it is released
+to users. 
+* Ensures that the program behaves as expected.
+* Provides feedback that helps developers improve the software iteratively,
+making it better with every update.
+
+The work done on GatorGrade has been tested a lot and we need to keep that up as
+we develop new features for it!
+
+### Simple Testing in Python
+
+To perform effective testing in Python, you need to understand three fundamental
+things:
+
+* Python uses indentation for defining code blocks.
+* Python is dynamically typed, meaning variables do not have fixed types.
+* Python borrows syntax from other common languages, making it easier to grasp
+for those familiar with programming.
+
+Since most of the GatorGrade code is done in Python it is important to keep the
+basics in mind.
+
+### Automating Tests
+
+Automated tests can check if results are as expected using assertions. For
+example, `assert` statements take a condition and raise an exception if the
+condition is false This helps automate the validation process and identify
+issues early on. A few examples for effective automating tests include:
+
+* Use assertions to automatically check if results are as expected.
+* Handle floating-point precision issues with a small epsilon value.
+* Write reusable test functions to simplify and streamline testing.
+
+Go check out the `assert` statements used in the [GatorGrade Tests
+Directory](https://github.com/GatorEducator/gatorgrade/tree/main/tests)! See if
+you can figure out all the different uses there are.
+
+### Limitations of Testing
+
+Testing, no matter how thorough, can't guarantee that the software is 100% free
+of errors. It can, however, significantly reduce the likelihood of issues by
+catching them early in the development process. Testing provides confidence that
+the program works as intended but does not promise a perfect program.
+
+We will not always come up with the perfect program and be able to find all the
+bugs through testing but with a lot of testing and trial runs we can get pretty
+close! Remember to report the bugs you find on Github or on our Discord.
+
+### Run-Time Verification
+
+Run-time verification involves integrating checks directly into your function's
+code to automatically verify its correctness each time it is called. This
+approach provides continuous validation of your code, ensuring that results meet
+expected criteria during execution.
+
+Benefits of Run-Time Verification include:
+
+- **Immediate Feedback**: You get real-time feedback on the correctness of your
+functions which can help quickly identify and address issues as they arise.
+
+- **Continuous Validation**: Each call to the function is validated, providing
+ongoing assurance that the function behaves as expected.
+
+While run-time verification is a powerful tool for ensuring correctness, it does
+not replace the need for comprehensive testing. It provides valuable immediate
+feedback and ongoing validation but should be complemented with well-chosen test
+cases and other verification methods to ensure overall software quality.
+
+We of course want our program to run efficiently but we also want it to be
+correct. Do not sacrifice accuracy for speed! A quickly --- but incorrectly! ---
+graded student exam is not good!
+
+### System Input versus Function Input
+
+When developing software, it's crucial to distinguish between the types of
+inputs a program might handle. This section explores how handling system input
+differs from managing function input and highlights the importance of validating
+external inputs to ensure robust program behavior.
+
+#### Handling System Input
+
+Imagine a function `my_sqrt()` that calculates the square root of a number. If
+we have a program `sqrt_program()` that takes user input as a string:
+
+```python
+def sqrt_program(arg):
+   x = int(arg)
+   print('The root of', x, 'is', my_sqrt(x))
+```
+
+If we run `sqrt_program("4")`, it works fine:
+
+```python
+The root of 4 is 2.0
+```
+
+But what if the input is `-1`? It could cause problems because `my_sqrt()` might
+not handle negative numbers properly. To avoid issues like infinite loops, we
+can use a timeout:
+
+```python
+from ExpectError import ExpectTimeout
+
+with ExpectTimeout(1):
+    sqrt_program("-1")
+```
+
+This way, we will get a `TimeoutError`, showing that our program didn't handle
+the input well.
+
+#### Function Input
+
+Function inputs are the values you provide to a function so it can perform its
+task. For instance, consider the `sqrt()` function, which is designed to compute
+the square root of a number. This function expects a single input value, which
+should be a non-negative number.
+
+Here's how `sqrt_program()` manages its input:
+
+```python
+def sqrt_program(arg: str) -> None:
+    try:
+        x = float(arg)
+    except ValueError:
+        print("Illegal Input")
+    else:
+        if x < 0:
+            print("Illegal Number")
+        else:
+            print('The root of', x, 'is', my_sqrt(x))
+```
+
+In this example:
+
+- **Input Conversion**: The function first tries to convert the input `arg` to a
+floating-point number. If this conversion fails (e.g., if `arg` is not a valid
+number), it prints `Illegal Input`.
+- **Value Validation**: If the conversion succeeds, the function then checks if
+the number is negative. If it is, it prints `Illegal Number` to indicate that
+the input is not suitable for square root calculation.
+- **Computation**: If the input is a valid non-negative number, the function
+proceeds to compute the square root using `my_sqrt()` and prints the result.
+
+This approach ensures that the function manages various inputs effectively and
+prevents uncontrolled states. Robust input handling is essential for reliable
+software and facilitates comprehensive testing by allowing the function to
+process diverse input scenarios with clear error messages.
+
+Think about how we can verify the correctness of the inputs to our features.
+Remember to validate the input so we do not run into unexpected errors down the
+line!
+
+![](software testing-10.png)
+
+## Quiz Time 
+
+### 1. Which of these is the preferred way to test code? Why?
+
+**Bonus points** How many things can you list to improve in both of the test cases?
+
+```python 
+# OPTION A 
+
+def test_the_function(
+    testing_dir,
+):
+    generate_config(["writing"], str(testing_dir))
+    gatorgrade_yml = testing_dir / "gatorgrade.yml"
+    if "src/test.py" not ingatorgrade_yml.open().read():
+        print("Yay it worked!")
+    else: 
+        print("sad days")
+    if "writing/reflection.md" in gatorgrade_yml.open().read():
+        print("(◠‿◠)")
+
+```
+
+```python
+# OPTION B
+
+def test_generate_config_creates_gatorgrade_yml_without_dir_not_in_user_input(
+    testing_dir,
+):
+    """Test to see if input does not match directory"""
+    # When generate_config is called
+    generate_config(["writing"], str(testing_dir))
+    # Then gatorgrade.yml is created
+    gatorgrade_yml = testing_dir / "gatorgrade.yml"
+    assert "src/test.py" not in gatorgrade_yml.open().read()
+    assert "writing/reflection.md" in gatorgrade_yml.open().read()
+
+```
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer: B!**  
+
+The second test case is better than the first one because it is a lot more
+descriptive and automatically passes or fails through the use of `assert`
+statements. There are things to be improved in both cases but in general the
+more understandable the test case the better. It is important that future
+contributors know what the test cases are actually doing through comments and
+docstrings. Assert statements are also important for automatic testing so that
+the checks do not need to be done manually.
+
+The correct code is from
+[GatorGrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
+
+</details>
+
+### 2. Why do we want to put the `if key not in targeted_paths_string:` in the following code?
+
+```python
+...
+    targeted_paths_string = " ".join(targeted_paths)
+    for key in target_path_list:
+        if key not in targeted_paths_string:
+            typer.secho(
+                f"WARNING \u26A0: '{key}' file path is not FOUND!"
+                f"\nAll file paths except '{key}' are successfully"
+                " generated in the 'gatorgrade.yml' file",
+                fg=typer.colors.YELLOW,
+            )
+            return targeted_paths
+
+    # If all the files exist in the root directory, print out a success message
+    if targeted_paths:
+        typer.secho(
+            "SUCCESS \U0001F525: All the file paths were"
+            " successfully generated in the 'gatorgrade.yml' file!",
+            fg=typer.colors.GREEN,
+        )
+
+    return targeted_paths
+```
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!**  
+
+That `if` statement helps to catch an error with the files! If it isn't found the
+user will get a warning message to say that there was an issue. Warning messages
+are important because they give more detailed information on why something went
+wrong with the code. While developing code keep in mind these cases where
+something can go wrong and make error messages that will go towards fixing those
+issues. Or catch specific instances where an input might not work. For example a
+divide by 0 error can be prevented by adding an `if` statement that catches if 0
+was the input.
+
+This code is from [GatorGrade](https://github.com/GatorEducator/gatorgrade) in
+the `generate.py` file! So exciting!
+
+</details>
+
+### 3. What does this error message mean?
+
+**Bonus points** How could you prevent this error from happening as the software
+engineer?
+
+```
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_56828/1336991207.py", line 2, in <cell line: 1>
+    sqrt_program("xyzzy")
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_56828/3211514011.py", line 2, in sqrt_program
+    x = int(arg)
+ValueError: invalid literal for int() with base 10: 'xyzzy' (expected)
+```
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!** 
+
+That error means that an invalid input was given to the program! It was
+expecting an integer but received `xyzzy` which is a string. This caused a
+`ValueError`. These errors can be prevented by writing code that checks the
+input to see if it is valid or not (sanitize it). You can do this in a variety
+of ways such as `if` statements or assertions. Use type annotations as well to
+avoid confusion between collaborators. You can also use `try-except` cases to
+handle code and not crash the program if there is an issue. Writing custom error
+messages can also be helpful to future users because they can be more
+description of where the problem stems from. 
+
+</details>
+
+![](software testing-04.png)
+
+## Reflection
+
+A few takeaways from this chapter include:
+
+- **Integrate Testing Early**: Start incorporating testing in the development
+process as early as possible. This helps identify issues sooner, improving the
+quality of your software over time.
+
+- **Automate Your Tests**: Set up automated tests using assertions to make sure
+the code behaves as expected. This can save time and reduce the chance of errors
+slipping through.
+
+- **Improve Test Readability**: Write clear and concise test cases with proper
+comments and docstrings. This helps future contributors and teammates understand
+what each test does.
+
+## Action Items
+
+Regardless of the task you are assigned, be thoughtful of those writing the
+tests and making your program as readable as possible. We will be able to write
+better test cases if we understand the code as much as possible. Software
+testing will be extremely beneficial to catching bugs and other issues with our
+code throughout the semester so make sure to test after a change has been made!
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

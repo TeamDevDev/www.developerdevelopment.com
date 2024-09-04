@@ -1,0 +1,97 @@
+---
+author: [Jaclyn Pham, Will Wolff, Preston Smith, Gregory M. Kapfhammer]
+title: 'Leading at Scale'
+date: '2023-10-30'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>What are leadership strategies for scaling a team?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post discusses the ["Leading at
+Scale"](https://abseil.io/resources/swe-book/html/ch06.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book). The
+chapter delves into the challenges faced in the leadership journey and offers
+valuable insights into effective leadership strategies within a organization.
+
+## Summary
+
+The chapter outlines three fundamental principles of successful leadership. By
+embracing these principles, leaders can navigate the complexities of growth,
+ensuring the longevity and effectiveness of both their teams and the
+organization as a whole.
+
+**Always be Deciding:** Effective decision-making is paramount for leaders in
+software organizations. They must assess trade-offs, considering both immediate
+and long-term consequences. Leaders need to identify blind spots within their
+team, where prolonged focus on a specific project can hinder a broader
+perspective. The chapter emphasizes the significance of keen observation and
+active listening, as evidenced by the following statement:
+
+> This is what good management is about: 95% observation and listening, and 5%
+> making critical adjustments in just the right place.
+
+This quote underscores the importance of observation and empathetic learning in
+effective decision-making. By understanding the team dynamics and project
+requirements, leaders can make precise adjustments, thereby better ensuring the
+team's success.
+
+**Always be Leaving:** Creating a self-sufficient team is an important way to
+prevent a single point of failure, where the team's functionality relies heavily
+on a leader or some other core contributor. This dependencies poses a
+significant risk, as illustrated in the concept of ["bus
+factor"](https://en.wikipedia.org/wiki/Bus_factor). A leader must empower their
+teams to operate independently, fostering a culture of knowledge sharing and
+collaboration. This approach not only ensures the team's resilience but also
+nurtures a sense of collective ownership and responsibility.
+
+**Always be Scaling:** The chapter mentions the cycle of success in an
+organization. Over the time, organizations continually face new challenges and
+opportunities. Effective leadership involves guiding the team through this cycle
+of growth, wherein each successfully tackled problem becomes a foundation for
+handling more complex, parallel struggles. This bittersweet truth underscores
+the nature of leadership. Managers must balance the team's capabilities with the
+demands of new projects, ensuring the organization evolves sustainably.
+
+Lastly, leaders must recognize their limited resources of time, energy, and
+attention. Effective management involves discerning between urgent and important
+tasks, ensuring that critical issues get solve while reserving time for
+not-urgent-but-important tasks. Additionally, learning to delegate tasks not
+only allows leaders to focus on strategic management development but also
+nurtures emerging leaders within the team.
+
+## Reflection
+
+The chapter explained how we can create success in our team through leadership
+and introduced the three main areas to focus on as a leader. These three main
+points addressed in the previous section show us what must be done in order for
+the members of our team to have success and to accomplish the goal of finishing
+our projects by the end of the semester. Ultimately, the content in this
+article builds on what we previously discussed in the context of the ["How to
+Lead a Team"](../se6-fall2023/index.qmd) chapter, with the current chapter
+focused more on how we can grow and evolve our teams. This chapter is
+especially timely given the fact that we are going to start to concurrently
+work on two projects this week and thus communication and leadership are more
+critical than ever before. What steps can we take to get better at team
+leadership?
+
+## Action Items
+
+In our team, leadership roles may not be formally defined, but this doesn't
+hinder our ability to boost productivity and efficiency. Every team member can
+adopt leadership strategies, avoiding the need for micromanagement, which can
+stifle progress. Embracing failure as part of the learning process is essential.
+Even in smaller projects, we should keep these principles in mind.
+
+While we currently operate without specific leaders beyond the course instructor
+and the student technical leaders, it might be beneficial to introduce more
+formal leadership roles in the future. This will help ensure alignment and
+direction, but it's also important that each team member has the opportunity to
+lead at some point. After all, our group is not just a software engineering
+team; it's a class, and leadership development is a key part of our collective
+growth.
+
+{{< include /_back-blog.qmd >}}

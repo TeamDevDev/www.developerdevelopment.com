@@ -205,7 +205,7 @@ The future of the software has to be considered throughout the process of
 development and deployment. 
 
 Lastly, how does scale and growth of the organization or user-base impact our
-code? If the CIS department at Allegheny College grows by 1000 students are we
+code? If the CIS department at Allegheny College grows by 100 students are we
 able to handle that user-base? Or if we get more student develops to work on
 GatorGrade is our branch/fork/management system understandable enough to allow
 for more people to join our team? We want our code to handle lots of users and

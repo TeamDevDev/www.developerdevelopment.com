@@ -33,11 +33,24 @@ next decade or just temporarily.
 
 ## Summary
 
-Software Engineering is not just computer science. It involves the application of theoretical knowledge to build something real to be used by other developers, consumers, and anyone else who might be interested. With this in mind it is important to integrate the more rigorous engineering methods used by other professions to help improve the quaility of code made by software engineers overall. With the helpful tips from the [Software Engineering at Google book](https://abseil.io/resources/swe-book) we will be able to make and improve features from Gatorgrade with a lot more quailty.
+Software Engineering is not just computer science. It involves the application
+of theoretical knowledge to build something real to be used by other developers,
+consumers, and anyone else who might be interested. With this in mind it is
+important to integrate the more rigorous engineering methods used by other
+professions to help improve the quality of code made by software engineers
+overall. With the helpful tips from the [Software Engineering at Google
+book](https://abseil.io/resources/swe-book) we will be able to make and improve
+features from Gatorgrade with a lot more quality.
 
-Software Engineering is not just writing the code but it is also all the tools and processes an organization uses to build and maintain that same code over time. For example, by working to update and improve Gatorgrade's features we are participating in Software Engineering and the Gatorgrade legacy.
+Software Engineering is not just writing the code but it is also all the tools
+and processes an organization uses to build and maintain that same code over
+time. For example, by working to update and improve Gatorgrade's features we are
+participating in Software Engineering and the Gatorgrade legacy.
 
-Our goal is to **Make code valuable in the long term !!**  Think 10-20 years from now after we have long graduated our code will still be used to grade students work and we have make sure we leave behind code that is readable and understandable.
+Our goal is to **Make code valuable in the long term!** Think 10-20 years from
+now after we have long graduated our code will still be used to grade students
+work and we have make sure we leave behind code that is readable and
+understandable.
 
 ### "Code is written once but read many times" - Hyrum Wright
 

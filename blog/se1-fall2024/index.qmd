@@ -176,8 +176,7 @@ The correct code is from
 
 </details>
 
-### 2. Pick from the list the fundamental principles to keep in mind when in the
-process of software engineering?
+### 2. Pick from the list the fundamental principles to keep in mind when in the process of software engineering?
 
 - Your pay per line of code
 - Trade-offs and costs of decisions
@@ -219,7 +218,6 @@ be able to understood by new developers at any time.
 ### 3. Which is the best commit message out of these options?
 
 **Bonus points** How would you improve each of these commit messages?
-
 
 **OPTION A:**
 `make post better`

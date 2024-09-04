@@ -14,7 +14,7 @@ page-layout: full
 This is our first post for the Fall 2024 Software Engineering class about the
 [Software Engineering at Google book](https://abseil.io/resources/swe-book)!
 This article will relate our work with
-[Gatorgrade](https://github.com/GatorEducator/gatorgrade) with the practical
+[GatorGrade](https://github.com/GatorEducator/gatorgrade) with the practical
 skills featured in the ["Programming Over
 Time"](https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time)
 section of the book. 
@@ -40,12 +40,12 @@ important to integrate the more rigorous engineering methods used by other
 professions to help improve the quality of code made by software engineers
 overall. With the helpful tips from the [Software Engineering at Google
 book](https://abseil.io/resources/swe-book) we will be able to make and improve
-features from Gatorgrade with a lot more quality.
+features from GatorGrade with a lot more quality.
 
 Software Engineering is not just writing the code but it is also all the tools
 and processes an organization uses to build and maintain that same code over
-time. For example, by working to update and improve Gatorgrade's features we are
-participating in Software Engineering and the Gatorgrade legacy.
+time. For example, by working to update and improve GatorGrade's features we are
+participating in Software Engineering and the GatorGrade legacy.
 
 Our goal is to **Make code valuable in the long term!** Think 10-20 years from
 now after we have long graduated our code will still be used to grade students
@@ -172,7 +172,7 @@ maintenance, it is a lot more helpful to have named variables like `output1 +
 output2 = ans` than `a + b = c`.
 
 The correct code is from
-[Gatorgrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
+[GatorGrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
 
 </details>
 
@@ -192,7 +192,7 @@ process of software engineering?
 **Answers: Trade-offs and costs of decisions, Time and Change of software or
 needs, and Scale and Growth of organization** 
 
-While developing Gatorgrade and other software tools in its ecosystem, we will
+While developing GatorGrade and other software tools in its ecosystem, we will
 have to keep on mind these principles. First, of all the trade-offs our
 decisions are super important because certain functions may cost a lot of time
 or computer storage so making decisions that are low-cost but are also practical
@@ -203,7 +203,7 @@ task at hand.
 Secondly, we need to consider how time and change will impact our code. For
 example, will a software update break our code? Or are we able to set up an
 environment to prevent that. How will the needs of the class change overtime?
-Will Gatorgrade need to be able to correct more than just Python in the future?
+Will GatorGrade need to be able to correct more than just Python in the future?
 The future of the software has to be considered throughout the process of
 development and deployment. 
 

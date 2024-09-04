@@ -117,7 +117,6 @@ external inputs to ensure robust program behavior.
 Imagine a function `my_sqrt()` that calculates the square root of a number. If
 we have a program `sqrt_program()` that takes user input as a string:
 
-
 ```python
 def sqrt_program(arg):
    x = int(arg)

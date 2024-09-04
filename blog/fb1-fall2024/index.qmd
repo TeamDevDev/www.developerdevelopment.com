@@ -105,7 +105,7 @@ We of course want our program to run efficiently but we also want it to be
 correct. Do not sacrifice accuracy for speed! A quickly --- but incorrectly! ---
 graded student exam is not good!
 
-### System Input vs Function Input
+### System Input versus Function Input
 
 When developing software, it's crucial to distinguish between the types of
 inputs a program might handle. This section explores how handling system input

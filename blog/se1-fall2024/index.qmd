@@ -67,7 +67,7 @@ How will the code need to adapt over the length of its life? Take into
 consideration the future of the CIS department at Allegheny College and how
 future assignments might look. For example, integrating artificial intelligence
 (AI) into our code is something to discuss thoroughly especially now that
-professors are putting in their syllabi proper use of AI.
+professors are putting in their syllabus a statement about the proper use of AI.
 
 #### Scale and Growth
 

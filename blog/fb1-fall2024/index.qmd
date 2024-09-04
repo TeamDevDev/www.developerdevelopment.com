@@ -44,52 +44,78 @@ we develop new features for it!
 
 ### Simple Testing in Python
 
-To perform effective testing in Python, you need to understand three fundamental things:
+To perform effective testing in Python, you need to understand three fundamental
+things:
 
 * Python uses indentation for defining code blocks.
 * Python is dynamically typed, meaning variables do not have fixed types.
-* Python borrows syntax from other common languages, making it easier to grasp for those familiar with programming.
+* Python borrows syntax from other common languages, making it easier to grasp
+for those familiar with programming.
 
-Since most of the GatorGrade code is done in Python it is important to keep the basics in mind.
+Since most of the GatorGrade code is done in Python it is important to keep the
+basics in mind.
 
 ### Automating Tests
 
-Automated tests can check if results are as expected using assertions. For example, `assert` statements take a condition and raise an exception if the condition is false This helps automate the validation process and identify issues early on. A few examples for effective automating tests include:
+Automated tests can check if results are as expected using assertions. For
+example, `assert` statements take a condition and raise an exception if the
+condition is false This helps automate the validation process and identify
+issues early on. A few examples for effective automating tests include:
 
 * Use assertions to automatically check if results are as expected.
 * Handle floating-point precision issues with a small epsilon value.
 * Write reusable test functions to simplify and streamline testing.
 
-Go check out the `assert` statements used in the [GatorGrade Tests Directory](https://github.com/GatorEducator/gatorgrade/tree/main/tests)! See if you can figure out all the different uses there are.
+Go check out the `assert` statements used in the [GatorGrade Tests
+Directory](https://github.com/GatorEducator/gatorgrade/tree/main/tests)! See if
+you can figure out all the different uses there are.
 
 ### Limitations of Testing
 
-Testing, no matter how thorough, can't guarantee that the software is 100% free of errors. It can, however, significantly reduce the likelihood of issues by catching them early in the development process. Testing provides confidence that the program works as intended but does not promise a perfect program.
+Testing, no matter how thorough, can't guarantee that the software is 100% free
+of errors. It can, however, significantly reduce the likelihood of issues by
+catching them early in the development process. Testing provides confidence that
+the program works as intended but does not promise a perfect program.
 
-We will not always come up with the perfect program and be able to find all the bugs through testing but with a lot of testing and trial runs we can get pretty close! Remember to report the bugs you find on Github or on our Discord.
+We will not always come up with the perfect program and be able to find all the
+bugs through testing but with a lot of testing and trial runs we can get pretty
+close! Remember to report the bugs you find on Github or on our Discord.
 
 ### Run-Time Verification
 
-Run-time verification involves integrating checks directly into your function's code to automatically verify its correctness each time it is called. This approach provides continuous validation of your code, ensuring that results meet expected criteria during execution.
+Run-time verification involves integrating checks directly into your function's
+code to automatically verify its correctness each time it is called. This
+approach provides continuous validation of your code, ensuring that results meet
+expected criteria during execution.
 
 Benefits of Run-Time Verification include:
 
-- **Immediate Feedback**: You get real-time feedback on the correctness of your functions which can help quickly identify and address issues as they arise.
+- **Immediate Feedback**: You get real-time feedback on the correctness of your
+functions which can help quickly identify and address issues as they arise.
 
-- **Continuous Validation**: Each call to the function is validated, providing ongoing assurance that the function behaves as expected.
+- **Continuous Validation**: Each call to the function is validated, providing
+ongoing assurance that the function behaves as expected.
 
-While run-time verification is a powerful tool for ensuring correctness, it does not replace the need for comprehensive testing. It provides valuable immediate feedback and ongoing validation but should be complemented with well-chosen test cases and other verification methods to ensure overall software quality.
+While run-time verification is a powerful tool for ensuring correctness, it does
+not replace the need for comprehensive testing. It provides valuable immediate
+feedback and ongoing validation but should be complemented with well-chosen test
+cases and other verification methods to ensure overall software quality.
 
-We of course want our program to run efficiently but we also want it to be correct. Do not sacrifice accuracy for speed! A fast done but wrongly graded student exam is not good!
+We of course want our program to run efficiently but we also want it to be
+correct. Do not sacrifice accuracy for speed! A fast done but wrongly graded
+student exam is not good!
 
 ### System Input vs Function Input
 
-When developing software, it's crucial to distinguish between the types of inputs a program might handle. This section explores how handling system input differs from managing function input and highlights the importance of validating external inputs to ensure robust program behavior.
-
+When developing software, it's crucial to distinguish between the types of
+inputs a program might handle. This section explores how handling system input
+differs from managing function input and highlights the importance of validating
+external inputs to ensure robust program behavior.
 
 #### Handling System Input
 
-Imagine a function `my_sqrt()` that calculates the square root of a number. If we have a program `sqrt_program()` that takes user input as a string:
+Imagine a function `my_sqrt()` that calculates the square root of a number. If
+we have a program `sqrt_program()` that takes user input as a string:
 
 
 ```python
@@ -106,9 +132,9 @@ If we run `sqrt_program("4")`, it works fine:
 The root of 4 is 2.0
 ```
 
-
-But what if the input is `-1`? It could cause problems because `my_sqrt()` might not handle negative numbers properly. To avoid issues like infinite loops, we can use a timeout:
-
+But what if the input is `-1`? It could cause problems because `my_sqrt()` might
+not handle negative numbers properly. To avoid issues like infinite loops, we
+can use a timeout:
 
 ```python
 from ExpectError import ExpectTimeout
@@ -117,12 +143,15 @@ with ExpectTimeout(1):
     sqrt_program("-1")
 ```
 
-This way, we will get a `TimeoutError`, showing that our program didn’t handle the input well.
-
+This way, we will get a `TimeoutError`, showing that our program didn't handle
+the input well.
 
 #### Function Input
 
-Function inputs are the values you provide to a function so it can perform its task. For instance, consider the `sqrt()` function, which is designed to compute the square root of a number. This function expects a single input value, which should be a non-negative number.
+Function inputs are the values you provide to a function so it can perform its
+task. For instance, consider the `sqrt()` function, which is designed to compute
+the square root of a number. This function expects a single input value, which
+should be a non-negative number.
 
 Here's how `sqrt_program()` manages its input:
 
@@ -138,21 +167,32 @@ def sqrt_program(arg: str) -> None:
         else:
             print('The root of', x, 'is', my_sqrt(x))
 ```
+
 In this example:
 
-- **Input Conversion**: The function first tries to convert the input arg to a floating-point number. If this conversion fails (e.g., if arg is not a valid number), it prints "Illegal Input".
-- **Value Validation**: If the conversion succeeds, the function then checks if the number is negative. If it is, it prints "Illegal Number" to indicate that the input is not suitable for square root calculation.
-- **Computation**: If the input is a valid non-negative number, the function proceeds to compute the square root using `my_sqrt()` and prints the result.
+- **Input Conversion**: The function first tries to convert the input arg to a
+floating-point number. If this conversion fails (e.g., if arg is not a valid
+number), it prints "Illegal Input".
+- **Value Validation**: If the conversion succeeds, the function then checks if
+the number is negative. If it is, it prints "Illegal Number" to indicate that
+the input is not suitable for square root calculation.
+- **Computation**: If the input is a valid non-negative number, the function
+proceeds to compute the square root using `my_sqrt()` and prints the result.
 
-This approach ensures that the function manages various inputs effectively and prevents uncontrolled states. Robust input handling is essential for reliable software and facilitates comprehensive testing by allowing the function to process diverse input scenarios with clear error messages.
+This approach ensures that the function manages various inputs effectively and
+prevents uncontrolled states. Robust input handling is essential for reliable
+software and facilitates comprehensive testing by allowing the function to
+process diverse input scenarios with clear error messages.
 
-Think about how we can verify the correctness of the inputs to our features. Remember to validate the input so we do not run into unexpected errors down the line!
+Think about how we can verify the correctness of the inputs to our features.
+Remember to validate the input so we do not run into unexpected errors down the
+line!
 
 ![](software testing-10.png)
 
 ## Quiz Time 
 
-### 1. Which of these is the prefered way to test code? Why?
+### 1. Which of these is the preferred way to test code? Why?
 
 **Bonus points** How many things can you list to improve in both test cases?
 
@@ -193,9 +233,17 @@ def test_generate_config_creates_gatorgrade_yml_without_dir_not_in_user_input(
 <summary>Click to Expand for the Answer</summary>
 
 **Answer: B!**  
-The second test case is better than the first one because it is a lot more descriptive and automatically passes or fails through the use of `assert` statements. There are things to be improved in both cases but in general the more understandable the test case the better. It is important that future contributors know what the test cases are actually doing through comments and docstrings. Assert statements are also important for automatic testing so that the checks do not need to be done manually.
 
-The correct code is from [GatorGrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
+The second test case is better than the first one because it is a lot more
+descriptive and automatically passes or fails through the use of `assert`
+statements. There are things to be improved in both cases but in general the
+more understandable the test case the better. It is important that future
+contributors know what the test cases are actually doing through comments and
+docstrings. Assert statements are also important for automatic testing so that
+the checks do not need to be done manually.
+
+The correct code is from
+[GatorGrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
 
 </details>
 

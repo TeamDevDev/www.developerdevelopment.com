@@ -102,8 +102,8 @@ feedback and ongoing validation but should be complemented with well-chosen test
 cases and other verification methods to ensure overall software quality.
 
 We of course want our program to run efficiently but we also want it to be
-correct. Do not sacrifice accuracy for speed! A fast done but wrongly graded
-student exam is not good!
+correct. Do not sacrifice accuracy for speed! A quickly --- but incorrectly! ---
+graded student exam is not good!
 
 ### System Input vs Function Input
 

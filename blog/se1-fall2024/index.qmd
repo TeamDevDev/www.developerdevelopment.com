@@ -79,8 +79,8 @@ and assignments.
 
 #### Trade-offs and Costs
 
-How are resources such as time or storage impacted by our decisions? It is
-important to come up with low cost solutions that still get the job done.
+How are resources such as time or storage impacted by our decisions? Remember,
+it is important to come up with low cost solutions that still get the job done!
 
 #### Constraints
 

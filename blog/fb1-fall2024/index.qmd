@@ -18,11 +18,14 @@ While developing Gatorgrade and it's features we will be using an automatic meth
 ## Summary
 
 ### What is Software Testing?
+
 Software testing is the process of evaluating and verifying that a software application or system meets specified requirements. It involves executing code in a controlled environment to check for errors, gaps, or missing requirements. So, why is it important?
 
 * Helps identify bugs, errors, or issues in the software before it is released to users. 
 * Ensures that the program behaves as expected.
 * Provides feedback that helps developers improve the software iteratively, making it better with every update.
+
+The work done on Gatorgrade has been tested a lot and we need to keep that up as we develop new features for it!
 
 ### Simple Testing in Python
 
@@ -32,17 +35,23 @@ To perform effective testing in Python, you need to understand three fundamental
 * Python is dynamically typed, meaning variables do not have fixed types.
 * Python borrows syntax from other common languages, making it easier to grasp for those familiar with programming.
 
+Since most of the Gatorgrade code is done in Python it is important to keep the basics in mind.
+
 ### Automating Tests
 
-Automated tests can check if results are as expected using assertions. For example, assert statements take a condition and raise an exception if the condition is false This helps automate the validation process and identify issues early on. A few examples for effective automating tests include:
+Automated tests can check if results are as expected using assertions. For example, `assert` statements take a condition and raise an exception if the condition is false This helps automate the validation process and identify issues early on. A few examples for effective automating tests include:
 
 * Use assertions to automatically check if results are as expected.
 * Handle floating-point precision issues with a small epsilon value.
 * Write reusable test functions to simplify and streamline testing.
 
+Go check out the `assert` statements used in the [Gatorgrade Tests Directory](https://github.com/GatorEducator/gatorgrade/tree/main/tests)! See if you can figure out all the different uses there are.
+
 ### Limitations of Testing
 
 Testing, no matter how thorough, can't guarantee that the software is 100% free of errors. It can, however, significantly reduce the likelihood of issues by catching them early in the development process. Testing provides confidence that the program works as intended but does not promise a perfect program.
+
+We will not always come up with the perfect program and be able to find all the bugs through testing but with a lot of testing and trial runs we can get pretty close! Remember to report the bugs you find on Github or on our Discord.
 
 ### Run-Time Verification
 
@@ -55,6 +64,8 @@ Benefits of Run-Time Verification include:
 - **Continuous Validation**: Each call to the function is validated, providing ongoing assurance that the function behaves as expected.
 
 While run-time verification is a powerful tool for ensuring correctness, it does not replace the need for comprehensive testing. It provides valuable immediate feedback and ongoing validation but should be complemented with well-chosen test cases and other verification methods to ensure overall software quality.
+
+We of course want our program to run efficiently but we also want it to be correct. Do not sacrifice accuracy for speed! A fast done but wrongly graded student exam is not good!
 
 ### System Input vs Function Input
 
@@ -119,6 +130,8 @@ In this example:
 - **Computation**: If the input is a valid non-negative number, the function proceeds to compute the square root using `my_sqrt()` and prints the result.
 
 This approach ensures that the function manages various inputs effectively and prevents uncontrolled states. Robust input handling is essential for reliable software and facilitates comprehensive testing by allowing the function to process diverse input scenarios with clear error messages.
+
+Think about how we can verify the correctness of the inputs to our features. Remember to validate the input so we do not run into unexpected errors down the line!
 
 ![](software testing-10.png)
 

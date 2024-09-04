@@ -138,7 +138,7 @@ Grammars can be used as a kind of way to seed an input before mutating it. This
 way, instead of having a static seed for mutation, your seed can be randomized
 as well. Just when you thought fuzzing could not get any deeper, right? We can
 apply this directly to mutation-based fuzzing that we discussed last week in
-the article entitled [Mutation-Based Fuzzing](../fb5/index.qmd).
+the article entitled [Mutation-Based Fuzzing](../fb5-fall2023/index.qmd).
 
 ```{python}
 def delete_random_character(s: str) -> str:

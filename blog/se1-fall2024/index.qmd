@@ -23,8 +23,8 @@ section of the book.
 
 Software engineering isn't just about writing code --- it includes the tools and
 processes an organization uses to maintain that code over time. As Hyrum Wright
-discusses in [Prof. Kapfhammer's
-podcast](https://www.gregorykapfhammer.com/blog/se-radio-hyrum-wright-google/#listen)
+discusses in [SE Radio 609: Hyrum Wright on Software Engineering at
+Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/)
 (00:50:37), "As you write software, think about how long this software has to
 last." At Google, the focus is on whether the software will be needed for the
 next decade or just temporarily.
@@ -176,7 +176,8 @@ The correct code is from
 
 </details>
 
-### 2. Pick from the list the fundamental principles to keep in mind when in the process of software engineering?
+### 2. Pick from the list the fundamental principles to keep in mind when in the
+process of software engineering?
 
 - Your pay per line of code
 - Trade-offs and costs of decisions
@@ -188,7 +189,8 @@ The correct code is from
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-**Answers: Trade-offs and costs of decisions, Time and Change of software or needs, and Scale and Growth of organization** 
+**Answers: Trade-offs and costs of decisions, Time and Change of software or
+needs, and Scale and Growth of organization** 
 
 While developing Gatorgrade we will have to keep on mind these principles. First
 of all the trade-offs our decisions are super important because certain

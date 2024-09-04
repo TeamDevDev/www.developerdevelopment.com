@@ -11,21 +11,36 @@ page-layout: full
 
 ## Overview
 
-This is our first post for the Fall 2024 Software Engineering class about the [Software Engineering at Google book](https://abseil.io/resources/swe-book)! This article will relate our work with [Gatorgrade](https://github.com/GatorEducator/gatorgrade) with the technical skills from the [Introduction to Software Testing](https://www.fuzzingbook.org/html/Intro_Testing.html) section of [The Fuzzing Book](https://www.fuzzingbook.org/).
+This is our first post for the Fall 2024 Software Engineering class about the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book)!
+This article will relate our work with
+[GatorGrade](https://github.com/GatorEducator/gatorgrade) with the technical
+skills from the [Introduction to Software
+Testing](https://www.fuzzingbook.org/html/Intro_Testing.html) section of [The
+Fuzzing Book](https://www.fuzzingbook.org/).
 
-While developing Gatorgrade and it's features we will be using an automatic method to check our code as well as develop a way to "grade" others automatically. Software testing is key to our work so it is important to understand the basics of testing and why we do it.
+While developing GatorGrade and it's features we will be using an automatic
+method to check our code as well as develop a way to "grade" others
+automatically. Software testing is key to our work so it is important to
+understand the basics of testing and why we do it.
 
 ## Summary
 
 ### What is Software Testing?
 
-Software testing is the process of evaluating and verifying that a software application or system meets specified requirements. It involves executing code in a controlled environment to check for errors, gaps, or missing requirements. So, why is it important?
+Software testing is the process of evaluating and verifying that a software
+application or system meets specified requirements. It involves executing code
+in a controlled environment to check for errors, gaps, or missing requirements.
+So, why is it important?
 
-* Helps identify bugs, errors, or issues in the software before it is released to users. 
+* Helps identify bugs, errors, or issues in the software before it is released
+to users. 
 * Ensures that the program behaves as expected.
-* Provides feedback that helps developers improve the software iteratively, making it better with every update.
+* Provides feedback that helps developers improve the software iteratively,
+making it better with every update.
 
-The work done on Gatorgrade has been tested a lot and we need to keep that up as we develop new features for it!
+The work done on GatorGrade has been tested a lot and we need to keep that up as
+we develop new features for it!
 
 ### Simple Testing in Python
 
@@ -35,7 +50,7 @@ To perform effective testing in Python, you need to understand three fundamental
 * Python is dynamically typed, meaning variables do not have fixed types.
 * Python borrows syntax from other common languages, making it easier to grasp for those familiar with programming.
 
-Since most of the Gatorgrade code is done in Python it is important to keep the basics in mind.
+Since most of the GatorGrade code is done in Python it is important to keep the basics in mind.
 
 ### Automating Tests
 
@@ -45,7 +60,7 @@ Automated tests can check if results are as expected using assertions. For examp
 * Handle floating-point precision issues with a small epsilon value.
 * Write reusable test functions to simplify and streamline testing.
 
-Go check out the `assert` statements used in the [Gatorgrade Tests Directory](https://github.com/GatorEducator/gatorgrade/tree/main/tests)! See if you can figure out all the different uses there are.
+Go check out the `assert` statements used in the [GatorGrade Tests Directory](https://github.com/GatorEducator/gatorgrade/tree/main/tests)! See if you can figure out all the different uses there are.
 
 ### Limitations of Testing
 
@@ -180,7 +195,7 @@ def test_generate_config_creates_gatorgrade_yml_without_dir_not_in_user_input(
 **Answer: B!**  
 The second test case is better than the first one because it is a lot more descriptive and automatically passes or fails through the use of `assert` statements. There are things to be improved in both cases but in general the more understandable the test case the better. It is important that future contributors know what the test cases are actually doing through comments and docstrings. Assert statements are also important for automatic testing so that the checks do not need to be done manually.
 
-The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
+The correct code is from [GatorGrade](https://github.com/GatorEducator/gatorgrade)! So exciting!
 
 </details>
 
@@ -214,13 +229,22 @@ The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrad
 <summary>Click to Expand for the Answer</summary>
 
 **Answer!**  
-That `if` statement helps to catch an error with the files! If it isnt found the user will get a warning message to say that there was an issue. Warning messages are important because they give more detailed information on why something went wrong with the code. While developing code keep in mind these cases where something can go wrong and make error messages that will go towards fixing those issues. Or catch specific instances where an input might not work. For example a divide by 0 error can be prevented by adding an `if` statement that catches if 0 was the input.
 
-This code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrade) in the `generate.py` file! So exciting!
+That `if` statement helps to catch an error with the files! If it isn't found the
+user will get a warning message to say that there was an issue. Warning messages
+are important because they give more detailed information on why something went
+wrong with the code. While developing code keep in mind these cases where
+something can go wrong and make error messages that will go towards fixing those
+issues. Or catch specific instances where an input might not work. For example a
+divide by 0 error can be prevented by adding an `if` statement that catches if 0
+was the input.
+
+This code is from [GatorGrade](https://github.com/GatorEducator/gatorgrade) in
+the `generate.py` file! So exciting!
 
 </details>
 
-### 3. What deoes this error message mean?
+### 3. What does this error message mean?
 
 **Bonus points** How could you prevent this error from happening as the software engineer?
 

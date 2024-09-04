@@ -4,7 +4,7 @@ title: Introduction to Software Testing
 date: '2024-9-4'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>What is software testing and why is it importtant?</em>
+description: <em>What is software testing and why is it important?</em>
 toc: true
 page-layout: full
 ---

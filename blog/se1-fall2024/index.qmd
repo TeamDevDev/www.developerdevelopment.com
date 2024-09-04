@@ -84,8 +84,8 @@ it is important to come up with low cost solutions that still get the job done!
 
 #### Constraints
 
-The 4th principle which isn't mentioned in the book but in the podcast is
-"constraints".
+The fourth principle which isn't mentioned in the book but instead introduced in
+the podcast is "constraints".
 
 `(Hyrum Wright 00:48:50)` Picking appropriate constraints as an organization
 scale is actually a really powerful way of enabling that kind of scalability. We

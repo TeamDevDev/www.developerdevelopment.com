@@ -54,13 +54,20 @@ understandable.
 
 ### "Code is written once but read many times" - Hyrum Wright
 
-This highlights the importance of writing clear, maintainable code. In large organizations, code is often read and modified by many different people over time. As a result, making sure that code is understandable and well-documented is critical to the long-term success of a project.
+This highlights the importance of writing clear, maintainable code. In large
+organizations, code is often read and modified by many different people over
+time. As a result, making sure that code is understandable and well-documented
+is critical to the long-term success of a project.
 
 ### Three Fundamental Principles Software Engineering
 
 #### Time and Change 
 
-How will the code need to adapt over the length of its life? Take into consideration the future of the CIS department at Allegheny College and how future assignments might look. For example, integrating AI into our code is something to discuss thoroughly especially now that professors are putting in their syllabi proper use of AI.
+How will the code need to adapt over the length of its life? Take into
+consideration the future of the CIS department at Allegheny College and how
+future assignments might look. For example, integrating artificial intelligence
+(AI) into our code is something to discuss thoroughly especially now that
+professors are putting in their syllabi proper use of AI.
 
 #### Scale and Growth
 

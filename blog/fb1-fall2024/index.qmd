@@ -191,7 +191,7 @@ line!
 
 ### 1. Which of these is the preferred way to test code? Why?
 
-**Bonus points** How many things can you list to improve in both test cases?
+**Bonus points** How many things can you list to improve in both of the test cases?
 
 ```python 
 # OPTION A 

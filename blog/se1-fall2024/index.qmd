@@ -79,7 +79,7 @@ How are resources such as time or storage impacted by our decisions? It is impor
 
 #### Constraints
 
-The 4th principle which isn't mentioned in the book but in the podcast is Constrainsts.
+The 4th principle which isn't mentioned in the book but in the podcast is "constraints".
 
 `(Hyrum Wright 00:48:50)`Picking appropriate constraints as an organization scale is actually a really powerful way of enabling that kind of scalability. We kind of knew that going in, but it’s amazing to me how that came out in the book, whether it’s, again, large-scale changes or build systems or testing infrastructure or style guides. All those things benefit from having appropriate sets of constraints.
 

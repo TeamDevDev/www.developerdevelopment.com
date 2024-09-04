@@ -69,13 +69,14 @@ The chapter explained how we can create success in our team through leadership
 and introduced the three main areas to focus on as a leader. These three main
 points addressed in the previous section show us what must be done in order for
 the members of our team to have success and to accomplish the goal of finishing
-our projects by the end of the semester. Ultimately, the content in this article
-builds on what we previously discussed in the context of the ["How to Lead a
-Team"](../se6/index.qmd) chapter, with the current chapter focused more on how
-we can grow and evolve our teams. This chapter is especially timely given the
-fact that we are going to start to concurrently work on two projects this week
-and thus communication and leadership are more critical than ever before. What
-steps can we take to get better at team leadership?
+our projects by the end of the semester. Ultimately, the content in this
+article builds on what we previously discussed in the context of the ["How to
+Lead a Team"](../se6-fall2023/index.qmd) chapter, with the current chapter
+focused more on how we can grow and evolve our teams. This chapter is
+especially timely given the fact that we are going to start to concurrently
+work on two projects this week and thus communication and leadership are more
+critical than ever before. What steps can we take to get better at team
+leadership?
 
 ## Action Items
 

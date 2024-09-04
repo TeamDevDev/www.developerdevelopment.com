@@ -1,10 +1,10 @@
 ---
 author: [Pallas-Athena Cain, Hemani Alaparthi, Gregory M. Kapfhammer]
 title: Introduction to Software Testing
-date: '2023-9-16'
+date: '2024-9-4'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>What is fuzzing and software testing?</em>
+description: <em>What is software testing and why is it importtant?</em>
 toc: true
 page-layout: full
 ---
@@ -17,7 +17,7 @@ While developing Gatorgrade and it's features we will be using an automatic meth
 
 ## Summary
 
-### What is software testing?
+### What is Software Testing?
 Software testing is the process of evaluating and verifying that a software application or system meets specified requirements. It involves executing code in a controlled environment to check for errors, gaps, or missing requirements. So, why is it important?
 
 * Helps identify bugs, errors, or issues in the software before it is released to users. 
@@ -40,7 +40,7 @@ Automated tests can check if results are as expected using assertions. For examp
 * Handle floating-point precision issues with a small epsilon value.
 * Write reusable test functions to simplify and streamline testing.
 
-### Limitations of testing
+### Limitations of Testing
 
 Testing, no matter how thorough, can't guarantee that the software is 100% free of errors. It can, however, significantly reduce the likelihood of issues by catching them early in the development process. Testing provides confidence that the program works as intended but does not promise a perfect program.
 

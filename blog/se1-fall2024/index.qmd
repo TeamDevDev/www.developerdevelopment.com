@@ -126,7 +126,7 @@ The correct code is from [Gatorgrade](https://github.com/GatorEducator/gatorgrad
 
 </details>
 
-### 2. Pick from the list the three fundamental principles to keep in mind when in the process of software engineering?
+### 2. Pick from the list the fundamental principles to keep in mind when in the process of software engineering?
 
 - Your pay per line of code
 - Trade-offs and costs of decisions

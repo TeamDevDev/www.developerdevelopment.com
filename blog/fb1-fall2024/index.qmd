@@ -167,11 +167,11 @@ def sqrt_program(arg: str) -> None:
 
 In this example:
 
-- **Input Conversion**: The function first tries to convert the input arg to a
-floating-point number. If this conversion fails (e.g., if arg is not a valid
-number), it prints "Illegal Input".
+- **Input Conversion**: The function first tries to convert the input `arg` to a
+floating-point number. If this conversion fails (e.g., if `arg` is not a valid
+number), it prints `Illegal Input`.
 - **Value Validation**: If the conversion succeeds, the function then checks if
-the number is negative. If it is, it prints "Illegal Number" to indicate that
+the number is negative. If it is, it prints `Illegal Number` to indicate that
 the input is not suitable for square root calculation.
 - **Computation**: If the input is a valid non-negative number, the function
 proceeds to compute the square root using `my_sqrt()` and prints the result.

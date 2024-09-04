@@ -102,7 +102,7 @@ with ExpectTimeout(1):
     sqrt_program("-1")
 ```
 
-This way, we will get a TimeoutError, showing that our program didn’t handle the input well.
+This way, we will get a `TimeoutError`, showing that our program didn’t handle the input well.
 
 
 #### Function Input

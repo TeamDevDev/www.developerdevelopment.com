@@ -246,7 +246,8 @@ the `generate.py` file! So exciting!
 
 ### 3. What does this error message mean?
 
-**Bonus points** How could you prevent this error from happening as the software engineer?
+**Bonus points** How could you prevent this error from happening as the software
+engineer?
 
 ```
 Traceback (most recent call last):
@@ -262,7 +263,15 @@ ValueError: invalid literal for int() with base 10: 'xyzzy' (expected)
 
 **Answer!** 
 
-That error means that an invalid input was given to the program! It was expecting an integer but recieved `xyzzy` which is a string. This caused a `ValueError`. These errors can be prevented by writing code that checks the input to see if it is valid or not (sanitize it). You can do this in a variety of ways such as `if` statements or assertions. Use type annotations as well to avoid confusion between collaborators. You can also use `try-except` cases to handle code and not crash the program if there is an issue. Writing custom error messages can also be helpful to future users because they can be more description of where the problem stems from. 
+That error means that an invalid input was given to the program! It was
+expecting an integer but received `xyzzy` which is a string. This caused a
+`ValueError`. These errors can be prevented by writing code that checks the
+input to see if it is valid or not (sanitize it). You can do this in a variety
+of ways such as `if` statements or assertions. Use type annotations as well to
+avoid confusion between collaborators. You can also use `try-except` cases to
+handle code and not crash the program if there is an issue. Writing custom error
+messages can also be helpful to future users because they can be more
+description of where the problem stems from. 
 
 </details>
 
@@ -272,16 +281,25 @@ That error means that an invalid input was given to the program! It was expectin
 
 A few takeaways from this chapter include:
 
-- **Integrate Testing Early**: Start incorporating testing in the development process as early as possible. This helps identify issues sooner, improving the quality of your software over time.
+- **Integrate Testing Early**: Start incorporating testing in the development
+process as early as possible. This helps identify issues sooner, improving the
+quality of your software over time.
 
-- **Automate Your Tests**: Set up automated tests using assertions to make sure the code behaves as expected. This can save time and reduce the chance of errors slipping through.
+- **Automate Your Tests**: Set up automated tests using assertions to make sure
+the code behaves as expected. This can save time and reduce the chance of errors
+slipping through.
 
-- **Improve Test Readability**: Write clear and concise test cases with proper comments and docstrings. This helps future contributors and teammates understand what each test does.
-
+- **Improve Test Readability**: Write clear and concise test cases with proper
+comments and docstrings. This helps future contributors and teammates understand
+what each test does.
 
 ## Action Items
 
-Regardless of the task you are assigned, be thoughtful of those writing the tests and making your program as readable as possible. We will be able to write better test cases if we understand the code as much as possible. Software testing will be extremely beneficial to catching bugs and other issues with our code throughout the semester so make sure to test after a change has been made!
+Regardless of the task you are assigned, be thoughtful of those writing the
+tests and making your program as readable as possible. We will be able to write
+better test cases if we understand the code as much as possible. Software
+testing will be extremely beneficial to catching bugs and other issues with our
+code throughout the semester so make sure to test after a change has been made!
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

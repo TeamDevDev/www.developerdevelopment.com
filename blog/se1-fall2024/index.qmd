@@ -192,12 +192,13 @@ process of software engineering?
 **Answers: Trade-offs and costs of decisions, Time and Change of software or
 needs, and Scale and Growth of organization** 
 
-While developing Gatorgrade we will have to keep on mind these principles. First
-of all the trade-offs our decisions are super important because certain
-functions may cost a lot of time or computer storage so making decisions that
-are low-cost but are also practical is important. Ask ourselves is there a way
-to improve this code either worst-case time complexity wise or by choosing
-better object types to suit the task at hand. 
+While developing Gatorgrade and other software tools in its ecosystem, we will
+have to keep on mind these principles. First, of all the trade-offs our
+decisions are super important because certain functions may cost a lot of time
+or computer storage so making decisions that are low-cost but are also practical
+is important. Ask ourselves is there a way to improve this code either
+worst-case time complexity wise or by choosing better object types to suit the
+task at hand. 
 
 Secondly, we need to consider how time and change will impact our code. For
 example, will a software update break our code? Or are we able to set up an

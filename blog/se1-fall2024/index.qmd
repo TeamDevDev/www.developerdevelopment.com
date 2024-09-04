@@ -228,7 +228,6 @@ be able to understood by new developers at any time.
 **OPTION c:**
 `feat(blog): add se1 page and write se1 summary`
 
-
 <details>
 <summary>Click to Expand for the Answer</summary>
 

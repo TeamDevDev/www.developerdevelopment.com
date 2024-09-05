@@ -4,14 +4,14 @@ title: Getting Coverage
 date: '2024-09-04'
 date-format: long
 categories: [post, professional development, software engineering, fuzzing]
-description: <em>description</em>
+description: <em>How can we measure a test’s effectiveness when bugs are scarce?</em>
 toc: true
 page-layout: full
 ---
 
 ## Overview
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lacus sodales, elementum lectus non, rutrum lectus. Etiam in ante ipsum. Cras eu tortor vel mauris ornare ultrices. Quisque non nisl a ante aliquet pellentesque. Praesent a pellentesque felis. Maecenas scelerisque elit ac neque condimentum fermentum. Mauris non nisl odio. Aenean a gravida metus, sit amet venenatis nunc. Suspendisse luctus libero eget nulla aliquam, sed sagittis ex facilisis. Vivamus faucibus fermentum lorem, fringilla tincidunt enim semper nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+We're excited to share our first post about *[The Fuzzing Book](https://www.fuzzingbook.org/)*! In this post, we'll explain what code coverage is and how it helps us check how well our tests work. Code coverage shows us which parts of a program are actually used when a test runs. It helps us assess how effectively a test suite exercises a program, especially when bugs are scarce. By measuring which parts of the code are executed during a test run, we can gauge the thoroughness of our tests and identify potential areas that may require additional scrutiny. This can be especially useful when there aren’t many bugs, helping us see how much of the program is being tested. We'll also talk about different ways to measure this and make sure our tests are properly working.
 
 ## Summary
 

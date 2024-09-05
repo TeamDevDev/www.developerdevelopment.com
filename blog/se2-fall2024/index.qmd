@@ -1,0 +1,89 @@
+---
+author: [Chezka Quinola, Rebekah Rudd Gregory M. Kapfhammer]
+title: What is Software Engineering?
+date: '2024-9-8'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>What is software engineering and how does it differ from computer science?</em>
+toc: true
+page-layout: full
+---
+
+## Summary
+
+This article is about the ["What is Software
+Engineering?"](https://abseil.io/resources/swe-book/html/ch01.html) chapter in
+the [Software Engineering at Google book](https://abseil.io/resources/swe-book).
+
+This article goes into more depth of discussion on the differences between software enginnering and programming. This chapter of the books takes the main themes and ideas that we learned about last week such as time and change, scale and growth, and trade-offs and costs. The chapter consider these topics with a greater focus discussing how google handles them and views them, along with provididng different examples about why they exist and why they are important. 
+
+In REF Dr.Kapfhammer's podcast with Hyram Wright they give this picture for thinking about an programmer versuses a software engineer. They compare it with a carpenter and building a house. Different thoughts a considerations go into both. The textbook looks at with differnent language. They talked about software engineering bringing programming into a new dimmension. Think of a square to a cube or speed to velocity (speed over time). 
+
+Book Quote: "SE is programming integrated over time."
+
+[SE Radio 609: Hyrum Wright on Software Engineering at
+Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/)
+
+Where does comupter science/programming and SE overlap?
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+In devlopment. SE also considers not only development, but also modification and maintenance. 
+</details>
+
+**Delving Back In**
+
+But first....
+
+**Software Sustainability**
+
+
+**Time and Change**
+
+
+SE also comes into play when thinking about upgrading code. This considers how much of the underlaying code in a program has to change, does it all need parts or only some of it. Here is a graph that shows and considers this relationship. 
+
+![](life_span.png)
+
+**Scale and Efficiency**
+This section has a lot to do with considering code changes, aspects such as their impact, size and how often that they should happen. For example, in 2006 Google needed to update their compiler. It had been years since that had happened. Which also meant Google's code was only running through one compiler and had never been tested on another. They had much of their personnel learning the tools to make this change. In addition, they had to consider of code correctness and being able to confirm that. It was hard and a large learning curve for many people. Since then Google has worked to make smaller changes for frequently even sometimes as often as every week or two. 
+This also has to do with scale not only of code and the database but of people. Google considers the code people write for thei codebase and then considering if one person wrote that code today will it take ten people to write and fix and maintain it in ten years or not. Aspects that increase efficiency and effectiveness are having expertise in personnel so that it would only take one person to do multiple differnt jobs. Another aspect to consider in automation and by automating different aspects not needing as much man power to fill those roles. 
+
+Cost of detecting something - shifting left
+![](shifting_left.png)
+
+The discussion of time and change relates to the topics of Software Sustainability. What is it? Software sustainability is the idea of how manageable and how much will it cost to say run all the code or how many people does it take to maintain parts of the code and are these processes cost effective. This also relates to the idea of upgrading software and how that process will go. The Book actually mentions that Google has come to their process of sustainability by mostly trail and error. 
+
+Hyram's Law: it works vs it's maintainable. all aspects of a project touched and used by somebody
+
+Question to sonsider: does work up scale with the code base
+
+
+**Trade-offs and Costs**
+Trade-offs are present in many ways, both in decisions for the code base and in personal and time and effort. One big idea they considered is not doing and making decisions on a "because I said so basis". But rather having a reason and well thought out decision for different courses of action.  In addition there are many different types of costs. 
+
+deprection: that process
+running multiple versions
+
+the churn rule: 
+beyonce rule
+
+
+What are some cost and examples of those costs relating to SE?
+
+<details>
+<summary>Click to Expand for categories the book referenced</summary>
+Financial, resource, personnel, transaction(taking action), opportunity(not taking action), and societal costs
+</details>
+
+
+Big take aways:
+expertise, smaller changes frequesntly
+
+**Takeaways**
+looking back at decision and making mistakes. thie choice to tackel the compiler and not wait till it grew worse and worse. Addressing isues where they are and not shying away from them. Smaller changes more frequently then more accostumed and adapted to changes. 
+
+
+## Reflection
+
+But how does this relate to us?

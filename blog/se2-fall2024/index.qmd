@@ -15,11 +15,9 @@ This article is about the ["What is Software
 Engineering?"](https://abseil.io/resources/swe-book/html/ch01.html) chapter in
 the [Software Engineering at Google book](https://abseil.io/resources/swe-book).
 
-This article goes into more depth of discussion on the differences between software enginnering and programming. This chapter of the books takes the main themes and ideas that we learned about last week such as time and change, scale and growth, and trade-offs and costs. The chapter consider these topics with a greater focus discussing how google handles them and views them, along with provididng different examples about why they exist and why they are important. 
+This article goes into more depth of discussion on the differences between software enginnering(SE) and programming. This chapter of the book takes the main themes and ideas that we learned about last week such as time and change, scale and growth, and trade-offs and costs. The chapter considers these topics with a greater focus in discussing how Google considers these topics, along with provididng different examples about the importance of these topics from their own experience. 
 
-In REF Dr.Kapfhammer's podcast with Hyram Wright they give this picture for thinking about an programmer versuses a software engineer. They compare it with a carpenter and building a house. Different thoughts a considerations go into both. The textbook looks at with differnent language. They talked about software engineering bringing programming into a new dimmension. Think of a square to a cube or speed to velocity (speed over time). 
-
-Book Quote: "SE is programming integrated over time."
+In Dr.Kapfhammer's podcast with Hyram Wright, Hyram give us a picture for thinking about how programming differs from a software engineer: he compares it with a carpenter and building a house. Different thoughts a considerations go into both. The book uses some different metaphors that might be helpful. "SE is programming integrated over time," and so the book expands on this idea of SE brining programming into a new dimmension. Think of the relationship between a square and a cube or speed to velocity (speed over time). 
 
 [SE Radio 609: Hyrum Wright on Software Engineering at
 Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/)
@@ -33,41 +31,32 @@ In devlopment. SE also considers not only development, but also modification and
 
 **Delving Back In**
 
-But first....
-
-**Software Sustainability**
-
-
 **Time and Change**
-
-
-SE also comes into play when thinking about upgrading code. This considers how much of the underlaying code in a program has to change, does it all need parts or only some of it. Here is a graph that shows and considers this relationship. 
+Time and change as discussed last week has to do with the life span as a project. Google says they work on their project with an indefinite view in mind. The span of a project is relevant becuase it relates to how much a software engineer can expect the underlying to change. Does all the underlying code need to change in an upgrade or just parts? Here is a graph that shows and considers the relationship between life span of a project and code changes and upgrades. 
 
 ![](life_span.png)
 
-**Scale and Efficiency**
-This section has a lot to do with considering code changes, aspects such as their impact, size and how often that they should happen. For example, in 2006 Google needed to update their compiler. It had been years since that had happened. Which also meant Google's code was only running through one compiler and had never been tested on another. They had much of their personnel learning the tools to make this change. In addition, they had to consider of code correctness and being able to confirm that. It was hard and a large learning curve for many people. Since then Google has worked to make smaller changes for frequently even sometimes as often as every week or two. 
-This also has to do with scale not only of code and the database but of people. Google considers the code people write for thei codebase and then considering if one person wrote that code today will it take ten people to write and fix and maintain it in ten years or not. Aspects that increase efficiency and effectiveness are having expertise in personnel so that it would only take one person to do multiple differnt jobs. Another aspect to consider in automation and by automating different aspects not needing as much man power to fill those roles. 
+Hyram law is something else that is considered in this section. Hyram's Law has to do with the difference between code working and it being maintainable. It also introduces the concept, that no matter what the project all the code and functions of the project will be used and relied on in some way.
 
-Cost of detecting something - shifting left
+**Scale and Efficiency**
+This section has a lot to do with considering code changes, aspects such as their impact, size and how often that they should happen. For example, in 2006 Google needed to update their compiler. It had been years since that had happened. Which also meant Google's code was only running through one compiler and had never been tested on another. Many of Google's personnel were learning new tools and skills to make this change. In addition, they had to consider of code correctness and being able to confirm that. It was hard and a large learning curve for many people. Since then Google has worked to make smaller changes more frequently even sometimes as often as every week or two. 
+Scale and efficiency also has to do with scale not only of code and the database but of people. Google considers the code people write for their codebase and then considers if one person will be able to maintain it and care for it over the years or if it will constantly require more people to maintain and at what rates. Google considers if the amount of work scales up as the codebase does. One aspect that increases efficiency and effectiveness are having lots of expertise in your personnel so that it would only take one person to do multiple differnt jobs. Another aspect to consider in automation. By automating different aspects not needing as much man power to fill those roles. 
+
+
+The discussion of scale and efficiency relates to the topic of software sustainability. And what is software sustainability? Software sustainability is the idea of how manageable and how much will it cost to say run all the code or how many people does it take to maintain parts of the code and are these processes cost effective. This also relates to the idea of upgrading software and how that process will go. The Book actually mentions that Google has come to their process of sustainability by mostly trail and error. 
+
+
+What is this graph bellow depicting?
+
 ![](shifting_left.png)
 
-The discussion of time and change relates to the topics of Software Sustainability. What is it? Software sustainability is the idea of how manageable and how much will it cost to say run all the code or how many people does it take to maintain parts of the code and are these processes cost effective. This also relates to the idea of upgrading software and how that process will go. The Book actually mentions that Google has come to their process of sustainability by mostly trail and error. 
-
-Hyram's Law: it works vs it's maintainable. all aspects of a project touched and used by somebody
-
-Question to sonsider: does work up scale with the code base
-
+<details>
+<summary>Click to Expand for the Answer</summary>
+The cost of finding bugs can vary based on when in the development process you find them. The goal is to find the bugs as early in the process as possible so the changes don't cost as much as it would, after deploying your aftifact.
+</details>
 
 **Trade-offs and Costs**
-Trade-offs are present in many ways, both in decisions for the code base and in personal and time and effort. One big idea they considered is not doing and making decisions on a "because I said so basis". But rather having a reason and well thought out decision for different courses of action.  In addition there are many different types of costs. 
-
-deprection: that process
-running multiple versions
-
-the churn rule: 
-beyonce rule
-
+Trade-offs are always present, but they are present in different ways. The are present in both decisions for the code base and in personnell time and effort. One big idea Google considers is not making decisions on a "because I said so" basis. Rather they would prefer having a reason and well thought out decisions for different courses of action.  In addition there are many different types of costs. 
 
 What are some cost and examples of those costs relating to SE?
 
@@ -76,14 +65,5 @@ What are some cost and examples of those costs relating to SE?
 Financial, resource, personnel, transaction(taking action), opportunity(not taking action), and societal costs
 </details>
 
-
-Big take aways:
-expertise, smaller changes frequesntly
-
 **Takeaways**
-looking back at decision and making mistakes. thie choice to tackel the compiler and not wait till it grew worse and worse. Addressing isues where they are and not shying away from them. Smaller changes more frequently then more accostumed and adapted to changes. 
-
-
-## Reflection
-
-But how does this relate to us?
+One large takeaway from this chapter was thinking about mistakes and decision making. It is important to tackle bugs and challenges as soon as they arise. Often if people waits to address different issues that will make them harder to fix in the long run. This was addressed when thinking about the compiler change at Google in 2006. If Google had waited longer to tackel the compiler because they knew it was going to be a hard job, that would have only made the job harder and larger. Addressing isues where they are and not shying away from them is important. In addition, moving forward it is impotant to think about the impact that smaller, more frequently, changes can help prevent massive changes in computing tools.

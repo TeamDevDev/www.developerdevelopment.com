@@ -1,5 +1,5 @@
 ---
-author: [Chezka Quinola, Rebeka Rudd, Gregory M. Kapfhammer]
+author: [Chezka Quinola, Rebekah Rudd, Gregory M. Kapfhammer]
 title: Getting Coverage
 date: '2024-09-04'
 date-format: long

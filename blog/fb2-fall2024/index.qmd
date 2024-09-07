@@ -34,7 +34,7 @@ In CGI encoding, the string `"Hello, world!"` would thus become `"Hello%2c+world
 
 </details>
 
-###### If we had a function that could take an encoded string and decode it to its original form, how would we systematically test that function?
+###### If we had a function that could take an encoded string and decode it to its original form, how would that function look like?
 <details>
 <summary>Expand cell to see the `cgi_decode()` function:</summary>
 
@@ -81,6 +81,7 @@ As mentioned before, we can test the `cgi_decode()` function with two different 
 
 ### Black-box testing
 In the above case, we thus would have to test `cgi_decode()` by the features specified and documented, including
+
 * testing for correct replacement of `'+'`;
 * testing for correct replacement of `"%xx"`;
 * testing for non-replacement of other characters; and

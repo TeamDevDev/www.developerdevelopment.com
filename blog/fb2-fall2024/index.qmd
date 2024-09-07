@@ -130,11 +130,11 @@ Using automatically generated tests and checking their coverage is a great start
 
 ## Reflection
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lacus sodales, elementum lectus non, rutrum lectus. Etiam in ante ipsum. Cras eu tortor vel mauris ornare ultrices. Quisque non nisl a ante aliquet pellentesque. Praesent a pellentesque felis. Maecenas scelerisque elit ac neque condimentum fermentum. Mauris non nisl odio. Aenean a gravida metus, sit amet venenatis nunc. Suspendisse luctus libero eget nulla aliquam, sed sagittis ex facilisis. Vivamus faucibus fermentum lorem, fringilla tincidunt enim semper nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+This post helped us understand how black-box and white-box testing play complementary roles in improving test coverage. Black-box testing checks if a program behaves as expected based on its specifications, while white-box testing ensures that all code paths are executed by examining the internal structure. Together, they provide a more thorough approach to testing, ensuring that both expected behaviors and edge cases are accounted for. Code coverage tracking, especially with tools like fuzzing, helps identify untested areas, improving overall test effectiveness and ensuring a more robust program.
 
 ## Action Items
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lacus sodales, elementum lectus non, rutrum lectus. Etiam in ante ipsum. Cras eu tortor vel mauris ornare ultrices. Quisque non nisl a ante aliquet pellentesque. Praesent a pellentesque felis. Maecenas scelerisque elit ac neque condimentum fermentum. Mauris non nisl odio. Aenean a gravida metus, sit amet venenatis nunc. Suspendisse luctus libero eget nulla aliquam, sed sagittis ex facilisis. Vivamus faucibus fermentum lorem, fringilla tincidunt enim semper nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+As we progress with fuzzing and code coverage analysis, it's crucial to prioritize writing tests that not only improve coverage but are sustainable and well-documented. We must ensure that our fuzz tests are clear and adaptable, making it easier for others to understand the test logic and the areas of code they target. By emphasizing maintainability in our coverage tracking and testing processes, we'll create a more resilient tool that can be expanded and enhanced long-term, serving the Allegheny College community and beyond.
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

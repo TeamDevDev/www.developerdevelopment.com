@@ -1,5 +1,5 @@
 ---
-author: [Chezka Quinola, Rebekah Rudd Gregory M. Kapfhammer]
+author: [Chezka Quinola, Rebekah Rudd, Gregory M. Kapfhammer]
 title: What is Software Engineering?
 date: '2024-9-8'
 date-format: long

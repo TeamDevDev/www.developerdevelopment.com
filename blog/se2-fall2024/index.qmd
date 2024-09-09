@@ -127,9 +127,9 @@ taking action), and societal costs
 
 ## Takeaways
 
-One large takeaway from this chapter was thinking about mistakes and decision
+One major takeaway from this chapter was thinking about mistakes and decision
 making. It is important to tackle bugs and challenges as soon as they arise.
-Often if people waits to address different issues that will make them harder to
+Often if people wait to address different issues that will make them harder to
 fix in the long run. This was addressed when thinking about the compiler change
 at Google in 2006. If Google had waited longer to tackle the compiler because
 they knew it was going to be a hard job, that would have only made the job

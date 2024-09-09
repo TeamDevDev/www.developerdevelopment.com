@@ -54,13 +54,14 @@ The span of a project is relevant because it relates to how much a software
 engineer can expect the underlying to change. Does all the underlying code need
 to change in an upgrade or just parts? Here is a
 [graph](https://abseil.io/resources/swe-book/html/images/seag_0101.png) that
-visualizes the relationship between life span of a project and code changes and
-upgrades. 
+visualizes the relationship between the life span of a project and code changes
+and upgrades. 
 
-Hyrum law is something else that is considered in this section. Hyrum's Law has
-to do with the difference between code working and it being maintainable. It
-also introduces the concept, that no matter what the project all the code and
-functions of the project will be used and relied on in some way.
+[Hyrum's Law](https://www.hyrumslaw.com/) is something else that is considered
+in this section. Hyrum's Law has to do with the difference between code working
+and it being maintainable. It also introduces the concept that --- no matter
+what the project --- all the code and functions of the project will be used and
+relied on in some way.
 
 ### Scale and Efficiency
 

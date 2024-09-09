@@ -78,11 +78,12 @@ Scale and efficiency also has to do with scale not only of code and the database
 but of people. Google considers the code people write for their codebase and
 then considers if one person will be able to maintain it and care for it over
 the years or if it will constantly require more people to maintain and at what
-rates. Google considers if the amount of work scales up as the codebase does.
-One aspect that increases efficiency and effectiveness are having lots of
-expertise in your personnel so that it would only take one person to do multiple
-different jobs. Another aspect to consider in automation. By automating
-different aspects not needing as much man power to fill those roles. 
+rates. Google considers whether or not the amount of work scales up as the
+codebase does. One aspect that increases efficiency and effectiveness are having
+lots of expertise in your personnel so that it would only take one person to do
+multiple different jobs. Another aspect to consider in automation since, by
+automating different aspects of a process an organization may not need as many
+people to fill those roles. 
 
 The discussion of scale and efficiency relates to the topic of software
 sustainability. And what is software sustainability? Software sustainability is

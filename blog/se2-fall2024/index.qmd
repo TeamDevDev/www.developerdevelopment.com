@@ -102,7 +102,7 @@ depicting?
 
 The cost of finding bugs can vary based on when in the development process you
 find them. The goal is to find the bugs as early in the process as possible so
-the changes don't cost as much as it would, after deploying your aftifact.
+the changes don't cost as much as it would, after deploying your artifact. 
 
 </details>
 

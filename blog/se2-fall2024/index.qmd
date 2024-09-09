@@ -110,10 +110,10 @@ the changes don't cost as much as it would, after deploying your artifact.
 
 Trade-offs are always present, but they are present in different ways. The are
 present in both decisions for the code base and in personal time and effort. One
-big idea Google considers is not making decisions on a "because I said so"
-basis. Rather they would prefer having a reason and well thought out decisions
-for different courses of action.  In addition there are many different types of
-costs. 
+big idea that Google considers is not making decisions on a "because I said so"
+basis. Rather they would prefer to have a reason and well-thought-out decisions
+for different courses of action. In addition, there are many different types of
+costs that a software engineering team must consider!
 
 What are some cost and examples of those costs relating to software engineering?
 

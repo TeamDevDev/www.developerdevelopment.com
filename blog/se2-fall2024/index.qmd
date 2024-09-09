@@ -14,10 +14,23 @@ page-layout: full
 This article is about the ["What is Software
 Engineering?"](https://abseil.io/resources/swe-book/html/ch01.html) chapter in
 the [Software Engineering at Google book](https://abseil.io/resources/swe-book).
+This article goes into more depth of discussion on the differences between
+software engineering (SE) and programming. This chapter of the book takes the
+main themes and ideas that we learned about last week such as time and change,
+scale and growth, and trade-offs and costs. The chapter considers these topics
+with a greater focus in discussing how Google considers these topics, along with
+providing different examples about the importance of these topics from their own
+experience. 
 
-This article goes into more depth of discussion on the differences between software enginnering(SE) and programming. This chapter of the book takes the main themes and ideas that we learned about last week such as time and change, scale and growth, and trade-offs and costs. The chapter considers these topics with a greater focus in discussing how Google considers these topics, along with provididng different examples about the importance of these topics from their own experience. 
-
-In Dr.Kapfhammer's podcast with Hyram Wright, Hyram give us a picture for thinking about how programming differs from a software engineer: he compares it with a carpenter and building a house. Different thoughts a considerations go into both. The book uses some different metaphors that might be helpful. "SE is programming integrated over time," and so the book expands on this idea of SE brining programming into a new dimmension. Think of the relationship between a square and a cube or speed to velocity (speed over time). 
+In the podcast interview [SE Radio 609: Hyrum Wright on Software Engineering at
+Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/),
+Hyrum give us a picture for thinking about how programming differs from a
+software engineer: he compares it with a carpenter and building a house.
+Different thoughts a considerations go into both. The book uses some different
+metaphors that might be helpful. "SE is programming integrated over time," and
+so the book expands on this idea of SE braining programming into a new
+dimension. Think of the relationship between a square and a cube or speed to
+velocity (speed over time). 
 
 [SE Radio 609: Hyrum Wright on Software Engineering at
 Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/)

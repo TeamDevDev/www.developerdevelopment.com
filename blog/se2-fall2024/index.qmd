@@ -115,7 +115,7 @@ basis. Rather they would prefer having a reason and well thought out decisions
 for different courses of action.  In addition there are many different types of
 costs. 
 
-What are some cost and examples of those costs relating to SE?
+What are some cost and examples of those costs relating to software engineering?
 
 <details>
 <summary>Click to Expand for categories the book referenced</summary>

@@ -16,11 +16,11 @@ Engineering?"](https://abseil.io/resources/swe-book/html/ch01.html) chapter in
 the [Software Engineering at Google book](https://abseil.io/resources/swe-book).
 This article goes into more depth of discussion on the differences between
 software engineering (SE) and programming. This chapter of the book takes the
-main themes and ideas that we learned about last week such as time and change,
-scale and growth, and trade-offs and costs. The chapter considers these topics
-with a greater focus in discussing how Google considers these topics, along with
-providing different examples about the importance of these topics from their own
-experience. 
+main themes and ideas that we discussed last week --- such as time and change,
+scale and growth, and trade-offs and costs --- and develops them further. The
+chapter considers these topics with a greater focus in discussing how Google
+considers these topics, along with providing different examples about the
+importance of these topics from their own experience. 
 
 In the podcast interview [SE Radio 609: Hyrum Wright on Software Engineering at
 Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/),

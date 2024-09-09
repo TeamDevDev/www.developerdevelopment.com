@@ -32,14 +32,18 @@ over time," and so the book expands on this idea of software engineering
 bringing programming into a new dimension. Think of the relationship between a
 square and a cube or speed to velocity (speed over time). 
 
-Where do computer science and/or programming and software engineering overlap?
+**Where do computer science and/or programming and software engineering
+overlap?**
 
-<details> <summary>Click to Expand for the Answer</summary> The overlap in the
-  area of software development. With that said, software engineering also
-  considers not only development, but also modification and maintenance.
+<details> <summary>Click to Expand for the Answer</summary>
+
+  The overlap in the area of software development. With that said, software
+  engineering also considers not only development, but also modification and
+  maintenance.
+
 </details>
 
-## Delving Back In
+## Further Explorations
 
 ### Time and Change
 

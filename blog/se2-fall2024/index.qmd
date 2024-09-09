@@ -131,9 +131,9 @@ One major takeaway from this chapter was thinking about mistakes and decision
 making. It is important to tackle bugs and challenges as soon as they arise.
 Often if people wait to address different issues that will make them harder to
 fix in the long run. This was addressed when thinking about the compiler change
-at Google in 2006. If Google had waited longer to tackle the compiler because
-they knew it was going to be a hard job, that would have only made the job
-harder and larger. Addressing issues where they are and not shying away from
-them is important. In addition, moving forward it is important to think about
-the impact that smaller, more frequently, changes can help prevent massive
-changes in computing tools.
+at Google in 2006. If Google had waited longer to tackle the upgrading of the
+compiler because they knew it was going to be a hard job, that would have only
+made the job harder and more challenging. Addressing issues where they are and
+not shying away from them is important. In addition, moving forward it is
+important to think about the impact that smaller, more frequent, changes can
+help prevent massive changes in computing tools.

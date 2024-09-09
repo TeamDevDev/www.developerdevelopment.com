@@ -24,13 +24,14 @@ importance of these topics from their own experience.
 
 In the podcast interview [SE Radio 609: Hyrum Wright on Software Engineering at
 Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/),
-Hyrum give us a picture for thinking about how programming differs from a
-software engineer: he compares it with a carpenter and building a house.
-Different thoughts a considerations go into both. The book uses some different
-metaphors that might be helpful. "software engineering is programming integrated
-over time," and so the book expands on this idea of software engineering
-bringing programming into a new dimension. Think of the relationship between a
-square and a cube or speed to velocity (speed over time). 
+Hyrum gives us a picture for thinking about how programming differs from
+software engineering: he compares it with a carpenter and building a house.
+Different thoughts and considerations go into both. The book uses some different
+metaphors that might be helpful. For instance, the chapter explains that
+"software engineering is programming integrated over time," and so the book
+expands on this idea of software engineering bringing programming into a new
+dimension. Intuitively, you can think of the relationship between a square and a
+cube or speed to velocity (i.e., speed over time). 
 
 **Where do computer science and/or programming and software engineering
 overlap?**

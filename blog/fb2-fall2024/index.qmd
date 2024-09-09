@@ -11,30 +11,48 @@ page-layout: full
 
 ## Overview
 
-We're excited to share our first post about *[The Fuzzing Book](https://www.fuzzingbook.org/)*! In this post, we'll explain what code coverage is and how it helps us check how well our tests work. Code coverage shows us which parts of a program are actually used when a test runs. It helps us assess how effectively a test suite exercises a program, especially when bugs are scarce. By measuring which parts of the code are executed during a test run, we can gauge the thoroughness of our tests and identify potential areas that may require additional scrutiny. This can be especially useful when there aren’t many bugs, helping us see how much of the program is being tested. We'll also talk about different ways to measure this and make sure our tests are properly working.
+We're excited to share our first post about *[The Fuzzing Book](https://www.fuzzingbook.org/)*! 
+In this post, we'll explain what code coverage is and how it helps us check how well our tests 
+work. Code coverage shows us which parts of a program are actually used when a test runs. It 
+helps us assess how effectively a test suite exercises a program, especially when bugs are 
+scarce. By measuring which parts of the code are executed during a test run, we can gauge 
+the thoroughness of our tests and identify potential areas that may require additional 
+scrutiny. This can be especially useful when there aren’t many bugs, helping us see how
+much of the program is being tested. We'll also talk about different ways to measure this
+and make sure our tests are properly working.
 
 
 ## Summary
 
-We'll be exploring two main approaches to measuring coverage: black-box testing and white-box testing. These methods differ in how they create tests. Black-box testing focuses on the _specifications_ of the program (what the program is supposed to do), without looking at the internal code. On the other hand, white-box testing examines the program's _implementation_ (how the code is written) to guide the tests.
+We'll be exploring two main approaches to measuring coverage: black-box testing and white-box
+testing. These methods differ in how they create tests. Black-box testing focuses on 
+the _specifications_ of the program (what the program is supposed to do), without looking
+at the internal code. On the other hand, white-box testing examines the program's
+_implementation_ (how the code is written) to guide the tests.
 
-Understanding these types of testing is especially important for test generators, which aim to cover as much code as possible. But what exactly do black-box and white-box testing involve? Let's break it down further using a CGI decoder.
+Understanding these types of testing is especially important for test generators, which aim
+to cover as much code as possible. But what exactly do black-box and white-box testing involve? 
+Let's break it down further using a CGI decoder.
 
 ### CGI Decoder
-CGI encoding is used in URLs (i.e., Web addresses) to encode characters that would be invalid in a URL, such as blanks and certain punctuation:
+CGI encoding is used in URLs (i.e., Web addresses) to encode characters that would be invalid 
+in a URL, such as blanks and certain punctuation:
 
 - Blanks are replaced by `+`
-- Other invalid characters are replaced by `%xx`, where `xx` is the two-digit hexadecimal equivalent.
+- Other invalid characters are replaced by `%xx`, where `xx` is the two-digit hexadecimal 
+equivalent.
 
 ###### What do you think `"Hello, world!"` would look like if it was a cgi-encoded string?
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-In CGI encoding, the string `"Hello, world!"` would thus become `"Hello%2c+world%21"` where `2c` and `21` are the hexadecimal equivalents of ',' and '!', respectively.
+In CGI encoding, the string `"Hello, world!"` would thus become `"Hello%2c+world%21"` 
+where `2c` and `21` are the hexadecimal equivalents of ',' and '!', respectively.
 
 </details>
 
-###### If we had a function that could take an encoded string and decode it to its original form, how would that function look like?
+###### If we had a function that could take an encoded string and decode it to its 
+original form, how would that function look like?
 <details>
 <summary>Expand cell to see the `cgi_decode()` function:</summary>
 
@@ -77,17 +95,20 @@ def cgi_decode(s: str) -> str:
 
 ## How can we run tests?
 
-As mentioned before, we can test the `cgi_decode()` function with two different tests: _black-box testing_ and _white-box testing_.
+As mentioned before, we can test the `cgi_decode()` function with two different tests: 
+_black-box testing_ and _white-box testing_.
 
 ### Black-box testing
-In the above case, we thus would have to test `cgi_decode()` by the features specified and documented, including
+In the above case, we thus would have to test `cgi_decode()` by the features specified 
+and documented, including
 
 * testing for correct replacement of `'+'`;
 * testing for correct replacement of `"%xx"`;
 * testing for non-replacement of other characters; and
 * testing for recognition of illegal inputs.
 
-Here are four assertions (tests) that cover these four features.  We can see that they all pass:
+Here are four assertions (tests) that cover these four features.  We can see that they 
+all pass:
 
 ```py
 assert cgi_decode('+') == ' '
@@ -101,41 +122,84 @@ except ValueError:
     pass
 ```
 
-Black-box testing has the advantage of detecting errors in a program's expected behavior. Since it doesn't rely on the actual code, tests can be designed even before the program is built. However, the downside is that black-box testing focuses only on what the program is supposed to do, not how it does it. As a result, it may miss certain details in the implementation, leaving parts of the code untested because the tests are only based on the specifications and not the full scope of the code.
+Black-box testing has the advantage of detecting errors in a program's expected behavior. 
+Since it doesn't rely on the actual code, tests can be designed even before the program 
+is built. However, the downside is that black-box testing focuses only on what the program 
+is supposed to do, not how it does it. As a result, it may miss certain details in the 
+implementation, leaving parts of the code untested because the tests are only based on
+the specifications and not the full scope of the code.
 
 ### White-box testing
-White-Box testing is closely tied to the concept of covering structural features of the code. If a statement in the code is not executed during testing, for instance, this means that an error in this statement cannot be triggered either. White-Box testing thus introduces a number of coverage criteria that have to be fulfilled before the test can be said to be sufficient. The most frequently used coverage criteria are:
+White-Box testing is closely tied to the concept of covering structural features of the 
+code. If a statement in the code is not executed during testing, for instance, this means
+that an error in this statement cannot be triggered either. White-Box testing thus introduces a
+number of coverage criteria that have to be fulfilled before the test can be said to be
+sufficient. The most frequently used coverage criteria are:
 
 - _Statement coverage_ – each statement in the code must be executed by at least one test input.
-- _Branch coverage_ – each branch in the code must be taken by at least one test input. (This translates to each `if` and `while` decision once being true, and once being false.)
-Besides these, there are far more coverage criteria, including sequences of branches taken, loop iterations taken (zero, one, many), data flows between variable definitions and usages, and many more.
+- _Branch coverage_ – each branch in the code must be taken by at least one test input. (This 
+translates to each `if` and `while` decision once being true, and once being false.)
+Besides these, there are far more coverage criteria, including sequences of branches taken, 
+loop iterations taken (zero, one, many), data flows between variable definitions and usages,
+and many more.
 
-Let us consider `cgi_decode()`, above, and reason what we have to do such that each statement of the code is executed at least once. We'd have to cover:
+Let us consider `cgi_decode()`, above, and reason what we have to do such that each statement 
+of the code is executed at least once. We'd have to cover:
 
 - The block following `if c == '+'`
 - The two blocks following `if c == '%'` (one for valid input, one for invalid)
 - The final `else` case for all other characters.
 
-This creates a situation similar to black-box testing, where the tests focus on specified behaviors. This happens often because programmers usually implement different behaviors in separate parts of the code. By testing those specific locations, the tests naturally end up covering the various behaviors outlined in the program's specification. So, even though the tests are based on the program's behavior, they still manage to cover much of the underlying code. The downside is that it may miss _non-implemented_ behavior: If some specified functionality is missing, white-box testing will not find it.
+This creates a situation similar to black-box testing, where the tests focus on specified 
+behaviors. This happens often because programmers usually implement different behaviors in separate
+parts of the code. By testing those specific locations, the tests naturally end up covering 
+the various behaviors outlined in the program's specification. So, even though the tests are based
+on the program's behavior, they still manage to cover much of the underlying code. The downside 
+is that it may miss _non-implemented_ behavior: If some specified functionality is missing, 
+white-box testing will not find it.
 
 ### Tracing executions
-A great advantage of white-box testing is that it allows automatic tracking of whether certain parts of the code were executed during testing. This is done by adding special functionality to monitor the program's execution. As the program runs, this functionality records which lines of code were executed, and afterward, this data is provided to the programmer. The programmer can then focus on creating tests to cover any uncovered parts of the code.
+A great advantage of white-box testing is that it allows automatic tracking of whether 
+certain parts of the code were executed during testing. This is done by adding special
+functionality to monitor the program's execution. As the program runs, this functionality 
+records which lines of code were executed, and afterward, this data is provided to the 
+programmer. The programmer can then focus on creating tests to cover any uncovered parts 
+of the code.
 
-An important part of white-box testing is "tracing." In Python, tracing can be automated with the `sys.settrace(f)` command, where `f` is a function that the interpreter calls every time a line of code is executed. By analyzing this tracing data, you can determine the code coverage—the percentage of code that has been tested. Higher coverage is better, as it indicates that more of the code has been tested, reducing the likelihood of undetected errors.
+An important part of white-box testing is "tracing." In Python, tracing can be automated 
+with the `sys.settrace(f)` command, where `f` is a function that the interpreter calls every
+time a line of code is executed. By analyzing this tracing data, you can determine the code 
+coverage—the percentage of code that has been tested. Higher coverage is better, as it 
+indicates that more of the code has been tested, reducing the likelihood of undetected errors.
 
 ::: {.callout-note appearance="minimal"}
 
-Using automatically generated tests and checking their coverage is a great starting point to evaluate their effectiveness. Once you've compared coverage across different test generation methods, you can determine which approach works best for the developers' needs. This is where fuzzing comes into play—a form of testing that can be automatically tracked for coverage and is especially useful when other methods fall short.
+Using automatically generated tests and checking their coverage is a great starting point 
+to evaluate their effectiveness. Once you've compared coverage across different test generation
+methods, you can determine which approach works best for the developers' needs. This is 
+where fuzzing comes into play—a form of testing that can be automatically tracked for 
+coverage and is especially useful when other methods fall short.
 
 :::
 
 ## Reflection
 
-This post helped us understand how black-box and white-box testing play complementary roles in improving test coverage. Black-box testing checks if a program behaves as expected based on its specifications, while white-box testing ensures that all code paths are executed by examining the internal structure. Together, they provide a more thorough approach to testing, ensuring that both expected behaviors and edge cases are accounted for. Code coverage tracking, especially with tools like fuzzing, helps identify untested areas, improving overall test effectiveness and ensuring a more robust program.
+This post helped us understand how black-box and white-box testing play complementary roles 
+in improving test coverage. Black-box testing checks if a program behaves as expected based
+on its specifications, while white-box testing ensures that all code paths are executed 
+by examining the internal structure. Together, they provide a more thorough approach to 
+testing, ensuring that both expected behaviors and edge cases are accounted for. Code 
+coverage tracking, especially with tools like fuzzing, helps identify untested areas, 
+improving overall test effectiveness and ensuring a more robust program.
 
 ## Action Items
 
-As we progress with fuzzing and code coverage analysis, it's crucial to prioritize writing tests that not only improve coverage but are sustainable and well-documented. We must ensure that our fuzz tests are clear and adaptable, making it easier for others to understand the test logic and the areas of code they target. By emphasizing maintainability in our coverage tracking and testing processes, we'll create a more resilient tool that can be expanded and enhanced long-term, serving the Allegheny College community and beyond.
+As we progress with fuzzing and code coverage analysis, it's crucial to prioritize writing
+tests that not only improve coverage but are sustainable and well-documented. We must ensure 
+that our fuzz tests are clear and adaptable, making it easier for others to understand the
+test logic and the areas of code they target. By emphasizing maintainability in our coverage
+tracking and testing processes, we'll create a more resilient tool that can be expanded and 
+enhanced long-term, serving the Allegheny College community and beyond.
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

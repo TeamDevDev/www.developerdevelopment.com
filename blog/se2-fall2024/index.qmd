@@ -90,12 +90,12 @@ sustainability. And what is software sustainability? Software sustainability is
 the idea of how manageable and how much will it cost to say run all the code or
 how many people does it take to maintain parts of the code and are these
 processes cost effective. This also relates to the idea of upgrading software
-and how that process will go. The Book actually mentions that Google has come to
+and how that process will go. The book actually mentions that Google has come to
 their process of sustainability by mostly trail and error. 
 
-What is this graph below depicting?
-
-![](shifting_left.png)
+What is this
+[graph](https://abseil.io/resources/swe-book/html/images/seag_0102.png)
+depicting?
 
 <details>
 <summary>Click to Expand for the Answer</summary>

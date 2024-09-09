@@ -1,7 +1,7 @@
 ---
 author: [Chezka Quinola, Rebekah Rudd, Gregory M. Kapfhammer]
 title: What is Software Engineering?
-date: '2024-9-8'
+date: '2024-9-9'
 date-format: long
 categories: [post, professional development, software engineering]
 description: <em>What is software engineering and how does it differ from computer science?</em>

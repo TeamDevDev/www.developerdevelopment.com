@@ -120,8 +120,9 @@ What are some cost and examples of those costs relating to software engineering?
 <details>
 <summary>Click to Expand for categories the book referenced</summary>
 
-Financial, resource, personnel, transaction (taking action), opportunity (not
-taking action), and societal costs
+Here are some of the costs to consider: financial, resource, personnel,
+transaction (i.e., taking action), opportunity (i.e., not taking action), and
+societal costs.
 
 </details>
 

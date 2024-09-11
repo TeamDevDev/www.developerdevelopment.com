@@ -43,8 +43,8 @@ CGI encoding is used in URLs (i.e., Web addresses) to encode characters that
 would be invalid in a URL, such as blanks and certain punctuation:
 
 - Blanks are replaced by `+`
-- Other invalid characters are replaced by `%xx`, where `xx` is the two-digit hexadecimal 
-equivalent.
+- Other invalid characters are replaced by `%xx`, where `xx` is the two-digit
+hexadecimal equivalent.
 
 ###### What do you think `"Hello, world!"` would look like if it was a CGI-encoded string?
 
@@ -56,7 +56,7 @@ where `2c` and `21` are the hexadecimal equivalents of ',' and '!', respectively
 
 </details>
 
-###### If we had a function that could take an encoded string and decode it to its original form, how would that function look like?
+###### If we had a function that could take an encoded string and decode it to its original form, what would that function look like?
 
 <details>
 <summary>Expand cell to see the `cgi_decode()` function:</summary>

@@ -138,10 +138,10 @@ full scope of the code.
 
 ### White-box testing
 
-White-Box testing is closely tied to the concept of covering structural features
+White-box testing is closely tied to the concept of covering structural features
 of the code. If a statement in the code is not executed during testing, for
 instance, this means that an error in this statement cannot be triggered either.
-White-Box testing thus introduces a number of coverage criteria that have to be
+White-box testing thus introduces a number of coverage criteria that have to be
 fulfilled before the test can be said to be sufficient. The most frequently used
 coverage criteria are:
 

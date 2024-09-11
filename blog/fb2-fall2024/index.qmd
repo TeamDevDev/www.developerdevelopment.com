@@ -198,7 +198,7 @@ useful when other methods fall short.
 
 ## Reflection
 
-This post helped us understand how black-box and white-box testing play
+This post helped us to understand how black-box and white-box testing play
 complementary roles in improving test coverage. Black-box testing checks if a
 program behaves as expected based on its specifications, while white-box testing
 ensures that all code paths are executed by examining the internal structure.

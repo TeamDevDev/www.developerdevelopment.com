@@ -19,4 +19,20 @@ errors and their causes.
 
 Since a component of developing as a developer is the specification, design,
 implementation, testing, and deployment of production quality software, the
-students in this course focus creating and maintaining open source software.
+students in this course focus creating and maintaining open source software such
+as the following projects:
+
+- [Cellveyor](https://github.com/GatorEducator/cellveyor): Easily convey
+reports from Google Sheets to GitHub
+
+- [Chasten](https://github.com/AstuteSource/chasten): Check a program's AST for
+specific code patterns
+
+- [ExecExam](https://github.com/GatorEducator/execexam): Run executable
+examinations to assess programming skills
+
+- [GatorGrade](https://github.com/GatorEducator/gatorgrade): Python front-end
+for the GatorGrader assessment tool
+
+- [GatorGrader](https://github.com/GatorEducator/gatorgrader): Automated
+assessment for source code and writing

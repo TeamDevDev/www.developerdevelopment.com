@@ -39,11 +39,11 @@ tested, and maintained according to industry best practices.
 ## Schedule
 
 With the goal of enabling effective developer development, this web site
-features a sixteen-week schedule filled with activities that support the
-development of your professional and technical capacities and walk you through
-the implementation and release of two major software projects. Although this
-site is best used by an on-campus learner in the [Department of Computer and
-information Science](https://www.cis.allegheny.edu/) at [Allegheny
+features a [sixteen-week schedule](schedule/index.qmd) filled with activities
+that support the development of your professional and technical capacities and
+walk you through the implementation and release of two major software projects.
+Although this site is best used by an on-campus learner in the [Department of
+Computer and information Science](https://www.cis.allegheny.edu/) at [Allegheny
 College](https://www.allegheny.edu/), the resources and projects are all
 publicly available. For instance, the following provides a list of the three
 textbooks that developing developers use to hone their professional and

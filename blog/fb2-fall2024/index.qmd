@@ -1,6 +1,6 @@
 ---
 author: [Chezka Quinola, Rebekah Rudd, Gregory M. Kapfhammer]
-title: Getting Coverage
+title: Achieving Coverage
 date: '2024-09-11'
 date-format: long
 categories: [post, software engineering, fuzzing book]

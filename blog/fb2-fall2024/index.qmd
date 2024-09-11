@@ -11,38 +11,43 @@ page-layout: full
 
 ## Overview
 
-We're excited to share our first post about *[The Fuzzing Book](https://www.fuzzingbook.org/)*! 
-In this post, we'll explain what code coverage is and how it helps us check how well our tests 
-work. Code coverage shows us which parts of a program are actually used when a test runs. It 
-helps us assess how effectively a test suite exercises a program, especially when bugs are 
-scarce. By measuring which parts of the code are executed during a test run, we can gauge 
-the thoroughness of our tests and identify potential areas that may require additional 
-scrutiny. This can be especially useful when there aren’t many bugs, helping us see how
-much of the program is being tested. We'll also talk about different ways to measure this
-and make sure our tests are properly working.
-
+We're excited to share our first post about *[The Fuzzing
+Book](https://www.fuzzingbook.org/)*! In this post, we'll explain what code
+coverage is and how it helps us check how well our tests work. Code coverage
+shows us which parts of a program are actually used when a test runs. It helps
+us assess how effectively a test suite exercises a program, especially when bugs
+are scarce. By measuring which parts of the code are executed during a test run,
+we can gauge the thoroughness of our tests and identify potential areas that may
+require additional scrutiny. This can be especially useful when there aren't
+many bugs, helping us see how much of the program is being tested. We'll also
+talk about different ways to measure this and make sure our tests are properly
+working.
 
 ## Summary
 
-We'll be exploring two main approaches to measuring coverage: black-box testing and white-box
-testing. These methods differ in how they create tests. Black-box testing focuses on 
-the _specifications_ of the program (what the program is supposed to do), without looking
-at the internal code. On the other hand, white-box testing examines the program's
-_implementation_ (how the code is written) to guide the tests.
+We'll be exploring two main approaches to measuring coverage: black-box testing
+and white-box testing. These methods differ in how they create tests. Black-box
+testing focuses on the _specifications_ of the program (what the program is
+supposed to do), without looking at the internal code. On the other hand,
+white-box testing examines the program's _implementation_ (how the code is
+written) to guide the tests.
 
-Understanding these types of testing is especially important for test generators, which aim
-to cover as much code as possible. But what exactly do black-box and white-box testing involve? 
-Let's break it down further using a CGI decoder.
+Understanding these types of testing is especially important for test
+generators, which aim to cover as much code as possible. But what exactly do
+black-box and white-box testing involve? Let's break it down further using a CGI
+decoder.
 
 ### CGI Decoder
-CGI encoding is used in URLs (i.e., Web addresses) to encode characters that would be invalid 
-in a URL, such as blanks and certain punctuation:
+
+CGI encoding is used in URLs (i.e., Web addresses) to encode characters that
+would be invalid in a URL, such as blanks and certain punctuation:
 
 - Blanks are replaced by `+`
 - Other invalid characters are replaced by `%xx`, where `xx` is the two-digit hexadecimal 
 equivalent.
 
-###### What do you think `"Hello, world!"` would look like if it was a cgi-encoded string?
+###### What do you think `"Hello, world!"` would look like if it was a CGI-encoded string?
+
 <details>
 <summary>Click to Expand for the Answer</summary>
 
@@ -51,8 +56,8 @@ where `2c` and `21` are the hexadecimal equivalents of ',' and '!', respectively
 
 </details>
 
-###### If we had a function that could take an encoded string and decode it to its 
-original form, how would that function look like?
+###### If we had a function that could take an encoded string and decode it to its original form, how would that function look like?
+
 <details>
 <summary>Expand cell to see the `cgi_decode()` function:</summary>
 

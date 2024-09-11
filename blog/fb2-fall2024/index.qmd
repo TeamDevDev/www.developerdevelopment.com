@@ -1,7 +1,7 @@
 ---
 author: [Chezka Quinola, Rebekah Rudd, Gregory M. Kapfhammer]
 title: Getting Coverage
-date: '2024-09-04'
+date: '2024-09-11'
 date-format: long
 categories: [post, software engineering, fuzzing book]
 description: <em>How can we measure a test’s effectiveness when bugs are scarce?</em>

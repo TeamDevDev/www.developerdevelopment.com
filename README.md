@@ -17,3 +17,6 @@ techniques for generating software tests.
 **DB**): an interactive introduction to automated methods for finding programmer
 errors and their causes.
 
+Since a component of developing as a developer is the specification, design,
+implementation, testing, and deployment of production quality software, the
+students in this course focus creating and maintaining open source software.

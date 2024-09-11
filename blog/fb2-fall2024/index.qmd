@@ -100,8 +100,8 @@ def cgi_decode(s: str) -> str:
 
 ## How can we run tests?
 
-As mentioned before, we can test the `cgi_decode()` function with two different tests: 
-_black-box testing_ and _white-box testing_.
+As mentioned before, we can test the `cgi_decode()` function with two different
+approaches to testing: _black-box testing_ and _white-box testing_.
 
 ### Black-box testing
 

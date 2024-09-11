@@ -36,7 +36,7 @@ establish a confidence in their program's correctness, a developing developer
 aims to engineer and ship high-quality software that is designed, documented,
 tested, and maintained according to industry best practices.
 
-## Schedule
+## Course Schedule
 
 With the goal of enabling effective developer development, this web site
 features a [sixteen-week schedule](schedule/index.qmd) filled with activities
@@ -72,7 +72,7 @@ sixteen-week course will gain valuable perspectives and practical skills to
 enhance their abilities as a software engineering while collaboratively
 building and releasing two open-source tools.
 
-## Adventure
+## Awesome Adventure
 
 Interested in getting started on a developer development adventure? Begin here:
 
@@ -96,6 +96,29 @@ develop as developers!
 
 :::{#featured-posts}
 :::
+
+## Cool Software
+
+Since a key component of developing as a developer is the specification,
+design, implementation, testing, and deployment of production quality software,
+this site equips learners with the skills and tools to create and maintain
+open-source software projects, including (but not limited to) the software
+projects in the following list:
+
+- [Cellveyor](https://github.com/GatorEducator/cellveyor): Easily convey
+reports from Google Sheets to GitHub
+
+- [Chasten](https://github.com/AstuteSource/chasten): Check a program's AST for
+specific code patterns
+
+- [ExecExam](https://github.com/GatorEducator/execexam): Run executable
+examinations to assess programming skills
+
+- [GatorGrade](https://github.com/GatorEducator/gatorgrade): Python front-end
+for the GatorGrader assessment tool
+
+- [GatorGrader](https://github.com/GatorEducator/gatorgrader): Automated
+assessment for source code and writing
 
 ::: {.callout-note appearance="minimal" title="Developer Development Community"}
 

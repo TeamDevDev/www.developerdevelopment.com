@@ -35,6 +35,13 @@ This section draws analogies to rapid feedback in programming, advocating for te
 
 **Activity: What would our class do if we lost access to Professor Kapfhammer and/or his laptop?**
 
+<details> <summary>Click to Expand for the Answer</summary>
+ 
+ If we lost access to Kapfhammer's laptop we would not be able to push our work since we need his Pypi. This stresses the "Buss Factor" where it be better to have another place to push then just from one computer. However you also run in the problem if you can push from any computer then people might start pushing when we are not ready.
+
+ </details>
+
+
 ## Three Pillars of Social Interaction
 
 These pillars represent the non-negotiables when it comes to developing software in a team environment. By ensuring that these practices are followed, everyone has a
@@ -56,6 +63,12 @@ An important way to learn from a mistake you make is to take note of your failur
 This helps so in the future others will not make the same mistakes you did. 
 
 **Activity:  a person does not write a comment on code. People in the group start guessing what the code meant. In the end it causes bigger problems. Going through the list to write a post mortem.**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+First you would explain that the there was code with no comment. Also state that people started just taking guesses on the what it meant. Then you would state what got you to discover it which was it was causing bigger problems and to solve it figure out what the code really means and put a comment. Next you would do damage control and figure out what problem came from this. Then to not have this happen again make sure each person writes code comments for their code and that other people can explain it. In the end you learn that writing code comments is very important so there does not become bigger problems. It is also important to not point fingers and say that person has to fix it. You need to work as a group to fix it and make sure it does not happen again.
+
+</details>
 
 ## Reflection
 

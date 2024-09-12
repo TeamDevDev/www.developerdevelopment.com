@@ -1,0 +1,36 @@
+---
+author: [Aidan Dyga, Hannah Brown, Gregory M. Kapfhammer]
+title: How to Work Well On Teams
+date: '2024-9-16'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can we work better in software development teams?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+Working well in teams results in better software being developed. This chapter focuses on humility, respect, and trust as it discusses the best practices for working with others. The best software developers have mastered the art of teamwork and collaboration. In contrast with this, Brian Fitzpatrick highlights requests he received when building Google’s first open-source software platform, “Can you make it possible to create open source projects that start out hidden to the world and then are revealed when they’re ready?"
+
+**Activity: Think about all of the bugs in yourself as a software developer**
+
+## Summary
+
+Teamwork is definitely one of the most overlooked aspects of software engineering. Strong teams not only create better software but also foster a more dynamic, supportive environment that helps developers grow and solve complex problems more efficiently. This chapter contrasts the "Genius Myth," which idolizes individual achievements while neglecting collective efforts, with the "Bus Factor," which aims to reduce a project's dependence on a single individual. 
+
+Working alone increases the risk of mistakes, slows progress, and isolates knowledge, making collaboration essential for success. Throughout the article, Fitzpatrick stresses that even though individual focus is necessary for coding, frequent communication with the team is critical. By embracing teamwork and avoiding the tendency to hide work, software engineers can maximize their potential and avoid wasting time on misguided efforts.
+
+## The Genius Myth
+
+A genius myth is when someone thinks it is bad to share their work before they are done and ready. However that is not the case. Usually people feel scared and insecure to share their work early on due to making mistakes. Making mistakes is what makes you a genius.
+
+**Podcast Quote: Hyrum Wright 00:14:24  “A lot of engineers, myself included, a lot of early career engineers specifically can struggle with getting concrete and sometimes critical feedback on their code or their designs. It’s not that you’re a bad person, it’s that how can we help you improve your system? And the reaction to that is oftentimes we tend to hide things; we tend to keep it hidden until we think that we have the best product.”**
+
+## The Bus Factor
+
+While independent work may seem appealing, it can lead to unnecessary failure, missed opportunities for feedback, and slower progress. The "Bus Factor” stresses the need for shared knowledge to ensure a project’s survival if key contributors become unavailable. If Professor Kapfhammer gets hit by a bus, what would we do? How would we make new releases? How would his projects be maintained?
+
+This section draws analogies to rapid feedback in programming, advocating for teamwork to quickly detect flaws and adapt to changes. Earlier problems are in fact “cheaper” to solve and addressing them sooner minimizes the impact on overall project progress. Collaboration not only reduces risk but also accelerates problem-solving, ensuring that projects stay on track and are resilient to unexpected disruptions.
+
+**Activity: What would our class do if we lost access to Professor Kapfhammer and/or his laptop?**

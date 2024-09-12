@@ -34,3 +34,43 @@ While independent work may seem appealing, it can lead to unnecessary failure, m
 This section draws analogies to rapid feedback in programming, advocating for teamwork to quickly detect flaws and adapt to changes. Earlier problems are in fact “cheaper” to solve and addressing them sooner minimizes the impact on overall project progress. Collaboration not only reduces risk but also accelerates problem-solving, ensuring that projects stay on track and are resilient to unexpected disruptions.
 
 **Activity: What would our class do if we lost access to Professor Kapfhammer and/or his laptop?**
+
+## Three Pillars of Social Interaction
+
+These pillars represent the non-negotiables when it comes to developing software in a team environment. By ensuring that these practices are followed, everyone has a
+
+1. Humility: You are not the center of the universe (nor is your code!). You’re open to self-improvement.
+2. Respect: You care about others you work with.  You treat them kindly and appreciate their abilities and accomplishments.
+3. Trust: You believe others are competent and will do the right thing.
+
+## Blameless Post-Mortem Culture
+
+An important way to learn from a mistake you make is to take note of your failures. You should not just blame people for their failures but you should be able to explain what you got out of the failure and then what you are going to do with experience now. Usually, you write a post-mortem document to go over the failure it includes :
+- A short summary of what happened
+- A detailed explanation of the event starting from discovery to solving it
+- Main cause 
+- Did it have an impact and does anything need to be fixed?
+- List of things they will do to fix the problem then
+- What can be done to make sure it does not happen again
+- What was learned?
+This helps so in the future others will not make the same mistakes you did. 
+
+**Activity:  a person does not write a comment on code. People in the group start guessing what the code meant. In the end it causes bigger problems. Going through the list to write a post mortem.**
+
+## Reflection
+
+In the end it talks about being “Googley”. At first it had a meaning but over time it got confused. As a result, google made a set definition for what it meant. It means:
+- Being able to work with conflicting ideas while getting on a consensus
+- Be able to get and give feedback while also being able to see how it helps yourself and the team prosper
+- Being strive to big goals even when it might get hard at times
+- Being able to people who use the application first
+- Work well as  team and being able to help each other while working on togetherness
+- Professional about everything to be able to protect the team
+
+## Key Takeaways
+
+The most important takeaway from this chapter is that the best software engineers are the people who can work well with others. The Genius Myth and Bus Factor both demonstrate the importance of shared work and collaboration. By taking note of your failures as well, you can ensure you are constantly learning from your mistakes. All while considering these tips, it is important to remain respectful and follow the three pillars of social interaction. 
+
+
+
+

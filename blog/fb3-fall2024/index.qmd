@@ -1,0 +1,43 @@
+---
+author: [Aidan Dyga, Hannah Brown, Gregory M. Kapfhammer]
+title: Fuzzing; Breaking Things with Random Inputs
+date: '2024-9-18'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How we can use fuzzing to improve the quality of our code?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+Fuzzing is a very important part of software testing that involves trying to break things with random input. Throught the article, [Fuzzing: Breaking Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html)!, both high level fuzzing concepts as well as there low level implementations are provided. While fuzzing does not guarantee code is correct, it is another great process to test code through.
+
+## Summary
+
+Fuzzing is a crucial technique for generating robust test cases and improving code quality. By continuously running over an extended period, fuzzers help uncover a wide range of bugs, including **buffer overflows, missing error checks, and the presence of rogue numbers** in code. 
+
+In languages like C, fuzzing can also detect information leaks, ensuring that vulnerabilities are identified early and addressed to prevent potential security breaches. The Heartbleed Bug, a bug that was in the OpenSSL library, is one example of a real-world memory bug that fuzzing was able to discover. This process strengthens the overall reliability and security of software by exposing issues that may not surface during regular testing.
+
+**Activity: Considering your current knowledge of fuzzing, in what other languages do you think you could implement fuzzing?**
+
+### A Simple Fuzzer
+
+This is a very simple fuzzer that is implemented in the [Fuzzing: Breaking Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html)! book.
+
+```{python}
+import random
+def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) -> str:
+    """A string of up to `max_length` characters in the range [`char_start`, `char_start` + `char_range`)"""
+    string_length = random.randrange(0, max_length + 1)
+    out = ""
+    for i in range(0, string_length):
+        out += chr(random.randrange(char_start, char_start + char_range))
+    return out
+fuzzer()
+```
+**Activity: By looking at the code above, How do you think fuzzing larger scale programs could work?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+Fuzzing larger programs can take more time and be more computationally expensive. However, the computational time that fuzzing can save developers searching through bugs is very high.
+</details>

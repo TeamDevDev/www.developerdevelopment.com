@@ -41,3 +41,20 @@ fuzzer()
 <details> <summary>Click to Expand for the Answer</summary>
 Fuzzing larger programs can take more time and be more computationally expensive. However, the computational time that fuzzing can save developers searching through bugs is very high.
 </details>
+
+## Bugs Fuzzers Find 
+
+Fuzzers have helped people for a long time find errors that they need to fix. Some programs come with max length for inputs when it is triggered it is called buffer overflows. In languages without exceptions, errors are often indicated by special return codes. For example in C, getchar() reads characters from input and returns EOF when no more input is available. If a programmer writes a loop to read characters until a space is encountered and the input ends, getchar() will return EOF repeatedly. Since EOF is not equal to a space, the loop will never stop and will run indefinitely. If you give a random number input that might be too large, is less than what you want or is negative fuzzing can run into issues.
+
+### Checks 
+
+Even though errors can simply be found, if it was more discrete there needs to be more checks. Buffer overflows are a specific example of an issue where programs can access any part of memory, including areas that are uninitialized or not meant to be accessed. This offers high performance and control but increases the risk of mistakes. There are tools available to detect these problems during runtime, and they work well with fuzzing to improve reliability. In addition to general checkers for programs, you can create specific checkers tailored to your program. Assertions are a key technique for early error detection by verifying function inputs and results. While assertions can impact performance, they can be turned off in production code, with critical ones remaining active. They are particularly useful for checking the integrity of complex data structures. There is also the Mpypy a static checker that can detect type errors once argument types are correctly declared.
+
+## A Fuzzing Architecture
+
+Classes can be used to make the functionality described above to be implemented in more formats. A Runner is an object designed to execute a program or function with inputs. It has a run(input) method that returns a pair consisting of a result. The Runner base class offers a basic interface for more advanced runners. Subclasses extend this base class by adding new methods or overriding existing ones to enhance functionality. A fuzzer generates input data using the fuzz() method. The run() function forwards this input to a runner and returns the result. The runs() method repeats this process for a specified number of trials.
+
+## Reflection
+Overall Fuzzing or random inputs is an easy way to check programs. Bug fuzzers descover bugs related to how a program handles inputs. Then to catch errors have multiple concistency checkers.
+
+

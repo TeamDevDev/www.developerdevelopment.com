@@ -21,6 +21,10 @@ In languages like C, fuzzing can also detect information leaks, ensuring that vu
 
 **Activity: Considering your current knowledge of fuzzing, in what other languages do you think you could implement fuzzing?**
 
+<details> <summary>Click to Expand for the Answer</summary>
+Fuzzing can be implemented in many programming languages including: C, C++, Go, Python, Java, Rust, and JavaScript.
+</details>
+
 ### A Simple Fuzzer
 
 This is a very simple fuzzer that is implemented in the [Fuzzing: Breaking Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html)! book.
@@ -120,4 +124,7 @@ class ProgramRunner(Runner):
 </details>
 
 ## Reflection
-Overall Fuzzing is a great way to check programs. By discovering bugs related to how a program handles inputs, fuzzers can be very useful when testing code. Fuzzers can detect many types of erros including buffer overflows, missing error checks, and the precense of rogue numbers. 
+
+Overall Fuzzing is a great way to check programs. By discovering bugs related to how a program handles inputs, fuzzers can be very useful when testing code. Fuzzers can detect many types of errors including buffer overflows, missing error checks, and the precense of rogue numbers.
+
+**Activity: After learning more about fuzzing, how do you plan to use it in the future and what questions do you have about it?**

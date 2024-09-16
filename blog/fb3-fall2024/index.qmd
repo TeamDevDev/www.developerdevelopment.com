@@ -74,9 +74,9 @@ through bugs is potentially very high.
 
 ### Bugs Fuzzers Find 
 
-Fuzzers have helped people for a long time find errors that they need to fix.
-Some programs come with a max length for inputs, and when it is triggered it is
-called buffer overflows. 
+Fuzzers help developers to find errors that they need to fix. Some programs come
+with a max length for inputs, and when it is triggered it is called buffer
+overflows. 
 
 * In languages without exceptions, errors are often indicated by special return
 codes. For example in C, `getchar()` reads characters from input and returns
@@ -106,7 +106,7 @@ detect type errors** once argument types are correctly declared.
 
 ### Runners
 
-```{python}
+```python
 import subprocess
 from typing import Any, List, Tuple, Union
 

@@ -11,45 +11,96 @@ page-layout: full
 
 ## Overview
 
-This weeks chapter in the [Software Engineering at Google book](https://abseil.io/resources/swe-book)! focuses on teamwork. Working well in teams results in better software being developed. This chapter focuses on humility, respect, and trust as it discusses the best practices for working with others. The best software developers have mastered the art of teamwork and collaboration. In contrast with this, Brian Fitzpatrick highlights requests he received when building Google’s first open-source software platform, “Can you make it possible to create open source projects that start out hidden to the world and then are revealed when they’re ready?"
+This weeks chapter in the [Software Engineering at Google
+book](https://abseil.io/resources/swe-book) focuses on teamwork. Working well in
+teams results in better software being developed. This chapter focuses on
+humility, respect, and trust as it discusses the best practices for working with
+others. The best software developers have mastered the art of teamwork and
+collaboration. In contrast with this, Brian Fitzpatrick highlights requests he
+received when building Google’s first open-source software platform, “Can you
+make it possible to create open source projects that start out hidden to the
+world and then are revealed when they’re ready?"
 
 **Activity: Think about all of the bugs in yourself as a software developer.**
 
 ## Summary
 
-Teamwork is definitely one of the most overlooked aspects of software engineering. Strong teams not only create better software but also foster a more dynamic, supportive environment that helps developers grow and solve complex problems more efficiently. This chapter contrasts the "Genius Myth," which idolizes individual achievements while neglecting collective efforts, with the "Bus Factor," which aims to reduce a project's dependence on a single individual. 
+Teamwork is definitely one of the most overlooked aspects of software
+engineering. Strong teams not only create better software but also foster a more
+dynamic, supportive environment that helps developers grow and solve complex
+problems more efficiently. This chapter contrasts the "Genius Myth," which
+idolizes individual achievements while neglecting collective efforts, with the
+"Bus Factor," which aims to reduce a project's dependence on a single
+individual. 
 
-Working alone **increases the risk of mistakes, slows progress, and isolates knowledge**, making collaboration essential for success. Throughout the article, Fitzpatrick stresses that even though individual focus is necessary for coding, frequent communication with the team is critical. By embracing teamwork and avoiding the tendency to hide work, software engineers can maximize their potential and avoid wasting time on misguided efforts.
+Working alone **increases the risk of mistakes, slows progress, and isolates
+knowledge**, making collaboration essential for success. Throughout the article,
+Fitzpatrick stresses that even though individual focus is necessary for coding,
+frequent communication with the team is critical. By embracing teamwork and
+avoiding the tendency to hide work, software engineers can maximize their
+potential and avoid wasting time on misguided efforts.
 
 ### The Genius Myth
 
-A genius myth is when someone thinks it is bad to share their work before they are done and ready. However that is not the case. Usually people feel scared and insecure to share their work early on due to making mistakes. Making mistakes is what makes you a genius.
+A genius myth is when someone thinks it is bad to share their work before they
+are done and ready. However that is not the case. Usually people feel scared and
+insecure to share their work early on due to making mistakes. Making mistakes is
+what makes you a genius.
 
-**[SE Radio 609: Hyrum Wright on Software Engineering at Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/) (00:14:24), “A lot of engineers, myself included, a lot of early career engineers specifically can struggle with getting concrete and sometimes critical feedback on their code or their designs. It’s not that you’re a bad person, it’s that how can we help you improve your system? And the reaction to that is oftentimes we tend to hide things; we tend to keep it hidden until we think that we have the best product.”**
+**[SE Radio 609: Hyrum Wright on Software Engineering at
+Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/)
+(00:14:24), “A lot of engineers, myself included, a lot of early career
+engineers specifically can struggle with getting concrete and sometimes critical
+feedback on their code or their designs. It’s not that you’re a bad person, it’s
+that how can we help you improve your system? And the reaction to that is
+oftentimes we tend to hide things; we tend to keep it hidden until we think that
+we have the best product.”**
 
 ### The Bus Factor
 
-While independent work may seem appealing, it can lead to unnecessary failure, missed opportunities for feedback, and slower progress. The "Bus Factor” stresses the **need for shared knowledge to ensure a project’s survival if key contributors become unavailable**. If Professor Kapfhammer gets hit by a bus, what would we do? How would we make new releases? How would his projects be maintained?
+While independent work may seem appealing, it can lead to unnecessary failure,
+missed opportunities for feedback, and slower progress. The "Bus Factor”
+stresses the **need for shared knowledge to ensure a project’s survival if key
+contributors become unavailable**. If Professor Kapfhammer gets hit by a bus,
+what would we do? How would we make new releases? How would his projects be
+maintained?
 
-This section draws analogies to rapid feedback in programming, advocating for teamwork to quickly detect flaws and adapt to changes. Earlier problems are in fact “cheaper” to solve and addressing them sooner minimizes the impact on overall project progress. Collaboration not only reduces risk but also accelerates problem-solving, ensuring that projects stay on track and are resilient to unexpected disruptions.
+This section draws analogies to rapid feedback in programming, advocating for
+teamwork to quickly detect flaws and adapt to changes. Earlier problems are in
+fact “cheaper” to solve and addressing them sooner minimizes the impact on
+overall project progress. Collaboration not only reduces risk but also
+accelerates problem-solving, ensuring that projects stay on track and are
+resilient to unexpected disruptions.
 
-**Activity: What would our class do if we lost access to Professor Kapfhammer and/or his laptop?**
+**Activity: What would our class do if we lost access to Professor Kapfhammer
+and/or his laptop?**
 
 <details> <summary>Click to Expand for the Answer</summary>
-If we lost access to Professor Kapfhammer's laptop we would not be able to push our work since we need his login to PyPI. This stresses the "Bus Factor" where it would be better to have another place to push to. However, if you can push from any computer, then people might start pushing when we are not ready to actually deploy.
+If we lost access to Professor Kapfhammer's laptop we would not be able to push
+our work since we need his login to PyPI. This stresses the "Bus Factor" where
+it would be better to have another place to push to. However, if you can push
+from any computer, then people might start pushing when we are not ready to
+actually deploy.
 </details>
 
 ### Three Pillars of Social Interaction
 
-These pillars represent the non-negotiables when it comes to developing software in a team environment.
+These pillars represent the non-negotiables when it comes to developing software
+in a team environment.
 
-1. **Humility**: You are not the center of the universe (nor is your code!). You’re open to self-improvement.
-2. **Respect**: You care about others you work with.  You treat them kindly and appreciate their abilities and accomplishments.
+1. **Humility**: You are not the center of the universe (nor is your code!).
+   You’re open to self-improvement.
+2. **Respect**: You care about others you work with.  You treat them kindly and
+   appreciate their abilities and accomplishments.
 3. **Trust**: You believe others are competent and will do the right thing.
 
 ### Blameless Post-Mortem Culture
 
-An important way to learn from a mistake you make is to **take note of your failures**. You should not just blame people for their failures but you should be able to explain what you got out of the failure and then what you are going to do with experience now. Usually, you write a post-mortem document to go over the failure it includes:
+An important way to learn from a mistake you make is to **take note of your
+failures**. You should not just blame people for their failures but you should
+be able to explain what you got out of the failure and then what you are going
+to do with experience now. Usually, you write a post-mortem document to go over
+the failure it includes:
 
 * A short summary of what happened
 * A detailed explanation of the event starting from discovery to solving it
@@ -59,23 +110,43 @@ An important way to learn from a mistake you make is to **take note of your fail
 * What can be done to make sure it does not happen again
 * What was learned?
 
-**Activity: A person does not write a comment on code. People in the group start guessing what the code meant. In the end, it causes bigger problems. Go through the list above to think about a simple post-mortem.**
+**Activity: A person does not write a comment on code. People in the group start
+guessing what the code meant. In the end, it causes bigger problems. Go through
+the list above to think about a simple post-mortem.**
 
 <details> <summary>Click to Expand for the Answer</summary>
-First you would explain that the there was code with no comment. Also state that people started just taking guesses on the what it meant. Then you would state what got you to discover it which was it was causing bigger problems and to solve it figure out what the code really means and put a comment. Next you would do damage control and figure out what problem came from this. Then to not have this happen again make sure each person writes code comments for their code and that other people can explain it. In the end you learn that writing code comments is very important so there does not become bigger problems. It is also important to not point fingers and say that person has to fix it. You need to work as a group to fix it and make sure it does not happen again.
+First you would explain that the there was code with no comment. Also state that
+people started just taking guesses on the what it meant. Then you would state
+what got you to discover it which was it was causing bigger problems and to
+solve it figure out what the code really means and put a comment. Next you would
+do damage control and figure out what problem came from this. Then to not have
+this happen again make sure each person writes code comments for their code and
+that other people can explain it. In the end you learn that writing code
+comments is very important so there does not become bigger problems. It is also
+important to not point fingers and say that person has to fix it. You need to
+work as a group to fix it and make sure it does not happen again.
 </details>
 
 ### Being Googley
 
-In the end it talks about being “Googley”. At first it had a meaning but over time it got confused. As a result, google made a set definition for what it meant. It means:
+In the end of this chapter it talks about being "Googley". At first it had a
+meaning but over time it got confused. As a result, google made a set definition
+for what it meant. It means:
 
 * Being able to work with conflicting ideas while getting on a consensus
-* Be able to get and give feedback while also being able to see how it helps yourself and the team prosper
+* Be able to get and give feedback while also being able to see how it helps
+yourself and the team prosper
 * Being strive to big goals even when it might get hard at times
 * Being able to people who use the application first
-* Work well as  team and being able to help each other while working on togetherness
+* Work well as a team and being able to help each other while working on
+togetherness
 * Professional about everything to be able to protect the team
 
 ## Key Takeaways
 
-The most important takeaway from this chapter is that the best software engineers are the people who can work well with others. The Genius Myth and Bus Factor both demonstrate the importance of shared work and collaboration. By taking note of your failures as well, you can ensure you are constantly learning from your mistakes. All while considering these tips, it is important to remain respectful and follow the three pillars of social interaction. 
+The most important takeaway from this chapter is that the best software
+engineers are the people who can work well with others. The "Genius Myth" and
+"Bus Factor" both demonstrate the importance of shared work and collaboration.
+By taking note of your failures as well, you can ensure you are constantly
+learning from your mistakes. All while considering these tips, it is important
+to remain respectful and follow the three pillars of social interaction. 

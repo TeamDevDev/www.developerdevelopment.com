@@ -49,12 +49,12 @@ what makes you a genius.
 
 **[SE Radio 609: Hyrum Wright on Software Engineering at
 Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/)
-(00:14:24), “A lot of engineers, myself included, a lot of early career
+(00:14:24), "A lot of engineers, myself included, a lot of early career
 engineers specifically can struggle with getting concrete and sometimes critical
 feedback on their code or their designs. It’s not that you’re a bad person, it’s
 that how can we help you improve your system? And the reaction to that is
 oftentimes we tend to hide things; we tend to keep it hidden until we think that
-we have the best product.”**
+we have the best product."**
 
 ### The Bus Factor
 
@@ -67,7 +67,7 @@ maintained?
 
 This section draws analogies to rapid feedback in programming, advocating for
 teamwork to quickly detect flaws and adapt to changes. Earlier problems are in
-fact “cheaper” to solve and addressing them sooner minimizes the impact on
+fact "cheaper" to solve and addressing them sooner minimizes the impact on
 overall project progress. Collaboration not only reduces risk but also
 accelerates problem-solving, ensuring that projects stay on track and are
 resilient to unexpected disruptions.
@@ -76,11 +76,14 @@ resilient to unexpected disruptions.
 and/or his laptop?**
 
 <details> <summary>Click to Expand for the Answer</summary>
-If we lost access to Professor Kapfhammer's laptop we would not be able to push
-our work since we need his login to PyPI. This stresses the "Bus Factor" where
-it would be better to have another place to push to. However, if you can push
-from any computer, then people might start pushing when we are not ready to
-actually deploy.
+
+  If we lost access to Professor Kapfhammer's laptop we would not be able to
+  push our work since we need his login to PyPI. This stresses the "Bus Factor"
+  where it would be better to have an automated way to deploy our system.
+  However, if you can push from any computer, then people might start pushing
+  when we are not ready to actually deploy. What is the best strategy to ensure
+  that we can effectively deploy our system?
+
 </details>
 
 ### Three Pillars of Social Interaction

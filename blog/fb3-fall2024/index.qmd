@@ -161,14 +161,14 @@ this runner does?**
 
 <details> <summary>Click to Expand for the Answer</summary>
 
-* A Runner is an object designed to execute a program or function with inputs. 
-* It has a run(input) method that returns a pair consisting of a result. 
-* The Runner base class offers a basic interface for more advanced runners. 
+* A `Runner` is an object designed to execute a program or function with inputs. 
+* It has a `run(input)` method that returns a pair consisting of a result. 
+* The `Runner` base class offers a basic interface for more advanced runners. 
 * Subclasses extend this base class by adding new methods or overriding
 existing ones to enhance functionality. 
-* A fuzzer generates input data using the fuzz() method. 
-* The run() function forwards this input to a runner and returns the result. 
-* The runs() method repeats this process for a specified number of trials.
+* A fuzzer generates input data using the `fuzz()` method. 
+* The `run()` function forwards this input to a runner and returns the result. 
+* The `runs()` method repeats this process for a specified number of trials.
 
 </details>
 

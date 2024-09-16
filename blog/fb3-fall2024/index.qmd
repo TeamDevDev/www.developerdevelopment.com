@@ -78,15 +78,15 @@ Fuzzers help developers to find errors that they need to fix. Some programs come
 with a max length for inputs, and when it is triggered it is called buffer
 overflows. 
 
-* In languages without exceptions, errors are often indicated by special return
-codes. For example in C, `getchar()` reads characters from input and returns
-`EOF` when no more input is available. 
+* In programming languages without exceptions, errors are often indicated by
+special return codes. For example in C, `getchar()` reads characters from input
+and returns `EOF` when no more input is available. 
 * If a programmer writes a loop to read characters until a space is encountered
 and the input ends, `getchar()` will return `EOF` repeatedly. 
 * Since `EOF` is not equal to a space, the loop will never stop and will run
 indefinitely. 
 * If you give a random number input that might be too large, is less than what
-you want or is negative fuzzing can run into issues.
+you want, or is negative fuzzing can run into termination issues.
 
 ### Checking for Errors
 

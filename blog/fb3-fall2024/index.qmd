@@ -90,18 +90,18 @@ you want, or is negative fuzzing can run into termination issues.
 
 ### Checking for Errors
 
-Even though errors can simply be found, if it was more discrete there needs to
-be more checks. Buffer overflows are a specific example of an issue where
-programs can **access any part of memory, including areas that are uninitialized
-or not meant to be accessed**. This offers high performance and control but
-increases the risk of mistakes. There are tools available to detect these
-problems during runtime, and they work well with fuzzing to improve reliability.
-In addition to general checkers for programs, you can create specific checkers
-tailored to your program. Assertions are a key technique for early error
-detection by verifying function inputs and results. While assertions can impact
-performance, they can be turned off in production code, with critical ones
-remaining active. They are particularly useful for checking the integrity of
-complex data structures. There is also the **`mypy` a static checker that can
+Even though errors can simply be found, if the input space is more discrete then
+there needs to be more checks. Buffer overflows are a specific example of an
+issue where programs can **access any part of memory, including areas that are
+uninitialized or not meant to be accessed**. This offers high performance and
+control but increases the risk of mistakes. There are tools available to detect
+these problems during runtime, and they work well with fuzzing to improve
+reliability. In addition to general checkers for programs, you can create
+specific checkers tailored to your program. Assertions are a key technique for
+early error detection by verifying function inputs and results. While assertions
+can impact performance, they can be turned off in production code, with critical
+ones remaining active. They are particularly useful for checking the integrity
+of complex data structures. There is also the **`mypy` a static checker that can
 detect type errors** once argument types are correctly declared.
 
 ### Runners

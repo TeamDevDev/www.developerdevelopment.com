@@ -11,13 +11,26 @@ page-layout: full
 
 ## Overview
 
-Fuzzing is a very important part of software testing that involves trying to break things with random input. Throught the article, [Fuzzing: Breaking Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html)!, both high level fuzzing concepts as well as there low level implementations are provided. While fuzzing does not guarantee code is correct, it is another great process to test code through.
+Fuzzing is a very important part of software testing that involves trying to
+break things with random input. Throughout the article, [Fuzzing: Breaking
+Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html)!, both
+high level fuzzing concepts as well as there low level implementations are
+provided. While fuzzing does not guarantee code is correct, it is another great
+process to test code through.
 
 ## Summary
 
-Fuzzing is a crucial technique for generating robust test cases and improving code quality. By continuously running over an extended period, fuzzers help uncover a wide range of bugs, including **buffer overflows, missing error checks, and the presence of rogue numbers** in code. 
+Fuzzing is a crucial technique for generating robust test cases and improving
+code quality. By continuously running over an extended period, fuzzers help
+uncover a wide range of bugs, including **buffer overflows, missing error
+checks, and the presence of rogue numbers** in code. 
 
-In languages like C, fuzzing can also detect information leaks, ensuring that vulnerabilities are identified early and addressed to prevent potential security breaches. The Heartbleed Bug, a bug that was in the OpenSSL library, is one example of a real-world memory bug that fuzzing was able to discover. This process strengthens the overall reliability and security of software by exposing issues that may not surface during regular testing.
+In languages like C, fuzzing can also detect information leaks, ensuring that
+vulnerabilities are identified early and addressed to prevent potential security
+breaches. The Heartbleed Bug, a bug that was in the OpenSSL library, is one
+example of a real-world memory bug that fuzzing was able to discover. This
+process strengthens the overall reliability and security of software by exposing
+issues that may not surface during regular testing.
 
 **Activity: Considering your current knowledge of fuzzing, in what other languages do you think you could implement fuzzing?**
 
@@ -27,7 +40,8 @@ Fuzzing can be implemented in many programming languages including: C, C++, Go, 
 
 ### A Simple Fuzzer
 
-This is a very simple fuzzer that is implemented in the [Fuzzing: Breaking Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html)! book.
+This is a very simple fuzzer that is implemented in the [Fuzzing: Breaking
+Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html) book.
 
 ```{python}
 import random
@@ -41,23 +55,47 @@ def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) ->
 fuzzer()
 ```
 
-**Activity: What do you think the benefits as well as tradeoffs are with fuzzing programs?**
+**Activity: What do you think the benefits as well as trade-offs are with fuzzing programs?**
 
 <details> <summary>Click to Expand for the Answer</summary>
-Fuzzing larger programs can take more time and be more computationally expensive. However, the computational time that fuzzing can save developers searching through bugs is very high.
+
+Fuzzing larger programs can take more time and be more computationally
+expensive. However, the computational time that fuzzing can save developers
+searching through bugs is very high.
+
 </details>
 
 ### Bugs Fuzzers Find 
 
-Fuzzers have helped people for a long time find errors that they need to fix. Some programs come with a max length for inputs, and when it is triggered it is called buffer overflows. 
-* In languages without exceptions, errors are often indicated by special return codes. For example in C, getchar() reads characters from input and returns EOF when no more input is available. 
-* If a programmer writes a loop to read characters until a space is encountered and the input ends, getchar() will return EOF repeatedly. 
-* Since EOF is not equal to a space, the loop will never stop and will run indefinitely. 
-* If you give a random number input that might be too large, is less than what you want or is negative fuzzing can run into issues.
+Fuzzers have helped people for a long time find errors that they need to fix.
+Some programs come with a max length for inputs, and when it is triggered it is
+called buffer overflows. 
+
+* In languages without exceptions, errors are often indicated by special return
+codes. For example in C, `getchar()` reads characters from input and returns
+`EOF` when no more input is available. 
+* If a programmer writes a loop to read characters until a space is encountered
+and the input ends, `getchar()` will return `EOF` repeatedly. 
+* Since `EOF` is not equal to a space, the loop will never stop and will run
+indefinitely. 
+* If you give a random number input that might be too large, is less than what
+you want or is negative fuzzing can run into issues.
 
 ### Checking for Errors
 
-Even though errors can simply be found, if it was more discrete there needs to be more checks. Buffer overflows are a specific example of an issue where programs can **access any part of memory, including areas that are uninitialized or not meant to be accessed**. This offers high performance and control but increases the risk of mistakes. There are tools available to detect these problems during runtime, and they work well with fuzzing to improve reliability. In addition to general checkers for programs, you can create specific checkers tailored to your program. Assertions are a key technique for early error detection by verifying function inputs and results. While assertions can impact performance, they can be turned off in production code, with critical ones remaining active. They are particularly useful for checking the integrity of complex data structures. There is also the **Mpypy a static checker that can detect type errors** once argument types are correctly declared.
+Even though errors can simply be found, if it was more discrete there needs to
+be more checks. Buffer overflows are a specific example of an issue where
+programs can **access any part of memory, including areas that are uninitialized
+or not meant to be accessed**. This offers high performance and control but
+increases the risk of mistakes. There are tools available to detect these
+problems during runtime, and they work well with fuzzing to improve reliability.
+In addition to general checkers for programs, you can create specific checkers
+tailored to your program. Assertions are a key technique for early error
+detection by verifying function inputs and results. While assertions can impact
+performance, they can be turned off in production code, with critical ones
+remaining active. They are particularly useful for checking the integrity of
+complex data structures. There is also the **`mypy` a static checker that can
+detect type errors** once argument types are correctly declared.
 
 ### Runners
 
@@ -111,20 +149,34 @@ class ProgramRunner(Runner):
         return (result, outcome)
 ```
 
-**Activity: How do you think the runner relates to fuzzing? What do you think this runner does?**
+**Activity: How do you think the runner relates to fuzzing? What do you think
+this runner does?**
 
 <details> <summary>Click to Expand for the Answer</summary>
+
 * A Runner is an object designed to execute a program or function with inputs. 
 * It has a run(input) method that returns a pair consisting of a result. 
 * The Runner base class offers a basic interface for more advanced runners. 
-* Subclasses extend this base class by adding new methods or overriding existing ones to enhance functionality. 
+* Subclasses extend this base class by adding new methods or overriding
+existing ones to enhance functionality. 
 * A fuzzer generates input data using the fuzz() method. 
 * The run() function forwards this input to a runner and returns the result. 
 * The runs() method repeats this process for a specified number of trials.
+
 </details>
 
 ## Reflection
 
-Overall Fuzzing is a great way to check programs. By discovering bugs related to how a program handles inputs, fuzzers can be very useful when testing code. Fuzzers can detect many types of errors including buffer overflows, missing error checks, and the precense of rogue numbers.
+Overall Fuzzing is a great way to check programs. By discovering bugs related to
+how a program handles inputs, fuzzers can be very useful when testing code.
+Fuzzers can detect many types of errors including buffer overflows, missing
+error checks, and the existence of rogue numbers.
 
-**Activity: After learning more about fuzzing, how do you plan to use it in the future and what questions do you have about it?**
+**Activity: After learning more about fuzzing, how do you plan to use it in the
+future and what questions do you have about it?**
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

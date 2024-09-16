@@ -1,0 +1,189 @@
+---
+author: [Aidan Dyga, Hannah Brown, Gregory M. Kapfhammer]
+title: Fuzzing&#58; Breaking Things with Random Inputs
+date: '2024-9-18'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How we can use fuzzing to improve the quality of our code?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+Fuzzing is a very important part of software testing that involves trying to
+break things with random input. Throughout the article, [Fuzzing: Breaking
+Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html), both
+high-level fuzzing concepts as well as there low-level implementations are
+provided. While fuzzing does not guarantee code is correct, it is another great
+process to test code through.
+
+## Summary
+
+Fuzzing is a crucial technique for generating robust test cases and improving
+code quality. By continuously running over an extended period, fuzzers help
+uncover a wide range of bugs, including **buffer overflows, missing error
+checks, and the presence of rogue numbers** in code. 
+
+In languages like C, fuzzing can also detect information leaks, ensuring that
+vulnerabilities are identified early and addressed to prevent potential security
+breaches. The Heartbleed Bug, a bug that was in the OpenSSL library, is one
+example of a real-world memory bug that fuzzing was able to discover. This
+process strengthens the overall reliability and security of software by exposing
+issues that may not surface during regular testing.
+
+**Activity: Considering your current knowledge of fuzzing, in what other
+languages do you think you could implement fuzzing?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+Fuzzing can be implemented in many programming languages including: C, C++, Go,
+Python, Java, Rust, and JavaScript.
+
+</details>
+
+### A Simple Fuzzer
+
+This is a very simple fuzzer that is implemented in the [Fuzzing: Breaking
+Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html) book.
+Note that the output of running the fuzzer will appear after this Python source
+code segment. What do you notice about the output? While it be the same each
+time this code is run?
+
+```{python}
+import random
+def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) -> str:
+    """A string of up to `max_length` characters in the range [`char_start`, `char_start` + `char_range`)"""
+    string_length = random.randrange(0, max_length + 1)
+    out = ""
+    for i in range(0, string_length):
+        out += chr(random.randrange(char_start, char_start + char_range))
+    return out
+fuzzer()
+```
+
+**Activity: What do you think the benefits as well as trade-offs are with fuzzing programs?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+Fuzzing larger programs can take more time and be more computationally
+expensive. However, the time that fuzzing can save developers from searching
+through bugs is potentially very high.
+
+</details>
+
+### Bugs Fuzzers Find 
+
+Fuzzers help developers to find errors that they need to fix. Some programs come
+with a max length for inputs, and when it is triggered it is called buffer
+overflows. 
+
+* In programming languages without exceptions, errors are often indicated by
+special return codes. For example in C, `getchar()` reads characters from input
+and returns `EOF` when no more input is available. 
+* If a programmer writes a loop to read characters until a space is encountered
+and the input ends, `getchar()` will return `EOF` repeatedly. 
+* Since `EOF` is not equal to a space, the loop will never stop and will run
+indefinitely. 
+* If you give a random number input that might be too large, is less than what
+you want, or is negative fuzzing can run into termination issues.
+
+### Checking for Errors
+
+Even though fuzzing find errors simply, if the input space is "more discrete"
+then there needs to be more checks. Buffer overflows are a specific example of
+an issue where programs can **access any part of memory, including areas that
+are uninitialized or not meant to be accessed**. This offers high performance
+and control but increases the risk of mistakes. There are tools available to
+detect these problems during runtime, and they work well with fuzzing to improve
+reliability. In addition to general checkers for programs, you can create
+specific checkers tailored to your program. Assertions are a key technique for
+early error detection by verifying function inputs and results. While assertions
+can impact performance, they can be turned off in production code, with critical
+ones remaining active. They are particularly useful for checking the integrity
+of complex data structures. There is also the **`mypy` a static checker that can
+detect type errors** once argument types are correctly declared.
+
+### Runners
+
+```python
+import subprocess
+from typing import Any, List, Tuple, Union
+
+
+class Runner:
+    """Base class for testing inputs."""
+
+    # Test outcomes
+    PASS = "PASS"
+    FAIL = "FAIL"
+    UNRESOLVED = "UNRESOLVED"
+
+    def __init__(self) -> None:
+        """Initialize"""
+        pass
+
+    def run(self, inp: str) -> Any:
+        """Run the runner with the given input"""
+        return (inp, Runner.UNRESOLVED)
+
+
+class ProgramRunner(Runner):
+    """Test a program with inputs."""
+
+    def __init__(self, program: Union[str, List[str]]) -> None:
+        """Initialize.`program` is a program spec as passed to `subprocess.run()`"""
+        self.program = program
+
+    def run_process(self, inp: str = "") -> subprocess.CompletedProcess:
+        """Run the program with `inp` as input. Return result of `subprocess.run()`."""
+        return subprocess.run(self.program,
+                              input=inp,
+                              stdout=subprocess.PIPE,
+                              stderr=subprocess.PIPE,
+                              universal_newlines=True)
+
+    def run(self, inp: str = "") -> Tuple[subprocess.CompletedProcess, str]:
+        """Run the program with `inp` as input. Return test outcome based on result of `subprocess.run()`."""
+        result = self.run_process(inp)
+
+        if result.returncode == 0:
+            outcome = self.PASS
+        elif result.returncode < 0:
+            outcome = self.FAIL
+        else:
+            outcome = self.UNRESOLVED
+        return (result, outcome)
+```
+
+**Activity: How do you think the runner relates to fuzzing? What do you think
+this runner does?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+* A `Runner` is an object designed to execute a program or function with inputs. 
+* It has a `run(input)` method that returns a pair consisting of a result. 
+* The `Runner` base class offers a basic interface for more advanced runners. 
+* Subclasses extend this base class by adding new methods or overriding
+existing ones to enhance functionality. 
+* A fuzzer generates input data using the `fuzz()` method. 
+* The `run()` function forwards this input to a runner and returns the result. 
+* The `runs()` method repeats this process for a specified number of trials.
+
+</details>
+
+## Reflection
+
+Overall, fuzzing is a great way to check programs. By discovering bugs related
+to how a program handles inputs, fuzzers can be very useful when testing code.
+Fuzzers can detect many types of errors including buffer overflows, missing
+error checks, and the existence of rogue numbers.
+
+**Activity: After learning more about fuzzing, how do you plan to use it in the
+future and what questions do you have about it?**
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

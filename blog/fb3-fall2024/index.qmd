@@ -174,8 +174,8 @@ existing ones to enhance functionality.
 
 ## Reflection
 
-Overall Fuzzing is a great way to check programs. By discovering bugs related to
-how a program handles inputs, fuzzers can be very useful when testing code.
+Overall, fuzzing is a great way to check programs. By discovering bugs related
+to how a program handles inputs, fuzzers can be very useful when testing code.
 Fuzzers can detect many types of errors including buffer overflows, missing
 error checks, and the existence of rogue numbers.
 

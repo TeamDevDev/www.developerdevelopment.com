@@ -11,13 +11,13 @@ page-layout: full
 
 ## Overview
 
-This weeks chapter in the [Software Engineering at Google
+This week's chapter in the [Software Engineering at Google
 book](https://abseil.io/resources/swe-book) focuses on teamwork. Working well in
-teams results in better software being developed. This chapter focuses on
+teams results in the development of better software. This chapter focuses on
 humility, respect, and trust as it discusses the best practices for working with
 others. The best software developers have mastered the art of teamwork and
 collaboration. In contrast with this, Brian Fitzpatrick highlights requests he
-received when building Google’s first open-source software platform, “Can you
+received when building Google’s first open-source software platform, "Can you
 make it possible to create open source projects that start out hidden to the
 world and then are revealed when they’re ready?"
 

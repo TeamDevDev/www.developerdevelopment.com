@@ -94,6 +94,11 @@ develop as developers!
 
 ## Recent Posts
 
+To best ensure that the on-campus learners develop individually as in their
+capacity as team members, every partners with the course instructor to draft,
+write, review, and publish [blog posts](blog/index.qmd) that support class
+discussions. Here are the most recent posts!
+
 :::{#featured-posts}
 :::
 

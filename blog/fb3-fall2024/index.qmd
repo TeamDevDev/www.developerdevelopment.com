@@ -13,7 +13,7 @@ page-layout: full
 
 Fuzzing is a very important part of software testing that involves trying to
 break things with random input. Throughout the article, [Fuzzing: Breaking
-Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html)!, both
+Things with Random Inputs](https://www.fuzzingbook.org/html/Fuzzer.html), both
 high level fuzzing concepts as well as there low level implementations are
 provided. While fuzzing does not guarantee code is correct, it is another great
 process to test code through.

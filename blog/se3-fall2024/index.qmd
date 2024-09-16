@@ -126,7 +126,7 @@ solve it figure out what the code really means and put a comment. Next you would
 do damage control and figure out what problem came from this. Then to not have
 this happen again make sure each person writes code comments for their code and
 that other people can explain it. In the end you learn that writing code
-comments is very important so there does not become bigger problems. It is also
+comments is very important so that bigger problems do not develop. It is also
 important to not point fingers and say that person has to fix it. You need to
 work as a group to fix it and make sure it does not happen again.
 
@@ -135,7 +135,7 @@ work as a group to fix it and make sure it does not happen again.
 ### Being Googley
 
 In the end of this chapter it talks about being "Googley". At first it had a
-meaning but over time it got confused. As a result, google made a set definition
+meaning but over time it got confused. As a result, Google made a set definition
 for what it meant. It means:
 
 * Being able to work with conflicting ideas while getting on a consensus

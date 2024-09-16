@@ -155,3 +155,6 @@ engineers are the people who can work well with others. The "Genius Myth" and
 By taking note of your failures as well, you can ensure you are constantly
 learning from your mistakes. All while considering these tips, it is important
 to remain respectful and follow the three pillars of social interaction.
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

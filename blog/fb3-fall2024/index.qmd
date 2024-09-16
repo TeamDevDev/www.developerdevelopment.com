@@ -32,10 +32,14 @@ example of a real-world memory bug that fuzzing was able to discover. This
 process strengthens the overall reliability and security of software by exposing
 issues that may not surface during regular testing.
 
-**Activity: Considering your current knowledge of fuzzing, in what other languages do you think you could implement fuzzing?**
+**Activity: Considering your current knowledge of fuzzing, in what other
+languages do you think you could implement fuzzing?**
 
 <details> <summary>Click to Expand for the Answer</summary>
-Fuzzing can be implemented in many programming languages including: C, C++, Go, Python, Java, Rust, and JavaScript.
+
+Fuzzing can be implemented in many programming languages including: C, C++, Go,
+Python, Java, Rust, and JavaScript.
+
 </details>
 
 ### A Simple Fuzzer

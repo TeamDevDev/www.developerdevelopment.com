@@ -1,0 +1,108 @@
+---
+author: [Titus Smith, Molly Suppo, Gregory M. Kapfhammer]
+title: Effective Knowledge Sharing
+date: '2024-9-20'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>What are the best knowledge sharing practices?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog focuses on the ["Knowledge
+Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) chapter of the [Software Engineering at Google book](https://abseil.io/resources/swe-book). Knowledge comes in many forms and is a crucial asset within a software engineering organization. In this article, we explore the challenges of learning and knowledge sharing and effective strategies for fostering a culture of collaboration and communication. Key topics include the phenomena of Information Islands, Psychological Safety, and Information Duplication, which hinder knowledge sharing. We also discuss various methods for scaling knowledge, such as group chats, mailing lists, and office hours, along with the importance of clear documentation and code review practices. We will be taking these practices and connecting them to our team’s current situation with [execexam](https://github.com/GatorEducator/execexam), as well as how this chapter builds on the concepts we discussed last week.
+
+## Summary
+
+### Challenges to Learning
+
+#### Information Islands
+
+#### Psychological Safety
+
+#### Information Fragmentation
+
+#### Information Duplication
+
+#### Information Skew
+
+#### Single Point of Failure (SPOF)
+
+#### All-or-nothing Expertise
+
+#### Parroting
+
+#### Haunted Graveyards
+
+### Chomper's Philosophy
+
+### Knowledge Sharing
+
+#### Scale Your Question
+
+Leveraging community-based learning will be a key aspect of achieving success in our software team. Google uses the following three approaches to enable knowledge seekers to get help from the broader community.
+
+##### Group Chats
+Group Chats are a great way to receive quick help or feedback since you can ask a question to many people at once, and anyone can jump in. These chats can be centered around certain topics or teams, enabling“experts” to answer questions swiftly. However, group chats are often unstructured, making it difficult to locate meaningful information later.
+
+##### Mailing Lists
+Mailing lists provide knowledge seekers the ability to ask questions to wide audiences in a structured manner and have the advantage of being archived for future reference. Mailing lists provide a space for complex questions but are not suitable for back-and-forth communication. Furthermore, information from archived lists may be outdated, so it is important to update the list if outdated information is found.
+
+##### Q&A Platforms
+Question and answer platforms offer a unique space to share specific and evolving questions with ‘exact’ answers. Google uses these platforms to discuss work-in-progress code segments while getting updated, helpful information. The Q&A platform structure makes it helpful for current and future references.
+
+**Discuss what tools we currently have in place that relate to Google's Group Chat/Mailing List/Q&A Platform** 
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+Our discord widely is used in a similar fashion to that of a Google group chat, where we are able to communicate with back and forth quickly with light structure. We then have specified chanels that handle topics and teams that can be seen as our version of a mailing list. We also use thse chanels as an avenue for Q&A type sharing due to the nature of sharing code blocks, terminal outputs and specified questions.
+
+</details>
+
+#### Scale Your Knowledge
+
+Teaching and learning go beyond being an “expert” or “novice” – everyone has varying levels of knowledge in various areas. To be a successful software team we need to share our “expertise” in a way that fosters productive learning. Here are some of the ways Google creates environments for productive knowledge sharing.
+
+##### Office Hours
+Attending scheduled meetings with experts can be a productive way to take advantage of someone's expertise to tackle complex or ambiguous problems. In our course, we can leverage the expertise of our various technical leaders, as well as Professor Kapfhammer during their office hours.
+
+##### Class Sessions
+Class sessions offer groups an opportunity to explore complex concepts together through hands-on activities and resource-intensive material. Class material can also be documented to be scaled and reused for future use. 
+
+**In what ways does our course use class sessions in a similar way to Google?**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+In our course, our colleagues take turns being the "expert" on a given concept(s). We utilize our Monday session explooring professional concepts and our Wednesday sessions exploring a technical concept.
+
+</details>
+
+##### Documentation
+Written knowledge is crucial in any form of knowledge sharing because clear, well-written documentation minimizes future confusion and improves organizational efficiency. When discussing documentation it is important to consider these key points:
+
+* Update documentation as you encounter it. If you find outdated documentation, leave it better than you found it!
+* Create documentation as you develop. Pave the path for those after you to succeed.
+* Promote writing clear documentation within your organization. Create a culture and standard for documentation within your organization.
+
+##### Code
+Code itself is a form of knowledge, therefor writing well-documented code and a system of code reviewing is extremely beneficial to a software team’s ability to efficiently produce bug fixes and new features. Doing the work upfront will help not only our team but the teams that will follow us.
+
+#### Scale Our Knowledge
+Establishing a culture of productive habits will be crucial to the success of our team this semester. Alongside Chompers’ Philosophy, our team needs to be built on fundamental concepts discussed in SE4: respecting others, showing kindness, and recognizing our colleagues' great contributions to the team. Additionally, Google has an extensive Readability Process for code readability, as found in ["Knowledge
+Sharing"](https://abseil.io/resources/swe-book/html/ch03.html). 
+
+**Discuss in your group: Do we have a process of reviewing readability like at Google? What is our process? Should we have this process? Why?** 
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Yes we should have a code review process!** As Nina Chen and Mark Barolak explain in ["Knowledge
+Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) that **"code is read far more than it is written..."** which means having a process to review readability is crucial to ensure our code is easily understood. Secondly, reviewing each other's code exposes us to new knowledge from new areas of our team. Our process of having PRs on our tools being reviewed by two fellow students and a technical leader is on example of our code review process.
+
+</details>
+
+## Reflection

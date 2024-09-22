@@ -12,53 +12,109 @@ page-layout: full
 ## Overview
 
 This blog focuses on the ["Knowledge
-Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) chapter of the [Software Engineering at Google book](https://abseil.io/resources/swe-book). Knowledge comes in many forms and is a crucial asset within a software engineering organization. In this article, we explore the challenges of learning and knowledge sharing and effective strategies for fostering a culture of collaboration and communication. Key topics include the phenomena of Information Islands, Psychological Safety, and Information Duplication, which hinder knowledge sharing. We also discuss various methods for scaling knowledge, such as group chats, mailing lists, and office hours, along with the importance of clear documentation and code review practices. We will be taking these practices and connecting them to our team’s current situation with [execexam](https://github.com/GatorEducator/execexam), as well as how this chapter builds on the concepts we discussed last week.
+Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) 
+chapter of the [Software Engineering at Google book](https://abseil.io/resources/swe-book). 
+Knowledge comes in many forms and is a crucial asset within a software engineering organization. 
+In this article, we explore the challenges of learning and knowledge sharing and effective 
+strategies for fostering a culture of collaboration and communication. Key topics include the 
+phenomena of Information Islands, Psychological Safety, and Information Duplication, 
+which hinder knowledge sharing. We also discuss various methods for scaling knowledge, 
+such as group chats, mailing lists, and office hours, along with the importance of 
+clear documentation and code review practices. We will be taking these practices and 
+connecting them to our team’s current situation with [execexam](https://github.com/GatorEducator/execexam), 
+as well as how this chapter builds on the concepts we discussed last week.
 
 ## Summary
 
-Though it is not a tangible item, knowledge is the most valuable asset of a software engineering organization. This chapter discusses challenges that can arise in learning, which make sharing knowledge difficult, ways to grow your knowledge, and how an individual or organization’s knowledge can best be shared and made available as the valuable resource it can be.
+Though it is not a tangible item, knowledge is the most valuable asset of a software engineering organization. 
+This chapter discusses challenges that can arise in learning, which make sharing knowledge difficult, 
+ways to grow your knowledge, and how an individual or organization’s knowledge can best be shared and 
+made available as the valuable resource it can be.
 
-Such learning challenges mainly arise due to a need for a system for communication between individuals and different teams assigned to various projects. Some also arise from a fear of being wrong or looking underqualified in front of others. This chapter also discussed the importance of having a philosophy and shared what that looks like for those employed by Google.
+Such learning challenges mainly arise due to a need for a system for communication between individuals 
+and different teams assigned to various projects. Some also arise from a fear of being wrong or looking 
+underqualified in front of others. This chapter also discussed the importance of having a philosophy 
+and shared what that looks like for those employed by Google.
 
-The most efficient way to grow knowledge is to ask questions, something that should not come across as intimidating, but instead helpful. Finally, the various ways to share knowledge as an individual were discussed, with an emphasis on proper documentation and code review practices.
+The most efficient way to grow knowledge is to ask questions, something that should not come across as intimidating, 
+but instead helpful. Finally, the various ways to share knowledge as an individual were discussed, 
+with an emphasis on proper documentation and code review practices.
 
 ### Challenges to Learning
 
 #### Information Islands
 
-Information Islands occur when information is only available from one person or group. Though we are split into groups for our respective projects for adding features to execexam, this can be easily remedied. To avoid “Information Islands” we can continue to utilize the start of our Thursday meetings to provide updates about what we are up to. Also, we can utilize discord to share briefer updates or issues that may need a bit more help to solve. This also relates to the “Bus factor” we discussed in SE 3 last week. By sharing knowledge at the start of our Thursday meetings, we can also alleviate this issue.
+Information Islands occur when information is only available from one person or group. 
+Though we are split into groups for our respective projects for adding features to execexam, 
+this can be easily remedied. To avoid “Information Islands” we can continue to utilize 
+the start of our Thursday meetings to provide updates about what we are up to. 
+Also, we can utilize discord to share briefer updates or issues that may need a bit more 
+help to solve. This also relates to the “Bus factor” we discussed in SE3 last week. 
+By sharing knowledge at the start of our Thursday meetings, we can also alleviate this issue.
 
 #### Psychological Safety
 
-Psychological Saftey, or a lack thereof, stems from people being afraid to ask questions because they feel inadequate or fear the judgement of others. We can prevent this by encouraging each other and being kind and patient when helping out a colleague. Also, we can keep in mind a point made in the SE book, that “the more you know, the more you know you don’t know.” That is to say, knowing more doesn’t make you an all-powerful genius who no longer has a need to learn, so chances are, your less experienced colleagues have plenty they can teach you.
+Psychological Saftey, or a lack thereof, stems from people being afraid to ask questions because 
+they feel inadequate or fear the judgement of others. We can prevent this by encouraging each other 
+and being kind and patient when helping out a colleague. Also, we can keep in mind a point made 
+in the SE book, that “the more you know, the more you know you don’t know.” That is to say, 
+knowing more doesn’t make you an all-powerful genius who no longer has a need to learn, 
+so chances are, your less experienced colleagues have plenty they can teach you.
 
 #### Information Fragmentation
 
-Information Fragmentation is when each island, or team, has an incomplete section of the larger whole. In our case, the larger whole would be execexam and the incomplete sections would be our respecective features. Similar to the Information Islands section above, “Information Fragmentation” can be avoided by utilizing the start of our Thursday sessions to share updates and get everyone present on the same page.
+Information Fragmentation is when each island, or team, has an incomplete section of the larger whole. 
+In our case, the larger whole would be execexam and the incomplete sections would be our respecective features. 
+Similar to the Information Islands section above, “Information Fragmentation” can be avoided by 
+utilizing the start of our Thursday sessions to share updates and get everyone present on the same page.
 
 #### Information Duplication
 
-Information Duplication is when each island, or team, has reinvented their own way of doing something. Similar to both the Information Islands and Information Fragmentation sections above, “Information Duplication” can be avoided through sharing knowledge as a group and giving updates at the start of our Thursday sessions.
+Information Duplication is when each island, or team, has reinvented their own way of doing something. 
+Similar to both the Information Islands and Information Fragmentation sections above, “Information Duplication” 
+can be avoided through sharing knowledge as a group and giving updates at the start of our Thursday sessions.
 
 #### Information Skew
 
-Information Skew is when each island, or team, has their own way of doing something and these ways might conflict with one another. For us, running into this issue would be a huge problem as ot would cause us to experience major setbacks as we decide which method to go with and so on. We saw this a bit with our first Thursday meeting. A great way to avoid this is to break our group into teams and give each team a different task to complete, like we have done using Pallas’s spreadsheet. Also, a great way to avoid this is to use the beginning of our Thursday meetings as a way to update each other on what works, what doesn’t and any progress. Also, using discord between meetings can help with this as well.
+Information Skew is when each island, or team, has their own way of doing something 
+and these ways might conflict with one another. For us, running into this issue would be a huge problem 
+as it would cause us to experience major setbacks as we decide which method to go with and so on. 
+We saw this a bit with our first Thursday meeting. A great way to avoid this is to break our group into teams 
+and give each team a different task to complete, like we have done using Pallas’s spreadsheet. 
+Also, a great way to avoid this is to use the beginning of our Thursday meetings as a way to update each other 
+on what works, what doesn’t and any progress. Using discord between meetings can help with this as well.
 
 #### Single Point of Failure (SPOF)
 
-Single Point of Failure, or SPOF, happens when one person is the source of expertise for a given area. This is closely related to the “Bus Factor” from SE3 as it also has the notion of dire consequences where something can go quite wrong with only one person in the know. One way we have taken steps toward avoiding this issue are having different levels of experience on each team. This approach ensures that at least one other person will learn more in a given area and helps take steps toward avoiding the consequences of the “Bus Factor.” Another way we can avoid this is once again by using the start of our Thursday meetings as a way to share information with one another.
+Single Point of Failure, or SPOF, happens when one person is the source of expertise for a given area. 
+This is closely related to the “Bus Factor” from SE3 as it also has the notion of dire consequences 
+where something can go quite wrong with only one person in the know. One way we have taken steps toward 
+avoiding this issue are having different levels of experience on each team. This approach ensures that 
+at least one other person will learn more in a given area and helps take steps toward avoiding the 
+consequences of the “Bus Factor.” Another way we can avoid this is once again by using the start of 
+our Thursday meetings as a way to share information with one another.
 
 #### All-or-nothing Expertise
 
-All-or-nothing Expertise ties in with SPOF as it occurs when a team is composed of the “know-it-alls” and the “novices.” This creates an environment where the novices don’t really learn and the know-it-alls do all the work. This is not only bad for the sharing of knowledge, but it also creates a divided team and environment. We can avoid this by having our teams be mixes of experience and expertise. Also, we can set expectations for the more experienced members to be a little more patient and willing to explain to those with less experience.
+All-or-nothing Expertise ties in with SPOF as it occurs when a team is composed of the “know-it-alls” 
+and the “novices.” This creates an environment where the novices don’t really learn and the know-it-alls 
+do all the work. This is not only bad for the sharing of knowledge, but it also creates a divided team 
+and environment. We can avoid this by having our teams be mixes of experience and expertise. 
+Also, we can set expectations for the more experienced members to be a little more patient and willing 
+to explain to those with less experience.
 
 #### Parroting
 
-Parroting is when someone mimics without understanding. In other words, someone maybe copies code without understanding it. We can avoid this by asking someone to explain when we don’t understand as we should all know how the code for any of our tools works. Also, This can be avoided by having the mix of expertise on each team with the more experienced member(s) being willing to explain the code.
+Parroting is when someone mimics without understanding. In other words, someone maybe copies code without 
+understanding it. We can avoid this by asking someone to explain when we don’t understand as we should 
+all know how the code for any of our tools works. Also, This can be avoided by having the mix of expertise 
+on each team with the more experienced member(s) being willing to explain the code.
 
 #### Haunted Graveyards
 
-Haunting Graveyards occur when people are afraid that they will touch the code and break something. This can be avoided by not being afraid to try and acknowledging that it is better for one of us to break the code than for someone in the department to use our software and break it after we’ve shipped a feature.
+Haunting Graveyards occur when people are afraid that they will touch the code and break something. 
+This can be avoided by not being afraid to try and acknowledging that it is better for one of us to break 
+the code than for someone in the department to use our software and break it after we’ve shipped a feature.
 
 ### Chomper's Philosophy
 
@@ -71,7 +127,9 @@ Haunting Graveyards occur when people are afraid that they will touch the code a
 * There is no such thing as too much engineering expertise
 * We must feel safe to fail
 
-Google makes specific points with phrases and actions to avoid. They mention feigned suprise, correcting colleagues, or "well-actually" and "backseat driving", and saying how easy certain tasks are, "my grandma could do that". These can all have adverse effects on psychological safety in the workplace and make newcomers feel severly underqualified.
+Google makes specific points with phrases and actions to avoid. They mention feigned suprise, correcting colleagues, 
+or "well-actually" and "backseat driving", and saying how easy certain tasks are, "my grandma could do that". 
+These can all have adverse effects on psychological safety in the workplace and make newcomers feel severly underqualified.
 
 </details>
 
@@ -79,57 +137,90 @@ Google makes specific points with phrases and actions to avoid. They mention fei
 
 #### Scale Your Question
 
-Leveraging community-based learning will be a key aspect of achieving success in our software team. Google uses the following three approaches to enable knowledge seekers to get help from the broader community.
+Leveraging community-based learning will be a key aspect of achieving success in our software team. 
+Google uses the following three approaches to enable knowledge seekers to get help from the broader community.
 
 ##### Group Chats
-Group Chats are a great way to receive quick help or feedback since you can ask a question to many people at once, and anyone can jump in. These chats can be centered around certain topics or teams, enabling“experts” to answer questions swiftly. However, group chats are often unstructured, making it difficult to locate meaningful information later.
+
+Group Chats are a great way to receive quick help or feedback since you can ask a question to many people at once, 
+and anyone can jump in. These chats can be centered around certain topics or teams, enabling“experts” to answer questions 
+swiftly. However, group chats are often unstructured, making it difficult to locate meaningful information later.
 
 ##### Mailing Lists
-Mailing lists provide knowledge seekers the ability to ask questions to wide audiences in a structured manner and have the advantage of being archived for future reference. Mailing lists provide a space for complex questions but are not suitable for back-and-forth communication. Furthermore, information from archived lists may be outdated, so it is important to update the list if outdated information is found.
+
+Mailing lists provide knowledge seekers the ability to ask questions to wide audiences in a structured manner 
+and have the advantage of being archived for future reference. Mailing lists provide a space for complex questions 
+but are not suitable for back-and-forth communication. Furthermore, information from archived lists may be outdated, 
+so it is important to update the list if outdated information is found.
 
 ##### Q&A Platforms
-Question and answer platforms offer a unique space to share specific and evolving questions with ‘exact’ answers. Google uses these platforms to discuss work-in-progress code segments while getting updated, helpful information. The Q&A platform structure makes it helpful for current and future references.
+
+Question and answer platforms offer a unique space to share specific and evolving questions with 
+‘exact’ answers. Google uses these platforms to discuss work-in-progress code segments while getting 
+updated, helpful information. The Q&A platform structure makes it helpful for current and future references.
 
 **Discuss what tools we currently have in place that relate to Google's Group Chat/Mailing List/Q&A Platform** 
 
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-Our discord widely is used in a similar fashion to that of a Google group chat, where we are able to communicate with back and forth quickly with light structure. We then have specified chanels that handle topics and teams that can be seen as our version of a mailing list. We also use thse chanels as an avenue for Q&A type sharing due to the nature of sharing code blocks, terminal outputs and specified questions.
+Our discord widely is used in a similar fashion to that of a Google group chat, where we are able to communicate 
+with back and forth quickly with light structure. We then have specified channels that handle topics and teams 
+that can be seen as our version of a mailing list. We also use these channels as an avenue for Q&A type sharing 
+due to the nature of sharing code blocks, terminal outputs and specified questions.
 
 </details>
 
 #### Scale Your Knowledge
 
-Teaching and learning go beyond being an “expert” or “novice” – everyone has varying levels of knowledge in various areas. To be a successful software team we need to share our “expertise” in a way that fosters productive learning. Here are some of the ways Google creates environments for productive knowledge sharing.
+Teaching and learning go beyond being an “expert” or “novice” – everyone has varying levels of knowledge 
+in various areas. To be a successful software team we need to share our “expertise” in a way that fosters 
+productive learning. Here are some of the ways Google creates environments for productive knowledge sharing.
 
 ##### Office Hours
-Attending scheduled meetings with experts can be a productive way to take advantage of someone's expertise to tackle complex or ambiguous problems. In our course, we can leverage the expertise of our various technical leaders, as well as Professor Kapfhammer during their office hours.
+
+Attending scheduled meetings with experts can be a productive way to take advantage of someone's expertise 
+to tackle complex or ambiguous problems. In our course, we can leverage the expertise of our various technical 
+leaders, as well as Professor Kapfhammer during their office hours.
 
 ##### Class Sessions
-Class sessions offer groups an opportunity to explore complex concepts together through hands-on activities and resource-intensive material. Class material can also be documented to be scaled and reused for future use. 
+
+Class sessions offer groups an opportunity to explore complex concepts together through hands-on activities 
+and resource-intensive material. Class material can also be documented to be scaled and reused for future use. 
 
 **In what ways does our course use class sessions in a similar way to Google?**
 
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-In our course, our colleagues take turns being the "expert" on a given concept(s). We utilize our Monday session explooring professional concepts and our Wednesday sessions exploring a technical concept.
+In our course, our colleagues take turns being the "expert" on a given concept(s). We utilize our Monday session 
+exploring professional concepts and our Wednesday sessions exploring a technical concept.
 
 </details>
 
 ##### Documentation
-Written knowledge is crucial in any form of knowledge sharing because clear, well-written documentation minimizes future confusion and improves organizational efficiency. When discussing documentation it is important to consider these key points:
+
+Written knowledge is crucial in any form of knowledge sharing because clear, well-written documentation 
+minimizes future confusion and improves organizational efficiency. When discussing documentation it is 
+important to consider these key points:
 
 * Update documentation as you encounter it. If you find outdated documentation, leave it better than you found it!
 * Create documentation as you develop. Pave the path for those after you to succeed.
-* Promote writing clear documentation within your organization. Create a culture and standard for documentation within your organization.
+* Promote writing clear documentation within your organization. 
+* Create a culture and standard for documentation within your organization.
 
 ##### Code
-Code itself is a form of knowledge, therefor writing well-documented code and a system of code reviewing is extremely beneficial to a software team’s ability to efficiently produce bug fixes and new features. Doing the work upfront will help not only our team but the teams that will follow us.
+
+Code itself is a form of knowledge, therefore writing well-documented code and a system of code reviewing 
+is extremely beneficial to a software team’s ability to efficiently produce bug fixes and new features. 
+Doing the work upfront will help not only our team but the teams that will follow us.
 
 #### Scale Our Knowledge
-Establishing a culture of productive habits will be crucial to the success of our team this semester. Alongside Chompers’ Philosophy, our team needs to be built on fundamental concepts discussed in SE4: respecting others, showing kindness, and recognizing our colleagues' great contributions to the team. Additionally, Google has an extensive Readability Process for code readability, as found in ["Knowledge
+
+Establishing a culture of productive habits will be crucial to the success of our team this semester. 
+Alongside Chompers’ Philosophy, our team needs to be built on fundamental concepts discussed in SE4: 
+respecting others, showing kindness, and recognizing our colleagues' great contributions to the team. 
+Additionally, Google has an extensive Readability Process for code readability, as found in ["Knowledge
 Sharing"](https://abseil.io/resources/swe-book/html/ch03.html). 
 
 **Discuss in your group: Do we have a process of reviewing readability like at Google? What is our process? Should we have this process? Why?** 
@@ -138,10 +229,18 @@ Sharing"](https://abseil.io/resources/swe-book/html/ch03.html).
 <summary>Click to Expand for the Answer</summary>
 
 **Yes we should have a code review process!** As Nina Chen and Mark Barolak explain in ["Knowledge
-Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) that **"code is read far more than it is written..."** which means having a process to review readability is crucial to ensure our code is easily understood. Secondly, reviewing each other's code exposes us to new knowledge from new areas of our team. Our process of having PRs on our tools being reviewed by two fellow students and a technical leader is on example of our code review process.
+Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) that **"code is read far more than it is written..."** 
+which means having a process to review readability is crucial to ensure our code is easily understood. 
+Secondly, reviewing each other's code exposes us to new knowledge from new areas of our team. 
+Our process of having PRs on our tools being reviewed by two fellow students and a technical leader is 
+one example of our code review process.
 
 </details>
 
 ## Reflection
 
-It is important to be aware of challenges that may impact the ability for people to learn in this environment. Also, our philosophy should remain at the core of our group, representing our values. Finally, we need to keep in mind the ways in which we can best scale our knowledge both as individuals and a group.
+It is important to be aware of challenges that may impact the ability for people to learn in this environment. 
+Also, our philosophy should remain at the core of our group, representing our values. Finally, we need to 
+keep in mind the ways in which we can best scale our knowledge both as individuals and a group.
+
+{{< include /_back-blog.qmd >}}

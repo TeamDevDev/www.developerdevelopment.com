@@ -182,7 +182,7 @@ outdated information is found.
 ##### Q&A Platforms
 
 Question and answer platforms offer a unique space to share specific and
-evolving questions with ‘exact’ answers. Google uses these platforms to discuss
+evolving questions with "exact" answers. Google uses these platforms to discuss
 work-in-progress code segments while getting updated, helpful information. The
 Q&A platform structure makes it helpful for current and future references.
 

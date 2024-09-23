@@ -101,14 +101,15 @@ and any progress. Using discord between meetings can help with this as well.
 #### Single Point of Failure (SPOF)
 
 Single Point of Failure, or SPOF, happens when one person is the source of
-expertise for a given area. This is closely related to the “Bus Factor” from SE3
-as it also has the notion of dire consequences where something can go quite
-wrong with only one person in the know. One way we have taken steps toward
-avoiding this issue are having different levels of experience on each team. This
-approach ensures that at least one other person will learn more in a given area
-and helps take steps toward avoiding the consequences of the “Bus Factor.”
-Another way we can avoid this is once again by using the start of our Thursday
-meetings as a way to share information with one another.
+expertise for a given area. This is closely related to the “Bus Factor” from
+[How to Work Well on Teams](../se3-fall2024/index.qmd) as it also has the
+notion of dire consequences where something can go quite wrong with only one
+person in the know. One way we have taken steps toward avoiding this issue are
+having different levels of experience on each team. This approach ensures that
+at least one other person will learn more in a given area and helps take steps
+toward avoiding the consequences of the “Bus Factor.” Another way we can avoid
+this is once again by using the start of our Thursday meetings as a way to
+share information with one another.
 
 #### All-or-nothing Expertise
 

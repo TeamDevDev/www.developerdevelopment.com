@@ -203,7 +203,7 @@ outputs and specified questions.
 
 #### Scale Your Knowledge
 
-Teaching and learning go beyond being an “expert” or “novice” – everyone has
+Teaching and learning go beyond being an “expert” or “novice” –-- everyone has
 varying levels of knowledge in various areas. To be a successful software team
 we need to share our “expertise” in a way that fosters productive learning. Here
 are some of the ways Google creates environments for productive knowledge

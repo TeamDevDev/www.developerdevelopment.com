@@ -1,7 +1,7 @@
 ---
 author: [Titus Smith, Molly Suppo, Gregory M. Kapfhammer]
 title: Effective Knowledge Sharing
-date: '2024-9-22'
+date: '2024-9-23'
 date-format: long
 categories: [post, professional development, software engineering]
 description: <em>What are the best knowledge sharing practices?</em>

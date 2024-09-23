@@ -124,7 +124,7 @@ a little more patient and willing to explain to those with less experience.
 Parroting is when someone mimics without understanding. In other words, someone
 maybe copies code without understanding it. We can avoid this by asking someone
 to explain when we don’t understand as we should all know how the code for any
-of our tools works. Also, This can be avoided by having the mix of expertise on
+of our tools works. Also, this can be avoided by having the mix of expertise on
 each team with the more experienced member(s) being willing to explain the code.
 
 #### Haunted Graveyards

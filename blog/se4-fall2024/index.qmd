@@ -55,8 +55,9 @@ features to `execexam`, this can be easily remedied. To avoid “Information
 Islands” we can continue to utilize the start of our Thursday meetings to
 provide updates about what we are up to. Also, we can utilize discord to share
 briefer updates or issues that may need a bit more help to solve. This also
-relates to the “Bus factor” we discussed in SE3 last week. By sharing knowledge
-at the start of our Thursday meetings, we can also alleviate this issue.
+relates to the “Bus factor” we discussed in [How to Work Well on
+Teams](../se3-fall2024/index.qmd). By sharing knowledge at the start of our
+Thursday meetings, we can also alleviate this issue.
 
 #### Psychological Safety
 

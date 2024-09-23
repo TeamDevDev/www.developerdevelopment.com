@@ -12,33 +12,38 @@ page-layout: full
 ## Overview
 
 This blog focuses on the ["Knowledge
-Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) 
-chapter of the [Software Engineering at Google book](https://abseil.io/resources/swe-book). 
-Knowledge comes in many forms and is a crucial asset within a software engineering organization. 
-In this article, we explore the challenges of learning and knowledge sharing and effective 
-strategies for fostering a culture of collaboration and communication. Key topics include the 
-phenomena of Information Islands, Psychological Safety, and Information Duplication, 
-which hinder knowledge sharing. We also discuss various methods for scaling knowledge, 
-such as group chats, mailing lists, and office hours, along with the importance of 
-clear documentation and code review practices. We will be taking these practices and 
-connecting them to our team’s current situation with [execexam](https://github.com/GatorEducator/execexam), 
-as well as how this chapter builds on the concepts we discussed last week.
+Sharing"](https://abseil.io/resources/swe-book/html/ch03.html) chapter of the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book).
+Knowledge comes in many forms and is a crucial asset within a software
+engineering organization. In this article, we explore the challenges of learning
+and knowledge sharing and effective strategies for fostering a culture of
+collaboration and communication. Key topics include the phenomena of Information
+Islands, Psychological Safety, and Information Duplication, which hinder
+knowledge sharing. We also discuss various methods for scaling knowledge, such
+as group chats, mailing lists, and office hours, along with the importance of
+clear documentation and code review practices. We will be taking these practices
+and connecting them to our team’s current situation with
+[execexam](https://github.com/GatorEducator/execexam), as well as how this
+chapter builds on the concepts we discussed last week.
 
 ## Summary
 
-Though it is not a tangible item, knowledge is the most valuable asset of a software engineering organization. 
-This chapter discusses challenges that can arise in learning, which make sharing knowledge difficult, 
-ways to grow your knowledge, and how an individual or organization’s knowledge can best be shared and 
-made available as the valuable resource it can be.
+Though it is not a tangible item, knowledge is the most valuable asset of a
+software engineering organization. This chapter discusses challenges that can
+arise in learning, which make sharing knowledge difficult, ways to grow your
+knowledge, and how an individual or organization’s knowledge can best be shared
+and made available as the valuable resource it can be.
 
-Such learning challenges mainly arise due to a need for a system for communication between individuals 
-and different teams assigned to various projects. Some also arise from a fear of being wrong or looking 
-underqualified in front of others. This chapter also discussed the importance of having a philosophy 
-and shared what that looks like for those employed by Google.
+Such learning challenges mainly arise due to a need for a system for
+communication between individuals and different teams assigned to various
+projects. Some also arise from a fear of being wrong or looking under-qualified
+in front of others. This chapter also discussed the importance of having a
+philosophy and shared what that looks like for those employed by Google.
 
-The most efficient way to grow knowledge is to ask questions, something that should not come across as intimidating, 
-but instead helpful. Finally, the various ways to share knowledge as an individual were discussed, 
-with an emphasis on proper documentation and code review practices.
+The most efficient way to grow knowledge is to ask questions, something that
+should not come across as intimidating, but instead helpful. Finally, the
+various ways to share knowledge as an individual were discussed, with an
+emphasis on proper documentation and code review practices.
 
 ### Challenges to Learning
 
@@ -54,67 +59,80 @@ By sharing knowledge at the start of our Thursday meetings, we can also alleviat
 
 #### Psychological Safety
 
-Psychological Saftey, or a lack thereof, stems from people being afraid to ask questions because 
-they feel inadequate or fear the judgement of others. We can prevent this by encouraging each other 
-and being kind and patient when helping out a colleague. Also, we can keep in mind a point made 
-in the SE book, that “the more you know, the more you know you don’t know.” That is to say, 
-knowing more doesn’t make you an all-powerful genius who no longer has a need to learn, 
+Psychological Safety, or a lack thereof, stems from people being afraid to ask
+questions because they feel inadequate or fear the judgment of others. We can
+prevent this by encouraging each other and being kind and patient when helping
+out a colleague. Also, we can keep in mind a point made in the SE book, that
+“the more you know, the more you know you don’t know.” That is to say, knowing
+more doesn't make you an all-powerful genius who no longer has a need to learn,
 so chances are, your less experienced colleagues have plenty they can teach you.
 
 #### Information Fragmentation
 
-Information Fragmentation is when each island, or team, has an incomplete section of the larger whole. 
-In our case, the larger whole would be execexam and the incomplete sections would be our respecective features. 
-Similar to the Information Islands section above, “Information Fragmentation” can be avoided by 
-utilizing the start of our Thursday sessions to share updates and get everyone present on the same page.
+Information Fragmentation is when each island, or team, has an incomplete
+section of the larger whole. In our case, the larger whole would be execexam and
+the incomplete sections would be our respective features. Similar to the
+Information Islands section above, “Information Fragmentation” can be avoided by
+utilizing the start of our Thursday sessions to share updates and get everyone
+present on the same page.
 
 #### Information Duplication
 
-Information Duplication is when each island, or team, has reinvented their own way of doing something. 
-Similar to both the Information Islands and Information Fragmentation sections above, “Information Duplication” 
-can be avoided through sharing knowledge as a group and giving updates at the start of our Thursday sessions.
+Information Duplication is when each island, or team, has reinvented their own
+way of doing something. Similar to both the Information Islands and Information
+Fragmentation sections above, “Information Duplication” can be avoided through
+sharing knowledge as a group and giving updates at the start of our Thursday
+sessions.
 
 #### Information Skew
 
-Information Skew is when each island, or team, has their own way of doing something 
-and these ways might conflict with one another. For us, running into this issue would be a huge problem 
-as it would cause us to experience major setbacks as we decide which method to go with and so on. 
-We saw this a bit with our first Thursday meeting. A great way to avoid this is to break our group into teams 
-and give each team a different task to complete, like we have done using Pallas’s spreadsheet. 
-Also, a great way to avoid this is to use the beginning of our Thursday meetings as a way to update each other 
-on what works, what doesn’t and any progress. Using discord between meetings can help with this as well.
+Information Skew is when each island, or team, has their own way of doing
+something and these ways might conflict with one another. For us, running into
+this issue would be a huge problem as it would cause us to experience major
+setbacks as we decide which method to go with and so on. We saw this a bit with
+our first Thursday meeting. A great way to avoid this is to break our group into
+teams and give each team a different task to complete, like we have done using
+Pallas’s spreadsheet. Also, a great way to avoid this is to use the beginning of
+our Thursday meetings as a way to update each other on what works, what doesn't
+and any progress. Using discord between meetings can help with this as well.
 
 #### Single Point of Failure (SPOF)
 
-Single Point of Failure, or SPOF, happens when one person is the source of expertise for a given area. 
-This is closely related to the “Bus Factor” from SE3 as it also has the notion of dire consequences 
-where something can go quite wrong with only one person in the know. One way we have taken steps toward 
-avoiding this issue are having different levels of experience on each team. This approach ensures that 
-at least one other person will learn more in a given area and helps take steps toward avoiding the 
-consequences of the “Bus Factor.” Another way we can avoid this is once again by using the start of 
-our Thursday meetings as a way to share information with one another.
+Single Point of Failure, or SPOF, happens when one person is the source of
+expertise for a given area. This is closely related to the “Bus Factor” from SE3
+as it also has the notion of dire consequences where something can go quite
+wrong with only one person in the know. One way we have taken steps toward
+avoiding this issue are having different levels of experience on each team. This
+approach ensures that at least one other person will learn more in a given area
+and helps take steps toward avoiding the consequences of the “Bus Factor.”
+Another way we can avoid this is once again by using the start of our Thursday
+meetings as a way to share information with one another.
 
 #### All-or-nothing Expertise
 
-All-or-nothing Expertise ties in with SPOF as it occurs when a team is composed of the “know-it-alls” 
-and the “novices.” This creates an environment where the novices don’t really learn and the know-it-alls 
-do all the work. This is not only bad for the sharing of knowledge, but it also creates a divided team 
-and environment. We can avoid this by having our teams be mixes of experience and expertise. 
-Also, we can set expectations for the more experienced members to be a little more patient and willing 
-to explain to those with less experience.
+All-or-nothing Expertise ties in with SPOF as it occurs when a team is composed
+of the “know-it-alls” and the “novices.” This creates an environment where the
+novices don’t really learn and the know-it-alls do all the work. This is not
+only bad for the sharing of knowledge, but it also creates a divided team and
+environment. We can avoid this by having our teams be mixes of experience and
+expertise. Also, we can set expectations for the more experienced members to be
+a little more patient and willing to explain to those with less experience.
 
 #### Parroting
 
-Parroting is when someone mimics without understanding. In other words, someone maybe copies code without 
-understanding it. We can avoid this by asking someone to explain when we don’t understand as we should 
-all know how the code for any of our tools works. Also, This can be avoided by having the mix of expertise 
-on each team with the more experienced member(s) being willing to explain the code.
+Parroting is when someone mimics without understanding. In other words, someone
+maybe copies code without understanding it. We can avoid this by asking someone
+to explain when we don’t understand as we should all know how the code for any
+of our tools works. Also, This can be avoided by having the mix of expertise on
+each team with the more experienced member(s) being willing to explain the code.
 
 #### Haunted Graveyards
 
-Haunting Graveyards occur when people are afraid that they will touch the code and break something. 
-This can be avoided by not being afraid to try and acknowledging that it is better for one of us to break 
-the code than for someone in the department to use our software and break it after we’ve shipped a feature.
+Haunting Graveyards occur when people are afraid that they will touch the code
+and break something. This can be avoided by not being afraid to try and
+acknowledging that it is better for one of us to break the code than for someone
+in the department to use our software and break it after we've shipped a
+feature.
 
 ### Chomper's Philosophy
 

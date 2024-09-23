@@ -74,7 +74,7 @@ Information Fragmentation is when each island, or team, has an incomplete
 section of the larger whole. In our case, the larger whole would be execexam and
 the incomplete sections would be our respective features. Similar to the
 Information Islands section above, “Information Fragmentation” can be avoided by
-utilizing the start of our Thursday sessions to share updates and get everyone
+using the start of our Thursday sessions to share updates and get everyone
 present on the same page.
 
 #### Information Duplication
@@ -148,9 +148,9 @@ feature.
 
 Google makes specific points with phrases and actions to avoid. They mention
 feigned surprise, correcting colleagues, or "well-actually" and "backseat
-driving", and saying how easy certain tasks are, "my grandma could do that".
-These can all have adverse effects on psychological safety in the workplace and
-make newcomers feel severely under-qualified.
+driving", and saying how easy certain tasks are or "my grandma could do that".
+These actions and/or phrases can all have adverse effects on psychological
+safety in the workplace and make newcomers feel severely under-qualified.
 
 </details>
 

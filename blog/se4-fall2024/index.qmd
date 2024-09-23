@@ -214,7 +214,7 @@ sharing.
 Attending scheduled meetings with experts can be a productive way to take
 advantage of someone's expertise to tackle complex or ambiguous problems. In our
 course, we can leverage the expertise of our various technical leaders, as well
-as Professor Kapfhammer during their office hours.
+as Professor Kapfhammer during his office hours.
 
 ##### Class Sessions
 

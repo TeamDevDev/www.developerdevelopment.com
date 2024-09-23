@@ -81,9 +81,9 @@ present on the same page.
 
 Information Duplication is when each island, or team, has reinvented their own
 way of doing something. Similar to both the Information Islands and Information
-Fragmentation sections above, “Information Duplication” can be avoided through
-sharing knowledge as a group and giving updates at the start of our Thursday
-sessions.
+Fragmentation sections that were previously mentioned, “Information Duplication”
+can be avoided through sharing knowledge as a group and giving updates at the
+start of our Thursday sessions.
 
 #### Information Skew
 
@@ -137,7 +137,7 @@ feature.
 
 ### Chomper's Philosophy
 
-**Discuss what you think our philosphy should look like** 
+**Discuss what you think our philosophy should look like** 
 
 <details>
 <summary>Click to Expand for the Answer</summary>
@@ -146,9 +146,11 @@ feature.
 * There is no such thing as too much engineering expertise
 * We must feel safe to fail
 
-Google makes specific points with phrases and actions to avoid. They mention feigned suprise, correcting colleagues, 
-or "well-actually" and "backseat driving", and saying how easy certain tasks are, "my grandma could do that". 
-These can all have adverse effects on psychological safety in the workplace and make newcomers feel severly underqualified.
+Google makes specific points with phrases and actions to avoid. They mention
+feigned surprise, correcting colleagues, or "well-actually" and "backseat
+driving", and saying how easy certain tasks are, "my grandma could do that".
+These can all have adverse effects on psychological safety in the workplace and
+make newcomers feel severely under-qualified.
 
 </details>
 

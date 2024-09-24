@@ -13,9 +13,43 @@ page-layout: full
 
 ## Summary
 
+Mutation is a unique technique used to check the effectiveness of our test suites. We mutate the code by adding a 
+bug into our code to see if our test suites are designed to find the bugs. The theory is, as decribed in the ["Mutation Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of 
+[The Fuzzing Book](https://www.fuzzingbook.org/) that **"if [the test suite] fails to detect such mutations, it will also miss real bugs."**
+
 ### Limitations to Fuzzing
 
+Mutation differs froms standard structural coverage because structural coverage fails to identify of the program executions from the test suite are giving us the correct output. This is dangerous as a stand alone testing measure, because we may recieve 100% code coverage and assume our code is perfect, but in reality, that we may not be identifying all the bugs. This issue stems from the fact that test suites aren't designed to find specific bugs in code, but rather to test if a function produced output without error. This is not to say that code coverage is useless in our programs, but this chapter shows us that there is more to the picture, on top of code coverage. Overall, mutation is an important step to testing that helps us developers uncover hidden bugs and have more confidence in our code.
+
+Below is a section of code from the["Mutation Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of [The Fuzzing Book](https://www.fuzzingbook.org/), which highlights the above issue. This test may show that `execute_the_program_as_a_whole` has 100% code coverage, but as we have discovered, that may not be enough in terms of testing.
+
+```python
+def ineffective_test_2():
+    try:
+        execute_the_program_as_a_whole()
+    except:
+        pass
+    assert True
+```
+
+**Why is the testing from the above code insufficient?**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+The above code may show that the code is 100% covered, but does not give us any indication on the tests ability to discover bugs in `execute_the_program_as_a_whole`. This is **not** ideal for giving us an understanding on whether or not we are producing and shipping quality code to our [execexam](https://github.com/GatorEducator/execexam) tool.
+
+</details>
+
 ### Injecting Artificial Faults
+
+Fear not! The book provides us with a testing tool to ensure our test suites are also testing for bugs: mutation analysis. Mutation analysis is a technique to evaluate the effectiveness of a test suite by introducing artificial faults, known as mutations, into the program's code. The goal is to see if the test suite can detect these intentional errors. For example, a mutation might involve changing a `+` to a `-` in a function. If the test suite misses this, it indicates the test is ineffective. The effectiveness of a test suite is measured by its ability to detect these artificial faults, known as the mutation score.
+
+This approach is based on the idea that each part of a program has a similar probability of containing errors. By assessing how well a test suite identifies these mutations, we can gauge its ability to find real bugs. Mutation analysis can be applied to static test suites, fuzzers, and other testing frameworks, helping to ensure that they effectively prevent faults. In essence, mutation analysis acts like fuzzing for test suites — if a mutated program passes through the test suite without being flagged as faulty, it reveals a potential weakness in the testing process.
+
+Fault injection involves creating specific errors to test the effectiveness of a test suite, but it has limitations. Generating unbiased, hard-to-detect faults is labor-intensive, prone to developer bias, and may miss important bugs. 
+
+Mutation analysis offers a better alternative. It operates on the assumption that most programming errors are small, single-token mistakes, which are often caught by compilers. By generating all possible small variations of a program —called mutants— and testing them against a suite, mutation analysis assesses how well the suite can "kill" these mutants, i.e., detect the errors. The effectiveness of a test suite is measured by the proportion of mutants it successfully identifies, offering a more systematic and automated way to evaluate its quality.
 
 ### A Simple Function Mutator
 

@@ -11,6 +11,9 @@ page-layout: full
 
 ## Overview
 
+This blog focuses on the ["Mutation Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of 
+[The Fuzzing Book](https://www.fuzzingbook.org/). As we have discussed in pervious class sessions, there are many ways to test a program, this week we are focussing on a new type of testing: mutation analysis. Today we are discussing where this type of testing fits into the world of software engineering, how it adds to existing testing techniques we have discussed, and the limitations of this type of testing. We will be taking these practices and connecting them to our team’s current efforts with the [execexam](https://github.com/GatorEducator/execexam) tool, as well as how this chapter builds on the concepts we discussed last week from ["Fuzzing: Breaking Things with Random Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html).
+
 ## Summary
 
 Mutation is a unique technique used to check the effectiveness of our test suites. We mutate the code by adding a 

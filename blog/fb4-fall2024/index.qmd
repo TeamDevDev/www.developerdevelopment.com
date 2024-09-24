@@ -55,4 +55,6 @@ Mutation analysis offers a better alternative. It operates on the assumption tha
 
 ### Limitations to Mutators
 
+One challenge in mutation analysis is that not all generated mutants are faulty. For instance, consider a basic python function, think about how many different ways you could add a mutator to it. Now consider this, while most mutants introduce faults, some may be the same as the original program in functionality, which may not in itself be a bug. These **equivalent mutants** do not represent actual faults, making it hard to accurately judge the effectiveness of a test suite. For example, if a mutation score is 70%, it's unclear if the remaining 30% are undetected faults or equivalent mutants. This ambiguity makes it difficult to determine how much a test suite can be improved.
+
 ## Reflection

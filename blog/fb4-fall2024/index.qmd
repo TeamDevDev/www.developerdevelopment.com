@@ -1,0 +1,24 @@
+---
+author: [Molly Suppo, Titus Smith, Gregory M. Kapfhammer]
+title: 'Mutation Analysis'
+date: '2024-9-25'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can we assess the effectiveness of test suites?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+## Summary
+
+### Limitations to Fuzzing
+
+### Injecting Artificial Faults
+
+### A Simple Function Mutator
+
+### Limitations to Mutators
+
+## Reflection

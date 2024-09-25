@@ -38,14 +38,14 @@ suite] fails to detect such mutations, it will also miss real bugs."**
 Mutation differs from standard structural coverage because structural coverage
 fails to identify of the program executions from the test suite are giving us
 the correct output. This is dangerous as a stand-alone measure of test adequacy,
-because we may receive 100% code coverage and assume our code is perfect, but in
-reality, that we may not be identifying all the bugs. This issue stems from the
-fact that test suites aren't designed to find specific bugs in code, but rather
-to test if a function produced output without error. This is not to say that
-code coverage is useless in our programs, but this chapter shows us that there
-is more to the picture, on top of code coverage. Overall, mutation is an
-important step to testing that helps us developers uncover hidden bugs and have
-more confidence in our code.
+because we may receive 100% code coverage and assume our code is "perfect", but
+in reality, that we may not be identifying all the bugs. This issue stems from
+the fact that test suites aren't designed to find specific bugs in code, but
+rather to test if a function produced output without error. This is not to say
+that code coverage is useless in our programs, but this chapter shows us that
+there is more to the picture in addition to code coverage. Overall, mutation is
+an important step to testing that helps us developers uncover hidden bugs and
+have more confidence in our code.
 
 Below is a section of code from the["Mutation
 Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of

@@ -37,8 +37,8 @@ suite] fails to detect such mutations, it will also miss real bugs."**
 
 Mutation differs from standard structural coverage because structural coverage
 fails to identify of the program executions from the test suite are giving us
-the correct output. This is dangerous as a stand alone testing measure, because
-we may receive 100% code coverage and assume our code is perfect, but in
+the correct output. This is dangerous as a stand-alone measure of test adequacy,
+because we may receive 100% code coverage and assume our code is perfect, but in
 reality, that we may not be identifying all the bugs. This issue stems from the
 fact that test suites aren't designed to find specific bugs in code, but rather
 to test if a function produced output without error. This is not to say that

@@ -1,0 +1,234 @@
+---
+author: [Molly Suppo, Titus Smith, Gregory M. Kapfhammer]
+title: 'Mutation Analysis'
+date: '2024-9-25'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can we assess the effectiveness of test suites?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog focuses on the ["Mutation
+Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of
+[The Fuzzing Book](https://www.fuzzingbook.org/). As we have discussed in
+previous class sessions, there are many ways to test a program, this week we are
+focusing on a new type of testing: mutation analysis. Today we are discussing
+where this type of testing fits into the world of software engineering, how it
+adds to existing testing techniques we have discussed, and the limitations of
+this type of testing. We will be taking these practices and connecting them to
+our team’s current efforts with the
+[execexam](https://github.com/GatorEducator/execexam) tool, as well as how this
+chapter builds on the concepts we discussed last week from ["Fuzzing: Breaking
+Things with Random Inputs"](https://www.fuzzingbook.org/html/Fuzzer.html).
+
+## Summary
+
+Mutation is a unique technique used to check the effectiveness of our test
+suites. We mutate the code by adding a bug into our code to see if our test
+suites are designed to find the bugs. The theory is, as described in the
+["Mutation Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html)
+chapter of [The Fuzzing Book](https://www.fuzzingbook.org/) that **"if [the test
+suite] fails to detect such mutations, it will also miss real bugs."**
+
+### Limitations to Fuzzing
+
+Mutation differs from standard structural coverage because structural coverage
+fails to identify of the program executions from the test suite are giving us
+the correct output. This is dangerous as a stand-alone measure of test adequacy,
+because we may receive 100% code coverage and assume our code is "perfect", but
+in reality, that we may not be identifying all the bugs. This issue stems from
+the fact that test suites aren't designed to find specific bugs in code, but
+rather to test if a function produced output without error. This is not to say
+that code coverage is useless in our programs, but this chapter shows us that
+there is more to the picture in addition to code coverage. Overall, mutation is
+an important step to testing that helps us developers uncover hidden bugs and
+have more confidence in our code.
+
+Below is a section of code from the["Mutation
+Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of
+[The Fuzzing Book](https://www.fuzzingbook.org/), which highlights the above
+issue. This test may show that `execute_the_program_as_a_whole` has 100% code
+coverage, but as we have discovered, that may not be enough in terms of
+guaranteeing effective testing.
+
+```python
+def ineffective_test_2():
+    try:
+        execute_the_program_as_a_whole()
+    except:
+        pass
+    assert True
+```
+
+**Why is the testing from the above code insufficient?**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+The above code may show that the code is 100% covered, but does not give us any
+indication on the tests ability to discover bugs in
+`execute_the_program_as_a_whole`. This is **not** ideal for giving us an
+understanding on whether or not we are producing and shipping quality code to
+our [execexam](https://github.com/GatorEducator/execexam) tool.
+
+</details>
+
+### Injecting Artificial Faults
+
+Fear not! The book provides us with a testing tool to ensure our test suites are
+also testing for bugs: mutation analysis. Mutation analysis is a technique to
+evaluate the effectiveness of a test suite by introducing artificial faults,
+known as mutations, into the program's code. The goal is to see if the test
+suite can detect these intentional errors. For example, a mutation might involve
+changing a `+` to a `-` in a function. If the test suite misses this, it
+indicates the test is ineffective. The effectiveness of a test suite is measured
+by its ability to detect these artificial faults, known as the mutation score.
+
+This approach is based on the idea that each part of a program has a similar
+probability of containing errors. By assessing how well a test suite identifies
+these mutations, we can gauge its ability to find real bugs. Mutation analysis
+can be applied to static test suites, fuzzers, and other testing frameworks,
+helping to ensure that they effectively prevent faults. In essence, mutation
+analysis acts like fuzzing for test suites — if a mutated program passes through
+the test suite without being flagged as faulty, it reveals a potential weakness
+in the testing process.
+
+Fault injection involves creating specific errors to test the effectiveness of a
+test suite, but it has limitations. Generating unbiased, hard-to-detect faults
+is labor-intensive, prone to developer bias, and may miss important bugs. 
+
+Mutation analysis offers a better alternative. It operates on the assumption
+that most programming errors are small, single-token mistakes, which are often
+caught by compilers. By generating all possible small variations of a program
+—called mutants— and testing them against a suite, mutation analysis assesses
+how well the suite can "kill" these mutants or, put in another way, detect the
+errors. The effectiveness of a test suite is measured by the proportion of
+mutants it successfully identifies, offering a more systematic and automated way
+to evaluate its quality.
+
+### A Simple Function Mutator
+
+Below is code from the [Fuzzing
+Book](https://www.fuzzingbook.org/html/MutationAnalysis.html), which
+demonstrates a simple mutator.
+
+```{python}
+import ast
+import inspect
+
+def triangle(a, b, c):
+    if a == b:
+        if b == c:
+            return 'Equilateral'
+        else:
+            return 'Isosceles'
+    elif b == c:
+        return 'Isosceles'
+    elif a == c:
+        return 'Isosceles'
+    else:
+        return 'Scalene'
+
+class MuFunctionAnalyzer:
+    def __init__(self, fn, log=False):
+        self.fn = fn
+        self.name = fn.__name__
+        src = inspect.getsource(fn)
+        self.ast = ast.parse(src)
+        self.src = ast.unparse(self.ast)  # normalize
+        self.mutator = self.mutator_object()
+        self.nmutations = self.get_mutation_count()
+        self.un_detected = set()
+        self.mutants = []
+        self.log = log
+
+    def mutator_object(self, locations=None):
+        return StmtDeletionMutator(locations)
+
+    def register(self, m):
+        self.mutants.append(m)
+
+    def finish(self):
+        pass
+    
+    def get_mutation_count(self):
+        self.mutator.visit(self.ast)
+        return self.mutator.count
+
+class Mutator(ast.NodeTransformer):
+    def __init__(self, mutate_location=-1):
+        self.count = 0
+        self.mutate_location = mutate_location
+
+    def mutable_visit(self, node):
+        self.count += 1  # statements start at line no 1
+        if self.count == self.mutate_location:
+            return self.mutation_visit(node)
+        return self.generic_visit(node)
+
+class StmtDeletionMutator(Mutator):
+    def visit_Return(self, node): return self.mutable_visit(node)
+    def visit_Delete(self, node): return self.mutable_visit(node)
+
+    def visit_Assign(self, node): return self.mutable_visit(node)
+    def visit_AnnAssign(self, node): return self.mutable_visit(node)
+    def visit_AugAssign(self, node): return self.mutable_visit(node)
+
+    def visit_Raise(self, node): return self.mutable_visit(node)
+    def visit_Assert(self, node): return self.mutable_visit(node)
+
+    def visit_Global(self, node): return self.mutable_visit(node)
+    def visit_Nonlocal(self, node): return self.mutable_visit(node)
+
+    def visit_Expr(self, node): return self.mutable_visit(node)
+
+    def visit_Pass(self, node): return self.mutable_visit(node)
+    def visit_Break(self, node): return self.mutable_visit(node)
+    def visit_Continue(self, node): return self.mutable_visit(node)
+    def mutation_visit(self, node): return ast.Pass()
+
+MuFunctionAnalyzer(triangle).nmutations
+```
+
+**Activity: How do you think the code block above mutates code?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+The code block uses three classes defined inside it `MuFunctionAnalyzer`,
+`Mutator`, and `StmtDeletionMutator` to carry out different actions associated
+with mutating code. With the specific example call in the code block, the class
+`MuFunctionAnalyzer` is called with the `triangle` function as input. The
+example then specifically calls the `nmutations` method found in the
+`MuFunctionAnalyzer` class. This specific code prints out the number of possible
+mutations that can be made to the code specified, in this case 5. There are 5
+possible mutations because the `triangle` function only has one type of
+mutation, the 5 `return` statements.
+
+</details>
+
+### Limitations to Mutators
+
+One challenge in mutation analysis is that not all generated mutants are faulty.
+For instance, consider a basic python function, think about how many different
+ways you could add a mutator to it. Now consider this, while most mutants
+introduce faults, some may be the same as the original program in functionality,
+which may not in itself be a bug. These **equivalent mutants** do not represent
+actual faults, making it hard to accurately judge the effectiveness of a test
+suite. For example, if a mutation score is 70%, it's unclear if the remaining
+30% are undetected faults or equivalent mutants. This ambiguity makes it
+difficult to determine how much a test suite can be improved.
+
+## Reflection
+
+In this article, we discussed the limitations of fuzzing, an example of an
+ineffective test, injecting artificial faults, a code example for a simple
+mutator, and limitations to mutators. Like fuzzing, mutators have their benefits
+and uses, but they also have their faults. How should we start to incorporate
+mutation testing into our development process?
+
+{{< include /_fuzzingbook-reference.qmd >}}
+
+{{< include /_back-blog.qmd >}}

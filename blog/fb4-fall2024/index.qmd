@@ -51,7 +51,8 @@ Below is a section of code from the["Mutation
 Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of
 [The Fuzzing Book](https://www.fuzzingbook.org/), which highlights the above
 issue. This test may show that `execute_the_program_as_a_whole` has 100% code
-coverage, but as we have discovered, that may not be enough in terms of testing.
+coverage, but as we have discovered, that may not be enough in terms of
+guaranteeing effective testing.
 
 ```python
 def ineffective_test_2():

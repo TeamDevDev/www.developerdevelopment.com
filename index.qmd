@@ -94,10 +94,12 @@ develop as developers!
 
 ## Recent Posts
 
-To best ensure that the on-campus learners develop individually as in their
-capacity as team members, every partners with the course instructor to draft,
+To best ensure that the on-campus learners develop individually in their
+capacity as team members, everyone partners with the course instructor to draft,
 write, review, and publish [blog posts](blog/index.qmd) that support class
-discussions. Here are the most recent posts!
+discussions. These articles represent the current state of a person's knowledge
+and skills in both the technical and professional aspects of software
+engineering. Here are the most recent posts that we have written!
 
 :::{#featured-posts}
 :::

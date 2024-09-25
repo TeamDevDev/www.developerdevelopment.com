@@ -78,31 +78,42 @@ our [execexam](https://github.com/GatorEducator/execexam) tool.
 
 ### Injecting Artificial Faults
 
-Fear not! The book provides us with a testing tool to ensure our test suites are also testing for bugs: mutation analysis. 
-Mutation analysis is a technique to evaluate the effectiveness of a test suite by introducing artificial faults, known as 
-mutations, into the program's code. The goal is to see if the test suite can detect these intentional errors. For example, 
-a mutation might involve changing a `+` to a `-` in a function. If the test suite misses this, it indicates the test is 
-ineffective. The effectiveness of a test suite is measured by its ability to detect these artificial faults, known as 
-the mutation score.
+Fear not! The book provides us with a testing tool to ensure our test suites are
+also testing for bugs: mutation analysis. Mutation analysis is a technique to
+evaluate the effectiveness of a test suite by introducing artificial faults,
+known as mutations, into the program's code. The goal is to see if the test
+suite can detect these intentional errors. For example, a mutation might involve
+changing a `+` to a `-` in a function. If the test suite misses this, it
+indicates the test is ineffective. The effectiveness of a test suite is measured
+by its ability to detect these artificial faults, known as the mutation score.
 
-This approach is based on the idea that each part of a program has a similar probability of containing errors. 
-By assessing how well a test suite identifies these mutations, we can gauge its ability to find real bugs. Mutation 
-analysis can be applied to static test suites, fuzzers, and other testing frameworks, helping to ensure that they 
-effectively prevent faults. In essence, mutation analysis acts like fuzzing for test suites — if a mutated program 
-passes through the test suite without being flagged as faulty, it reveals a potential weakness in the testing process.
+This approach is based on the idea that each part of a program has a similar
+probability of containing errors. By assessing how well a test suite identifies
+these mutations, we can gauge its ability to find real bugs. Mutation analysis
+can be applied to static test suites, fuzzers, and other testing frameworks,
+helping to ensure that they effectively prevent faults. In essence, mutation
+analysis acts like fuzzing for test suites — if a mutated program passes through
+the test suite without being flagged as faulty, it reveals a potential weakness
+in the testing process.
 
-Fault injection involves creating specific errors to test the effectiveness of a test suite, but it has limitations. Generating 
-unbiased, hard-to-detect faults is labor-intensive, prone to developer bias, and may miss important bugs. 
+Fault injection involves creating specific errors to test the effectiveness of a
+test suite, but it has limitations. Generating unbiased, hard-to-detect faults
+is labor-intensive, prone to developer bias, and may miss important bugs. 
 
-Mutation analysis offers a better alternative. It operates on the assumption that most programming errors are small, 
-single-token mistakes, which are often caught by compilers. By generating all possible small variations of a 
-program —called mutants— and testing them against a suite, mutation analysis assesses how well the suite can "kill" 
-these mutants, i.e., detect the errors. The effectiveness of a test suite is measured by the proportion of mutants 
-it successfully identifies, offering a more systematic and automated way to evaluate its quality.
+Mutation analysis offers a better alternative. It operates on the assumption
+that most programming errors are small, single-token mistakes, which are often
+caught by compilers. By generating all possible small variations of a program
+—called mutants— and testing them against a suite, mutation analysis assesses
+how well the suite can "kill" these mutants or, put in another way, detect the
+errors. The effectiveness of a test suite is measured by the proportion of
+mutants it successfully identifies, offering a more systematic and automated way
+to evaluate its quality.
 
 ### A Simple Function Mutator
 
-Below is code from the [Fuzzing Book](https://www.fuzzingbook.org/html/MutationAnalysis.html), which demonstrates a simple mutator.
+Below is code from the [Fuzzing
+Book](https://www.fuzzingbook.org/html/MutationAnalysis.html), which
+demonstrates a simple mutator.
 
 ```{python}
 import ast

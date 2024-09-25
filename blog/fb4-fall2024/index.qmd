@@ -68,9 +68,11 @@ def ineffective_test_2():
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-The above code may show that the code is 100% covered, but does not give us any indication on the tests ability to 
-discover bugs in `execute_the_program_as_a_whole`. This is **not** ideal for giving us an understanding on 
-whether or not we are producing and shipping quality code to our [execexam](https://github.com/GatorEducator/execexam) tool.
+The above code may show that the code is 100% covered, but does not give us any
+indication on the tests ability to discover bugs in
+`execute_the_program_as_a_whole`. This is **not** ideal for giving us an
+understanding on whether or not we are producing and shipping quality code to
+our [execexam](https://github.com/GatorEducator/execexam) tool.
 
 </details>
 

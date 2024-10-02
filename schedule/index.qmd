@@ -35,14 +35,14 @@ listing:
       - **Monday**: in-person assessment of individual developer development
       - **Wednesday**: in-person assessment of individual developer development
       - **Thursday**: take an executable examination during the laboratory session
-      - **Friday**:  in-person assessment of individual developer development
+      - **Friday**: individual demonstration of project development
 - **Module Two**: *Practical Software Engineering Knowledge and Skills*
     - **Week Seven through Week Ten**: Enhance your technical and professional skills
-    - **Week Six**:
+    - **Week Eleven**:
       - **Monday**: in-person assessment of individual developer development
       - **Wednesday**: in-person assessment of individual developer development
       - **Thursday**: take an executable examination during the laboratory session
-      - **Friday**:  in-person assessment of individual developer development
+      - **Friday**: individual demonstration of project development
 - **Module Three**: *Advanced Software Engineering Knowledge and Skills*
     - **Week Eleven through Week Fifteen**: Enhance your technical and professional skills
     - **Week Sixteen**:

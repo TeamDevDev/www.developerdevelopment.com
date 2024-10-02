@@ -30,21 +30,21 @@ listing:
 
 - **Week One**: Technical and Professional Onboarding
 - **Module One**: *Introduction to Software Engineering Knowledge and Skills*
-    - **Week Two through Week Five**: Establish your technical and professional skills
+    - **Weeks Two through Five**: Establish your technical and professional skills
     - **Week Six**:
       - **Monday**: in-person assessment of individual developer development
       - **Wednesday**: in-person assessment of individual developer development
       - **Thursday**: take an executable examination during the laboratory session
       - **Friday**: individual demonstration of project development
 - **Module Two**: *Practical Software Engineering Knowledge and Skills*
-    - **Week Seven through Week Ten**: Enhance your technical and professional skills
+    - **Weeks Seven through Ten**: Enhance your technical and professional skills
     - **Week Eleven**:
       - **Monday**: in-person assessment of individual developer development
       - **Wednesday**: in-person assessment of individual developer development
       - **Thursday**: take an executable examination during the laboratory session
       - **Friday**: individual demonstration of project development
 - **Module Three**: *Advanced Software Engineering Knowledge and Skills*
-    - **Week Eleven through Week Fifteen**: Enhance your technical and professional skills
+    - **Weeks Eleven through Fifteen**: Enhance your technical and professional skills
     - **Week Sixteen**:
       - **Wednesday, December 11, 2024 at 9:00 AM**: Executable Examination
         - *Demonstrate technical skills in software engineering*:
@@ -85,6 +85,7 @@ listing:
         - Demonstration of project development for the week
         - Confirmation of readiness for next week's in-class discussions
         - Every other week, complete an in-class programming skill-check
+        - During an assessment week, demonstrate all work completed to date
 
 ::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
 

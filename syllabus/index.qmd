@@ -80,6 +80,7 @@ in preparation for in-class discussions.
 
 #### Module One Discussion Leads
 
+- **Week One**: Install development tools
 - **Week Two**: Pallas-Athena Cain and Hemani Alaparthi
 - **Week Three**: Rebekah Rudd and Chezka Quinola
 - **Week Four**: Aidan Dyga and Hannah Brown
@@ -100,6 +101,33 @@ in preparation for in-class discussions.
 - **Week Thirteen**: Pallas-Athena Cain, Coltin Colucci, and Chezka Quinola
 - **Week Fourteen**: Thanksgiving break
 - **Week Fifteen**: Hannah Brown, Philip Olwoc, and Rebekah Rudd
+- **Week Sixteen**: Final examination week
+
+### Reading Assignments
+
+#### Module One Reading Assignments
+
+- **Week One**: No reading assignment
+- **Week Two**: SE1 (Preface) and FB1 (Introduction to Software Testing)
+- **Week Three**: SE2 (What is Software Engineering?) and FB2 (Coverage)
+- **Week Four**: SE3 (Work Well on Teams) and FB3 (Fuzzing)
+- **Week Five**: SE4 (Knowledge Sharing) and FB4 (Mutation Analysis)
+- **Week Six**: No reading assignment
+
+#### Module Two Reading Assignments
+
+- **Week Seven**: Fall break and research conference travel
+- **Week Eight**: Project development meetings and project demonstrations
+- **Week Nine**: SE5 (Engineering for Equity and Documentation) and FB5 (Mutation-Based Fuzzing) and DB1 (Debugging)
+- **Week Ten**: SE6 (How to Lead a Team) and FB6 (Fuzzing with Grammars)
+- **Week Eleven**: In-person assessments and executable examination two
+
+#### Module Three Reading Assignments
+
+- **Week Twelve**: SE7 (Leading at Scale) and FB7 (Efficient Grammar Fuzzing)
+- **Week Thirteen**: SE8 (Style Guides and Rules) and FB8 (Parsing Inputs)
+- **Week Fourteen**: Thanksgiving break
+- **Week Fifteen**: SE9 (Code Review) and FB9 (Reducing Failure-Inducing Inputs)
 - **Week Sixteen**: Final examination week
 
 ### Course Description

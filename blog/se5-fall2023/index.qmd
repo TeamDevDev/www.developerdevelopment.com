@@ -12,7 +12,7 @@ page-layout: full
 ## Overview
 
 This blog post discusses the ["Engineering for
-Equity"](https://abseil.io/resources/swe-book/html/ch03.html) chapter in the
+Equity"](https://abseil.io/resources/swe-book/html/ch04.html) chapter in the
 [Software Engineering at Google book](https://abseil.io/resources/swe-book).
 This article's goal is to surface the engineer's responsibility in ensuring that
 a software project meets the needs of the largest possible audience or user base.
@@ -27,7 +27,7 @@ their projects, such as facial recognition software.
 
 In order to remedy this issue, there are several proposed steps, or areas of
 focus, for us to take into consideration. These are outlined in the **Value
-Versus Outcomes** section, as summarised and paraphrased in the following
+Versus Outcomes** section, as summarized and paraphrased in the following
 enumerated list:
 
 1. Who are the people building the product? Do these people represent those for

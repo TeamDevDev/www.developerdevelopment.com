@@ -58,6 +58,7 @@ that, by necessity, the meeting before yours may sometimes run late.
       - *Every other week*: take an in-class programming skill-check
 - **Collaborative Software Engineering**: Thursday, 2:30 PM -- 4:20 PM, Alden 109
 
+
 ::: {.callout-note appearance="minimal" title="Active Learning"}
 
 With the goal of ensuring that every student develops as a software developer,
@@ -74,6 +75,32 @@ with the course goals, you will complete out-of-class programming and writing
 in preparation for in-class discussions.
 
 :::
+
+### Discussion Leads
+
+#### Module One Discussion Leads
+
+- **Week Two**: Pallas-Athena Cain and Hemani Alaparthi
+- **Week Three**: Rebekah Rudd and Chezka Quinola
+- **Week Four**: Aidan Dyga and Hannah Brown
+- **Week Five**: Molly Suppo and Titus Smith
+- **Week Six**: In-person assessments and executable examination one
+
+#### Module Two Discussion Leads
+
+- **Week Seven**: Fall break and research conference travel
+- **Week Eight**: Project development meetings and project demonstrations
+- **Week Nine**: Course instructor
+- **Week Ten**: Coltin Colucci, Philip Olwoc, and Hemani Alaparthi
+- **Week Eleven**: In-person assessments and executable examination two
+
+#### Module Three Discussion Leads
+
+- **Week Twelve**:  Titus Smith, Aidan Dyga, and Molly Suppo
+- **Week Thirteen**: Pallas-Athena Cain, Coltin Colucci, and Chezka Quinola
+- **Week Fourteen**: Thanksgiving break
+- **Week Fifteen**: Hannah Brown, Philip Olwoc, and Rebekah Rudd
+- **Week Sixteen**: Final examination week
 
 ### Course Description
 

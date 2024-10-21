@@ -87,7 +87,7 @@ in preparation for in-class discussions.
 
 #### Module One Discussion Leads
 
-- **Week One**: Install development tools
+- **Week One**: Install development tools and explore projects
 - **Week Two**: Pallas-Athena Cain and Hemani Alaparthi
 - **Week Three**: Rebekah Rudd and Chezka Quinola
 - **Week Four**: Aidan Dyga and Hannah Brown
@@ -137,7 +137,7 @@ in preparation for in-class discussions.
 - **Week Fifteen**: SE9 (Code Review) and FB9 (Reducing Failure-Inducing Inputs)
 - **Week Sixteen**: No reading assignment due to final examination week
 
-::: {.callout-note appearance="minimal" title="Active Learning"}
+::: {.callout-note appearance="minimal" title="Textbook Reminders"}
 
 To access the content for a specific reading assignment, please visit the web
 site for the specified book and search for the chapter title provided in

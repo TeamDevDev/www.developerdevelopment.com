@@ -40,6 +40,8 @@ that, by necessity, the meeting before yours may sometimes run late.
 
 ### Schedule Overview
 
+#### Weekly Cadence
+
 - **Discussion, Writing, and Programming Sessions**
   - *Developing Professional Skills*: Monday, 10:00 AM -- 10:50 AM, Alden 109
     - **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)
@@ -58,6 +60,11 @@ that, by necessity, the meeting before yours may sometimes run late.
       - *Every other week*: take an in-class programming skill-check
 - **Collaborative Software Engineering**: Thursday, 2:30 PM -- 4:20 PM, Alden 109
 
+#### Assessment Schedule
+
+- **Week Six**: In-person assessments and executable examination one
+- **Week Eleven**: In-person assessments and executable examination two
+- **Week Sixteen**: Final examination week
 
 ::: {.callout-note appearance="minimal" title="Active Learning"}
 
@@ -112,15 +119,15 @@ in preparation for in-class discussions.
 - **Week Three**: SE2 (What is Software Engineering?) and FB2 (Coverage)
 - **Week Four**: SE3 (Work Well on Teams) and FB3 (Fuzzing)
 - **Week Five**: SE4 (Knowledge Sharing) and FB4 (Mutation Analysis)
-- **Week Six**: No reading assignment
+- **Week Six**: No reading assignment due to assessments
 
 #### Module Two Reading Assignments
 
 - **Week Seven**: Fall break and research conference travel
 - **Week Eight**: Project development meetings and project demonstrations
-- **Week Nine**: SE5 (Engineering for Equity and Documentation) and FB5 (Mutation-Based Fuzzing) and DB1 (Debugging)
+- **Week Nine**: SE5 (Engineering for Equity and Documentation), FB5 (Mutation-Based Fuzzing), and DB1 (Debugging)
 - **Week Ten**: SE6 (How to Lead a Team) and FB6 (Fuzzing with Grammars)
-- **Week Eleven**: In-person assessments and executable examination two
+- **Week Eleven**: No reading assignment due to assessments
 
 #### Module Three Reading Assignments
 
@@ -128,7 +135,20 @@ in preparation for in-class discussions.
 - **Week Thirteen**: SE8 (Style Guides and Rules) and FB8 (Parsing Inputs)
 - **Week Fourteen**: Thanksgiving break
 - **Week Fifteen**: SE9 (Code Review) and FB9 (Reducing Failure-Inducing Inputs)
-- **Week Sixteen**: Final examination week
+- **Week Sixteen**: No reading assignment due to final examination week
+
+::: {.callout-note appearance="minimal" title="Active Learning"}
+
+To access the content for a specific reading assignment, please visit the web
+site for the specified book and search for the chapter title provided in
+parentheses. As a reminder, these are the abbreviations for each of the three
+course textbooks that are freely available online:
+
+- **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)
+- **FB Book**: [Fuzzing Book](https://www.fuzzingbook.org/)
+- **DB Book**: [Debugging Book](https://www.debuggingbook.org/)
+
+:::
 
 ### Course Description
 

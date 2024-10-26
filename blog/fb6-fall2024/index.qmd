@@ -1,0 +1,10 @@
+---
+author: [Hemani Alaparthi, Gregory M. Kapfhammer]
+title: Fuzzing with Grammars
+date: '2024-10-26'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>Can we use rules to create intelligently-fuzzed inputs?</em>
+toc: true
+page-layout: full
+---

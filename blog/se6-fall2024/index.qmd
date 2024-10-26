@@ -11,7 +11,7 @@ page-layout: full
 
 ## Overview
 
-This blog post explores the ["How to Lead a Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter from [Google's Software Engineering](https://abseil.io/resources/swe-book) book, which tackles the challenges of leading software teams in a modern tech environment. This insightful chapter breaks down Google's approach to engineering leadership, from managing people and technical decisions to transitioning from a coder to a leader. Let's examine the key lessons we can extract from Google's leadership playbook and see how we can apply them in our own software engineering team!
+This blog post explores the ["How to Lead a Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter from [Google's Software Engineering](https://abseil.io/resources/swe-book) book, which tackles the challenges of leading software teams in a modern tech environment. This insightful chapter breaks down Google's approach to engineering leadership, from managing people and technical decisions to transitioning from a coder to a leader. Let's examine the key lessons we can extract from Google's Software Book and see how we can apply them in our own software engineering team!
 
 
 ## Summary

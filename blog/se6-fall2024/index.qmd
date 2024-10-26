@@ -12,3 +12,38 @@ page-layout: full
 ## Overview
 
 This blog post explores the ["How to Lead a Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter from [Google's Software Engineering](https://abseil.io/resources/swe-book) book, which tackles the challenges of leading software teams in a modern tech environment. This insightful chapter breaks down Google's approach to engineering leadership, from managing people and technical decisions to transitioning from a coder to a leader. Let's examine the key lessons we can extract from Google's leadership playbook and see how we can apply them in our own software engineering team!
+
+
+## Summary
+
+In software engineering, effective leadership goes beyond simply managing—it involves empowering, supporting, and guiding a team with humility, trust, and respect. This chapter covers essential leadership strategies for fostering a productive team culture, from tracking team happiness to encouraging growth and autonomy. Leaders should balance delegation with hands-on involvement, helping team members advance without micromanagement while shielding them from unnecessary organizational chaos. By focusing on both individual and team development, good managers inspire motivation through autonomy, mastery, and purpose, creating a workplace where engineers thrive and innovation flourishes.
+
+
+## Moving from an Individual Contributor Role to a Leadership Role
+
+Leadership often finds us before we find it. Whether you planned it or not, successful developers frequently end up steering the ship. This chapter explores the unexpected transition from individual contributor to leader.
+
+### Why Engineers Fear Management
+
+- Less time writing code - a major concern for developers
+- Difficulty measuring success - no more counting lines of code or closed tickets
+- The dreaded Peter Principle - fear of being promoted to incompetence
+- Bad experiences with previous managers creating negative associations
+
+### Why Consider Leadership?
+
+- Scale your impact beyond personal contributions
+- Discover hidden leadership talents
+- Fill important organizational needs
+
+### The Secret: Servant Leadership
+Instead of falling into the "management disease" of micromanaging and controlling, focus on:
+
+- Serving your team rather than directing them
+- Creating an environment of humility, respect, and trust
+- Removing obstacles and supporting both technical AND social health
+
+
+## Key Takeaways
+
+The key takeaway from this chapter is that exceptional leadership involves empowering and enabling a team rather than merely _directing_ them. Effective leaders delegate thoughtfully, offering both guidance and opportunities for team members to grow. Monitoring happiness and supporting team members’ personal and professional goals leads to a more motivated, resilient team. Additionally, balancing transparency with shielding from external chaos helps teams stay focused and productive. Finally, the pillars of autonomy, mastery, and purpose are fundamental to increasing intrinsic motivation, fostering a culture where each team member feels valued and invested in their work.

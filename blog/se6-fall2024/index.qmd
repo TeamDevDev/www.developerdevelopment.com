@@ -27,7 +27,7 @@ Think about that team project for CS203 - leadership isn't always volunteering t
 
 - Less Time Coding: The biggest deterrent for most developers is the reduced time spent actually writing code
 - Invisible Progress: Unlike coding, where you can point to specific outputs daily, leadership work often feels intangible
-- The Peter Principle Fear: Fear of being promoted to their level of incompetence, and they fear following the same path
+- The Peter Principle Fear: "In a hierarchy every employee tends to rise to his level of incompetence." Simply put, people keep getting promoted until they reach a job they can't do well.
 - Bad experiences:  Previous experiences with poor managers can make the role seem unappealing
 
 ### Why Consider Leadership?

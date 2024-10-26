@@ -21,29 +21,34 @@ In software engineering, effective leadership goes beyond simply managing—it i
 
 ## Moving from an Individual Contributor Role to a Leadership Role
 
-Leadership often finds us before we find it. Whether you planned it or not, successful developers frequently end up steering the ship. This chapter explores the unexpected transition from individual contributor to leader.
+Think about that team project for CS203 - leadership isn't always volunteering to be the team lead. Sometimes it just happens naturally, like when you find yourself organizing the git repo or messaging everyone to coordinate late-night debugging sessions. Tech folks call this "manageritis" - that moment when you realize you've accidentally become the go-to person for decisions and team conflicts. It's less about the title and more about that natural shift from coding to helping your classmates work better together.
 
-### Why Engineers Fear Management
+### Leadership Resistance
 
-- Less time writing code - a major concern for developers
-- Difficulty measuring success - no more counting lines of code or closed tickets
-- The dreaded Peter Principle - fear of being promoted to incompetence
-- Bad experiences with previous managers creating negative associations
+- Less Time Coding: The biggest deterrent for most developers is the reduced time spent actually writing code
+- Invisible Progress: Unlike coding, where you can point to specific outputs daily, leadership work often feels intangible
+- The Peter Principle Fear: Fear of being promoted to their level of incompetence, and they fear following the same path
+- Bad experiences:  Previous experiences with poor managers can make the role seem unappealing
 
 ### Why Consider Leadership?
 
-- Scale your impact beyond personal contributions
-- Discover hidden leadership talents
-- Fill important organizational needs
+Despite these valid concerns, leadership roles offer unique opportunities:
+
+- The chance to scale your impact beyond what you could achieve individually
+- Discover hidden leadership talents you might possess
+- The opportunity to guide projects and teams in meaningful directions
 
 ### The Secret: Servant Leadership
-Instead of falling into the "management disease" of micromanaging and controlling, focus on:
 
-- Serving your team rather than directing them
-- Creating an environment of humility, respect, and trust
-- Removing obstacles and supporting both technical AND social health
+The key to effective technical leadership isn't about control - it's about service. The best leaders:
+
+- Focus on removing obstacles for their team
+- Stay humble and maintain hands-on involvement when needed
+- Resist the urge to micromanage
+
+**Discussion Question: Think about your experience leading a course project in this classs - what's one 'invisible' task you did as a leader that was important but hard to measure like counting lines of code?"**
 
 
 ## Key Takeaways
 
-The key takeaway from this chapter is that exceptional leadership involves empowering and enabling a team rather than merely _directing_ them. Effective leaders delegate thoughtfully, offering both guidance and opportunities for team members to grow. Monitoring happiness and supporting team members’ personal and professional goals leads to a more motivated, resilient team. Additionally, balancing transparency with shielding from external chaos helps teams stay focused and productive. Finally, the pillars of autonomy, mastery, and purpose are fundamental to increasing intrinsic motivation, fostering a culture where each team member feels valued and invested in their work.
+The key takeaways from this chapter is that exceptional leadership involves empowering and enabling a team rather than merely _directing_ them. Effective leaders delegate thoughtfully, offering both guidance and opportunities for team members to grow. Monitoring happiness and supporting team members’ personal and professional goals leads to a more motivated, resilient team. Additionally, balancing transparency with shielding from external chaos helps teams stay focused and productive. Finally, the pillars of autonomy, mastery, and purpose are fundamental to increasing intrinsic motivation, fostering a culture where each team member feels valued and invested in their work.

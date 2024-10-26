@@ -11,6 +11,7 @@ page-layout: full
 
 ## Overview
 
+This article discusses the [Fuzzing with Grammars]() chapter from The [Fuzzing Book](), exploring how grammar-based fuzzing represents a significant advancement in software testing methodology, offering a more structured and efficient approach compared to traditional mutation-based fuzzing and how it can be useful for our tools.
 
 ## Summary
 

@@ -1,7 +1,7 @@
 ---
 author: [Hemani Alaparthi, Gregory M. Kapfhammer]
 title: Fuzzing with Grammars
-date: '2024-10-26'
+date: '2024-10-28'
 date-format: long
 categories: [post, software engineering, fuzzing book]
 description: <em>Can we harness the power of grammars to generate smarter fuzzed inputs<</em>
@@ -11,9 +11,164 @@ page-layout: full
 
 ## Overview
 
-This article discusses the [Fuzzing with Grammars]() chapter from The [Fuzzing Book](), exploring how grammar-based fuzzing represents a significant advancement in software testing methodology, offering a more structured and efficient approach compared to traditional mutation-based fuzzing and how it can be useful for our tools.
+This article dives into the [Fuzzing with Grammars] chapter from The [Fuzzing Book]() which builds on previous discussions, specifically those on [Mutation-Based Fuzzing](). By defining the legal inputs to a program through grammar specifications, we can streamline and enhance test generation, especially for complex formats. This chapter highlights the importance of structured inputs, which play a critical role in more advanced forms of fuzzing, including configuration fuzzing, API fuzzing, and GUI fuzzing. Here, we explore both the benefits and applications of grammar-based fuzzing, demonstrating how it offers a systematic approach for generating effective test cases across a range of input types. We will be exploring these practices and examining their relevance to our team’s current situation with execexam, connecting them to the concepts discussed last week to highlight how grammar-based fuzzing provides a systematic and effective approach to comprehensive test case generation.
 
 ## Summary
 
+
+## Simplifying Grammar-Based Fuzzing
+
+Grammar-based fuzzing generates complex inputs for testing applications by systematically expanding grammar rules. The simple_grammar_fuzzer function begins with a start symbol (e.g., `<start>`) and iteratively expands it according to predefined grammar rules to create various expressions.
+
+While effective, this approach is computationally expensive due to repetitive search and replace operations. Additionally, it may encounter expansion errors when it hits limits, such as reaching the maximum number of nonterminals.
+
+**Activity: Using `nonterminals("<digit><integer>")`, what nonterminals are extracted?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+The output is `["<digit>", "<integer>"]`, as these are the symbols enclosed in angle brackets.
+</details>
+
+## Simple Grammar Fuzzer
+
+Let's put the grammars to use! The `simple_grammar_fuzzer` is a basic tool that generates random expressions by starting with a placeholder `(<start>)` and expanding it using a set of grammar rules. It replaces nonterminal symbols like `<expr>` or `<term>` with random elements according to these rules until a complete expression is formed. To prevent endless expansion, the fuzzer limits the number of placeholders and retries, though it’s not perfect and sometimes encounters errors.
+
+
+```{python}
+import random
+import re
+from typing import Any, Callable, Dict, List, Set, Tuple
+
+Grammar = Dict[str, List[str]]
+
+def nonterminals(expansion):
+    return re.compile(r'(<[^<> ]*>)').findall(expansion)
+
+class ExpansionError(Exception):
+    pass
+
+def simple_grammar_fuzzer(grammar: Grammar, 
+                          start_symbol: str = "<start>",
+                          max_nonterminals: int = 10,
+                          max_expansion_trials: int = 100,
+                          log: bool = False) -> str:
+    """Produce a string from `grammar`.
+       `start_symbol`: use a start symbol other than `<start>` (default).
+       `max_nonterminals`: the maximum number of nonterminals 
+         still left for expansion
+       `max_expansion_trials`: maximum # of attempts to produce a string
+       `log`: print expansion progress if True"""
+
+    term = start_symbol
+    expansion_trials = 0
+
+    while len(nonterminals(term)) > 0:
+        symbol_to_expand = random.choice(nonterminals(term))
+        expansions = grammar[symbol_to_expand]
+        expansion = random.choice(expansions)
+        # In later chapters, we allow expansions to be tuples,
+        # with the expansion being the first element
+        if isinstance(expansion, tuple):
+            expansion = expansion[0]
+
+        new_term = term.replace(symbol_to_expand, expansion, 1)
+
+        if len(nonterminals(new_term)) < max_nonterminals:
+            term = new_term
+            if log:
+                print("%-40s" % (symbol_to_expand + " -> " + expansion), term)
+            expansion_trials = 0
+        else:
+            expansion_trials += 1
+            if expansion_trials >= max_expansion_trials:
+                raise ExpansionError("Cannot expand " + repr(term))
+
+    return term
+```
+
+Now, we can fuzz with a Grammar.
+
+```{python}
+EXPR_GRAMMAR: Grammar = {
+    "<start>":
+        ["<expr>"],
+
+    "<expr>":
+        ["<term> + <expr>", "<term> - <expr>", "<term>"],
+
+    "<term>":
+        ["<factor> * <term>", "<factor> / <term>", "<factor>"],
+
+    "<factor>":
+        ["+<factor>",
+         "-<factor>",
+         "(<expr>)",
+         "<integer>.<integer>",
+         "<integer>"],
+
+    "<integer>":
+        ["<digit><integer>", "<digit>"],
+
+    "<digit>":
+        ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+}
+```
+
+```{python}
+for i in range(10):
+    print(simple_grammar_fuzzer(grammar=EXPR_GRAMMAR, max_nonterminals=5))
+```
+
+While our fuzzer does the job in most cases, it has a number of drawbacks.
+
+**Activity: What drawbacks does `simple_grammar_fuzzer()` have?:**
+
+**A. It has a large number of string search and replace operations**
+
+**B. It may fail to produce a string (ExpansionError)**
+
+**C. It often picks some symbol to expand that does not even occur in the string**
+
+**D. All of the above**
+
+<details> <summary>Click to Expand for the Answer</summary>
+The answer is D!
+</details>
+
+
+### Some Grammars
+
+Here's a grammar for `cgi_decode()` introduced in the [Coverage](https://www.fuzzingbook.org/html/Coverage.html) chapter.
+
+```{python}
+
+CGI_GRAMMAR: Grammar = {
+    "<start>":
+        ["<string>"],
+
+    "<string>":
+        ["<letter>", "<letter><string>"],
+
+    "<letter>":
+        ["<plus>", "<percent>", "<other>"],
+
+    "<plus>":
+        ["+"],
+
+    "<percent>":
+        ["%<hexdigit><hexdigit>"],
+
+    "<hexdigit>":
+        ["0", "1", "2", "3", "4", "5", "6", "7",
+            "8", "9", "a", "b", "c", "d", "e", "f"],
+
+    "<other>":  # Actually, could be _all_ letters
+        ["0", "1", "2", "3", "4", "5", "a", "b", "c", "d", "e", "-", "_"],
+}
+```
+
+```{python}
+for i in range(10):
+    print(simple_grammar_fuzzer(grammar=CGI_GRAMMAR, max_nonterminals=10))
+```
 
 ## Key Takeaways

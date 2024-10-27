@@ -211,9 +211,6 @@ You can also use parentheses to apply the shortcut to multiple symbols.
 
 `(<symbol><char>)?` would indicate that both < symbol > and < char > can optionally occur 0 or 1 times.
 
-
-
-
 ## Checking Grammars
 Grammars are introduced as strings making it somewhat easy for there to be errors. There is a solution to this. The helper function is_valid_grammar() can assist in making sure that your grammars are working correctly. This function iterates through a grammar to make sure that all symbols are defined and in use. It also identifies if all symbols are reachable from the start symbol. This helper function should be implemented whenever you are using grammars to assure that the inputs you are giving are what you expected them to be.
 

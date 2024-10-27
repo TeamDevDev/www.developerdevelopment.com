@@ -197,19 +197,19 @@ simple_nonterminal_grammar: Grammar = {
 There are also shortcuts that can be implemented to manipulate how symbols can be used in recursion.
 
 
-< symbol >? indicates that < symbol > is optional meaning it can occur 0 or 1 times.
+`<symbol>?` indicates that `<symbol>` is optional meaning it can occur 0 or 1 times.
 
 
-< symbol >+ indicates that < symbol > can occur 1 or more times repeatedly
+`<symbol>+` indicates that `<symbol>` can occur 1 or more times repeatedly
 
 
-< symbol >* indicates that < symbol > is completely optional.
+`<symbol>*` indicates that `<symbol>` is completely optional.
 
 
 You can also use parentheses to apply the shortcut to multiple symbols.
 
 
-(< symbol >< char >)? would indicate that both < symbol > and < char > can optionally occur 0 or 1 times.
+`(<symbol><char>)?` would indicate that both < symbol > and < char > can optionally occur 0 or 1 times.
 
 
 

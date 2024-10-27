@@ -15,6 +15,7 @@ This article dives into the [Fuzzing with Grammars] chapter from The [Fuzzing Bo
 
 ## Summary
 
+Grammars are essential tools for producing syntactically valid inputs, offering a structured approach to input generation. In this chapter, we will examine grammar-based fuzzing as a tool for generating complex, syntactically valid inputs. By seeding grammars in mutation-based fuzzing, we can produce varied inputs that strengthen testing efforts. The chapter also highlighted the benefits of incorporating character classes, operators, and helper functions to improve the efficiency and accuracy of input generation.
 
 ## Simplifying Grammar-Based Fuzzing
 

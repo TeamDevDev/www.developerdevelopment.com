@@ -19,6 +19,16 @@ This blog post explores the ["How to Lead a Team"](https://abseil.io/resources/s
 In software engineering, effective leadership goes beyond simply managing—it involves empowering, supporting, and guiding a team with humility, trust, and respect. This chapter covers essential leadership strategies for fostering a productive team culture, from tracking team happiness to encouraging growth and autonomy. Leaders should balance delegation with hands-on involvement, helping team members advance without micromanagement while shielding them from unnecessary organizational chaos. By focusing on both individual and team development, good managers inspire motivation through autonomy, mastery, and purpose, creating a workplace where engineers thrive and innovation flourishes.
 
 
+## Managers and Tech Leads
+This person is responsible for the performance, productivity, and happiness of every person on their team, but at the same time making sure the needs of the business are met. But there is always some backlash because the needs of the business and the needs of the team may sometimes conflict. 
+
+### Tech Leads
+The tech lead is responsible for the technical aspects of what is being worked on. The TL will usually work hand in hand with the engineering manager to ensure that the team is adequately staffed for their product and that engineers are set to work on tasks that best match their skill sets and skill levels.
+
+### Tech Lead Manager 
+This a fusion between the Tech Lead and the Engineering Manager, they are sometimes, a TLM is a more senior person, but more often than not, the role is taken on by someone who was, until recently, an individual contributor. 
+
+
 ## Moving from an Individual Contributor Role to a Leadership Role
 
 Think about that team project for CS203 - leadership isn't always volunteering to be the team lead. Sometimes it just happens naturally, like when you find yourself organizing the git repo or messaging everyone to coordinate late-night debugging sessions. Tech folks call this "manageritis" - that moment when you realize you've accidentally become the go-to person for decisions and team conflicts. It's less about the title and more about that natural shift from coding to helping your classmates work better together.
@@ -48,15 +58,3 @@ The key to effective technical leadership isn't about control - it's about servi
 
 **Discussion Question: Think about your experience leading a course project in this classs - what's one 'invisible' task you did as a leader that was important but hard to measure like counting lines of code?"**
 
-
-### Managers and Tech Leads
-This person is responsible for the performance, productivity, and happiness of every person on their team, but at the same time making sure the needs of the business are met. But there is always some backlash because the needs of the business and the needs of the team may sometimes conflict. 
-
-### Tech Leads
-The tech lead is responsible for the technical aspects of what is being worked on. The TL will usually work hand in hand with the engineering manager to ensure that the team is adequately staffed for their product and that engineers are set to work on tasks that best match their skill sets and skill levels.
-
-### Tech Lead Manager 
-This a fusion between the Tech Lead and the Engineering Manager, they are sometimes, a TLM is a more senior person, but more often than not, the role is taken on by someone who was, until recently, an individual contributor. 
-## Key Takeaways
-
-The key takeaways from this chapter is that exceptional leadership involves empowering and enabling a team rather than merely _directing_ them. Effective leaders delegate thoughtfully, offering both guidance and opportunities for team members to grow. Monitoring happiness and supporting team members’ personal and professional goals leads to a more motivated, resilient team. Additionally, balancing transparency with shielding from external chaos helps teams stay focused and productive. Finally, the pillars of autonomy, mastery, and purpose are fundamental to increasing intrinsic motivation, fostering a culture where each team member feels valued and invested in their work.

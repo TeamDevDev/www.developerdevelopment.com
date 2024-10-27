@@ -58,6 +58,59 @@ The key to effective technical leadership isn't about control - it's about servi
 
 **Discussion Question: Think about your experience leading a course project in this classs - what's one 'invisible' task you did as a leader that was important but hard to measure like counting lines of code?"**
 
+### Engineering Manager
+- What do you think is expected of a manager at a modern software company?
+
+- How might being a manager at a 
+software development company be different than managing at a factory?
+
+- Often times trusting your employees is the best way to go about management.
+
+- Failure is an option. Allowing people to be themselves leads to a more confident environment where people are not afraid to take risks.
+
+- "Traditional managers worry about how to get things done, whereas great managers worry about what things get done (and trust their team to figure out how to do it)." - SE Book
+
+### Positive Patterns and Antipatterns
+- As a manager what are some traits that you would look for in hires?
+
+- **Hire Pushovers**: It is much easier to hire people that say yes to everything. These are not the people that will push the team to be the best. You need ambitious creative people on your team to continue to challenge ideas and push the standard. 
+
+- **Ignore Low Performers**:
+It is important to note that it is often your job to hold people accountable. This sometimes means that you have to have hard discussions and sometimes fire people.
+
+- **Ignore Human Issues**:
+There are two main categories when it comes to software development teams. Social and technical, it is important to note that everybody is human and has things going outside of their work. 
+
+- **Be Everyone's Friend**:
+Why might this be an issue?
+
+- **Compromising the Hiring Bar**:
+It is often that people are hired out of necessity. This can be an issue because if an employee is not returning value to the company or team than most of the time you would be better off waiting to find the right candidate.
+
+- **Lose the Ego**:
+How could a manager's ego affect the work environment?
+
+- **Be a Zen Master**:
+Remaining calm and not panicking can be huge for your team. Along with this you do not have to over communicate. Oftentimes the people working on a specific project will know more about the intricacies than you do. Trusting them to do their job and not micromanage is important.
+
+- **Be a Catalyst**:
+Help to inspire ideas and solutions. One of the best ways you can go about this is to get a voluntary consensus. This can lead to ideas and perspectives being shared ultimately leading to more efficient solutions. 
+
+- **Remove Roadblocks**:
+As a manager you might have resources that other people in your team do not. Make sure the team is open with you about their problems and know that you are willing to help.
+
+- **Be a Teacher and a Mentor**:
+While it is important that you are helping your team it is also important to allow them to work through issues on their own. 
+
+- **Set Clear Goals**:
+Having everybody on the team moving in the same direction is one of your main jobs. Having a clear vision of what needs to be accomplished can greatly increase production.
+
+- **Be Honest**:
+It is ok to not know everything. It is also important to be able to give feedback. A strategy to implement for this would be the compliment sandwich.
+
+- **Track Happiness**:
+Giving recognition and complements is just as important as telling someone they did something wrong. Tracking happiness can keep a lot of good employees around in the long run and make the overall work environment more enjoyable. 
+
 ## Key Takeaways
 
 The key takeaways from this chapter is that exceptional leadership involves empowering and enabling a team rather than merely _directing_ them. Effective leaders delegate thoughtfully, offering both guidance and opportunities for team members to grow. Monitoring happiness and supporting team members’ personal and professional goals leads to a more motivated, resilient team. Additionally, balancing transparency with shielding from external chaos helps teams stay focused and productive. Finally, the pillars of autonomy, mastery, and purpose are fundamental to increasing intrinsic motivation, fostering a culture where each team member feels valued and invested in their work.

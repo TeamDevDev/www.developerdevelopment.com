@@ -182,7 +182,7 @@ Another thing worth mentioning is escapes. Escapes can be used for delimiting no
 
 
 
-```
+```{python}
 simple_nonterminal_grammar: Grammar = {
    "<start>": ["<nonterminal>"],
    "<nonterminal>": ["<left-angle><identifier><right-angle>"],

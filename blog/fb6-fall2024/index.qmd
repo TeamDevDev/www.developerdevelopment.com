@@ -135,7 +135,7 @@ The answer is D!
 </details>
 
 
-### Some Grammars
+## Some Grammars
 
 Here's a grammar for `cgi_decode()` introduced in the [Coverage](https://www.fuzzingbook.org/html/Coverage.html) chapter.
 
@@ -173,9 +173,11 @@ for i in range(10):
 
 
 ## Grammar Toolbox
-In your own grammar toolbox there are many different ways in which you could use grammars. It is important to note that grammars are not very effective in meeting complex constraints. The example of this that is given in the FB book is that it would be hard to express a port range that is supposed to be between 1024 and 2048. There are a few different reasons why this would be hard to express, one of them being that there is a limited range the grammar could not allow a number larger than 2048. This means that there would have to be specific rules in place to make sure that 2048 is valid and 2049 is invalid. This can become extremely complex to express very quickly when having to set these types of parameters. An example where grammars may be more practical would be
-using grammars as mutation seeds. The reason that grammars may be useful to use as an input is that they almost always can produce valid inputs from a syntactical standpoint. This is useful because when inputs are syntactically valid they can reveal other areas in which inputs may fail.
+In your own grammar toolbox there are many different ways in which you could use grammars. It is important to note that grammars are not very effective in meeting complex constraints. The example of this that is given in the FB book is that it would be hard to express a port range that is supposed to be between 1024 and 2048. 
 
+There are a few different reasons why this would be hard to express, one of them being that there is a limited range the grammar could not allow a number larger than 2048. This means that there would have to be specific rules in place to make sure that 2048 is valid and 2049 is invalid. This can become extremely complex to express very quickly when having to set these types of parameters. 
+
+An example where grammars may be more practical would be using grammars as mutation seeds. The reason that grammars may be useful to use as an input is that they almost always can produce valid inputs from a syntactical standpoint. This is useful because when inputs are syntactically valid they can reveal other areas in which inputs may fail.
 
 Another thing worth mentioning is escapes. Escapes can be used for delimiting nonterminals in grammars. This can be useful whenever you want to manipulate the input or output to have a specific value.
 
@@ -195,21 +197,23 @@ simple_nonterminal_grammar: Grammar = {
 There are also shortcuts that can be implemented to manipulate how symbols can be used in recursion.
 
 
-`<symbol>?` indicates that `<symbol>` is optional meaning it can occur 0 or 1 times.
+- `<symbol>?` indicates that `<symbol>` is optional meaning it can occur 0 or 1 times.
 
 
-`<symbol>+` indicates that `<symbol>` can occur 1 or more times repeatedly
+- `<symbol>+` indicates that `<symbol>` can occur 1 or more times repeatedly
 
 
-`<symbol>*` indicates that `<symbol>` is completely optional.
+- `<symbol>*` indicates that `<symbol>` is completely optional.
 
 
 You can also use parentheses to apply the shortcut to multiple symbols.
 
 
-`(<symbol><char>)?` would indicate that both < symbol > and < char > can optionally occur 0 or 1 times.
+`(<symbol><char>)?` would indicate that both `<symbol>` and `<char>` can optionally occur 0 or 1 times.
+
 
 ## Checking Grammars
+
 Grammars are introduced as strings making it somewhat easy for there to be errors. There is a solution to this. The helper function is_valid_grammar() can assist in making sure that your grammars are working correctly. This function iterates through a grammar to make sure that all symbols are defined and in use. It also identifies if all symbols are reachable from the start symbol. This helper function should be implemented whenever you are using grammars to assure that the inputs you are giving are what you expected them to be.
 
 ## Key Takeaways

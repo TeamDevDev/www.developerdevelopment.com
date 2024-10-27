@@ -1,5 +1,5 @@
 ---
-author: [Hemani Alaparthi, Gregory M. Kapfhammer]
+author: [Hemani Alaparthi, Coltin Colucci, Gregory M. Kapfhammer]
 title: Fuzzing with Grammars
 date: '2024-10-28'
 date-format: long

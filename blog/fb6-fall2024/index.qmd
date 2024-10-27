@@ -1,5 +1,5 @@
 ---
-author: [Hemani Alaparthi, Coltin Colucci, Gregory M. Kapfhammer]
+author: [Hemani Alaparthi, Coltin Colucci, Philip Olwoc, Gregory M. Kapfhammer]
 title: Fuzzing with Grammars
 date: '2024-10-28'
 date-format: long
@@ -16,6 +16,60 @@ This article dives into the [Fuzzing with Grammars](https://www.fuzzingbook.org/
 ## Summary
 
 Grammars are essential tools for producing syntactically valid inputs, offering a structured approach to input generation. In this chapter, we will examine grammar-based fuzzing as a tool for generating complex, syntactically valid inputs. By seeding grammars in mutation-based fuzzing, we can produce varied inputs that strengthen testing efforts. The chapter also highlighted the benefits of incorporating character classes, operators, and helper functions to improve the efficiency and accuracy of input generation.
+
+## Input Languages
+
+In software engineering all programs are triggered by the input, and this can be a wide range of sources. Data that read from files, from user input, or even data from interactions with other sources. All these dictate how a program will behave, so it is very helpful to think about possible input sources and get them under control and how to “systemically test them”.
+
+For the sake of simplicity, we will assume that a program has one single input. The range of valid inputs a program can process correctly is referred to as a “language”, because they follow a specific set of rules of syntax and semantics. There are many examples, there are simple languages like CSV(comma-separated values), and complex languages like Python.
+
+For languages to be formally described, the field of formal language has come up with a set of language specifications to describe a language. ‘Regular expressions’ represent the simplest class of strings, for example [a-z]* represents a simple sequence of lowercase letters. Automata Theory links these languages to Finite state machines, these machines help recognize patterns defined by regular expressions.
+
+Regular expressions are good when representing a simple input but from more complex inputs they are limited. This is why we use turning machines. Turing machines can specify more complex input sets like Python. Since Python is Turing Complete it allows us to define and/list inputs for another program but because testing gas to be specific to each program it cannot be done automatically.
+
+## Grammars
+
+Grammars are a set of rules that define the structure of a language, much like in English it allows us to properly construct sentences so our communication comes out clearly. Grammars are useful in helping understand the structure of an input and describing patterns where elements are nested within each other.
+
+## Representing Grammar in Python 
+```{python}
+
+DIGIT_GRAMMAR = {
+    "<start>":
+        ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+}
+
+Grammar = Dict[str, List[Expansion]]
+
+EXPR_GRAMMAR: Grammar = {
+    "<start>":
+        ["<expr>"],
+
+    "<expr>":
+        ["<term> + <expr>", "<term> - <expr>", "<term>"],
+
+    "<term>":
+        ["<factor> * <term>", "<factor> / <term>", "<factor>"],
+
+    "<factor>":
+        ["+<factor>",
+         "-<factor>",
+         "(<expr>)",
+         "<integer>.<integer>",
+         "<integer>"],
+
+    "<integer>":
+        ["<digit><integer>", "<digit>"],
+
+    "<digit>":
+        ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+}
+
+EXPR_GRAMMAR["<digit>"]
+
+"<identifier>" in EXPR_GRAMMAR
+```
+
 
 ## Simplifying Grammar-Based Fuzzing
 

@@ -180,8 +180,6 @@ using grammars as mutation seeds. The reason that grammars may be useful to use 
 Another thing worth mentioning is escapes. Escapes can be used for delimiting nonterminals in grammars. This can be useful whenever you want to manipulate the input or output to have a specific value.
 
 
-
-
 ```{python}
 simple_nonterminal_grammar: Grammar = {
    "<start>": ["<nonterminal>"],

@@ -141,32 +141,6 @@ def simple_grammar_fuzzer(grammar: Grammar,
 Now, we can fuzz with a Grammar.
 
 ```{python}
-EXPR_GRAMMAR: Grammar = {
-    "<start>":
-        ["<expr>"],
-
-    "<expr>":
-        ["<term> + <expr>", "<term> - <expr>", "<term>"],
-
-    "<term>":
-        ["<factor> * <term>", "<factor> / <term>", "<factor>"],
-
-    "<factor>":
-        ["+<factor>",
-         "-<factor>",
-         "(<expr>)",
-         "<integer>.<integer>",
-         "<integer>"],
-
-    "<integer>":
-        ["<digit><integer>", "<digit>"],
-
-    "<digit>":
-        ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-}
-```
-
-```{python}
 for i in range(10):
     print(simple_grammar_fuzzer(grammar=EXPR_GRAMMAR, max_nonterminals=5))
 ```

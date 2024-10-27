@@ -1,5 +1,5 @@
 ---
-author: [Hemani Alaparthi, Philip Olwoc, Gregory M. Kapfhammer]
+author: [Hemani Alaparthi, Coltin Colucci, Philip Olwoc, Gregory M. Kapfhammer]
 title: 'How to Lead a Team'
 date: '2024-10-26'
 date-format: long

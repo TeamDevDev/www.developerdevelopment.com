@@ -17,7 +17,7 @@ Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from The
 discussions, specifically those on [Mutation-Based
 Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html). By defining the
 legal inputs to a program through grammar specifications, we can streamline and
-enhance test generation, especially for complex formats. This chapter highlights
+enhance test generation, especially for complex formats. This blog post highlights
 the importance of structured inputs, which play a critical role in more advanced
 forms of fuzzing, including configuration fuzzing, API fuzzing, and GUI fuzzing.
 Here, we explore both the benefits and applications of grammar-based fuzzing,
@@ -317,7 +317,7 @@ be.
 
 ## Key Takeaways
 
-In this chapter, we explored the versatility of grammars in generating
+In this blog post, we explored the versatility of grammars in generating
 syntactically valid inputs and their use in mutation-based fuzzing. Grammars,
 when combined with character classes and operators, enhance the ease of
 producing more complex input patterns. How can we further leverage these

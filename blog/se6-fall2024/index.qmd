@@ -114,7 +114,9 @@ how to do it)." - SE Book
 
 ### Positive Patterns and Anti-patterns
 
-- As a manager what are some traits that you would look for in hires?
+As a manager what are some traits that you would look for in hires? Let's
+examine some of the positive patterns and anti-patterns that you might see
+in the leadership of a software engineering team.
 
 - **Hire Pushovers**: It is much easier to hire people that say yes to
 everything. These are not the people that will push the team to be the best. You

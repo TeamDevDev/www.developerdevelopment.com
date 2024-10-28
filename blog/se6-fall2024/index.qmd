@@ -133,7 +133,7 @@ everybody is human and has things going on outside of their work.
 
 - **Compromising the Hiring Bar**: It is often that people are hired out of
 necessity. This can be an issue because if an employee is not returning value to
-the company or team than most of the time you would be better off waiting to
+the company or team then most of the time you would be better off waiting to
 find the right candidate.
 
 - **Lose the Ego**: How could a manager's ego affect the work environment?
@@ -178,3 +178,5 @@ balancing transparency with shielding from external chaos helps teams stay
 focused and productive. Finally, the pillars of autonomy, mastery, and purpose
 are fundamental to increasing intrinsic motivation, fostering a culture where
 each team member feels valued and invested in their work.
+
+{{< include /_back-blog.qmd >}}

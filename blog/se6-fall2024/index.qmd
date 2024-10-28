@@ -129,7 +129,9 @@ discussions and sometimes fire people.
 software development teams: social and technical. It is important to note that
 everybody is human and has things going on outside of their work. 
 
-- **Be Everyone's Friend**: Why might this be an issue?
+- **Be Everyone's Friend**: Since it is tempting to have every member of our
+team like us, a technical leader may want to be the friend of every member in
+the team. Why might this be an issue?
 
 - **Compromising the Hiring Bar**: It is often that people are hired out of
 necessity. This can be an issue because if an employee is not returning value to

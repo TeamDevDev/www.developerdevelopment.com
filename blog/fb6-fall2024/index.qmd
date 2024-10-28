@@ -50,8 +50,8 @@ test them".
 For the sake of simplicity, we will assume that a program has one single input.
 The range of valid inputs a program can process correctly is referred to as a
 “language”, because they follow a specific set of rules of syntax and semantics.
-There are many examples, there are simple languages like CSV(comma-separated
-values), and complex languages like Python.
+There are many examples, there are simple languages like comma-separated value
+(CSV) files and complex languages like Python programs.
 
 For languages to be formally described, the field of formal language has come up
 with a set of language specifications to describe a language. "Regular

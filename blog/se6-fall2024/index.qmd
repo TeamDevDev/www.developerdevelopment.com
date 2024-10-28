@@ -118,16 +118,16 @@ how to do it)." - SE Book
 
 - **Hire Pushovers**: It is much easier to hire people that say yes to
 everything. These are not the people that will push the team to be the best. You
-need ambitious creative people on your team to continue to challenge ideas and
-push the standard. 
+need ambitious and creative people on your team to continue to challenge ideas
+and push the standard. 
 
 - **Ignore Low Performers**: It is important to note that it is often your job
 to hold people accountable. This sometimes means that you have to have hard
 discussions and sometimes fire people.
 
 - **Ignore Human Issues**: There are two main categories when it comes to
-software development teams. Social and technical, it is important to note that
-everybody is human and has things going outside of their work. 
+software development teams: social and technical. It is important to note that
+everybody is human and has things going on outside of their work. 
 
 - **Be Everyone's Friend**: Why might this be an issue?
 

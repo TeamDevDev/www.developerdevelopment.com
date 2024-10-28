@@ -176,7 +176,7 @@ def simple_grammar_fuzzer(grammar: Grammar,
     return term
 ```
 
-Now, we can fuzz with a Grammar.
+Now, we can fuzz with a grammar by calling the `simple_grammar_fuzzer()` function!
 
 ```{python}
 for i in range(10):
@@ -270,8 +270,8 @@ simple_nonterminal_grammar: Grammar = {
 }
 ```
 
-(Note that this does not work with simple_grammar_fuzzer(), but rather with the
-`GrammarFuzzer` class we'll introduce in the next chapter.)
+(Note that this does not work with `simple_grammar_fuzzer()`, but rather with
+the `GrammarFuzzer` class we'll introduce in the next chapter.)
 
 There are also shortcuts that can be implemented to manipulate how symbols can
 be used in recursion.

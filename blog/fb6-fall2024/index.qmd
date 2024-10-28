@@ -31,20 +31,21 @@ comprehensive test case generation.
 ## Summary
 
 Grammars are essential tools for producing syntactically valid inputs, offering
-a structured approach to input generation. In this chapter, we will examine
+a structured approach to input generation. In this post, we will examine
 grammar-based fuzzing as a tool for generating complex, syntactically valid
 inputs. By seeding grammars in mutation-based fuzzing, we can produce varied
-inputs that strengthen testing efforts. The chapter also highlighted the
+inputs that strengthen testing efforts. The post will also highlight the
 benefits of incorporating character classes, operators, and helper functions to
 improve the efficiency and accuracy of input generation.
 
 ## Input Languages
 
 In software engineering all programs are triggered by the input, and this can be
-a wide range of sources. Data that read from files, from user input, or even
-data from interactions with other sources. All these dictate how a program will
-behave, so it is very helpful to think about possible input sources and get them
-under control and how to "systemically test them".
+a wide range of sources. Here are some examples of inputs: data that the program
+reads from files, user input, or even data from interactions with other sources.
+All these dictate how a program will behave, so it is very helpful to think
+about possible input sources and get them under control and how to "systemically
+test them".
 
 For the sake of simplicity, we will assume that a program has one single input.
 The range of valid inputs a program can process correctly is referred to as a

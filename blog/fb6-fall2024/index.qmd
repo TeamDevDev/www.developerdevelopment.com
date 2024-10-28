@@ -68,7 +68,10 @@ testing gas to be specific to each program it cannot be done automatically.
 
 ## Grammars
 
-Grammars are a set of rules that define the structure of a language, much like in English it allows us to properly construct sentences so our communication comes out clearly. Grammars are useful in helping understand the structure of an input and describing patterns where elements are nested within each other.
+Grammars are a set of rules that define the structure of a language, much like
+in English it allows us to properly construct sentences so our communication
+comes out clearly. Grammars are useful in helping understand the structure of
+an input and describing patterns where elements are nested within each other.
 
 ## Representing Grammar in Python 
 ```{python}
@@ -142,7 +145,7 @@ encounters errors.
 ```{python}
 import random
 import re
-from typing import Any, Callable, Dict, List, Set, Tuple
+from typing import Any, Dict, List, Tuple
 
 Grammar = Dict[str, List[str]]
 
@@ -204,7 +207,7 @@ While our fuzzer does the job in most cases, it has a number of drawbacks.
 
 **A. It has a large number of string search and replace operations**
 
-**B. It may fail to produce a string (`ExpansionError`)**
+**B. It may fail to produce a string (i.e., throw an `ExpansionError`)**
 
 **C. It often picks some symbol to expand that does not even occur in the
 string**

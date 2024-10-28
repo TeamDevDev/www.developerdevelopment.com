@@ -76,7 +76,7 @@ an input and describing patterns where elements are nested within each other.
 ## Representing Grammar in Python 
 ```{python}
 
-from typing import List, Dict, Union, Any, Tuple, Optional
+from typing import List, Dict, Union, Any, Tuple
 
 SimpleGrammar = Dict[str, List[str]]
 Option = Dict[str, Any]

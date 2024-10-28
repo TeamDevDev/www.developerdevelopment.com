@@ -221,10 +221,10 @@ The answer is D!
 
 ## Some Grammars
 
-Here's a grammar for `cgi_decode()` introduced in the [Coverage](https://www.fuzzingbook.org/html/Coverage.html) chapter.
+Here's a grammar for `cgi_decode()` introduced in the
+[Coverage](https://www.fuzzingbook.org/html/Coverage.html) chapter.
 
 ```{python}
-
 CGI_GRAMMAR: Grammar = {
     "<start>":
         ["<string>"],
@@ -257,11 +257,11 @@ for i in range(10):
 
 ## Grammar Toolbox
 
-In your own grammar toolbox there are many different ways in which you could use
-grammars. It is important to note that grammars are not very effective in
-meeting complex constraints. The example of this that is given in the FB book is
-that it would be hard to express a port range that is supposed to be between
-1024 and 2048. 
+In your own grammar toolbox there are many different ways in which you could
+use grammars. It is important to note that grammars are not very effective in
+meeting complex constraints. The example of this that is given in the Fuzzing
+Book is that it would be hard to express a port range that is supposed to be
+between 1024 and 2048. 
 
 There are a few different reasons why this would be hard to express, one of them
 being that there is a limited range and thus the grammar could not allow a
@@ -321,6 +321,7 @@ In this chapter, we explored the versatility of grammars in generating
 syntactically valid inputs and their use in mutation-based fuzzing. Grammars,
 when combined with character classes and operators, enhance the ease of
 producing more complex input patterns. How can we further leverage these
-extensions to streamline input generation in software testing for our tools?
+extensions to streamline input generation during the software testing process
+for our tools?
 
 {{< include /_back-blog.qmd >}}

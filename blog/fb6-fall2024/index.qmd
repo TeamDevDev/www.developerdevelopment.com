@@ -1,0 +1,327 @@
+---
+author: [Hemani Alaparthi, Coltin Colucci, Philip Olwoc, Gregory M. Kapfhammer]
+title: Fuzzing with Grammars
+date: '2024-10-30'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>Can we harness the power of grammars to generate smarter fuzzed inputs</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This article dives into the [Fuzzing with
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from The
+[Fuzzing Book](https://www.fuzzingbook.org/html/) which builds on previous
+discussions, specifically those on [Mutation-Based
+Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html). By defining the
+legal inputs to a program through grammar specifications, we can streamline and
+enhance test generation, especially for complex formats. This blog post highlights
+the importance of structured inputs, which play a critical role in more advanced
+forms of fuzzing, including configuration fuzzing, API fuzzing, and GUI fuzzing.
+Here, we explore both the benefits and applications of grammar-based fuzzing,
+demonstrating how it offers a systematic approach for generating effective test
+cases across a range of input types. We will be exploring these practices and
+examining their relevance to our team’s current situation with tools like
+`execexam`, connecting them to the concepts discussed last week to highlight how
+grammar-based fuzzing provides a systematic and effective approach to
+comprehensive test case generation.
+
+## Summary
+
+Grammars are essential tools for producing syntactically valid inputs, offering
+a structured approach to input generation. In this post, we will examine
+grammar-based fuzzing as a tool for generating complex, syntactically valid
+inputs. By seeding grammars in mutation-based fuzzing, we can produce varied
+inputs that strengthen testing efforts. The post will also highlight the
+benefits of incorporating character classes, operators, and helper functions to
+improve the efficiency and accuracy of input generation.
+
+## Input Languages
+
+In software engineering all programs are triggered by the input, and this can be
+a wide range of sources. Here are some examples of inputs: data that the program
+reads from files, user input, or even data from interactions with other sources.
+All these dictate how a program will behave, so it is very helpful to think
+about possible input sources and get them under control and how to "systemically
+test them".
+
+For the sake of simplicity, we will assume that a program has one single input.
+The range of valid inputs a program can process correctly is referred to as a
+“language”, because they follow a specific set of rules of syntax and semantics.
+There are many examples, there are simple languages like comma-separated value
+(CSV) files and complex languages like Python programs.
+
+For languages to be formally described, the field of formal language theory has
+developed a set of language specifications to describe a language. "Regular
+expressions" represent the simplest class of strings, for example `[a-z]*`
+represents a simple sequence of lowercase letters. Automata theory links these
+languages to Finite state machines, these machines help recognize patterns
+defined by regular expressions.
+
+Regular expressions are good when representing a simple input but from more
+complex inputs they are limited. This is why we use turning machines. Turing
+machines can specify more complex input sets like Python. Since Python is Turing
+Complete it allows us to define and/list inputs for another program but because
+testing gas to be specific to each program it cannot be done automatically.
+
+## Grammars
+
+Grammars are a set of rules that define the structure of a language, much like
+in English it allows us to properly construct sentences so our communication
+comes out clearly. Grammars are useful in helping understand the structure of
+an input and describing patterns where elements are nested within each other.
+
+## Representing Grammar in Python 
+
+```{python}
+
+from typing import List, Dict, Union, Any, Tuple
+
+SimpleGrammar = Dict[str, List[str]]
+Option = Dict[str, Any]
+Expansion = Union[str, Tuple[str, Option]]
+Grammar = Dict[str, List[Expansion]]
+
+EXPR_GRAMMAR: Grammar = {
+    "<start>":
+        ["<expr>"],
+
+    "<expr>":
+        ["<term> + <expr>", "<term> - <expr>", "<term>"],
+
+    "<term>":
+        ["<factor> * <term>", "<factor> / <term>", "<factor>"],
+
+    "<factor>":
+        ["+<factor>",
+         "-<factor>",
+         "(<expr>)",
+         "<integer>.<integer>",
+         "<integer>"],
+
+    "<integer>":
+        ["<digit><integer>", "<digit>"],
+
+    "<digit>":
+        ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+}
+
+"<identifier>" in EXPR_GRAMMAR
+```
+
+
+## Simplifying Grammar-Based Fuzzing
+
+Grammar-based fuzzing generates complex inputs for testing applications by
+systematically expanding grammar rules. The `simple_grammar_fuzzer` function
+begins with a start symbol (e.g., `<start>`) and iteratively expands it
+according to predefined grammar rules to create various expressions.
+
+While effective, this approach is computationally expensive due to repetitive
+search and replace operations. Additionally, it may encounter expansion errors
+when it hits limits, such as reaching the maximum number of non-terminals.
+
+**Activity: Using `nonterminals("<digit><integer>")`, what non-terminals are
+extracted?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+The output is `["<digit>", "<integer>"]`, as these are the symbols enclosed in
+angle brackets.
+
+</details>
+
+## Simple Grammar Fuzzer
+
+Let's put the grammars to use! The `simple_grammar_fuzzer` is a basic tool that
+generates random expressions by starting with a placeholder `(<start>)` and
+expanding it using a set of grammar rules. It replaces non-terminal symbols like
+`<expr>` or `<term>` with random elements according to these rules until a
+complete expression is formed. To prevent endless expansion, the fuzzer limits
+the number of placeholders and retries, though it’s not perfect and sometimes
+encounters errors.
+
+```{python}
+import random
+import re
+from typing import Any, Dict, List, Tuple
+
+Grammar = Dict[str, List[str]]
+
+def nonterminals(expansion):
+    return re.compile(r'(<[^<> ]*>)').findall(expansion)
+
+class ExpansionError(Exception):
+    pass
+
+def simple_grammar_fuzzer(grammar: Grammar, 
+                          start_symbol: str = "<start>",
+                          max_nonterminals: int = 10,
+                          max_expansion_trials: int = 100,
+                          log: bool = False) -> str:
+    """Produce a string from `grammar`.
+       `start_symbol`: use a start symbol other than `<start>` (default).
+       `max_nonterminals`: the maximum number of non-terminals 
+         still left for expansion
+       `max_expansion_trials`: maximum # of attempts to produce a string
+       `log`: print expansion progress if True"""
+
+    term = start_symbol
+    expansion_trials = 0
+
+    while len(nonterminals(term)) > 0:
+        symbol_to_expand = random.choice(nonterminals(term))
+        expansions = grammar[symbol_to_expand]
+        expansion = random.choice(expansions)
+        # In later chapters, we allow expansions to be tuples,
+        # with the expansion being the first element
+        if isinstance(expansion, tuple):
+            expansion = expansion[0]
+
+        new_term = term.replace(symbol_to_expand, expansion, 1)
+
+        if len(nonterminals(new_term)) < max_nonterminals:
+            term = new_term
+            if log:
+                print("%-40s" % (symbol_to_expand + " -> " + expansion), term)
+            expansion_trials = 0
+        else:
+            expansion_trials += 1
+            if expansion_trials >= max_expansion_trials:
+                raise ExpansionError("Cannot expand " + repr(term))
+
+    return term
+```
+
+Now, we can fuzz with a grammar by calling the `simple_grammar_fuzzer()` function!
+
+```{python}
+for i in range(10):
+    print(simple_grammar_fuzzer(grammar=EXPR_GRAMMAR, max_nonterminals=5))
+```
+
+While our fuzzer does the job in most cases, it has a number of drawbacks.
+
+**Activity: What drawbacks does `simple_grammar_fuzzer()` have?:**
+
+**A. It has a large number of string search and replace operations**
+
+**B. It may fail to produce a string (i.e., throw an `ExpansionError`)**
+
+**C. It often picks some symbol to expand that does not even occur in the
+string**
+
+**D. All of the above**
+
+<details> <summary>Click to Expand for the Answer</summary>
+The answer is D!
+</details>
+
+## Some Grammars
+
+Here's a grammar for `cgi_decode()` introduced in the
+[Coverage](https://www.fuzzingbook.org/html/Coverage.html) chapter.
+
+```{python}
+CGI_GRAMMAR: Grammar = {
+    "<start>":
+        ["<string>"],
+
+    "<string>":
+        ["<letter>", "<letter><string>"],
+
+    "<letter>":
+        ["<plus>", "<percent>", "<other>"],
+
+    "<plus>":
+        ["+"],
+
+    "<percent>":
+        ["%<hexdigit><hexdigit>"],
+
+    "<hexdigit>":
+        ["0", "1", "2", "3", "4", "5", "6", "7",
+            "8", "9", "a", "b", "c", "d", "e", "f"],
+
+    "<other>":  # Actually, could be _all_ letters
+        ["0", "1", "2", "3", "4", "5", "a", "b", "c", "d", "e", "-", "_"],
+}
+```
+
+```{python}
+for i in range(10):
+    print(simple_grammar_fuzzer(grammar=CGI_GRAMMAR, max_nonterminals=10))
+```
+
+## Grammar Toolbox
+
+In your own grammar toolbox there are many different ways in which you could
+use grammars. It is important to note that grammars are not very effective in
+meeting complex constraints. The example of this that is given in the Fuzzing
+Book is that it would be hard to express a port range that is supposed to be
+between 1024 and 2048. 
+
+There are a few different reasons why this would be hard to express, one of them
+being that there is a limited range and thus the grammar could not allow a
+number larger than 2048. This means that there would have to be specific rules
+in place to make sure that 2048 is valid and 2049 is invalid. This can become
+extremely complex to express very quickly when having to set these types of
+parameters. 
+
+An example where grammars may be more practical would be using grammars as
+mutation seeds. The reason that grammars may be useful as an input is that they
+almost always can produce valid inputs from a syntactical standpoint. This is
+useful because when inputs are syntactically valid they can reveal other areas
+in which inputs may fail.
+
+Another thing worth mentioning is escape characters that can be used for
+delimiting non-terminals in grammars. This can be useful whenever you want to
+manipulate the input or output to have a specific value.
+
+```{python}
+simple_nonterminal_grammar: Grammar = {
+   "<start>": ["<nonterminal>"],
+   "<nonterminal>": ["<left-angle><identifier><right-angle>"],
+   "<left-angle>": ["<"],
+   "<right-angle>": [">"],
+   "<identifier>": ["id"]  # for now
+}
+```
+
+(Note that this does not work with `simple_grammar_fuzzer()`, but rather with
+the `GrammarFuzzer` class we'll introduce in the next chapter.)
+
+There are also shortcuts that can be implemented to manipulate how symbols can
+be used in recursion.
+
+- `<symbol>?` indicates that `<symbol>` is optional meaning it can occur 0 or 1 times.
+- `<symbol>+` indicates that `<symbol>` can occur 1 or more times repeatedly
+- `<symbol>*` indicates that `<symbol>` is completely optional.
+
+You can also use parentheses to apply the shortcut to multiple symbols. For
+instance, `(<symbol><char>)?` would indicate that both `<symbol>` and `<char>`
+can optionally occur 0 or 1 times.
+
+## Checking Grammars
+
+Grammars are introduced as strings making it somewhat easy for there to be
+errors. There is a solution to this. The helper function `is_valid_grammar()`
+can assist in making sure that your grammars are working correctly. This
+function iterates through a grammar to make sure that all symbols are defined
+and in use. It also identifies if all symbols are reachable from the start
+symbol. This helper function should be implemented whenever you are using
+grammars to assure that the inputs you are giving are what you expected them to
+be.
+
+## Key Takeaways
+
+In this blog post, we explored the versatility of grammars in generating
+syntactically valid inputs and their use in mutation-based fuzzing. Grammars,
+when combined with character classes and operators, enhance the ease of
+producing more complex input patterns. How can we further leverage these
+extensions to streamline input generation during the software testing process
+for our tools?
+
+{{< include /_back-blog.qmd >}}

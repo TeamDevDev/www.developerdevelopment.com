@@ -71,29 +71,29 @@ time spent actually writing code.
 daily, leadership work often feels intangible.
 - **The Peter Principle Fear:** "In a hierarchy every employee tends to rise to
 his level of incompetence." Simply put, people keep getting promoted until they
-reach a job they can't do well.
-- **Bad experiences:**  Previous experiences with poor managers can make the
-role seem unappealing.
+reach a job that they can't do well.
+- **Bad experiences:** Previous experiences with poor managers can make the role
+seem unappealing.
 
 ### Why Consider Leadership?
 
 Despite these valid concerns, leadership roles offer unique opportunities:
 
-- The chance to scale your impact beyond what you could achieve individually
-- Discover hidden leadership talents you might possess
-- The opportunity to guide projects and teams in meaningful directions
+- The chance to scale your impact beyond what you could achieve individually.
+- Discover hidden leadership talents you might possess.
+- The opportunity to guide projects and teams in meaningful directions.
 
 ### The Secret: Servant Leadership
 
-The key to effective technical leadership isn't about control - it's about
+The key to effective technical leadership isn't about control --- it's about
 service. The best leaders:
 
-- Focus on removing obstacles for their team
-- Stay humble and maintain hands-on involvement when needed
-- Resist the urge to micromanage
+- Focus on removing obstacles for their team.
+- Stay humble and maintain hands-on involvement when needed.
+- Resist the urge to micromanage.
 
 **Discussion Question: Think about your experience leading a course project in
-this class --- what's one 'invisible' task you did as a leader that was
+this class --- what's one "invisible" task you did as a leader that was
 important but hard to measure like counting lines of code?"**
 
 ### Engineering Manager

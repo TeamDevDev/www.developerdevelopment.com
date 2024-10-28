@@ -256,26 +256,21 @@ simple_nonterminal_grammar: Grammar = {
    "<identifier>": ["id"]  # for now
 }
 ```
-(Note that this does not work with simple_grammar_fuzzer(), but rather with the GrammarFuzzer class we'll introduce in the next chapter.)
 
+(Note that this does not work with simple_grammar_fuzzer(), but rather with the
+`GrammarFuzzer` class we'll introduce in the next chapter.)
 
-There are also shortcuts that can be implemented to manipulate how symbols can be used in recursion.
+There are also shortcuts that can be implemented to manipulate how symbols can
+be used in recursion.
 
 
 - `<symbol>?` indicates that `<symbol>` is optional meaning it can occur 0 or 1 times.
-
-
 - `<symbol>+` indicates that `<symbol>` can occur 1 or more times repeatedly
-
-
 - `<symbol>*` indicates that `<symbol>` is completely optional.
 
-
-You can also use parentheses to apply the shortcut to multiple symbols.
-
-
-`(<symbol><char>)?` would indicate that both `<symbol>` and `<char>` can optionally occur 0 or 1 times.
-
+You can also use parentheses to apply the shortcut to multiple symbols. For
+instance, `(<symbol><char>)?` would indicate that both `<symbol>` and `<char>`
+can optionally occur 0 or 1 times.
 
 ## Checking Grammars
 

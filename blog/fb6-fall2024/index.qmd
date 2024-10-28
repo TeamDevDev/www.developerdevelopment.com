@@ -74,6 +74,7 @@ comes out clearly. Grammars are useful in helping understand the structure of
 an input and describing patterns where elements are nested within each other.
 
 ## Representing Grammar in Python 
+
 ```{python}
 
 from typing import List, Dict, Union, Any, Tuple

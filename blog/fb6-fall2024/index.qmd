@@ -4,7 +4,7 @@ title: Fuzzing with Grammars
 date: '2024-10-28'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>Can we harness the power of grammars to generate smarter fuzzed inputs<</em>
+description: <em>Can we harness the power of grammars to generate smarter fuzzed inputs</em>
 toc: true
 page-layout: full
 ---

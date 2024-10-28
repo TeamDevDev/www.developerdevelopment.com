@@ -189,16 +189,16 @@ While our fuzzer does the job in most cases, it has a number of drawbacks.
 
 **A. It has a large number of string search and replace operations**
 
-**B. It may fail to produce a string (ExpansionError)**
+**B. It may fail to produce a string (`ExpansionError`)**
 
-**C. It often picks some symbol to expand that does not even occur in the string**
+**C. It often picks some symbol to expand that does not even occur in the
+string**
 
 **D. All of the above**
 
 <details> <summary>Click to Expand for the Answer</summary>
 The answer is D!
 </details>
-
 
 ## Some Grammars
 
@@ -236,16 +236,29 @@ for i in range(10):
     print(simple_grammar_fuzzer(grammar=CGI_GRAMMAR, max_nonterminals=10))
 ```
 
-
 ## Grammar Toolbox
-In your own grammar toolbox there are many different ways in which you could use grammars. It is important to note that grammars are not very effective in meeting complex constraints. The example of this that is given in the FB book is that it would be hard to express a port range that is supposed to be between 1024 and 2048. 
 
-There are a few different reasons why this would be hard to express, one of them being that there is a limited range the grammar could not allow a number larger than 2048. This means that there would have to be specific rules in place to make sure that 2048 is valid and 2049 is invalid. This can become extremely complex to express very quickly when having to set these types of parameters. 
+In your own grammar toolbox there are many different ways in which you could use
+grammars. It is important to note that grammars are not very effective in
+meeting complex constraints. The example of this that is given in the FB book is
+that it would be hard to express a port range that is supposed to be between
+1024 and 2048. 
 
-An example where grammars may be more practical would be using grammars as mutation seeds. The reason that grammars may be useful to use as an input is that they almost always can produce valid inputs from a syntactical standpoint. This is useful because when inputs are syntactically valid they can reveal other areas in which inputs may fail.
+There are a few different reasons why this would be hard to express, one of them
+being that there is a limited range the grammar could not allow a number larger
+than 2048. This means that there would have to be specific rules in place to
+make sure that 2048 is valid and 2049 is invalid. This can become extremely
+complex to express very quickly when having to set these types of parameters. 
 
-Another thing worth mentioning is escapes. Escapes can be used for delimiting nonterminals in grammars. This can be useful whenever you want to manipulate the input or output to have a specific value.
+An example where grammars may be more practical would be using grammars as
+mutation seeds. The reason that grammars may be useful to use as an input is
+that they almost always can produce valid inputs from a syntactical standpoint.
+This is useful because when inputs are syntactically valid they can reveal other
+areas in which inputs may fail.
 
+Another thing worth mentioning is escapes. Escapes can be used for delimiting
+non-terminals in grammars. This can be useful whenever you want to manipulate
+the input or output to have a specific value.
 
 ```{python}
 simple_nonterminal_grammar: Grammar = {
@@ -262,7 +275,6 @@ simple_nonterminal_grammar: Grammar = {
 
 There are also shortcuts that can be implemented to manipulate how symbols can
 be used in recursion.
-
 
 - `<symbol>?` indicates that `<symbol>` is optional meaning it can occur 0 or 1 times.
 - `<symbol>+` indicates that `<symbol>` can occur 1 or more times repeatedly

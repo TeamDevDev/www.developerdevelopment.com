@@ -1,7 +1,7 @@
 ---
 author: [Hemani Alaparthi, Coltin Colucci, Philip Olwoc, Gregory M. Kapfhammer]
 title: Fuzzing with Grammars
-date: '2024-10-28'
+date: '2024-10-30'
 date-format: long
 categories: [post, software engineering, fuzzing book]
 description: <em>Can we harness the power of grammars to generate smarter fuzzed inputs</em>
@@ -11,21 +11,59 @@ page-layout: full
 
 ## Overview
 
-This article dives into the [Fuzzing with Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from The [Fuzzing Book](https://www.fuzzingbook.org/html/) which builds on previous discussions, specifically those on [Mutation-Based Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html). By defining the legal inputs to a program through grammar specifications, we can streamline and enhance test generation, especially for complex formats. This chapter highlights the importance of structured inputs, which play a critical role in more advanced forms of fuzzing, including configuration fuzzing, API fuzzing, and GUI fuzzing. Here, we explore both the benefits and applications of grammar-based fuzzing, demonstrating how it offers a systematic approach for generating effective test cases across a range of input types. We will be exploring these practices and examining their relevance to our team’s current situation with execexam, connecting them to the concepts discussed last week to highlight how grammar-based fuzzing provides a systematic and effective approach to comprehensive test case generation.
+This article dives into the [Fuzzing with
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapter from The
+[Fuzzing Book](https://www.fuzzingbook.org/html/) which builds on previous
+discussions, specifically those on [Mutation-Based
+Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html). By defining the
+legal inputs to a program through grammar specifications, we can streamline and
+enhance test generation, especially for complex formats. This chapter highlights
+the importance of structured inputs, which play a critical role in more advanced
+forms of fuzzing, including configuration fuzzing, API fuzzing, and GUI fuzzing.
+Here, we explore both the benefits and applications of grammar-based fuzzing,
+demonstrating how it offers a systematic approach for generating effective test
+cases across a range of input types. We will be exploring these practices and
+examining their relevance to our team’s current situation with execexam,
+connecting them to the concepts discussed last week to highlight how
+grammar-based fuzzing provides a systematic and effective approach to
+comprehensive test case generation.
 
 ## Summary
 
-Grammars are essential tools for producing syntactically valid inputs, offering a structured approach to input generation. In this chapter, we will examine grammar-based fuzzing as a tool for generating complex, syntactically valid inputs. By seeding grammars in mutation-based fuzzing, we can produce varied inputs that strengthen testing efforts. The chapter also highlighted the benefits of incorporating character classes, operators, and helper functions to improve the efficiency and accuracy of input generation.
+Grammars are essential tools for producing syntactically valid inputs, offering
+a structured approach to input generation. In this chapter, we will examine
+grammar-based fuzzing as a tool for generating complex, syntactically valid
+inputs. By seeding grammars in mutation-based fuzzing, we can produce varied
+inputs that strengthen testing efforts. The chapter also highlighted the
+benefits of incorporating character classes, operators, and helper functions to
+improve the efficiency and accuracy of input generation.
 
 ## Input Languages
 
-In software engineering all programs are triggered by the input, and this can be a wide range of sources. Data that read from files, from user input, or even data from interactions with other sources. All these dictate how a program will behave, so it is very helpful to think about possible input sources and get them under control and how to “systemically test them”.
+In software engineering all programs are triggered by the input, and this can be
+a wide range of sources. Data that read from files, from user input, or even
+data from interactions with other sources. All these dictate how a program will
+behave, so it is very helpful to think about possible input sources and get them
+under control and how to "systemically test them".
 
-For the sake of simplicity, we will assume that a program has one single input. The range of valid inputs a program can process correctly is referred to as a “language”, because they follow a specific set of rules of syntax and semantics. There are many examples, there are simple languages like CSV(comma-separated values), and complex languages like Python.
+For the sake of simplicity, we will assume that a program has one single input.
+The range of valid inputs a program can process correctly is referred to as a
+“language”, because they follow a specific set of rules of syntax and semantics.
+There are many examples, there are simple languages like CSV(comma-separated
+values), and complex languages like Python.
 
-For languages to be formally described, the field of formal language has come up with a set of language specifications to describe a language. ‘Regular expressions’ represent the simplest class of strings, for example [a-z]* represents a simple sequence of lowercase letters. Automata Theory links these languages to Finite state machines, these machines help recognize patterns defined by regular expressions.
+For languages to be formally described, the field of formal language has come up
+with a set of language specifications to describe a language. "Regular
+expressions" represent the simplest class of strings, for example `[a-z]*
+represents a simple sequence of lowercase letters. Automata theory links these
+languages to Finite state machines, these machines help recognize patterns
+defined by regular expressions.
 
-Regular expressions are good when representing a simple input but from more complex inputs they are limited. This is why we use turning machines. Turing machines can specify more complex input sets like Python. Since Python is Turing Complete it allows us to define and/list inputs for another program but because testing gas to be specific to each program it cannot be done automatically.
+Regular expressions are good when representing a simple input but from more
+complex inputs they are limited. This is why we use turning machines. Turing
+machines can specify more complex input sets like Python. Since Python is Turing
+Complete it allows us to define and/list inputs for another program but because
+testing gas to be specific to each program it cannot be done automatically.
 
 ## Grammars
 
@@ -241,8 +279,21 @@ You can also use parentheses to apply the shortcut to multiple symbols.
 
 ## Checking Grammars
 
-Grammars are introduced as strings making it somewhat easy for there to be errors. There is a solution to this. The helper function is_valid_grammar() can assist in making sure that your grammars are working correctly. This function iterates through a grammar to make sure that all symbols are defined and in use. It also identifies if all symbols are reachable from the start symbol. This helper function should be implemented whenever you are using grammars to assure that the inputs you are giving are what you expected them to be.
+Grammars are introduced as strings making it somewhat easy for there to be
+errors. There is a solution to this. The helper function `is_valid_grammar()`
+can assist in making sure that your grammars are working correctly. This
+function iterates through a grammar to make sure that all symbols are defined
+and in use. It also identifies if all symbols are reachable from the start
+symbol. This helper function should be implemented whenever you are using
+grammars to assure that the inputs you are giving are what you expected them to
+be.
 
 ## Key Takeaways
 
-In this chapter, we explored the versatility of grammars in generating syntactically valid inputs and their use in mutation-based fuzzing. Grammars, when combined with character classes and operators, enhance the ease of producing more complex input patterns. How can we further leverage these extensions to streamline input generation in software testing for our tools?
+In this chapter, we explored the versatility of grammars in generating
+syntactically valid inputs and their use in mutation-based fuzzing. Grammars,
+when combined with character classes and operators, enhance the ease of
+producing more complex input patterns. How can we further leverage these
+extensions to streamline input generation in software testing for our tools?
+
+{{< include /_back-blog.qmd >}}

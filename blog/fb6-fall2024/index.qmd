@@ -53,9 +53,9 @@ The range of valid inputs a program can process correctly is referred to as a
 There are many examples, there are simple languages like comma-separated value
 (CSV) files and complex languages like Python programs.
 
-For languages to be formally described, the field of formal language has come up
-with a set of language specifications to describe a language. "Regular
-expressions" represent the simplest class of strings, for example `[a-z]*
+For languages to be formally described, the field of formal language theory has
+developed a set of language specifications to describe a language. "Regular
+expressions" represent the simplest class of strings, for example `[a-z]*`
 represents a simple sequence of lowercase letters. Automata theory links these
 languages to Finite state machines, these machines help recognize patterns
 defined by regular expressions.
@@ -110,20 +110,34 @@ EXPR_GRAMMAR: Grammar = {
 
 ## Simplifying Grammar-Based Fuzzing
 
-Grammar-based fuzzing generates complex inputs for testing applications by systematically expanding grammar rules. The simple_grammar_fuzzer function begins with a start symbol (e.g., `<start>`) and iteratively expands it according to predefined grammar rules to create various expressions.
+Grammar-based fuzzing generates complex inputs for testing applications by
+systematically expanding grammar rules. The `simple_grammar_fuzzer` function
+begins with a start symbol (e.g., `<start>`) and iteratively expands it
+according to predefined grammar rules to create various expressions.
 
-While effective, this approach is computationally expensive due to repetitive search and replace operations. Additionally, it may encounter expansion errors when it hits limits, such as reaching the maximum number of nonterminals.
+While effective, this approach is computationally expensive due to repetitive
+search and replace operations. Additionally, it may encounter expansion errors
+when it hits limits, such as reaching the maximum number of non-terminals.
 
-**Activity: Using `nonterminals("<digit><integer>")`, what nonterminals are extracted?**
+**Activity: Using `nonterminals("<digit><integer>")`, what non-terminals are
+extracted?**
 
 <details> <summary>Click to Expand for the Answer</summary>
-The output is `["<digit>", "<integer>"]`, as these are the symbols enclosed in angle brackets.
+
+The output is `["<digit>", "<integer>"]`, as these are the symbols enclosed in
+angle brackets.
+
 </details>
 
 ## Simple Grammar Fuzzer
 
-Let's put the grammars to use! The `simple_grammar_fuzzer` is a basic tool that generates random expressions by starting with a placeholder `(<start>)` and expanding it using a set of grammar rules. It replaces nonterminal symbols like `<expr>` or `<term>` with random elements according to these rules until a complete expression is formed. To prevent endless expansion, the fuzzer limits the number of placeholders and retries, though it’s not perfect and sometimes encounters errors.
-
+Let's put the grammars to use! The `simple_grammar_fuzzer` is a basic tool that
+generates random expressions by starting with a placeholder `(<start>)` and
+expanding it using a set of grammar rules. It replaces non-terminal symbols like
+`<expr>` or `<term>` with random elements according to these rules until a
+complete expression is formed. To prevent endless expansion, the fuzzer limits
+the number of placeholders and retries, though it’s not perfect and sometimes
+encounters errors.
 
 ```{python}
 import random
@@ -145,7 +159,7 @@ def simple_grammar_fuzzer(grammar: Grammar,
                           log: bool = False) -> str:
     """Produce a string from `grammar`.
        `start_symbol`: use a start symbol other than `<start>` (default).
-       `max_nonterminals`: the maximum number of nonterminals 
+       `max_nonterminals`: the maximum number of non-terminals 
          still left for expansion
        `max_expansion_trials`: maximum # of attempts to produce a string
        `log`: print expansion progress if True"""
@@ -253,14 +267,14 @@ extremely complex to express very quickly when having to set these types of
 parameters. 
 
 An example where grammars may be more practical would be using grammars as
-mutation seeds. The reason that grammars may be useful to use as an input is
-that they almost always can produce valid inputs from a syntactical standpoint.
-This is useful because when inputs are syntactically valid they can reveal other
-areas in which inputs may fail.
+mutation seeds. The reason that grammars may be useful as an input is that they
+almost always can produce valid inputs from a syntactical standpoint. This is
+useful because when inputs are syntactically valid they can reveal other areas
+in which inputs may fail.
 
-Another thing worth mentioning is escapes. Escapes can be used for delimiting
-non-terminals in grammars. This can be useful whenever you want to manipulate
-the input or output to have a specific value.
+Another thing worth mentioning is escape characters that can be used for
+delimiting non-terminals in grammars. This can be useful whenever you want to
+manipulate the input or output to have a specific value.
 
 ```{python}
 simple_nonterminal_grammar: Grammar = {

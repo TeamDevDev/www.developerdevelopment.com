@@ -11,37 +11,69 @@ page-layout: full
 
 ## Overview
 
-This blog post explores the ["How to Lead a Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter from [Google's Software Engineering](https://abseil.io/resources/swe-book) book, which tackles the challenges of leading software teams in a modern tech environment. This insightful chapter breaks down Google's approach to engineering leadership, from managing people and technical decisions to transitioning from a coder to a leader. Let's examine the key lessons we can extract from Google's Software Book and see how we can apply them in our own software engineering team!
-
+This blog post explores the ["How to Lead a
+Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter from
+[Google's Software Engineering](https://abseil.io/resources/swe-book) book,
+which tackles the challenges of leading software teams in a modern tech
+environment. This insightful chapter breaks down Google's approach to
+engineering leadership, from managing people and technical decisions to
+transitioning from a coder to a leader. Let's examine the key lessons we can
+extract from Google's Software Book and see how we can apply them in our own
+software engineering team!
 
 ## Summary
 
-In software engineering, effective leadership goes beyond simply managing—it involves empowering, supporting, and guiding a team with humility, trust, and respect. This chapter covers essential leadership strategies for fostering a productive team culture, from tracking team happiness to encouraging growth and autonomy. Leaders should balance delegation with hands-on involvement, helping team members advance without micromanagement while shielding them from unnecessary organizational chaos. By focusing on both individual and team development, good managers inspire motivation through autonomy, mastery, and purpose, creating a workplace where engineers thrive and innovation flourishes.
-
+In software engineering, effective leadership goes beyond simply managing—it
+involves empowering, supporting, and guiding a team with humility, trust, and
+respect. This chapter covers essential leadership strategies for fostering a
+productive team culture, from tracking team happiness to encouraging growth and
+autonomy. Leaders should balance delegation with hands-on involvement, helping
+team members advance without micromanagement while shielding them from
+unnecessary organizational chaos. By focusing on both individual and team
+development, good managers inspire motivation through autonomy, mastery, and
+purpose, creating a workplace where engineers thrive and innovation flourishes.
 
 ## Managers and Tech Leads
 
-This person is responsible for the performance, productivity, and happiness of every person on their team, but at the same time making sure the needs of the business are met. But there is always some backlash because the needs of the business and the needs of the team may sometimes conflict. 
+This person is responsible for the performance, productivity, and happiness of
+every person on their team, but at the same time making sure the needs of the
+business are met. But there is always some backlash because the needs of the
+business and the needs of the team may sometimes conflict. 
 
 ### Tech Leads
 
-The tech lead is responsible for the technical aspects of what is being worked on. The TL will usually work hand in hand with the engineering manager to ensure that the team is adequately staffed for their product and that engineers are set to work on tasks that best match their skill sets and skill levels.
+The tech lead is responsible for the technical aspects of what is being worked
+on. The TL will usually work hand in hand with the engineering manager to ensure
+that the team is adequately staffed for their product and that engineers are set
+to work on tasks that best match their skill sets and skill levels.
 
 ### Tech Lead Manager
 
-This a fusion between the Tech Lead and the Engineering Manager, they are sometimes, a TLM is a more senior person, but more often than not, the role is taken on by someone who was, until recently, an individual contributor. 
-
+This a fusion between the Tech Lead and the Engineering Manager, they are
+sometimes, a TLM is a more senior person, but more often than not, the role is
+taken on by someone who was, until recently, an individual contributor. 
 
 ## Moving from an Individual Contributor Role to a Leadership Role
 
-Think about that team project for CS203 - leadership isn't always volunteering to be the team lead. Sometimes it just happens naturally, like when you find yourself organizing the git repo or messaging everyone to coordinate late-night debugging sessions. Tech folks call this "manageritis" - that moment when you realize you've accidentally become the go-to person for decisions and team conflicts. It's less about the title and more about that natural shift from coding to helping your classmates work better together.
+Think about that team project for this course --- leadership isn't always
+volunteering to be the team lead. Sometimes it just happens naturally, like when
+you find yourself organizing the git repo or messaging everyone to coordinate
+late-night debugging sessions. Tech folks call this "manageritis" --- that
+moment when you realize you've accidentally become the go-to person for
+decisions and team conflicts. It's less about the title and more about that
+natural shift from coding to helping your classmates work better together.
 
 ### Leadership Resistance
 
-- **Less Time Coding:** The biggest deterrent for most developers is the reduced time spent actually writing code
-- **Invisible Progress:** Unlike coding, where you can point to specific outputs daily, leadership work often feels intangible
-- **The Peter Principle Fear:** "In a hierarchy every employee tends to rise to his level of incompetence." Simply put, people keep getting promoted until they reach a job they can't do well.
-- **Bad experiences:**  Previous experiences with poor managers can make the role seem unappealing
+- **Less Time Coding:** The biggest deterrent for most developers is the reduced
+time spent actually writing code
+- **Invisible Progress:** Unlike coding, where you can point to specific outputs
+daily, leadership work often feels intangible
+- **The Peter Principle Fear:** "In a hierarchy every employee tends to rise to
+his level of incompetence." Simply put, people keep getting promoted until they
+reach a job they can't do well.
+- **Bad experiences:**  Previous experiences with poor managers can make the
+role seem unappealing
 
 ### Why Consider Leadership?
 
@@ -53,69 +85,96 @@ Despite these valid concerns, leadership roles offer unique opportunities:
 
 ### The Secret: Servant Leadership
 
-The key to effective technical leadership isn't about control - it's about service. The best leaders:
+The key to effective technical leadership isn't about control - it's about
+service. The best leaders:
 
 - Focus on removing obstacles for their team
 - Stay humble and maintain hands-on involvement when needed
 - Resist the urge to micromanage
 
-**Discussion Question: Think about your experience leading a course project in this classs - what's one 'invisible' task you did as a leader that was important but hard to measure like counting lines of code?"**
+**Discussion Question: Think about your experience leading a course project in
+this class --- what's one 'invisible' task you did as a leader that was
+important but hard to measure like counting lines of code?"**
 
 ### Engineering Manager
 
 - What do you think is expected of a manager at a modern software company?
 
-- How might being a manager at a 
-software development company be different than managing at a factory?
+- How might being a manager at a software development company be different than
+managing at a factory?
 
 - Often times trusting your employees is the best way to go about management.
 
-- Failure is an option. Allowing people to be themselves leads to a more confident environment where people are not afraid to take risks.
+- Failure is an option. Allowing people to be themselves leads to a more
+confident environment where people are not afraid to take risks.
 
-- "Traditional managers worry about how to get things done, whereas great managers worry about what things get done (and trust their team to figure out how to do it)." - SE Book
+- "Traditional managers worry about how to get things done, whereas great
+managers worry about what things get done (and trust their team to figure out
+how to do it)." - SE Book
 
-### Positive Patterns and Antipatterns
+### Positive Patterns and Anti-patterns
 
 - As a manager what are some traits that you would look for in hires?
 
-- **Hire Pushovers**: It is much easier to hire people that say yes to everything. These are not the people that will push the team to be the best. You need ambitious creative people on your team to continue to challenge ideas and push the standard. 
+- **Hire Pushovers**: It is much easier to hire people that say yes to
+everything. These are not the people that will push the team to be the best. You
+need ambitious creative people on your team to continue to challenge ideas and
+push the standard. 
 
-- **Ignore Low Performers**:
-It is important to note that it is often your job to hold people accountable. This sometimes means that you have to have hard discussions and sometimes fire people.
+- **Ignore Low Performers**: It is important to note that it is often your job
+to hold people accountable. This sometimes means that you have to have hard
+discussions and sometimes fire people.
 
-- **Ignore Human Issues**:
-There are two main categories when it comes to software development teams. Social and technical, it is important to note that everybody is human and has things going outside of their work. 
+- **Ignore Human Issues**: There are two main categories when it comes to
+software development teams. Social and technical, it is important to note that
+everybody is human and has things going outside of their work. 
 
-- **Be Everyone's Friend**:
-Why might this be an issue?
+- **Be Everyone's Friend**: Why might this be an issue?
 
-- **Compromising the Hiring Bar**:
-It is often that people are hired out of necessity. This can be an issue because if an employee is not returning value to the company or team than most of the time you would be better off waiting to find the right candidate.
+- **Compromising the Hiring Bar**: It is often that people are hired out of
+necessity. This can be an issue because if an employee is not returning value to
+the company or team than most of the time you would be better off waiting to
+find the right candidate.
 
-- **Lose the Ego**:
-How could a manager's ego affect the work environment?
+- **Lose the Ego**: How could a manager's ego affect the work environment?
 
-- **Be a Zen Master**:
-Remaining calm and not panicking can be huge for your team. Along with this you do not have to over communicate. Oftentimes the people working on a specific project will know more about the intricacies than you do. Trusting them to do their job and not micromanage is important.
+- **Be a Zen Master**: Remaining calm and not panicking can be huge for your
+team. Along with this you do not have to over communicate. Oftentimes the people
+working on a specific project will know more about the intricacies than you do.
+Trusting them to do their job and not micromanage is important.
 
-- **Be a Catalyst**:
-Help to inspire ideas and solutions. One of the best ways you can go about this is to get a voluntary consensus. This can lead to ideas and perspectives being shared ultimately leading to more efficient solutions. 
+- **Be a Catalyst**: Help to inspire ideas and solutions. One of the best ways
+you can go about this is to get a voluntary consensus. This can lead to ideas
+and perspectives being shared ultimately leading to more efficient solutions. 
 
-- **Remove Roadblocks**:
-As a manager you might have resources that other people in your team do not. Make sure the team is open with you about their problems and know that you are willing to help.
+- **Remove Roadblocks**: As a manager you might have resources that other people
+in your team do not. Make sure the team is open with you about their problems
+and know that you are willing to help.
 
-- **Be a Teacher and a Mentor**:
-While it is important that you are helping your team it is also important to allow them to work through issues on their own. 
+- **Be a Teacher and a Mentor**: While it is important that you are helping your
+team it is also important to allow them to work through issues on their own. 
 
-- **Set Clear Goals**:
-Having everybody on the team moving in the same direction is one of your main jobs. Having a clear vision of what needs to be accomplished can greatly increase production.
+- **Set Clear Goals**: Having everybody on the team moving in the same direction
+is one of your main jobs. Having a clear vision of what needs to be accomplished
+can greatly increase production.
 
-- **Be Honest**:
-It is ok to not know everything. It is also important to be able to give feedback. A strategy to implement for this would be the compliment sandwich.
+- **Be Honest**: It is okay to not know everything. It is also important to be
+able to give feedback. A strategy to implement for this would be the compliment
+sandwich.
 
-- **Track Happiness**:
-Giving recognition and complements is just as important as telling someone they did something wrong. Tracking happiness can keep a lot of good employees around in the long run and make the overall work environment more enjoyable. 
+- **Track Happiness**: Giving recognition and complements is just as important
+as telling someone they did something wrong. Tracking happiness can keep a lot
+of good employees around in the long run and make the overall work environment
+more enjoyable. 
 
 ## Key Takeaways
 
-The key takeaways from this chapter is that exceptional leadership involves empowering and enabling a team rather than merely _directing_ them. Effective leaders delegate thoughtfully, offering both guidance and opportunities for team members to grow. Monitoring happiness and supporting team members’ personal and professional goals leads to a more motivated, resilient team. Additionally, balancing transparency with shielding from external chaos helps teams stay focused and productive. Finally, the pillars of autonomy, mastery, and purpose are fundamental to increasing intrinsic motivation, fostering a culture where each team member feels valued and invested in their work.
+The key takeaways from this chapter is that exceptional leadership involves
+empowering and enabling a team rather than merely _directing_ them. Effective
+leaders delegate thoughtfully, offering both guidance and opportunities for team
+members to grow. Monitoring happiness and supporting team members’ personal and
+professional goals leads to a more motivated, resilient team. Additionally,
+balancing transparency with shielding from external chaos helps teams stay
+focused and productive. Finally, the pillars of autonomy, mastery, and purpose
+are fundamental to increasing intrinsic motivation, fostering a culture where
+each team member feels valued and invested in their work.

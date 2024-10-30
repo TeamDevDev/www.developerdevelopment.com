@@ -63,8 +63,8 @@ defined by regular expressions.
 Regular expressions are good when representing a simple input but from more
 complex inputs they are limited. This is why we use turning machines. Turing
 machines can specify more complex input sets like Python. Since Python is Turing
-Complete it allows us to define and/list inputs for another program but because
-testing gas to be specific to each program it cannot be done automatically.
+Complete it allows us to define and/or list inputs for another program but because
+testing has to be specific to each program it cannot be done automatically.
 
 ## Grammars
 

@@ -322,4 +322,6 @@ producing more complex input patterns. How can we further leverage these
 extensions to streamline input generation during the software testing process
 for our tools?
 
+{{< include /_fuzzingbook-reference.qmd >}}
+
 {{< include /_back-blog.qmd >}}

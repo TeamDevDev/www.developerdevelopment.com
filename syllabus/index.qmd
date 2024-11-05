@@ -404,7 +404,7 @@ time. Designed to prepare learners for an examination, each skill-check is an
 in-class executable assessment that students complete through the use of
 GitHub, VS Code, and the Python programming tools on their laptops.
 
-- **In-Person Assessments**: The two in-person assessments are cumulative
+- **In-Person Assessments**: The three in-person assessments are cumulative
 evaluations of both technical and professional knowledge conducted through an
 in-person conversation with the course instructor. All students should be
 prepared to answer at least one question each about their attainment of

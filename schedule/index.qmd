@@ -46,7 +46,8 @@ listing:
 - **Module Three**: *Advanced Software Engineering Knowledge and Skills*
     - **Weeks Eleven through Fifteen**: Enhance your technical and professional skills
     - **Week Sixteen**:
-      - **Wednesday, December 11, 2024 at 9:00 AM**: Executable Examination
+      - **Wednesday, December 11, 2024 at 9:00 AM**:
+        - **Details**: Final Executable Examination (Exam Code G)
         - *Demonstrate technical skills in software engineering*:
           - Use GitHub and GitHub Actions
           - Use text editor and terminal window

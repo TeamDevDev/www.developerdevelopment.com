@@ -1,0 +1,49 @@
+---
+author: [Aidan Dyga, Molly Suppo, Titus Smith, Gregory M. Kapfhammer]
+title: 'Leading at Scale'
+date: '2024-11-11'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can leaders better scale their teams?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog focuses on the Leading At Scale chapter of the [Software Engineering at Google
+book](https://abseil.io/resources/swe-book). In previous class sessions we have discussed transitioning from a team member to a leader, but this blog post will mainly focus on **leading at a higher level**. As you move up the management chain, you will realize that your prior technical experience will not be as important. Instead, your success will primarily be judged based on how you can lead people. In this chapter, we will be learning more about the “three always of leadership.”
+
+## Summary
+
+info here
+
+### Always Be Deciding
+
+info here
+
+**Activity: x**
+
+### Always Be Leaving
+
+The concept of "Always Be Leaving," coined by former Google engineering director Bharat Mediratta, emphasizes the importance of building teams that can **function without their leader**. The goal is to avoid becoming a single point of failure (SPOF) and to create what the text calls a "self-driving team." To achieve this, leaders must focus on three key aspects: 
+
+1. Dividing the problem space into manageable subproblems
+
+2. Delegating these problems to capable leaders while allowing them to learn through potential failures
+
+3. Making careful adjustments through thoughtful observation and minimal intervention.
+
+Rather than micromanaging, effective leaders should spend 95% of their time observing and listening, and 5% making precise, critical adjustments to keep their teams on course. Additionally, leaders should also avoid anchoring their team identity to specific solutions, as this can lead to resistance to change and innovation.
+
+**Activity: How can a leader effectively balance delegation and minimal intervention to ensure their team becomes self-driving, and what are the potential challenges they might face in avoiding the role of a "single point of failure" (SPOF)?**
+
+### Always Be Scaling
+
+info here
+
+**Activity: x**
+
+## Reflection
+
+info here

@@ -11,32 +11,48 @@ page-layout: full
 
 ## Overview
 
-This blog focuses on the Leading At Scale chapter of the [Software Engineering at Google
-book](https://abseil.io/resources/swe-book). In previous class sessions we have discussed transitioning from a team member to a leader, but this blog post will mainly focus on **leading at a higher level**. As you move up the management chain, you will realize that your prior technical experience will not be as important. Instead, your success will primarily be judged based on how you can lead people. In this chapter, we will be learning more about the “three always of leadership.”
+This blog focuses on the Leading At Scale chapter of the [Software Engineering at Google book](https://abseil.io/resources/swe-book). In previous class sessions we have discussed transitioning from a team member to a leader, but this blog post will
+mainly focus on **leading at a higher level**. As you move up the management chain, you will realize that your prior technical
+experience will not be as important. Instead, your success will primarily be judged based on how you can lead people. In this
+chapter, we will be learning more about the “three always of leadership.”
 
 ## Summary
 
-In Software Engineering leadership helps create order, and more importantly, a path towards collective success. This chapter focus on three main areas on how to Scale your Leadership: Always Be Deciding, Always Be Leaving, Always Be Scaling. These sections break down how leaders can effectively ensure their team reaches their goals, including processes for decision making, delegation, and best practices for handling the increased responsibilities.
+In Software Engineering leadership helps create order, and more importantly, a path towards collective success. This chapter
+focus on three main areas on how to Scale your Leadership: Always Be Deciding, Always Be Leaving, Always Be Scaling. These
+sections break down how leaders can effectively ensure their team reaches their goals, including processes for decision making,
+delegation, and best practices for handling the increased responsibilities.
 
 ### Always Be Deciding
 
-“Always Be Deciding” builds upon the concepts covered in How to Lead a Team and how to elevate from an effective team member to an effective leader. Specifically this section focuses on weighing high-level decisions based on trade-offs rather than specific implementations.
+“Always Be Deciding” builds upon the concepts covered in How to Lead a Team and how to elevate from an effective team member to
+an effective leader. Specifically this section focuses on weighing high-level decisions based on trade-offs rather than
+specific implementations.
 
 #### Parable of the Airplane
 
-An illustration of how choices often come with unintended consequences. The story explains how a passenger pays others to vacate an overfilled plane, only to find the plane has other technical issues, causing even further delay. Overall this story explains how trade-offs in complex systems can have unforeseen outcomes. In the case of software engineering the trade-offs come in forms of how to utilize our resources, mainly the members of our course and their time. A powerful quote from this section, from Ben Collins-Sussman is **“If writing code is analogous to chopping down trees, your job as a leader is to “see the forest through the trees” and find a workable path through that forest, directing engineers toward the important trees”.**
+An illustration of how choices often come with unintended consequences. The story explains how a passenger pays others to
+vacate an overfilled plane, only to find the plane has other technical issues, causing even further delay. Overall this story
+explains how trade-offs in complex systems can have unforeseen outcomes. In the case of software engineering the trade-offs
+come in forms of how to utilize our resources, mainly the members of our course and their time. A powerful quote from this
+section, from Ben Collins-Sussman is **“If writing code is analogous to chopping down trees, your job as a leader is to “see the forest through the trees” and find a workable path through that forest, directing engineers toward the important trees”.**
 
 #### Identify the Blinders
 
-When approaching a long-standing problem, you'll often find that those involved have developed "blinders" and assumptions that prevent them from seeing alternative solutions. With fresh perspective, you can identify these blinders, question assumptions, and explore new strategies.
+When approaching a long-standing problem, you'll often find that those involved have developed "blinders" and assumptions that
+prevent them from seeing alternative solutions. With fresh perspective, you can identify these blinders, question assumptions,
+and explore new strategies.
 
 #### Identify the Trade-Offs
 
-There are no magic answers to all problems. As a leader you must identify the best answer for the moment. This requires weighing the options, and effectively communicate to your team what the trade-offs are.
+There are no magic answers to all problems. As a leader you must identify the best answer for the moment. This requires
+weighing the options, and effectively communicate to your team what the trade-offs are.
 
 #### Decide
 
-After understanding the trade-offs, use the information to create a path forward. This is an ongoing process to ensure that all issues are actively and properly addressed. Iteration is an important factor to this step and we must complete this process ongoingly.
+After understanding the trade-offs, use the information to create a path forward. This is an ongoing process to ensure that all
+issues are actively and properly addressed. Iteration is an important factor to this step and we must complete this process
+ongoingly.
 
 **What are the three steps to successfully avoiding unforeseen outcomes when weighing trade-offs?** 
 
@@ -48,9 +64,12 @@ After understanding the trade-offs, use the information to create a path forward
 * **Decide** the appropriate course of action.
 
 </details>
+
 ### Always Be Leaving
 
-The concept of "Always Be Leaving," coined by former Google engineering director Bharat Mediratta, emphasizes the importance of building teams that can **function without their leader**. The goal is to avoid becoming a single point of failure (SPOF) and to create what the text calls a "self-driving team." To achieve this, leaders must focus on three key aspects: 
+The concept of "Always Be Leaving," coined by former Google engineering director Bharat Mediratta, emphasizes the importance of
+building teams that can **function without their leader**. The goal is to avoid becoming a single point of failure (SPOF) and
+to create what the text calls a "self-driving team." To achieve this, leaders must focus on three key aspects: 
 
 1. Dividing the problem space into manageable subproblems
 
@@ -58,16 +77,48 @@ The concept of "Always Be Leaving," coined by former Google engineering director
 
 3. Making careful adjustments through thoughtful observation and minimal intervention.
 
-Rather than micromanaging, effective leaders should spend 95% of their time observing and listening, and 5% making precise, critical adjustments to keep their teams on course. Additionally, leaders should also avoid anchoring their team identity to specific solutions, as this can lead to resistance to change and innovation.
+Rather than micromanaging, effective leaders should spend 95% of their time observing and listening, and 5% making precise,
+critical adjustments to keep their teams on course. Additionally, leaders should also avoid anchoring their team identity to
+specific solutions, as this can lead to resistance to change and innovation.
 
-**Activity: How can a leader effectively balance delegation and minimal intervention to ensure their team becomes self-driving, and what are the potential challenges they might face in avoiding the role of a "single point of failure" (SPOF)?**
+**Activity: How can a leader effectively balance delegation and minimal intervention to ensure their team becomes self-driving and what are the potential challenges they might face in avoiding the role of a "single point of failure" (SPOF)?**
 
 ### Always Be Scaling
 
-info here
+The concept “Always Be Scaling” utilizes the idea of the cycle of success to balance multiple problems at once. The cycle
+consists of four stages, analysis, struggle, traction, and reward. 
 
-**Activity: x**
+The Cycle of Success:
+1. Analysis
+2. Struggle
+3. Traction
+4. Reward
+
+Analysis involves identifying blinders, finding the trade-offs, and deciding how to start going about managing both. Struggle
+involves failures, retries, and iteration. This phase is often referred to as “herding cats”. Traction involves making smarter
+decisions, and real progress being made. Reward involves succeeding while also creating a new problem. With reward also comes
+the need to enter the compression phase where half the team works of the problem with half the time to fix the problem.
+
+The scaling concept also applies to scaling yourself and ensuring you are not taking on too much responsibility. This involves
+protecting your time and your energy especially as it is important.
+
+**What are some ways to protect your energy when in a leadership role? Talk in small groups and we will discuss as a class.**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+* Take vacations
+* Take time to disconnect
+* Take time to do something you enjoy
+* Take breaks during the day
+
+</details>
 
 ## Reflection
 
-info here
+The first important takeaway from being a leader is to be able to help your team make decisions when it comes to fixing
+ambiguous problems. This involves identifying blinders and trade-offs and highlighting the importance of finding a solution
+in a timely manner rather than a perfect solution. The second important takeaway is to ensure your team is able to complete
+tasks and handle problems without you. In other words, this ensures you avoid a single point of failure problem. Finally, the
+third takeaway is that protecting your time and energy as a leader is very important. Also it is important to keep in mind the
+idea of the cycle of success as a good model for how to approach an issue.

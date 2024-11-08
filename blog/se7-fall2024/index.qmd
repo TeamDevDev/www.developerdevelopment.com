@@ -16,14 +16,38 @@ book](https://abseil.io/resources/swe-book). In previous class sessions we have 
 
 ## Summary
 
-info here
+In Software Engineering leadership helps create order, and more importantly, a path towards collective success. This chapter focus on three main areas on how to Scale your Leadership: Always Be Deciding, Always Be Leaving, Always Be Scaling. These sections break down how leaders can effectively ensure their team reaches their goals, including processes for decision making, delegation, and best practices for handling the increased responsibilities.
 
 ### Always Be Deciding
 
-info here
+“Always Be Deciding” builds upon the concepts covered in How to Lead a Team and how to elevate from an effective team member to an effective leader. Specifically this section focuses on weighing high-level decisions based on trade-offs rather than specific implementations.
 
-**Activity: x**
+#### Parable of the Airplane
 
+An illustration of how choices often come with unintended consequences. The story explains how a passenger pays others to vacate an overfilled plane, only to find the plane has other technical issues, causing even further delay. Overall this story explains how trade-offs in complex systems can have unforeseen outcomes. In the case of software engineering the trade-offs come in forms of how to utilize our resources, mainly the members of our course and their time. A powerful quote from this section, from Ben Collins-Sussman is **“If writing code is analogous to chopping down trees, your job as a leader is to “see the forest through the trees” and find a workable path through that forest, directing engineers toward the important trees”.**
+
+#### Identify the Blinders
+
+When approaching a long-standing problem, you'll often find that those involved have developed "blinders" and assumptions that prevent them from seeing alternative solutions. With fresh perspective, you can identify these blinders, question assumptions, and explore new strategies.
+
+#### Identify the Trade-Offs
+
+There are no magic answers to all problems. As a leader you must identify the best answer for the moment. This requires weighing the options, and effectively communicate to your team what the trade-offs are.
+
+#### Decide
+
+After understanding the trade-offs, use the information to create a path forward. This is an ongoing process to ensure that all issues are actively and properly addressed. Iteration is an important factor to this step and we must complete this process ongoingly.
+
+**What are the three steps to successfully avoiding unforeseen outcomes when weighing trade-offs?** 
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+* Identify the **Binders**
+* Identify the **Trade-offs**
+* **Decide** the appropriate course of action.
+
+</details>
 ### Always Be Leaving
 
 The concept of "Always Be Leaving," coined by former Google engineering director Bharat Mediratta, emphasizes the importance of building teams that can **function without their leader**. The goal is to avoid becoming a single point of failure (SPOF) and to create what the text calls a "self-driving team." To achieve this, leaders must focus on three key aspects: 

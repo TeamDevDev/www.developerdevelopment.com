@@ -81,7 +81,7 @@ Rather than micromanaging, effective leaders should spend 95% of their time obse
 critical adjustments to keep their teams on course. Additionally, leaders should also avoid anchoring their team identity to
 specific solutions, as this can lead to resistance to change and innovation.
 
-**Activity: How can a leader effectively balance delegation and minimal intervention to ensure their team becomes self-driving and what are the potential challenges they might face in avoiding the role of a "single point of failure" (SPOF)?**
+**How can a leader effectively balance delegation and minimal intervention to ensure their team becomes self-driving and what are the potential challenges they might face in avoiding the role of a "single point of failure" (SPOF)?**
 
 ### Always Be Scaling
 
@@ -89,9 +89,13 @@ The concept “Always Be Scaling” utilizes the idea of the cycle of success to
 consists of four stages, analysis, struggle, traction, and reward. 
 
 The Cycle of Success:
+
 1. Analysis
+
 2. Struggle
+
 3. Traction
+
 4. Reward
 
 Analysis involves identifying blinders, finding the trade-offs, and deciding how to start going about managing both. Struggle

@@ -11,7 +11,7 @@ page-layout: full
 
 ## Overview
 
-This blog focuses on the Leading At Scale chapter of the [Software Engineering
+This blog focuses on the "Leading At Scale" chapter of the [Software Engineering
 at Google](https://abseil.io/resources/swe-book) book. In previous class
 sessions we have discussed transitioning from a team member to a leader, but
 this blog post will mainly focus on **leading at a higher level**. As you move
@@ -31,8 +31,8 @@ best practices for handling the increased responsibilities.
 
 ### Always Be Deciding
 
-"Always Be Deciding" builds upon the concepts covered in How to Lead a Team and
-how to elevate from an effective team member to an effective leader.
+"Always Be Deciding" builds upon the concepts covered in "How to Lead a Team"
+and how to elevate from an effective team member to an effective leader.
 Specifically this section focuses on weighing high-level decisions based on
 trade-offs rather than specific implementations.
 

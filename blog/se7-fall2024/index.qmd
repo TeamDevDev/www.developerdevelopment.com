@@ -46,7 +46,7 @@ unforeseen outcomes. In the case of software engineering the trade-offs come in
 forms of how to utilize our resources, mainly the members of our course and
 their time. A powerful quote from this section, from Ben Collins-Sussman is
 **"If writing code is analogous to chopping down trees, your job as a leader is
-to “see the forest through the trees” and find a workable path through that
+to "see the forest through the trees" and find a workable path through that
 forest, directing engineers toward the important trees".**
 
 #### Identify the Blinders

@@ -43,11 +43,11 @@ story explains how a passenger pays others to vacate an overfilled plane, only
 to find the plane has other technical issues, causing even further delay.
 Overall this story explains how trade-offs in complex systems can have
 unforeseen outcomes. In the case of software engineering the trade-offs come in
-forms of how to utilize our resources, mainly the members of our course and
-their time. A powerful quote from this section, from Ben Collins-Sussman is
-**"If writing code is analogous to chopping down trees, your job as a leader is
-to "see the forest through the trees" and find a workable path through that
-forest, directing engineers toward the important trees".**
+forms of how to use our resources, mainly the members of our course and their
+time. A powerful quote from this section, from Ben Collins-Sussman is **"If
+writing code is analogous to chopping down trees, your job as a leader is to
+"see the forest through the trees" and find a workable path through that forest,
+directing engineers toward the important trees".**
 
 #### Identify the Blinders
 
@@ -122,10 +122,10 @@ The Cycle of Success:
 
 Analysis involves identifying blinders, finding the trade-offs, and deciding how
 to start going about managing both. Struggle involves failures, retries, and
-iteration. This phase is often referred to as “herding cats”. Traction involves
+iteration. This phase is often referred to as "herding cats". Traction involves
 making smarter decisions, and real progress being made. Reward involves
 succeeding while also creating a new problem. With reward also comes the need to
-enter the compression phase where half the team works of the problem with half
+enter the compression phase where half the team works on the problem with half
 the time to fix the problem.
 
 The scaling concept also applies to scaling yourself and ensuring you are not

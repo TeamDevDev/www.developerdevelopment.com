@@ -1,0 +1,72 @@
+---
+author: [Aidan Dyga, Molly Suppo, Titus Smith, Gregory M. Kapfhammer]
+title: Efficient Grammar Fuzzing
+date: '2024-11-11'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can we efficiently implement grammars for fuzzing?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+info here
+
+## Summary
+
+As we have learned in the past, grammars are essential tools for producing syntactically valid inputs while offering a structured approach to input generation. This chapter **refines the previous string-based algorithm into a tree-based algorithm**, allowing for faster grammars that have much more control over the production of fuzz inputs. In this blog, we will explore how to create a more efficient grammar fuzzer that is more applicable to real word use cases.
+
+### What is a Derivation Tree?
+
+info here
+
+### How Expansion Works
+
+info here
+
+### Cost Functions
+
+The process of closing the expansion of a derivation tree involves ensuring that expansions do not inflate the tree size unnecessarily. To achieve this, we introduce cost functions that help determine the most efficient way to expand each symbol in the tree. 
+
+#### Determine the Cost of Expanding
+
+1. **symbol_cost()**: Computes the minimum cost of all possible expansions for a given symbol, by calling expansion_cost() for each possible expansion.
+
+2. **expansion_cost()**: Calculates the total cost of expanding a symbol by summing up the costs of all its possible expansions. If a nonterminal symbol is revisited during expansion (leading to recursion), the cost is set to infinity to prevent infinite loops.
+
+#### Expanding by Max
+
+```python
+class GrammarFuzzer(GrammarFuzzer):
+    def expand_node_min_cost(self, node: DerivationTree) -> DerivationTree:
+        if self.log:
+            print("Expanding", all_terminals(node), "at minimum cost")
+
+        return self.expand_node_by_cost(node, min)
+```
+
+#### Expanding by Min
+
+```python
+class GrammarFuzzer(GrammarFuzzer):
+    def expand_node_max_cost(self, node: DerivationTree) -> DerivationTree:
+        if self.log:
+            print("Expanding", all_terminals(node), "at maximum cost")
+
+        return self.expand_node_by_cost(node, max)
+```
+
+**In what specific situations would someone prefer to use expanding by maximum v.s. minimum costs?**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+* Minimum: This approach is preferred when generating small, efficient fuzz inputs to quickly explore edge cases without inflating the derivation tree.
+* Maximum: This method is useful for generating complex, deeply nested inputs to stress-test the system and uncover bugs in more intricate scenarios.
+
+</details>
+
+## Key Takeaways
+
+info here

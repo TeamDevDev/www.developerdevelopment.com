@@ -11,51 +11,67 @@ page-layout: full
 
 ## Overview
 
-This article is based on the article from the Fuzzing Book entitled Efficient Grammar Fuzzing. In this article, we will cover
-derivation trees and what they are, expansion and how it works, and cost functions and how they can be used for grammar
-fuzzing. We will also examine both the theoretical aspect of these concepts as well as more code-based examples.
+This article is based on the article from the Fuzzing Book entitled Efficient
+Grammar Fuzzing. In this article, we will cover derivation trees and what they
+are, expansion and how it works, and cost functions and how they can be used for
+grammar fuzzing. We will also examine both the theoretical aspect of these
+concepts as well as more code-based examples.
 
 ## Summary
 
-As we have learned in the past, grammars are essential tools for producing syntactically valid inputs while offering a
-structured approach to input generation. This chapter **refines the previous string-based algorithm into a tree-based algorithm**, allowing for faster grammars that have much more control over the production of fuzz inputs. In this blog, we will
-explore how to create a more efficient grammar fuzzer that is more applicable to real word use cases.
+As we have learned in the past, grammars are essential tools for producing
+syntactically valid inputs while offering a structured approach to input
+generation. This chapter **refines the previous string-based algorithm into a
+tree-based algorithm**, allowing for faster grammars that have much more control
+over the production of fuzz inputs. In this blog, we will explore how to create
+a more efficient grammar fuzzer that is more applicable to real word use cases.
 
 ### What is a Derivation Tree?
 
-In the context of grammar fuzzing, derivation trees are used to efficiently manage and control the process of expanding grammar
-rules. A derivation tree represents the entire structure of a generated string, keeping track of which parts have been expanded
-and which still need to be. This tree-based structure makes it easier to visualize, manipulate, and compare different
-expansions. Each node in the tree corresponds to either a terminal (**REMINDER:** cannot be expanded further) or a nonterminal
-(**REMINDER:** can be expanded into other symbols). The tree is built step by step, starting from a root node and progressively
-expanding nonterminals until only terminal symbols remain.
+In the context of grammar fuzzing, derivation trees are used to efficiently
+manage and control the process of expanding grammar rules. A derivation tree
+represents the entire structure of a generated string, keeping track of which
+parts have been expanded and which still need to be. This tree-based structure
+makes it easier to visualize, manipulate, and compare different expansions. Each
+node in the tree corresponds to either a terminal (**REMINDER:** cannot be
+expanded further) or a non-terminal (**REMINDER:** can be expanded into other
+symbols). The tree is built step by step, starting from a root node and
+progressively expanding non-terminals until only terminal symbols remain.
 
 #### Make-Up of a Derivation Tree
 
 Below are the different components of a derivation tree:
 
-- **Terminal Node(s):** These are the "leaf" nodes and represent the actual symbols of the generated string (e.g., characters,
-words).
-- **Nonterminal Node(s):** These represent symbols that can be expanded into other symbols according to the grammar rules (e.
-g., <expr>, <term>).
-- **Root Node:** The root node represents the start symbol of the grammar.
-- **Expansion:** The tree is built by recursively expanding nonterminals according to the grammar's production rules.
+- **Terminal Node(s):** These are the "leaf" nodes and represent the actual
+symbols of the generated string (e.g., characters, words).
 
-While the simple grammar fuzzer used previously was inefficient and lacked control, leading to potential infinite expansions,
-derivation trees solve these issues by providing a more structured and efficient approach. By expanding nodes in a derivation
-tree instead of manipulating strings directly, the algorithm can track progress, avoid infinite expansions, and maintain better
-control over the process
+- **Non-terminal Node(s):** These represent symbols that can be expanded into
+other symbols according to the grammar rules (e. g., <expr>, <term>).
+
+- **Root Node:** The root node represents the start symbol of the grammar.
+- **Expansion:** The tree is built by recursively expanding non-terminals
+according to the grammar's production rules.
+
+While the simple grammar fuzzer used previously was inefficient and lacked
+control, leading to potential infinite expansions, derivation trees solve these
+issues by providing a more structured and efficient approach. By expanding nodes
+in a derivation tree instead of manipulating strings directly, the algorithm can
+track progress, avoid infinite expansions, and maintain better control over the
+process
 
 **What is the purpose of using a derivation tree in grammar-based string generation, and how does it improve the process compared to generating a string directly?**
 
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-The purpose of using a derivation tree is to provide a structured representation of the string generation process. A derivation
-tree captures the full history of how a string is derived from the start symbol by expanding nonterminal symbols according to
-grammar rules. This structure allows for better control, visualization, and manipulation of the generation process.
-Additionally, derivation trees allow for better visualization and comparing different derivations of the same string, allowing
-for clearer understanding and debugging of the generation process.
+The purpose of using a derivation tree is to provide a structured representation
+of the string generation process. A derivation tree captures the full history of
+how a string is derived from the start symbol by expanding non-terminal symbols
+according to grammar rules. This structure allows for better control,
+visualization, and manipulation of the generation process. Additionally,
+derivation trees allow for better visualization and comparing different
+derivations of the same string, allowing for clearer understanding and debugging
+of the generation process.
 
 </details>
 
@@ -63,12 +79,12 @@ for clearer understanding and debugging of the generation process.
 
 ### How Expansion Works
 
-Expansion starts by searching for a nonterminal symbol without children. This is also referred to as a “leaf.” The expansion is
-then added as a child, or child node of the “leaf.” The process then continues as another nonterminal symbol is chosen to
-expand. This expansion process repeats until there are no nonterminal symbols left to expand.
+Expansion starts by searching for a non-terminal symbol without children. This is also referred to as a “leaf.” The expansion is
+then added as a child, or child node of the “leaf.” The process then continues as another non-terminal symbol is chosen to
+expand. This expansion process repeats until there are no non-terminal symbols left to expand.
 
 When defining expansion from a coding standpoint, there are ways to indicate whether a symbol has children and whether it is
-able to be expanded. We use ‘None’ to indicate a situation where the symbol has no children and it is nonterminal, meaning we
+able to be expanded. We use ‘None’ to indicate a situation where the symbol has no children and it is non-terminal, meaning we
 can expand the node. We use ‘[]’ to indicate a situation where the symbol has no children and it is terminal, meaning we cannot
 expand the node.
 
@@ -97,7 +113,7 @@ the tree.
 each possible expansion.
 
 2. **expansion_cost()**: Calculates the total cost of expanding a symbol by summing up the costs of all its possible
-expansions. If a nonterminal symbol is revisited during expansion (leading to recursion), the cost is set to infinity to
+expansions. If a non-terminal symbol is revisited during expansion (leading to recursion), the cost is set to infinity to
 prevent infinite loops.
 
 #### Expanding by Max
@@ -136,9 +152,19 @@ more intricate scenarios.
 
 ## Key Takeaways
 
-Derivation trees and cost functions play a critical role in improving the efficiency and control of grammar-based fuzzing by
-guiding the expansion of derivation trees. These functions help avoid unnecessary growth in the tree and prevent infinite
-loops, ensuring that the fuzzer produces valid and varied inputs without redundant or inefficient expansions. However, using
-these functions can present challenges, especially with large or highly recursive grammars, where calculating the cost of
-expansions can become computationally expensive and may require optimizations to maintain performance. Lastly, efficient
-grammar-fuzzing adds increased functionality to our fuzzing tests and allow for more accurate fuzzing.
+Derivation trees and cost functions play a critical role in improving the
+efficiency and control of grammar-based fuzzing by guiding the expansion of
+derivation trees. These functions help avoid unnecessary growth in the tree and
+prevent infinite loops, ensuring that the fuzzer produces valid and varied
+inputs without redundant or inefficient expansions. However, using these
+functions can present challenges, especially with large or highly recursive
+grammars, where calculating the cost of expansions can become computationally
+expensive and may require optimizations to maintain performance. Lastly,
+efficient grammar-fuzzing adds increased functionality to our fuzzing tests and
+allow for more accurate fuzzing.
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

@@ -99,8 +99,8 @@ expand the node.
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-* Max cost
-* Min cost
+* Maximum cost
+* Minimum cost
 * Random (previously discussed)
 
 This relates to the next section regarding cost functions and how they are used

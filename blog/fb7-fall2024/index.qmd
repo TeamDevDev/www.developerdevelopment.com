@@ -82,8 +82,8 @@ of the generation process.
 ### How Expansion Works
 
 Expansion starts by searching for a non-terminal symbol without children. This
-is also referred to as a “leaf.” The expansion is then added as a child, or
-child node of the “leaf.” The process then continues as another non-terminal
+is also referred to as a "leaf." The expansion is then added as a child, or
+child node of the "leaf." The process then continues as another non-terminal
 symbol is chosen to expand. This expansion process repeats until there are no
 non-terminal symbols left to expand.
 

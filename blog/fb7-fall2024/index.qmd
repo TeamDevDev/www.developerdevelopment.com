@@ -46,7 +46,7 @@ Below are the different components of a derivation tree:
 symbols of the generated string (e.g., characters, words).
 
 - **Non-terminal Node(s):** These represent symbols that can be expanded into
-other symbols according to the grammar rules (e. g., <expr>, <term>).
+other symbols according to the grammar rules (e.g., `<expr>` or `<term>`).
 
 - **Root Node:** The root node represents the start symbol of the grammar.
 - **Expansion:** The tree is built by recursively expanding non-terminals
@@ -59,7 +59,9 @@ in a derivation tree instead of manipulating strings directly, the algorithm can
 track progress, avoid infinite expansions, and maintain better control over the
 process
 
-**What is the purpose of using a derivation tree in grammar-based string generation, and how does it improve the process compared to generating a string directly?**
+**What is the purpose of using a derivation tree in grammar-based string
+generation, and how does it improve the process compared to generating a string
+directly?**
 
 <details>
 <summary>Click to Expand for the Answer</summary>

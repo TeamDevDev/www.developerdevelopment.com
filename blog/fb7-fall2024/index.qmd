@@ -90,7 +90,7 @@ non-terminal symbols left to expand.
 When defining expansion from a coding standpoint, there are ways to indicate
 whether a symbol has children and whether it is able to be expanded. We use
 `None` to indicate a situation where the symbol has no children and it is
-non-terminal, meaning we can expand the node. We use ‘[]’ to indicate a
+non-terminal, meaning we can expand the node. We use `[]` to indicate a
 situation where the symbol has no children and it is terminal, meaning we cannot
 expand the node.
 

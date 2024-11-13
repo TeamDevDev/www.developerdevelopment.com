@@ -116,7 +116,7 @@ each possible expansion.
 expansions. If a non-terminal symbol is revisited during expansion (leading to recursion), the cost is set to infinity to
 prevent infinite loops.
 
-#### Expanding by Max
+#### Expanding by Maximum Cost
 
 ```python
 class GrammarFuzzer(GrammarFuzzer):
@@ -127,7 +127,7 @@ class GrammarFuzzer(GrammarFuzzer):
         return self.expand_node_by_cost(node, min)
 ```
 
-#### Expanding by Min
+#### Expanding by Minimum Cost
 
 ```python
 class GrammarFuzzer(GrammarFuzzer):

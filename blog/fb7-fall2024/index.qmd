@@ -143,10 +143,11 @@ class GrammarFuzzer(GrammarFuzzer):
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-* Minimum: This approach is preferred when generating small, efficient fuzz inputs to quickly explore edge cases without
-inflating the derivation tree.
-* Maximum: This method is useful for generating complex, deeply nested inputs to stress-test the system and uncover bugs in
-more intricate scenarios.
+- Minimum: This approach is preferred when generating small, efficient fuzz
+inputs to quickly explore edge cases without inflating the derivation tree.
+- Maximum: This method is useful for generating complex, deeply nested
+inputs to stress-test the system and uncover bugs in more intricate
+scenarios.
 
 </details>
 

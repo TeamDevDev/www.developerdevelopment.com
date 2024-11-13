@@ -138,7 +138,7 @@ class GrammarFuzzer(GrammarFuzzer):
         return self.expand_node_by_cost(node, max)
 ```
 
-**In what specific situations would someone prefer to use expanding by maximum v.s. minimum costs?**
+**In what specific situations would someone prefer to use expanding by maximum versus minimum costs?**
 
 <details>
 <summary>Click to Expand for the Answer</summary>

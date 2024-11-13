@@ -97,24 +97,27 @@ expand the node.
 * Min cost
 * Random (previously discussed)
 
-This relates to the next section regarding cost functions and how they are used to facilitate expansion in certain situations.
+This relates to the next section regarding cost functions and how they are used
+to facilitate expansion in certain situations.
 
 </details>
 
 ### Cost Functions
 
-The process of closing the expansion of a derivation tree involves ensuring that expansions do not inflate the tree size
-unnecessarily. To achieve this, we introduce cost functions that help determine the most efficient way to expand each symbol in
-the tree. 
+The process of closing the expansion of a derivation tree involves ensuring that
+expansions do not inflate the tree size unnecessarily. To achieve this, we
+introduce cost functions that help determine the most efficient way to expand
+each symbol in the tree. 
 
 #### Determine the Cost of Expanding
 
-1. **symbol_cost()**: Computes the minimum cost of all possible expansions for a given symbol, by calling expansion_cost() for
-each possible expansion.
+1. **`symbol_cost`**: Computes the minimum cost of all possible expansions for a
+given symbol, by calling `expansion_cost` for each possible expansion.
 
-2. **expansion_cost()**: Calculates the total cost of expanding a symbol by summing up the costs of all its possible
-expansions. If a non-terminal symbol is revisited during expansion (leading to recursion), the cost is set to infinity to
-prevent infinite loops.
+2. **`expansion_cost`**: Calculates the total cost of expanding a symbol by
+summing up the costs of all its possible expansions. If a non-terminal symbol
+is revisited during expansion (leading to recursion), the cost is set to
+infinity to prevent infinite loops.
 
 #### Expanding by Maximum Cost
 

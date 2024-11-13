@@ -127,6 +127,9 @@ infinity to prevent infinite loops.
 
 #### Expanding by Maximum Cost
 
+<!-- TODO: There is no execution of any of this source code. This source code
+will not produce any output so as to help readers understand its behavior. -->
+
 ```python
 class GrammarFuzzer(GrammarFuzzer):
     def expand_node_min_cost(self, node: DerivationTree) -> DerivationTree:

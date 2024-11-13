@@ -1,7 +1,7 @@
 ---
 author: [Aidan Dyga, Molly Suppo, Titus Smith, Gregory M. Kapfhammer]
 title: Efficient Grammar Fuzzing
-date: '2024-11-11'
+date: '2024-11-13'
 date-format: long
 categories: [post, software engineering, fuzzing book]
 description: <em>How can we efficiently implement grammars for fuzzing?</em>

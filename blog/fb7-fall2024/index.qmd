@@ -11,11 +11,13 @@ page-layout: full
 
 ## Overview
 
-This article is based on the article from the Fuzzing Book entitled Efficient
-Grammar Fuzzing. In this article, we will cover derivation trees and what they
-are, expansion and how it works, and cost functions and how they can be used for
-grammar fuzzing. We will also examine both the theoretical aspect of these
-concepts as well as more code-based examples.
+This post discusses the [Efficient Grammar
+Fuzzing](https://www.fuzzingbook.org/html/GrammarFuzzer.html) chapter from [The
+Fuzzing Book](https://www.fuzzingbook.org/). In this post, we will cover
+derivation trees and what they are, expansion and how it works, and cost
+functions and how they can be used for grammar fuzzing. We will also examine
+both the theoretical aspect of these concepts as well as more code-based
+examples explaining how it works in practice.
 
 ## Summary
 

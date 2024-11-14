@@ -13,8 +13,33 @@ page-layout: full
 
 ## Summary
 
+### Why Have Rules?
+
+### Creating the Rules
+
+#### Guiding Principles
+
+#### The Style Guide
+
+### Changing the Rules
+
+#### The Process
+
+#### The Style Arbiters
+
+#### Exceptions
+
+### Guidance
+
+### Applying the Rules
+
+#### Error Checkers
+
+#### Code Formatters
+
 ## Reflection
 
 ## Action Items
+
 
 {{< include /_back-blog.qmd >}}

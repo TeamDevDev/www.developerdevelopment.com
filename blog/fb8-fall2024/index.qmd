@@ -13,9 +13,34 @@ page-layout: full
 
 ## Summary
 
+### Why Parsing for Fuzzing?
+
+### Using a Parser
+
+### An Ad Hoc Parser
+
+### Grammars in Parsing
+
+### A Parser Class
+
+### Parsing Expression Grammars
+
+### The Packrat Parser for Predicate Expression Grammars
+
+### Parsing COntext-Free Grammars
+
+#### Problems with PEG
+
+### The Earley Parser
+
+### Excursion: Testing the Parsers
+
+### Background
+
 ## Reflection
 
 ## Action Items
+
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

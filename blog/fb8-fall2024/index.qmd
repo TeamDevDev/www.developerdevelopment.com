@@ -1,0 +1,24 @@
+---
+author: [Pallas-Athena Cain, Coltin Colucci, Chezka Quinola, Gregory M. Kapfhammer]
+title: Parsing Inputs
+date: '2024-11-20'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can parsers help with fuzzing?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+## Summary
+
+## Reflection
+
+## Action Items
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

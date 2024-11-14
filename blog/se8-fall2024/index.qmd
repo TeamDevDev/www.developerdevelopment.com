@@ -1,0 +1,20 @@
+---
+author: [Pallas-Athena Cain, Coltin Colucci, Chezka Quinola, Gregory M. Kapfhammer]
+title: 'Style Guides and Rules'
+date: '2024-11-18'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em> How can rules scale and sustain engineering teams?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+## Summary
+
+## Reflection
+
+## Action Items
+
+{{< include /_back-blog.qmd >}}

@@ -17,7 +17,7 @@ page-layout: full
 
 Rules help to encourage "good" behavior and discourage "bad". But what is good and bad behavior when software engineering? We define the values of our project and so that is up for us to decide. Some companies really value consistency while others prioritize runtime optimization. The rules are meant to reinforce the organizational values and not so much be a limiting factor but more be way to encourage thoughtfulness when developing.
 
-#### Discussion Question: What values do we want to have for our codebases?
+**Discussion Question: What values do we want to have for our codebases?**
 
 ### Creating the Rules
 
@@ -32,7 +32,41 @@ These are productive questions because they require you to reflect on why a rule
 
 #### Guiding Principles
 
-Google has the coal of making the codebase manageable while still allowing for producitivity. However there is an important trade-off of making rules. The larger the body of rules the more choice is restricted. So the large body of rules should always be aiming to lead us towards our goals instead just acting as a limiting factor. 
+Google has the coal of making the codebase manageable while still allowing for producitivity. However there is an important trade-off of making rules. **The larger the body of rules the more choice is restricted**. So the large body of rules should always be aiming to lead us towards our goals instead just acting as a limiting factor. 
+
+Given this there are some overarching principles to guide in rule development which are: 
+
+- Rules should pull their weight
+- Rules should be optimized for the reader
+- Rules should be consistent 
+- Rules should avoid error-prone and surprising constructs
+- Rules should concede to practicalities when necessary 
+
+##### Rules Must Pull their Weight
+
+With more rules it becomes increasly harder to remember them all. It can also become more expensive and challenging to maintain the more rules you have. 
+
+Choose to not include rules that are self-evident because they add to everyone's mental load without being worth it.
+
+For example in the context of our work we will not release debugging `print` statements in our production code. This rule is likely understood by all of us already and is not worth adding into an official style guide for that reason. 
+
+##### Optimize for the Reader
+
+
+
+#####  Be Consistent
+
+##### Avoid Error-prone and Surpising Constructs
+
+##### Concede to Practicalities 
+
+
+**Discussion Question: Can you describe one of the guiding principles and why it is important?**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+TODO: 
+</details>
 
 #### The Style Guide
 
@@ -51,11 +85,6 @@ Google has the coal of making the codebase manageable while still allowing for p
 #### Error Checkers
 
 #### Code Formatters
-
-<details>
-<summary>Click to Expand for the Answer</summary>
-
-</details>
 
 ## Reflection
 

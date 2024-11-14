@@ -15,9 +15,24 @@ page-layout: full
 
 ### Why Have Rules?
 
+Rules help to encourage "good" behavior and discourage "bad". But what is good and bad behavior when software engineering? We define the values of our project and so that is up for us to decide. Some companies really value consistency while others prioritize runtime optimization. The rules are meant to reinforce the organizational values and not so much be a limiting factor but more be way to encourage thoughtfulness when developing.
+
+#### Discussion Question: What values do we want to have for our codebases?
+
 ### Creating the Rules
 
+When creating the rules it is important to question why you are making something a rule. Questions you can ask yourself when think of rules are:
+
+- "What goal or goals are we trying to advance?"
+- "Why does this belong in the style guide?" 
+- "What value does this rule add to our style guide?"
+- "Does the rule bring us closer to our goal or goals?"
+
+These are productive questions because they require you to reflect on why a rule exists instead of mindlessly creating rules for the sake of having rules.
+
 #### Guiding Principles
+
+Google has the coal of making the codebase manageable while still allowing for producitivity. However there is an important trade-off of making rules. The larger the body of rules the more choice is restricted. So the large body of rules should always be aiming to lead us towards our goals instead just acting as a limiting factor. 
 
 #### The Style Guide
 
@@ -36,6 +51,11 @@ page-layout: full
 #### Error Checkers
 
 #### Code Formatters
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+</details>
 
 ## Reflection
 

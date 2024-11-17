@@ -136,18 +136,26 @@ The process used at google for changing a style guide is a solution based one. T
 
 #### The Style Arbiters
 
-At google each languages style guide has to be approved by the style arbiters. This group is are long-time language experts and are designated to make the final decisions. With this being said they do not make the decision on their own. They have to take into account the trade-offs for the proposed change and each change has to be agreed upon and have a specific goal for the change. 
+At google each language's style guide has to be approved by the style arbiters. This group is are long-time language experts and are designated to make the final decisions. With this being said they do not make the decision on their own. They have to take into account the trade-offs for the proposed change and each change has to be agreed upon and have a specific goal for the change. 
 
-**At google this group is comprised of a four person committee. Why might you want an even number on this committee as opposed to an odd number?**
+**At Google this group is composed of a four person committee. Why might you want an even number on this committee as opposed to an odd number?**
 
 #### Exceptions
 Yes you should follow the rules. However there are times when you may think that not following a specific rule may save a lot of your time or energy. 
 
 **What do you think you should do in this scenario?**
 
-When wanting to make an exception you should first ask yourself if it is worth going through the process of doing so. The general rule that is followed is that exceptions are allowed in cases where it is gauged to be more beneficial to permit a rule-breaking than to avoid it. An example of this would be breaking the C++ style guide of not allowing implicit type conversions. However, for types that are designed to transparently wrap other types, where the undelrying data is still accurately and precisely represented, it is reasonable to allow implicit conversion. While this is a valid excepetion it is also important to note that this rule covers enough broad circumstances  that it is still valid to have in place. 
+When wanting to make an exception you should first ask yourself if it is worth going through the process of doing so. The general rule that is followed is that exceptions are allowed in cases where it is gauged to be more beneficial to permit a rule-breaking than to avoid it. An example of this would be breaking the C++ style guide of not allowing implicit type conversions. However, for types that are designed to transparently wrap other types, where the underlying data is still accurately and precisely represented, it is reasonable to allow implicit conversion. While this is a valid exception it is also important to note that this rule covers enough broad circumstances  that it is still valid to have in place. 
 
-### Guidance ME
+### Guidance
+
+Guidance can come in many different forms. It can be as simple as pointing to advice on best practices or as complex as having an in depth conversation on a nuanced topic. Guidance is supposed to represent the best practices that have been extracted from lessons learned along the way of getting familiar with style guides. Think of guides as "shoulds," and rules as "musts."
+
+An example of a pool of guidance is primers. Primers do not delve into every detail of a topic but they should provide explanations and recomend use. This can be useful for new members to reference because primers can give you the necessary information needed to implement a feature without any excess. 
+
+As with many things done at google these guides are covering many issues that have already occurred. It is not focused on situations that are hypothetical but instead common issues that have real application. With this being said they are still advice, unlike the rules in the style guide. Guidance is more broad and applied. An example of this would be a short "Tip of the Week" article that is short and to the point. This is one of the many ways guidance can be economically offered.
+
+Oftentimes software engineers come into a project with knowledge of a programming language but lack knowledge in how it applies to a specific company or project. At Google they provide full day courses in order to bridge this gap. This could apply in our team as well. Using knowledge sharing to familiarize somebody working on a new project or codebase could help to gain traction leading to better overall development.
 
 ### Applying the Rules
 

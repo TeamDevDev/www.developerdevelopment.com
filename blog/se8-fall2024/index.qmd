@@ -126,17 +126,26 @@ It is okay to have exceptions to the style guide. Do not ignore everything else 
 #### The Style Guide
 
 ### Changing the Rules 
-Style guides are not static. As with many things in software engineering style guides are an ever evolving thing. With this being said certain styles can become outdated based on new features. if a rule is causing engineers to invest an excess amount of effort that may indicate that a change is needed. When looking into changing the rules first thing that is important to evaluate is why the rule is in place to start. In doing this evalutation it is also important to have evidence to back keeping a rule or creating a change. It is also important to document this reasons for change. In the future it will allow active users to have a more educated opinion on whether or not the rule is still effective or needs to be changed. An example of this is google using CamelCase as opponse to snake_case naming style for method names. The reason for this is that most of Google's Python usage at the time was for C++ developers using Python as a scripting layer on top of a C++ codebase. because Google's C++ naming convention follows CamelCase style, it was important to keep that consistent. When doing this they found that there were other issues with CamelCase. CamelCase did not conform with the third-party Python libraries that were being used. This made maintaining CamelCase more complex than needed to be. Another downside that was discovered was that this nonconformist convention was surprising and somewhat weird for the community. Ultimately when weighing the pros and cons of CamelCase and snake_case Google decided to switch back to snake_case naming in python.
+Style guides are not static. As with many things in software engineering, style guides are an ever evolving thing. With this being said certain styles can become outdated based on new features. if a rule is causing engineers to invest an excess amount of effort that may indicate that a change is needed. When looking into changing the rules the first thing that is important to evaluate is why the rule is in place to start. In doing this evaluation it is also important to have evidence to back up keeping a rule or creating a change. It is also important to document the reasons for change. In the future it will allow active users to have a more educated opinion on whether or not the rule is still effective or needs to be changed. An example of this is google using CamelCase as opposed to snake_case naming style for method names. The reason for this is that most of Google's Python usage at the time was for C++ developers using Python as a scripting layer on top of a C++ codebase. Because Google's C++ naming convention follows CamelCase style, it was important to keep that consistent. When doing this they found that there were other issues with CamelCase. CamelCase did not conform with the third-party Python libraries that were being used. This made maintaining CamelCase more complex than needed to be. Another downside that was discovered was that this nonconformist convention was surprising and somewhat weird for the community. Ultimately when weighing the pros and cons of CamelCase and snake_case Google decided to switch back to snake_case naming in python.
 
 #### The Process
 
-The process used at google for changing a style guide is a solution based one. this means that if an update is proposed it has to be a solution to an existing problem and not a hypothetical situation.
+The process used at google for changing a style guide is a solution based one. This means that if an update is proposed it has to be a solution to an existing problem and not a hypothetical situation.
 
-Why might this be an effective approach?
+**Why might this be an effective approach?**
 
 #### The Style Arbiters
 
+At google each languages style guide has to be approved by the style arbiters. This group is are long-time language experts and are designated to make the final decisions. With this being said they do not make the decision on their own. They have to take into account the trade-offs for the proposed change and each change has to be agreed upon and have a specific goal for the change. 
+
+**At google this group is comprised of a four person committee. Why might you want an even number on this committee as opposed to an odd number?**
+
 #### Exceptions
+Yes you should follow the rules. However there are times when you may think that not following a specific rule may save a lot of your time or energy. 
+
+**What do you think you should do in this scenario?**
+
+When wanting to make an exception you should first ask yourself if it is worth going through the process of doing so. The general rule that is followed is that exceptions are allowed in cases where it is gauged to be more beneficial to permit a rule-breaking than to avoid it. An example of this would be breaking the C++ style guide of not allowing implicit type conversions. However, for types that are designed to transparently wrap other types, where the undelrying data is still accurately and precisely represented, it is reasonable to allow implicit conversion. While this is a valid excepetion it is also important to note that this rule covers enough broad circumstances  that it is still valid to have in place. 
 
 ### Guidance ME
 

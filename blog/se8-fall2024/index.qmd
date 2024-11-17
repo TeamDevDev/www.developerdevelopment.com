@@ -81,19 +81,47 @@ Why consistancy is good:
 
 Do not let preserving consistancy stop you from updating your code at scale. If things change the standard may change and past code may need updated such as with `gatorgrader`
 
-Setting the Standard
+Being consistent starts locally but sometimes stardards of the external community should be taken into account. An example of this that you have used before is citiation standards or the `YAML` standards for `yaml` files. We also using linting to make sure our codes are up to an outside standard.
+
+An example they use in the book is that Google used to only use 2 space indents for their Python code but the outside community used 4. Eventually they realized the Google standard did not fit commpared to the outside standard. The more your code interacts with the outside world the more staying consistent with outside standards matter.
 
 ##### Avoid Error-prone and Surpising Constructs
 
+Even if current understand a confusing construct there is no guarrentee the future will. These non-obvious features can cause misue and introduce bugs. 
+
+Google's Python style guide avoids using `power` features such as relection. `hasattr()` and `getattr()` for example give access to an object using strings.
+
+Example:
+
+File one:
+```python
+A_CONSTANT = [
+'foo',
+'bar',
+'baz',
+]
+```
+
+File two:
+```python
+values = []
+for field in some_file.A_CONSTANT:
+values.append(getattr(my_object, field))
+```
+
+Confusing code can also cause security flaws since this code is hard to test and can be hard to notice if messages are validated incorrectly.
+
+Some cases `hasattr()` and `getattr()` are valid but in most cases they are confusing. The traceback feature we have for example is a case where we needed to use these Python features to grab the information on the source code and source files. 
+
+There is higher value in code that is understandable and easier to maintain than code that jumps to get the job done quickly.
+
 ##### Concede to Practicalities 
 
+**“A foolish consistency is the hobgoblin of little minds.”** - Raplh Waldo Emerson 
+
+It is okay to have exceptions to the style guide. Do not ignore everything else just because you are in pursuit of simple and consistant code. When needed excpetions can be made for optimizations and practicalities that otherwise would conflict with the rules.
 
 **Discussion Question: Can you describe one of the guiding principles and why it is important?**
-
-<details>
-<summary>Click to Expand for the Answer</summary>
-TODO: 
-</details>
 
 #### The Style Guide
 

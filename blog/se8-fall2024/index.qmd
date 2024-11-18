@@ -109,7 +109,7 @@ Google's Python style guide avoids using `power` features such as reflection.
 
 Here is an example in Python:
 
-File one:
+The first Python file:
 ```python
 A_CONSTANT = [
 'foo',
@@ -118,7 +118,7 @@ A_CONSTANT = [
 ]
 ```
 
-File two:
+The second Python file:
 ```python
 values = []
 for field in some_file.A_CONSTANT:

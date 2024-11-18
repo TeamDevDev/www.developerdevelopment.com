@@ -218,7 +218,7 @@ that were being used. This made maintaining CamelCase more complex than it
 needed to be. Another downside that was discovered was that this nonconformist
 convention was surprising and somewhat weird for the community. Ultimately when
 weighing the pros and cons of CamelCase and snake_case Google decided to switch
-back to snake_case naming in python.
+back to snake_case naming in Python.
 
 #### The Process
 

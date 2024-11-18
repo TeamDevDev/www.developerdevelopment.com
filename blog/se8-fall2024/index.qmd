@@ -77,25 +77,37 @@ Types of comments:
 Consistency in code bases and in work spaces makes it easier to jump from project to project. Think about the setup between `gatorgrade` and `execexam` both utilize `poetry` so you were familiar with aspects of the tool before jumping in. That is part of why it is so hard to update `gatorgrader`. It was written before a lot of the dependencies we use in our other code bases so it is harder to get a grip on what is happening. That is why it is a task to convert it to a method that is more consistent with the rest of our code bases. 
 
 Why consistency is good:
-- Engineers can focuus on what's getting done over how it is presented 
+- Engineers can focus on what's getting done over how it is presented 
 - Chunking of problems; solving in a similar way
 - Enables scaling code wise; make the code work the same everywhere
-- Enables scaling humanwise; mobility across projects
+- Enables scaling human-wise; mobility across projects
 - Resilience to time 
 
-Do not let preserving consistancy stop you from updating your code at scale. If things change the standard may change and past code may need updated such as with `gatorgrader`
+Do not let preserving consistency stop you from updating your code at scale. If
+things change the standard may change and past code may need updated such as
+with `gatorgrader`
 
-Being consistent starts locally but sometimes stardards of the external community should be taken into account. An example of this that you have used before is citiation standards or the `YAML` standards for `yaml` files. We also using linting to make sure our codes are up to an outside standard.
+Being consistent starts locally but sometimes standards of the external
+community should be taken into account. An example of this that you have used
+before is citation standards or the `YAML` standards for `yaml` files. We also
+using linting to make sure our codes are up to an outside standard.
 
-An example they use in the book is that Google used to only use 2 space indents for their Python code but the outside community used 4. Eventually they realized the Google standard did not fit compared to the outside standard. The more your code interacts with the outside world the more staying consistent with outside standards matter.
+An example they use in the book is that Google used to only use 2 space indents
+for their Python code but the outside community used 4. Eventually they realized
+the Google standard did not fit compared to the outside standard. The more your
+code interacts with the outside world the more staying consistent with outside
+standards matter.
 
 ##### Avoid Error-prone and Surprising Constructs
 
-Even if current developers understand a confusing construct there is no guarrentee the future will. These non-obvious features can cause misuse and introduce bugs. 
+Even if current developers understand a confusing construct there is no
+guarantee the future will. These non-obvious features can cause misuse and
+introduce bugs. 
 
-Google's Python style guide avoids using `power` features such as relection. `hasattr()` and `getattr()` for example give access to an object using strings.
+Google's Python style guide avoids using `power` features such as reflection.
+`hasattr()` and `getattr()` for example give access to an object using strings.
 
-Example:
+Here is an example in Python:
 
 File one:
 ```python

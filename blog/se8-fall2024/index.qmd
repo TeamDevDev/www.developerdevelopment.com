@@ -195,7 +195,7 @@ is important?**
 
 #### The Style Guide
 
-Good style guides have rrules that do three things:
+Good style guides have rules that do three things:
 - Rules to avoid dangers
 - Rules to enforce best practices 
 - Riles to ensure consistency

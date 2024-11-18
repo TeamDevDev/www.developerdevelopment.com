@@ -138,14 +138,16 @@ code that jumps to get the job done quickly.
 
 ##### Concede to Practicalities 
 
-**“A foolish consistency is the hobgoblin of little minds.”** - Ralph Waldo Emerson 
+**"A foolish consistency is the hobgoblin of little minds."** - Ralph Waldo
+Emerson 
 
 It is okay to have exceptions to the style guide. Do not ignore everything else
 just because you are in pursuit of simple and consistent code. When needed
 exceptions can be made for optimizations and practicalities that otherwise would
 conflict with the rules.
 
-**Discussion Question: Can you describe one of the guiding principles and why it is important?**
+**Discussion Question: Can you describe one of the guiding principles and why it
+is important?**
 
 #### The Style Guide
 

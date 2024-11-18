@@ -136,11 +136,11 @@ community should be taken into account. An example of this that you have used
 before is citation standards or the `YAML` standards for `yaml` files. We also
 using linting to make sure our codes are up to an outside standard.
 
-An example they use in the book is that Google used to only use 2 space indents
-for their Python code but the outside community used 4. Eventually they realized
-the Google standard did not fit compared to the outside standard. The more your
-code interacts with the outside world the more staying consistent with outside
-standards matter.
+An example they use in the book is that Google used to only use two space
+indents for their Python code but the outside community used four. Eventually
+they realized the Google standard did not fit compared to the outside standard.
+The more your code interacts with the outside world the more staying consistent
+with outside standards matter.
 
 ##### Avoid Error-prone and Surprising Constructs
 

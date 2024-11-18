@@ -89,18 +89,20 @@ already and is not worth adding into an official style guide for that reason.
 Another guiding principle is writing code for the reader rather than the author.
 This goes back to the principle **Code is written once but read many times.** 
 
-Simple to read > Simple to write
+This means we should adhere to the principle: **Simple to read > Simple to
+write**.
 
-Trade-off: More cost more for engineers but easier to read.
+**However, there is a trade-off**: More cost more for engineers but easier to
+read.
 
-Ways to make code easier to read:
+**Ways to make code easier to read**:
 
 - Longer and more descriptive variable names
 - Using more descriptive conditional structures
 - Descriptive doc-strings
 - Well written comments 
 
-Types of comments:
+**Types of comments**:
 
 - Documentation Comments that describe the design or intent of the code that
 follows

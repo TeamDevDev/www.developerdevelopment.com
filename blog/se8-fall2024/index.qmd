@@ -200,11 +200,13 @@ Good style guides have rrules that do three things:
 - Rules to enforce best practices 
 - Riles to ensure consistency
 
-Dangerous rules are things that allow bugs to creep in such as using lamba expressions or hard to use langauge features.
+Dangerous rules are things that allow bugs to creep in such as using lamba 
+expressions or hard to use langauge features.
 
 Best practices are meant to make code more readable. 
 
-Building consistency is how you can choose a standard and not debate about them wasting time. You choose a standard and stick with it.
+Building consistency is how you can choose a standard and not debate about 
+them wasting time. You choose a standard and stick with it.
 
 ### Changing the Rules 
 

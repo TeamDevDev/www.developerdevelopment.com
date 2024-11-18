@@ -11,32 +11,58 @@ page-layout: full
 
 ## Overview
 
-Style guides are essential tools for scaling and sustaining engineering teams. They define rules that align with project values, fostering consistency, readability, and maintainability. However, creating effective rules requires thoughtful consideration—rules should advance specific goals, be optimized for readers, and avoid introducing unnecessary complexity. 
+Style guides are essential tools for scaling and sustaining engineering teams.
+They define rules that align with project values, fostering consistency,
+readability, and maintainability. However, creating effective rules requires
+thoughtful consideration—rules should advance specific goals, be optimized for
+readers, and avoid introducing unnecessary complexity. 
 
-Google’s approach emphasizes balance: rules must be impactful without being overly restrictive, and exceptions should be allowed when justified by practical needs. Automation tools like linters and formatters help enforce rules consistently, while regular reviews ensure style guides evolve with the needs of the team and the industry. By focusing on practical, evidence-based principles, teams can craft style guides that enhance both code quality and developer efficiency.
+Google’s approach emphasizes balance: rules must be impactful without being
+overly restrictive, and exceptions should be allowed when justified by practical
+needs. Automation tools like linters and formatters help enforce rules
+consistently, while regular reviews ensure style guides evolve with the needs of
+the team and the industry. By focusing on practical, evidence-based principles,
+teams can craft style guides that enhance both code quality and developer
+efficiency.
 
 ## Summary
 
 ### Why Have Rules?
 
-This chapter discusses the importance of rules and style guides in software engineering, focusing on their role in promoting consistency, readability, and effective collaboration. It outlines the process of creating and evaluating rules, emphasizing the need for rules to align with organizational values and goals. The chapter also highlights the balance between maintaining consistency and allowing for practical exceptions when necessary. It explores principles for writing effective style guides, such as optimizing for the reader, avoiding error-prone constructs, and making rules that can scale. Additionally, it discusses the dynamic nature of style guides, the role of style arbiters, and the importance of automation tools for enforcing rules consistently across large codebases.
+This chapter discusses the importance of rules and style guides in software
+engineering, focusing on their role in promoting consistency, readability, and
+effective collaboration. It outlines the process of creating and evaluating
+rules, emphasizing the need for rules to align with organizational values and
+goals. The chapter also highlights the balance between maintaining consistency
+and allowing for practical exceptions when necessary. It explores principles for
+writing effective style guides, such as optimizing for the reader, avoiding
+error-prone constructs, and making rules that can scale. Additionally, it
+discusses the dynamic nature of style guides, the role of style arbiters, and
+the importance of automation tools for enforcing rules consistently across large
+codebases.
 
 **Discussion Question: What values do we want to have for our codebases?**
 
 ### Creating the Rules
 
-When creating the rules it is important to question why you are making something a rule. Questions you can ask yourself when think of rules are:
+When creating the rules it is important to question why you are making something
+a rule. Questions you can ask yourself when think of rules are:
 
 - "What goal or goals are we trying to advance?"
 - "Why does this belong in the style guide?" 
 - "What value does this rule add to our style guide?"
 - "Does the rule bring us closer to our goal or goals?"
 
-These are productive questions because they require you to reflect on why a rule exists instead of mindlessly creating rules for the sake of having rules.
+These are productive questions because they require you to reflect on why a rule
+exists instead of mindlessly creating rules for the sake of having rules.
 
 #### Guiding Principles
 
-Google has the goal of making the codebase manageable while still allowing for productivity. However there is an important trade-off of making rules. **The larger the body of rules the more choice is restricted**. So the large body of rules should always be aiming to lead us towards our goals instead of just acting as a limiting factor. 
+Google has the goal of making the codebase manageable while still allowing for
+productivity. However there is an important trade-off of making rules. **The
+larger the body of rules the more choice is restricted**. So the large body of
+rules should always be aiming to lead us towards our goals instead of just
+acting as a limiting factor. 
 
 Given this there are some overarching principles to guide in rule development which are: 
 
@@ -48,56 +74,86 @@ Given this there are some overarching principles to guide in rule development wh
 
 ##### Rules Must Pull their Weight
 
-With more rules it becomes increasingly harder to remember them all. It can also become more expensive and challenging to maintain the more rules you have. 
+With more rules it becomes increasingly harder to remember them all. It can also
+become more expensive and challenging to maintain the more rules you have. 
 
-Choose to not include rules that are self-evident because they add to everyone's mental load without being worth it.
+Choose to not include rules that are self-evident because they add to everyone's
+mental load without being worth it.
 
-For example in the context of our work we will not release debugging `print` statements in our production code. This rule is likely understood by all of us already and is not worth adding into an official style guide for that reason. 
+For example in the context of our work we will not release debugging `print`
+statements in our production code. This rule is likely understood by all of us
+already and is not worth adding into an official style guide for that reason. 
 
 ##### Optimize for the Reader
 
-Another guiding principle is writing code for the reader rather than the author. This goes back to the principle **Code is written once but read many times.** 
+Another guiding principle is writing code for the reader rather than the author.
+This goes back to the principle **Code is written once but read many times.** 
 
-Simple to read > Simple to write
+This means we should adhere to the principle: **Simple to read > Simple to
+write**.
 
-Trade-off: More cost more for engineers but easier to read.
+**However, there is a trade-off**: More cost more for engineers but easier to
+read.
 
-Ways to make code easier to read:
+**Ways to make code easier to read**:
+
 - Longer and more descriptive variable names
-- Using more descriptive conditional structures, `if` statements
+- Using more descriptive conditional structures
 - Descriptive doc-strings
 - Well written comments 
 
-Types of comments:
-- Documentation Comments that describe the design or intent of the code that follows
-- Implementation Comments justify or highlight non-obvious choices, underscore important parts, or explain the tricky parts
+**Types of comments**:
+
+- Documentation Comments that describe the design or intent of the code that
+follows
+- Implementation comments justify or highlight non-obvious choices, underscore
+important parts, or explain the tricky parts
 
 #####  Be Consistent
 
-Consistency in code bases and in work spaces makes it easier to jump from project to project. Think about the setup between `gatorgrade` and `execexam` both utilize `poetry` so you were familiar with aspects of the tool before jumping in. That is part of why it is so hard to update `gatorgrader`. It was written before a lot of the dependencies we use in our other code bases so it is harder to get a grip on what is happening. That is why it is a task to convert it to a method that is more consistent with the rest of our code bases. 
+Consistency in code bases and in work spaces makes it easier to jump from
+project to project. Think about the setup between `gatorgrade` and `execexam`
+both utilize `poetry` so you were familiar with aspects of the tool before
+jumping in. That is part of why it is so hard to update `gatorgrader`. It was
+written before a lot of the dependencies we use in our other code bases so it is
+harder to get a grip on what is happening. That is why it is a task to convert
+it to a method that is more consistent with the rest of our code bases. 
 
-Why consistency is good:
-- Engineers can focuus on what's getting done over how it is presented 
+**Why consistency is good**:
+
+- Engineers can focus on what's getting done over how it is presented 
 - Chunking of problems; solving in a similar way
 - Enables scaling code wise; make the code work the same everywhere
-- Enables scaling humanwise; mobility across projects
+- Enables scaling human-wise; mobility across projects
 - Resilience to time 
 
-Do not let preserving consistancy stop you from updating your code at scale. If things change the standard may change and past code may need updated such as with `gatorgrader`
+Do not let preserving consistency stop you from updating your code at scale. If
+things change the standard may change and past code may need updated such as
+with `gatorgrader`
 
-Being consistent starts locally but sometimes stardards of the external community should be taken into account. An example of this that you have used before is citiation standards or the `YAML` standards for `yaml` files. We also using linting to make sure our codes are up to an outside standard.
+Being consistent starts locally but sometimes standards of the external
+community should be taken into account. An example of this that you have used
+before is citation standards or the `YAML` standards for `yaml` files. We also
+using linting to make sure our codes are up to an outside standard.
 
-An example they use in the book is that Google used to only use 2 space indents for their Python code but the outside community used 4. Eventually they realized the Google standard did not fit compared to the outside standard. The more your code interacts with the outside world the more staying consistent with outside standards matter.
+An example they use in the book is that Google used to only use two space
+indents for their Python code but the outside community used four. Eventually
+they realized the Google standard did not fit compared to the outside standard.
+The more your code interacts with the outside world the more staying consistent
+with outside standards matter.
 
 ##### Avoid Error-prone and Surprising Constructs
 
-Even if current developers understand a confusing construct there is no guarrentee the future will. These non-obvious features can cause misuse and introduce bugs. 
+Even if current developers understand a confusing construct there is no
+guarantee the future will. These non-obvious features can cause misuse and
+introduce bugs. 
 
-Google's Python style guide avoids using `power` features such as relection. `hasattr()` and `getattr()` for example give access to an object using strings.
+Google's Python style guide avoids using `power` features such as reflection.
+`hasattr()` and `getattr()` for example give access to an object using strings.
 
-Example:
+Here is an example in Python:
 
-File one:
+The first Python file:
 ```python
 A_CONSTANT = [
 'foo',
@@ -106,26 +162,36 @@ A_CONSTANT = [
 ]
 ```
 
-File two:
+The second Python file:
 ```python
 values = []
 for field in some_file.A_CONSTANT:
 values.append(getattr(my_object, field))
 ```
 
-Confusing code can also cause security flaws since this code is hard to test and can be hard to identify if messages are validated incorrectly.
+Confusing code can also cause security flaws since this code is hard to test and
+can be hard to identify if messages are validated incorrectly.
 
-Some cases `hasattr()` and `getattr()` are valid but in most cases they are confusing. The traceback feature we have for example is a case where we needed to use these Python features to grab the information on the source code and source files. 
+Some cases `hasattr()` and `getattr()` are valid but in most cases they are
+confusing. The traceback feature we have for example is a case where we needed
+to use these Python features to grab the information on the source code and
+source files. 
 
-There is higher value in code that is understandable and easier to maintain than code that jumps to get the job done quickly.
+There is higher value in code that is understandable and easier to maintain than
+code that jumps to get the job done quickly.
 
 ##### Concede to Practicalities 
 
-**“A foolish consistency is the hobgoblin of little minds.”** - Raplh Waldo Emerson 
+**"A foolish consistency is the hobgoblin of little minds."** - Ralph Waldo
+Emerson 
 
-It is okay to have exceptions to the style guide. Do not ignore everything else just because you are in pursuit of simple and consistent code. When needed exceptions can be made for optimizations and practicalities that otherwise would conflict with the rules.
+It is okay to have exceptions to the style guide. Do not ignore everything else
+just because you are in pursuit of simple and consistent code. When needed
+exceptions can be made for optimizations and practicalities that otherwise would
+conflict with the rules.
 
-**Discussion Question: Can you describe one of the guiding principles and why it is important?**
+**Discussion Question: Can you describe one of the guiding principles and why it
+is important?**
 
 #### The Style Guide
 
@@ -141,68 +207,172 @@ Best practices are meant to make code more readable.
 Building consistency is how you can choose a standard and not debate about them wasting time. You choose a standard and stick with it.
 
 ### Changing the Rules 
-Style guides are not static. As with many things in software engineering, style guides are an ever evolving thing. With this being said certain styles can become outdated based on new features. If a rule is causing engineers to invest an excess amount of effort that may indicate that a change is needed. When looking into changing the rules the first thing that is important to evaluate is why the rule is in place to start. In doing this evaluation it is also important to have evidence to back up keeping a rule or creating a change. It is also important to document the reasons for change. In the future it will allow active users to have a more educated opinion on whether or not the rule is still effective or needs to be changed. An example of this is google using CamelCase as opposed to snake_case naming style for method names. The reason for this is that most of Google's Python usage at the time was for C++ developers using Python as a scripting layer on top of a C++ codebase. Because Google's C++ naming convention follows CamelCase style, it was important to keep that consistent. When doing this they found that there were other issues with CamelCase. CamelCase did not conform to the third-party Python libraries that were being used. This made maintaining CamelCase more complex than it needed to be. Another downside that was discovered was that this nonconformist convention was surprising and somewhat weird for the community. Ultimately when weighing the pros and cons of CamelCase and snake_case Google decided to switch back to snake_case naming in python.
+
+Style guides are not static. As with many things in software engineering, style
+guides are an ever evolving thing. With this being said certain styles can
+become outdated based on new features. If a rule is causing engineers to invest
+an excess amount of effort that may indicate that a change is needed. When
+looking into changing the rules the first thing that is important to evaluate is
+why the rule is in place to start. In doing this evaluation it is also important
+to have evidence to back up keeping a rule or creating a change. It is also
+important to document the reasons for change. In the future it will allow active
+users to have a more educated opinion on whether or not the rule is still
+effective or needs to be changed. An example of this is Google using CamelCase
+as opposed to snake_case naming style for method names.
+
+The reason for this is that most of Google's Python usage at the time was for
+C++ developers using Python as a scripting layer on top of a C++ codebase.
+Because Google's C++ naming convention follows CamelCase style, it was important
+to keep that consistent. When doing this they found that there were other issues
+with CamelCase. CamelCase did not conform to the third-party Python libraries
+that were being used. This made maintaining CamelCase more complex than it
+needed to be. Another downside that was discovered was that this nonconformist
+convention was surprising and somewhat weird for the community. Ultimately when
+weighing the pros and cons of CamelCase and snake_case Google decided to switch
+back to snake_case naming in Python.
 
 #### The Process
 
-The process used at google for changing a style guide is a solution based one. This means that if an update is proposed it has to be a solution to an existing problem and not a hypothetical situation.
+The process used at google for changing a style guide is a solution based one.
+This means that if an update is proposed it has to be a solution to an existing
+problem and not a hypothetical situation.
 
 **Why might this be an effective approach?**
 
 #### The Style Arbiters
 
-At google each language's style guide has to be approved by the style arbiters. This group is are long-time language experts and are designated to make the final decisions. With this being said they do not make the decision on their own. They have to take into account the trade-offs for the proposed change and each change has to be agreed upon and have a specific goal for the change. 
+At google each language's style guide has to be approved by the style arbiters.
+This group is are long-time language experts and are designated to make the
+final decisions. With this being said they do not make the decision on their
+own. They have to take into account the trade-offs for the proposed change and
+each change has to be agreed upon and have a specific goal for the change. 
 
-**At Google this group is composed of a four person committee. Why might you want an even number on this committee as opposed to an odd number?**
+**At Google this group is composed of a four person committee. Why might you
+want an even number on this committee as opposed to an odd number?**
 
 #### Exceptions
-Yes you should follow the rules. However there are times when you may think that not following a specific rule may save a lot of your time or energy. 
+
+Yes, you should follow the rules. However there are times when you may think
+that not following a specific rule may save a lot of your time or energy. 
 
 **What do you think you should do in this scenario?**
 
-When wanting to make an exception you should first ask yourself if it is worth going through the process of doing so. The general rule that is followed is that exceptions are allowed in cases where it is gauged to be more beneficial to permit a rule-breaking than to avoid it. An example of this would be breaking the C++ style guide of not allowing implicit type conversions. However, for types that are designed to transparently wrap other types, where the underlying data is still accurately and precisely represented, it is reasonable to allow implicit conversion. While this is a valid exception it is also important to note that this rule covers enough broad circumstances  that it is still valid to have in place. 
+When wanting to make an exception you should first ask yourself if it is worth
+going through the process of doing so. The general rule that is followed is that
+exceptions are allowed in cases where it is gauged to be more beneficial to
+permit a rule-breaking than to avoid it. An example of this would be breaking
+the C++ style guide of not allowing implicit type conversions. However, for
+types that are designed to transparently wrap other types, where the underlying
+data is still accurately and precisely represented, it is reasonable to allow
+implicit conversion. While this is a valid exception it is also important to
+note that this rule covers enough broad circumstances that it is still valid to
+have in place. 
 
 ### Guidance
 
-Guidance can come in many different forms. It can be as simple as pointing to advice on best practices or as complex as having an in depth conversation on a nuanced topic. Guidance is supposed to represent the best practices that have been extracted from lessons learned along the way of getting familiar with style guides. Think of guides as "shoulds," and rules as "musts."
+Guidance can come in many different forms. It can be as simple as pointing to
+advice on best practices or as complex as having an in depth conversation on a
+nuanced topic. Guidance is supposed to represent the best practices that have
+been extracted from lessons learned along the way of getting familiar with style
+guides. Think of guides as "shoulds," and rules as "musts."
 
-An example of a pool of guidance is primers. Primers do not delve into every detail of a topic but they should provide explanations and recommend use. This can be useful for new members to reference because primers can give you the necessary information needed to implement a feature without any excess. 
+An example of a pool of guidance is primers. Primers do not delve into every
+detail of a topic but they should provide explanations and recommend use. This
+can be useful for new members to reference because primers can give you the
+necessary information needed to implement a feature without any excess. 
 
-As with many things done at google these guides are covering many issues that have already occurred. It is not focused on situations that are hypothetical but instead common issues that have real application. With this being said they are still pieces of advice, unlike the rules in the style guide. Guidance is more broad and applied. An example of this would be a short "Tip of the Week" article that is short and to the point. This is one of the many ways guidance can be economically offered.
+As with many things done at google these guides are covering many issues that
+have already occurred. It is not focused on situations that are hypothetical but
+instead common issues that have real application. With this being said they are
+still pieces of advice, unlike the rules in the style guide. Guidance is more
+broad and applied. An example of this would be a short "Tip of the Week" article
+that is short and to the point. This is one of the many ways guidance can be
+economically offered.
 
-Oftentimes software engineers come into a project with knowledge of a programming language but lack knowledge in how it applies to a specific company or project. At Google they provide full-day courses in order to bridge this gap. This could apply in our team as well. Using knowledge sharing to familiarize somebody working on a new project or codebase could help to gain traction leading to better overall development.
+Oftentimes software engineers come into a project with knowledge of a
+programming language but lack knowledge in how it applies to a specific company
+or project. At Google they provide full-day courses in order to bridge this gap.
+This could apply in our team as well. Using knowledge sharing to familiarize
+somebody working on a new project or codebase could help to gain traction
+leading to better overall development.
 
 ### Applying the Rules
 
 #### Error Checkers
 
-Error checkers are invaluable for ensuring that coding standards are consistently followed. Google uses tools like `clang-tidy` for C++ and `Error Prone` for Java to automatically identify rule violations and suggest fixes. These tools are deeply integrated into the development process, which helps engineers focus on writing quality code without needing to memorize every detail of the rules.
+Error checkers are invaluable for ensuring that coding standards are
+consistently followed. Google uses tools like `clang-tidy` for C++ and `Error
+Prone` for Java to automatically identify rule violations and suggest fixes.
+These tools are deeply integrated into the development process, which helps
+engineers focus on writing quality code without needing to memorize every detail
+of the rules.
 
-“When we began using tools to flag deprecated functions based on source tagging, surfacing both the warning and the suggested fix in place, the problem of having new usages of deprecated APIs disappeared almost overnight.” This demonstrates how automation not only enforces rules but also makes compliance nearly effortless for engineers.
+Here is an interesting insight from this chapter: "When we began using tools to
+flag deprecated functions based on source tagging, surfacing both the warning
+and the suggested fix in place, the problem of having new usages of deprecated
+APIs disappeared almost overnight." This demonstrates how automation not only
+enforces rules but also makes compliance nearly effortless for engineers.
 
-By automating rule enforcement, these tools minimize “the variance in how a rule is interpreted and applied,” reducing the risk of inconsistent expectations. They also scale easily as the organization grows, ensuring that enforcement costs remain manageable, even with thousands of engineers working on millions of lines of code.
+By automating rule enforcement, these tools minimize "the variance in how a rule
+is interpreted and applied," reducing the risk of inconsistent expectations.
+They also scale easily as the organization grows, ensuring that enforcement
+costs remain manageable, even with thousands of engineers working on millions of
+lines of code.
 
 #### Code Formatters
 
-Formatting debates are a common frustration for engineers, but automated formatters resolve them effectively. Tools like `clang-format` for C++, `gofmt` for Go, and `dartfmt` for Dart enforce consistent code styles across projects. At Google, these formatters are run automatically as part of presubmit checks, ensuring that all code complies before it’s submitted.
+Formatting debates are a common frustration for engineers, but automated
+formatters resolve them effectively. Tools like `clang-format` for C++, `gofmt`
+for Go, and `dartfmt` for Dart enforce consistent code styles across projects.
+At Google, these formatters are run automatically as part of presubmit checks,
+ensuring that all code complies before it’s submitted.
 
-Go’s formatter, `gofmt`, provides a compelling case study. Though some developers initially resisted its strict formatting rules, it quickly became a feature they valued. “Go programmers expect that all Go code is formatted with gofmt,” making it easier to read, share, and maintain code. Standardized formatting also enables tools to make updates without generating confusing or unnecessary changes, streamlining the review process.
+Go’s formatter, `gofmt`, provides a compelling case study. Though some
+developers initially resisted its strict formatting rules, it quickly became a
+feature they valued. “Go programmers expect that all Go code is formatted with
+`gofmt`,” making it easier to read, share, and maintain code. Standardized
+formatting also enables tools to make updates without generating confusing or
+unnecessary changes, streamlining the review process.
 
 ## Reflection
 
-Rules in software engineering are essential because they reinforce the values of the project and guide thoughtful development. However, the process of creating and maintaining rules requires balance. Rules should advance clear goals without adding unnecessary mental load. For example, choosing to omit self-evident rules like "Do not leave debugging prints in production" prevents overcomplicating the style guide.
+Rules in software engineering are essential because they reinforce the values of
+the project and guide thoughtful development. However, the process of creating
+and maintaining rules requires balance. Rules should advance clear goals without
+adding unnecessary mental load. For example, choosing to omit self-evident rules
+like "Do not leave debugging prints in production" prevents over-complicating
+the style guide.
 
-Google’s approach highlights the importance of optimizing for the reader, ensuring consistency, and avoiding constructs that are error-prone or confusing. These principles not only make codebases easier to maintain but also enable scaling—both in terms of engineering teams and the longevity of projects. While consistency is valuable, flexibility and practicality should also be considered to accommodate exceptions or evolving standards. 
+Google’s approach highlights the importance of optimizing for the reader,
+ensuring consistency, and avoiding constructs that are error-prone or confusing.
+These principles not only make codebases easier to maintain but also enable
+scaling—both in terms of engineering teams and the longevity of projects. While
+consistency is valuable, flexibility and practicality should also be considered
+to accommodate exceptions or evolving standards. 
 
-Ultimately, rules are not static but require thoughtful revision. By evaluating rules based on evidence and documented trade-offs, engineering teams can maintain a balance between enforcing standards and allowing innovation.
+Ultimately, rules are not static but require thoughtful revision. By evaluating
+rules based on evidence and documented trade-offs, engineering teams can
+maintain a balance between enforcing standards and allowing innovation.
 
 ## Action Items
 
-To improve style guide practices, start by defining the core values of your project, such as consistency, readability, or performance optimization, and use these values to guide rule creation. Automation can be a powerful tool in this process; tools like `clang-tidy`, `gofmt`, and other linters can streamline rule enforcement, ensuring compliance without overburdening team members.
+To improve style guide practices, start by defining the core values of your
+project, such as consistency, readability, or performance optimization, and use
+these values to guide rule creation. Automation can be a powerful tool in this
+process; tools like `clang-tidy`, `gofmt`, and other linters can streamline rule
+enforcement, ensuring compliance without overburdening team members.
 
-Prioritize writing code with the reader in mind by using clear variable names, descriptive comments, and consistent formatting. While striving for consistency across projects, maintain flexibility by allowing justified exceptions and accommodating external standards when necessary. Documenting these exceptions ensures clarity and transparency.
+Prioritize writing code with the reader in mind by using clear variable names,
+descriptive comments, and consistent formatting. While striving for consistency
+across projects, maintain flexibility by allowing justified exceptions and
+accommodating external standards when necessary. Documenting these exceptions
+ensures clarity and transparency.
 
-Lastly, invest in knowledge sharing to help team members understand and apply the style guide effectively. Resources such as primers, training sessions, or concise "tip-of-the-week" articles can help bridge knowledge gaps and foster alignment across the team. By implementing these steps, your team can establish a style guide that supports both high-quality code and efficient collaboration.
+Lastly, invest in knowledge sharing to help team members understand and apply
+the style guide effectively. Resources such as primers, training sessions, or
+concise "tip-of-the-week" articles can help bridge knowledge gaps and foster
+alignment across the team. By implementing these steps, your team can establish
+a style guide that supports both high-quality code and efficient collaboration.
 
 
 {{< include /_back-blog.qmd >}}

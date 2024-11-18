@@ -4,7 +4,7 @@ title: 'Style Guides and Rules'
 date: '2024-11-18'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em> How can rules scale and sustain engineering teams?</em>
+description: <em> How can rules aid engineering teams? How can we automate rule enforcement? </em>
 toc: true
 page-layout: full
 ---

@@ -129,6 +129,17 @@ It is okay to have exceptions to the style guide. Do not ignore everything else 
 
 #### The Style Guide
 
+Good style guides have rrules that do three things:
+- Rules to avoid dangers
+- Rules to enforce best practices 
+- Riles to ensure consistency
+
+Dangerous rules are things that allow bugs to creep in such as using lamba expressions or hard to use langauge features.
+
+Best practices are meant to make code more readable. 
+
+Building consistency is how you can choose a standard and not debate about them wasting time. You choose a standard and stick with it.
+
 ### Changing the Rules 
 Style guides are not static. As with many things in software engineering, style guides are an ever evolving thing. With this being said certain styles can become outdated based on new features. If a rule is causing engineers to invest an excess amount of effort that may indicate that a change is needed. When looking into changing the rules the first thing that is important to evaluate is why the rule is in place to start. In doing this evaluation it is also important to have evidence to back up keeping a rule or creating a change. It is also important to document the reasons for change. In the future it will allow active users to have a more educated opinion on whether or not the rule is still effective or needs to be changed. An example of this is google using CamelCase as opposed to snake_case naming style for method names. The reason for this is that most of Google's Python usage at the time was for C++ developers using Python as a scripting layer on top of a C++ codebase. Because Google's C++ naming convention follows CamelCase style, it was important to keep that consistent. When doing this they found that there were other issues with CamelCase. CamelCase did not conform to the third-party Python libraries that were being used. This made maintaining CamelCase more complex than it needed to be. Another downside that was discovered was that this nonconformist convention was surprising and somewhat weird for the community. Ultimately when weighing the pros and cons of CamelCase and snake_case Google decided to switch back to snake_case naming in python.
 

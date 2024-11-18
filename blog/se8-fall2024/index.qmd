@@ -64,17 +64,25 @@ Trade-off: More cost more for engineers but easier to read.
 
 Ways to make code easier to read:
 - Longer and more descriptive variable names
-- Using more descriptive conditional structures, `if` statements
+- Using more descriptive conditional structures
 - Descriptive doc-strings
 - Well written comments 
 
 Types of comments:
-- Documentation Comments that describe the design or intent of the code that follows
-- Implementation Comments justify or highlight non-obvious choices, underscore important parts, or explain the tricky parts
+- Documentation Comments that describe the design or intent of the code that
+follows
+- Implementation Comments justify or highlight non-obvious choices, underscore
+important parts, or explain the tricky parts
 
 #####  Be Consistent
 
-Consistency in code bases and in work spaces makes it easier to jump from project to project. Think about the setup between `gatorgrade` and `execexam` both utilize `poetry` so you were familiar with aspects of the tool before jumping in. That is part of why it is so hard to update `gatorgrader`. It was written before a lot of the dependencies we use in our other code bases so it is harder to get a grip on what is happening. That is why it is a task to convert it to a method that is more consistent with the rest of our code bases. 
+Consistency in code bases and in work spaces makes it easier to jump from
+project to project. Think about the setup between `gatorgrade` and `execexam`
+both utilize `poetry` so you were familiar with aspects of the tool before
+jumping in. That is part of why it is so hard to update `gatorgrader`. It was
+written before a lot of the dependencies we use in our other code bases so it is
+harder to get a grip on what is happening. That is why it is a task to convert
+it to a method that is more consistent with the rest of our code bases. 
 
 Why consistency is good:
 - Engineers can focus on what's getting done over how it is presented 

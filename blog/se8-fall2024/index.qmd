@@ -241,8 +241,8 @@ want an even number on this committee as opposed to an odd number?**
 
 #### Exceptions
 
-Yes you should follow the rules. However there are times when you may think that
-not following a specific rule may save a lot of your time or energy. 
+Yes, you should follow the rules. However there are times when you may think
+that not following a specific rule may save a lot of your time or energy. 
 
 **What do you think you should do in this scenario?**
 
@@ -296,11 +296,11 @@ These tools are deeply integrated into the development process, which helps
 engineers focus on writing quality code without needing to memorize every detail
 of the rules.
 
-"When we began using tools to flag deprecated functions based on source tagging,
-surfacing both the warning and the suggested fix in place, the problem of having
-new usages of deprecated APIs disappeared almost overnight." This demonstrates
-how automation not only enforces rules but also makes compliance nearly
-effortless for engineers.
+Here is an interesting insight from this chapter: "When we began using tools to
+flag deprecated functions based on source tagging, surfacing both the warning
+and the suggested fix in place, the problem of having new usages of deprecated
+APIs disappeared almost overnight." This demonstrates how automation not only
+enforces rules but also makes compliance nearly effortless for engineers.
 
 By automating rule enforcement, these tools minimize "the variance in how a rule
 is interpreted and applied," reducing the risk of inconsistent expectations.

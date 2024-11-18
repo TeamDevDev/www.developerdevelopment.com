@@ -94,15 +94,17 @@ Simple to read > Simple to write
 Trade-off: More cost more for engineers but easier to read.
 
 Ways to make code easier to read:
+
 - Longer and more descriptive variable names
 - Using more descriptive conditional structures
 - Descriptive doc-strings
 - Well written comments 
 
 Types of comments:
+
 - Documentation Comments that describe the design or intent of the code that
 follows
-- Implementation Comments justify or highlight non-obvious choices, underscore
+- Implementation comments justify or highlight non-obvious choices, underscore
 important parts, or explain the tricky parts
 
 #####  Be Consistent

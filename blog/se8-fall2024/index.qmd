@@ -11,32 +11,58 @@ page-layout: full
 
 ## Overview
 
-Style guides are essential tools for scaling and sustaining engineering teams. They define rules that align with project values, fostering consistency, readability, and maintainability. However, creating effective rules requires thoughtful consideration—rules should advance specific goals, be optimized for readers, and avoid introducing unnecessary complexity. 
+Style guides are essential tools for scaling and sustaining engineering teams.
+They define rules that align with project values, fostering consistency,
+readability, and maintainability. However, creating effective rules requires
+thoughtful consideration—rules should advance specific goals, be optimized for
+readers, and avoid introducing unnecessary complexity. 
 
-Google’s approach emphasizes balance: rules must be impactful without being overly restrictive, and exceptions should be allowed when justified by practical needs. Automation tools like linters and formatters help enforce rules consistently, while regular reviews ensure style guides evolve with the needs of the team and the industry. By focusing on practical, evidence-based principles, teams can craft style guides that enhance both code quality and developer efficiency.
+Google’s approach emphasizes balance: rules must be impactful without being
+overly restrictive, and exceptions should be allowed when justified by practical
+needs. Automation tools like linters and formatters help enforce rules
+consistently, while regular reviews ensure style guides evolve with the needs of
+the team and the industry. By focusing on practical, evidence-based principles,
+teams can craft style guides that enhance both code quality and developer
+efficiency.
 
 ## Summary
 
 ### Why Have Rules?
 
-This chapter discusses the importance of rules and style guides in software engineering, focusing on their role in promoting consistency, readability, and effective collaboration. It outlines the process of creating and evaluating rules, emphasizing the need for rules to align with organizational values and goals. The chapter also highlights the balance between maintaining consistency and allowing for practical exceptions when necessary. It explores principles for writing effective style guides, such as optimizing for the reader, avoiding error-prone constructs, and making rules that can scale. Additionally, it discusses the dynamic nature of style guides, the role of style arbiters, and the importance of automation tools for enforcing rules consistently across large codebases.
+This chapter discusses the importance of rules and style guides in software
+engineering, focusing on their role in promoting consistency, readability, and
+effective collaboration. It outlines the process of creating and evaluating
+rules, emphasizing the need for rules to align with organizational values and
+goals. The chapter also highlights the balance between maintaining consistency
+and allowing for practical exceptions when necessary. It explores principles for
+writing effective style guides, such as optimizing for the reader, avoiding
+error-prone constructs, and making rules that can scale. Additionally, it
+discusses the dynamic nature of style guides, the role of style arbiters, and
+the importance of automation tools for enforcing rules consistently across large
+codebases.
 
 **Discussion Question: What values do we want to have for our codebases?**
 
 ### Creating the Rules
 
-When creating the rules it is important to question why you are making something a rule. Questions you can ask yourself when think of rules are:
+When creating the rules it is important to question why you are making something
+a rule. Questions you can ask yourself when think of rules are:
 
 - "What goal or goals are we trying to advance?"
 - "Why does this belong in the style guide?" 
 - "What value does this rule add to our style guide?"
 - "Does the rule bring us closer to our goal or goals?"
 
-These are productive questions because they require you to reflect on why a rule exists instead of mindlessly creating rules for the sake of having rules.
+These are productive questions because they require you to reflect on why a rule
+exists instead of mindlessly creating rules for the sake of having rules.
 
 #### Guiding Principles
 
-Google has the goal of making the codebase manageable while still allowing for productivity. However there is an important trade-off of making rules. **The larger the body of rules the more choice is restricted**. So the large body of rules should always be aiming to lead us towards our goals instead of just acting as a limiting factor. 
+Google has the goal of making the codebase manageable while still allowing for
+productivity. However there is an important trade-off of making rules. **The
+larger the body of rules the more choice is restricted**. So the large body of
+rules should always be aiming to lead us towards our goals instead of just
+acting as a limiting factor. 
 
 Given this there are some overarching principles to guide in rule development which are: 
 
@@ -48,15 +74,20 @@ Given this there are some overarching principles to guide in rule development wh
 
 ##### Rules Must Pull their Weight
 
-With more rules it becomes increasingly harder to remember them all. It can also become more expensive and challenging to maintain the more rules you have. 
+With more rules it becomes increasingly harder to remember them all. It can also
+become more expensive and challenging to maintain the more rules you have. 
 
-Choose to not include rules that are self-evident because they add to everyone's mental load without being worth it.
+Choose to not include rules that are self-evident because they add to everyone's
+mental load without being worth it.
 
-For example in the context of our work we will not release debugging `print` statements in our production code. This rule is likely understood by all of us already and is not worth adding into an official style guide for that reason. 
+For example in the context of our work we will not release debugging `print`
+statements in our production code. This rule is likely understood by all of us
+already and is not worth adding into an official style guide for that reason. 
 
 ##### Optimize for the Reader
 
-Another guiding principle is writing code for the reader rather than the author. This goes back to the principle **Code is written once but read many times.** 
+Another guiding principle is writing code for the reader rather than the author.
+This goes back to the principle **Code is written once but read many times.** 
 
 Simple to read > Simple to write
 

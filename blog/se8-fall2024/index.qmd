@@ -120,6 +120,7 @@ harder to get a grip on what is happening. That is why it is a task to convert
 it to a method that is more consistent with the rest of our code bases. 
 
 Why consistency is good:
+
 - Engineers can focus on what's getting done over how it is presented 
 - Chunking of problems; solving in a similar way
 - Enables scaling code wise; make the code work the same everywhere

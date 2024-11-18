@@ -160,7 +160,7 @@ why the rule is in place to start. In doing this evaluation it is also important
 to have evidence to back up keeping a rule or creating a change. It is also
 important to document the reasons for change. In the future it will allow active
 users to have a more educated opinion on whether or not the rule is still
-effective or needs to be changed. An example of this is google using CamelCase
+effective or needs to be changed. An example of this is Google using CamelCase
 as opposed to snake_case naming style for method names.
 
 The reason for this is that most of Google's Python usage at the time was for

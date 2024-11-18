@@ -190,7 +190,8 @@ final decisions. With this being said they do not make the decision on their
 own. They have to take into account the trade-offs for the proposed change and
 each change has to be agreed upon and have a specific goal for the change. 
 
-**At Google this group is composed of a four person committee. Why might you want an even number on this committee as opposed to an odd number?**
+**At Google this group is composed of a four person committee. Why might you
+want an even number on this committee as opposed to an odd number?**
 
 #### Exceptions
 
@@ -218,43 +219,103 @@ nuanced topic. Guidance is supposed to represent the best practices that have
 been extracted from lessons learned along the way of getting familiar with style
 guides. Think of guides as "shoulds," and rules as "musts."
 
-An example of a pool of guidance is primers. Primers do not delve into every detail of a topic but they should provide explanations and recommend use. This can be useful for new members to reference because primers can give you the necessary information needed to implement a feature without any excess. 
+An example of a pool of guidance is primers. Primers do not delve into every
+detail of a topic but they should provide explanations and recommend use. This
+can be useful for new members to reference because primers can give you the
+necessary information needed to implement a feature without any excess. 
 
-As with many things done at google these guides are covering many issues that have already occurred. It is not focused on situations that are hypothetical but instead common issues that have real application. With this being said they are still pieces of advice, unlike the rules in the style guide. Guidance is more broad and applied. An example of this would be a short "Tip of the Week" article that is short and to the point. This is one of the many ways guidance can be economically offered.
+As with many things done at google these guides are covering many issues that
+have already occurred. It is not focused on situations that are hypothetical but
+instead common issues that have real application. With this being said they are
+still pieces of advice, unlike the rules in the style guide. Guidance is more
+broad and applied. An example of this would be a short "Tip of the Week" article
+that is short and to the point. This is one of the many ways guidance can be
+economically offered.
 
-Oftentimes software engineers come into a project with knowledge of a programming language but lack knowledge in how it applies to a specific company or project. At Google they provide full-day courses in order to bridge this gap. This could apply in our team as well. Using knowledge sharing to familiarize somebody working on a new project or codebase could help to gain traction leading to better overall development.
+Oftentimes software engineers come into a project with knowledge of a
+programming language but lack knowledge in how it applies to a specific company
+or project. At Google they provide full-day courses in order to bridge this gap.
+This could apply in our team as well. Using knowledge sharing to familiarize
+somebody working on a new project or codebase could help to gain traction
+leading to better overall development.
 
 ### Applying the Rules
 
 #### Error Checkers
 
-Error checkers are invaluable for ensuring that coding standards are consistently followed. Google uses tools like `clang-tidy` for C++ and `Error Prone` for Java to automatically identify rule violations and suggest fixes. These tools are deeply integrated into the development process, which helps engineers focus on writing quality code without needing to memorize every detail of the rules.
+Error checkers are invaluable for ensuring that coding standards are
+consistently followed. Google uses tools like `clang-tidy` for C++ and `Error
+Prone` for Java to automatically identify rule violations and suggest fixes.
+These tools are deeply integrated into the development process, which helps
+engineers focus on writing quality code without needing to memorize every detail
+of the rules.
 
-“When we began using tools to flag deprecated functions based on source tagging, surfacing both the warning and the suggested fix in place, the problem of having new usages of deprecated APIs disappeared almost overnight.” This demonstrates how automation not only enforces rules but also makes compliance nearly effortless for engineers.
+"When we began using tools to flag deprecated functions based on source tagging,
+surfacing both the warning and the suggested fix in place, the problem of having
+new usages of deprecated APIs disappeared almost overnight." This demonstrates
+how automation not only enforces rules but also makes compliance nearly
+effortless for engineers.
 
-By automating rule enforcement, these tools minimize “the variance in how a rule is interpreted and applied,” reducing the risk of inconsistent expectations. They also scale easily as the organization grows, ensuring that enforcement costs remain manageable, even with thousands of engineers working on millions of lines of code.
+By automating rule enforcement, these tools minimize "the variance in how a rule
+is interpreted and applied," reducing the risk of inconsistent expectations.
+They also scale easily as the organization grows, ensuring that enforcement
+costs remain manageable, even with thousands of engineers working on millions of
+lines of code.
 
 #### Code Formatters
 
-Formatting debates are a common frustration for engineers, but automated formatters resolve them effectively. Tools like `clang-format` for C++, `gofmt` for Go, and `dartfmt` for Dart enforce consistent code styles across projects. At Google, these formatters are run automatically as part of presubmit checks, ensuring that all code complies before it’s submitted.
+Formatting debates are a common frustration for engineers, but automated
+formatters resolve them effectively. Tools like `clang-format` for C++, `gofmt`
+for Go, and `dartfmt` for Dart enforce consistent code styles across projects.
+At Google, these formatters are run automatically as part of presubmit checks,
+ensuring that all code complies before it’s submitted.
 
-Go’s formatter, `gofmt`, provides a compelling case study. Though some developers initially resisted its strict formatting rules, it quickly became a feature they valued. “Go programmers expect that all Go code is formatted with gofmt,” making it easier to read, share, and maintain code. Standardized formatting also enables tools to make updates without generating confusing or unnecessary changes, streamlining the review process.
+Go’s formatter, `gofmt`, provides a compelling case study. Though some
+developers initially resisted its strict formatting rules, it quickly became a
+feature they valued. “Go programmers expect that all Go code is formatted with
+`gofmt`,” making it easier to read, share, and maintain code. Standardized
+formatting also enables tools to make updates without generating confusing or
+unnecessary changes, streamlining the review process.
 
 ## Reflection
 
-Rules in software engineering are essential because they reinforce the values of the project and guide thoughtful development. However, the process of creating and maintaining rules requires balance. Rules should advance clear goals without adding unnecessary mental load. For example, choosing to omit self-evident rules like "Do not leave debugging prints in production" prevents overcomplicating the style guide.
+Rules in software engineering are essential because they reinforce the values of
+the project and guide thoughtful development. However, the process of creating
+and maintaining rules requires balance. Rules should advance clear goals without
+adding unnecessary mental load. For example, choosing to omit self-evident rules
+like "Do not leave debugging prints in production" prevents over-complicating
+the style guide.
 
-Google’s approach highlights the importance of optimizing for the reader, ensuring consistency, and avoiding constructs that are error-prone or confusing. These principles not only make codebases easier to maintain but also enable scaling—both in terms of engineering teams and the longevity of projects. While consistency is valuable, flexibility and practicality should also be considered to accommodate exceptions or evolving standards. 
+Google’s approach highlights the importance of optimizing for the reader,
+ensuring consistency, and avoiding constructs that are error-prone or confusing.
+These principles not only make codebases easier to maintain but also enable
+scaling—both in terms of engineering teams and the longevity of projects. While
+consistency is valuable, flexibility and practicality should also be considered
+to accommodate exceptions or evolving standards. 
 
-Ultimately, rules are not static but require thoughtful revision. By evaluating rules based on evidence and documented trade-offs, engineering teams can maintain a balance between enforcing standards and allowing innovation.
+Ultimately, rules are not static but require thoughtful revision. By evaluating
+rules based on evidence and documented trade-offs, engineering teams can
+maintain a balance between enforcing standards and allowing innovation.
 
 ## Action Items
 
-To improve style guide practices, start by defining the core values of your project, such as consistency, readability, or performance optimization, and use these values to guide rule creation. Automation can be a powerful tool in this process; tools like `clang-tidy`, `gofmt`, and other linters can streamline rule enforcement, ensuring compliance without overburdening team members.
+To improve style guide practices, start by defining the core values of your
+project, such as consistency, readability, or performance optimization, and use
+these values to guide rule creation. Automation can be a powerful tool in this
+process; tools like `clang-tidy`, `gofmt`, and other linters can streamline rule
+enforcement, ensuring compliance without overburdening team members.
 
-Prioritize writing code with the reader in mind by using clear variable names, descriptive comments, and consistent formatting. While striving for consistency across projects, maintain flexibility by allowing justified exceptions and accommodating external standards when necessary. Documenting these exceptions ensures clarity and transparency.
+Prioritize writing code with the reader in mind by using clear variable names,
+descriptive comments, and consistent formatting. While striving for consistency
+across projects, maintain flexibility by allowing justified exceptions and
+accommodating external standards when necessary. Documenting these exceptions
+ensures clarity and transparency.
 
-Lastly, invest in knowledge sharing to help team members understand and apply the style guide effectively. Resources such as primers, training sessions, or concise "tip-of-the-week" articles can help bridge knowledge gaps and foster alignment across the team. By implementing these steps, your team can establish a style guide that supports both high-quality code and efficient collaboration.
+Lastly, invest in knowledge sharing to help team members understand and apply
+the style guide effectively. Resources such as primers, training sessions, or
+concise "tip-of-the-week" articles can help bridge knowledge gaps and foster
+alignment across the team. By implementing these steps, your team can establish
+a style guide that supports both high-quality code and efficient collaboration.
 
 
 {{< include /_back-blog.qmd >}}

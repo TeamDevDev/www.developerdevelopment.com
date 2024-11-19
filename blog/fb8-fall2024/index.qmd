@@ -202,7 +202,29 @@ Sometimes there are multiple trees from the same grammar called **parses**. The 
 
 ### A Parser Class
 
+To develop parsers there needs to be defined interface for parsing. There are two approaches to parsing a string using a grammar.
+
+The first approach is to use a lexer.  A lexer tokenizes an incoming string then feeds the grammar one token at a time. Each token represents a meaningful unit such as a number or keyword. The lexer handles the tokenization process, while the parser only has to focus on understanding the structure of the language using these tokens. The result of parsing is usually a shallow derivation tree, which can be converted into an Abstract Syntax Tree (AST).
+
+The second approach is using a tree pruner. This occurs after the complete parse. The tree pruner removes the nodes that correspond to individual tokens and then replaces them with their actual string values as leaf nodes. This approach is more flexible and powerful additionally there is no separate step for lexing and parsing.
+
 ### Parsing Expression Grammars
+
+Parsing Expression Grammars (PEG) are recognition based grammars that specify a sequence of steps to take to parse a given string. Parsing expression grammars are represented by a set of nonterminals and corresponding alternatives representing how to match each. 
+
+```python
+PEG1 = {
+    '<start>': ['a', 'b']
+}
+```
+
+Unlike context-free grammars alternatives represent ordered choices, meaning the parser will stop at the first matching rule it finds. 
+
+```python
+PEG2 = {
+    '<start>': ['ab', 'abc']
+}
+```
 
 ### The Packrat Parser for Predicate Expression Grammars
 

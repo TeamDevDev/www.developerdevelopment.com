@@ -231,17 +231,20 @@ PEG2 = {
 Packrat parsing is one of the simplest parsing techniques used for PEGs. It works by caching results from previous parsing steps so if the same problem comes up again it can reuse the cached solution instead of redoing the work. 
 
 ```python
-class PEGParser(Parser):
-    def parse_prefix(self, text):
-        cursor, tree = self.unify_key(self.start_symbol(), text, 0)
-        return cursor, [tree]
+mystring = "1 + (2 * 3)"
+peg = PEGParser(EXPR_GRAMMAR)
+for tree in peg.parse(mystring):
+    assert tree_to_string(tree) == mystring
+    display(display_tree(tree))
 ```
+
+![](Packrat.png)
 
 ### Parsing Context-Free Grammars
 
 #### Problems with PEG
 
-PEGs may at first appear simple but in some cases may include a little bit more thinking. 
+PEGs may at first appear simple but in some cases may include a little bit more thinking.
 
 ```python
 PEG_SURPRISE: Grammar = {

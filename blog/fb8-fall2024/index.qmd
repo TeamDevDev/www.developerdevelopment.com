@@ -4,7 +4,7 @@ title: Parsing Inputs
 date: '2024-11-20'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>How can parsers help with fuzzing?</em>
+description: <em>How can input parsers help with fuzzing? How can parsing inputs make more inputs for fuzzing? </em>
 toc: true
 page-layout: full
 ---
@@ -13,9 +13,168 @@ page-layout: full
 
 ## Summary
 
+Reminder a non-terminal is the building blocks for the grammar such as `<digit>` and `<letter>` whereas a terminal is the actual digit or letter think of it as the desintation for the grammar like `2` or `a`.
+
+Given a string you can decompose it into its constituent parts that correspond to the parts of grammar used to generate it. 
+
+You can make a derivation tree of a given string to break it down into its grammar parts. Then it can be recombined using the same grammar to produce new strings. Trees allow us to mutatee, crossover, and recombine their parts in order to generate new valid slightly different inputs.
+
+There are 2 main parsing classes we will look at today to make a string into a derivation tree.
+- Parsing Expression Grammar Parser (PEGParser) 
+- Earley Parsers
+
+The PEGParser is efficient but limited to a specific grammar structure - rather than choosing all the rules that can potentially match it stops at the first match that succeeds.
+
+The Earley Parser can accept any kind of context-free grammars and explore all parsing alternatives.
+
+### To Use
+
+To use these parsers first you have initiate a grammar.
+
+```python
+>>> from Grammars import US_PHONE_GRAMMAR
+>>> us_phone_parser = EarleyParser(US_PHONE_GRAMMAR)
+```
+
+Then you use the parse method to retrieve a list of possible derivation trees:
+
+```python
+>>> trees = us_phone_parser.parse("(555)987-6543")
+>>> tree = list(trees)[0]
+>>> display_tree(tree)
+```
+
+[example-tree.png](example-tree.png)
+
+These trees can be used for test generation. Notably for mutating and recombing existing inputs.
+
 ### Why Parsing for Fuzzing?
 
+Example with a CSV file
+
+```{python}
+def process_inventory(inventory):
+    res = []
+    for vehicle in inventory.split('\n'):
+        ret = process_vehicle(vehicle)
+        res.extend(ret)
+    return '\n'.join(res)
+
+def process_vehicle(vehicle):
+    year, kind, company, model, *_ = vehicle.split(',')
+    if kind == 'van':
+        return process_van(year, company, model)
+
+    elif kind == 'car':
+        return process_car(year, company, model)
+
+    else:
+        raise Exception('Invalid entry')
+
+def process_van(year, company, model):
+    res = ["We have a %s %s van from %s vintage." % (company, model, year)]
+    iyear = int(year)
+    if iyear > 2010:
+        res.append("It is a recent model!")
+    else:
+        res.append("It is an old but reliable model!")
+    return res
+
+def process_car(year, company, model):
+    res = ["We have a %s %s car from %s vintage." % (company, model, year)]
+    iyear = int(year)
+    if iyear > 2016:
+        res.append("It is a recent model!")
+    else:
+        res.append("It is an old but reliable model!")
+    return res
+
+mystring = """\
+1997,van,Ford,E350
+2000,car,Mercury,Cougar\
+"""
+print(process_inventory(mystring))
+```
+
+```{python}
+from fuzzingbook.Grammars import is_valid_grammar, syntax_diagram, Grammar
+
+CSV_GRAMMAR: Grammar = {
+    '<start>': ['<csvline>'],
+    '<csvline>': ['<items>'],
+    '<items>': ['<item>,<items>', '<item>'],
+    '<item>': ['<letters>'],
+    '<letters>': ['<letter><letters>', '<letter>'],
+    '<letter>': list(string.ascii_letters + string.digits + string.punctuation + ' \t\n')
+}
+
+syntax_diagram(CSV_GRAMMAR)
+```
+
+```{python}
+from fuzzingbook.GrammarFuzzer import GrammarFuzzer
+from fuzzingbook.Grammars import is_valid_grammar, syntax_diagram, Grammar
+
+CSV_GRAMMAR: Grammar = {
+    '<start>': ['<csvline>'],
+    '<csvline>': ['<items>'],
+    '<items>': ['<item>,<items>', '<item>'],
+    '<item>': ['<letters>'],
+    '<letters>': ['<letter><letters>', '<letter>'],
+    '<letter>': list(string.ascii_letters + string.digits + string.punctuation + ' \t\n')
+}
+
+def process_vehicle(vehicle):
+    year, kind, company, model, *_ = vehicle.split(',')
+    if kind == 'van':
+        return process_van(year, company, model)
+
+    elif kind == 'car':
+        return process_car(year, company, model)
+
+    else:
+        raise Exception('Invalid entry')
+
+def process_van(year, company, model):
+    res = ["We have a %s %s van from %s vintage." % (company, model, year)]
+    iyear = int(year)
+    if iyear > 2010:
+        res.append("It is a recent model!")
+    else:
+        res.append("It is an old but reliable model!")
+    return res
+
+def process_car(year, company, model):
+    res = ["We have a %s %s car from %s vintage." % (company, model, year)]
+    iyear = int(year)
+    if iyear > 2016:
+        res.append("It is a recent model!")
+    else:
+        res.append("It is an old but reliable model!")
+    return res
+
+
+gf = GrammarFuzzer(CSV_GRAMMAR, min_nonterminals=4)
+trials = 10
+time = 0
+for i in range(trials):
+    vehicle_info = gf.fuzz()
+    try:
+        print(repr(vehicle_info), end="")
+        process_vehicle(vehicle_info)
+    except Exception as e:
+        print("\t", e)
+    else:
+        print()
+```
+
+The input is not producing valid entries unless the fuzzer can produce either the words `van` or `car`. Just the grammar itself is not enough to make valid inputs. Even if you modify the fuzzer to know more about the way the inputs are formated there is still difficulty getting valid inputs.
+
+The solution: A parser. A parser can extract the template for inputs and and valid values from samples and use them for fuzzing! 
+
 ### Using a Parser
+
+
 
 ### An Ad Hoc Parser
 

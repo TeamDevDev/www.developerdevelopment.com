@@ -228,9 +228,29 @@ PEG2 = {
 
 ### The Packrat Parser for Predicate Expression Grammars
 
-### Parsing COntext-Free Grammars
+Packrat parsing is one of the simplest parsing techniques used for PEGs. It works by caching results from previous parsing steps so if the same problem comes up again it can reuse the cached solution instead of redoing the work. 
+
+```python
+class PEGParser(Parser):
+    def parse_prefix(self, text):
+        cursor, tree = self.unify_key(self.start_symbol(), text, 0)
+        return cursor, [tree]
+```
+
+### Parsing Context-Free Grammars
 
 #### Problems with PEG
+
+PEGs may at first appear simple but in some cases may include a little bit more thinking. 
+
+```python
+PEG_SURPRISE: Grammar = {
+    "<A>": ["a<A>a", "aa"]
+}
+```
+When interpreted as a context free grammar and used as a string generator it will produce strings of the from aa, aaaa, aaaaaa. it produces strings where the number of a is 2 * n.
+
+PEGs are oriented towards language recognition and it is also unclear how to translate a PEG to a CFG. With the main focusing being fuzzing next we are going to look at parsers tha can accept context-free grammars. 
 
 ### The Earley Parser
 

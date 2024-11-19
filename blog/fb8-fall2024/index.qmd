@@ -13,7 +13,7 @@ page-layout: full
 
 ## Summary
 
-Reminder a non-terminal is the building blocks for the grammar such as `<digit>` and `<letter>` whereas a terminal is the actual digit or letter think of it as the desintation for the grammar like `2` or `a`.
+Reminder a non-terminal is the rule or building blocks for the grammar such as `<digit>` and `<letter>` whereas a terminal is the actual digit or letter think of it as the desintation for the grammar like `2` or `a`.
 
 Given a string you can decompose it into its constituent parts that correspond to the parts of grammar used to generate it. 
 
@@ -44,117 +44,39 @@ Then you use the parse method to retrieve a list of possible derivation trees:
 >>> display_tree(tree)
 ```
 
-[example-tree.png](example-tree.png)
+![](example-tree.png)
 
 These trees can be used for test generation. Notably for mutating and recombing existing inputs.
 
 ### Why Parsing for Fuzzing?
 
-Example with a CSV file
+Sometimes trying to generate valid inputs for fuzzing can be hard. For example if you have code that can only run if the first item has to be the stings `van` or `car` to work but you are randomly generating the input the chances of getting those to output are very low.
 
-```{python}
-def process_inventory(inventory):
-    res = []
-    for vehicle in inventory.split('\n'):
-        ret = process_vehicle(vehicle)
-        res.extend(ret)
-    return '\n'.join(res)
+We can give the input generator our grammar but just the grammar itself is not enough to make valid inputs. Even if you modify the fuzzer to know more about the way the inputs are formated there is still difficulty getting valid inputs.
 
-def process_vehicle(vehicle):
-    year, kind, company, model, *_ = vehicle.split(',')
-    if kind == 'van':
-        return process_van(year, company, model)
+```python
+class PooledGrammarFuzzer(GrammarFuzzer):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._node_cache = {}
 
-    elif kind == 'car':
-        return process_car(year, company, model)
+    def update_cache(self, key, values):
+        self._node_cache[key] = values
 
-    else:
-        raise Exception('Invalid entry')
+    def expand_node_randomly(self, node):
+        (symbol, children) = node
+        assert children is None
+        if symbol in self._node_cache:
+            if random.randint(0, 1) == 1:
+                return super().expand_node_randomly(node)
+            return copy.deepcopy(random.choice(self._node_cache[symbol]))
+        return super().expand_node_randomly(node)
 
-def process_van(year, company, model):
-    res = ["We have a %s %s van from %s vintage." % (company, model, year)]
-    iyear = int(year)
-    if iyear > 2010:
-        res.append("It is a recent model!")
-    else:
-        res.append("It is an old but reliable model!")
-    return res
-
-def process_car(year, company, model):
-    res = ["We have a %s %s car from %s vintage." % (company, model, year)]
-    iyear = int(year)
-    if iyear > 2016:
-        res.append("It is a recent model!")
-    else:
-        res.append("It is an old but reliable model!")
-    return res
-
-mystring = """\
-1997,van,Ford,E350
-2000,car,Mercury,Cougar\
-"""
-print(process_inventory(mystring))
-```
-
-```{python}
-from fuzzingbook.Grammars import is_valid_grammar, syntax_diagram, Grammar
-
-CSV_GRAMMAR: Grammar = {
-    '<start>': ['<csvline>'],
-    '<csvline>': ['<items>'],
-    '<items>': ['<item>,<items>', '<item>'],
-    '<item>': ['<letters>'],
-    '<letters>': ['<letter><letters>', '<letter>'],
-    '<letter>': list(string.ascii_letters + string.digits + string.punctuation + ' \t\n')
-}
-
-syntax_diagram(CSV_GRAMMAR)
-```
-
-```{python}
-from fuzzingbook.GrammarFuzzer import GrammarFuzzer
-from fuzzingbook.Grammars import is_valid_grammar, syntax_diagram, Grammar
-
-CSV_GRAMMAR: Grammar = {
-    '<start>': ['<csvline>'],
-    '<csvline>': ['<items>'],
-    '<items>': ['<item>,<items>', '<item>'],
-    '<item>': ['<letters>'],
-    '<letters>': ['<letter><letters>', '<letter>'],
-    '<letter>': list(string.ascii_letters + string.digits + string.punctuation + ' \t\n')
-}
-
-def process_vehicle(vehicle):
-    year, kind, company, model, *_ = vehicle.split(',')
-    if kind == 'van':
-        return process_van(year, company, model)
-
-    elif kind == 'car':
-        return process_car(year, company, model)
-
-    else:
-        raise Exception('Invalid entry')
-
-def process_van(year, company, model):
-    res = ["We have a %s %s van from %s vintage." % (company, model, year)]
-    iyear = int(year)
-    if iyear > 2010:
-        res.append("It is a recent model!")
-    else:
-        res.append("It is an old but reliable model!")
-    return res
-
-def process_car(year, company, model):
-    res = ["We have a %s %s car from %s vintage." % (company, model, year)]
-    iyear = int(year)
-    if iyear > 2016:
-        res.append("It is a recent model!")
-    else:
-        res.append("It is an old but reliable model!")
-    return res
-
-
-gf = GrammarFuzzer(CSV_GRAMMAR, min_nonterminals=4)
+gf = PooledGrammarFuzzer(CSV_GRAMMAR, min_nonterminals=4)
+gf.update_cache('<item>', [
+    ('<item>', [('car', [])]),
+    ('<item>', [('van', [])]),
+])
 trials = 10
 time = 0
 for i in range(trials):
@@ -168,17 +90,115 @@ for i in range(trials):
         print()
 ```
 
-The input is not producing valid entries unless the fuzzer can produce either the words `van` or `car`. Just the grammar itself is not enough to make valid inputs. Even if you modify the fuzzer to know more about the way the inputs are formated there is still difficulty getting valid inputs.
+```
+',h,van,|'	 Invalid entry
+'M,w:K,car,car,van'	 Invalid entry
+'J,?Y,van,van,car,J,~D+'	 Invalid entry
+'S4,car,car,o'	 invalid literal for int() with base 10: 'S4'
+'2*-,van'	 not enough values to unpack (expected at least 4, got 2)
+'van,%,5,]'	 Invalid entry
+'van,G3{y,j,h:'	 Invalid entry
+'$0;o,M,car,car'	 Invalid entry
+'2d,f,e'	 not enough values to unpack (expected at least 4, got 3)
+'/~NE,car,car'	 not enough values to unpack (expected at least 4, got 3)
+```
 
-The solution: A parser. A parser can extract the template for inputs and and valid values from samples and use them for fuzzing! 
+**The solution: A parser. A parser can extract the template for inputs and and valid values from samples and use them for fuzzing!**
 
 ### Using a Parser
 
+The parser processes structured input. The parsers in this chapter take an input string and turn it into a derviation tree. 
 
+The next chapter is about using the parser for testing but this chapter is about understanding how parsers work. 
 
 ### An Ad Hoc Parser
 
+```python
+# Used to extract the information
+def simple_parse_csv(mystring: str) -> DerivationTree:
+    children: List[DerivationTree] = []
+    tree = (START_SYMBOL, children)
+    for i, line in enumerate(mystring.split('\n')):
+        children.append(("record %d" % i, [(cell, [])
+                                           for cell in line.split(',')]))
+    return tree
+
+# Change the orientation to Left to Right
+def lr_graph(dot):
+    dot.attr('node', shape='plain')
+    dot.graph_attr['rankdir'] = 'LR'
+
+tree = simple_parse_csv(mystring)
+display_tree(tree, graph_attr=lr_graph)
+```
+![](csv-lr-graph.png)
+
+This is a simple example and if we encounter more complexity it may not parse correctly. We can separate these incorrectly parsed inputs manually but that would be insanity! It would be so much work. Instead we use formal parsers. With those changing the external structure does not have much impact on the internal structure.
+
 ### Grammars in Parsing
+
+Non-terminals are the building block rules that may be expanded. The symbols themselves are typically terminals unless they can be expanded further.
+
+Here is an example derivation tree for this grammar:
+
+```python
+tree = ('<start>', [('<expr>',
+                     [('<expr>', [('<integer>', [('<digit>', [('1', [])])])]),
+                      ('+', []),
+                      ('<expr>', [('<integer>', [('<digit>', [('2',
+                                                               [])])])])])])
+assert mystring == tree_to_string(tree)
+display_tree(tree)
+```
+
+![](derivation-tree.png)
+
+#### Recursion
+
+Recursion is possible in grammar such as with `<expr>` being used in its own definition. There are two kinds of recurision to note in parsing left-recursive and right-recursive.
+
+**Left-recursive**
+
+A nonterminal is directly left-recursive if the left-most symbol of any of its productions is itself.
+
+Example:
+
+```python
+LR_GRAMMAR: Grammar = {
+    '<start>': ['<A>'],
+    '<A>': ['<A>a', ''],
+}
+
+mystring = 'aaaaaa'
+display_tree(
+    ('<start>', [('<A>', [('<A>', [('<A>', []), ('a', [])]), ('a', [])]),
+                 ('a', [])]))
+```
+
+![](left-tree.png)
+
+A grammar can also be indirectly left-recursive if the left-most symbols can be expanded using their definitions to produce the nonterminal as the left-most symbol of the expansion. For example `<integer>` will be considered hidden-left recursive if `<digit>` could derive an empty string.
+
+**Right-recurisve**
+
+Right recursive is the same idea but it expands the other direction.
+
+```python
+RR_GRAMMAR: Grammar = {
+    '<start>': ['<A>'],
+    '<A>': ['a<A>', ''],
+}
+
+display_tree(('<start>', [('<A>', [
+                  ('a', []), ('<A>', [('a', []), ('<A>', [('a', []), ('<A>', [])])])])]
+             ))
+```
+
+![](right-tree.png)
+
+#### Abiguity
+
+Sometimes there are multiple trees from the same grammar called **parses**. The sting `1+2+3` has two ways it can be parsed using the `A1_GRAMMAR`. One method to deal with this is to simply choose an order of resolution, perhaps choose the first tree in any case (PEGParser). Another approach returns all the trees (Earley parser).
 
 ### A Parser Class
 

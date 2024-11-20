@@ -384,91 +384,9 @@ The derivation tree here might look like:
 
 **Discussion Question**: How does the parser handle nested expressions, and how does the structure of the derivation tree help us understand the parsing process?
 
-### Excursion: Testing the Parsers
+### Testing the Parsers
 
 Testing parsers can be done effectively by generating random grammars and their corresponding strings. This provides an interesting way to ensure that parsers are working as expected.
-
-### Grammar Generation Code Example
-
-```python
-def prod_line_grammar(nonterminals, terminals):
-    g = {
-        '<start>': ['<symbols>'],
-        '<symbols>': ['<symbol><symbols>', '<symbol>'],
-        '<symbol>': ['<nonterminals>', '<terminals>'],
-        '<nonterminals>': ['<lt><alpha><gt>'],
-        '<lt>': ['<'],
-        '<gt>': ['>'],
-        '<alpha>': nonterminals,
-        '<terminals>': terminals
-    }
-
-    if not nonterminals:
-        g['<nonterminals>'] = ['']
-        del g['<lt>']
-        del g['<alpha>']
-        del g['<gt>']
-
-    return g
-```
-
-### Making Rules for Non-Terminals and Terminals
-
-```python
-def make_rule(nonterminals, terminals, num_alts):
-    prod_grammar = prod_line_grammar(nonterminals, terminals)
-
-    gf = GrammarFuzzer(prod_grammar, min_nonterminals=3, max_nonterminals=5)
-    name = "<%s>" % ''.join(random.choices(string.ascii_uppercase, k=3))
-
-    return (name, [gf.fuzz() for _ in range(num_alts)])
-```
-
-### Example Grammar Fuzzing
-
-```python
-make_rule(["A", "B", "C"], ["1", "2", "3"], 3)
-('<FYU>', ['<C>23', '<C><A>', '<B><C>3'])
-```
-
-### Creating a Complete Grammar
-
-```python
-def make_grammar(num_symbols=3, num_alts=3):
-    terminals = list(string.ascii_lowercase)
-    grammar = {}
-    name = None
-    for _ in range(num_symbols):
-        nonterminals = [k[1:-1] for k in grammar.keys()]
-        name, expansions = make_rule(nonterminals, terminals, num_alts)
-        grammar[name] = expansions
-
-    grammar[START_SYMBOL] = [name]
-
-    for nonterminal in unreachable_nonterminals(grammar):
-        del grammar[nonterminal]
-
-    assert is_valid_grammar(grammar)
-
-    return grammar
-```
-
-### Using the Grammar with EarleyParser
-
-Once the grammar is generated, you can use the Earley parser to parse strings produced by the grammar:
-
-```python
-for i in range(5):
-    my_grammar = make_grammar()
-    print(my_grammar)
-    parser = EarleyParser(my_grammar)
-    mygf = GrammarFuzzer(my_grammar)
-    s = mygf.fuzz()
-    print(s)
-    for tree in parser.parse(s):
-        assert tree_to_string(tree) == s
-        display_tree(tree)
-```
 
 **Discussion Question**: What challenges might arise when testing parsers with random grammars, and how can fuzzing help identify edge cases or parsing issues?
 

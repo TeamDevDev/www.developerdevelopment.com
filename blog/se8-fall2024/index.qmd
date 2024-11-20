@@ -235,7 +235,7 @@ back to snake_case naming in Python.
 
 #### The Process
 
-The process used at google for changing a style guide is a solution based one.
+The process used at Google for changing a style guide is a solution based one.
 This means that if an update is proposed it has to be a solution to an existing
 problem and not a hypothetical situation.
 
@@ -243,7 +243,7 @@ problem and not a hypothetical situation.
 
 #### The Style Arbiters
 
-At google each language's style guide has to be approved by the style arbiters.
+At Google each language's style guide has to be approved by the style arbiters.
 This group is are long-time language experts and are designated to make the
 final decisions. With this being said they do not make the decision on their
 own. They have to take into account the trade-offs for the proposed change and
@@ -283,7 +283,7 @@ detail of a topic but they should provide explanations and recommend use. This
 can be useful for new members to reference because primers can give you the
 necessary information needed to implement a feature without any excess. 
 
-As with many things done at google these guides are covering many issues that
+As with many things done at Google these guides are covering many issues that
 have already occurred. It is not focused on situations that are hypothetical but
 instead common issues that have real application. With this being said they are
 still pieces of advice, unlike the rules in the style guide. Guidance is more

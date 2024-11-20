@@ -333,7 +333,14 @@ context-free grammars.
 
 ## Earley Parsers
 
-The **Earley parser** is a versatile general-purpose parser capable of parsing any arbitrary Context-Free Grammar (CFG). It was developed by **Jay Earley** in 1970 for computational linguistics. Although its computational complexity is \(O(n^3)\) for parsing strings with arbitrary grammars, it can efficiently parse strings with unambiguous grammars in \(O(n^2)\) time. It can also parse all **LR(k)** grammars in linear time, \(O(n)\) as noted by **Joop M.I.M. Leo** in 1991. Further enhancements, particularly in handling epsilon rules, were introduced by **Aycock et al.** in 2002.
+The **Earley parser** is a versatile general-purpose parser capable of parsing
+any arbitrary Context-Free Grammar (CFG). It was developed by **Jay Earley** in
+1970 for computational linguistics. Although its computational complexity is
+$O(n^3)$ for parsing strings with arbitrary grammars, it can efficiently parse
+strings with unambiguous grammars in $O(n^2)$ time. It can also parse all
+**LR(k)** grammars in linear time, \(O(n)\) as noted by **Joop M.I.M. Leo** in
+1991. Further enhancements, particularly in handling epsilon rules, were
+introduced by **Aycock et al.** in 2002.
 
 **Discussion Question**: How does the computational complexity of the Earley parser affect its efficiency when dealing with large or ambiguous grammars? Can the parser be optimized further for specific use cases?
 

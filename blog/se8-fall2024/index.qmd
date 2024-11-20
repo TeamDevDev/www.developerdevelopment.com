@@ -148,7 +148,7 @@ Even if current developers understand a confusing construct there is no
 guarantee the future will. These non-obvious features can cause misuse and
 introduce bugs. 
 
-Google's Python style guide avoids using `power` features such as reflection.
+Google's Python style guide avoids using "power" features such as reflection.
 `hasattr()` and `getattr()` for example give access to an object using strings.
 
 Here is an example in Python:

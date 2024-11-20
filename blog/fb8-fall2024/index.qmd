@@ -11,12 +11,15 @@ page-layout: full
 
 ## Overview
 
-Sometimes we need inputs that follow a certain grammar structure in order to
-effectively use fuzzing. A good way to do that is to use a parser to break down
-the grammar of a template string and form new strings that follow the same
-grammar rules. Then you can generate a whole bunch of valid inputs to use to
-test to your hearts content! This article breaks down how parsers work so we can
-use them. How to use them is described in the next chapter.
+This post discusses the [Parsing
+Inputs](https://www.fuzzingbook.org/html/Parser.html) chapter from [The Fuzzing
+Book](https://www.fuzzingbook.org/). This chapter points out that, sometimes we
+need inputs that follow a certain grammar structure in order to effectively use
+fuzzing. A good way to do that is to use a parser to break down the grammar of a
+template string and form new strings that follow the same grammar rules. Then
+you can generate a whole bunch of valid inputs to use to test to your hearts
+content! This article breaks down how parsers work so we can use them. How to
+use them is described in the next chapter.
 
 ## Summary
 

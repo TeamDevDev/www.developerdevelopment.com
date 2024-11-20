@@ -376,5 +376,4 @@ concise "tip-of-the-week" articles can help bridge knowledge gaps and foster
 alignment across the team. By implementing these steps, your team can establish
 a style guide that supports both high-quality code and efficient collaboration.
 
-
 {{< include /_back-blog.qmd >}}

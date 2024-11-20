@@ -136,7 +136,7 @@ The parser processes structured input. The parsers in this chapter take an input
 string and turn it into a derivation tree. The next chapter is about using the
 parser for testing but this chapter is about understanding how parsers work. 
 
-### An Ad Hoc Parser
+### An Ad-Hoc Parser
 
 ```python
 # Used to extract the information
@@ -259,7 +259,7 @@ first tree in any case (PEGParser). Another approach returns all the trees
 To develop parsers there needs to be defined interface for parsing. There are
 two approaches to parsing a string using a grammar.
 
-The first approach is to use a lexer.  A lexer tokenizes an incoming string then
+The first approach is to use a lexer. A lexer tokenizes an incoming string then
 feeds the grammar one token at a time. Each token represents a meaningful unit
 such as a number or keyword. The lexer handles the tokenization process, while
 the parser only has to focus on understanding the structure of the language
@@ -468,7 +468,8 @@ process?
 
 Testing parsers can be done effectively by generating random grammars and their corresponding strings. This provides an interesting way to ensure that parsers are working as expected.
 
-**Discussion Question**: What challenges might arise when testing parsers with random grammars, and how can fuzzing help identify edge cases or parsing issues?
+**Discussion Question**: What challenges might arise when testing parsers with
+random grammars, and how can fuzzing help identify edge cases or parsing issues?
 
 ### Background
 

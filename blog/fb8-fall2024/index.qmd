@@ -473,26 +473,51 @@ Testing parsers can be done effectively by generating random grammars and their 
 
 ### Background
 
-There are various parsing techniques available, each designed to handle specific types of grammars. Some common approaches include **LL** and **LR** parsing. **LL parsing** processes the input left-to-right, using a leftmost derivation. **LR parsing** works similarly but uses a rightmost derivation. These approaches are particularly efficient, with **LR(1)** grammars parseable in linear time.
+There are various parsing techniques available, each designed to handle specific
+types of grammars. Some common approaches include **LL** and **LR** parsing.
+**LL parsing** processes the input left-to-right, using a leftmost derivation.
+**LR parsing** works similarly but uses a rightmost derivation. These approaches
+are particularly efficient, with **LR(1)** grammars parseable in linear time.
 
-**Discussion Question**: How do LL and LR parsing differ in terms of efficiency and applicability, and when might one be preferred over the other?
+**Discussion Question**: How do LL and LR parsing differ in terms of efficiency
+and applicability, and when might one be preferred over the other?
 
 ### Complexities of Parsing
 
-For **arbitrary CFGs**, the best-known algorithms typically have a worst-case complexity of \(O(n^3)\). More advanced techniques, like **boolean matrix multiplication**, could theoretically reduce this further, but practical implementations often remain cubic.
+For **arbitrary CFGs**, the best-known algorithms typically have a worst-case
+complexity of $O(n^3)$. More advanced techniques, like **boolean matrix
+multiplication**, could theoretically reduce this further, but practical
+implementations often remain cubic.
 
-**Discussion Question**: What factors influence the complexity of parsing algorithms, and how can they be optimized for practical use cases?
+**Discussion Question**: What factors influence the complexity of parsing
+algorithms, and how can they be optimized for practical use cases?
 
 ### Peg Parsing
 
-**Parsing Expression Grammars (PEGs)** are another important concept. While PEGs are effective for many contexts, their ability to represent certain languages (like **anbncn**) remains an open question. However, PEGs have the advantage of providing a simple top-down interpretation, making them intuitive for writing parsers.
+**Parsing Expression Grammars (PEGs)** are another important concept. While PEGs
+are effective for many contexts, their ability to represent certain languages
+(like **`anbncn`**) remains an open question. However, PEGs have the advantage
+of providing a simple top-down interpretation, making them intuitive for writing
+parsers.
 
-**Discussion Question**: In what scenarios would PEG parsing be more advantageous than other parsing techniques, and what are its limitations?
+**Discussion Question**: In what scenarios would PEG parsing be more
+advantageous than other parsing techniques, and what are its limitations?
 
-This concludes our overview of the Earley parser and its role in parsing arbitrary context-free grammars. By integrating it with fuzzing techniques, we can effectively test parsers against a variety of grammars, ensuring robustness and correctness.
+This concludes our overview of the Earley parser and its role in parsing
+arbitrary context-free grammars. By integrating it with fuzzing techniques, we
+can effectively test parsers against a variety of grammars, ensuring robustness
+and correctness.
 
 ## Reflection
-The article "Parsing Inputs" highlights the critical role of parsers in fuzzing by emphasizing how input parsers break down strings into derivation trees, which can then be mutated and recombined to generate new, valid inputs. I found the explanation of non-terminals, terminals, and the use of parsers like PEGParser and EarleyParser to be insightful. The examples, particularly the one about using a parser to improve fuzzing, demonstrated how incorporating grammar into the fuzzing process can significantly increase the likelihood of generating valid inputs, thus making fuzzing more effective.
+
+The article "Parsing Inputs" highlights the critical role of parsers in fuzzing
+by emphasizing how input parsers break down strings into derivation trees, which
+can then be mutated and recombined to generate new, valid inputs. I found the
+explanation of non-terminals, terminals, and the use of parsers like PEGParser
+and EarleyParser to be insightful. The examples, particularly the one about
+using a parser to improve fuzzing, demonstrated how incorporating grammar into
+the fuzzing process can significantly increase the likelihood of generating
+valid inputs, thus making fuzzing more effective.
 
 I particularly appreciated the in-depth exploration of the EarleyParser and its flexibility in handling context-free grammars, which was crucial for understanding how such parsers can be used for fuzz testing. The emphasis on using parsers to simplify complex input generation is an actionable takeaway that I will apply when generating more structured inputs in future fuzzing exercises. The discussion of recursion, ambiguity, and grammar restrictions also gave me a clearer understanding of the complexities involved in parsing different types of grammars, which can be beneficial when working with more complex systems.
 

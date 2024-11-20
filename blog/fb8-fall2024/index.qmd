@@ -133,9 +133,9 @@ values from samples and use them for fuzzing!**
 
 ### Using a Parser
 
-The parser processes structured input. The parsers in this chapter take an input string and turn it into a derivation tree. 
-
-The next chapter is about using the parser for testing but this chapter is about understanding how parsers work. 
+The parser processes structured input. The parsers in this chapter take an input
+string and turn it into a derivation tree. The next chapter is about using the
+parser for testing but this chapter is about understanding how parsers work. 
 
 ### An Ad Hoc Parser
 
@@ -159,11 +159,16 @@ display_tree(tree, graph_attr=lr_graph)
 ```
 ![](csv-lr-graph.png)
 
-This is a simple example and if we encounter more complexity it may not parse correctly. We can separate these incorrectly parsed inputs manually but that would be insanity! It would be so much work. Instead we use formal parsers. With those changing the external structure does not have much impact on the internal structure.
+This is a simple example and if we encounter more complexity it may not parse
+correctly. We can separate these incorrectly parsed inputs manually but that
+would be insanity! It would be so much work. Instead we use formal parsers. With
+those changing the external structure does not have much impact on the internal
+structure.
 
 ### Grammars in Parsing
 
-Non-terminals are the building block rules that may be expanded. The symbols themselves are typically terminals unless they can be expanded further.
+Non-terminals are the building block rules that may be expanded. The symbols
+themselves are typically terminals unless they can be expanded further.
 
 Here is an example derivation tree for this grammar:
 
@@ -181,11 +186,14 @@ display_tree(tree)
 
 #### Recursion
 
-Recursion is possible in grammar such as with `<expr>` being used in its own definition. There are two kinds of recurision to note in parsing left-recursive and right-recursive.
+Recursion is possible in grammar such as with `<expr>` being used in its own
+definition. There are two kinds of recursion to note in parsing left-recursive
+and right-recursive.
 
 **Left-recursive**
 
-A nonterminal is directly left-recursive if the left-most symbol of any of its productions is itself.
+A non-terminal is directly left-recursive if the left-most symbol of any of its
+productions is itself.
 
 Example:
 

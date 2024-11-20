@@ -112,7 +112,10 @@ for i in range(trials):
         print()
 ```
 
-```
+<!-- NOTE: It would be better if this article had the source code directly
+produce output instead of providing an example of the output. -->
+
+```text
 ',h,van,|'	 Invalid entry
 'M,w:K,car,car,van'	 Invalid entry
 'J,?Y,van,van,car,J,~D+'	 Invalid entry
@@ -125,7 +128,8 @@ for i in range(trials):
 '/~NE,car,car'	 not enough values to unpack (expected at least 4, got 3)
 ```
 
-**The solution: A parser. A parser can extract the template for inputs and valid values from samples and use them for fuzzing!**
+**The solution: A parser. A parser can extract the template for inputs and valid
+values from samples and use them for fuzzing!**
 
 ### Using a Parser
 

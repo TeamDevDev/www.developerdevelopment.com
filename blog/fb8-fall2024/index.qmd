@@ -484,6 +484,9 @@ and applicability, and when might one be preferred over the other?
 
 ### Complexities of Parsing
 
+<!-- NOTE: How does boolean matrix multiplication reduce the complexity of
+parsing? Can you please clarify this statement further? -->
+
 For **arbitrary CFGs**, the best-known algorithms typically have a worst-case
 complexity of $O(n^3)$. More advanced techniques, like **boolean matrix
 multiplication**, could theoretically reduce this further, but practical
@@ -513,16 +516,40 @@ and correctness.
 The article "Parsing Inputs" highlights the critical role of parsers in fuzzing
 by emphasizing how input parsers break down strings into derivation trees, which
 can then be mutated and recombined to generate new, valid inputs. I found the
-explanation of non-terminals, terminals, and the use of parsers like PEGParser
-and EarleyParser to be insightful. The examples, particularly the one about
+explanation of non-terminals, terminals, and the use of parsers like `PEGParser`
+and `EarleyParser` to be insightful. The examples, particularly the one about
 using a parser to improve fuzzing, demonstrated how incorporating grammar into
 the fuzzing process can significantly increase the likelihood of generating
 valid inputs, thus making fuzzing more effective.
 
-I particularly appreciated the in-depth exploration of the EarleyParser and its flexibility in handling context-free grammars, which was crucial for understanding how such parsers can be used for fuzz testing. The emphasis on using parsers to simplify complex input generation is an actionable takeaway that I will apply when generating more structured inputs in future fuzzing exercises. The discussion of recursion, ambiguity, and grammar restrictions also gave me a clearer understanding of the complexities involved in parsing different types of grammars, which can be beneficial when working with more complex systems.
+I particularly appreciated the in-depth exploration of the `EarleyParser` and
+its flexibility in handling context-free grammars, which was crucial for
+understanding how such parsers can be used for fuzz testing. The emphasis on
+using parsers to simplify complex input generation is an actionable takeaway
+that I will apply when generating more structured inputs in future fuzzing
+exercises. The discussion of recursion, ambiguity, and grammar restrictions also
+gave me a clearer understanding of the complexities involved in parsing
+different types of grammars, which can be beneficial when working with more
+complex systems.
 
 ## Action Items
-The action items derived from the reading emphasize the importance of understanding and implementing parsing techniques for enhancing fuzzing capabilities. To start, it is crucial to experiment with different parsing methods, such as PEG and Earley Parsers, to determine their applicability in generating valid input for fuzzing tools. The next step is to implement a parser class with the ability to handle context-free grammars, as it can support more complex structures and enhance the flexibility of fuzzing processes. Furthermore, the implementation of a grammar fuzzer should be explored, particularly using techniques like cache updates and random node expansions, to facilitate the generation of diverse test cases. Additionally, it is important to apply these parsing methods to generate meaningful and valid test data, as well as to test the parsers against various types of grammars, ensuring that all edge cases are addressed. Finally, an evaluation of the performance of each parsing method in terms of parsing efficiency and the quality of generated test inputs should be conducted, with the goal of optimizing fuzzing strategies.
+
+The action items derived from the reading emphasize the importance of
+understanding and implementing parsing techniques for enhancing fuzzing
+capabilities. To start, it is crucial to experiment with different parsing
+methods, such as PEG and Earley Parsers, to determine their applicability in
+generating valid input for fuzzing tools. The next step is to implement a parser
+class with the ability to handle context-free grammars, as it can support more
+complex structures and enhance the flexibility of fuzzing processes.
+
+Furthermore, the implementation of a grammar fuzzer should be explored,
+particularly using techniques like cache updates and random node expansions, to
+facilitate the generation of diverse test cases. Additionally, it is important
+to apply these parsing methods to generate meaningful and valid test data, as
+well as to test the parsers against various types of grammars, ensuring that all
+edge cases are addressed. Finally, an evaluation of the performance of each
+parsing method in terms of parsing efficiency and the quality of generated test
+inputs should be conducted, with the goal of optimizing fuzzing strategies.
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

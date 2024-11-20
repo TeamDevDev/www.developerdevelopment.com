@@ -4,7 +4,7 @@ title: Programming Over Time
 date: '2024-9-2'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>Software engineering versus programming and software engineering fundamentals</em>
+description: <em>What are the the fundamentals of software engineering?</em>
 toc: true
 page-layout: full
 ---

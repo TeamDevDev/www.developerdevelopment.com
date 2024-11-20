@@ -255,16 +255,237 @@ When interpreted as a context free grammar and used as a string generator it wil
 
 PEGs are oriented towards language recognition and it is also unclear how to translate a PEG to a CFG. With the main focusing being fuzzing next we are going to look at parsers tha can accept context-free grammars. 
 
-### The Earley Parser
+# Earley Parsers
+
+The **Earley parser** is a versatile general-purpose parser capable of parsing any arbitrary Context-Free Grammar (CFG). It was developed by **Jay Earley** in 1970 for computational linguistics. Although its computational complexity is \(O(n^3)\) for parsing strings with arbitrary grammars, it can efficiently parse strings with unambiguous grammars in \(O(n^2)\) time. It can also parse all **LR(k)** grammars in linear time, \(O(n)\) as noted by **Joop M.I.M. Leo** in 1991. Further enhancements, particularly in handling epsilon rules, were introduced by **Aycock et al.** in 2002.
+
+**Discussion Question**: How does the computational complexity of the Earley parser affect its efficiency when dealing with large or ambiguous grammars? Can the parser be optimized further for specific use cases?
+
+### Grammar Restrictions
+
+A notable limitation in the Earley parser implementation is that the start symbol can only have one alternative in its alternative expressions. However, this restriction can be easily bypassed by introducing a new start symbol. For example, given a grammar:
+
+```python
+grammar = {
+    '<start>': ['<A>', '<B>'],
+    ...
+}
+```
+
+You can rewrite it to conform to the single-alternative rule:
+
+```python
+grammar = {
+    '<start>': ['<start_>'],
+    '<start_>': ['<A>', '<B>'],
+    ...
+}
+```
+
+**Discussion Question**: Why might the Earley parser require the start symbol to have only one alternative, and what implications does this have for the flexibility of grammar representations?
+
+### Implementing the EarleyParser
+
+To implement the **EarleyParser**, we can create a class derived from a basic `Parser` class. Here's an example of how to use the Earley parser with some simple expressions:
+
+### Example 1: Parsing an Expression
+
+```python
+mystring = "1 + (2 * 3)"
+earley = EarleyParser(EXPR_GRAMMAR)
+for tree in earley.parse(mystring):
+    assert tree_to_string(tree) == mystring
+    display(display_tree(tree))
+```
+
+The derivation tree for this example might look like this:
+
+```
+<start>
+  <expr>
+    <term>
+      +
+      <expr>
+        <factor>
+          <integer>
+            <digit>
+              1 (49)
+        <term>
+          <factor>
+            ( (40)
+        <expr>
+          ) (41)
+        <term>
+          <factor>
+            *
+            <term>
+              <integer>
+                <digit>
+                  2 (50)
+              <factor>
+                <integer>
+                  <digit>
+                    3 (51)
+```
+
+### Example 2: Parsing Another Expression with Decimals
+
+```python
+mystring = "1 * (2 + 3.35)"
+for tree in earley.parse(mystring):
+    assert tree_to_string(tree) == mystring
+    display(display_tree(tree))
+```
+
+The derivation tree here might look like:
+
+```
+<start>
+  <expr>
+    <term>
+      <factor>
+        *
+        <term>
+          <integer>
+            <digit>
+              1 (49)
+          <factor>
+            ( (40)
+        <expr>
+          ) (41)
+        <term>
+          +
+        <expr>
+          <factor>
+            <integer>
+              <digit>
+                2 (50)
+          <term>
+            <factor>
+              <integer>
+                . (46)
+              <integer>
+                <digit>
+                  3 (51)
+```
+
+**Discussion Question**: How does the parser handle nested expressions, and how does the structure of the derivation tree help us understand the parsing process?
 
 ### Excursion: Testing the Parsers
 
+Testing parsers can be done effectively by generating random grammars and their corresponding strings. This provides an interesting way to ensure that parsers are working as expected.
+
+### Grammar Generation Code Example
+
+```python
+def prod_line_grammar(nonterminals, terminals):
+    g = {
+        '<start>': ['<symbols>'],
+        '<symbols>': ['<symbol><symbols>', '<symbol>'],
+        '<symbol>': ['<nonterminals>', '<terminals>'],
+        '<nonterminals>': ['<lt><alpha><gt>'],
+        '<lt>': ['<'],
+        '<gt>': ['>'],
+        '<alpha>': nonterminals,
+        '<terminals>': terminals
+    }
+
+    if not nonterminals:
+        g['<nonterminals>'] = ['']
+        del g['<lt>']
+        del g['<alpha>']
+        del g['<gt>']
+
+    return g
+```
+
+### Making Rules for Non-Terminals and Terminals
+
+```python
+def make_rule(nonterminals, terminals, num_alts):
+    prod_grammar = prod_line_grammar(nonterminals, terminals)
+
+    gf = GrammarFuzzer(prod_grammar, min_nonterminals=3, max_nonterminals=5)
+    name = "<%s>" % ''.join(random.choices(string.ascii_uppercase, k=3))
+
+    return (name, [gf.fuzz() for _ in range(num_alts)])
+```
+
+### Example Grammar Fuzzing
+
+```python
+make_rule(["A", "B", "C"], ["1", "2", "3"], 3)
+('<FYU>', ['<C>23', '<C><A>', '<B><C>3'])
+```
+
+### Creating a Complete Grammar
+
+```python
+def make_grammar(num_symbols=3, num_alts=3):
+    terminals = list(string.ascii_lowercase)
+    grammar = {}
+    name = None
+    for _ in range(num_symbols):
+        nonterminals = [k[1:-1] for k in grammar.keys()]
+        name, expansions = make_rule(nonterminals, terminals, num_alts)
+        grammar[name] = expansions
+
+    grammar[START_SYMBOL] = [name]
+
+    for nonterminal in unreachable_nonterminals(grammar):
+        del grammar[nonterminal]
+
+    assert is_valid_grammar(grammar)
+
+    return grammar
+```
+
+### Using the Grammar with EarleyParser
+
+Once the grammar is generated, you can use the Earley parser to parse strings produced by the grammar:
+
+```python
+for i in range(5):
+    my_grammar = make_grammar()
+    print(my_grammar)
+    parser = EarleyParser(my_grammar)
+    mygf = GrammarFuzzer(my_grammar)
+    s = mygf.fuzz()
+    print(s)
+    for tree in parser.parse(s):
+        assert tree_to_string(tree) == s
+        display_tree(tree)
+```
+
+**Discussion Question**: What challenges might arise when testing parsers with random grammars, and how can fuzzing help identify edge cases or parsing issues?
+
 ### Background
 
+There are various parsing techniques available, each designed to handle specific types of grammars. Some common approaches include **LL** and **LR** parsing. **LL parsing** processes the input left-to-right, using a leftmost derivation. **LR parsing** works similarly but uses a rightmost derivation. These approaches are particularly efficient, with **LR(1)** grammars parseable in linear time.
+
+**Discussion Question**: How do LL and LR parsing differ in terms of efficiency and applicability, and when might one be preferred over the other?
+
+### Complexities of Parsing
+
+For **arbitrary CFGs**, the best-known algorithms typically have a worst-case complexity of \(O(n^3)\). More advanced techniques, like **boolean matrix multiplication**, could theoretically reduce this further, but practical implementations often remain cubic.
+
+**Discussion Question**: What factors influence the complexity of parsing algorithms, and how can they be optimized for practical use cases?
+
+### Peg Parsing
+
+**Parsing Expression Grammars (PEGs)** are another important concept. While PEGs are effective for many contexts, their ability to represent certain languages (like **anbncn**) remains an open question. However, PEGs have the advantage of providing a simple top-down interpretation, making them intuitive for writing parsers.
+
+**Discussion Question**: In what scenarios would PEG parsing be more advantageous than other parsing techniques, and what are its limitations?
+
+This concludes our overview of the Earley parser and its role in parsing arbitrary context-free grammars. By integrating it with fuzzing techniques, we can effectively test parsers against a variety of grammars, ensuring robustness and correctness.
+
 ## Reflection
+The article "Parsing Inputs" highlights the critical role of parsers in fuzzing by emphasizing how input parsers break down strings into derivation trees, which can then be mutated and recombined to generate new, valid inputs. I found the explanation of non-terminals, terminals, and the use of parsers like PEGParser and EarleyParser to be insightful. The examples, particularly the one about using a parser to improve fuzzing, demonstrated how incorporating grammar into the fuzzing process can significantly increase the likelihood of generating valid inputs, thus making fuzzing more effective.
+
+I particularly appreciated the in-depth exploration of the EarleyParser and its flexibility in handling context-free grammars, which was crucial for understanding how such parsers can be used for fuzz testing. The emphasis on using parsers to simplify complex input generation is an actionable takeaway that I will apply when generating more structured inputs in future fuzzing exercises. The discussion of recursion, ambiguity, and grammar restrictions also gave me a clearer understanding of the complexities involved in parsing different types of grammars, which can be beneficial when working with more complex systems.
 
 ## Action Items
-
+The action items derived from the reading emphasize the importance of understanding and implementing parsing techniques for enhancing fuzzing capabilities. To start, it is crucial to experiment with different parsing methods, such as PEG and Earley Parsers, to determine their applicability in generating valid input for fuzzing tools. The next step is to implement a parser class with the ability to handle context-free grammars, as it can support more complex structures and enhance the flexibility of fuzzing processes. Furthermore, the implementation of a grammar fuzzer should be explored, particularly using techniques like cache updates and random node expansions, to facilitate the generation of diverse test cases. Additionally, it is important to apply these parsing methods to generate meaningful and valid test data, as well as to test the parsers against various types of grammars, ensuring that all edge cases are addressed. Finally, an evaluation of the performance of each parsing method in terms of parsing efficiency and the quality of generated test inputs should be conducted, with the goal of optimizing fuzzing strategies.
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

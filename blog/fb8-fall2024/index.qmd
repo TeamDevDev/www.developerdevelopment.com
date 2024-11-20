@@ -211,9 +211,9 @@ display_tree(
 
 ![](left-tree.png)
 
-A grammar can also be indirectly left-recursive if the left-most symbols can be expanded using their definitions to produce the nonterminal as the left-most symbol of the expansion. For example `<integer>` will be considered hidden-left recursive if `<digit>` could derive an empty string.
+A grammar can also be indirectly left-recursive if the left-most symbols can be expanded using their definitions to produce the non-terminal as the left-most symbol of the expansion. For example `<integer>` will be considered hidden-left recursive if `<digit>` could derive an empty string.
 
-**Right-recurisve**
+**Right-recursive**
 
 Right recursive is the same idea but it expands the other direction.
 

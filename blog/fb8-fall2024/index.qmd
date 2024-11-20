@@ -249,19 +249,36 @@ recursive calls until after the regular input.
 
 #### Ambiguity
 
-Sometimes there are multiple trees from the same grammar called **parses**. The string `1+2+3` has two ways it can be parsed using the `A1_GRAMMAR`. One method to deal with this is to simply choose an order of resolution, perhaps choose the first tree in any case (PEGParser). Another approach returns all the trees (Earley parser).
+Sometimes there are multiple trees from the same grammar called **parses**. The
+string `1+2+3` has two ways it can be parsed using the `A1_GRAMMAR`. One method
+to deal with this is to simply choose an order of resolution, perhaps choose the
+first tree in any case (PEGParser). Another approach returns all the trees
+(Earley parser).
 
 ## A Parser Class
 
-To develop parsers there needs to be defined interface for parsing. There are two approaches to parsing a string using a grammar.
+To develop parsers there needs to be defined interface for parsing. There are
+two approaches to parsing a string using a grammar.
 
-The first approach is to use a lexer.  A lexer tokenizes an incoming string then feeds the grammar one token at a time. Each token represents a meaningful unit such as a number or keyword. The lexer handles the tokenization process, while the parser only has to focus on understanding the structure of the language using these tokens. The result of parsing is usually a shallow derivation tree, which can be converted into an Abstract Syntax Tree (AST).
+The first approach is to use a lexer.  A lexer tokenizes an incoming string then
+feeds the grammar one token at a time. Each token represents a meaningful unit
+such as a number or keyword. The lexer handles the tokenization process, while
+the parser only has to focus on understanding the structure of the language
+using these tokens. The result of parsing is usually a shallow derivation tree,
+which can be converted into an Abstract Syntax Tree (AST).
 
-The second approach is using a tree pruner. This occurs after the complete parse. The tree pruner removes the nodes that correspond to individual tokens and then replaces them with their actual string values as leaf nodes. This approach is more flexible and powerful additionally there is no separate step for lexing and parsing.
+The second approach is using a tree pruner. This occurs after the complete
+parse. The tree pruner removes the nodes that correspond to individual tokens
+and then replaces them with their actual string values as leaf nodes. This
+approach is more flexible and powerful additionally there is no separate step
+for lexing and parsing.
 
 ## Parsing Expression Grammars
 
-Parsing Expression Grammars (PEG) are recognition based grammars that specify a sequence of steps to take to parse a given string. Parsing expression grammars are represented by a set of nonterminals and corresponding alternatives representing how to match each. 
+Parsing Expression Grammars (PEG) are recognition based grammars that specify a
+sequence of steps to take to parse a given string. Parsing expression grammars
+are represented by a set of nonterminals and corresponding alternatives
+representing how to match each. 
 
 ```python
 PEG1 = {
@@ -269,7 +286,8 @@ PEG1 = {
 }
 ```
 
-Unlike context-free grammars alternatives represent ordered choices, meaning the parser will stop at the first matching rule it finds. 
+Unlike context-free grammars alternatives represent ordered choices, meaning the
+parser will stop at the first matching rule it finds. 
 
 ```python
 PEG2 = {
@@ -279,7 +297,9 @@ PEG2 = {
 
 ### The Packrat Parser for Predicate Expression Grammars
 
-Packrat parsing is one of the simplest parsing techniques used for PEGs. It works by caching results from previous parsing steps so if the same problem comes up again it can reuse the cached solution instead of redoing the work. 
+Packrat parsing is one of the simplest parsing techniques used for PEGs. It
+works by caching results from previous parsing steps so if the same problem
+comes up again it can reuse the cached solution instead of redoing the work. 
 
 ```python
 mystring = "1 + (2 * 3)"
@@ -295,16 +315,21 @@ for tree in peg.parse(mystring):
 
 #### Problems with PEG
 
-PEGs may at first appear simple but in some cases may include a little bit more thinking.
+PEGs may at first appear simple but in some cases may include a little bit more
+thinking.
 
 ```python
 PEG_SURPRISE: Grammar = {
     "<A>": ["a<A>a", "aa"]
 }
 ```
-When interpreted as a context free grammar and used as a string generator it will produce strings of the from aa, aaaa, aaaaaa. it produces strings where the number of a is 2 * n.
 
-PEGs are oriented towards language recognition and it is also unclear how to translate a PEG to a CFG. With the main focusing being fuzzing next we are going to look at parsers that can accept context-free grammars. 
+When interpreted as a context free grammar and used as a string generator it
+will produce strings of the form `aa`, `aaaa`, `aaaaaa`. It produces strings
+where the number of `a` is $2 * n$. PEGs are oriented towards language
+recognition and it is also unclear how to translate a PEG to a CFG. With the
+main focusing being fuzzing next we are going to look at parsers that can accept
+context-free grammars. 
 
 ## Earley Parsers
 

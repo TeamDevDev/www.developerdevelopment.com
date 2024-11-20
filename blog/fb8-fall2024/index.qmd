@@ -32,22 +32,20 @@ used to generate it.
 You can make a derivation tree of a given string to break it down into its
 grammar parts. Then it can be recombined using the same grammar to produce new
 strings. Trees allow us to mutate, crossover, and recombine their parts in order
-to generate new valid slightly different inputs. There are 2 main parsing
+to generate new valid slightly different inputs. There are two main parsing
 classes to make a string into a derivation tree.
 
-- Parsing Expression Grammar Parser (PEGParser) 
+- Parsing Expression Grammar Parser (`PEGParser`) 
 - Earley Parsers
 
-The PEGParser is efficient but limited to a specific grammar structure - rather
-than choosing all the rules that can potentially match it stops at the first
-match that succeeds.
-
-The Earley Parser can accept any kind of context-free grammars and explore all
-parsing alternatives.
+The `PEGParser` is efficient but limited to a specific grammar structure ---
+rather than choosing all the rules that can potentially match it stops at the
+first match that succeeds. The `EarleyParser` can accept any kind of
+context-free grammars and explore all parsing alternatives.
 
 ### To Use
 
-To use these parsers first you have initiate a grammar.
+To use these parsers first you have initiate a grammar:
 
 ```python
 >>> from Grammars import US_PHONE_GRAMMAR

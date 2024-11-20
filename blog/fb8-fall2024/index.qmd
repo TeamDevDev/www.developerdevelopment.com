@@ -11,13 +11,15 @@ page-layout: full
 
 ## Overview
 
+Sometimes we need inputs that follow a certain grammar structure in order to effectively use fuzzing. A good way to do that is to use a parser to break down the grammar of a template string and form new strings that follow the same grammar rules. Then you can generate a whole bunch of valid inputs to use to test to your hearts content! This article breaks down how parsers work so we can use them. How to use them is described in the next chapter.
+
 ## Summary
 
-Reminder a non-terminal is the rule or building blocks for the grammar such as `<digit>` and `<letter>` whereas a terminal is the actual digit or letter think of it as the desintation for the grammar like `2` or `a`.
+Reminder a non-terminal is the rule or building blocks for the grammar such as `<digit>` and `<letter>` whereas a terminal is the actual digit or letter think of it as the destination for the grammar like `2` or `a`.
 
 Given a string you can decompose it into its constituent parts that correspond to the parts of grammar used to generate it. 
 
-You can make a derivation tree of a given string to break it down into its grammar parts. Then it can be recombined using the same grammar to produce new strings. Trees allow us to mutatee, crossover, and recombine their parts in order to generate new valid slightly different inputs.
+You can make a derivation tree of a given string to break it down into its grammar parts. Then it can be recombined using the same grammar to produce new strings. Trees allow us to mutate, crossover, and recombine their parts in order to generate new valid slightly different inputs.
 
 There are 2 main parsing classes we will look at today to make a string into a derivation tree.
 - Parsing Expression Grammar Parser (PEGParser) 
@@ -46,13 +48,13 @@ Then you use the parse method to retrieve a list of possible derivation trees:
 
 ![](example-tree.png)
 
-These trees can be used for test generation. Notably for mutating and recombing existing inputs.
+These trees can be used for test generation. Notably for mutating and recombining existing inputs.
 
 ### Why Parsing for Fuzzing?
 
-Sometimes trying to generate valid inputs for fuzzing can be hard. For example if you have code that can only run if the first item has to be the stings `van` or `car` to work but you are randomly generating the input the chances of getting those to output are very low.
+Sometimes trying to generate valid inputs for fuzzing can be hard. For example if you have code that can only run if the first item has to be the strings `van` or `car` to work but you are randomly generating the input the chances of getting those to output are very low.
 
-We can give the input generator our grammar but just the grammar itself is not enough to make valid inputs. Even if you modify the fuzzer to know more about the way the inputs are formated there is still difficulty getting valid inputs.
+We can give the input generator our grammar but just the grammar itself is not enough to make valid inputs. Even if you modify the fuzzer to know more about the way the inputs are formatted there is still difficulty getting valid inputs.
 
 ```python
 class PooledGrammarFuzzer(GrammarFuzzer):
@@ -107,7 +109,7 @@ for i in range(trials):
 
 ### Using a Parser
 
-The parser processes structured input. The parsers in this chapter take an input string and turn it into a derviation tree. 
+The parser processes structured input. The parsers in this chapter take an input string and turn it into a derivation tree. 
 
 The next chapter is about using the parser for testing but this chapter is about understanding how parsers work. 
 
@@ -196,11 +198,22 @@ display_tree(('<start>', [('<A>', [
 
 ![](right-tree.png)
 
-#### Abiguity
+**Discussion Question**: Do you think left or right recursion is beter for top-down parsers and why?
 
-Sometimes there are multiple trees from the same grammar called **parses**. The sting `1+2+3` has two ways it can be parsed using the `A1_GRAMMAR`. One method to deal with this is to simply choose an order of resolution, perhaps choose the first tree in any case (PEGParser). Another approach returns all the trees (Earley parser).
+<details>
+<summary>Click to Expand for the Answer</summary>
 
-### A Parser Class
+**Answer: Right Recursion!**  
+
+Left recursion can get caught in infinite loops with top-down parsers which is not ideal. Right recursion avoids that problem because it waits to do more recursive calls until after the regular input.
+
+</details>
+
+#### Ambiguity
+
+Sometimes there are multiple trees from the same grammar called **parses**. The string `1+2+3` has two ways it can be parsed using the `A1_GRAMMAR`. One method to deal with this is to simply choose an order of resolution, perhaps choose the first tree in any case (PEGParser). Another approach returns all the trees (Earley parser).
+
+## A Parser Class
 
 To develop parsers there needs to be defined interface for parsing. There are two approaches to parsing a string using a grammar.
 
@@ -208,7 +221,7 @@ The first approach is to use a lexer.  A lexer tokenizes an incoming string then
 
 The second approach is using a tree pruner. This occurs after the complete parse. The tree pruner removes the nodes that correspond to individual tokens and then replaces them with their actual string values as leaf nodes. This approach is more flexible and powerful additionally there is no separate step for lexing and parsing.
 
-### Parsing Expression Grammars
+## Parsing Expression Grammars
 
 Parsing Expression Grammars (PEG) are recognition based grammars that specify a sequence of steps to take to parse a given string. Parsing expression grammars are represented by a set of nonterminals and corresponding alternatives representing how to match each. 
 
@@ -253,9 +266,9 @@ PEG_SURPRISE: Grammar = {
 ```
 When interpreted as a context free grammar and used as a string generator it will produce strings of the from aa, aaaa, aaaaaa. it produces strings where the number of a is 2 * n.
 
-PEGs are oriented towards language recognition and it is also unclear how to translate a PEG to a CFG. With the main focusing being fuzzing next we are going to look at parsers tha can accept context-free grammars. 
+PEGs are oriented towards language recognition and it is also unclear how to translate a PEG to a CFG. With the main focusing being fuzzing next we are going to look at parsers that can accept context-free grammars. 
 
-# Earley Parsers
+## Earley Parsers
 
 The **Earley parser** is a versatile general-purpose parser capable of parsing any arbitrary Context-Free Grammar (CFG). It was developed by **Jay Earley** in 1970 for computational linguistics. Although its computational complexity is \(O(n^3)\) for parsing strings with arbitrary grammars, it can efficiently parse strings with unambiguous grammars in \(O(n^2)\) time. It can also parse all **LR(k)** grammars in linear time, \(O(n)\) as noted by **Joop M.I.M. Leo** in 1991. Further enhancements, particularly in handling epsilon rules, were introduced by **Aycock et al.** in 2002.
 

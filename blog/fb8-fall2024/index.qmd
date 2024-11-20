@@ -11,23 +11,38 @@ page-layout: full
 
 ## Overview
 
-Sometimes we need inputs that follow a certain grammar structure in order to effectively use fuzzing. A good way to do that is to use a parser to break down the grammar of a template string and form new strings that follow the same grammar rules. Then you can generate a whole bunch of valid inputs to use to test to your hearts content! This article breaks down how parsers work so we can use them. How to use them is described in the next chapter.
+Sometimes we need inputs that follow a certain grammar structure in order to
+effectively use fuzzing. A good way to do that is to use a parser to break down
+the grammar of a template string and form new strings that follow the same
+grammar rules. Then you can generate a whole bunch of valid inputs to use to
+test to your hearts content! This article breaks down how parsers work so we can
+use them. How to use them is described in the next chapter.
 
 ## Summary
 
-Reminder a non-terminal is the rule or building blocks for the grammar such as `<digit>` and `<letter>` whereas a terminal is the actual digit or letter think of it as the destination for the grammar like `2` or `a`.
+Reminder a non-terminal is the rule or building blocks for the grammar such as
+`<digit>` and `<letter>` whereas a terminal is the actual digit or letter think
+of it as the destination for the grammar like `2` or `a`.
 
-Given a string you can decompose it into its constituent parts that correspond to the parts of grammar used to generate it. 
+Given a string you can decompose it into its constituent parts that correspond
+to the parts of grammar used to generate it. 
 
-You can make a derivation tree of a given string to break it down into its grammar parts. Then it can be recombined using the same grammar to produce new strings. Trees allow us to mutate, crossover, and recombine their parts in order to generate new valid slightly different inputs.
+You can make a derivation tree of a given string to break it down into its
+grammar parts. Then it can be recombined using the same grammar to produce new
+strings. Trees allow us to mutate, crossover, and recombine their parts in order
+to generate new valid slightly different inputs.
 
-There are 2 main parsing classes we will look at today to make a string into a derivation tree.
+There are 2 main parsing classes we will look at today to make a string into a
+derivation tree.
 - Parsing Expression Grammar Parser (PEGParser) 
 - Earley Parsers
 
-The PEGParser is efficient but limited to a specific grammar structure - rather than choosing all the rules that can potentially match it stops at the first match that succeeds.
+The PEGParser is efficient but limited to a specific grammar structure - rather
+than choosing all the rules that can potentially match it stops at the first
+match that succeeds.
 
-The Earley Parser can accept any kind of context-free grammars and explore all parsing alternatives.
+The Earley Parser can accept any kind of context-free grammars and explore all
+parsing alternatives.
 
 ### To Use
 
@@ -52,9 +67,14 @@ These trees can be used for test generation. Notably for mutating and recombinin
 
 ### Why Parsing for Fuzzing?
 
-Sometimes trying to generate valid inputs for fuzzing can be hard. For example if you have code that can only run if the first item has to be the strings `van` or `car` to work but you are randomly generating the input the chances of getting those to output are very low.
+Sometimes trying to generate valid inputs for fuzzing can be hard. For example
+if you have code that can only run if the first item has to be the strings `van`
+or `car` to work but you are randomly generating the input the chances of
+getting those to output are very low.
 
-We can give the input generator our grammar but just the grammar itself is not enough to make valid inputs. Even if you modify the fuzzer to know more about the way the inputs are formatted there is still difficulty getting valid inputs.
+We can give the input generator our grammar but just the grammar itself is not
+enough to make valid inputs. Even if you modify the fuzzer to know more about
+the way the inputs are formatted there is still difficulty getting valid inputs.
 
 ```python
 class PooledGrammarFuzzer(GrammarFuzzer):
@@ -105,7 +125,7 @@ for i in range(trials):
 '/~NE,car,car'	 not enough values to unpack (expected at least 4, got 3)
 ```
 
-**The solution: A parser. A parser can extract the template for inputs and and valid values from samples and use them for fuzzing!**
+**The solution: A parser. A parser can extract the template for inputs and valid values from samples and use them for fuzzing!**
 
 ### Using a Parser
 

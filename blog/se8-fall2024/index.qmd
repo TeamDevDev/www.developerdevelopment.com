@@ -200,8 +200,8 @@ Good style guides have rules that do three things:
 - Rules to enforce best practices 
 - Riles to ensure consistency
 
-Dangerous rules are things that allow bugs to creep in such as using lamba 
-expressions or hard to use langauge features.
+Dangerous rules are things that allow bugs to creep in such as using lambda
+expressions or hard to use language features.
 
 Best practices are meant to make code more readable. 
 

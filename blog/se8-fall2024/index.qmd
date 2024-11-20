@@ -148,7 +148,7 @@ Even if current developers understand a confusing construct there is no
 guarantee the future will. These non-obvious features can cause misuse and
 introduce bugs. 
 
-Google's Python style guide avoids using `power` features such as reflection.
+Google's Python style guide avoids using "power" features such as reflection.
 `hasattr()` and `getattr()` for example give access to an object using strings.
 
 Here is an example in Python:
@@ -195,6 +195,19 @@ is important?**
 
 #### The Style Guide
 
+Good style guides have rules that do three things:
+- Rules to avoid dangers
+- Rules to enforce best practices 
+- Riles to ensure consistency
+
+Dangerous rules are things that allow bugs to creep in such as using lambda
+expressions or hard to use language features.
+
+Best practices are meant to make code more readable. 
+
+Building consistency is how you can choose a standard and not debate about 
+them wasting time. You choose a standard and stick with it.
+
 ### Changing the Rules 
 
 Style guides are not static. As with many things in software engineering, style
@@ -222,7 +235,7 @@ back to snake_case naming in Python.
 
 #### The Process
 
-The process used at google for changing a style guide is a solution based one.
+The process used at Google for changing a style guide is a solution based one.
 This means that if an update is proposed it has to be a solution to an existing
 problem and not a hypothetical situation.
 
@@ -230,7 +243,7 @@ problem and not a hypothetical situation.
 
 #### The Style Arbiters
 
-At google each language's style guide has to be approved by the style arbiters.
+At Google each language's style guide has to be approved by the style arbiters.
 This group is are long-time language experts and are designated to make the
 final decisions. With this being said they do not make the decision on their
 own. They have to take into account the trade-offs for the proposed change and
@@ -270,7 +283,7 @@ detail of a topic but they should provide explanations and recommend use. This
 can be useful for new members to reference because primers can give you the
 necessary information needed to implement a feature without any excess. 
 
-As with many things done at google these guides are covering many issues that
+As with many things done at Google these guides are covering many issues that
 have already occurred. It is not focused on situations that are hypothetical but
 instead common issues that have real application. With this being said they are
 still pieces of advice, unlike the rules in the style guide. Guidance is more
@@ -362,6 +375,5 @@ the style guide effectively. Resources such as primers, training sessions, or
 concise "tip-of-the-week" articles can help bridge knowledge gaps and foster
 alignment across the team. By implementing these steps, your team can establish
 a style guide that supports both high-quality code and efficient collaboration.
-
 
 {{< include /_back-blog.qmd >}}

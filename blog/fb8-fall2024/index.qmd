@@ -211,7 +211,10 @@ display_tree(
 
 ![](left-tree.png)
 
-A grammar can also be indirectly left-recursive if the left-most symbols can be expanded using their definitions to produce the non-terminal as the left-most symbol of the expansion. For example `<integer>` will be considered hidden-left recursive if `<digit>` could derive an empty string.
+A grammar can also be indirectly left-recursive if the left-most symbols can be
+expanded using their definitions to produce the non-terminal as the left-most
+symbol of the expansion. For example `<integer>` will be considered hidden-left
+recursive if `<digit>` could derive an empty string.
 
 **Right-recursive**
 
@@ -230,14 +233,17 @@ display_tree(('<start>', [('<A>', [
 
 ![](right-tree.png)
 
-**Discussion Question**: Do you think left or right recursion is beter for top-down parsers and why?
+**Discussion Question**: Do you think left or right recursion is better for
+top-down parsers and why?
 
 <details>
 <summary>Click to Expand for the Answer</summary>
 
 **Answer: Right Recursion!**  
 
-Left recursion can get caught in infinite loops with top-down parsers which is not ideal. Right recursion avoids that problem because it waits to do more recursive calls until after the regular input.
+Left recursion can get caught in infinite loops with top-down parsers which is
+not ideal. Right recursion avoids that problem because it waits to do more
+recursive calls until after the regular input.
 
 </details>
 

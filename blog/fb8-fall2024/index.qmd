@@ -4,7 +4,7 @@ title: Parsing Inputs
 date: '2024-11-20'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>How can input parsers help with fuzzing? How can parsing inputs make more inputs for fuzzing? </em>
+description: <em>How can input parsers aid fuzzers?</em>
 toc: true
 page-layout: full
 ---
@@ -25,18 +25,16 @@ use them is described in the next chapter.
 
 Reminder a non-terminal is the rule or building blocks for the grammar such as
 `<digit>` and `<letter>` whereas a terminal is the actual digit or letter think
-of it as the destination for the grammar like `2` or `a`.
-
-Given a string you can decompose it into its constituent parts that correspond
-to the parts of grammar used to generate it. 
+of it as the destination for the grammar like `2` or `a`. Given a string you can
+decompose it into its constituent parts that correspond to the parts of grammar
+used to generate it. 
 
 You can make a derivation tree of a given string to break it down into its
 grammar parts. Then it can be recombined using the same grammar to produce new
 strings. Trees allow us to mutate, crossover, and recombine their parts in order
-to generate new valid slightly different inputs.
+to generate new valid slightly different inputs. There are 2 main parsing
+classes to make a string into a derivation tree.
 
-There are 2 main parsing classes we will look at today to make a string into a
-derivation tree.
 - Parsing Expression Grammar Parser (PEGParser) 
 - Earley Parsers
 

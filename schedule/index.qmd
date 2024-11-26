@@ -90,14 +90,14 @@ listing:
 
 ::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
 
-The Fall 2024 edition of Computer Science 203 has  **Exam Code G**, which means
-that the final examination will take place on Thursday, December 11, 2024 at
-9:00 AM. Completion of the final examination must adhere to all of the policies
-in the Allegheny College Academic Bulletin and the Allegheny College Faculty
-Handbook. The final executable examination is cumulative in regards to the
-technical, professional, and project content previously covered between week one
-and week sixteen. This list describes the content that will be covered on the
-final executable examination.
+The Fall 2024 edition of Computer Science 203 has **Exam Code G**, which means
+that the final examination will take place on **Wednesday, December 11, 2024 at
+9:00 AM**. Completion of the final examination must adhere to all of the
+policies in the Allegheny College Academic Bulletin and the Allegheny College
+Faculty Handbook. The final executable examination is cumulative in regards to
+the technical, professional, and project content previously covered between
+week one and week sixteen. This list describes the content that will be covered
+on the final executable examination.
 
 - {{< iconify fa6-solid flag-checkered size=18px >}} **Thursday, December 11, 2024 at 9:00 AM**: Executable Examination
   - *Demonstrate technical and professional skills in software engineering*:
@@ -107,5 +107,6 @@ final executable examination.
     - Debug defective Python functions
     - Confirm output of Python functions
     - Covers all content in SE, FB, and DB
+    - Answer questions during in-person assessment
 
 :::

@@ -1,0 +1,26 @@
+---
+author: [Philip Olwoc, Hannah Brown, Rebekah Rudd, Gregory M. Kapfhammer]
+title: 'Input Title'
+date: '2024-12-04'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>Add question</em>
+toc: true
+page-layout: full
+---
+
+# Overview (edit)
+
+This article covers the [Reducing Failure-Inducing
+Inputs](https://www.fuzzingbook.org/html/Reducer.html) chapter from [Fuzzing
+Book](https://www.fuzzingbook.org/). This chapter builds on the concepts from
+the [Fuzzing](https://www.fuzzingbook.org/html/Fuzzer.html) and [Fuzzing With
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapters. Let's get started and learn more about increasing the efficiency of fuzzed inputs and bug finding!
+
+# Summary (hannah)
+
+# Delta Debugging
+
+# Grammar Based Reduction (philip)
+
+# Use Cases (hannah)

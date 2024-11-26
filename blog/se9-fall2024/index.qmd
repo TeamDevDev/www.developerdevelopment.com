@@ -101,3 +101,21 @@ This stop people from having to run tests, linters, or formatters is can be done
 and catch certain errors before being reviewed. It helps people so they can spend other time on bigger issues with the code. 
 
 # Different Types of Code Reviews
+
+As we talk about this section one aspect I want you all to consider is: how much of our code have fallen into each of these respective categories? What are the buckets/categories that our code review generally falls into?
+
+## Greenfield reviews and new code
+
+Greenfield review has to do with writing new code. The chapter opened this section by saying that Greenfield code reviews are "the least common type of code review." Though this is not the case for our class. Why might this be? (the size of our code base and the newness of it) This section also considers the difference between design review and code review. Design review considers the design of the tool or how code is implemented, while code review has to do more with the usability of it. This is also an important time to consider longevity of the code that has been written especially because it is new to the code base. What do you think it is called Greenfield?
+
+## Behavioral changes, improvement, and optimizations
+
+These types of changes are most common at Google and they have to do with changes to existing code. This section gave the important reminder that some of the best changes to a code base can be deletions. Which we has seen in class with the PR that is deleting the `coverage.json` file in `execexam`. The sames steps that apply in the Greenfield review also apply here. Both these changes must be made in a Continuos Integration System. 
+
+## Bug fixes and rollbacks
+
+Code changes that have to do with bug fixes is should only correct that bug. It is easy to want to changes multiple issues with one change to the code, but this is not good practice when making changes to the code base. Rollbacks is something that was also addressed in this section. Rollbacks is when a change is made in the code base that doesn't work and there is a decision made that is reverted to a previous state of the code before the change. Though the code doesn't actually go back it is going forward but the code is the same before the not working change was implemented. It is important to note that there is always a possibility of having to do a rollback, so this should be considered whenever making changes to the code base.
+
+## Refactorings and large-scale changes
+
+Some changes to the code base are automated. While these changes are written by a machine and not a human they still must be reviewed in the same manner. Though with LSC no one person can veto a change, otherwise they would take too long to implement.

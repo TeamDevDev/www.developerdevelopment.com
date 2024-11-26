@@ -25,8 +25,8 @@ to show code comprehension. Code review can cause anxiety and stress to all diff
 people. Which is why all feedback and critisim need to be professional.
 
 If the writer of the code method is deficient the rewiever should point out different approaches but if the writer
-can prove that approach is a valid way the reviwer should respect the choice. When a code reviwer finds defects it should
-be taken as an opportunity to learn. Reviwers should ask question and see why code was written a certain way to understand
+can prove that approach is a valid way the reviewer should respect the choice. When a code reviewer finds defects it should
+be taken as an opportunity to learn. Reviewers should ask question and see why code was written a certain way to understand
 before jumping to an conclusions. Also, is important to see each comment as a TODO item. Each comment should at least be
 addressed. Instead of marking the comment resolved if you disagree, try to resolve it by both stating their side. A common
 way to keep coversations civil if the writer disagrees is to ask the reviewer to please take another look (PTAL). 
@@ -44,7 +44,7 @@ helps the process of large changes to be accommodate.
 
 "Small" changes are usually 200 lines or less of code. The changes should be small enough that it is easy on the reviwer and it does not
 cause a delay with the review. It is better for a writer if the review is quicker. This helps so the flow does not change. If the works takes
-a while to reviwed it can disrupt the flow. Additionally this can impact future code and cause time to be wasted if the reviw is not quick.
+a while to reviewed it can disrupt the flow. Additionally this can impact future code and cause time to be wasted if the review is not quick.
 
 #### Write Good Change Descriptions
 
@@ -52,22 +52,22 @@ On the first line should be the type of change for a change description. The fir
 a summary of the code which is important.
 
 Even though the change is being summaries in the first line, you should still explain what was changed and why. A good way to share if many
-modifications were made is with a list. Finding the orignal change helps when fixing a bug. 
+modifications were made is with a list. Finding the original change helps when fixing a bug. 
 
 There are other times when you can add documentations to change. When a reviwer looks at the writer's code is confuses it is a good sign that
-the code needs better structure or comments. Always update the change description or or add comments to the implimentation if a new decision reached.
+the code needs better structure or comments. Always update the change description or or add comments to the implementation if a new decision reached.
 Code review is not just done in the moment. It is done over times for what was did. 
 
 #### Keep Reviewers to a Minimum
 
 Most the time people in the industry want to get many inputs on their code because each person can add their own insight.
-However, having to many reviwers can lead to the feedback being less valued. If we trust the people reviwing then it helps
-the proccess have less people. If your code review calls for many people then it is important for each person to write on a differnet
+However, having to many reviewers can lead to the feedback being less valued. If we trust the people reviewing then it helps
+the proccess have less people. If your code review calls for many people then it is important for each person to write on a different
 part of the change so they are not the same.
 
 #### Automate Where Possible
 
-Code review is a process done by humans. If parts of the proccess can be stream lined do it. An example
+Code review is a process done by humans. If parts of the process can be stream lined do it. An example
 of a stream line is presubmits. Presubmits save people time since it checks what is being sent to be reviewed.
 This stop people from having to run tests, linters, or formatters is can be done for them. Which makes it easier to change
 and catch certain errors before being reviewed. It helps people so they can spend other time on bigger issues with the code. 

@@ -119,3 +119,7 @@ Code changes that have to do with bug fixes is should only correct that bug. It 
 ## Refactorings and large-scale changes
 
 Some changes to the code base are automated. While these changes are written by a machine and not a human they still must be reviewed in the same manner. Though with LSC no one person can veto a change, otherwise they would take too long to implement.
+
+# Moving Forward
+
+We have implemented many of these code review practices in class, from knowledge sharing through code reviews to writing and creating PRs. What are aspects of this process that we implement differently from Google? Are there some practices that we should start moving forward?

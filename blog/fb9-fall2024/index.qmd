@@ -21,13 +21,46 @@ Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapters. Let's get st
 
 ## Delta Debugging
 
-Delta debugging is using fuzzing to find what fails and then taking the large input to reduce it to the part of the string that was failing. This will decrease the inputs and help the user know what is failing so that then they are able to find the bug more easily. The goal is to find failures so that we can then find out why the code failed and how to fix the issue.
+Delta debugging uses fuzzing to find what fails and then takes the large input and reduces it to the part of the string that is failing. This decreases the inputs and helps the programmer know what is failing so that then they are able to find the bug more easily. The goal is to find failures in order to then find the reason why the code failed and how to fix the issue.
 
 "A reducer takes a failure-inducing input and reduces it to the minimum that still reproduces the failure." This chapter shows the Reducer class.
 
-Manual reduction input has to do with manually testing ans iterating through the code in order to find the bug. Where as delta debugging automates this process of testing in order to find the failures. 
+```python
+class Reducer:
+    """Base class for reducers."""
 
-Delta debugging first tests the first half of the code to see if it fails. If it passes it will then test the second half of the string. If that also passes the delta debugger will iterate through different combinations of different quarters of the string. The size of the string that the delta debugger tests gets smaller and smaller until there are only one or two characters left. But this can be confusing so lets walk through an example. 
+    def __init__(self, runner: Runner, log_test: bool = False) -> None:
+        """Attach reducer to the given `runner`"""
+        self.runner = runner
+        self.log_test = log_test
+        self.reset()
+
+    def reset(self) -> None:
+        """Reset the test counter to zero. To be extended in subclasses."""
+        self.tests = 0
+
+    def test(self, inp: str) -> Outcome:
+        """Test with input `inp`. Return outcome.
+        To be extended in subclasses."""
+
+        result, outcome = self.runner.run(inp)
+        self.tests += 1
+        if self.log_test:
+            print("Test #%d" % self.tests, repr(inp), repr(len(inp)), outcome)
+        return outcome
+
+    def reduce(self, inp: str) -> str:
+        """Reduce input `inp`. Return reduced input.
+        To be defined in subclasses."""
+
+        self.reset()
+        # Default: Don't reduce
+        return inp
+```
+
+Manual reduction input has to do with manually testing and iterating through the code in order to find the bug; where as delta debugging automates this process of testing in order to find the failures. 
+
+Delta debugging first tests the first half of the code to see if it fails. If it passes it will then test the second half of the string. If that also passes the delta debugger will iterate through different combinations of the string quarters. The size of the string that the delta debugger tests gets smaller and smaller until there are only one or two characters left. But this can be confusing so lets walk through an example:
 
 ```python
 dd_reducer = DeltaDebuggingReducer(mystery, log_test=True)
@@ -74,11 +107,11 @@ Test #29 ')' 1 PASS
 
 ### Benefits
 
-First, one benefit of a delta debugger is that it "reduces the cognitive load of the programmer". It makes it so the test cases can address a problem specifically rather than a broad unaddressable problem. Second, it also makes the problem easier to communicate to others. And finally, it can make it more obvious to programmers if there are duplicates in a test case that are addressing the same problem.
+First, one benefit of a delta debugger is that it "reduces the cognitive load of the programmer". It makes it so the test cases can address one problem specifically rather than broad unaddressable problems. Second, it also makes the problem easier to communicate to others. And finally, reducing the failure-inducing input can make it more obvious to programmers if there are duplicates in their test cases.
 
 **But is this effective?**
 
-The best case for this is logarithmic or Big O(log2 n). While the worst case is Big O(n^2). This happens when the program runs and the last character fails. If the last character fails the program will then return an AssertionError. The goal is for the last character to pass so that it is clear the error resulted in the penultimate character.
+The best case for this is logarithmic or Big O(log2 n), while the worst case is Big O(n^2). The worst chase situation happens when the program runs and the last character fails. If the last character fails the program will then return an AssertionError. The goal is for the last character to pass so that it is clear that the error resulted in the penultimate character. Here is a graph of these Big O notations:
 
 ![Big O(n) graph comparisons](big0n_graph.gif)
 

@@ -9,8 +9,36 @@ toc: true
 page-layout: full
 ---
 
+## Overview & Summary
+This blog post discusses the [Code
+Review](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book). This chapter discusses having someone besides the author of the code review the code before it is added to a code base. This chapter goes through Google's process and required elements before any change to the code base was added. 
 
-### Code Review Best Practices
+# Introduction
+
+There are many different strategies that different companies have employed when it comes to code review from "gatekeeping" to having certain teams responsible for different aspects of the process. This chapter also discusses many benefits of code review from debugging to knowledge sharing and many other benefits. There are even some psychological benefits. 
+
+## Code Review Flow
+When a code reviews take place they can happen at many different stages of development. When a change is looked over before added to a code base that is called a "precommit review". 
+What does LGTM mean and how is it used at Google? 
+How do these steps of the typical code review process of Google work in our classroom?
+1. A user makes changes to the code base.
+2. Once the creator is done with the change they will send it or share it with a colleague.
+3. Reviewers of the code make comments and change requests to the code.
+4. The change maker will make any required changes.
+5. The reviewers give a LGTM.
+6. After the change is approved the changes are made to the code base.
+
+## Code is a Liability
+An important takeaway from this section is that code is always a liability. ALWAYS. This chapter compares the important of code to fuel in an airplane. Just like an airplane needs fuel to fly and the fuel must be bought and has weight and other inconveniences is it necessary for the airplane to fly. Our programs would not work without code and so though it is a liability it is necessary.
+
+What are some reasons that code is considered a liability?
+- it can add bugs to the programs
+- any code added must be maintained
+
+# How code review works at Google (PHILIP)
+
+# Code Review Best Practices
 
 Reviewing code can causes many problems. It can cause friction and be a time delay.
 There are many practices that need to be set in place so code review can run smoothly and
@@ -18,7 +46,7 @@ be worth it.
 
 **Discution Question: Are there are an problems that we have run into as a group with code review??
 
-#### Be Polite and Professional
+## Be Polite and Professional
 
 Google has an environment of trust and respect. At Google they need a LGTM for one software engineer
 to show code comprehension. Code review can cause anxiety and stress to all different level of skilled
@@ -35,7 +63,7 @@ It is important to remember that as a writer of the code about profesionalism. O
 yours anymore it becomes the team's. Be open to question and be able to share why wrote your code in the way you did. Writers of code
 have a responsibilty to make the code cna last in the future while being understood.
 
-#### Write Small Changes
+## Write Small Changes
 
 A way to keep the proccess quick is to make changes small. It should be easy to look at the review and tackle the issue from both sides.
 It also helps cut down the time it takes. Having smaller changes makes it easier further down to know where a bug is if one arises. However,
@@ -46,7 +74,7 @@ helps the process of large changes to be accommodate.
 cause a delay with the review. It is better for a writer if the review is quicker. This helps so the flow does not change. If the works takes
 a while to reviwed it can disrupt the flow. Additionally this can impact future code and cause time to be wasted if the reviw is not quick.
 
-#### Write Good Change Descriptions
+## Write Good Change Descriptions
 
 On the first line should be the type of change for a change description. The first line is just like a subject line in an email. It is
 a summary of the code which is important.
@@ -58,16 +86,18 @@ There are other times when you can add documentations to change. When a reviwer 
 the code needs better structure or comments. Always update the change description or or add comments to the implimentation if a new decision reached.
 Code review is not just done in the moment. It is done over times for what was did. 
 
-#### Keep Reviewers to a Minimum
+## Keep Reviewers to a Minimum
 
 Most the time people in the industry want to get many inputs on their code because each person can add their own insight.
 However, having to many reviwers can lead to the feedback being less valued. If we trust the people reviwing then it helps
 the proccess have less people. If your code review calls for many people then it is important for each person to write on a differnet
 part of the change so they are not the same.
 
-#### Automate Where Possible
+## Automate Where Possible
 
 Code review is a process done by humans. If parts of the proccess can be stream lined do it. An example
 of a stream line is presubmits. Presubmits save people time since it checks what is being sent to be reviewed.
 This stop people from having to run tests, linters, or formatters is can be done for them. Which makes it easier to change
 and catch certain errors before being reviewed. It helps people so they can spend other time on bigger issues with the code. 
+
+# Different Types of Code Reviews

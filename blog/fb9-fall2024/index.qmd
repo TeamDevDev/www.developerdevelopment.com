@@ -119,5 +119,60 @@ The best case for this is logarithmic or Big O(log2 n), while the worst case is 
 One issue is that with delta debugging is that it is prone to failure. This method is not always accurate. In addition, another issue is that it is not the most efficient method of determining the failing piece of code. Which leads us to the another method of iterating through the fuzzing produced string in order to find the piece of the string that is failing called Grammar Based Reduction. 
 
 ## Grammar Based Reduction (philip)
+Delta debugging may take multiple attempts at reduction, if the input language is syntactically complex.This is where Grammar-Based Reduction comes in, this approach uses grammars to simplify complex syntactic inputs.
 
+# Lexical Reduction vs. Syntactic Rules
+With Lexical Reduction, the input is broken down based on character, without taking into account the grammar rules. In the example below the string, "1 + (2 * 3)" is broken down many times into various versions of itself, but it doesn’t follow the same grammatical pattern.
+```python
+expr_input = "1 + (2 * 3)"
+dd_reducer = DeltaDebuggingReducer(mystery, log_test=True)
+dd_reducer.reduce(expr_input)
+```
+This is an issue because it produces many invalid invalid which in turn lead to meaningless invalid test cases.
+
+On the other hand using syntactic rules allows you to produce valid inputs to parse so that your test cases are meaningful, since the inputs it produces still follow the intended grammatical pattern.
+```python
+class EvalMysteryRunner(MysteryRunner):
+    def __init__(self) -> None:
+        self.parser = EarleyParser(EXPR_GRAMMAR)
+
+    def run(self, inp: str) -> Tuple[str, Outcome]:
+        try:
+            tree, *_ = self.parser.parse(inp)
+        except SyntaxError:
+            return (inp, Runner.UNRESOLVED)
+
+        return super().run(inp)
+eval_mystery = EvalMysteryRunner()
+
+dd_reducer = DeltaDebuggingReducer(eval_mystery, log_test=True)
+dd_reducer.reduce(expr_input)
+```
+In this example the  inputs are either valid or unresolved allowing you to use the valid one in you test cases.
+
+## A Grammar-Based Reduction Approach
+The grammar-based reduction approach simplifies complex inputs by operating on the structure of the input’s derivation tree, rather than just reducing the string. In the Fuzzing book it talks about two strategies, Replacing the subtrees and Alternative Expansions.
+
+# Replacing the Subtrees
+Replacing the subtress means to take a larger part of the tree and replace it with a smaller part of the tree. In the example given it shows the original tree which makes up the string "1 + (2 * 3)" and then being broken down to "(2 * 3)" by replacing the upper most <expr> with the lowest <expr>.
+
+```py
+from Grammars import Grammar
+from GrammarFuzzer import all_terminals, expansion_to_children, display_tree
+derivation_tree, *_ = EarleyParser(EXPR_GRAMMAR).parse(expr_input)
+display_tree(derivation_tree)pyt
+```
+
+# Alternative Expansions
+Using alternative expansions we would change how the term is expanded. In the example given in the book it took the non-terminal <term> * <factor> which would’ve given the output (2 * 3), and broke it by altering how the term would expand, which is <term> : := <factor>. Therefore changing the grammatical rule of how <term> would expand.
+
+```py
+import copy
+from Grammars import Grammar
+from GrammarFuzzer import all_terminals, expansion_to_children, display_tree
+new_derivation_tree = copy.deepcopy(derivation_tree)
+# We really should have some query language
+sub_expr_tree = new_derivation_tree[1][0][1][2]
+display_tree(sub_expr_tree)
+```
 ## Use Cases (hannah)

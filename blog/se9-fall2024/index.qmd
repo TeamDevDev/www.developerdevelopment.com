@@ -41,9 +41,7 @@ An important takeaway from this introduction section is that code is always a li
 * it can add bugs to the programs
 * any code added must be maintained </details>
 
-## How Code Review Works at Google
-
-## Code Review Benefits
+## How Code Review Works at Google & Code Review Benefits
 
 ### Code Correctness
 Code review is a crucial process that ensures the correctness of code changes by assessing their testing, design, and efficiency. It helps catch potential bugs before they are introduced into the codebase, saving time and resources in debugging and regression testing. Human code reviews are vital for catching nuanced issues and aligning with a "shift left" strategy. At Google, the primary value of code review extends beyond correctness, focusing on ensuring code is understandable, maintainable, and scalable over time. This broader focus emphasizes that code reviews are not just about perfection; they are essential for building sustainable, high-quality software.

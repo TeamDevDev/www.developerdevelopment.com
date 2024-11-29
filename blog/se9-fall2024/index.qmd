@@ -67,7 +67,7 @@ Reviewing code can causes many problems. It can cause friction and be a time del
 There are many practices that need to be set in place so code review can run smoothly and
 be worth it. 
 
-**Discussion Question: Are there are an problems that we have run into as a group with code review?**
+**Discussion Question: Are there any problems that we have run into as a group with code review?**
 
 ### Be Polite and Professional
 

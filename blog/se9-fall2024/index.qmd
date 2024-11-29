@@ -16,26 +16,7 @@ Review](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
 
 ## Introduction
 
-There are many strategies that different companies have employed when it comes to code review, from "gatekeeping" to having certain teams responsible for different aspects of the process. Beyond these, this chapter considers the many benefits of code review from debugging to knowledge sharing. There are even psychological benefits discussed. 
-
-### Code Review Benefits
-Code Correctness
-Code review is a crucial process that ensures the correctness of code changes by assessing their testing, design, and efficiency. It helps catch potential bugs before they are introduced into the codebase, saving time and resources in debugging and regression testing. Human code reviews are vital for catching nuanced issues and aligning with a "shift left" strategy. At Google, the primary value of code review extends beyond correctness, focusing on ensuring code is understandable, maintainable, and scalable over time. This broader focus emphasizes that code reviews are not just about perfection; they are essential for building sustainable, high-quality software.
-
-## Code Comprehension 
-Code review is a crucial process that allows an unbiased evaluation of a code change, ensuring its long-term maintainability and comprehension. It is essential for organizations like Google, where the code is often read and maintained more than it is written. The primary goals of code review are to verify correctness and ensure comprehension, which form the basis for an "LGTM" (Looks Good To Me) approval. However, additional approvals may be required to confirm that the code aligns with long-term sustainability goals, ensuring it can be effectively maintained as the codebase evolves.
-
-Involving a reviewer who may later maintain or use the code is beneficial as their perspective can identify potential issues with clarity and usability. Questions raised during the review should be treated as valid feedback, prompting better explanations or revisions to improve understanding, even if the core logic remains unchanged. This emphasizes the importance of code review as a collaborative and future-focused practice.
-
-## Code Consistency
-As software scales, maintainability of code is crucial as it will be read, understood, and refactored by others long after the original author has moved on. Code should conform to consistent standards and avoid unnecessary complexity, making it easier to comprehend and maintain. Google separates LGTM (correctness and comprehension) approval from specialized readability approval, granted by engineers trained in language-specific best practices. Readability reviewers ensure code aligns with language standards, avoids complexity, and maintains consistency with the rest of the codebase. Consistency enhances the code review process, allowing engineers to focus on correctness and comprehension without being hindered by inconsistent practices, ensuring code is robust and maintainable for the long term.
-
-## Psychological and Cultural Benefits
-Code review is a structured process that promotes collaboration and collaboration among authors, fostering a culture of shared responsibility and growth. It serves as a "bad cop" for feedback, allowing reviewers to offer constructive criticism without creating interpersonal tension. This process also offers psychological benefits, such as validation and motivation for engineers. It acknowledges their efforts and helps alleviate imposter syndrome by confirming the quality of their work. The process encourages a thoughtful approach, minimizing shortcuts and ensuring higher-quality output. Overall, code review benefits individuals and teams by balancing critique with validation, driving better practices, and fostering a supportive engineering culture.
-
-## Knowledge Sharing
-Code review is a structured process that promotes collaboration and collaboration among authors, fostering a culture of shared responsibility and growth. It serves as a "bad cop" for feedback, allowing reviewers to offer constructive criticism without creating interpersonal tension. This process also offers psychological benefits, such as validation and motivation for engineers. It acknowledges their efforts and helps alleviate imposter syndrome by confirming the quality of their work. The process encourages a thoughtful approach, minimizing shortcuts and ensuring higher-quality output. Overall, code review benefits individuals and teams by balancing critique with validation, driving better practices, and fostering a supportive engineering culture.
-
+There are many strategies that different companies have employed when it comes to code review, from "gate-keeping" to having certain teams responsible for different aspects of the process. Beyond these, this chapter considers the many benefits of code review from debugging to knowledge sharing. There are even psychological benefits discussed. 
 
 ### Code Review Flow
 When code reviews take place they can happen at many different stages of development. When a change is looked over before added to a code base that is called a "precommit review". 
@@ -60,7 +41,27 @@ An important takeaway from this introduction section is that code is always a li
 * it can add bugs to the programs
 * any code added must be maintained </details>
 
-## How code review works at Google (PHILIP)
+## How Code Review Works at Google
+
+## Code Review Benefits
+
+### Code Correctness
+Code review is a crucial process that ensures the correctness of code changes by assessing their testing, design, and efficiency. It helps catch potential bugs before they are introduced into the codebase, saving time and resources in debugging and regression testing. Human code reviews are vital for catching nuanced issues and aligning with a "shift left" strategy. At Google, the primary value of code review extends beyond correctness, focusing on ensuring code is understandable, maintainable, and scalable over time. This broader focus emphasizes that code reviews are not just about perfection; they are essential for building sustainable, high-quality software.
+
+### Code Comprehension 
+Code review is a crucial process that allows an unbiased evaluation of a code change, ensuring its long-term maintainability and comprehension. It is essential for organizations like Google, where the code is often read and maintained more than it is written. The primary goals of code review are to verify correctness and ensure comprehension, which form the basis for an "LGTM" (Looks Good To Me) approval. However, additional approvals may be required to confirm that the code aligns with long-term sustainability goals, ensuring it can be effectively maintained as the codebase evolves.
+
+Involving a reviewer who may later maintain or use the code is beneficial as their perspective can identify potential issues with clarity and usability. Questions raised during the review should be treated as valid feedback, prompting better explanations or revisions to improve understanding, even if the core logic remains unchanged. This emphasizes the importance of code review as a collaborative and future-focused practice.
+
+### Code Consistency
+As software scales, maintainability of code is crucial as it will be read, understood, and refactored by others long after the original author has moved on. Code should conform to consistent standards and avoid unnecessary complexity, making it easier to comprehend and maintain. Google separates LGTM (correctness and comprehension) approval from specialized readability approval, granted by engineers trained in language-specific best practices. Readability reviewers ensure code aligns with language standards, avoids complexity, and maintains consistency with the rest of the codebase. Consistency enhances the code review process, allowing engineers to focus on correctness and comprehension without being hindered by inconsistent practices, ensuring code is robust and maintainable for the long term.
+
+### Psychological and Cultural Benefits
+Code review is a structured process that promotes collaboration and collaboration among authors, fostering a culture of shared responsibility and growth. It serves as a "bad cop" for feedback, allowing reviewers to offer constructive criticism without creating interpersonal tension. This process also offers psychological benefits, such as validation and motivation for engineers. It acknowledges their efforts and helps alleviate imposter syndrome by confirming the quality of their work. The process encourages a thoughtful approach, minimizing shortcuts and ensuring higher-quality output. Overall, code review benefits individuals and teams by balancing critique with validation, driving better practices, and fostering a supportive engineering culture.
+
+### Knowledge Sharing
+Code review is a structured process that promotes collaboration and collaboration among authors, fostering a culture of shared responsibility and growth. It serves as a "bad cop" for feedback, allowing reviewers to offer constructive criticism without creating interpersonal tension. This process also offers psychological benefits, such as validation and motivation for engineers. It acknowledges their efforts and helps alleviate imposter syndrome by confirming the quality of their work. The process encourages a thoughtful approach, minimizing shortcuts and ensuring higher-quality output. Overall, code review benefits individuals and teams by balancing critique with validation, driving better practices, and fostering a supportive engineering culture.
+
 
 ## Code Review Best Practices
 
@@ -68,33 +69,33 @@ Reviewing code can causes many problems. It can cause friction and be a time del
 There are many practices that need to be set in place so code review can run smoothly and
 be worth it. 
 
-**Discution Question: Are there are an problems that we have run into as a group with code review??**
+**Discussion Question: Are there are an problems that we have run into as a group with code review?**
 
 ### Be Polite and Professional
 
 Google has an environment of trust and respect. At Google they need a LGTM for one software engineer
 to show code comprehension. Code review can cause anxiety and stress to all different level of skilled
-people. Which is why all feedback and critisim need to be professional.
+people. Which is why all feedback and criticism need to be professional.
 
-If the writer of the code method is deficient the rewiever should point out different approaches but if the writer
+If the writer of the code method is deficient the reviewer should point out different approaches but if the writer
 can prove that approach is a valid way the reviewer should respect the choice. When a code reviewer finds defects it should
 be taken as an opportunity to learn. Reviewers should ask question and see why code was written a certain way to understand
 before jumping to an conclusions. Also, is important to see each comment as a TODO item. Each comment should at least be
 addressed. Instead of marking the comment resolved if you disagree, try to resolve it by both stating their side. A common
-way to keep coversations civil if the writer disagrees is to ask the reviewer to please take another look (PTAL). 
+way to keep conversations civil if the writer disagrees is to ask the reviewer to please take another look (PTAL). 
 
-It is important to remember that as a writer of the code about profesionalism. Once you submit your work to the codebase it is not
+It is important to remember that as a writer of the code about professionalism. Once you submit your work to the codebase it is not
 yours anymore it becomes the team's. Be open to question and be able to share why wrote your code in the way you did. Writers of code
-have a responsibilty to make the code cna last in the future while being understood.
+have a responsibility to make the code cna last in the future while being understood.
 
 ### Write Small Changes
 
-A way to keep the proccess quick is to make changes small. It should be easy to look at the review and tackle the issue from both sides.
+A way to keep the process quick is to make changes small. It should be easy to look at the review and tackle the issue from both sides.
 It also helps cut down the time it takes. Having smaller changes makes it easier further down to know where a bug is if one arises. However,
 small changes can be hard to do with new features. It helps if the code can be broken up into smaller sections. The push for small changes
 helps the process of large changes to be accommodate.
 
-"Small" changes are usually 200 lines or less of code. The changes should be small enough that it is easy on the reviwer and it does not
+"Small" changes are usually 200 lines or less of code. The changes should be small enough that it is easy on the reviewer and it does not
 cause a delay with the review. It is better for a writer if the review is quicker. This helps so the flow does not change. If the works takes
 a while to reviewed it can disrupt the flow. Additionally this can impact future code and cause time to be wasted if the review is not quick.
 
@@ -106,7 +107,7 @@ a summary of the code which is important.
 Even though the change is being summaries in the first line, you should still explain what was changed and why. A good way to share if many
 modifications were made is with a list. Finding the original change helps when fixing a bug. 
 
-There are other times when you can add documentations to change. When a reviwer looks at the writer's code is confuses it is a good sign that
+There are other times when you can add documentations to change. When a reviewer looks at the writer's code is confuses it is a good sign that
 the code needs better structure or comments. Always update the change description or or add comments to the implementation if a new decision reached.
 Code review is not just done in the moment. It is done over times for what was did. 
 
@@ -114,7 +115,7 @@ Code review is not just done in the moment. It is done over times for what was d
 
 Most the time people in the industry want to get many inputs on their code because each person can add their own insight.
 However, having to many reviewers can lead to the feedback being less valued. If we trust the people reviewing then it helps
-the proccess have less people. If your code review calls for many people then it is important for each person to write on a different
+the process have less people. If your code review calls for many people then it is important for each person to write on a different
 part of the change so they are not the same.
 
 ### Automate Where Possible

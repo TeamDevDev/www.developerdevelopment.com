@@ -49,12 +49,12 @@ course projects?**
 ### Code is a Liability
 
 An important takeaway from this introduction section is that code is always a
-liability. ALWAYS. This chapter compares the importance of code to fuel in an
-airplane. Just like an airplane needs fuel to fly so programs need code to
-function. However the airplane's fuel must be bought, has weight, must be cared
-for, and other inconveniences. This is similar to how code must be tested and
-maintained and could introduce bugs to a system but it is often worth the risk
-because our programs would not work without code.
+liability. This chapter compares the importance of code to fuel in an airplane.
+Just like an airplane needs fuel to fly so programs need code to function.
+However the airplane's fuel must be bought, has weight, must be cared for, and
+other inconveniences. This is similar to how code must be tested and maintained
+and could introduce bugs to a system but it is often worth the risk because our
+programs would not work without code.
 
 **What are some reasons that code is considered a liability?** 
 

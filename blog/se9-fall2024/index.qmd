@@ -71,7 +71,7 @@ programs would not work without code.
 
 </details>
 
-## How Code Review Works at Google & Code Review Benefits
+## How Code Review Works at Google and the Benefits of Code Review
 
 ### Code Correctness
 

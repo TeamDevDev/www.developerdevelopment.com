@@ -146,8 +146,8 @@ with code review?**
 
 Google has an environment of trust and respect. At Google they need a LGTM for
 one software engineer to show code comprehension. Code review can cause anxiety
-and stress to all different level of skilled people. Which is why all feedback
-and criticism need to be professional.
+and stress to all different level of skilled people. For this reason, it is
+important for all feedback and criticism need to be professional.
 
 If the writer of the code method is deficient the reviewer should point out
 different approaches but if the writer can prove that approach is a valid way

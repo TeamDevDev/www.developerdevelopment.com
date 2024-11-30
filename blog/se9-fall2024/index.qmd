@@ -1,0 +1,292 @@
+---
+author: [Hannah Brown, Philip Olwoc, Rebekah Rudd, Gregory M. Kapfhammer]
+title: Code Review
+date: '2024-12-02'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>Let's investigate Google's code review practices!</em>
+toc: true
+page-layout: full
+---
+
+## Overview & Summary
+
+This blog post discusses the [Code
+Review](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book).
+This chapter discusses the best practice of having someone besides the author of
+the code review the code before it is added to a code base. This chapter
+introduces Google's process and overviews the required steps that must be taken
+before any change to the code base is added. 
+
+## Introduction
+
+There are many strategies that different companies have employed when it comes
+to code review, from "gate-keeping" to having certain teams responsible for
+different aspects of the process. Beyond these, this chapter considers the many
+benefits of code review from debugging to knowledge sharing. There are even
+psychological benefits discussed. 
+
+### Code Review Flow
+
+When code reviews take place they can happen at many different stages of
+development. When a change is looked over before added to a code base that is
+called a "precommit review". Sometimes, the reviewer of the code will give the
+"looks good to me" (LGTM) to the developer. This is a signal that the code is
+ready to be added to the code base.
+
+<!-- **What does LGTM mean and how is it used at Google?** -->
+
+**How do these steps of the typical code review process at Google translate to
+our own course projects?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+1. A developer makes changes to the code base.
+2. Once the creator is done with the change they will send it or share it with a
+   colleague.
+3. Reviewer(s) of the code make comments and change requests to the new code.
+4. The change maker will make any required changes.
+5. The reviewer(s) give a "looks good to me" (LGTM).
+6. After the change is approved the change is added to the code base.
+
+</details>
+
+### Code is a Liability
+
+An important takeaway from this introduction section is that code is always a
+liability. This chapter compares the importance of code to fuel in an airplane.
+Just like an airplane needs fuel to fly so programs need code to function.
+However the airplane's fuel must be bought, has weight, must be cared for, and
+other inconveniences. This is similar to how code must be tested and maintained
+and could introduce bugs to a system but it is often worth the risk because our
+programs would not work without code.
+
+**What are some reasons that code is considered a liability?** 
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+* it can add bugs to the programs
+* any code added must be maintained </details>
+
+</details>
+
+## How Code Review Works at Google and the Benefits of Code Review
+
+### Code Correctness
+
+Code review is a crucial process that ensures the correctness of code changes by
+assessing their testing, design, and efficiency. It helps catch potential bugs
+before they are introduced into the codebase, saving time and resources in
+debugging and regression testing. Human code reviews are vital for catching
+nuanced issues and aligning with a "shift left" strategy. At Google, the primary
+value of code review extends beyond correctness, focusing on ensuring code is
+understandable, maintainable, and scalable over time. This broader focus
+emphasizes that code reviews are not just about perfection; they are essential
+for building sustainable, high-quality software.
+
+### Code Comprehension 
+
+Code review is a crucial process that allows an unbiased evaluation of a code
+change, ensuring its long-term maintainability and comprehension. It is
+essential for organizations like Google, where the code is often read and
+maintained more than it is written. The primary goals of code review are to
+verify correctness and ensure comprehension, which form the basis for an "LGTM"
+or "Looks Good To Me" approval. However, additional approvals may be required to
+confirm that the code aligns with long-term sustainability goals, ensuring it
+can be effectively maintained as the codebase evolves.
+
+Involving a reviewer who may later maintain or use the code is beneficial as
+their perspective can identify potential issues with clarity and usability.
+Questions raised during the review should be treated as valid feedback,
+prompting better explanations or revisions to improve understanding, even if the
+core logic remains unchanged. This emphasizes the importance of code review as a
+collaborative and future-focused practice.
+
+### Code Consistency
+
+As software scales, maintainability of code is crucial as it will be read,
+understood, and refactored by others long after the original author has moved on
+to a new project. Code should conform to consistent standards and avoid
+unnecessary complexity, making it easier to comprehend and maintain. Google
+separates LGTM (correctness and comprehension) approval from specialized
+readability approval, granted by engineers trained in language-specific best
+practices. Readability reviewers ensure code aligns with language standards,
+avoids complexity, and maintains consistency with the rest of the codebase.
+Consistency enhances the code review process, allowing engineers to focus on
+correctness and comprehension without being hindered by inconsistent practices,
+ensuring code is robust and maintainable for the long term.
+
+<!-- NOTE: There were two paragraphs that were completely duplicated but with
+different subsection headers. Why? -->
+
+### Psychological and Cultural Benefits
+
+Code review is a structured process that promotes collaboration and
+collaboration among authors, fostering a culture of shared responsibility and
+growth. It serves as a "bad cop" for feedback, allowing reviewers to offer
+constructive criticism without creating interpersonal tension. This process also
+offers psychological benefits, such as validation and motivation for engineers.
+It acknowledges their efforts and helps alleviate impostor syndrome by
+confirming the quality of their work. The process encourages a thoughtful
+approach, minimizing shortcuts and ensuring higher-quality output. Overall, code
+review benefits individuals and teams by balancing critique with validation,
+driving better practices, and fostering a supportive engineering culture.
+
+## Code Review Best Practices
+
+Reviewing code can causes many problems. It can cause friction and be a time
+delay. There are many practices that need to be in place so code review can run
+smoothly and be worth it for individual developers and the organization. 
+
+**Discussion Question: Are there any problems that we have run into as a group
+with code review?**
+
+### Be Polite and Professional
+
+Google has an environment of trust and respect. At Google they need a LGTM for
+one software engineer to show code comprehension. Code review can cause anxiety
+and stress to all different level of skilled people. For this reason, it is
+important for all feedback and criticism need to be professional.
+
+If the writer of the code method is deficient the reviewer should point out
+different approaches but if the writer can prove that approach is a valid way
+the reviewer should respect the choice. When a code reviewer finds defects it
+should be taken as an opportunity to learn. Reviewers should ask question and
+see why code was written a certain way to understand before jumping to an
+conclusions. Also, is important to see each comment as a TODO item. Each comment
+should at least be addressed. Instead of marking the comment resolved if you
+disagree, try to resolve it by both stating their side. A common way to keep
+conversations civil if the writer disagrees is to ask the reviewer to "please
+take another look" (PTAL). 
+
+If you are the creator of the source code under review, it is important to
+remember the importance of professionalism. Once you submit your work to the
+codebase it is not yours anymore it becomes the team's. You should be  open to
+questions and be able to share why wrote your code in the way you did. Writers
+of code have a responsibility to make code that can last in the future while
+being understood by themselves and other team members.
+
+### Write Small Changes
+
+A way to keep the process quick is to make changes small. It should be easy to
+look at the review and tackle the issue from both sides. It also helps cut down
+the time it takes. Having smaller changes makes it easier further down to know
+where a bug is if one arises. However, small changes can be hard to do with new
+features. It helps if the code can be broken up into smaller sections. The push
+for small changes helps the process of large changes to be accommodate.
+
+"Small" changes are usually 200 lines or less of code. The changes should be
+small enough that it is easy on the reviewer and it does not cause a delay with
+the review. It is better for a writer if the review is quicker. This helps so
+the flow does not change. If the works takes a while to reviewed it can disrupt
+the flow. Additionally this can impact future code and cause time to be wasted
+if the review is not quick.
+
+### Write Good Change Descriptions
+
+On the first line should be the type of change for a change description. The
+first line is just like a subject line in an email. It is a summary of the code
+which is important.
+
+Even though the change is being summaries in the first line, you should still
+explain what was changed and why. A good way to share if many modifications were
+made is with a list. Finding the original change helps when fixing a bug. 
+
+There are other times when you can add documentations to change. When a reviewer
+looks at the writer's code is confuses it is a good sign that the code needs
+better structure or comments. Always update the change description or or add
+comments to the implementation if a new decision reached. Code review is not
+just done in the moment. It is done over times for what was did. 
+
+### Keep Reviewers to a Minimum
+
+Most the time people in the industry want to get many inputs on their code
+because each person can add their own insight. However, having to many reviewers
+can lead to the feedback being less valued. If we trust the people reviewing
+then it helps the process have less people. If your code review calls for many
+people then it is important for each person to write on a different part of the
+change so they are not the same.
+
+### Automate Where Possible
+
+Code review is a process done by humans. If parts of the process can be stream
+lined do it. An example of a stream line is "presubmits". Presubmits save people
+time since it checks what is being sent to be reviewed. This stop people from
+having to run tests, linters, or formatters is can be done for them. Which makes
+it easier to change and catch certain errors before being reviewed. It helps
+people so they can spend other time on bigger issues with the code. 
+
+## Different Types of Code Reviews
+
+As we talk about this section one aspect to be consider is what are the
+buckets/categories does the code we have written as a class generally fall into?
+
+### Green Field Reviews and New Code
+
+A "green field" review has to do with writing new code. The chapter opened this
+section by saying that greenfield code reviews are "the least common type of
+code review." Though this might be the case for Google it is unlikely to be the
+case for our class. 
+
+**Why might "green field" code review be more likely for our projects?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+- the size of our code base
+- the newness of it
+
+**And what else?**
+
+**Finally, why do you think it is called "green field"?**
+
+</details>
+
+This section also considers the difference between design review and code
+review. Design review considers the design of the tool or how code is
+implemented, while code review has to do more with the usability of it. This is
+also an important time to consider longevity of the code that has been written
+especially because it is new to the code base. 
+
+### Behavioral changes, improvement, and optimizations
+
+These types of changes are most common at Google and they have to do with
+changes to existing code within the code base. This section gave the important
+reminder that some of the best changes to a code base can be deletions. Which we
+has seen in class with the PR that is deleting the `coverage.json` file in
+`execexam` project. The same steps that apply in the green field review also
+apply here. With both the green field review and code refactoring changes must be
+made in a Continuous Integration (CI) system. This has to do with the idea of
+testing code in the location it will be used and added into.
+
+### Bug fixes and rollbacks
+
+Code changes that have to do with bug fixes is should only correct that bug. It
+is easy to want to changes multiple issues with one change to the code, but this
+is not good practice when making changes to the code base. Rollbacks are
+something else that was also addressed in this section. A rollback happens when
+a change is made in the code base that doesn't work and there is a decision made
+to revert to a previous state of the code base before the change. Though the
+code doesn't actually go back. The code is going forward but the code base is
+identical to the version of the code base before the change that didn't work was
+implemented. It is important to note that there is always a possibility of
+having to do a rollback, so this should always be considered when making changes
+to the code base. A rollback was something that was considered in the
+`gatorgrade` code base earlier this semester when there was a bug introduced
+into the `gatorgrade` code base. 
+
+### Refactorings and Large-Scale Changes (LSC)
+
+Some changes to the code base are automated. While these changes are written by
+a machine and not a human they still must be reviewed in the same manner as all
+other code reviews. Though with LSC no one person can veto a change, otherwise
+they would take too long to implement.
+
+## Moving Forward
+
+We have implemented many of these code review practices in class, from knowledge
+sharing through code reviews to writing and creating pull requests. What are
+aspects of this process that we implement differently from Google? Are there
+some practices that we should adopt that we are not currently using?
+
+{{< include /_back-blog.qmd >}}

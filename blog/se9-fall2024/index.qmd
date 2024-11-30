@@ -224,25 +224,29 @@ buckets/categories does the code we have written as a class generally fall into?
 
 ### Greenfield reviews and new code
 
-Greenfield review has to do with writing new code. The chapter opened this
-section by saying that Greenfield code reviews are "the least common type of
-code review." Though this might be the case for Google it is not the case for
-our class. 
+A "green field" review has to do with writing new code. The chapter opened this
+section by saying that greenfield code reviews are "the least common type of
+code review." Though this might be the case for Google it is unlikely to be the
+case for our class. 
 
-**Why might this be?**
+**Why might "green field" code review be more likely for our projects?**
 
 <details> <summary>Click to Expand for the Answer</summary>
+
 - the size of our code base
 - the newness of it
-And what else? </details>
+
+**And what else?**
+
+**Finally, why do you think it is called "green field"?**
+
+</details>
 
 This section also considers the difference between design review and code
 review. Design review considers the design of the tool or how code is
 implemented, while code review has to do more with the usability of it. This is
 also an important time to consider longevity of the code that has been written
 especially because it is new to the code base. 
-
-**Why do you think it is called Greenfield?**
 
 ### Behavioral changes, improvement, and optimizations
 

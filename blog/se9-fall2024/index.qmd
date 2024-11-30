@@ -92,7 +92,7 @@ change, ensuring its long-term maintainability and comprehension. It is
 essential for organizations like Google, where the code is often read and
 maintained more than it is written. The primary goals of code review are to
 verify correctness and ensure comprehension, which form the basis for an "LGTM"
-(Looks Good To Me) approval. However, additional approvals may be required to
+or "Looks Good To Me" approval. However, additional approvals may be required to
 confirm that the code aligns with long-term sustainability goals, ensuring it
 can be effectively maintained as the codebase evolves.
 
@@ -106,16 +106,16 @@ collaborative and future-focused practice.
 ### Code Consistency
 
 As software scales, maintainability of code is crucial as it will be read,
-understood, and refactored by others long after the original author has moved
-on. Code should conform to consistent standards and avoid unnecessary
-complexity, making it easier to comprehend and maintain. Google separates LGTM
-(correctness and comprehension) approval from specialized readability approval,
-granted by engineers trained in language-specific best practices. Readability
-reviewers ensure code aligns with language standards, avoids complexity, and
-maintains consistency with the rest of the codebase. Consistency enhances the
-code review process, allowing engineers to focus on correctness and
-comprehension without being hindered by inconsistent practices, ensuring code is
-robust and maintainable for the long term.
+understood, and refactored by others long after the original author has moved on
+to a new project. Code should conform to consistent standards and avoid
+unnecessary complexity, making it easier to comprehend and maintain. Google
+separates LGTM (correctness and comprehension) approval from specialized
+readability approval, granted by engineers trained in language-specific best
+practices. Readability reviewers ensure code aligns with language standards,
+avoids complexity, and maintains consistency with the rest of the codebase.
+Consistency enhances the code review process, allowing engineers to focus on
+correctness and comprehension without being hindered by inconsistent practices,
+ensuring code is robust and maintainable for the long term.
 
 ### Psychological and Cultural Benefits
 

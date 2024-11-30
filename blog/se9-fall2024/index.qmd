@@ -157,14 +157,15 @@ see why code was written a certain way to understand before jumping to an
 conclusions. Also, is important to see each comment as a TODO item. Each comment
 should at least be addressed. Instead of marking the comment resolved if you
 disagree, try to resolve it by both stating their side. A common way to keep
-conversations civil if the writer disagrees is to ask the reviewer to please
-take another look (PTAL). 
+conversations civil if the writer disagrees is to ask the reviewer to "please
+take another look" (PTAL). 
 
-It is important to remember that as a writer of the code about professionalism.
-Once you submit your work to the codebase it is not yours anymore it becomes the
-team's. Be open to question and be able to share why wrote your code in the way
-you did. Writers of code have a responsibility to make the code can last in the
-future while being understood.
+If you are the creator of the source code under review, it is important to
+remember the importance of professionalism. Once you submit your work to the
+codebase it is not yours anymore it becomes the team's. You should be  open to
+questions and be able to share why wrote your code in the way you did. Writers
+of code have a responsibility to make code that can last in the future while
+being understood by themselves and other team members.
 
 ### Write Small Changes
 

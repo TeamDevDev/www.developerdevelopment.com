@@ -238,7 +238,7 @@ display_tree(sub_expr_tree)
 
 ## A Depth-Oriented Strategy
 
-The log above after test #2 is reduced to `"2 * 3"` for the input tree the
+The log above after test `#2` is reduced to `"2 * 3"` for the input tree the
 `GrammarReducer` goes to replace the tree `"2"` and `"3"` being the alternate
 `<term>` subtrees. This can work but if there are many subtrees, it will take
 time trying all the subtrees possible.
@@ -347,6 +347,8 @@ dd_time.elapsed_time()
 ```
 
 A grammar to reduce inputs better to use if an input is syntactically complex.
+
+<!-- TODO: There is no conclusion for this article! -->
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

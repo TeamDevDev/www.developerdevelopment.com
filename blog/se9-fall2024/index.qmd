@@ -15,9 +15,9 @@ This blog post discusses the [Code
 Review](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
 [Software Engineering at Google book](https://abseil.io/resources/swe-book).
 This chapter discusses the best practice of having someone besides the author of
-the code review the code before it is added to a code base. This chapter goes
-through Google's process and required steps before any change to the code base
-is added. 
+the code review the code before it is added to a code base. This chapter
+introduces Google's process and overviews the required steps that must be taken
+before any change to the code base is added. 
 
 ## Introduction
 

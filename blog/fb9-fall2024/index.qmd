@@ -202,7 +202,10 @@ subtrees and Alternative Expansions.
 
 # Replacing the Subtrees
 
-Replacing the sub-tress means to take a larger part of the tree and replace it with a smaller part of the tree. In the example given it shows the original tree which makes up the string "1 + (2 * 3)" and then being broken down to "(2 * 3)" by replacing the upper most <expr> with the lowest <expr>.
+Replacing the sub-trees means to take a larger part of the tree and replace it
+with a smaller part of the tree. In the example given it shows the original tree
+which makes up the string `"1 + (2 * 3)"` and then being broken down to `"(2 *
+3)"` by replacing the upper most `<expr>` with the lowest `<expr>`.
 
 ```py
 from Grammars import Grammar
@@ -212,7 +215,12 @@ display_tree(derivation_tree)pyt
 ```
 
 # Alternative Expansions
-Using alternative expansions we would change how the term is expanded. In the example given in the book it took the non-terminal <term> * <factor> which would’ve given the output (2 * 3), and broke it by altering how the term would expand, which is <term> : := <factor>. Therefore changing the grammatical rule of how <term> would expand.
+
+Using alternative expansions we would change how the term is expanded. In the
+example given in the book it took the non-terminal <term> * <factor> which
+would’ve given the output (2 * 3), and broke it by altering how the term would
+expand, which is <term> : := <factor>. Therefore changing the grammatical rule
+of how <term> would expand.
 
 ```py
 import copy
@@ -225,14 +233,23 @@ display_tree(sub_expr_tree)
 ```
 
 ## A Depth-Oriented Strategy
-The log above after test #2 is reduced to "2 * 3" for the input tree the "GrammarReducer" goes to replace the tree "2" and "3" being the aleternate
-<term> subtrees. This can work but if there are many subtrees, it will take time trying all the subtrees possible.
 
-Delta debugging is trying to split inputs in half trying to get to a minimum input. Having a tree be replaces with subtrees it could make a tree less
-important. However this may take sever tries. A good way to go about this is to look at lage subtrees first. To locate large subtrees, we reduce
-the depth of the search for replacements. Looking at direct descendants first, then lower descendants.
+The log above after test #2 is reduced to `"2 * 3"` for the input tree the
+`GrammarReducer` goes to replace the tree `"2"` and `"3"` being the alternate
+`<term>` subtrees. This can work but if there are many subtrees, it will take
+time trying all the subtrees possible.
 
-The "depth" parameter in the "subtrees_with_symbol()" function, which is passed through the calling functions, controls this behavior. When set, it ensures that only symbols at the specified depth are returned. An example with dervation tree:
+Delta debugging is trying to split inputs in half trying to get to a minimum
+input. Having a tree be replaces with subtrees it could make a tree less
+important. However this may take sever tries. A good way to go about this is to
+look at large subtrees first. To locate large subtrees, we reduce the depth of
+the search for replacements. Looking at direct descendants first, then lower
+descendants.
+
+The `depth` parameter in the `subtrees_with_symbol()` function, which is passed
+through the calling functions, controls this behavior. When set, it ensures that
+only symbols at the specified depth are returned. An example with derivation
+tree:
 
 ```python 
 grammar_reducer = GrammarReducer(
@@ -245,14 +262,14 @@ all_terminals(derivation_tree)
 display_tree(derivation_tree)
 ```
 
-The <term> symbol is not here at depth of 1:
+The `<term>` symbol is not here at depth of 1:
 
 ```python
 [all_terminals(t) for t in grammar_reducer.subtrees_with_symbol(
     derivation_tree, "<term>", depth=1)]
 ```
 
-The <term> subtree is here at depth of 2 on the left hand side:
+The `<term>` subtree is here at depth of 2 on the left hand side:
 
 ```python
 [all_terminals(t) for t in grammar_reducer.subtrees_with_symbol(
@@ -280,15 +297,16 @@ grammar_reducer = GrammarReducer(
 grammar_reducer.reduce(expr_input)
 ```
 
-**Discussion Question: What does a depth-oriengted strategy show?**
+**Discussion Question: What does a depth-oriented strategy show?**
+
 <details> <summary>Click to Expand for the Answer</summary>
 It needs less steps
 </details>
 
 ## Comparing Strategies
 
-There are some differences between text-based delta debugging and grammar-based reduction.
-Buidling a long expression:
+There are some differences between text-based delta debugging and grammar-based
+reduction. Building a long expression:
 
 ```python
 from GrammarFuzzer import GrammarFuzzer

@@ -35,13 +35,15 @@ called a "precommit review".
 
 **What does LGTM mean and how is it used at Google?**
 
-**How do these steps of the typical code review process of Google work in our classroom?**
+**How do these steps of the typical code review process at Google work in our
+course projects?**
 
-1. A user makes changes to the code base.
-2. Once the creator is done with the change they will send it or share it with a colleague.
-3. Reviewer/s of the code make/s comments and change requests to the new code.
+1. A developer makes changes to the code base.
+2. Once the creator is done with the change they will send it or share it with a
+   colleague.
+3. Reviewer(s) of the code make comments and change requests to the new code.
 4. The change maker will make any required changes.
-5. The reviewer/s give/s a LGTM.
+5. The reviewer(s) give a "looks good to me" (LGTM).
 6. After the change is approved the change is added to the code base.
 
 ### Code is a Liability

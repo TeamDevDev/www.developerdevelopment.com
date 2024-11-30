@@ -222,7 +222,7 @@ people so they can spend other time on bigger issues with the code.
 As we talk about this section one aspect to be consider is what are the
 buckets/categories does the code we have written as a class generally fall into?
 
-### Greenfield reviews and new code
+### Green Field Reviews and New Code
 
 A "green field" review has to do with writing new code. The chapter opened this
 section by saying that greenfield code reviews are "the least common type of
@@ -254,10 +254,10 @@ These types of changes are most common at Google and they have to do with
 changes to existing code within the code base. This section gave the important
 reminder that some of the best changes to a code base can be deletions. Which we
 has seen in class with the PR that is deleting the `coverage.json` file in
-`execexam`. The same steps that apply in the Greenfield review also apply here.
-With both the Greenfield review and code refactoring changes must be made in a
-Continuous Integration (CI) system. This has to do with the idea of testing code
-in the location it will be used and added into.
+`execexam` project. The same steps that apply in the green field review also
+apply here. With both the green field review and code refactoring changes must be
+made in a Continuous Integration (CI) system. This has to do with the idea of
+testing code in the location it will be used and added into.
 
 ### Bug fixes and rollbacks
 

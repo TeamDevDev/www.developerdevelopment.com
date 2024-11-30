@@ -35,10 +35,10 @@ called a "precommit review". Sometimes, the reviewer of the code will give the
 "looks good to me" (LGTM) to the developer. This is a signal that the code is
 ready to be added to the code base.
 
-**What does LGTM mean and how is it used at Google?**
+<!-- **What does LGTM mean and how is it used at Google?** -->
 
-**How do these steps of the typical code review process at Google work in our
-course projects?**
+**How do these steps of the typical code review process at Google translate to
+our own course projects?**
 
 <details> <summary>Click to Expand for the Answer</summary>
 
@@ -49,6 +49,8 @@ course projects?**
 4. The change maker will make any required changes.
 5. The reviewer(s) give a "looks good to me" (LGTM).
 6. After the change is approved the change is added to the code base.
+
+</details>
 
 ### Code is a Liability
 
@@ -66,6 +68,8 @@ programs would not work without code.
 
 * it can add bugs to the programs
 * any code added must be maintained </details>
+
+</details>
 
 ## How Code Review Works at Google & Code Review Benefits
 

@@ -156,7 +156,7 @@ Delta debugging may take multiple attempts at reduction, if the input language
 is syntactically complex.This is where Grammar-Based Reduction comes in, this
 approach uses grammars to simplify complex syntactic inputs.
 
-# Lexical Reduction vs. Syntactic Rules
+# Lexical Reduction versus Syntactic Rules
 
 With Lexical Reduction, the input is broken down based on character, without
 taking into account the grammar rules. In the example below the string, `"1 + (2
@@ -201,8 +201,8 @@ the valid one in you test cases.
 
 The grammar-based reduction approach simplifies complex inputs by operating on
 the structure of the input’s derivation tree, rather than just reducing the
-string. In the Fuzzing book it talks about two strategies, Replacing the
-subtrees and Alternative Expansions.
+string. There are two key strategies: "Replacing the subtrees" and "Alternative
+Expansions". Let's investigate each of these strategies in more detail!
 
 # Replacing the Subtrees
 

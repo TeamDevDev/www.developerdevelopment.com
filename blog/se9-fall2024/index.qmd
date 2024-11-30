@@ -31,12 +31,16 @@ psychological benefits discussed.
 
 When code reviews take place they can happen at many different stages of
 development. When a change is looked over before added to a code base that is
-called a "precommit review". 
+called a "precommit review". Sometimes, the reviewer of the code will give the
+"looks good to me" (LGTM) to the developer. This is a signal that the code is
+ready to be added to the code base.
 
 **What does LGTM mean and how is it used at Google?**
 
 **How do these steps of the typical code review process at Google work in our
 course projects?**
+
+<details> <summary>Click to Expand for the Answer</summary>
 
 1. A developer makes changes to the code base.
 2. Once the creator is done with the change they will send it or share it with a

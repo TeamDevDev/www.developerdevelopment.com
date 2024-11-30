@@ -272,7 +272,7 @@ identical to the version of the code base before the change that didn't work was
 implemented. It is important to note that there is always a possibility of
 having to do a rollback, so this should always be considered when making changes
 to the code base. A rollback was something that was considered in the
-`gatorgrade` code base earlier this semester when there was a bug implemented
+`gatorgrade` code base earlier this semester when there was a bug introduced
 into the `gatorgrade` code base. 
 
 ### Refactorings and Large-Scale Changes (LSC)
@@ -285,8 +285,8 @@ they would take too long to implement.
 ## Moving Forward
 
 We have implemented many of these code review practices in class, from knowledge
-sharing through code reviews to writing and creating PRs. What are aspects of
-this process that we implement differently from Google? Are there some practices
-that we should start moving forward that we are not currently doing?
+sharing through code reviews to writing and creating pull requests. What are
+aspects of this process that we implement differently from Google? Are there
+some practices that we should adopt that we are not currently using?
 
 {{< include /_back-blog.qmd >}}

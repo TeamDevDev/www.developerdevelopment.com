@@ -137,7 +137,8 @@ character fails. If the last character fails the program will then return an
 that the error resulted in the penultimate character. Here is a graph of these
 Big O notations:
 
-
+<!-- TODO: How was this diagram/graph generated? Did you create it or was is -->
+<!-- extracted form other source? -->
 
 ![Big O(n) graph comparisons](big0n_graph.gif)
 
@@ -149,8 +150,11 @@ most efficient method of determining the failing piece of code. Which leads us
 to the another method of iterating through the fuzzing produced string in order
 to find the piece of the string that is failing called Grammar Based Reduction. 
 
-## Grammar Based Reduction (philip)
-Delta debugging may take multiple attempts at reduction, if the input language is syntactically complex.This is where Grammar-Based Reduction comes in, this approach uses grammars to simplify complex syntactic inputs.
+## Grammar Based Reduction
+
+Delta debugging may take multiple attempts at reduction, if the input language
+is syntactically complex.This is where Grammar-Based Reduction comes in, this
+approach uses grammars to simplify complex syntactic inputs.
 
 # Lexical Reduction vs. Syntactic Rules
 
@@ -217,10 +221,10 @@ display_tree(derivation_tree)pyt
 # Alternative Expansions
 
 Using alternative expansions we would change how the term is expanded. In the
-example given in the book it took the non-terminal <term> * <factor> which
-would’ve given the output (2 * 3), and broke it by altering how the term would
-expand, which is <term> : := <factor>. Therefore changing the grammatical rule
-of how <term> would expand.
+example given in the book it took the non-terminal `<term> * <factor>` which
+would have given the output `(2 * 3)`, and broke it by altering how the term
+would expand, which is `<term> : := <factor>`. Therefore changing the
+grammatical rule of how `<term>` would expand.
 
 ```py
 import copy
@@ -329,7 +333,7 @@ grammar_reducer.tests
 grammar_time.elapsed_time()
 ```
 
-However with delta debugging it takes more tests and the reduction is not as
+However, with delta debugging it takes more tests and the reduction is not as
 good compared to grammar-based reducer.
 
 ```python

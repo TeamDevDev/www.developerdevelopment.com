@@ -117,20 +117,10 @@ Consistency enhances the code review process, allowing engineers to focus on
 correctness and comprehension without being hindered by inconsistent practices,
 ensuring code is robust and maintainable for the long term.
 
+<!-- NOTE: There were two paragraphs that were completely duplicated but with
+different subsection headers. Why? -->
+
 ### Psychological and Cultural Benefits
-
-Code review is a structured process that promotes collaboration and
-collaboration among authors, fostering a culture of shared responsibility and
-growth. It serves as a "bad cop" for feedback, allowing reviewers to offer
-constructive criticism without creating interpersonal tension. This process also
-offers psychological benefits, such as validation and motivation for engineers.
-It acknowledges their efforts and helps alleviate impostor syndrome by
-confirming the quality of their work. The process encourages a thoughtful
-approach, minimizing shortcuts and ensuring higher-quality output. Overall, code
-review benefits individuals and teams by balancing critique with validation,
-driving better practices, and fostering a supportive engineering culture.
-
-### Knowledge Sharing
 
 Code review is a structured process that promotes collaboration and
 collaboration among authors, fostering a culture of shared responsibility and

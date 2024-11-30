@@ -12,6 +12,8 @@ page-layout: full
 <!-- TODO: This article is incomplete but in a PR subject to review. As such it
 was merged even though it is incomplete. -->
 
+<!-- TODO: None of the code segments in this article are actually executable -->
+
 ## Overview
 
 This article covers the [Reducing Failure-Inducing
@@ -117,30 +119,59 @@ Test #29 ')' 1 PASS
 
 ### Benefits
 
-First, one benefit of a delta debugger is that it "reduces the cognitive load of the programmer". It makes it so the test cases can address one problem specifically rather than broad unaddressable problems. Second, it also makes the problem easier to communicate to others. And finally, reducing the failure-inducing input can make it more obvious to programmers if there are duplicates in their test cases.
+First, one benefit of a delta debugger is that it "reduces the cognitive load of
+the programmer". It makes it so the test cases can address one problem
+specifically rather than broad unavoidable problems. Second, it also makes the
+problem easier to communicate to others. And finally, reducing the
+failure-inducing input can make it more obvious to programmers if there are
+duplicates in their test cases.
 
 **But is this effective?**
 
-The best case for this is logarithmic or Big O(log2 n), while the worst case is Big O(n^2). The worst chase situation happens when the program runs and the last character fails. If the last character fails the program will then return an AssertionError. The goal is for the last character to pass so that it is clear that the error resulted in the penultimate character. Here is a graph of these Big O notations:
+<!-- TODO: The mathematical notation in this paragraph is not formatted correctly -->
+
+The best case for this is logarithmic or Big O(log2 n), while the worst case is
+Big O(n^2). The worst chase situation happens when the program runs and the last
+character fails. If the last character fails the program will then return an
+`AssertionError`. The goal is for the last character to pass so that it is clear
+that the error resulted in the penultimate character. Here is a graph of these
+Big O notations:
+
+
 
 ![Big O(n) graph comparisons](big0n_graph.gif)
 
 ### Drawbacks
-One issue is that with delta debugging is that it is prone to failure. This method is not always accurate. In addition, another issue is that it is not the most efficient method of determining the failing piece of code. Which leads us to the another method of iterating through the fuzzing produced string in order to find the piece of the string that is failing called Grammar Based Reduction. 
+
+One issue is that with delta debugging is that it is prone to failure. This
+method is not always accurate. In addition, another issue is that it is not the
+most efficient method of determining the failing piece of code. Which leads us
+to the another method of iterating through the fuzzing produced string in order
+to find the piece of the string that is failing called Grammar Based Reduction. 
 
 ## Grammar Based Reduction (philip)
 Delta debugging may take multiple attempts at reduction, if the input language is syntactically complex.This is where Grammar-Based Reduction comes in, this approach uses grammars to simplify complex syntactic inputs.
 
 # Lexical Reduction vs. Syntactic Rules
-With Lexical Reduction, the input is broken down based on character, without taking into account the grammar rules. In the example below the string, "1 + (2 * 3)" is broken down many times into various versions of itself, but it doesn’t follow the same grammatical pattern.
+
+With Lexical Reduction, the input is broken down based on character, without
+taking into account the grammar rules. In the example below the string, `"1 + (2
+* 3)"` is broken down many times into various versions of itself, but it doesn't
+follow the same grammatical pattern.
+
 ```python
 expr_input = "1 + (2 * 3)"
 dd_reducer = DeltaDebuggingReducer(mystery, log_test=True)
 dd_reducer.reduce(expr_input)
 ```
-This is an issue because it produces many invalid invalid which in turn lead to meaningless invalid test cases.
 
-On the other hand using syntactic rules allows you to produce valid inputs to parse so that your test cases are meaningful, since the inputs it produces still follow the intended grammatical pattern.
+This is an issue because it produces many invalid invalid which in turn lead to
+meaningless invalid test cases.
+
+On the other hand using syntactic rules allows you to produce valid inputs to
+parse so that your test cases are meaningful, since the inputs it produces still
+follow the intended grammatical pattern.
+
 ```python
 class EvalMysteryRunner(MysteryRunner):
     def __init__(self) -> None:
@@ -158,13 +189,20 @@ eval_mystery = EvalMysteryRunner()
 dd_reducer = DeltaDebuggingReducer(eval_mystery, log_test=True)
 dd_reducer.reduce(expr_input)
 ```
-In this example the  inputs are either valid or unresolved allowing you to use the valid one in you test cases.
+
+In this example the inputs are either valid or unresolved allowing you to use
+the valid one in you test cases.
 
 ## A Grammar-Based Reduction Approach
-The grammar-based reduction approach simplifies complex inputs by operating on the structure of the input’s derivation tree, rather than just reducing the string. In the Fuzzing book it talks about two strategies, Replacing the subtrees and Alternative Expansions.
+
+The grammar-based reduction approach simplifies complex inputs by operating on
+the structure of the input’s derivation tree, rather than just reducing the
+string. In the Fuzzing book it talks about two strategies, Replacing the
+subtrees and Alternative Expansions.
 
 # Replacing the Subtrees
-Replacing the subtress means to take a larger part of the tree and replace it with a smaller part of the tree. In the example given it shows the original tree which makes up the string "1 + (2 * 3)" and then being broken down to "(2 * 3)" by replacing the upper most <expr> with the lowest <expr>.
+
+Replacing the sub-tress means to take a larger part of the tree and replace it with a smaller part of the tree. In the example given it shows the original tree which makes up the string "1 + (2 * 3)" and then being broken down to "(2 * 3)" by replacing the upper most <expr> with the lowest <expr>.
 
 ```py
 from Grammars import Grammar

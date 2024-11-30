@@ -4,7 +4,7 @@ title: 'Reducing Failure-Inducing Inputs'
 date: '2024-12-04'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>What are different methods of reducing failure-inducing inputs? And what are their benefits and drawbacks?</em>
+description: <em>What are the trade-offs when reducing failure-inducing inputs?</em>
 toc: true
 page-layout: full
 ---

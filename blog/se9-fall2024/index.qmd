@@ -1,10 +1,10 @@
 ---
-author: [Hannah Brown, Philip Olwoc, Rebekah Rudd]
+author: [Hannah Brown, Philip Olwoc, Rebekah Rudd, Gregory M. Kapfhammer]
 title: Code Review
 date: '2024-12-02'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>What is Google's Code Review practices and how are they different from our class's?</em>
+description: <em>Let's investigate Google's code review practices!</em>
 toc: true
 page-layout: full
 ---
@@ -283,3 +283,5 @@ We have implemented many of these code review practices in class, from knowledge
 sharing through code reviews to writing and creating PRs. What are aspects of
 this process that we implement differently from Google? Are there some practices
 that we should start moving forward that we are not currently doing?
+
+{{< include /_back-blog.qmd >}}

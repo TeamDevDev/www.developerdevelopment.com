@@ -237,4 +237,44 @@ grammar_reducer.reduce(expr_input)
 It needs less steps
 </details>
 
+## Comparing Strategies
+
+There are some differences between text-based delta debugging and grammar-based reduction.
+Buidling a long expression:
+
+```python
+from GrammarFuzzer import GrammarFuzzer
+
+long_expr_input = GrammarFuzzer(EXPR_GRAMMAR, min_nonterminals=100).fuzz()
+long_expr_input
+```
+
+For grammars a couple of tests are needed to find the failure-inducing input:
+
+```python
+from Timer import Timer
+
+grammar_reducer = GrammarReducer(eval_mystery, EarleyParser(EXPR_GRAMMAR))
+with Timer() as grammar_time:
+    print(grammar_reducer.reduce(long_expr_input))
+
+grammar_reducer.tests
+
+grammar_time.elapsed_time()
+```
+
+However with delta debugging it takes more tests and the reduction is not as good compared to grammar-based reducer.
+
+```python
+dd_reducer = DeltaDebuggingReducer(eval_mystery)
+with Timer() as dd_time:
+    print(dd_reducer.reduce(long_expr_input))
+
+dd_reducer.tests
+
+dd_time.elapsed_time()
+```
+
+A grammar to reduce inputs s better to use if an input is syntactically complex.
+
 ## Use Cases (hannah)

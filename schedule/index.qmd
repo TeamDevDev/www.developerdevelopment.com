@@ -99,7 +99,7 @@ the technical, professional, and project content previously covered between
 week one and week sixteen. This list describes the content that will be covered
 on the final executable examination.
 
-- {{< iconify fa6-solid flag-checkered size=18px >}} **Thursday, December 11, 2024 at 9:00 AM**: Executable Examination
+- {{< iconify fa6-solid flag-checkered size=18px >}} **Wednesday, December 11, 2024 at 9:00 AM**: Executable Examination
   - *Demonstrate technical and professional skills in software engineering*:
     - Use GitHub and GitHub Actions
     - Use text editor and terminal window

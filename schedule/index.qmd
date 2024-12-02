@@ -19,11 +19,6 @@ listing:
       - "description"
 ---
 
-## Weekly Schedule
-
-:::{#featured-weeks}
-:::
-
 ## Additional Details
 
 ### Schedule Overview
@@ -109,4 +104,9 @@ on the final executable examination.
     - Covers all content in SE, FB, and DB
     - Answer questions during in-person assessment
 
+:::
+
+## Weekly Schedule
+
+:::{#featured-weeks}
 :::

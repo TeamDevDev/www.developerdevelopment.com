@@ -201,12 +201,12 @@ just done in the moment. It is done over times for what was did.
 
 ### Keep Reviewers to a Minimum
 
-Most the time people in the industry want to get many inputs on their code
-because each person can add their own insight. However, having to many reviewers
-can lead to the feedback being less valued. If we trust the people reviewing
-then it helps the process have less people. If your code review calls for many
-people then it is important for each person to write on a different part of the
-change so they are not the same.
+Software engineers in the industry often want to get many inputs on their code
+because each person can add their own insight. However, having too many
+reviewers can lead to the feedback being less valued. If we trust the people
+reviewing then it helps the process have less people. If your code review calls
+for many people then it is important for each person to write on a different
+part of the change so they are not the same.
 
 ### Automate Where Possible
 

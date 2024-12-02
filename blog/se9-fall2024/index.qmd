@@ -67,7 +67,7 @@ programs would not work without code.
 <details> <summary>Click to Expand for the Answer</summary>
 
 * it can add bugs to the programs
-* any code added must be maintained </details>
+* any code added must be maintained
 
 </details>
 

@@ -17,7 +17,10 @@ Book](https://www.fuzzingbook.org/). This chapter builds on the concepts from
 the [Fuzzing](https://www.fuzzingbook.org/html/Fuzzer.html) and [Fuzzing With
 Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapters. Let's get started and learn more about increasing the efficiency of fuzzed inputs and bug finding!
 
-## Summary (hannah)
+## Summary
+
+Taking failure-inducing input is a reducer which is reduced to a minimum that still give the failure. This article talks about "Reducer" classes
+that use reducers. Reduction helps us debug so the failure so the instance where it happens can be found. There are manual ways to do this but for long inputs a way to automate it will help reducing be faster. 
 
 ## Delta Debugging
 
@@ -276,5 +279,3 @@ dd_time.elapsed_time()
 ```
 
 A grammar to reduce inputs s better to use if an input is syntactically complex.
-
-## Use Cases (hannah)

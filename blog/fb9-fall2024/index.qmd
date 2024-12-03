@@ -4,10 +4,15 @@ title: 'Reducing Failure-Inducing Inputs'
 date: '2024-12-04'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>What are different methods of reducing failure-inducing inputs? And what are their benefits and drawbacks?</em>
+description: <em>What are the trade-offs when reducing failure-inducing inputs?</em>
 toc: true
 page-layout: full
 ---
+
+<!-- TODO: This article is incomplete but in a PR subject to review. As such it
+was merged even though it is incomplete. -->
+
+<!-- TODO: None of the code segments in this article are actually executable -->
 
 ## Overview
 
@@ -15,7 +20,9 @@ This article covers the [Reducing Failure-Inducing
 Inputs](https://www.fuzzingbook.org/html/Reducer.html) chapter from [Fuzzing
 Book](https://www.fuzzingbook.org/). This chapter builds on the concepts from
 the [Fuzzing](https://www.fuzzingbook.org/html/Fuzzer.html) and [Fuzzing With
-Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapters. Let's get started and learn more about increasing the efficiency of fuzzed inputs and bug finding!
+Grammars](https://www.fuzzingbook.org/html/Grammars.html) chapters. Let's get
+started and learn more about increasing the efficiency of fuzzed inputs and bug
+finding!
 
 ## Summary
 
@@ -24,9 +31,14 @@ that use reducers. Reduction helps us debug so the failure so the instance where
 
 ## Delta Debugging
 
-Delta debugging uses fuzzing to find what fails and then takes the large input and reduces it to the part of the string that is failing. This decreases the inputs and helps the programmer know what is failing so that then they are able to find the bug more easily. The goal is to find failures in order to then find the reason why the code failed and how to fix the issue.
+Delta debugging uses fuzzing to find what fails and then takes the large input
+and reduces it to the part of the string that is failing. This decreases the
+inputs and helps the programmer know what is failing so that then they are able
+to find the bug more easily. The goal is to find failures in order to then find
+the reason why the code failed and how to fix the issue.
 
-"A reducer takes a failure-inducing input and reduces it to the minimum that still reproduces the failure." This chapter shows the Reducer class.
+"A reducer takes a failure-inducing input and reduces it to the minimum that
+still reproduces the failure." This chapter shows the `Reducer` class.
 
 ```python
 class Reducer:
@@ -110,7 +122,12 @@ Test #29 ')' 1 PASS
 
 ### Benefits
 
-First, one benefit of a delta debugger is that it "reduces the cognitive load of the programmer". It makes it so the test cases can address one problem specifically rather than broad unaddressable problems. Second, it also makes the problem easier to communicate to others. And finally, reducing the failure-inducing input can make it more obvious to programmers if there are duplicates in their test cases.
+First, one benefit of a delta debugger is that it "reduces the cognitive load of
+the programmer". It makes it so the test cases can address one problem
+specifically rather than broad unavoidable problems. Second, it also makes the
+problem easier to communicate to others. And finally, reducing the
+failure-inducing input can make it more obvious to programmers if there are
+duplicates in their test cases.
 
 **But is this effective?**
 
@@ -121,21 +138,39 @@ The best case for this is logarithmic Big O curve, while the worst case is an ex
 [link to the source](https://stackoverflow.com/questions/23329234/which-is-better-on-log-n-or-on2)
 
 ### Drawbacks
-One issue is that with delta debugging is that it is prone to failure. This method is not always accurate. In addition, another issue is that it is not the most efficient method of determining the failing piece of code. Which leads us to the another method of iterating through the fuzzing produced string in order to find the piece of the string that is failing called Grammar Based Reduction. 
+
+One issue is that with delta debugging is that it is prone to failure. This
+method is not always accurate. In addition, another issue is that it is not the
+most efficient method of determining the failing piece of code. Which leads us
+to the another method of iterating through the fuzzing produced string in order
+to find the piece of the string that is failing called Grammar Based Reduction. 
 
 ## Grammar Based Reduction
-Delta debugging may take multiple attempts at reduction, if the input language is syntactically complex. This is where Grammar-Based Reduction comes in, this approach uses grammars to simplify complex syntactic inputs.
 
-### Lexical Reduction vs. Syntactic Rules
-With Lexical Reduction, the input is broken down based on character, without taking into account the grammar rules. In the example below the string, "1 + (2 * 3)" is broken down many times into various versions of itself, but it doesn’t follow the same grammatical pattern.
+Delta debugging may take multiple attempts at reduction, if the input language
+is syntactically complex.This is where Grammar-Based Reduction comes in, this
+approach uses grammars to simplify complex syntactic inputs.
+
+### Lexical Reduction versus Syntactic Rules
+
+With Lexical Reduction, the input is broken down based on character, without
+taking into account the grammar rules. In the example below the string, `"1 + (2
+* 3)"` is broken down many times into various versions of itself, but it doesn't
+follow the same grammatical pattern.
+
 ```python
 expr_input = "1 + (2 * 3)"
 dd_reducer = DeltaDebuggingReducer(mystery, log_test=True)
 dd_reducer.reduce(expr_input)
 ```
-This is an issue because it produces many invalid invalid which in turn lead to meaningless invalid test cases.
 
-On the other hand using syntactic rules allows you to produce valid inputs to parse so that your test cases are meaningful, since the inputs it produces still follow the intended grammatical pattern.
+This is an issue because it produces many invalid invalid which in turn lead to
+meaningless invalid test cases.
+
+On the other hand using syntactic rules allows you to produce valid inputs to
+parse so that your test cases are meaningful, since the inputs it produces still
+follow the intended grammatical pattern.
+
 ```python
 class EvalMysteryRunner(MysteryRunner):
     def __init__(self) -> None:
@@ -153,13 +188,23 @@ eval_mystery = EvalMysteryRunner()
 dd_reducer = DeltaDebuggingReducer(eval_mystery, log_test=True)
 dd_reducer.reduce(expr_input)
 ```
-In this example the  inputs are either valid or unresolved allowing you to use the valid one in you test cases.
+
+In this example the inputs are either valid or unresolved allowing you to use
+the valid one in you test cases.
 
 ### A Grammar-Based Reduction Approach
-The grammar-based reduction approach simplifies complex inputs by operating on the structure of the input’s derivation tree, rather than just reducing the string. In the Fuzzing book it talks about two strategies, Replacing the subtrees and Alternative Expansions.
+
+The grammar-based reduction approach simplifies complex inputs by operating on
+the structure of the input’s derivation tree, rather than just reducing the
+string. There are two key strategies: "Replacing the subtrees" and "Alternative
+Expansions". Let's investigate each of these strategies in more detail!
 
 #### Replacing the Subtrees
-Replacing the subtress means to take a larger part of the tree and replace it with a smaller part of the tree. In the example given it shows the original tree which makes up the string "1 + (2 * 3)" and then being broken down to "(2 * 3)" by replacing the upper most <expr> with the lowest <expr>.
+
+Replacing the sub-trees means to take a larger part of the tree and replace it
+with a smaller part of the tree. In the example given it shows the original tree
+which makes up the string `"1 + (2 * 3)"` and then being broken down to `"(2 *
+3)"` by replacing the upper most `<expr>` with the lowest `<expr>`.
 
 ```python
 from Grammars import Grammar
@@ -169,7 +214,12 @@ display_tree(derivation_tree)pyt
 ```
 
 #### Alternative Expansions
-Using alternative expansions we would change how the term is expanded. In the example given in the book it took the non-terminal <term> * <factor> which would’ve given the output (2 * 3), and broke it by altering how the term would expand, which is <term> : := <factor>. Therefore changing the grammatical rule of how <term> would expand.
+
+Using alternative expansions we would change how the term is expanded. In the
+example given in the book it took the non-terminal `<term> * <factor>` which
+would have given the output `(2 * 3)`, and broke it by altering how the term
+would expand, which is `<term> : := <factor>`. Therefore changing the
+grammatical rule of how `<term>` would expand.
 
 ```python
 import copy
@@ -182,14 +232,23 @@ display_tree(sub_expr_tree)
 ```
 
 #### A Depth-Oriented Strategy
-The log above after test #2 is reduced to "2 * 3" for the input tree the "GrammarReducer" goes to replace the tree "2" and "3" being the aleternate
-<term> subtrees. This can work but if there are many subtrees, it will take time trying all the subtrees possible.
 
-Delta debugging is trying to split inputs in half trying to get to a minimum input. Having a tree be replaces with subtrees it could make a tree less
-important. However this may take sever tries. A good way to go about this is to look at lage subtrees first. To locate large subtrees, we reduce
-the depth of the search for replacements. Looking at direct descendants first, then lower descendants.
+The log above after test `#2` is reduced to `"2 * 3"` for the input tree the
+`GrammarReducer` goes to replace the tree `"2"` and `"3"` being the alternate
+`<term>` subtrees. This can work but if there are many subtrees, it will take
+time trying all the subtrees possible.
 
-The "depth" parameter in the "subtrees_with_symbol()" function, which is passed through the calling functions, controls this behavior. When set, it ensures that only symbols at the specified depth are returned. An example with dervation tree:
+Delta debugging is trying to split inputs in half trying to get to a minimum
+input. Having a tree be replaces with subtrees it could make a tree less
+important. However this may take sever tries. A good way to go about this is to
+look at large subtrees first. To locate large subtrees, we reduce the depth of
+the search for replacements. Looking at direct descendants first, then lower
+descendants.
+
+The `depth` parameter in the `subtrees_with_symbol()` function, which is passed
+through the calling functions, controls this behavior. When set, it ensures that
+only symbols at the specified depth are returned. An example with derivation
+tree:
 
 ```python 
 grammar_reducer = GrammarReducer(
@@ -202,14 +261,14 @@ all_terminals(derivation_tree)
 display_tree(derivation_tree)
 ```
 
-The <term> symbol is not here at depth of 1:
+The `<term>` symbol is not here at depth of 1:
 
 ```python
 [all_terminals(t) for t in grammar_reducer.subtrees_with_symbol(
     derivation_tree, "<term>", depth=1)]
 ```
 
-The <term> subtree is here at depth of 2 on the left hand side:
+The `<term>` subtree is here at depth of 2 on the left hand side:
 
 ```python
 [all_terminals(t) for t in grammar_reducer.subtrees_with_symbol(
@@ -237,15 +296,16 @@ grammar_reducer = GrammarReducer(
 grammar_reducer.reduce(expr_input)
 ```
 
-**Discussion Question: What does a depth-oriengted strategy show?**
+**Discussion Question: What does a depth-oriented strategy show?**
+
 <details> <summary>Click to Expand for the Answer</summary>
 It needs less steps
 </details>
 
 ### Comparing Strategies
 
-There are some differences between text-based delta debugging and grammar-based reduction.
-Buidling a long expression:
+There are some differences between text-based delta debugging and grammar-based
+reduction. Building a long expression:
 
 ```python
 from GrammarFuzzer import GrammarFuzzer
@@ -268,7 +328,8 @@ grammar_reducer.tests
 grammar_time.elapsed_time()
 ```
 
-However with delta debugging it takes more tests and the reduction is not as good compared to grammar-based reducer.
+However, with delta debugging it takes more tests and the reduction is not as
+good compared to grammar-based reducer.
 
 ```python
 dd_reducer = DeltaDebuggingReducer(eval_mystery)
@@ -280,7 +341,7 @@ dd_reducer.tests
 dd_time.elapsed_time()
 ```
 
-A grammar to reduce inputs s better to use if an input is syntactically complex.
+A grammar to reduce inputs better to use if an input is syntactically complex.
 
 ## Conclusion
 

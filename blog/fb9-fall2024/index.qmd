@@ -9,9 +9,6 @@ toc: true
 page-layout: full
 ---
 
-<!-- TODO: This article is incomplete but in a PR subject to review. As such it
-was merged even though it is incomplete. -->
-
 <!-- TODO: None of the code segments in this article are actually executable -->
 
 ## Overview
@@ -26,6 +23,12 @@ finding!
 
 ## Summary
 
+Taking failure-inducing input is a reducer which is reduced to a minimum that
+still give the failure. This article talks about "Reducer" classes that use
+reducers. Reduction helps us debug the failure so the instance where it happens
+can be found. There are manual ways to do this but for large and complex inputs
+a way to automate it will help reducing be faster. 
+
 ## Delta Debugging
 
 Delta debugging uses fuzzing to find what fails and then takes the large input
@@ -34,8 +37,9 @@ inputs and helps the programmer know what is failing so that then they are able
 to find the bug more easily. The goal is to find failures in order to then find
 the reason why the code failed and how to fix the issue.
 
-"A reducer takes a failure-inducing input and reduces it to the minimum that
-still reproduces the failure." This chapter shows the `Reducer` class.
+The chapter explains that "A reducer takes a failure-inducing input and reduces
+it to the minimum that still reproduces the failure." This chapter shows the
+`Reducer` class which is implemented in the following way:
 
 ```python
 class Reducer:
@@ -70,9 +74,16 @@ class Reducer:
         return inp
 ```
 
-Manual reduction input has to do with manually testing and iterating through the code in order to find the bug; where as delta debugging automates this process of testing in order to find the failures. 
+Manual reduction input has to do with manually testing and iterating through
+the code in order to find the bug; where as delta debugging automates this
+process of testing in order to find the failures. 
 
-Delta debugging first tests the first half of the code to see if it fails. If it passes it will then test the second half of the string. If that also passes the delta debugger will iterate through different combinations of the string quarters. The size of the string that the delta debugger tests gets smaller and smaller until there are only one or two characters left. But this can be confusing so lets walk through an example:
+Delta debugging first tests the first half of the code to see if it fails. If
+it passes it will then test the second half of the string. If that also passes
+the delta debugger will iterate through different combinations of the string
+quarters. The size of the string that the delta debugger tests gets smaller and
+smaller until there are only one or two characters left. But this can be
+confusing so lets walk through an example:
 
 ```python
 dd_reducer = DeltaDebuggingReducer(mystery, log_test=True)
@@ -128,19 +139,16 @@ duplicates in their test cases.
 
 **But is this effective?**
 
-<!-- TODO: The mathematical notation in this paragraph is not formatted correctly -->
-
-The best case for this is logarithmic or Big O(log2 n), while the worst case is
-Big O(n^2). The worst chase situation happens when the program runs and the last
-character fails. If the last character fails the program will then return an
-`AssertionError`. The goal is for the last character to pass so that it is clear
-that the error resulted in the penultimate character. Here is a graph of these
-Big O notations:
-
-<!-- TODO: How was this diagram/graph generated? Did you create it or was is -->
-<!-- extracted form other source? -->
+The best case for this is logarithmic Big O curve, while the worst case is an
+exponential Big O curve as pictured on the graph below. The worst chase
+situation happens when the program runs and the last character fails. If the
+last character fails the program will then return an AssertionError. The goal
+is for the last character to pass so that it is clear that the error resulted
+in the penultimate character. Here is a graph of these Big O notations:
 
 ![Big O(n) graph comparisons](big0n_graph.gif)
+
+[Source for this graph about worst-case time complexity](https://stackoverflow.com/questions/23329234/which-is-better-on-log-n-or-on2)
 
 ### Drawbacks
 
@@ -148,7 +156,7 @@ One issue is that with delta debugging is that it is prone to failure. This
 method is not always accurate. In addition, another issue is that it is not the
 most efficient method of determining the failing piece of code. Which leads us
 to the another method of iterating through the fuzzing produced string in order
-to find the piece of the string that is failing called Grammar Based Reduction. 
+to find the piece of the string that is failing called Grammar-Based Reduction. 
 
 ## Grammar Based Reduction
 
@@ -156,7 +164,7 @@ Delta debugging may take multiple attempts at reduction, if the input language
 is syntactically complex.This is where Grammar-Based Reduction comes in, this
 approach uses grammars to simplify complex syntactic inputs.
 
-# Lexical Reduction versus Syntactic Rules
+### Lexical Reduction versus Syntactic Rules
 
 With Lexical Reduction, the input is broken down based on character, without
 taking into account the grammar rules. In the example below the string, `"1 + (2
@@ -197,28 +205,28 @@ dd_reducer.reduce(expr_input)
 In this example the inputs are either valid or unresolved allowing you to use
 the valid one in you test cases.
 
-## A Grammar-Based Reduction Approach
+### A Grammar-Based Reduction Approach
 
 The grammar-based reduction approach simplifies complex inputs by operating on
 the structure of the input’s derivation tree, rather than just reducing the
 string. There are two key strategies: "Replacing the subtrees" and "Alternative
 Expansions". Let's investigate each of these strategies in more detail!
 
-# Replacing the Subtrees
+#### Replacing the Subtrees
 
 Replacing the sub-trees means to take a larger part of the tree and replace it
 with a smaller part of the tree. In the example given it shows the original tree
 which makes up the string `"1 + (2 * 3)"` and then being broken down to `"(2 *
 3)"` by replacing the upper most `<expr>` with the lowest `<expr>`.
 
-```py
+```python
 from Grammars import Grammar
 from GrammarFuzzer import all_terminals, expansion_to_children, display_tree
 derivation_tree, *_ = EarleyParser(EXPR_GRAMMAR).parse(expr_input)
 display_tree(derivation_tree)pyt
 ```
 
-# Alternative Expansions
+#### Alternative Expansions
 
 Using alternative expansions we would change how the term is expanded. In the
 example given in the book it took the non-terminal `<term> * <factor>` which
@@ -226,7 +234,7 @@ would have given the output `(2 * 3)`, and broke it by altering how the term
 would expand, which is `<term> : := <factor>`. Therefore changing the
 grammatical rule of how `<term>` would expand.
 
-```py
+```python
 import copy
 from Grammars import Grammar
 from GrammarFuzzer import all_terminals, expansion_to_children, display_tree
@@ -236,7 +244,7 @@ sub_expr_tree = new_derivation_tree[1][0][1][2]
 display_tree(sub_expr_tree)
 ```
 
-## A Depth-Oriented Strategy
+#### A Depth-Oriented Strategy
 
 The log above after test `#2` is reduced to `"2 * 3"` for the input tree the
 `GrammarReducer` goes to replace the tree `"2"` and `"3"` being the alternate
@@ -301,13 +309,15 @@ grammar_reducer = GrammarReducer(
 grammar_reducer.reduce(expr_input)
 ```
 
+<!-- TODO: To do what? The answer does not give enough explanation. -->
+
 **Discussion Question: What does a depth-oriented strategy show?**
 
 <details> <summary>Click to Expand for the Answer</summary>
 It needs less steps
 </details>
 
-## Comparing Strategies
+### Comparing Strategies
 
 There are some differences between text-based delta debugging and grammar-based
 reduction. Building a long expression:
@@ -348,7 +358,11 @@ dd_time.elapsed_time()
 
 A grammar to reduce inputs better to use if an input is syntactically complex.
 
-<!-- TODO: There is no conclusion for this article! -->
+## Conclusion
+
+This article talked about reducing inputs down to the smallest piece that is
+breaking or hindering the code. This has many really world applications. Can
+you think of any real world uses for delta debugging?
 
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}

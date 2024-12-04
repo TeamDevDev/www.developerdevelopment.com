@@ -9,9 +9,6 @@ toc: true
 page-layout: full
 ---
 
-<!-- TODO: This article is incomplete but in a PR subject to review. As such it
-was merged even though it is incomplete. -->
-
 <!-- TODO: None of the code segments in this article are actually executable -->
 
 ## Overview
@@ -26,8 +23,11 @@ finding!
 
 ## Summary
 
-Taking failure-inducing input is a reducer which is reduced to a minimum that still give the failure. This article talks about "Reducer" classes
-that use reducers. Reduction helps us debug so the failure so the instance where it happens can be found. There are manual ways to do this but for long inputs a way to automate it will help reducing be faster. 
+Taking failure-inducing input is a reducer which is reduced to a minimum that
+still give the failure. This article talks about "Reducer" classes that use
+reducers. Reduction helps us debug the failure so the instance where it
+happens can be found. There are manual ways to do this but for long inputs a
+way to automate it will help reducing be faster. 
 
 ## Delta Debugging
 
@@ -73,9 +73,16 @@ class Reducer:
         return inp
 ```
 
-Manual reduction input has to do with manually testing and iterating through the code in order to find the bug; where as delta debugging automates this process of testing in order to find the failures. 
+Manual reduction input has to do with manually testing and iterating through
+the code in order to find the bug; where as delta debugging automates this
+process of testing in order to find the failures. 
 
-Delta debugging first tests the first half of the code to see if it fails. If it passes it will then test the second half of the string. If that also passes the delta debugger will iterate through different combinations of the string quarters. The size of the string that the delta debugger tests gets smaller and smaller until there are only one or two characters left. But this can be confusing so lets walk through an example:
+Delta debugging first tests the first half of the code to see if it fails. If
+it passes it will then test the second half of the string. If that also passes
+the delta debugger will iterate through different combinations of the string
+quarters. The size of the string that the delta debugger tests gets smaller and
+smaller until there are only one or two characters left. But this can be
+confusing so lets walk through an example:
 
 ```python
 dd_reducer = DeltaDebuggingReducer(mystery, log_test=True)
@@ -131,11 +138,16 @@ duplicates in their test cases.
 
 **But is this effective?**
 
-The best case for this is logarithmic Big O curve, while the worst case is an exponential Big O curve as pictured on the graph below. The worst chase situation happens when the program runs and the last character fails. If the last character fails the program will then return an AssertionError. The goal is for the last character to pass so that it is clear that the error resulted in the penultimate character. Here is a graph of these Big O notations:
+The best case for this is logarithmic Big O curve, while the worst case is an
+exponential Big O curve as pictured on the graph below. The worst chase
+situation happens when the program runs and the last character fails. If the
+last character fails the program will then return an AssertionError. The goal
+is for the last character to pass so that it is clear that the error resulted
+in the penultimate character. Here is a graph of these Big O notations:
 
 ![Big O(n) graph comparisons](big0n_graph.gif)
 
-[link to the source](https://stackoverflow.com/questions/23329234/which-is-better-on-log-n-or-on2)
+[Source for this graph about worst-case time complexity](https://stackoverflow.com/questions/23329234/which-is-better-on-log-n-or-on2)
 
 ### Drawbacks
 

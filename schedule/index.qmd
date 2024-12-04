@@ -2,21 +2,6 @@
 title: Schedule
 layout: full
 toc: true
-listing:
-  - id: featured-weeks
-    type: default
-    sort-ui: true
-    filter-ui: true
-    fields: [date,title,description]
-    field-display-names:
-      date: "Starting Date"
-      description: "Objective"
-    contents:
-      - "week*/**/*.qmd"
-    sort:
-      - "date"
-      - "title"
-      - "description"
 ---
 
 ## Schedule Overview
@@ -104,9 +89,3 @@ on the final executable examination.
     - Answer questions during in-person assessment
 
 :::
-
-<!---->
-<!-- ## Weekly Schedule -->
-<!---->
-<!-- :::{#featured-weeks} -->
-<!-- ::: -->

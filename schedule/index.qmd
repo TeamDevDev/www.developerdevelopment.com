@@ -19,9 +19,7 @@ listing:
       - "description"
 ---
 
-## Additional Details
-
-### Schedule Overview
+## Schedule Overview
 
 - **Week One**: Technical and Professional Onboarding
 - **Module One**: *Introduction to Software Engineering Knowledge and Skills*
@@ -60,7 +58,7 @@ listing:
 
 :::
 
-### Weekly Cadence
+## Weekly Cadence
 
 - {{< iconify fa6-solid people-line size=18px >}} **Monday**: Professional Development
   - *Discuss the team's executive summary and write a professional précis*:
@@ -107,7 +105,8 @@ on the final executable examination.
 
 :::
 
-## Weekly Schedule
-
-:::{#featured-weeks}
-:::
+<!---->
+<!-- ## Weekly Schedule -->
+<!---->
+<!-- :::{#featured-weeks} -->
+<!-- ::: -->

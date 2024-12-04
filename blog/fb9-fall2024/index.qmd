@@ -25,9 +25,9 @@ finding!
 
 Taking failure-inducing input is a reducer which is reduced to a minimum that
 still give the failure. This article talks about "Reducer" classes that use
-reducers. Reduction helps us debug the failure so the instance where it
-happens can be found. There are manual ways to do this but for long inputs a
-way to automate it will help reducing be faster. 
+reducers. Reduction helps us debug the failure so the instance where it happens
+can be found. There are manual ways to do this but for large and complex inputs
+a way to automate it will help reducing be faster. 
 
 ## Delta Debugging
 

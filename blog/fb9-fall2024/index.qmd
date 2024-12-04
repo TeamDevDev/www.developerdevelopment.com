@@ -37,8 +37,9 @@ inputs and helps the programmer know what is failing so that then they are able
 to find the bug more easily. The goal is to find failures in order to then find
 the reason why the code failed and how to fix the issue.
 
-"A reducer takes a failure-inducing input and reduces it to the minimum that
-still reproduces the failure." This chapter shows the `Reducer` class.
+The chapter explains that "A reducer takes a failure-inducing input and reduces
+it to the minimum that still reproduces the failure." This chapter shows the
+`Reducer` class which is implemented in the following way:
 
 ```python
 class Reducer:
@@ -357,4 +358,12 @@ A grammar to reduce inputs better to use if an input is syntactically complex.
 
 ## Conclusion
 
-This article talked about reducing inputs down to the smallest piece that is breaking or hindering the code. This has many really world applications. Can you think of any real world uses for delta debugging?
+This article talked about reducing inputs down to the smallest piece that is
+breaking or hindering the code. This has many really world applications. Can
+you think of any real world uses for delta debugging?
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

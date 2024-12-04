@@ -156,7 +156,7 @@ One issue is that with delta debugging is that it is prone to failure. This
 method is not always accurate. In addition, another issue is that it is not the
 most efficient method of determining the failing piece of code. Which leads us
 to the another method of iterating through the fuzzing produced string in order
-to find the piece of the string that is failing called Grammar Based Reduction. 
+to find the piece of the string that is failing called Grammar-Based Reduction. 
 
 ## Grammar Based Reduction
 
@@ -308,6 +308,8 @@ grammar_reducer = GrammarReducer(
     log_test=True)
 grammar_reducer.reduce(expr_input)
 ```
+
+<!-- TODO: To do what? The answer does not give enough explanation. -->
 
 **Discussion Question: What does a depth-oriented strategy show?**
 

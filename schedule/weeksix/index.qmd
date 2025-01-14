@@ -36,7 +36,6 @@ published-title: "Starting Date"
         - Show that they have an effective engineering tool setup
         - Share their plan for continued progress on their features
 
-
 ::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
 
 Both the in-person assessment and the executable examination are cumulative in

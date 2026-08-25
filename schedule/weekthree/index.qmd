@@ -35,7 +35,7 @@ published-title: "Starting Date"
     - *Programming Skill-Check*:
       - Use of the following software tools:
         - GitHub and GitHub Classroom
-        - Python, Poetry, and Pipx
+        - Python and uv
         - VSCode and Python programming tools
         - GatorGrade, GatorGrader, and ExecExam
       - Basic Python programming knowledge and skills

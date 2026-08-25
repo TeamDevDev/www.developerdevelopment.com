@@ -113,7 +113,7 @@ important parts, or explain the tricky parts
 
 Consistency in code bases and in work spaces makes it easier to jump from
 project to project. Think about the setup between `gatorgrade` and `execexam`
-both utilize `poetry` so you were familiar with aspects of the tool before
+both utilize `uv` so you were familiar with aspects of the tool before
 jumping in. That is part of why it is so hard to update `gatorgrader`. It was
 written before a lot of the dependencies we use in our other code bases so it is
 harder to get a grip on what is happening. That is why it is a task to convert

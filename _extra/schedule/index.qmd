@@ -96,11 +96,11 @@ page-layout: full
     - Use the official [installers](https://www.python.org/downloads/) for Windows 10 or Windows 11
     - Install the full Python version supporting C and Rust binding and SQLite 3
     - Ensure that you can seamlessly switch between different versions of Python
-- Install the [Poetry](https://python-poetry.org/) and [Pipx](https://github.com/pypa/pipx) tools to support Python development
+- Install the [uv](https://docs.astral.sh/uv/) and [Pipx](https://github.com/pypa/pipx) tools to support Python development
 - Access both the [Fuzzing Book (FB)](https://www.fuzzingbook.org/) and the [Debugging Book (DB)](https://www.debuggingbook.org/)
     - Fork the GitHub repositories for these two books
     - Clone the forked GitHub repositories to your workstation
-    - Use `pip` to install each books' dependencies
+    - Use `uv pip` to install each books' dependencies
     - Run a local Jupyter Lab server that can access a book's Jupyter notebooks
     - Correctly run the Jupyter notebook for at least one chapter in FB or DB
 - Locate and bookmark the [Software Engineering at Google](https://abseil.io/resources/swe-book) book

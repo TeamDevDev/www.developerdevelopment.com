@@ -32,11 +32,14 @@ published-title: "Starting Date"
           - Set deadlines for the completion of the tasks
           - {{< iconify game-icons team-idea size=18px>}} **Friday**: Developer Development
             - *Publish executive summaries to the Developer Development blog*:
-            - **Publication of SE2**: What is Software Engineering?
-            - **Publication of FB2**: Code Coverage
+              - **Publication of SE2**: What is Software Engineering?
+              - **Publication of FB2**: Code Coverage
             - *Confirm that all team members can use the following tools*:
-            - GitHub and GitHub Flow
-            - Python and uv
-            - VSCode and Python programming tools
-            - VSCode and the Quarto publishing tool
-            - Demonstrate the use of the software tools subject to development
+              - GitHub and GitHub Flow
+              - Python and uv (make sure that Python installs through uv and is the latest version)
+              - VSCode and Python programming tools
+              - VSCode and the Quarto publishing tool
+              - Node package manager and all JavaScript programming tools
+              - Either the `OpenCode` or `Pi` coding agent running in a terminal window
+              - Authorize your coding agent to use GitHub Copilot, OpenCode Zen, and/or OpenCode Go
+              - Demonstrate the use of the software tools subject to development

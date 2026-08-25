@@ -25,10 +25,10 @@ not_found_handling = "404-page"
 # account as the API token used to deploy. The domain must not already be
 # bound to another Worker.
 
-[[routes]]
-pattern = "www.developerdevelopment.com"
-custom_domain = true
+# [[routes]]
+# pattern = "www.developerdevelopment.com"
+# custom_domain = true
 
-[[routes]]
-pattern = "developerdevelopment.com"
-custom_domain = true
+# [[routes]]
+# pattern = "developerdevelopment.com"
+# custom_domain = true

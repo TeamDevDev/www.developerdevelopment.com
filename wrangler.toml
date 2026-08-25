@@ -1,0 +1,34 @@
+# Wrangler configuration for www.developerdevelopment.com
+#
+# This file deploys this Quarto site as a Cloudflare Worker that serves
+# the static assets produced by `quarto render --profile optimize`.
+#
+# When you push to the `master` branch, the GitHub Actions workflow in
+# .github/workflows/publish.yml renders the site into ./_site and then
+# runs `wrangler deploy`, which uploads ./_site as this Worker's static
+# assets. See MIGRATE.md in the reference repository for the full steps.
+
+name = "www-developerdevelopment-com"
+compatibility_date = "2026-08-25"
+
+# Serve the rendered Quarto output as static assets. Because this Worker
+# has no script (main), every request is answered from ./_site directly.
+# not_found_handling = "404-page" makes unknown paths serve the Quarto
+# 404.html; without it, Workers returns a bare, empty 404 page.
+
+[assets]
+directory = "./_site"
+not_found_handling = "404-page"
+
+# To bind the domain purely from code (no dashboard clicking), uncomment
+# the block below. It only works when the zone is on the SAME Cloudflare
+# account as the API token used to deploy. The domain must not already be
+# bound to another Worker.
+
+[[routes]]
+pattern = "www.developerdevelopment.com"
+custom_domain = true
+
+[[routes]]
+pattern = "developerdevelopment.com"
+custom_domain = true

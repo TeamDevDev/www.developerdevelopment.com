@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import stat
 import sys
 from pathlib import Path
 
@@ -15,6 +16,12 @@ console = Console()
 DEFAULT_CONSOLE_STYLE = "bold blue"
 
 source_directory_root = ""
+
+
+def ensure_writable(path: Path) -> None:
+    """Make an existing generated file writable before replacing it."""
+    if path.exists():
+        path.chmod(path.stat().st_mode | stat.S_IWUSR)
 
 
 def minify_files(source_directory: str, destination_directory: str) -> None:
@@ -42,6 +49,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
             # minify the CSS file
             if extension == ".css":
                 try:
+                    ensure_writable(destination_path)
                     minified_content = csscompressor.compress(
                         open(analysis_file_path).read()
                     )
@@ -53,6 +61,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     console.print(f"CSS: Could not minifiy file {analysis_file_path}")
             # minify the HTML file
             elif extension == ".html":
+                ensure_writable(destination_path)
                 minified_content = minify_html.minify(
                     open(analysis_file_path).read(),
                     minify_js=True,
@@ -65,6 +74,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                 console.print(f"HTML: Saving {saving_file_path_str}")
             # minify the JS file
             elif extension == ".js":
+                ensure_writable(destination_path)
                 minified_content = str(rjsmin.jsmin(open(analysis_file_path).read()))
                 with open(saving_file_path_str, "w") as file:
                     file.write(minified_content)

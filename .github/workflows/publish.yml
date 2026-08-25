@@ -33,7 +33,6 @@ jobs:
         env:
           PYDEVD_DISABLE_FILE_VALIDATION: 1
         run: uv run quarto render --profile optimize
-
       - name: Deploy to Cloudflare Workers
         if: github.event_name == 'push'
         uses: cloudflare/wrangler-action@v3

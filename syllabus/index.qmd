@@ -5,7 +5,7 @@ toc-depth: 5
 page-layout: full
 ---
 
-## Computer Science 203 Fall 2024
+## Computer Science 203 Fall 2026
 
 ### Course Instructor
 
@@ -17,10 +17,10 @@ for more information!
 
 ### Instructor Appointments
 
-- **Monday**: 11:00 -- 12:00 noon and 4:30 PM -- 5:00 PM
-- **Tuesday**: 1:00 PM -- 3:00 PM
-- **Wednesday**: 11:00 AM -- 12:00 noon
-- **Friday**: 11:00 AM -- 12:00 noon and 2:30 PM -- 3:00 PM
+- **Monday**: 3:00 -- 5:00 PM
+- **Wednesday**: 4:00 -- 5:00 PM
+- **Thursday**: 11:00 AM -- 12:00 noon and 3:00 -- 4:30 PM
+- **Friday**: 4:00 -- 4:30 PM
 
 All instructor appointments are 15-minute time slots and take place in Alden Hall,
 Room 108.
@@ -43,28 +43,32 @@ that, by necessity, the meeting before yours may sometimes run late.
 #### Weekly Cadence
 
 - **Discussion, Writing, and Programming Sessions**
-  - *Developing Professional Skills*: Monday, 10:00 AM -- 10:50 AM, Alden 109
+  - *Developing Professional Skills*: Monday, 1:30 PM -- 2:20 PM, Alden 109
     - **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)
     - **Majority of the class**: Discuss executive summaries for chapters read last week
-    - **One-quarter of the class**: Prepare for the executive summary for next week's chapters
-  - *Developing Technical Skills*: Wednesday, 10:00 AM -- 10:50 AM, Alden 109
+    - **Assigned team of learners**: Prepare for the executive summary for next week's chapters
+  - *Developing Technical Skills*: Wednesday, 1:30 PM -- 2:20 PM, Alden 109
     - **FB Book**: [Fuzzing Book](https://www.fuzzingbook.org/)
     - **DB Book**: [Debugging Book](https://www.debuggingbook.org/)
     - **Majority of the class**: Discuss executive summaries for chapters read last week
-    - **One-quarter of the class**: Prepare for the executive summary for next week's chapters
-  - *Developing as Developers*: Friday, 10:00 AM -- 10:50 AM, Alden 109
+    - **Assigned team of learners**: Prepare for the executive summary for next week's chapters
+  - *Developing as Developers*: Friday, 1:30 PM -- 2:20 PM, Alden 109
       - Publish an executive summary for next week's technical skills
       - Publish an executive summary for next week's professional skills
       - Confirm our team's readiness for next week's in-class discussions
-      - *When necessary*: implement and demonstrate software engineering project
-      - *Every other week*: take an in-class programming skill-check
-- **Collaborative Software Engineering**: Thursday, 2:30 PM -- 4:20 PM, Alden 109
+      - **When necessary**: implement and demonstrate software engineering project
+      - **Alternating assessments**:
+        - *Every other week i*: complete an in-class programming skill-check
+        - *Every other week i+1*: complete an in-class knowledge skill-check
+- **Collaborative Software Engineering**: Wednesday, 2:30 PM -- 4:00 PM, Alden 109
 
 #### Assessment Schedule
 
 - **Week Six**: In-person assessments and executable examination one
 - **Week Eleven**: In-person assessments and executable examination two
 - **Week Sixteen**: Final examination week
+   - Final executable examination
+   - Final in-person assessment
 
 ::: {.callout-note appearance="minimal" title="Active Learning"}
 
@@ -79,7 +83,7 @@ to actively lead and participate in class discussions every week. One key task
 that you will complete every week involves running, writing about, and
 implementing program source code and publishing program documentation. Aligned
 with the course goals, you will complete out-of-class programming and writing
-in preparation for in-class discussions.
+in preparation for in-class discussions, that will be lead by a team of learners.
 
 :::
 
@@ -88,26 +92,26 @@ in preparation for in-class discussions.
 #### Module One Discussion Leads
 
 - **Week One**: Install development tools and explore projects
-- **Week Two**: Pallas-Athena Cain and Hemani Alaparthi
-- **Week Three**: Rebekah Rudd and Chezka Quinola
-- **Week Four**: Aidan Dyga and Hannah Brown
-- **Week Five**: Molly Suppo and Titus Smith
+- **Week Two**: TBA
+- **Week Three**: TBA
+- **Week Four**: TBA
+- **Week Five**: TBA
 - **Week Six**: In-person assessments and executable examination one
 
 #### Module Two Discussion Leads
 
-- **Week Seven**: Fall break and research conference travel
-- **Week Eight**: Project development meetings and project demonstrations
-- **Week Nine**: Course instructor
-- **Week Ten**: Coltin Colucci, Philip Olwoc, and Hemani Alaparthi
+- **Week Seven**: TBA 
+- **Week Eight**: TBA
+- **Week Nine**: TBA
+- **Week Ten**: TBA
 - **Week Eleven**: In-person assessments and executable examination two
 
 #### Module Three Discussion Leads
 
-- **Week Twelve**:  Titus Smith, Aidan Dyga, and Molly Suppo
-- **Week Thirteen**: Pallas-Athena Cain, Coltin Colucci, and Chezka Quinola
-- **Week Fourteen**: Thanksgiving break
-- **Week Fifteen**: Hannah Brown, Philip Olwoc, and Rebekah Rudd
+- **Week Twelve**: TBA
+- **Week Thirteen**: TBA
+- **Week Fourteen**: TBA
+- **Week Fifteen**: TBA
 - **Week Sixteen**: Final examination week
 
 ### Reading Assignments
@@ -123,18 +127,18 @@ in preparation for in-class discussions.
 
 #### Module Two Reading Assignments
 
-- **Week Seven**: Fall break and research conference travel
-- **Week Eight**: Project development meetings and project demonstrations
-- **Week Nine**: SE5 (Engineering for Equity and Documentation), FB5 (Mutation-Based Fuzzing), and DB1 (Debugging)
-- **Week Ten**: SE6 (How to Lead a Team) and FB6 (Fuzzing with Grammars)
+- **Week Seven**: Fall break, no presentations by learners
+- **Week Eight**: SE5 (Engineering for Equity and Documentation) and FB5 (Mutation-Based Fuzzing)
+- **Week Nine**: SE6 (How to Lead a Team) and FB6 (Fuzzing with Grammars) 
+- **Week Ten**: SE7 (Leading at Scale) and FB7 (Efficient Grammar Fuzzing) 
 - **Week Eleven**: No reading assignment due to assessments
 
 #### Module Three Reading Assignments
 
-- **Week Twelve**: SE7 (Leading at Scale) and FB7 (Efficient Grammar Fuzzing)
-- **Week Thirteen**: SE8 (Style Guides and Rules) and FB8 (Parsing Inputs)
-- **Week Fourteen**: Thanksgiving break
-- **Week Fifteen**: SE9 (Code Review) and FB9 (Reducing Failure-Inducing Inputs)
+- **Week Twelve**: SE8 (Style Guides and Rules) and FB8 (Parsing Inputs)
+- **Week Thirteen**: SE9 (Code Review) and FB9 (Reducing Failure-Inducing Inputs) 
+- **Week Fourteen**: Thanksgiving break, no presentations by learners
+- **Week Fifteen**: SE10 (Testing Overview and Unit Testing) and DB1 (Debugging and Observing Executions)
 - **Week Sixteen**: No reading assignment due to final examination week
 
 ::: {.callout-note appearance="minimal" title="Textbook Reminders"}
@@ -147,6 +151,7 @@ course textbooks that are freely available online:
 - **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)
 - **FB Book**: [Fuzzing Book](https://www.fuzzingbook.org/)
 - **DB Book**: [Debugging Book](https://www.debuggingbook.org/)
+- *Additional Text book*: [Software Engineering: Standing on the Shoulders of Giants](https://www.swebook.org/)
 
 :::
 
@@ -299,7 +304,8 @@ in these ways:
 All students are responsible for taking the following steps in regards to **FB**
 and **DB**:
 
-- Install an appropriate version of both **FB** and **DB** (both currently designate Python `3.10.2`, subject to recent updates)
+- Install an appropriate version of both **FB** and **DB** (both currently designate Python `3.10.2`, subject to recent
+updates)
 - Complete one-time setup and installation steps for the **FB** or **DB** textbooks:
   - Create a virtual environment for the book's dependencies with `python -m venv venv`
   - Enter into the virtual environment for a textbook with `source venv/bin/activate`
@@ -353,7 +359,7 @@ during the academic semester.
 - **Executive Summaries**:
   - **Professional Development**: 10%
   - **Technical Development**: 10%
-- **Software Engineering Evaluations**:
+  - **Software Engineering Evaluations**:
   - **In-Person Assessments**: 10%
   - **Programming Skill-Checks**: 10%
   - **Midterm Examinations**: 10%
@@ -475,11 +481,13 @@ components:
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
   - An executive summary for an article from either **FB** or **DB** must also
   contain executable Python source code and the output from running the code.
+
   Specifically, the source code segments must appear in fenced code blocks and
   be directly executable in GitHub Actions and capable of correctly producing
   output when the web site is built and deployed to Netlify.
   - All executive summaries should have a commit message history that clearly
   explain the changes made to the technical and professional content content.
+
   Importantly, the discussion leaders for each executive summary should ensure
   that all commit messages adhere to the [conventional
   commit](https://www.conventionalcommits.org/en/v1.0.0/) format as evidenced by

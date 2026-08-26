@@ -24,16 +24,20 @@ toc: true
 - **Module Three**: *Advanced Software Engineering Knowledge and Skills*
     - **Weeks Eleven through Fifteen**: Enhance your technical and professional skills
     - **Week Sixteen**:
-      - **Wednesday, December 11, 2024 at 9:00 AM**:
-        - **Details**: Final Executable Examination (Exam Code G)
-        - *Demonstrate technical skills in software engineering*:
-          - Use GitHub and GitHub Actions
-          - Use text editor and terminal window
-          - Implement and test Python functions
-          - Debug defective Python functions
-          - Confirm output of Python functions
-          - Covers all content in SE, FB, and DB
-          - Answer questions during in-person assessment
+      - **Wednesday, December 8, 2026 at 7:00 PM**:
+        - **Details**: Final Examination (Exam Code F)
+        - **Demonstrate technical and professional skills in software engineering**:
+          - *Technical Skill Assessment*:
+              - Use GitHub and GitHub Actions
+              - Use text editor and terminal window
+              - Implement and test Python functions
+              - Debug defective Python functions
+              - Confirm output of Python functions
+              - Covers all content in SE, FB, and DB
+           - *Professional Skill Assessment*:
+              - Answer questions during in-person discussion
+              - Answer questions through a provided online form
+              - Covers all content in SE, FB, and DB
 
 ::: {.callout-note appearance="minimal" title="Textbook Abbreviations" collapse="false"}
 
@@ -53,22 +57,24 @@ toc: true
   - *Discuss the team's executive summary and write a professional précis*:
     - Team-based discussion of prior week's reading in either FB or DB
     - Individual and team-based preparation for next week's FB or DB reading
-- {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
+- {{< iconify fa6-solid diagram-project size=18px >}} **Wednesday**: Project Development during laboratory session
   - *Collaboratively implement and deploy into production a software tool*:
-    - Assessment in the form of either:
-      - Programming skill-checks
-      - Software engineering knowledge-checks
     - Sprint planning
     - Project implementation
     - Project demonstration
+   - Assessment in the form of either:
+        - Executable examinations
+        - In-person assessments
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
     - *Publish executive summaries to the Developer Development blog*:
         - Publication of next SE executive summary
         - Publication of next FB or DB executive summary
         - Demonstration of project development for the week
         - Confirmation of readiness for next week's in-class discussions
-        - Every other week, complete an in-class programming skill-check
-        - During an assessment week, demonstrate all work completed to date
+      - Assessment in the form of either:
+        - Programming skill-checks
+        - Software engineering knowledge-checks
+
 
 ::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
 
@@ -79,7 +85,7 @@ policies in the Allegheny College Academic Bulletin and the Allegheny College
 Faculty Handbook. The final executable examination is cumulative in regards to
 the technical, professional, and project content previously covered between
 week one and week sixteen. This list describes the content that will be covered
-on the final executable examination.
+on the final executable examination, in-person assessment, and knowledge check.
 
 - {{< iconify fa6-solid flag-checkered size=18px >}} **Tuesday, December 8, 2026 at 7:00 PM**: Executable Examination
   - *Demonstrate technical and professional skills in software engineering*:
@@ -90,5 +96,6 @@ on the final executable examination.
     - Confirm output of Python functions
     - Covers all content in SE, FB, and DB
     - Answer questions during in-person assessment
+    - Answer questions through a provided online form
 
 :::

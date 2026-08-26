@@ -11,8 +11,8 @@ toc: true
     - **Weeks Two through Five**: Establish your technical and professional skills
     - **Week Six**:
       - **Monday**: in-person assessment of individual developer development
-      - **Wednesday**: in-person assessment of individual developer development
-      - **Thursday**: take an executable examination during the laboratory session
+      - **Wednesday Class Session**: in-person assessment of individual developer development
+      - **Wednesday Laboratory Session**: take an executable examination
       - **Friday**: individual demonstration of project development
 - **Module Two**: *Practical Software Engineering Knowledge and Skills*
     - **Weeks Seven through Ten**: Enhance your technical and professional skills
@@ -55,6 +55,9 @@ toc: true
     - Individual and team-based preparation for next week's FB or DB reading
 - {{< iconify fa6-solid diagram-project size=18px >}} **Thursday**: Project Development
   - *Collaboratively implement and deploy into production a software tool*:
+    - Assessment in the form of either:
+      - Programming skill-checks
+      - Software engineering knowledge-checks
     - Sprint planning
     - Project implementation
     - Project demonstration
@@ -69,16 +72,16 @@ toc: true
 
 ::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
 
-The Fall 2024 edition of Computer Science 203 has **Exam Code G**, which means
-that the final examination will take place on **Wednesday, December 11, 2024 at
-9:00 AM**. Completion of the final examination must adhere to all of the
+The Fall 2026 edition of Computer Science 203 has **Exam Code F**, which means
+that the final examination will take place on **Tuesday, December 8, 2026 at
+7:00 PM**. Completion of the final examination must adhere to all of the
 policies in the Allegheny College Academic Bulletin and the Allegheny College
 Faculty Handbook. The final executable examination is cumulative in regards to
 the technical, professional, and project content previously covered between
 week one and week sixteen. This list describes the content that will be covered
 on the final executable examination.
 
-- {{< iconify fa6-solid flag-checkered size=18px >}} **Wednesday, December 11, 2024 at 9:00 AM**: Executable Examination
+- {{< iconify fa6-solid flag-checkered size=18px >}} **Tuesday, December 8, 2026 at 7:00 PM**: Executable Examination
   - *Demonstrate technical and professional skills in software engineering*:
     - Use GitHub and GitHub Actions
     - Use text editor and terminal window

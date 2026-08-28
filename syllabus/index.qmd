@@ -46,20 +46,21 @@ that, by necessity, the meeting before yours may sometimes run late.
   - *Developing Professional Skills*: Monday, 1:30 PM -- 2:20 PM, Alden 109
     - **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)
     - **Majority of the class**: Discuss executive summaries for chapters read last week
-    - **Assigned team of learners**: Prepare for the executive summary for next week's chapters
+    - **Assigned team of learners**: Prepare for and give the executive summary
+  of the assigned chapters and demonstrate an affiliated software command-line tool
   - *Developing Technical Skills*: Wednesday, 1:30 PM -- 2:20 PM, Alden 109
     - **FB Book**: [Fuzzing Book](https://www.fuzzingbook.org/)
     - **DB Book**: [Debugging Book](https://www.debuggingbook.org/)
     - **Majority of the class**: Discuss executive summaries for chapters read last week
     - **Assigned team of learners**: Prepare for the executive summary for next week's chapters
   - *Developing as Developers*: Friday, 1:30 PM -- 2:20 PM, Alden 109
-      - Publish an executive summary for next week's technical skills
-      - Publish an executive summary for next week's professional skills
-      - Confirm our team's readiness for next week's in-class discussions
-      - **When necessary**: implement and demonstrate software engineering project
-      - **Alternating assessments**:
-        - *Every other week i*: complete an in-class programming skill-check
-        - *Every other week i+1*: complete an in-class knowledge skill-check
+    - Publish an executive summary for next week's technical skills
+    - Publish an executive summary for next week's professional skills
+    - Confirm our team's readiness for next week's in-class discussions
+    - **When necessary**: implement and demonstrate software engineering project
+    - **Alternating assessments**:
+      - *Every other week i*: complete an in-class programming skill-check
+      - *Every other week i+1*: complete an in-class knowledge skill-check
 - **Collaborative Software Engineering**: Wednesday, 2:30 PM -- 4:00 PM, Alden 109
 
 #### Assessment Schedule
@@ -67,8 +68,8 @@ that, by necessity, the meeting before yours may sometimes run late.
 - **Week Six**: In-person assessments and executable examination one
 - **Week Eleven**: In-person assessments and executable examination two
 - **Week Sixteen**: Final examination week
-   - Final executable examination
-   - Final in-person assessment
+  - Final executable examination
+  - Final in-person assessment
 
 ::: {.callout-note appearance="minimal" title="Active Learning"}
 
@@ -100,7 +101,7 @@ in preparation for in-class discussions, that will be lead by a team of learners
 
 #### Module Two Discussion Leads
 
-- **Week Seven**: TBA 
+- **Week Seven**: TBA
 - **Week Eight**: TBA
 - **Week Nine**: TBA
 - **Week Ten**: TBA
@@ -129,14 +130,14 @@ in preparation for in-class discussions, that will be lead by a team of learners
 
 - **Week Seven**: Fall break, no presentations by learners
 - **Week Eight**: SE5 (Engineering for Equity and Documentation) and FB5 (Mutation-Based Fuzzing)
-- **Week Nine**: SE6 (How to Lead a Team) and FB6 (Fuzzing with Grammars) 
-- **Week Ten**: SE7 (Leading at Scale) and FB7 (Efficient Grammar Fuzzing) 
+- **Week Nine**: SE6 (How to Lead a Team) and FB6 (Fuzzing with Grammars)
+- **Week Ten**: SE7 (Leading at Scale) and FB7 (Efficient Grammar Fuzzing)
 - **Week Eleven**: No reading assignment due to assessments
 
 #### Module Three Reading Assignments
 
 - **Week Twelve**: SE8 (Style Guides and Rules) and FB8 (Parsing Inputs)
-- **Week Thirteen**: SE9 (Code Review) and FB9 (Reducing Failure-Inducing Inputs) 
+- **Week Thirteen**: SE9 (Code Review) and FB9 (Reducing Failure-Inducing Inputs)
 - **Week Fourteen**: Thanksgiving break, no presentations by learners
 - **Week Fifteen**: SE10 (Testing Overview and Unit Testing) and DB1 (Debugging and Observing Executions)
 - **Week Sixteen**: No reading assignment due to final examination week

@@ -75,11 +75,13 @@ being a developing developer? *Yes*! For instance, the participants of this
 sixteen-week course will gain valuable perspectives and practical skills to
 enhance their abilities as a software engineering while collaboratively building
 and releasing two open-source tools. Ultimately, these challenges are worth it!
-Computer and information science graduates, like Aidan Dyga, frequently report
-that the software engineering course is the [most impactful one that they take
-at Allegheny
+Computer and information science graduates, like [Aidan
+Dyga](https://www.linkedin.com/in/aidandyga/), frequently report that the
+software engineering course is the [most impactful one that they take at
+Allegheny
 College](https://allegheny.edu/about/news/curiosity-leads-to-career-outcomes/)
-because it emphasizes "communication skills and real-world project management".
+because it effectively emphasizes "communication skills and real-world project
+management".
 
 ## Awesome Adventure
 

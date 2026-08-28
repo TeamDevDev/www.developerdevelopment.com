@@ -84,8 +84,9 @@ better."](https://addyosmani.com/blog/write-learn/) You will also be called on
 to actively lead and participate in class discussions every week. One key task
 that you will complete every week involves running, writing about, and
 implementing program source code and publishing program documentation. Aligned
-with the course goals, you will complete out-of-class programming and writing
-in preparation for in-class discussions, that will be lead by a team of learners.
+with the course goals, you will complete out-of-class programming and writing in
+preparation for the in-class discussions that will be lead by a self-assigned
+team of learners.
 
 :::
 

@@ -27,8 +27,8 @@ professional preparation for joining a software startup
 - Using `uv`, install [Python 3.11, 3.12, 3.13, and/or 3.14](https://www.python.org/) on your laptop
   - Install the full Python version supporting C and Rust binding and SQLite 3
   - Ensure that you can switch between different versions of Python
-- Consider using [asdf-vm](https://asdf-vm.com/) or [mise](https://mise.jdx.dev/) to install the node package
-manager and all JavaScript programming tools
+- Use your operating system's package manager or [asdf-vm](https://asdf-vm.com/) or [mise](https://mise.jdx.dev/) to
+install the node package manager and all JavaScript programming tools
 - Access both the [Fuzzing Book (FB)](https://www.fuzzingbook.org/) and the [Debugging Book
 (DB)](https://www.debuggingbook.org/)
   - Fork the GitHub repositories for these two books
@@ -42,7 +42,8 @@ manager and all JavaScript programming tools
 executable Python code
 - Install Quarto's plugin for [VSCode](https://quarto.org/docs/editors/vscode/) or your chosen text editor
 - Learn how to clone and run the source code in the course Web site
-- Practice using commands like `uv run quarto preview` and `uv run quarto render`
+- Practice using and begin to understand the input, output, and behavior of
+commands like `uv run quarto preview` and `uv run quarto render`
 - Practice all of tasks in the [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow) model
 for software development
 

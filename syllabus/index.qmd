@@ -369,15 +369,15 @@ categories. All of these percentages are approximate and, if the need to do so
 presents itself, the course instructor may change the assigned percentages
 during the academic semester.
 
-- **Team Participation**: 5%
-- **Executive Summaries**:
-  - **Professional Development**: 10%
-  - **Technical Development**: 10%
-  - **Software Engineering Evaluations**:
+- **Team Participation**: 10%
+- **Executive Summaries**: 10%
+- **Software Engineering Evaluations**:
   - **In-Person Assessments**: 10%
   - **Programming Skill-Checks**: 10%
-  - **Midterm Examinations**: 10%
-  - **Final Examination**: 15%
+- **Midterm Examinations**: 10%
+- **Final Examination**:
+  - **In-Person Assessment**: 10%
+  - **Executable Examination**: 10%
 - **Project Development**: 30%
 
 These assessment categories have the following definitions:

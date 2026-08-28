@@ -347,6 +347,7 @@ summary:
 The course will also leverage excerpts from the following supporting text books:
 
 - [Software Engineering - The Soft Parts](https://play.google.com/store/books/details?id=2SmzEAAAQBAJ), by Addy Osmani
+- [Software Engineering: Standing on the Shoulders of Giants](https://www.swebook.org/), by Tom Hastings
 - [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/book.php), by John Ousterhout
 - [How to Write Good Programs: A Guide for Students](https://www.cambridge.org/core/books/how-to-write-good-programs/6CBDD8A564E0899D54140700E90601C4), by Perdita Stevens
 - [The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month), by Frederick P. Brooks, Jr.

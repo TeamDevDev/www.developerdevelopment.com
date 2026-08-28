@@ -303,14 +303,13 @@ ways:
 All students are responsible for taking the following steps in regards to **FB**
 and **DB**:
 
-- Install an appropriate version of both **FB** and **DB** (both currently designate Python `3.10.2`, subject to recent
-updates)
+- Install an appropriate version of both **FB** and **DB**
 - Complete one-time setup and installation steps for the **FB** or **DB** textbooks:
-  - Create a virtual environment for the book's dependencies with `python -m venv venv`
-  - Enter into the virtual environment for a textbook with `source venv/bin/activate`
+  - Create a virtual environment for the book's dependencies
+  - Enter into (i.e., activate) the virtual environment for a textbook
   - Install all platform-dependent binaries for the book's dependencies (e.g., `graphviz`)
   - Install the book's dependencies with `uv pip install -r requirements.txt`
-  - Troubleshoot all of the issues that arise during the installation of the book's dependencies (e.g., one or more
+  - Troubleshoot all the issues that arise during the installation of the book's dependencies (e.g., one or more
   missing dependencies cause a Jupyter Notebook cell to produce a stack trace when you press {{< kbd Shift-Enter >}} to
   run the cell)
 - Perform these steps both when reading an article and writing an executive summary:

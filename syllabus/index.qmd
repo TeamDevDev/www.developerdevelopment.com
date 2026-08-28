@@ -272,9 +272,9 @@ distribution requirements.
 
 ::: {.callout-note appearance="minimal" title="Developing as Developers" collapse="false"}
 
-Students who develop both **professionally** and **technically** are effectively
-undertaking the task of **developer development**, which is both the theme and
-goal of this web site's content!
+Students who develop both **professionally** and **technically** are undertaking
+the task of **developer development**, which is both the theme and goal of this
+web site's content!
 
 :::
 
@@ -285,13 +285,9 @@ goal of this web site's content!
 - [Debugging Book](https://www.debuggingbook.org/): abbreviated on this site as **DB**
 
 Students who complete all of the work on the [course
-schedule](../schedule/index.qmd) will complete **twelve** reading assignments
-in **SE** (i.e., **SE1** through **SE12**), **nine** reading assignments in
-**FB** (i.e., **FB1** through **FB9**), and **four** reading assignments in
-**DB** (i.e., **DB1** through **DB4**).
-
-The course textbooks are connected to the three main type of course activities
-in these ways:
+schedule](../schedule/index.qmd) multiple reading assignments in **SE**, **FB**
+, **DB**. These course textbooks are connected to the course activities in these
+ways:
 
 - **Professional Development** as a software engineer:
   - Active engagement with content in **SE**

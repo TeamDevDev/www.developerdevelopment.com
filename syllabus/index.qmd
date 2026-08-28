@@ -371,7 +371,7 @@ during the academic semester.
 
 - **Team Participation**: 5%
 - **Executive Summaries**: 15%
-- **In-Person Assessments**: 15%
+- **Software Engineering Checks**: 15%
 - **Programming Skill-Checks**: 15%
 - **Midterm Examinations**: 10%
 - **Final Examination**: 10%
@@ -422,45 +422,60 @@ artificial intelligence coding assistants, during the completion of the final
 examination provided that they cite these sources and explain, in detail, how
 they used them to complete the examination.
 
-- **Programming Skill-Checks**: The programming skill-checks are in-class
-online cumulative assessments covering all prior technical material from the
-course sessions, as outlined on the [course schedule](../schedule/index.qmd).
-Unless prior arrangements are made with the instructor, all students should use
-their computer to take these skill-checks on the scheduled date and to complete
-it in the stated location while taking no more than the required amount of
-time. Designed to prepare learners for an examination, each skill-check is an
-in-class executable assessment that students complete through the use of
-GitHub, VS Code, and the Python programming tools on their laptops.
+- **Software Engineering Checks**: The software engineering checks are in-class,
+online and in-person cumulative assessments covering all prior technical
+material from the course sessions, as outlined on the [course
+schedule](../schedule/index.qmd). Unless prior arrangements are made with the
+instructor, all students should use their computer to take these skill-checks on
+the scheduled date and to complete it in the stated location while taking no
+more than the required amount of time. Designed to prepare learners for the
+discussion of computer security concepts during an in-person assessment, each
+security-check involves the completion of an automatically scored online,
+form-based assessment and a brief, in-person assessment completed interactively
+with the course instructor. Unless the instructor provides access to a
+computational device, the in-person assessments invite students to demonstrate
+their knowledge of software engineering without the aid of any external sources,
+including, but not limited to, software tools running on a student laptop.
 
-- **In-Person Assessments**: The three in-person assessments are cumulative
-evaluations of both technical and professional knowledge conducted through an
-in-person conversation with the course instructor. All students should be
-prepared to answer at least one question each about their attainment of
-professional and technical skills and the source code and documentation of the
-software project(s). The instructor will assess each student response on a
-checkmark basis.
+- **Programming Skill-Checks**: The programming skill-checks are in-class online
+cumulative assessments covering all prior technical material from the course
+sessions, as outlined on the [course schedule](../schedule/index.qmd). Unless
+prior arrangements are made with the instructor, all students should use their
+computer to take these skill-checks on the scheduled date and to complete it in
+the stated location while taking no more than the required amount of time.
+Designed to prepare learners for an examination, each skill-check is an in-class
+executable assessment that students complete through the use of GitHub, VS Code,
+and the Python programming tools on their laptops. Students may use external
+sources, including artificial intelligence coding assistants, during the
+completion of a skill-check provided that they cite these sources and
+explain, in detail, how they used them to complete the examination.
 
-- **Professional Development Summaries**: Graded on a checkmark basis and
-building on material in the [Software Engineering at
-Google](https://abseil.io/resources/swe-book) textbook (i.e., **SE**) and the
-content covered during that week's in-person classroom sessions, the
-professional development tasks, namely the publication of a team-based executive
-summary, both have the following goals: (i) help a learner to demonstrate that
-they can remember the learned material by recalling facts, basic concepts, and
-answers to questions presented in **SE** and (ii) allow a learner to demonstrate
-an understanding of facts and ideas by translating, interpreting, and
-contextualizing the main professional concepts found in **SE**.
+- **Professional Development Summaries**: Building on material in the
+[Software Engineering at Google](https://abseil.io/resources/swe-book)
+textbook (i.e., **SE**) and the content covered during that week's in-person
+classroom sessions, the professional development tasks, namely the publication
+of a team-based executive summary, both have the following goals: (i) help a
+learner to demonstrate that they can remember the learned material by recalling
+facts, basic concepts, and answers to questions presented in **SE** and (ii)
+allow a learner to demonstrate an understanding of facts and ideas by
+translating, interpreting, and contextualizing the main professional concepts
+found in **SE**. In addition to publishing an executive summary on the course
+web site, this category invites learners to prepare and release a command-line
+software tool that connects to the chosen reading assignment in **SE**.
 
-- **Technical Development Summaries**: Graded on a checkmark basis and building
-on material in the [Fuzzing Book](https://www.fuzzingbook.org/) (i.e., **FB**)
-and [Debugging Book](https://www.debuggingbook.org/) textbooks (i.e., **DB**)
-and the content covered during that week's in-person classroom sessions, the
-technical development tasks, namely the publication of a team-based executive
-summary, have the following goals: (i) help a learner to show that they can
-remember the learned material by recalling facts, basic concepts, and answers to
-questions presented in **FB**/**DB** and (ii) allow a learner to demonstrate an
+- **Technical Development Summaries**: Building on material in the [Fuzzing
+Book](https://www.fuzzingbook.org/) (i.e., **FB**) and [Debugging
+Book](https://www.debuggingbook.org/) textbooks (i.e., **DB**) and the content
+covered during that week's in-person classroom sessions, the technical
+development tasks, namely the publication of a team-based executive summary,
+have the following goals: (i) help a learner to show that they can remember the
+learned material by recalling facts, basic concepts, and answers to questions
+presented in **FB**/**DB** and (ii) allow a learner to demonstrate an
 understanding of facts and ideas by interpreting and implementing the main
-technical ideas presented in either **FB** or **DB**.
+technical ideas presented in either **FB** or **DB**. In addition to publishing
+an executive summary on the course web site, this category invites learners to
+prepare and release a command-line software tool that connects to the chosen
+reading assignment in **FB**/**DB**.
 
 - **Project Development**: These team-based projects invite students to explore
 different techniques for specifying, designing, implementing, testing,

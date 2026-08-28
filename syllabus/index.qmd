@@ -369,50 +369,58 @@ categories. All of these percentages are approximate and, if the need to do so
 presents itself, the course instructor may change the assigned percentages
 during the academic semester.
 
-- **Team Participation**: 10%
-- **Executive Summaries**: 10%
-- **Software Engineering Evaluations**:
-  - **In-Person Assessments**: 10%
-  - **Programming Skill-Checks**: 10%
+- **Team Participation**: 5%
+- **Executive Summaries**: 15%
+- **In-Person Assessments**: 15%
+- **Programming Skill-Checks**: 15%
 - **Midterm Examinations**: 10%
-- **Final Examination**:
-  - **In-Person Assessment**: 10%
-  - **Executable Examination**: 10%
+- **Final Examination**: 10%
 - **Project Development**: 30%
 
 These assessment categories have the following definitions:
 
 - **Team Participation**: Students are expected to regularly attend and
-actively participate in all class and project development sessions. After
-either an unexcused absence or a late attendance to either a class or project
-development session on two separate occasions, a student's overall team
-participation grade will be reduced by half a percentage for each additional
-time they are absent or late in an unexcused fashion. Students who need to miss
-class or attend class late for an excused reason should communicate their
-situation to the instructor in a timely fashion. After one warning per week, a
-student's weekly team participation grade will be reduced if they are observed
-undertaking non-course-related activities like viewing email, social media, or
-other content not connected to the software engineering course.
+actively participate in all the class and laboratory sessions, as outlined on
+the [course schedule](../schedule/index.qmd). After either an unexcused
+absence or a late attendance to either a class or a laboratory session, a
+student's weekly class participation grade will be reduced. Students who need
+to miss class or attend class late for an excused reason should communicate
+their situation to the course instructor in a timely fashion. In accordance
+with [Department of Computer and Information Science
+Policies](https://www.cis.allegheny.edu/teaching/policies/), each time a
+student misses one week of class (i.e., three class sessions and one laboratory
+session), their grade will be reduced by one letter grade, with three late
+attendances counting for an absence. A student's weekly class participation
+grade also will be reduced if they are observed, during either class or
+laboratory sessions, undertaking non-course-related activities like viewing
+email, social media, or reading or creating other content not connected to
+software engineering.
 
-- **Midterm Examinations**: The two midterm examinations are online cumulative
-assessments, taken during the laboratory session, that cover all prior
-technical material from the course sessions, as outlined on the [course
-schedule](../schedule/index.qmd). Unless prior arrangements are made with the
-instructor, all students should use their computer to take these tests on the
-scheduled date and to complete it in the stated location while taking no more
-than the required amount of time. Each midterm is an executable examination
-that students will complete through the use of GitHub, VS Code, and the Python
-programming tools installed on their laptops.
+- **Midterm Examination**: Each midterm examination is an online, executable,
+and cumulative assessment covering all prior material from the course sessions,
+as outlined on the [course schedule](../schedule/index.qmd). Unless prior
+arrangements are made with the instructor, all students should use their
+computer to take these examinations on the scheduled date and to complete it in
+the stated location while taking no more than the required amount of time. Each
+midterm is an executable examination that students will complete through the use
+of GitHub, VS Code, and their laptop's software engineering tools (e.g., package
+managers and testing programs). Students may use external sources, including
+artificial intelligence coding assistants, during the completion of a midterm
+examination provided that they cite these sources and explain, in detail, how
+they used them to complete the examination.
 
-- **Final Examination**: The final examination is an online cumulative
-assessment, taken during the final examination session, that covers all of the
-material during all of the course sessions, as outlined on the [course
-schedule](../schedule/index.qmd). Unless prior arrangements are made with the
-course instructor, all students should use their computer to take the final
-examination on the scheduled date and to complete it in the stated location
-while taking no more than the required amount of time. The cumulative final is
-an executable examination that students complete through the use of
-GitHub, VS Code, and the Python programming tools installed on their laptops.
+- **Final Examination**: The final examination is an online, executable,
+cumulative assessment covering all of the material during all of the course
+sessions, as outlined on the [course schedule](../schedule/index.qmd). Unless
+prior arrangements are made with the instructor, all students should use their
+computer to take the final examination on the scheduled date and to complete it
+in the stated location while taking no more than the required amount of time.
+The cumulative final is an executable examination that a student will complete
+through the use of GitHub, VS Code, and the computer security and programming
+tools installed on their laptops. Students may use external sources, including
+artificial intelligence coding assistants, during the completion of the final
+examination provided that they cite these sources and explain, in detail, how
+they used them to complete the examination.
 
 - **Programming Skill-Checks**: The programming skill-checks are in-class
 online cumulative assessments covering all prior technical material from the
@@ -432,27 +440,26 @@ professional and technical skills and the source code and documentation of the
 software project(s). The instructor will assess each student response on a
 checkmark basis.
 
-- **Professional Development**: Graded on a checkmark basis and building on
-material in the [Software Engineering at
+- **Professional Development Summaries**: Graded on a checkmark basis and
+building on material in the [Software Engineering at
 Google](https://abseil.io/resources/swe-book) textbook (i.e., **SE**) and the
 content covered during that week's in-person classroom sessions, the
-professional development tasks, namely the publication of a team-based
-executive summary, both have the following goals: (i) help a learner to
-demonstrate that they can remember the learned material by recalling facts,
-basic concepts, and answers to questions presented in **SE** and (ii) allow a
-learner to demonstrate an understanding of facts and ideas by translating,
-interpreting, and contextualizing the main professional concepts found in
-**SE**.
+professional development tasks, namely the publication of a team-based executive
+summary, both have the following goals: (i) help a learner to demonstrate that
+they can remember the learned material by recalling facts, basic concepts, and
+answers to questions presented in **SE** and (ii) allow a learner to demonstrate
+an understanding of facts and ideas by translating, interpreting, and
+contextualizing the main professional concepts found in **SE**.
 
-- **Technical Development**: Graded on a checkmark basis and building on
-material in the [Fuzzing Book](https://www.fuzzingbook.org/) (i.e., **FB**) and
-[Debugging Book](https://www.debuggingbook.org/) textbooks (i.e., **DB**) and
-the content covered during that week's in-person classroom sessions, the
+- **Technical Development Summaries**: Graded on a checkmark basis and building
+on material in the [Fuzzing Book](https://www.fuzzingbook.org/) (i.e., **FB**)
+and [Debugging Book](https://www.debuggingbook.org/) textbooks (i.e., **DB**)
+and the content covered during that week's in-person classroom sessions, the
 technical development tasks, namely the publication of a team-based executive
 summary, have the following goals: (i) help a learner to show that they can
-remember the learned material by recalling facts, basic concepts, and answers
-to questions presented in **FB**/**DB** and (ii) allow a learner to demonstrate
-an understanding of facts and ideas by interpreting and implementing the main
+remember the learned material by recalling facts, basic concepts, and answers to
+questions presented in **FB**/**DB** and (ii) allow a learner to demonstrate an
+understanding of facts and ideas by interpreting and implementing the main
 technical ideas presented in either **FB** or **DB**.
 
 - **Project Development**: These team-based projects invite students to explore

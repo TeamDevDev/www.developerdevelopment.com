@@ -65,7 +65,9 @@ and publish that summarizes and contextualizes the material and points towards
 a way in the lessons from these books can be applied to two long-term software
 development projects. These learners will also prototype and release simple
 command-line tools that illustrate the key concepts and techniques that they
-have learned from the three textbooks.
+have learned from the three textbooks, ultimately demonstrating their
+professional development, technical development, and overall development as a
+software developer who works effectively in a team.
 
 Is this challenging? *Yep*! Will learners make mistakes along the way to
 developing as a software developer? *Of course*! Are there many benefits to

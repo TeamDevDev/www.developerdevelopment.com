@@ -121,7 +121,7 @@ team of learners.
 
 #### Module One Reading Assignments
 
-- **Week One**: No reading assignment
+- **Week One**: No reading assignment due to completion of onboarding tasks
 - **Week Two**: SE1 (Preface) and FB1 (Introduction to Software Testing)
 - **Week Three**: SE2 (What is Software Engineering?) and FB2 (Coverage)
 - **Week Four**: SE3 (Work Well on Teams) and FB3 (Fuzzing)
@@ -148,7 +148,7 @@ team of learners.
 
 To access the content for a specific reading assignment, please visit the web
 site for the specified book and search for the chapter title provided in
-parentheses. As a reminder, these are the abbreviations for each of the three
+parentheses. As a reminder, these are the abbreviations for the three
 course textbooks that are freely available online:
 
 - **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)

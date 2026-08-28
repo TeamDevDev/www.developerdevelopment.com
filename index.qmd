@@ -59,11 +59,13 @@ techniques for generating software tests.
 **DB**): an interactive introduction to automated methods for finding programmer
 errors and their causes.
 
-As the developing developers in the on-campus course read twelve articles in
-**SE**, nine articles in **FB**, and four articles in **DB**, they will
-collaboratively write and publish that summarizes and contextualizes
-the material and points towards a way in the lessons from these books can be
-applied to two long-term software development projects.
+As the developing developers in the on-campus course read articles in the
+**SE**, **FB**, and **DB** online textbooks, they will collaboratively write
+and publish that summarizes and contextualizes the material and points towards
+a way in the lessons from these books can be applied to two long-term software
+development projects. These learners will also prototype and release simple
+command-line tools that illustrate the key concepts and techniques that they
+have learned from the three textbooks.
 
 Is this challenging? *Yep*! Will learners make mistakes along the way to
 developing as a software developer? *Of course*! Are there many benefits to

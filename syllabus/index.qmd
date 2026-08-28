@@ -304,30 +304,45 @@ All students are responsible for taking the following steps in regards to **FB**
 and **DB**:
 
 - Install an appropriate version of both **FB** and **DB**
-- Complete one-time setup and installation steps for the **FB** or **DB** textbooks:
+- Complete one-time setup and installation steps for the **FB** or **DB**
+textbooks:
   - Create a virtual environment for the book's dependencies
   - Enter into (i.e., activate) the virtual environment for a textbook
-  - Install all platform-dependent binaries for the book's dependencies (e.g., `graphviz`)
+  - Install all platform-dependent binaries for the book's dependencies (e.g.,
+  `graphviz`)
   - Install the book's dependencies with `uv pip install -r requirements.txt`
-  - Troubleshoot all the issues that arise during the installation of the book's dependencies (e.g., one or more
-  missing dependencies cause a Jupyter Notebook cell to produce a stack trace when you press {{< kbd Shift-Enter >}} to
-  run the cell)
-- Perform these steps both when reading an article and writing an executive summary:
-  - Change into the directory that contains the contents of either **FB** or **DB**
-  - Enter into the virtual environment for a textbook with `source venv/bin/activate`
-  - Run a Jupyter Lab server using a command like `venv/bin/jupyter-lab`
-  - Use the Jupyter Lab server to locate and execute notebooks for chapters in **FB** and **DB**
-  - Watch the embedded video(s) and run all of the providing source code segments
-  - Discussion leads for a weekly reading assignment additionally complete the following tasks:
-    - Create a fork of the course web site into a publicly available GitHub repository
-    - Coordinate with your discussion lead partner to write and revise an executive summary
-    - Use [Quarto](https://quarto.org/) to write and revise an executive summary for the reading assignment
-    - Create a pull request from your fork of the course web site and coordinate its review
-  - The leadership team (i.e., the student technical leader(s) and the course
+  - Troubleshoot all the issues that arise during the installation of the book's
+  dependencies (e.g., one or more missing dependencies cause a Jupyter Notebook
+  cell to produce a stack trace when you press {{< kbd Shift-Enter >}} to run
+  the cell)
+- Perform these steps both when reading an article and writing an executive
+summary:
+  - Change into the directory that contains the contents of either **FB** or
+  **DB**
+  - Enter into the virtual environment for a textbook
+  - Run a Jupyter Lab server that can host the textbook's Jupyter notebooks
+  - Use the Jupyter Lab server to locate and execute notebooks for chapters in
+  **FB** and **DB**
+  - Watch the embedded video(s) and run all the providing source code segments
+  - Discussion leads for a weekly reading assignment additionally complete these
+  tasks:
+    - Create a fork of the course web site into a publicly available GitHub
+  repository
+    - Coordinate with your discussion lead team members to write and revise an
+  executive summary in the Quarto-based Markdown format
+    - Use [Quarto](https://quarto.org/) to write and revise an executive
+  summary for the reading assignment
+    - Create a pull request from your fork of the course web site and coordinate
+  its review with the members of your team and the course instructor
+  - Regardless of whether they are present an **SE**, **FB**, or **DB** article,
+  the team presenting members should collaboratively create a command-line tool,
+  using Python and `uv`, that practically illustrates a key concepts in the
+  assigned reading
+  - The leadership team (i.e., the student technical leader(s) and/or the course
   instructor) will then review and comment on your work (and often require
   revisions to the executive summary), ultimately using [GitHub
-  Actions](https://docs.github.com/en/actions) and
-  [Netlify](https://www.netlify.com/) to publish the Quarto-based web site
+  Actions](https://docs.github.com/en/actions) and Cloudflare Workers to publish
+  the web site in advance of the session when your team leads class
 
 The course will also leverage excerpts from the following supporting text books:
 

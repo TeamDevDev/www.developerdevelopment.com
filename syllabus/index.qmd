@@ -52,12 +52,13 @@ that, by necessity, the meeting before yours may sometimes run late.
     - **FB Book**: [Fuzzing Book](https://www.fuzzingbook.org/)
     - **DB Book**: [Debugging Book](https://www.debuggingbook.org/)
     - **Majority of the class**: Discuss executive summaries for chapters read last week
-    - **Assigned team of learners**: Prepare for the executive summary for next week's chapters
+    - **Assigned team of learners**: Prepare for and give the executive summary
+  of the assigned chapters and demonstrate an affiliated software command-line tool
   - *Developing as Developers*: Friday, 1:30 PM -- 2:20 PM, Alden 109
-    - Publish an executive summary for next week's technical skills
-    - Publish an executive summary for next week's professional skills
+    - Publish a new executive summary for next week's technical skills
+    - Publish a new executive summary for next week's professional skills
     - Confirm our team's readiness for next week's in-class discussions
-    - **When necessary**: implement and demonstrate software engineering project
+    - **When necessary**: build and demonstrate software engineering project
     - **Alternating assessments**:
       - *Every other week i*: complete an in-class programming skill-check
       - *Every other week i+1*: complete an in-class knowledge skill-check

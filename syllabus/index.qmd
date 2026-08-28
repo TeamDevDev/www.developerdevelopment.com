@@ -59,7 +59,7 @@ that, by necessity, the meeting before yours may sometimes run late.
     - Publish a new executive summary for next week's professional skills
     - Confirm our team's readiness for next week's in-class discussions
     - **When necessary**: build and demonstrate software engineering project
-    - **Alternating assessments**:
+    - **Alternating assessments completed during the class session**:
       - *Every other week i*: complete an in-class programming skill-check
       - *Every other week i+1*: complete an in-class knowledge skill-check
 - **Collaborative Software Engineering**: Wednesday, 2:30 PM -- 4:00 PM, Alden 109

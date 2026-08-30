@@ -1,0 +1,33 @@
+---
+author: [Dylan Headley, V, Ritesh Ojha, Anshu Pathak, Gregory M. Kapfhammer]
+title: Software Engineering Beyond Programming
+date: '2026-08-31'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>What makes software engineering different from programming?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post discusses the ["Preface"](https://abseil.io/resources/swe-book/html/pr01.html) in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book)! 
+
+The Preface of Software Engineering at Google introduces the question of what distinguishes software engineering from programming and computer science. The authors argue that software engineering is more than simply writing code. It includes the tools and processes an organization uses to build and maintain software over time.
+
+The central idea of the Preface is that software engineering can be viewed as “programming integrated over time.” Software must be able to adapt to changing requirements, continue to be maintained, and remain valuable throughout its life cycle.
+
+## Summary
+
+
+
+## Reflection
+
+
+
+## Action Items
+
+
+
+{{< include /_back-blog.qmd >}}

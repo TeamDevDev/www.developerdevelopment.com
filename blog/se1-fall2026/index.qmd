@@ -9,6 +9,8 @@ toc: true
 page-layout: full
 ---
 
+---
+
 ## Overview
 
 This blog post discusses the ["Preface"](https://abseil.io/resources/swe-book/html/pr01.html) in the
@@ -62,10 +64,11 @@ As a result, it leaves out many important topics such as project management, API
 
 ## Reflection
 
+Our CLI tool reflects the Preface’s central idea that software engineering is not just writing code, but managing a system over time. By checking which dependencies are outdated and which versions are newer, the tool emphasizes the importance of continuous maintenance and adaptation. In a real project, dependencies change constantly, and failing to notice those updates can leave software vulnerable, inefficient, or incompatible with newer tools. Similarly, scanning for missing docstrings adds a more rigorous form of quality control. Documentation is not only for readability; it helps future developers understand the purpose and behavior of code, especially as a team and codebase grow.
 
+This is a stronger example of software engineering because it goes beyond “does the code run?” and instead asks, “is the project healthy, maintainable, and sustainable?” The ability to target specific problems, outdated packages, missing docstrings, and project-level maintenance issues, makes the tool practical and actionable. It supports the Preface’s themes of Time and Change and Scale and Growth by showing that as projects expand, engineers need systematic ways to track complexity, change, and long-term health. In this way, bumpd is not just a utility; it is an example of the disciplined, evidence-based thinking that distinguishes programming from software engineering.
 
-## Action Items
-
-
+## Repository 
+Our team built bumpd, a command-line dependency and maintenance audit tool. You can view the project here: [bumpd on GitHub](https://github.com/pathakanshu/bumpd).
 
 {{< include /_back-blog.qmd >}}

@@ -1,5 +1,5 @@
 ---
-author: [Dylan Headley, V, Ritesh Ojha, Anshu Pathak, Gregory M. Kapfhammer]
+author: [Dylan Headley, V Rieger, Ritesh Ojha, Anshu Pathak, Gregory M. Kapfhammer]
 title: Software Engineering Beyond Programming
 date: '2026-08-31'
 date-format: long

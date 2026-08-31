@@ -62,9 +62,9 @@ toc: true
     - Sprint planning
     - Project implementation
     - Project demonstration
-  - Assessment in the form of either:
-        - Executable examinations
-        - In-person assessments
+  - At the end of each module, assessment in the form of:
+    - Executable examinations and/or
+    - In-person assessments
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
   - *Publish executive summaries to the Developer Development blog*:
     - Publication of next SE executive summary
@@ -74,7 +74,6 @@ toc: true
     - Assessment in the form of either:
     - Programming skill-checks
     - Software engineering knowledge-checks
-
 
 ::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
 

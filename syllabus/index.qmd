@@ -515,9 +515,13 @@ undertakes as part of project development will occur in both an in-person
 setting and through a public GitHub repository, with the use of a private GitHub
 repository offering the opportunity for the student to document and reflect on
 their contributions and for the instructor to offer detailed feedback and
-assessments. A student who successfully completes this project will have
-evidence of completed work as individual commits, with appropriately labeled
-commit messages, in the GitHub repository for the software tool.
+assessments. A pull request created by a team of software engineers will not be
+merged by the course instructor unless it has a passing build and all team
+members can demonstrate its feature(s) and answer in-person questions about its
+design, implementation, and use. Finally, a student who successfully completes
+this project will have evidence of completed work as individual commits, with
+appropriately labeled commit messages, in the GitHub repository for the software
+tool.
 
 When you are assigned to the discussion lead, both the **Professional
 Development** and **Technical Development** assessment categories require
@@ -661,33 +665,31 @@ should not attend any in-person course sessions.
 In order to minimize confusion and maximize learning, students must invest time
 to prepare for the class sessions that focus on professional development,
 technical development, and project development. Although the course instructor
-and the student technical leaders will always be available to serve as guide
-for individual students, teams of students, and the entire class, it is
-expected that students will volunteer to lead and actively contribute to all
-class sessions. Only those students who have prepared for class by reading the
-assigned material, writing the required executive summaries, and reviewing the
-content written by other students will be able to effectively participate in
-these class discussions. In order to help students remain organized and to
-effectively prepare for classes, the course instructor will maintain a [course
-schedule](../schedule/index.qmd) with reading assignments, project
-descriptions, and discussion lead assignments for the executive summaries.
+will always be available to serve as guide for individual students, teams of
+students, and the entire class, it is expected that students will volunteer to
+lead and actively contribute to all class sessions. Only those students who have
+prepared for class by reading the assigned material, writing the required
+executive summaries, and reviewing the content written by other students will be
+able to effectively participate in these class discussions. In order to help
+students remain organized and to effectively prepare for classes, the course
+instructor will maintain a [course schedule](../schedule/index.qmd) with
+reading assignments, project descriptions, and discussion lead assignments for
+the executive summaries.
 
 #### Seeking Assistance
 
 Students who are struggling to understand the knowledge and skills developed in
 any of the course sessions are encouraged to seek assistance from the course
-instructor and/or the student technical leaders. Students should, within the
-bounds of the Honor Code, ask and answer questions on the [Developer
-Development Discord Server](https://discord.gg/aNfn8DNEMx). Instead of sending
-either an email or a direct message, please request assistance from the
-instructor and student technical leaders through public Discord channels.
-Students who need the course instructor's assistance are invited to schedule a
-meeting through the [course instructor's appointment
+instructor. Students should, within the bounds of the Honor Code, ask and answer
+questions on the [Developer Development Discord
+Server](https://discord.gg/aNfn8DNEMx). Instead of sending either an email or a
+direct message, please request assistance from the instructor through public
+Discord channels. Students who need the course instructor's assistance are
+invited to schedule a meeting through the [course instructor's appointment
 scheduler](https://www.gregorykapfhammer.com/schedule/) and come to the meeting
-with all of the details needed to discuss their question(s) about developer
-development. Students can find out the office hour schedule for student
-technical leaders by viewing the list of [student technical
-leaders](https://www.cis.allegheny.edu/teaching/technicalleaders/).
+with all the details needed to discuss their question(s) about the developer
+development process (e.g., technical development, professional development, and
+project development).
 
 #### Using GitHub and Discord
 
@@ -697,14 +699,14 @@ for reporting issues in those materials. We will use two distinct Discord
 servers for all course discussions. The [Developer Development Discord
 Server](https://discord.gg/aNfn8DNEMx) provides a way for members of the
 developer development community to use text and video to chat with each other
-and will be the main forum for discussing the professional and technical
-content in software engineering. The [Allegheny College Computer Science
-Discord Server](https://discord.gg/CS2h9kXzX6) will be the main forum for
-Department of Computer and Information Science announcements. Any content that
-a student wants the instructor to assess (e.g., an executive summary or a
-contribution to a long-term software engineering project) must be in a GitHub
-repository. Unless a student needs to share private information with the course
-instructor, they should not use Discord to send him direct messages.
+and will be the main forum for discussing the professional and technical content
+in software engineering. The [Allegheny College Computer Science Discord
+Server](https://discord.gg/CS2h9kXzX6) will be the main forum for Department of
+Computer and Information Science announcements. Any content that a student wants
+the instructor to assess (e.g., an executive summary or a contribution to a
+long-term software engineering project) must be in a GitHub repository. Unless a
+student needs to share private information with the instructor, they should not
+use Discord to send him direct messages.
 
 #### Using Email
 
@@ -752,11 +754,11 @@ correctness, maintainability, and long-term reliability of all source code and
 documentation that they submit. As such, a student who uses software tools to
 create content is responsible for citing their sources and demonstrating their
 understanding of it during the in-person assessments. Moreover, all students in
-the class are responsible for all of the source code and documentation
-submitted to the GitHub repository that hosts the course projects, including
-any tool-generated software artifacts. This means that every student should be
-able to answer questions, during an in-person assessment, about any technical
-or professional content, including that which was automatically generated by a
+the class are responsible for all of the source code and documentation submitted
+to the GitHub repository that hosts the course projects, including any
+tool-generated software artifacts. This means that all students should be able
+to answer questions, during an in-person assessment, about any technical or
+professional content, including that which was automatically generated by a
 software tool.
 
 Students who are effective engineers also pledge to abide by the [ACM Code of

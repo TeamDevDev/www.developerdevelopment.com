@@ -42,7 +42,7 @@ that, by necessity, the meeting before yours may sometimes run late.
 
 #### Weekly Cadence
 
-- **Discussion, Writing, and Programming Sessions**
+- **Discussion, Writing, and Software Engineering Sessions**
   - *Developing Professional Skills*: Monday, 1:30 PM -- 2:20 PM, Alden 109
     - **SE Book**: [Software Engineering at Google](https://abseil.io/resources/swe-book)
     - **Majority of the class**: Discuss executive summaries for chapters read last week

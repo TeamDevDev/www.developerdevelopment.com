@@ -606,17 +606,17 @@ assessment policies:
 ##### Assignment Submission
 
 All assignments will have a stated due date shared through GitHub, GitHub
-Classroom, and/or the [Developer Development Discord
+Classroom (i.e., cs50), and/or the [Developer Development Discord
 Server](https://discord.gg/aNfn8DNEMx). All reflections on and documentation of
 professional development, technical development, and project development should
 be committed to private GitHub repositories. Finally, the collaboratively
 published executive summaries should be reviewed and discussed through GitHub
-and published on the Developer Development web site and the completed version
-of each software project should be available in the project's public GitHub
-repository. No credit will be awarded for any course work that a student
-submits to the incorrect GitHub repository or web site. Unless special
-arrangements are made with the instructor due to extenuating circumstances or a
-student uses a token, no work will be accepted after the deadline.
+and published on the Developer Development web site and the completed version of
+each software project should be available in the project's public GitHub
+repository. No credit will be awarded for any course work that a student submits
+to the incorrect GitHub repository or web site. Unless special arrangements are
+made with the instructor due to extenuating circumstances or a student uses a
+token, no work will be accepted after the deadline.
 
 ##### Developer Development Tokens
 

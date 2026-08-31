@@ -549,11 +549,11 @@ write an executive summary, that should contain, at minimum, these components:
   correctly producing output when the web site is built and deployed to
   Cloudflare Workers.
   - All executive summaries should have a commit message history that clearly
-  explains the changes made to the technical and professional content content.
-  Importantly, each of the discussion leaders for each executive summary should
-  ensure that all commit messages adhere to the [conventional
-  commit](https://www.conventionalcommits.org/en/v1.0.0/) format as evidenced by
-  prior commits to this site's GitHub repository.
+  explains the changes that every member of the team made to the technical and
+  professional content content. Importantly, each of the discussion leaders for
+  each executive summary should ensure that all commit messages adhere to the
+  [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) format
+  as evidenced by prior commits to this site's GitHub repository.
 - All executive summaries must be complemented by a GitHub repository that
 contains a command-line software tool that is relevant to the assigned reading.
 The GitHub repository for the assigned reading should be available through the

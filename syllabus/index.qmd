@@ -419,13 +419,13 @@ they used them to complete the examination.
 
 - **In-Person Assessments**: Conducted through an in-person conversation with
 the course instructor, the three in-person assessments are cumulative
-evaluations of both high-level and low-level knowledge in the field of computer
-security. All students should be prepared to answer questions that assess their
-comprehension of both concepts and implementation details in the field of
-computer security. Unless the instructor provides access to a computational
-device, the in-person assessments invite students to demonstrate their
-knowledge of computer security without the aid of any external sources,
-including, but not limited to, software tools running on a student laptop.
+evaluations of both high-level and low-level knowledge in the field of software
+engineering. All students should be prepared to answer questions that assess
+their comprehension of both concepts and implementation details in the field of
+software engineering. Unless the instructor provides access to a computational
+device, the in-person assessments invite students to demonstrate their knowledge
+of computer security without the aid of any external sources, including, but not
+limited to, software tools running on a student laptop.
 
 - **Final Examination**: The final examination is an online, executable,
 cumulative assessment covering all of the material during all of the course

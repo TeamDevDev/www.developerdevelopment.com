@@ -72,8 +72,8 @@ toc: true
     - Demonstration of project development for the week
     - Confirmation of readiness for next week's in-class discussions
     - Assessment in the form of either:
-    - Programming skill-checks
-    - Software engineering knowledge-checks
+      - Programming skill-checks
+      - Software engineering knowledge-checks
 
 ::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}
 

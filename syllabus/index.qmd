@@ -558,9 +558,11 @@ write an executive summary, that should contain, at minimum, these components:
 contains a command-line software tool that is relevant to the assigned reading.
 The GitHub repository for the assigned reading should be available through the
 organization for the current edition of the software engineering course.
-- For each the executive summary, the assigned partnership of students must
-complete their work in advance of the class session during which the content
-will be discussed, as outlined in the [course
+- Each team of learners assigned to complete an executive summary should
+schedule time to meet with the course instructor to discuss their assigned
+article. For each the executive summary, the assigned partnership of students
+must complete their work in advance of the class session during which the
+content will be discussed, as outlined in the [course
 schedule](../schedule/index.qmd). When an executive summary is not completed
 according to the stated schedule or not completed at the agreed-on level of
 quality, this will result in a reduction in the corresponding technical or

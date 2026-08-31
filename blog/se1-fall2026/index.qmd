@@ -11,16 +11,30 @@ page-layout: full
 
 ---
 
-## Overview 
+## Overview
 
 This blog post discusses the ["Preface"](https://abseil.io/resources/swe-book/html/pr01.html) in the
-[Software Engineering at Google book](https://abseil.io/resources/swe-book)! 
+[Software Engineering at Google book](https://abseil.io/resources/swe-book)!
 
-The preface of _Software Engineering at Google_ introduces two fundamental questions from which we derive our course name, "CMPSC 203: Software Engineering."
+The preface of _Software Engineering at Google_ introduces two fundamental
+questions from which we derive our course name, "CMPSC 203: Software
+Engineering."
 
-The first looks to distinguish the difference between programming and software engineering as disciplines. The authors argue that software engineering is more than simply writing code; __it includes the tools and processes an organization uses to build and maintain software over time.__ The central idea of the preface is that software engineering can be viewed as **“programming integrated over time.”** Software engineering must be able to adapt to changing requirements, continue to be maintained, and remain valuable throughout its life cycle.
+The first distinguishes the difference between programming and software
+engineering as disciplines. The authors argue that software engineering is more
+than simply writing code; **it includes the tools and processes an organization
+uses to build and maintain software over time.** The central idea of the preface
+is that software engineering can be viewed as **“programming integrated over
+time.”** Software engineering must be able to adapt to changing requirements,
+continue to be maintained, and remain valuable throughout its life cycle.
 
-The second aims to emphasize the difference in rigor between software engineering and more traditional engineering roles. Where mechanical and civic engineers build something physical, it is more often than not that software is regarded with less real-world consequence. But in the age of artificial intelligence and growing concerns of cybersecurity, _Software Engineering at Google_ believes that we as software engineers should strive to match the rigor of other fields.
+The second aims to emphasize the difference in rigor between software
+engineering and more traditional engineering roles. Where mechanical and civic
+engineers build something physical, it is more often than not that software is
+regarded with less real-world consequence. But in the age of artificial
+intelligence and growing concerns of cybersecurity, _Software Engineering at
+Google_ believes that we as software engineers should strive to match the rigor
+of other fields.
 
 ---
 
@@ -30,19 +44,18 @@ _Software Engineering at Google_ uses its preface to make its fundamental perspe
 
 The difference between "programming" and "software engineering" is intent. Software engineering is the integration of programming over time because it relies on the intent of **sustainability**, as well as more **rigorous** methods to ensure the health of the project.
 
-
 ### <u> Disciplinary Rigor & Engineering for Sustainability </u>
 
 This book is dedicated to teaching software engineers how to think more rigorously like other engineering disciplines to build something that is effective, and which lasts.
 
 There are three pairs of indicators that reveal the needs of a project to remain sustainable.
 
-- Time and Change: How will the **codebase** need to adapt to remain __relevant and healthy__?
-- Scale and Growth: How will the **organization** responsible for the codebase need to adapt as it __evolves__?
+- Time and Change: How will the **codebase** need to adapt to remain **relevant and healthy**?
+- Scale and Growth: How will the **organization** responsible for the codebase need to adapt as it **evolves**?
 - Trade-offs and Costs: How will the **organization** use the metrics of _Time and Change_ and _Scale and Growth_ to inform their engineering decisions?
 
-
 ### <u> Google's Software Engineering Landscape </u>
+
 Google focuses growth and sustainability in software engineering. They break this concept into three main points.
 
 - #### Culture
@@ -57,6 +70,7 @@ How to use tools to your advantage, whether they be your own or open source opti
 ### What this book isn't ?
 
 The authors made it very clear what their intentions with _Software Engineering at Google_ were, but they also made it clear what they were **not**. This book is not:
+
 - a guide to software design
 - a comprehensive treatment of all the practical concerns that shape modern software development
 
@@ -72,7 +86,8 @@ This is a stronger example of software engineering because it goes beyond “doe
 
 ---
 
-## Repository 
+## Repository
+
 Our team built bumpd, a command-line dependency and maintenance audit tool. You can view the project here: [bumpd on GitHub](https://github.com/pathakanshu/bumpd).
 
 {{< include /_back-blog.qmd >}}

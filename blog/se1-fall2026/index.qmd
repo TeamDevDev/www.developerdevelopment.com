@@ -14,7 +14,7 @@ page-layout: full
 This blog post discusses the ["Preface"](https://abseil.io/resources/swe-book/html/pr01.html) in the
 [Software Engineering at Google book](https://abseil.io/resources/swe-book)!
 
-The preface of _Software Engineering at Google_ introduces two fundamental
+The preface of *Software Engineering at Google* introduces two fundamental
 questions from which we derive our course name, "CMPSC 203: Software
 Engineering."
 
@@ -36,7 +36,7 @@ of other fields.
 
 ## Summary
 
-_Software Engineering at Google_ uses its preface to make its fundamental
+*Software Engineering at Google* uses its preface to make its fundamental
 perspective on the discipline of software engineering clear: "as software
 becomes more integrated into our lives, we must adopt and rely on more rigorous
 engineering methods." But what do the authors mean by this?
@@ -55,9 +55,12 @@ effective, and which lasts.
 There are three pairs of indicators that reveal the needs of a project to remain
 sustainable.
 
-- Time and Change: How will the **codebase** need to adapt to remain **relevant and healthy**?
-- Scale and Growth: How will the **organization** responsible for the codebase need to adapt as it **evolves**?
-- Trade-offs and Costs: How will the **organization** use the metrics of _Time and Change_ and _Scale and Growth_ to inform their engineering decisions?
+- *Time and Change*: How will the **codebase** need to adapt to remain
+**relevant and healthy**?
+- *Scale and Growth*: How will the **organization** responsible for the codebase
+need to adapt as it **evolves**?
+- *Trade-offs and Costs*: How will the **organization** use the metrics of _Time
+and Change_ and *Scale and Growth* to inform their engineering decisions?
 
 ### Google's Software Engineering Landscape
 

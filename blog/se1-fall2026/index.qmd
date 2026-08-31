@@ -11,7 +11,7 @@ page-layout: full
 
 ---
 
-## Overview
+## Overview 
 
 This blog post discusses the ["Preface"](https://abseil.io/resources/swe-book/html/pr01.html) in the
 [Software Engineering at Google book](https://abseil.io/resources/swe-book)! 
@@ -30,7 +30,8 @@ _Software Engineering at Google_ uses its preface to make its fundamental perspe
 
 The difference between "programming" and "software engineering" is intent. Software engineering is the integration of programming over time because it relies on the intent of **sustainability**, as well as more **rigorous** methods to ensure the health of the project.
 
-### Disciplinary Rigor & Engineering for Sustainability
+
+### <u> Disciplinary Rigor & Engineering for Sustainability </u>
 
 This book is dedicated to teaching software engineers how to think more rigorously like other engineering disciplines to build something that is effective, and which lasts.
 
@@ -40,19 +41,20 @@ There are three pairs of indicators that reveal the needs of a project to remain
 - Scale and Growth: How will the **organization** responsible for the codebase need to adapt as it __evolves__?
 - Trade-offs and Costs: How will the **organization** use the metrics of _Time and Change_ and _Scale and Growth_ to inform their engineering decisions?
 
-### Google's Software Engineering Landscape
+
+### <u> Google's Software Engineering Landscape </u>
 Google focuses growth and sustainability in software engineering. They break this concept into three main points.
 
-#### Culture
+- #### Culture
 How software is developed through teamwork and how this allows for growth. Some chapters in this section are “How to Work on Teams”, “Knowledge Sharing”, “Leading at Scale”, and “Measuring Engineering Productivity”. This section emphasizes the importance of working together to solve problems. Bringing different perspectives to the table can allow for better solutions and a more productive and healthier work environment.
 
-#### Processes
+- #### Processes
 How Google has developed best practices for software engineers. They point out having an informed perspective due to Google’s large size. The chapter names include “Style Guides and Rules”, “Documentation”, “Testing Overview”, and “Deprecation”. This touches upon all different aspects of software engineering, from planning and creation to testing and deprecation.
 
-#### Tools
+- #### Tools
 How to use tools to your advantage, whether they be your own or open source options. Some chapter names are “Version Control and Branch Management”, “Code Search”, “Dependency Management”, and “Large-Scale Changes”. Using a combination of your own tools and ones that already exist can be helpful in getting the wanted outcome by tailoring your tools to your needs but also not making extra work for yourself.
 
-### What this Book Isn't
+### What this book isn't ?
 
 The authors made it very clear what their intentions with _Software Engineering at Google_ were, but they also made it clear what they were **not**. This book is not:
 - a guide to software design
@@ -67,6 +69,8 @@ As a result, it leaves out many important topics such as project management, API
 This distinction between programming and software engineering becomes concrete when we think about the kinds of tools teams need to maintain software over time. Our CLI tool reflects the Preface’s central idea that software engineering is not just writing code, but managing a system over time. By checking which dependencies are outdated and which versions are newer, the tool emphasizes the importance of continuous maintenance and adaptation. In a real project, dependencies change constantly, and failing to notice those updates can leave software vulnerable, inefficient, or incompatible with newer tools. Similarly, scanning for missing docstrings adds a more rigorous form of quality control. Documentation is not only for readability; it helps future developers understand the purpose and behavior of code, especially as a team and codebase grow.
 
 This is a stronger example of software engineering because it goes beyond “does the code run?” and instead asks whether the project is healthy, maintainable, and sustainable. By surfacing outdated packages, missing docstrings, and other maintenance issues, the tool makes project quality visible in a concrete and actionable way. It supports the Preface’s themes of Time and Change and Scale and Growth by showing that as projects expand, engineers need systematic ways to track complexity, change, and long-term health. In this way, bumpd is not simply a convenience tool; it reflects the disciplined, evidence-based thinking that distinguishes programming from software engineering.
+
+---
 
 ## Repository 
 Our team built bumpd, a command-line dependency and maintenance audit tool. You can view the project here: [bumpd on GitHub](https://github.com/pathakanshu/bumpd).

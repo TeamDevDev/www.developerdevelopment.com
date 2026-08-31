@@ -46,7 +46,7 @@ Software engineering is the integration of programming over time because it
 relies on the intent of **sustainability**, as well as more **rigorous** methods
 to ensure the health of the project.
 
-### <u> Disciplinary Rigor & Engineering for Sustainability </u>
+### Disciplinary Rigor & Engineering for Sustainability
 
 This book is dedicated to teaching software engineers how to think more
 rigorously like other engineering disciplines to build something that is
@@ -88,12 +88,14 @@ when we think about the kinds of tools teams need to maintain software over
 time. Our CLI tool reflects the Preface’s central idea that software engineering
 is not just writing code, but managing a system over time. By checking which
 dependencies are outdated and which versions are newer, the tool emphasizes the
-importance of continuous maintenance and adaptation. In a real project,
-dependencies change constantly, and failing to notice those updates can leave
-software vulnerable, inefficient, or incompatible with newer tools. Similarly,
-scanning for missing docstrings adds a more rigorous form of quality control.
-Documentation is not only for readability; it helps future developers understand
-the purpose and behavior of code, especially as a team and codebase grow.
+importance of continuous maintenance and adaptation.
+
+In a real project, dependencies change constantly, and failing to notice those
+updates can leave software vulnerable, inefficient, or incompatible with newer
+tools. Similarly, scanning for missing docstrings adds a more rigorous form of
+quality control. Documentation is not only for readability; it helps future
+developers understand the purpose and behavior of code, especially as a team and
+codebase grow.
 
 This is a stronger example of software engineering because it goes beyond "does
 the code run?" and instead asks whether the project is healthy, maintainable,
@@ -105,7 +107,7 @@ track complexity, change, and long-term health. In this way, `bumpd` is not
 simply a convenience tool; it reflects the disciplined, evidence-based thinking
 that distinguishes programming from software engineering.
 
-::: {.callout-note appearance="minimal" title="Open-Source Software to Aid Software Engineers" collapse="false"}
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
 Our team built `bumpd`, a command-line dependency and maintenance audit tool.
 You can view the project here: [bumpd on

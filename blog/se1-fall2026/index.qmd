@@ -95,8 +95,8 @@ scanning for missing docstrings adds a more rigorous form of quality control.
 Documentation is not only for readability; it helps future developers understand
 the purpose and behavior of code, especially as a team and codebase grow.
 
-This is a stronger example of software engineering because it goes beyond “does
-the code run?” and instead asks whether the project is healthy, maintainable,
+This is a stronger example of software engineering because it goes beyond "does
+the code run?" and instead asks whether the project is healthy, maintainable,
 and sustainable. By surfacing outdated packages, missing docstrings, and other
 maintenance issues, the tool makes project quality visible in a concrete and
 actionable way. It supports the Preface’s themes of Time and Change and Scale

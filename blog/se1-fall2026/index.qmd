@@ -9,8 +9,6 @@ toc: true
 page-layout: full
 ---
 
----
-
 ## Overview
 
 This blog post discusses the ["Preface"](https://abseil.io/resources/swe-book/html/pr01.html) in the
@@ -35,8 +33,6 @@ regarded with less real-world consequence. But in the age of artificial
 intelligence and growing concerns of cybersecurity, _Software Engineering at
 Google_ believes that we as software engineers should strive to match the rigor
 of other fields.
-
----
 
 ## Summary
 
@@ -84,8 +80,6 @@ The authors made it very clear what their intentions with _Software Engineering 
 - a comprehensive treatment of all the practical concerns that shape modern software development
 
 As a result, it leaves out many important topics such as project management, API design, security hardening, internationalization, user interface frameworks, and other language-specific concerns. These omissions are not a statement that these issues are unimportant; rather, they reflect the book’s deliberate choice to focus on software engineering as a discipline rather than trying to cover every aspect of software development in depth.
-
----
 
 ## Reflection
 

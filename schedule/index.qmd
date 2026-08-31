@@ -8,36 +8,36 @@ toc: true
 
 - **Week One**: Technical and Professional Onboarding
 - **Module One**: *Introduction to Software Engineering Knowledge and Skills*
-    - **Weeks Two through Five**: Establish your technical and professional skills
-    - **Week Six**:
-      - **Monday**: in-person assessment of individual developer development
-      - **Wednesday Class Session**: in-person assessment of individual developer development
-      - **Wednesday Laboratory Session**: take an executable examination
-      - **Friday**: individual demonstration of project development
+  - **Weeks Two through Five**: Establish your technical and professional skills
+  - **Week Six**:
+    - **Monday**: in-person assessment of individual developer development
+    - **Wednesday Class Session**: in-person assessment of individual developer development
+    - **Wednesday Laboratory Session**: take an executable examination
+    - **Friday**: individual demonstration of project development
 - **Module Two**: *Practical Software Engineering Knowledge and Skills*
-    - **Weeks Seven through Ten**: Enhance your technical and professional skills
-    - **Week Eleven**:
-      - **Monday**: in-person assessment of individual developer development
-      - **Wednesday**: in-person assessment of individual developer development
-      - **Thursday**: take an executable examination during the laboratory session
-      - **Friday**: individual demonstration of project development
+  - **Weeks Seven through Ten**: Enhance your technical and professional skills
+  - **Week Eleven**:
+    - **Monday**: in-person assessment of individual developer development
+    - **Wednesday**: in-person assessment of individual developer development
+    - **Thursday**: take an executable examination during the laboratory session
+    - **Friday**: individual demonstration of project development
 - **Module Three**: *Advanced Software Engineering Knowledge and Skills*
-    - **Weeks Eleven through Fifteen**: Enhance your technical and professional skills
-    - **Week Sixteen**:
-      - **Wednesday, December 8, 2026 at 7:00 PM**:
-        - **Details**: Final Examination (Exam Code F)
-        - **Demonstrate technical and professional skills in software engineering**:
-          - *Technical Skill Assessment*:
-              - Use GitHub and GitHub Actions
-              - Use text editor and terminal window
-              - Implement and test Python functions
-              - Debug defective Python functions
-              - Confirm output of Python functions
-              - Covers all content in SE, FB, and DB
-           - *Professional Skill Assessment*:
-              - Answer questions during in-person discussion
-              - Answer questions through a provided online form
-              - Covers all content in SE, FB, and DB
+  - **Weeks Eleven through Fifteen**: Enhance your technical and professional skills
+  - **Week Sixteen**:
+    - **Wednesday, December 8, 2026 at 7:00 PM**:
+      - **Details**: Final Examination (Exam Code F)
+      - **Demonstrate technical and professional skills in software engineering**:
+        - *Technical Skill Assessment*:
+          - Use GitHub and GitHub Actions
+          - Use text editor and terminal window
+          - Implement and test Python functions
+          - Debug defective Python functions
+          - Confirm output of Python functions
+          - Covers all content in SE, FB, and DB
+        - *Professional Skill Assessment*:
+          - Answer questions during in-person discussion
+          - Answer questions through a provided online form
+          - Covers all content in SE, FB, and DB
 
 ::: {.callout-note appearance="minimal" title="Textbook Abbreviations" collapse="false"}
 
@@ -62,18 +62,18 @@ toc: true
     - Sprint planning
     - Project implementation
     - Project demonstration
-   - Assessment in the form of either:
+  - Assessment in the form of either:
         - Executable examinations
         - In-person assessments
 - {{< iconify game-icons team-idea size=18px >}} **Friday**: Developer Development
-    - *Publish executive summaries to the Developer Development blog*:
-        - Publication of next SE executive summary
-        - Publication of next FB or DB executive summary
-        - Demonstration of project development for the week
-        - Confirmation of readiness for next week's in-class discussions
-      - Assessment in the form of either:
-        - Programming skill-checks
-        - Software engineering knowledge-checks
+  - *Publish executive summaries to the Developer Development blog*:
+    - Publication of next SE executive summary
+    - Publication of next FB or DB executive summary
+    - Demonstration of project development for the week
+    - Confirmation of readiness for next week's in-class discussions
+    - Assessment in the form of either:
+    - Programming skill-checks
+    - Software engineering knowledge-checks
 
 
 ::: {.callout-note appearance="minimal" title="Assessment Reminder" collapse="false"}

@@ -25,7 +25,7 @@ engineering as disciplines. The authors argue that software engineering is more
 than simply writing code; **it includes the tools and processes an organization
 uses to build and maintain software over time.** The central idea of the preface
 is that software engineering can be viewed as **“programming integrated over
-time.”** Software engineering must be able to adapt to changing requirements,
+time.”** Software must be able to adapt to changing requirements,
 continue to be maintained, and remain valuable throughout its life cycle.
 
 The second aims to emphasize the difference in rigor between software
@@ -40,15 +40,24 @@ of other fields.
 
 ## Summary
 
-_Software Engineering at Google_ uses its preface to make its fundamental perspective on the discipline of software engineering clear: "as software becomes more integrated into our lives, we must adopt and rely on more rigorous engineering methods." But what do the authors mean by this?
+_Software Engineering at Google_ uses its preface to make its fundamental
+perspective on the discipline of software engineering clear: "as software
+becomes more integrated into our lives, we must adopt and rely on more rigorous
+engineering methods." But what do the authors mean by this?
 
-The difference between "programming" and "software engineering" is intent. Software engineering is the integration of programming over time because it relies on the intent of **sustainability**, as well as more **rigorous** methods to ensure the health of the project.
+The difference between "programming" and "software engineering" is intent.
+Software engineering is the integration of programming over time because it
+relies on the intent of **sustainability**, as well as more **rigorous** methods
+to ensure the health of the project.
 
 ### <u> Disciplinary Rigor & Engineering for Sustainability </u>
 
-This book is dedicated to teaching software engineers how to think more rigorously like other engineering disciplines to build something that is effective, and which lasts.
+This book is dedicated to teaching software engineers how to think more
+rigorously like other engineering disciplines to build something that is
+effective, and which lasts.
 
-There are three pairs of indicators that reveal the needs of a project to remain sustainable.
+There are three pairs of indicators that reveal the needs of a project to remain
+sustainable.
 
 - Time and Change: How will the **codebase** need to adapt to remain **relevant and healthy**?
 - Scale and Growth: How will the **organization** responsible for the codebase need to adapt as it **evolves**?

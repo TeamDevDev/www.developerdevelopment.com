@@ -387,22 +387,22 @@ during the academic semester.
 
 These assessment categories have the following definitions:
 
-- **Team Participation**: Students are expected to regularly attend and
-actively participate in all the class and laboratory sessions, as outlined on
-the [course schedule](../schedule/index.qmd). After either an unexcused
-absence or a late attendance to either a class or a laboratory session, a
-student's weekly class participation grade will be reduced. Students who need
-to miss class or attend class late for an excused reason should communicate
-their situation to the course instructor in a timely fashion. In accordance
-with [Department of Computer and Information Science
-Policies](https://www.cis.allegheny.edu/teaching/policies/), each time a
-student misses one week of class (i.e., three class sessions and one laboratory
+- **Team Participation**: Students are expected to regularly attend and actively
+participate in all the class and laboratory sessions, as outlined on the
+[course schedule](../schedule/index.qmd). After either an unexcused absence or
+a late attendance to either a class or a laboratory session, a student's weekly
+class participation grade will be reduced. Students who need to miss class or
+attend class late for an excused reason should communicate their situation to
+the course instructor in a timely fashion. In accordance with [Department of
+Computer and Information Science
+Policies](https://www.cis.allegheny.edu/teaching/policies/), each time a student
+misses one week of class (i.e., three class sessions and one laboratory
 session), their grade will be reduced by one letter grade, with three late
 attendances counting for an absence. A student's weekly class participation
 grade also will be reduced if they are observed, during either class or
-laboratory sessions, undertaking non-course-related activities like viewing
-email, social media, or reading or creating other content not connected to
-software engineering.
+laboratory sessions, undertaking non-course-related activities like reading or
+responding to email, viewing social media, or reading or creating other content
+not connected to software engineering.
 
 - **Midterm Examination**: Each midterm examination is an online, executable,
 and cumulative assessment covering all prior material from the course sessions,

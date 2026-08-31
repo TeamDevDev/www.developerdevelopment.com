@@ -63,6 +63,13 @@ that, by necessity, the meeting before yours may sometimes run late.
       - *Every other week i*: complete an in-class programming skill-check
       - *Every other week i+1*: complete an in-class knowledge skill-check
 - **Collaborative Software Engineering**: Wednesday, 2:30 PM -- 4:00 PM, Alden 109
+  - *Collaboratively implement and deploy into production a software tool*:
+    - Sprint planning
+    - Project implementation
+    - Project demonstration
+  - At the end of each module, assessment in the form of:
+    - Executable examinations and/or
+    - In-person assessments
 
 #### Assessment Schedule
 

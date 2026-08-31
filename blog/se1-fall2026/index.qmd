@@ -83,14 +83,34 @@ As a result, it leaves out many important topics such as project management, API
 
 ## Reflection
 
-This distinction between programming and software engineering becomes concrete when we think about the kinds of tools teams need to maintain software over time. Our CLI tool reflects the Preface’s central idea that software engineering is not just writing code, but managing a system over time. By checking which dependencies are outdated and which versions are newer, the tool emphasizes the importance of continuous maintenance and adaptation. In a real project, dependencies change constantly, and failing to notice those updates can leave software vulnerable, inefficient, or incompatible with newer tools. Similarly, scanning for missing docstrings adds a more rigorous form of quality control. Documentation is not only for readability; it helps future developers understand the purpose and behavior of code, especially as a team and codebase grow.
+This distinction between programming and software engineering becomes concrete
+when we think about the kinds of tools teams need to maintain software over
+time. Our CLI tool reflects the Preface’s central idea that software engineering
+is not just writing code, but managing a system over time. By checking which
+dependencies are outdated and which versions are newer, the tool emphasizes the
+importance of continuous maintenance and adaptation. In a real project,
+dependencies change constantly, and failing to notice those updates can leave
+software vulnerable, inefficient, or incompatible with newer tools. Similarly,
+scanning for missing docstrings adds a more rigorous form of quality control.
+Documentation is not only for readability; it helps future developers understand
+the purpose and behavior of code, especially as a team and codebase grow.
 
-This is a stronger example of software engineering because it goes beyond “does the code run?” and instead asks whether the project is healthy, maintainable, and sustainable. By surfacing outdated packages, missing docstrings, and other maintenance issues, the tool makes project quality visible in a concrete and actionable way. It supports the Preface’s themes of Time and Change and Scale and Growth by showing that as projects expand, engineers need systematic ways to track complexity, change, and long-term health. In this way, bumpd is not simply a convenience tool; it reflects the disciplined, evidence-based thinking that distinguishes programming from software engineering.
+This is a stronger example of software engineering because it goes beyond “does
+the code run?” and instead asks whether the project is healthy, maintainable,
+and sustainable. By surfacing outdated packages, missing docstrings, and other
+maintenance issues, the tool makes project quality visible in a concrete and
+actionable way. It supports the Preface’s themes of Time and Change and Scale
+and Growth by showing that as projects expand, engineers need systematic ways to
+track complexity, change, and long-term health. In this way, `bumpd` is not
+simply a convenience tool; it reflects the disciplined, evidence-based thinking
+that distinguishes programming from software engineering.
 
----
+::: {.callout-note appearance="minimal" title="Open-Source Software to Aid Software Engineers" collapse="false"}
 
-## Repository
+Our team built `bumpd`, a command-line dependency and maintenance audit tool.
+You can view the project here: [bumpd on
+GitHub](https://github.com/pathakanshu/bumpd).
 
-Our team built bumpd, a command-line dependency and maintenance audit tool. You can view the project here: [bumpd on GitHub](https://github.com/pathakanshu/bumpd).
+:::
 
 {{< include /_back-blog.qmd >}}

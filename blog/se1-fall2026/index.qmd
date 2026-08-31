@@ -59,27 +59,52 @@ sustainable.
 - Scale and Growth: How will the **organization** responsible for the codebase need to adapt as it **evolves**?
 - Trade-offs and Costs: How will the **organization** use the metrics of _Time and Change_ and _Scale and Growth_ to inform their engineering decisions?
 
-### <u> Google's Software Engineering Landscape </u>
+### Google's Software Engineering Landscape
 
-Google focuses growth and sustainability in software engineering. They break this concept into three main points.
+Google focuses growth and sustainability in software engineering. They break
+this concept into three main points.
 
 - #### Culture
-How software is developed through teamwork and how this allows for growth. Some chapters in this section are “How to Work on Teams”, “Knowledge Sharing”, “Leading at Scale”, and “Measuring Engineering Productivity”. This section emphasizes the importance of working together to solve problems. Bringing different perspectives to the table can allow for better solutions and a more productive and healthier work environment.
+
+How software is developed through teamwork and how this allows for growth. Some
+chapters in this section are “How to Work on Teams”, “Knowledge Sharing”,
+“Leading at Scale”, and “Measuring Engineering Productivity”. This section
+emphasizes the importance of working together to solve problems. Bringing
+different perspectives to the table can allow for better solutions and a more
+productive and healthier work environment.
 
 - #### Processes
-How Google has developed best practices for software engineers. They point out having an informed perspective due to Google’s large size. The chapter names include “Style Guides and Rules”, “Documentation”, “Testing Overview”, and “Deprecation”. This touches upon all different aspects of software engineering, from planning and creation to testing and deprecation.
+
+How Google has developed best practices for software engineers. They point out
+having an informed perspective due to Google’s large size. The chapter names
+include “Style Guides and Rules”, “Documentation”, “Testing Overview”, and
+“Deprecation”. This touches upon all different aspects of software engineering,
+from planning and creation to testing and deprecation.
 
 - #### Tools
-How to use tools to your advantage, whether they be your own or open source options. Some chapter names are “Version Control and Branch Management”, “Code Search”, “Dependency Management”, and “Large-Scale Changes”. Using a combination of your own tools and ones that already exist can be helpful in getting the wanted outcome by tailoring your tools to your needs but also not making extra work for yourself.
+
+How to use tools to your advantage, whether they be your own or open source
+options. Some chapter names are “Version Control and Branch Management”, “Code
+Search”, “Dependency Management”, and “Large-Scale Changes”. Using a combination
+of your own tools and ones that already exist can be helpful in getting the
+wanted outcome by tailoring your tools to your needs but also not making extra
+work for yourself.
 
 ### What this book isn't ?
 
-The authors made it very clear what their intentions with _Software Engineering at Google_ were, but they also made it clear what they were **not**. This book is not:
+The authors made it very clear what their intentions with _Software Engineering
+at Google_ were, but they also made it clear what they were **not**. This book
+is not:
 
 - a guide to software design
 - a comprehensive treatment of all the practical concerns that shape modern software development
 
-As a result, it leaves out many important topics such as project management, API design, security hardening, internationalization, user interface frameworks, and other language-specific concerns. These omissions are not a statement that these issues are unimportant; rather, they reflect the book’s deliberate choice to focus on software engineering as a discipline rather than trying to cover every aspect of software development in depth.
+As a result, it leaves out many important topics such as project management, API
+design, security hardening, internationalization, user interface frameworks, and
+other language-specific concerns. These omissions are not a statement that these
+issues are unimportant; rather, they reflect the book’s deliberate choice to
+focus on software engineering as a discipline rather than trying to cover every
+aspect of software development in depth.
 
 ## Reflection
 

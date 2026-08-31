@@ -66,9 +66,17 @@ You may have to be careful of the assumptions that you make about the program's 
 
 ### Question: Which of the following is a benefit of run-time verification?
 - [ ] It reduces the complexity of the program.
-- [x] It can detect security vulnerabilities during execution.
+- [ ] It can detect security vulnerabilities during execution.
 - [ ] It eliminates the need for testing.
 - [ ] It guarantees that the program will run without errors.
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!** 
+It can detect security vulnerabilities during execution.
+
+</details>
 
 ### System Input vs. Function Input
 
@@ -254,9 +262,17 @@ To fix the error in the `my_sqrt` function, you need to add a check for negative
 
 ### Q1.5: Which of the following will fix a string input error in the `sqrt_program` function?
 - [ ] Add a try-except block to catch `TypeError` exceptions when converting
-- [x] Add a try-except block to catch `ValueError` exceptions when converting
+- [ ] Add a try-except block to catch `ValueError` exceptions when converting
 - [ ] Add a try-except block to catch `ZeroDivisionError` exceptions when converting
 - [ ] Add a try-except block to catch `IndexError` exceptions when converting
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!** 
+Add a try-except block to catch `ValueError` exceptions when converting
+
+</details>
 
 ## Reflection
 

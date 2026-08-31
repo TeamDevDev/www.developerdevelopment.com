@@ -479,7 +479,11 @@ allow a learner to demonstrate an understanding of facts and ideas by
 translating, interpreting, and contextualizing the main professional concepts
 found in **SE**. In addition to publishing an executive summary on the course
 web site, this category invites learners to prepare and release a command-line
-software tool that connects to the chosen reading assignment in **SE**.
+software tool that connects to the chosen reading assignment in **SE**. A
+student who successfully completes this assignment will have evidence of
+completed work as individual commits, with appropriately labeled commit
+messages, in the GitHub repository for both the professional development summary
+and the command-line software tool.
 
 - **Technical Development Summaries**: Building on material in the [Fuzzing
 Book](https://www.fuzzingbook.org/) (i.e., **FB**) and [Debugging
@@ -493,22 +497,27 @@ understanding of facts and ideas by interpreting and implementing the main
 technical ideas presented in either **FB** or **DB**. In addition to publishing
 an executive summary on the course web site, this category invites learners to
 prepare and release a command-line software tool that connects to the chosen
-reading assignment in **FB**/**DB**.
+reading assignment in **FB**/**DB**. A student who successfully completes this
+assignment will have evidence of completed work as individual commits, with
+appropriately labeled commit messages, in the GitHub repository for both the
+professional development summary and the command-line software tool.
 
 - **Project Development**: These team-based projects invite students to explore
 different techniques for specifying, designing, implementing, testing,
 documenting, deploying, and maintaining real-world, open-source Python-based
-software tools. These projects also encourage students to use and build
-software engineering tools to complete tasks like debugging and testing. The
-technical work that a student completes during project development will take
-place in a public GitHub repository and will be further documented and
-reflected on in a private GitHub repository that the instructor will use to
-furnish assessments and feedback to the student. Finally, the professional work
-that a student undertakes as part of project development will occur in both an
-in-person setting and through a public GitHub repository, with the use of a
-private GitHub repository offering the opportunity for the student to document
-and reflect on their contributions and for the instructor to offer detailed
-feedback and assessments.
+software tools. These projects also encourage students to use and build software
+engineering tools to complete tasks like debugging and testing. The technical
+work that a student completes during project development will take place in a
+public GitHub repository and will be further documented and reflected on in a
+private GitHub repository that the instructor will use to furnish assessments
+and feedback to the student. Finally, the professional work that a student
+undertakes as part of project development will occur in both an in-person
+setting and through a public GitHub repository, with the use of a private GitHub
+repository offering the opportunity for the student to document and reflect on
+their contributions and for the instructor to offer detailed feedback and
+assessments. A student who successfully completes this project will have
+evidence of completed work as individual commits, with appropriately labeled
+commit messages, in the GitHub repository for the software tool.
 
 When you are assigned to the discussion lead, both the **Professional
 Development** and **Technical Development** assessment categories require

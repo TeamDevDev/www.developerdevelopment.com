@@ -504,6 +504,10 @@ div.quarto-post .thumbnail {
   flex-shrink: 0;
 }
 
+.listing-title {
+  padding-bottom: 5px;
+}
+
 .quarto-grid-item .listing-categories {
   display: flex;
   flex-wrap: wrap;

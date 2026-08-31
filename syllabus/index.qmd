@@ -523,34 +523,35 @@ When you are assigned to the discussion lead, both the **Professional
 Development** and **Technical Development** assessment categories require
 students to complete the following tasks for that week:
 
-- In collaboration with an assigned discussion lead partner, read an assigned
+- In collaboration with an assigned discussion lead partner(s), read an assigned
 article in **SE**, **FB**, or **DB** (recall that the course features one
-article from **SE** and one article from either **FB** or **DB** every week)
-and write an executive summary, that should contain, at minimum, these
-components:
-  - Brief overview of the executive summary and the contributions that it
-  makes.
+article from **SE** and one article from either **FB** or **DB** every week) and
+write an executive summary, that should contain, at minimum, these components:
+  - Brief overview of the executive summary and the contributions that it makes.
   - Detailed analysis of the article in a fashion that clearly explains its key
   points, featuring the translation and/or re-interpretation of its central
   points into a context that is relevant for you as a developing developer. The
-  executive summary should connect to both prior executive summaries and to the
-  ongoing work on the long-term software engineering projects.
+  executive summary should connect to prior executive summaries, to the ongoing
+  work on the long-term software engineering projects, and the team-created
+  command-line software tool.
   - Detailed description of actions items that will help you and the team of
   software engineers to enhance their development as developers and the
-  completion of the long-term software engineering projects. Each action item
-  should have a clear description of the steps that the author and/or the team
-  should **stop doing**, **start doing**, and **keep doing**, as described in
-  [The Ultimate Guide to the Start, Stop, Continue
+  completion of the long-term software engineering projects. With connections to
+  the all course tasks (e.g., project development), each action item should have
+  a clear description of the steps that the author and/or the team should **stop
+  doing**, **start doing**, and **keep doing**, as described in [The Ultimate
+  Guide to the Start, Stop, Continue
   Retrospective](https://slidemodel.com/start-stop-continue-retrospective-guide/).
   - An executive summary for an article from either **FB** or **DB** must also
   contain executable Python source code and the output from running the code.
-  Specifically, the source code segments must appear in fenced code blocks and
-  be directly executable in GitHub Actions and capable of correctly producing
-  output when the web site is built and deployed to Netlify.
+  Specifically, the source code segments must use Quarto and appear in fenced
+  code blocks and be directly executable in GitHub Actions and capable of
+  correctly producing output when the web site is built and deployed to
+  Cloudflare Workers.
   - All executive summaries should have a commit message history that clearly
-  explain the changes made to the technical and professional content content.
-  Importantly, the discussion leaders for each executive summary should ensure
-  that all commit messages adhere to the [conventional
+  explains the changes made to the technical and professional content content.
+  Importantly, each of the discussion leaders for each executive summary should
+  ensure that all commit messages adhere to the [conventional
   commit](https://www.conventionalcommits.org/en/v1.0.0/) format as evidenced by
   prior commits to this site's GitHub repository.
 - All executive summaries must be complemented by a GitHub repository that
@@ -559,11 +560,11 @@ The GitHub repository for the assigned reading should be available through the
 organization for the current edition of the software engineering course.
 - For each the executive summary, the assigned partnership of students must
 complete their work in advance of the class session during which the content
-will be discussed, as outlined in the [course schedule](../schedule/index.qmd).
-When an executive summary is not completed according to the stated schedule or
-not completed at the agreed-on level of quality, this will result in a reduction
-in the corresponding technical or professional development score for the
-assigned students.
+will be discussed, as outlined in the [course
+schedule](../schedule/index.qmd). When an executive summary is not completed
+according to the stated schedule or not completed at the agreed-on level of
+quality, this will result in a reduction in the corresponding technical or
+professional development score for the assigned students.
 
 The **Project Development** assessment category requires students to complete,
 on a weekly basis, both team-based and individual tasks like the following:

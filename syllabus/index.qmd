@@ -102,26 +102,26 @@ team of learners.
 #### Module One Discussion Leads
 
 - **Week One**: Install development tools and explore projects
-- **Week Two**: TBA
-- **Week Three**: TBA
-- **Week Four**: TBA
-- **Week Five**: TBA
+- **Week Two**: Anshu, Dylan, V, Ritesh| Kaitlyn, Katie, Aidana, Eyra
+- **Week Three**: Logan, Eyra, Aidana| Xander, Anshu
+- **Week Four**: Jake| Lukas, Johny
+- **Week Five**: Mark, Benito, Rivan| Logan, Abishek
 - **Week Six**: In-person assessments and executable examination one
 
 #### Module Two Discussion Leads
 
-- **Week Seven**: TBA
-- **Week Eight**: TBA
-- **Week Nine**: TBA
-- **Week Ten**: TBA
+- **Week Seven**: N/A
+- **Week Eight**: Katie, Ritesh, Kaitlyn| Xander
+- **Week Nine**: Abishek, Aidana, Eyra| V, Logan, Dylan
+- **Week Ten**: Johny, Jake| Mark, Benito, Rivan
 - **Week Eleven**: In-person assessments and executable examination two
 
 #### Module Three Discussion Leads
 
-- **Week Twelve**: TBA
-- **Week Thirteen**: TBA
-- **Week Fourteen**: TBA
-- **Week Fifteen**: TBA
+- **Week Twelve**: Abishek, Johny, Lukas| V, Kaitlyn
+- **Week Thirteen**: Mark, Benito, Rivan| Katie, Ritesh
+- **Week Fourteen**: N/A
+- **Week Fifteen**: Xander, Lukas| Anshu, Dylan, Jake
 - **Week Sixteen**: Final examination week
 
 ### Reading Assignments

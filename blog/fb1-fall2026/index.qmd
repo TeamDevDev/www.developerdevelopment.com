@@ -288,6 +288,15 @@ A few takeaways from this chapter include:
 
 Software testing is an important part of development because it helps us find problems early and make our programs more reliable.
 
+::: {.callout-note appearance="minimal" title="Detection of failures for Software Engineers" collapse="false"}
+
+Our team built `thetool`, a command-line tool to detect failures in code.
+You can view the project here: [thetool on
+GitHub](https://github.com/Aidana-Kuat/thetool).
+
+:::
+
+
 <!-- Include the license statement for the online book -->
 {{< include /_fuzzingbook-reference.qmd >}}
 

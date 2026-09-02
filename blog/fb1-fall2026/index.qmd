@@ -11,27 +11,19 @@ page-layout: full
 
 ## Overview
 
-This chapter introduces the basic ideas of software testing and explains why
-testing is important in software development. It uses Python examples like
-square root function, to show how programmers can test their code and find
-their errors.
+This chapter introduces the basic ideas of software testing and explains why testing is important in software development. It uses Python examples like the square root function to show how programmers can test their code and find their errors.
 
 ## Summary
 
 ### Simple Testing
 
-Software testing involves running a program with different inputs and checking
-whether the results are correct. The chapter uses a `my_sqrt()` function to
-show how testing can help determine if a program works as expected. Testing is
-important because a program may work correctly for some inputs but still have
-problems with others.
+Software testing involves running a program with different inputs and checking whether the results are correct. The chapter uses a `my_sqrt()` function to show how testing can help determine if a program works as expected. Testing is important because a program may work correctly for some inputs but still have problems with others.
 
 * Test a function with different inputs to check its results.
 * Use debugging tools, such as `print()` statements, to understand what the program is doing.
 * Check the output against what is expected to make sure the function is correct.
 
-Testing the `my_sqrt()` function with different values helps us find out if it actually
-calculates square roots correctly.
+Testing the `my_sqrt()` function with different values helps us find out if it actually calculates square roots correctly.
 
 ### Understanding Python Programs
 
@@ -41,29 +33,19 @@ Before testing Python code, it is important to understand the basic parts of the
 * Python is dynamically typed, so variable types are determined while the program runs.
 * Python uses common programming features such as loops, assignments, and comparisons.
 
-Understanding how the code works makes it easier to test the program and find problems
-when the results are not what we expect.
+Understanding how the code works makes it easier to test the program and find problems when the results are not what we expect.
 
 ### Test Automation
 
-Automating tests makes it so we don't have to constantly do manual checks of
-our code and let the computer do all the work of testing for us. To do this we
-use the assert statement which takes any condition you give it and if the
-condition is true nothing will happen however if the condition is false assert
-will raise an exception letting you know that the test failed.
+Automating tests makes it so we don't have to constantly do manual checks of our code and let the computer do all the work of testing for us. To do this we use the assert statement, which takes any condition you give it, and if the condition is true, nothing will happen; however, if the condition is false, the assert will raise an exception, letting you know that the test failed.
 
 ```python
 assert my_sqrt(4) == 2
 ```
 
-Executing this line of code would produce no result this lets us know that the
-condition is true.
+Executing this line of code would produce no result this lets us know that the condition is true.
 
-Its important to also handle floating-point computations because of the
-rounding errors that they have to do this you will want to use an Epsilon value
-that you will have to call. Epsilon is a constant so you have to apply your own
-value to it. Epsilon will keep the values below a certain value to ensure
-equality between iterations.
+It's important to also handle floating-point computations because of the rounding errors that they have to do this. You will want to use an Epsilon value that you will have to call. Epsilon is a constant, so you have to apply your own value to it. Epsilon will keep the values below a certain value to ensure equality between iterations.
 
 ```python
 Epsilon = 1e-8
@@ -71,29 +53,15 @@ Epsilon = 1e-8
 
 ### Run-Time Verification
 
-There are many different ways to manually verify a program, but a more
-effective approach is to integrate the verification process into the program
-itself. Implementing an automatic run-time check will ensure that for every
-computation, the result is verified against the expected outcome.
+There are many different ways to manually verify a program, but a more effective approach is to integrate the verification process into the program itself. Implementing an automatic run-time check will ensure that for every computation, the result is verified against the expected outcome.
 
 Uses of Run-Time Verification:
 
-* **Performance Monitoring**: Run-time verification can be used to monitor the
-performance of a program during execution, ensuring that it meets the required
-performance criteria. It also gives developers the immediate feedback they need
-to make adjustments to the program as necessary.
+* **Performance Monitoring**: Run-time verification can be used to monitor the performance of a program during execution, ensuring that it meets the required performance criteria. It also gives developers the immediate feedback they need to make adjustments to the program as necessary.
 
-* **Security**: Run-time verification can help detect security vulnerabilities
-in a program by checking for unexpected behavior or unauthorized access during
-execution. It will stop a program from running if it detects any security
-issues, preventing potential exploits.
+* **Security**: Run-time verification can help detect security vulnerabilities in a program by checking for unexpected behavior or unauthorized access during execution. It will stop a program from running if it detects any security issues, preventing potential exploits.
 
-You may have to be careful of the assumptions that you make about the program's
-behavior, as run-time verification can only check for conditions that are
-explicitly defined. If a condition is not defined, it may not be checked,
-leading to potential errors or vulnerabilities being missed. Keep in mind of
-the cost that run-time verification can introduce, as it may slow down the
-execution of the program.
+You may have to be careful of the assumptions that you make about the program's behavior, as run-time verification can only check for conditions that are explicitly defined. If a condition is not defined, it may not be checked, leading to potential errors or vulnerabilities being missed. Keep in mind the cost that run-time verification can introduce, as it may slow down the execution of the program.
 
 ### Question: Which of the following is a benefit of run-time verification?
 
@@ -112,21 +80,9 @@ It can detect security vulnerabilities during execution.
 
 ### System Input versus Function Input
 
-To begin with, it is important to understand the difference between function
-input and system input. Function input is the data that a function receives
-from another part of a program, where usually programmers know the function's
-aim and its requirements. For example, `my_sqrt(x)` is designed to work with
-non-negative numbers, so giving it a negative number would not follow the
-function's preconditions. System input comes from outside of a program, for
-example from a user, another file, a network, an API, and so on. It is not as
-safe or predictable as function input. Therefore, a program that work with
-system input should have input validation and error handling. A function
-usually has preconditions, and a system interface cannot assume that external
-users will follow them.
+To begin with, it is important to understand the difference between function input and system input. Function input is the data that a function receives from another part of a program, where usually programmers know the function's aim and its requirements. For example, `my_sqrt(x)` is designed to work with non-negative numbers, so giving it a negative number would not follow the function's preconditions. System input comes from outside of a program, for example, from a user, another file, a network, an API, and so on. It is not as safe or predictable as function input. Therefore, a program that works with system input should have input validation and error handling. A function usually has preconditions, and a system interface cannot assume that external users will follow them.
 
-In the example from *The Fuzzing Book*, the function `my_sqrt()` is used inside
-another program called `sqrt_program()`. This program accepts a string as
-external input and then converts it into an integer:
+In the example from *The Fuzzing Book*, the function `my_sqrt()` is used inside another program called `sqrt_program()`. This program accepts a string as external input and then converts it into an integer:
 
 ```python
 def sqrt_program(arg: str) -> None:
@@ -146,16 +102,13 @@ and gives:
 The root of 4 is 2.0
 ```
 
-However, the problem appears when the user gives an input that the function was
-not ready to work with. For example:
+However, the problem appears when the user gives an input that the function was not ready to work with. For example:
 
 ```python
 sqrt_program("-1")
 ```
 
-Our original `my_sqrt()` function does not properly handle negative numbers,
-and because of that it enters an infinite loop. To prevent this, the program
-can check the value before calling `my_sqrt()`:
+Our original `my_sqrt()` function does not properly handle negative numbers, and because of that it enters an infinite loop. To prevent this, the program can check the value before calling `my_sqrt()`:
 
 ```python
 def sqrt_program(arg: str) -> None:
@@ -172,15 +125,13 @@ Now, if the user enters:
 sqrt_program("-1")
 ```
 
-the program responds with:
+The program responds with:
 
 ```text
 Illegal Input
 ```
 
-instead of sending the negative number to `my_sqrt()`. However, this still does
-not solve every possible problem. For example, a user can also enter something
-like:
+Instead of sending the negative number to `my_sqrt()`. However, this still does not solve every possible problem. For example, a user can also enter something like:
 
 ```python
 sqrt_program("xyzzy")
@@ -192,9 +143,7 @@ The line:
 x = int(arg)
 ```
 
-tries to convert `"xyzzy"` into an integer, which is impossible, so Python
-raises a `ValueError`. To avoid crashes, the program can use `try` and
-`except`:
+This tries to convert `"xyzzy"` into an integer, which is impossible, so Python raises `ValueError`. To avoid crashes, the program can use `try` and `except`:
 
 ```python
 def sqrt_program(arg: str) -> None:
@@ -245,11 +194,11 @@ produces:
 Illegal Input
 ```
 
-Programs that receive system input need to be prepared for unexpected values. The programmer cannot just assume that every user will enter the correct type of data. Since a system should be able to handle many different kinds of input without crashing or entering an uncontrolled state, we, as a software engineers, can intentionally send unusual or incorrect inputs to the program and see what happens. For instance, trying negative numbers as shows above, text instead of numbers, empty strings, or very large values and so on. The goal is to find inputs that can crash/break the program and then fix them. With function input, however, we usually need to know the function's preconditions before generating test values for it.
+Programs that receive system input need to be prepared for unexpected values. The programmer cannot just assume that every user will enter the correct type of data. Since a system should be able to handle many different kinds of input without crashing or entering an uncontrolled state, we, as software engineers, can intentionally send unusual or incorrect inputs to the program and see what happens. For instance, trying negative numbers as shown above, text instead of numbers, empty strings, or very large values, and so on. The goal is to find inputs that can crash/break the program and then fix them. With function input, however, we usually need to know the function's preconditions before generating test values for it.
 
 ### Limits of Testing
 
-Testing can find many bugs, but it cannot guarantee that a program is completely free of errors. There are too many possible inputs to test every single one.
+Testing can find many bugs, but it cannot guarantee that a program is completely free of errors.There are too many possible inputs to test every single one.
 
 * Random testing may miss unusual or important inputs.
 * Some bugs only happen with specific values or conditions.
@@ -325,7 +274,7 @@ To fix the error in the `my_sqrt` function, you need to add a check for negative
 <summary>Click to Expand for the Answer</summary>
 
 **Answer!**
-Add a try-except block to catch `ValueError` exceptions when converting
+Add a try-except block to catch `ValueError` exceptions when converting.
 
 </details>
 
@@ -333,22 +282,15 @@ Add a try-except block to catch `ValueError` exceptions when converting
 
 A few takeaways from this chapter include:
 
-* **Test Different Inputs**: Testing a program with different and unusual
-inputs can help find bugs that may not appear during normal use.
+* **Test Different Inputs**: Testing a program with different and unusual inputs can help find bugs that may not appear during normal use.
 
-* **Automate Testing**: Using assertions and automatically generated tests
-makes testing faster and easier to repeat.
+* **Automate Testing**: Using assertions and automatically generated tests makes testing faster and easier to repeat.
 
-* **Validate Input**: Programs should use checks to validate external inputs
-and prevent errors and unexpected behavior.
+* **Validate Input**: Programs should use checks to validate external inputs and prevent errors and unexpected behavior.
 
-* **Understand the Limits**: Testing can improve confidence in a program, but
-it cannot guarantee that every possible bug has been found.
+* **Understand the Limits**: Testing can improve confidence in a program, but it cannot guarantee that every possible bug has been found.
 
-Software testing is an important part of development because it helps us find
-problems early and make our programs more reliable. As such, our software
-engineering team should make sure that we always write test cases for all of
-the functions in our code.
+Software testing is an important part of development because it helps us find problems early and make our programs more reliable. As such, our software engineering team should make sure that we always write test cases for all of the functions in our code.
 
 ::: {.callout-note appearance="minimal" title="Detection of failures for Software Engineers" collapse="false"}
 

@@ -333,15 +333,22 @@ Add a try-except block to catch `ValueError` exceptions when converting
 
 A few takeaways from this chapter include:
 
-* **Test Different Inputs**: Testing a program with different and unusual inputs can help find bugs that may not appear during normal use.
+* **Test Different Inputs**: Testing a program with different and unusual
+inputs can help find bugs that may not appear during normal use.
 
-* **Automate Testing**: Using assertions and automatically generated tests makes testing faster and easier to repeat.
+* **Automate Testing**: Using assertions and automatically generated tests
+makes testing faster and easier to repeat.
 
-* **Validate Input**: Programs should use checks to validate external inputs and prevent errors and unexpected behavior.
+* **Validate Input**: Programs should use checks to validate external inputs
+and prevent errors and unexpected behavior.
 
-* **Understand the Limits**: Testing can improve confidence in a program, but it cannot guarantee that every possible bug has been found.
+* **Understand the Limits**: Testing can improve confidence in a program, but
+it cannot guarantee that every possible bug has been found.
 
-Software testing is an important part of development because it helps us find problems early and make our programs more reliable.
+Software testing is an important part of development because it helps us find
+problems early and make our programs more reliable. As such, our software
+engineering team should make sure that we always write test cases for all of
+the functions in our code.
 
 ::: {.callout-note appearance="minimal" title="Detection of failures for Software Engineers" collapse="false"}
 

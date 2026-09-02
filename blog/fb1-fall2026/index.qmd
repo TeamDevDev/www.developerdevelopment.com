@@ -1,0 +1,365 @@
+---
+author: [Kathryn Boidock, Kaitlyn Walker, Aidana Kuat, Eyra Co, Gregory M. Kapfhammer]
+title: Introduction to Software Testing
+date: '2026-8-29'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>The necessity of testing software and why it matters.</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This chapter introduces the basic ideas of software testing and explains why
+testing is important in software development. It uses Python examples like
+square root function, to show how programmers can test their code and find
+their errors.
+
+## Summary
+
+### Simple Testing
+
+Software testing involves running a program with different inputs and checking
+whether the results are correct. The chapter uses a `my_sqrt()` function to
+show how testing can help determine if a program works as expected. Testing is
+important because a program may work correctly for some inputs but still have
+problems with others.
+
+* Test a function with different inputs to check its results.
+* Use debugging tools, such as `print()` statements, to understand what the program is doing.
+* Check the output against what is expected to make sure the function is correct.
+
+Testing the `my_sqrt()` function with different values helps us find out if it actually
+calculates square roots correctly.
+
+### Understanding Python Programs
+
+Before testing Python code, it is important to understand the basic parts of the program:
+
+* Python uses indentation to organize code blocks.
+* Python is dynamically typed, so variable types are determined while the program runs.
+* Python uses common programming features such as loops, assignments, and comparisons.
+
+Understanding how the code works makes it easier to test the program and find problems
+when the results are not what we expect.
+
+### Test Automation
+
+Automating tests makes it so we don't have to constantly do manual checks of
+our code and let the computer do all the work of testing for us. To do this we
+use the assert statement which takes any condition you give it and if the
+condition is true nothing will happen however if the condition is false assert
+will raise an exception letting you know that the test failed.
+
+```python
+assert my_sqrt(4) == 2
+```
+
+Executing this line of code would produce no result this lets us know that the
+condition is true.
+
+Its important to also handle floating-point computations because of the
+rounding errors that they have to do this you will want to use an Epsilon value
+that you will have to call. Epsilon is a constant so you have to apply your own
+value to it. Epsilon will keep the values below a certain value to ensure
+equality between iterations.
+
+```python
+Epsilon = 1e-8
+```
+
+### Run-Time Verification
+
+There are many different ways to manually verify a program, but a more
+effective approach is to integrate the verification process into the program
+itself. Implementing an automatic run-time check will ensure that for every
+computation, the result is verified against the expected outcome.
+
+Uses of Run-Time Verification:
+
+* **Performance Monitoring**: Run-time verification can be used to monitor the
+performance of a program during execution, ensuring that it meets the required
+performance criteria. It also gives developers the immediate feedback they need
+to make adjustments to the program as necessary.
+
+* **Security**: Run-time verification can help detect security vulnerabilities
+in a program by checking for unexpected behavior or unauthorized access during
+execution. It will stop a program from running if it detects any security
+issues, preventing potential exploits.
+
+You may have to be careful of the assumptions that you make about the program's
+behavior, as run-time verification can only check for conditions that are
+explicitly defined. If a condition is not defined, it may not be checked,
+leading to potential errors or vulnerabilities being missed. Keep in mind of
+the cost that run-time verification can introduce, as it may slow down the
+execution of the program.
+
+### Question: Which of the following is a benefit of run-time verification?
+
+* [ ] It reduces the complexity of the program.
+* [ ] It can detect security vulnerabilities during execution.
+* [ ] It eliminates the need for testing.
+* [ ] It guarantees that the program will run without errors.
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!**
+It can detect security vulnerabilities during execution.
+
+</details>
+
+### System Input versus Function Input
+
+To begin with, it is important to understand the difference between function
+input and system input. Function input is the data that a function receives
+from another part of a program, where usually programmers know the function's
+aim and its requirements. For example, `my_sqrt(x)` is designed to work with
+non-negative numbers, so giving it a negative number would not follow the
+function's preconditions. System input comes from outside of a program, for
+example from a user, another file, a network, an API, and so on. It is not as
+safe or predictable as function input. Therefore, a program that work with
+system input should have input validation and error handling. A function
+usually has preconditions, and a system interface cannot assume that external
+users will follow them.
+
+In the example from *The Fuzzing Book*, the function `my_sqrt()` is used inside
+another program called `sqrt_program()`. This program accepts a string as
+external input and then converts it into an integer:
+
+```python
+def sqrt_program(arg: str) -> None:
+   x = int(arg)
+   print('The root of', x, 'is', my_sqrt(x))
+```
+
+If the user gives a normal input such as `"4"`, the program works as expected:
+
+```python
+sqrt_program("4")
+```
+
+and gives:
+
+```text
+The root of 4 is 2.0
+```
+
+However, the problem appears when the user gives an input that the function was
+not ready to work with. For example:
+
+```python
+sqrt_program("-1")
+```
+
+Our original `my_sqrt()` function does not properly handle negative numbers,
+and because of that it enters an infinite loop. To prevent this, the program
+can check the value before calling `my_sqrt()`:
+
+```python
+def sqrt_program(arg: str) -> None:
+   x = int(arg)
+   if x < 0:
+       print("Illegal Input")
+   else:
+       print('The root of', x, 'is', my_sqrt(x))
+```
+
+Now, if the user enters:
+
+```python
+sqrt_program("-1")
+```
+
+the program responds with:
+
+```text
+Illegal Input
+```
+
+instead of sending the negative number to `my_sqrt()`. However, this still does
+not solve every possible problem. For example, a user can also enter something
+like:
+
+```python
+sqrt_program("xyzzy")
+```
+
+The line:
+
+```python
+x = int(arg)
+```
+
+tries to convert `"xyzzy"` into an integer, which is impossible, so Python
+raises a `ValueError`. To avoid crashes, the program can use `try` and
+`except`:
+
+```python
+def sqrt_program(arg: str) -> None:
+   try:
+       x = float(arg)
+   except ValueError:
+       print("Illegal Input")
+   else:
+       if x < 0:
+           print("Illegal Number")
+       else:
+           print('The root of', x, 'is', my_sqrt(x))
+```
+
+Now the program can handle several different types of inputs:
+
+```python
+sqrt_program("4")
+```
+
+produces:
+
+```text
+The root of 4.0 is 2.0
+```
+
+while:
+
+```python
+sqrt_program("-1")
+```
+
+produces:
+
+```text
+Illegal Number
+```
+
+and:
+
+```python
+sqrt_program("xyzzy")
+```
+
+produces:
+
+```text
+Illegal Input
+```
+
+Programs that receive system input need to be prepared for unexpected values. The programmer cannot just assume that every user will enter the correct type of data. Since a system should be able to handle many different kinds of input without crashing or entering an uncontrolled state, we, as a software engineers, can intentionally send unusual or incorrect inputs to the program and see what happens. For instance, trying negative numbers as shows above, text instead of numbers, empty strings, or very large values and so on. The goal is to find inputs that can crash/break the program and then fix them. With function input, however, we usually need to know the function's preconditions before generating test values for it.
+
+### Limits of Testing
+
+Testing can find many bugs, but it cannot guarantee that a program is completely free of errors. There are too many possible inputs to test every single one.
+
+* Random testing may miss unusual or important inputs.
+* Some bugs only happen with specific values or conditions.
+* Run-time checks cannot guarantee that a program will always reach the result being checked.
+
+For example, the `my_sqrt()` function can fail when given `0`, even though it may work correctly with many other values.
+
+Because of these limitations, programmers should use different types of tests and carefully choose inputs that could cause problems. Testing increases confidence in software, but it does not prove that the program is perfect.
+
+## Quiz Check
+
+### Q1. Which of the following additions to the code will fix this error?
+
+```python
+...
+   def my_sqrt(x):
+       """Computes the square root of x, using the Newton-Raphson method"""
+       approx = None
+       guess = x / 2
+       while approx != guess:
+           approx = guess
+           guess = (approx + x / approx) / 2
+       return approx
+
+
+   def sqrt_program(arg: str) -> None:
+       x = int(arg)
+       print('The root of', x, 'is', my_sqrt(x))
+```
+
+```text
+Traceback (most recent call last):
+ File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_1231/1288144681.py", line 2, in <module>
+   sqrt_program("-1")
+ File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_1231/449782637.py", line 3, in sqrt_program
+   print('The root of', x, 'is', my_sqrt(x))
+                                 ^^^^^^^^^^
+ File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_1231/2661069967.py", line 5, in my_sqrt
+   while approx != guess:
+         ^^^^^^^^^^^^^^^
+ File "Timeout.ipynb", line 43, in timeout_handler
+   raise TimeoutError()
+TimeoutError (expected)
+```
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!**
+
+To fix the error in the `my_sqrt` function, you need to add a check for negative input values. The square root of a negative number is not defined in the realm of real numbers, and attempting to compute it will lead to an error. We can edit the `sqrt_program` function as follows:
+
+```python
+...
+   def sqrt_program(arg: str) -> None:
+       x = int(arg)
+       if x < 0:
+           print("Illegal Input")
+       else:
+           print('The root of', x, 'is', my_sqrt(x))
+```
+
+</details>
+
+### Q1.5: Which of the following will fix a string input error in the `sqrt_program` function?
+
+* [ ] Add a try-except block to catch `TypeError` exceptions when converting
+* [ ] Add a try-except block to catch `ValueError` exceptions when converting
+* [ ] Add a try-except block to catch `ZeroDivisionError` exceptions when converting
+* [ ] Add a try-except block to catch `IndexError` exceptions when converting
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!**
+Add a try-except block to catch `ValueError` exceptions when converting
+
+</details>
+
+## Reflection
+
+A few takeaways from this chapter include:
+
+* **Test Different Inputs**: Testing a program with different and unusual
+inputs can help find bugs that may not appear during normal use.
+
+* **Automate Testing**: Using assertions and automatically generated tests
+makes testing faster and easier to repeat.
+
+* **Validate Input**: Programs should use checks to validate external inputs
+and prevent errors and unexpected behavior.
+
+* **Understand the Limits**: Testing can improve confidence in a program, but
+it cannot guarantee that every possible bug has been found.
+
+Software testing is an important part of development because it helps us find
+problems early and make our programs more reliable. As such, our software
+engineering team should make sure that we always write test cases for all of
+the functions in our code.
+
+::: {.callout-note appearance="minimal" title="Detection of failures for Software Engineers" collapse="false"}
+
+Our team built `thetool`, a command-line tool to detect failures in code.
+You can view the project here: [thetool on
+GitHub](https://github.com/Aidana-Kuat/thetool).
+
+:::
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

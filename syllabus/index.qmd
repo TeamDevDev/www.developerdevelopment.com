@@ -102,26 +102,26 @@ team of learners.
 #### Module One Discussion Leads
 
 - **Week One**: Install development tools and explore projects
-- **Week Two**: TBA
-- **Week Three**: TBA
-- **Week Four**: TBA
-- **Week Five**: TBA
+- **Week Two**: Anshu, Dylan, V, Ritesh (SE1) — Kaitlyn, Katie, Aidana, Eyra (FB1)
+- **Week Three**: Logan, Eyra, Aidana (SE2) — Xander, Anshu (FB2)
+- **Week Four**: Jake, Aidana, Anshu (SE3) — Lukas, Johny (FB3)
+- **Week Five**: Mark, Benito, Rivan (SE4) — Logan, Abishek (FB4)
 - **Week Six**: In-person assessments and executable examination one
 
 #### Module Two Discussion Leads
 
-- **Week Seven**: TBA
-- **Week Eight**: TBA
-- **Week Nine**: TBA
-- **Week Ten**: TBA
+- **Week Seven**: Fall break, no presentations by learners
+- **Week Eight**: Katie, Ritesh, Kaitlyn (SE5) — Xander, Dylan (FB5)
+- **Week Nine**: Abishek, Eyra (SE6) — V, Logan (FB6)
+- **Week Ten**: Johny, Jake (SE7) — Mark, Benito, Rivan (FB7)
 - **Week Eleven**: In-person assessments and executable examination two
 
 #### Module Three Discussion Leads
 
-- **Week Twelve**: TBA
-- **Week Thirteen**: TBA
-- **Week Fourteen**: TBA
-- **Week Fifteen**: TBA
+- **Week Twelve**: Abishek, Johny, Lukas (SE8) — V, Kaitlyn (FB8)
+- **Week Thirteen**: Mark, Benito, Rivan (SE9) — Katie, Ritesh (FB9)
+- **Week Fourteen**: Thanksgiving break, no presentations by learners
+- **Week Fifteen**: Xander, Lukas (SE10) — Dylan, Jake (DB1)
 - **Week Sixteen**: Final examination week
 
 ### Reading Assignments

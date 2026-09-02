@@ -198,7 +198,7 @@ Programs that receive system input need to be prepared for unexpected values. Th
 
 ### Limits of Testing
 
-Testing can find many bugs, but it cannot guarantee that a program is completely free of errors.There are too many possible inputs to test every single one.
+Testing can find many bugs, but it cannot guarantee that a program is completely free of errors. There are too many possible inputs to test every single one.
 
 * Random testing may miss unusual or important inputs.
 * Some bugs only happen with specific values or conditions.

@@ -171,6 +171,8 @@ Coverage is not a substitute for a correct specification or a strong oracle, but
 
 The core idea is straightforward: if code is not executed, it cannot be validated. Coverage gives software engineers a practical way to discover where testing is weak and where unknown bugs may still be hiding.
 
+We created a simple coverage tool in Python called CoverLab that can be found at: https://github.com/pathakanshu/coverlab
+
 :::
 
 <!-- Include the license statement for the online book -->

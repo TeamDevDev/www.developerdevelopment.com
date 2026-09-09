@@ -73,39 +73,83 @@ them cheaper and easier to fix.
 
 ### Trade-offs and Costs
 
-The second main topic is about how engineers make decisions. In software engineering, there is usually no perfect choice, because different solutions have different advantages and disadvantages. Engineers need to compare these options and think about their costs. Cost does not only mean money. It can also include computing resources, engineer time, effort, opportunity cost, and even the possible effect of software on society. For example, Google talks about whiteboard markers. Buying many markers costs some money, but making employees waste time looking for working markers could cost even more. The same idea applies to software. Sometimes it is better to spend more money on better tools or computing resources if this saves engineers a lot of time.
+The second main topic is about how engineers make decisions. In software
+engineering, there is usually no perfect choice, because different solutions
+have different advantages and disadvantages. Engineers need to compare these
+options and think about their costs. Cost does not only mean money. It can also
+include computing resources, engineer time, effort, opportunity cost, and even
+the possible effect of software on society. For example, Google talks about
+whiteboard markers. Buying many markers costs some money, but making employees
+waste time looking for working markers could cost even more. The same idea
+applies to software. Sometimes it is better to spend more money on better tools
+or computing resources if this saves engineers a lot of time.
 
-Some costs are easy to measure, such as CPU usage, RAM, or money, while others are much harder to measure. For example, it can be difficult to calculate the quality of an API or the social impact of a product. Even if something cannot be measured exactly, engineers should still consider it when making decisions. Good decisions also should not be treated as permanent. New information can appear, situations can change, and a choice that seemed good before may no longer be the best one. Because of this, engineers should use evidence when making decisions, but they should also be ready to change their minds, review old decisions, and learn from mistakes.
+Some costs are easy to measure, such as CPU usage, RAM, or money, while others
+are much harder to measure. For example, it can be difficult to calculate the
+quality of an API or the social impact of a product. Even if something cannot
+be measured exactly, engineers should still consider it when making decisions.
+Good decisions also should not be treated as permanent. New information can
+appear, situations can change, and a choice that seemed good before may no
+longer be the best one. Because of this, engineers should use evidence when
+making decisions, but they should also be ready to change their minds, review
+old decisions, and learn from mistakes.
 
 ## Takeaways
 
-Looking back at everything covered in this reading it becomes clear that software engineering is not a more advanced or more technical version of programming. It is a different kind of problem entirely because programming is about writing code that works now and software engineering is about writing code that keeps working and keeps making sense and keeps being useful as time passes as the team grows and as the world around the code changes.
+Looking back at everything covered in this reading it becomes clear that
+software engineering is not a more advanced or more technical version of
+programming. It is a different kind of problem entirely because programming is
+about writing code that works now and software engineering is about writing
+code that keeps working and keeps making sense and keeps being useful as time
+passes as the team grows and as the world around the code changes.
 
-The reading shows that engineers can never fully control how their code will be used so they have to expect that even small changes might break something for somebody. Scale shows that solutions which work for a team can completely fall apart once a company grows, which is why automation, testing and shared expertise matter so much. Trade-offs show that there is rarely one answer in software engineering. Instead engineers have to weigh costs whether that is money, time, effort or even the impact on users and society and be willing to revisit decisions if the situation changes.
+The reading shows that engineers can never fully control how their code will be
+used so they have to expect that even small changes might break something for
+somebody. Scale shows that solutions which work for a team can completely fall
+apart once a company grows, which is why automation, testing and shared
+expertise matter so much. Trade-offs show that there is rarely one answer in
+software engineering. Instead engineers have to weigh costs whether that is
+money, time, effort or even the impact on users and society and be willing to
+revisit decisions if the situation changes.
 
-In the end the reading makes the case that good software engineering's not about avoiding change. It is about being ready for it. Sustainable software is software that can adapt when it needs to and sustainable engineering teams are the ones who plan for that of being caught off guard by it. That is really the heart of the difference, between programming and software engineering.
+In the end, the reading makes the case that good software engineering's not
+about avoiding change. It is about being ready for it. Sustainable software is
+software that can adapt when it needs to and sustainable engineering teams are
+the ones who plan for that of being caught off guard by it. That is really the
+heart of the difference, between programming and software engineering.
 
 **Why should engineers not think about cost only as money?**
+
 <details>
+
 <summary>Click to Expand for categories the book referenced</summary>
-Because engineering cost includes more than just money. It can also include engineer time, computing resources, effort, opportunity cost, and the possible impact on users or society. A solution that looks cheaper in dollars might actually cost more if it wastes a lot of time or creates more work later.
+
+  Because engineering cost includes more than just money. It can also include
+  engineer time, computing resources, effort, opportunity cost, and the
+  possible impact on users or society. A solution that looks cheaper in dollars
+  might actually cost more if it wastes a lot of time or creates more work
+  later.
 
 </details>
 
-Why can a process that works for a small software team fail when the organization becomes much larger?
+**Why can a process that works for a small software team fail when the
+organization becomes much larger?**
 
 <details>
 
 <summary>Click to Expand</summary>
 
-A process may work for a small team because only a few people need to perform it. But as the organization grows, repeating the same manual task across many teams can require too much time and effort. Software engineering tries to make these processes scalable through automation, testing, and shared tools so that the amount of work does not grow too quickly with the size of the organization.
+A process may work for a small team because only a few people need to perform
+it. But as the organization grows, repeating the same manual task across many
+teams can require too much time and effort. Software engineering tries to make
+these processes scalable through automation, testing, and shared tools so that
+the amount of work does not grow too quickly with the size of the organization.
 
 </details>
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our team built `ScaleSense`, a scaling review tool.
-You can view the project here: [ScaleSense on
-GitHub](https://github.com/loganbutler01/ScaleSense).
+Our team built `ScaleSense`, a scaling review tool. You can view the project
+here: [ScaleSense on GitHub](https://github.com/loganbutler01/ScaleSense).
 
 :::

@@ -153,3 +153,5 @@ Our team built `ScaleSense`, a scaling review tool. You can view the project
 here: [ScaleSense on GitHub](https://github.com/loganbutler01/ScaleSense).
 
 :::
+
+{{< include /_back-blog.qmd >}}

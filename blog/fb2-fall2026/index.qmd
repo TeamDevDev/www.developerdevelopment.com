@@ -1,0 +1,242 @@
+---
+author: [Alexander Goddard, Anshu Pathak, Gregory M. Kapfhammer]
+title: Understanding Code Coverage
+date: '2026-09-09'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>Understanding code coverage and its importance in software testing.</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This chapter introduces code coverage, a core idea in software testing that
+helps us measure how much of a program is actually executed during a test run.
+In the Fuzzing Book, coverage is not just a metric for reporting test quality;
+it is also a tool for guiding fuzzers toward inputs that reach new code paths.
+By understanding coverage, developers can write better tests, detect risky
+untested code, and improve the quality of their software.
+
+## Summary
+
+### What Is Code Coverage?
+
+Code coverage measures which parts of a program are executed when tests or
+fuzzing inputs run. If a line, branch, or function is never reached, then it is
+not being validated by the current test suite. A high coverage score suggests
+that more of the program has been exercised, but it does not guarantee that the
+program is correct.
+
+In the Fuzzing Book, the authors use coverage to answer a practical question:
+Are our tests reaching important behavior in the code, or are they only
+exercising a small subset of the program? This idea is especially useful in
+fuzzing, where the goal is to generate inputs that drive execution into new and
+potentially buggy paths.
+
+### Why Coverage Matters
+
+A program can appear to work for a few examples while still hiding serious
+problems in rarely used branches. Coverage helps expose this problem by telling
+us which code was reached and which code was skipped. For example, if an
+error-handling branch is never executed, then we cannot know whether that
+branch works as intended.
+
+Coverage is useful because it:
+
+* identifies untested code;
+* guides the creation of new test inputs;
+* measures how effective a test suite is;
+* helps guide automated fuzzing toward unexplored behavior.
+
+### Black-Box and White-Box Testing
+
+The Fuzzing Book distinguishes between black-box and white-box testing.
+
+* Black-box testing derives tests from the program specification. The tester
+knows what the program should do, not how it does it.
+* White-box testing derives tests from the implementation. The tester knows the
+structure of the code and writes inputs that exercise specific branches and
+statements.
+
+A simple example is a function called `cgi_decode()`, which decodes strings
+such as `"Hello+world"` and `"Hello%2c+world%21"`. A black-box tester would
+check the expected behavior of decoding plus signs and percent-encoded values.
+A white-box tester would look at the internal `if` and `while` statements and
+make sure each branch is covered.
+
+### Statement Coverage
+
+One common coverage metric is statement coverage. A statement is covered if it
+is executed at least once during testing. If a function contains a branch that
+is never reached, then the statements in that branch have zero coverage.
+
+For a function like `cgi_decode()`, we must cover the code blocks for:
+
+* `if c == '+'`
+* the valid `%xx` case;
+* the invalid `%xx` case;
+* the default `else` case.
+
+If any of these blocks are never executed, we may miss a bug in that path.
+
+### Branch Coverage
+
+Branch coverage is stricter than statement coverage. It requires that each
+control decision is exercised in both directions: true and false. In other
+words, a test suite must cover both outcomes of an `if` or `while` condition.
+
+This matters because a statement may be executed once while still leaving key
+decision branches untested. For example, only exercising the true branch of a
+condition does not tell us whether the false branch behaves correctly.
+
+### Tracing Execution
+
+In Python, coverage can be collected by tracing execution with
+`sys.settrace()`. A custom tracing function can record each executed line,
+along with its function name and line number. This is the foundation of
+coverage measurement in the Fuzzing Book.
+
+```python
+import sys
+from types import FrameType, TracebackType
+from typing import Any, Callable, Optional
+
+coverage = []
+
+def traceit(frame: FrameType, event: str, arg: Any) -> Optional[Callable]:
+    if event == 'line':
+        coverage.append((frame.f_code.co_name, frame.f_lineno))
+    return traceit
+
+
+def cgi_decode_traced(s: str) -> None:
+    global coverage
+    coverage = []
+    sys.settrace(traceit)
+    cgi_decode(s)
+    sys.settrace(None)
+```
+
+This produces a trace of every executed line, which can then be converted into
+a set of covered locations.
+
+### A Coverage Class
+
+The Fuzzing Book wraps this tracing logic in a `Coverage` class. The basic
+pattern is simple:
+
+```python
+with Coverage() as cov:
+    cgi_decode("a+b")
+
+print(cov.coverage())
+```
+
+The `Coverage()` object records every executed source location inside the
+`with` block. After execution, `coverage()` returns the set of covered
+locations. We can also print the object to see which lines were executed and
+which lines were not, with missed lines marked for attention.
+
+This turns coverage into a practical feedback loop:
+
+1. run a test or fuzzing input;
+2. collect the covered lines;
+3. compare against the target coverage goal;
+4. add or generate inputs to reach the uncovered code.
+
+### Coverage and Fuzzing
+
+Coverage is especially valuable for fuzzing, because fuzzing aims to generate
+inputs that explore new behaviors. A fuzzer that only produces random data may
+rarely reach certain branches. By measuring coverage, we can see whether the
+fuzzer is improving or whether it is repeatedly exercising the same code.
+
+This chapter shows that even with random inputs, coverage grows over time as
+more strings reach new branches. The same idea applies to many other testing
+methods: if a test generator is not covering code, it is probably missing bugs.
+
+### The Key Lesson
+
+Coverage does not prove correctness, but it is a very good approximation of how
+much of a program has been executed. It helps us answer questions such as:
+
+* Did our tests reach the error-handling path?
+* Did we cover both true and false branches?
+* Are our fuzzing inputs exploring new parts of the program?
+
+As the chapter notes, a program can have a large amount of input space and
+still contain bugs in paths that never appear in a simple test suite. Coverage
+gives us a way to focus our attention on those unexplored areas.
+
+## Quiz Check
+
+### Q1. What is the main purpose of code coverage?
+
+* [ ] To guarantee that a program is bug-free.
+* [ ] To measure which parts of a program were executed during testing.
+* [ ] To rewrite the code automatically.
+* [ ] To replace the need for assertions and debugging.
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!**
+Code coverage measures which parts of a program were executed during testing.
+
+</details>
+
+### Q2. Which of the following is a difference between black-box and white-box testing?
+
+* [ ] Black-box testing checks internal implementation details.
+* [ ] White-box testing derives tests from the implementation and structure of the code.
+* [ ] Black-box testing is only used for fuzzing.
+* [ ] White-box testing ignores runtime behavior.
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+**Answer!**
+White-box testing derives tests from the implementation and internal structure of the code.
+
+</details>
+
+## Reflection
+
+A few important takeaways from the code coverage chapter are:
+
+* Coverage tells us how much of the code has been executed.
+* Statement coverage checks whether each line runs at least once.
+* Branch coverage checks whether each decision has both true and false
+outcomes.
+* Tracing allows us to collect coverage automatically during execution.
+* Coverage is useful for fuzzing because it helps guide test generation toward
+unexplored branches.
+
+Coverage is not a substitute for a correct specification or a strong oracle,
+but it is an essential tool for finding gaps in testing. When used well, it
+helps developers focus on the paths most likely to contain defects and gives
+them a better sense of whether their test suite is actually exploring the
+program.
+
+::: {.callout-note appearance="minimal" title="Coverage and software engineering" collapse="false"}
+
+The core idea is straightforward: if code is not executed, it cannot be
+validated. Coverage gives software engineers a practical way to discover where
+testing is weak and where unknown bugs may still be hiding.
+
+:::
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `coverlab`, a command-line program that shows code coverage in
+action. You can view the project here: [CoverLab on
+GitHub](https://github.com/pathakanshu/coverlab).
+
+:::
+
+<!-- Include the license statement for the online book -->
+{{< include /_fuzzingbook-reference.qmd >}}
+
+<!-- Include reference back to the listing of blog posts -->
+{{< include /_back-blog.qmd >}}

@@ -165,11 +165,25 @@ A few important takeaways from the code coverage chapter are:
 * Tracing allows us to collect coverage automatically during execution.
 * Coverage is useful for fuzzing because it helps guide test generation toward unexplored branches.
 
-Coverage is not a substitute for a correct specification or a strong oracle, but it is an essential tool for finding gaps in testing. When used well, it helps developers focus on the paths most likely to contain defects and gives them a better sense of whether their test suite is actually exploring the program.
+Coverage is not a substitute for a correct specification or a strong oracle,
+but it is an essential tool for finding gaps in testing. When used well, it
+helps developers focus on the paths most likely to contain defects and gives
+them a better sense of whether their test suite is actually exploring the
+program.
 
 ::: {.callout-note appearance="minimal" title="Coverage and software engineering" collapse="false"}
 
-The core idea is straightforward: if code is not executed, it cannot be validated. Coverage gives software engineers a practical way to discover where testing is weak and where unknown bugs may still be hiding.
+The core idea is straightforward: if code is not executed, it cannot be
+validated. Coverage gives software engineers a practical way to discover where
+testing is weak and where unknown bugs may still be hiding.
+
+:::
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `coverlab`, a command-line program that shows code coverage in
+action. You can view the project here: [CoverLab on
+GitHub](https://github.com/pathakanshu/coverlab).
 
 :::
 

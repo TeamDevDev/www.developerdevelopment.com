@@ -207,9 +207,11 @@ A few important takeaways from the code coverage chapter are:
 
 * Coverage tells us how much of the code has been executed.
 * Statement coverage checks whether each line runs at least once.
-* Branch coverage checks whether each decision has both true and false outcomes.
+* Branch coverage checks whether each decision has both true and false
+outcomes.
 * Tracing allows us to collect coverage automatically during execution.
-* Coverage is useful for fuzzing because it helps guide test generation toward unexplored branches.
+* Coverage is useful for fuzzing because it helps guide test generation toward
+unexplored branches.
 
 Coverage is not a substitute for a correct specification or a strong oracle,
 but it is an essential tool for finding gaps in testing. When used well, it

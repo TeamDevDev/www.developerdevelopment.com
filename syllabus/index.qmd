@@ -62,6 +62,8 @@ that, by necessity, the meeting before yours may sometimes run late.
     - **Alternating assessments completed during the class session**:
       - *Every other week i*: complete an in-class programming skill-check
       - *Every other week i+1*: complete an in-class knowledge-check
+        - Complete a brief in-person assessment with the course instructor
+        - Complete an online form-based assessment on your laptop
 - **Collaborative Software Engineering**: Wednesday, 2:30 PM -- 4:00 PM, Alden 109
   - *Collaboratively implement and deploy into production a software tool*:
     - Sprint planning

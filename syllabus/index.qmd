@@ -445,15 +445,18 @@ knowledge-checks are in-class, online and in-person cumulative assessments
 covering all prior technical material from the course sessions, as outlined on
 the [course schedule](../schedule/index.qmd). Unless prior arrangements are
 made with the instructor, all students should use their computer to take these
-skill-checks on the scheduled date and to complete it in the stated location
-while taking no more than the required amount of time. Designed to prepare
-learners for the discussion of concepts during an in-person assessment, each
-knowledge-check involves the completion of an automatically scored online,
+knowledge-checks on the scheduled date and to complete it in the stated
+location while taking no more than the required amount of time. Designed to
+prepare learners for the discussion of concepts during an in-person assessment,
+each knowledge-check involves the completion of an automatically scored online,
 form-based assessment and a brief, in-person assessment completed interactively
 with the course instructor. Unless the instructor provides access to a
 computational device, the in-person assessments invite students to demonstrate
-their knowledge of software engineering without the aid of any external sources,
-including, but not limited to, software tools running on a student laptop.
+their knowledge of software engineering without the aid of any external
+sources, including, but not limited to, software tools running on a student
+laptop. With that said, students may use external sources, including artificial
+coding assistants, during the completion of the form-based component of the
+knowledge-check.
 
 - **Programming Skill-Checks**: The programming skill-checks are in-class online
 cumulative assessments covering all prior technical material from the course

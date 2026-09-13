@@ -1,0 +1,32 @@
+---
+author: [Anshu Pathak, Aidana Kuat, Jake, Gregory M. Kapfhammer]
+title: xyz 
+date: '2026-9-14'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>xyz</em>
+toc: true
+page-layout: full
+---
+
+## Aidana's Work
+
+
+
+
+
+## Jake's Work
+
+
+
+
+
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `xyz`, an abc. You can view the project
+here: [xyz on GitHub](https://github.com/pathakanshu/).
+
+:::
+
+{{< include /_back-blog.qmd >}}

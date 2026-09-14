@@ -1,5 +1,5 @@
 ---
-author: [Anshu Pathak, Aidana Kuat, Jake, Gregory M. Kapfhammer]
+author: [Anshu Pathak, Aidana Kuat, Jake McCallen, Gregory M. Kapfhammer]
 title: Why Teamwork Matters in Software Engineering
 date: '2026-9-14'
 date-format: long

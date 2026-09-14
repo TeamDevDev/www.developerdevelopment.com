@@ -85,8 +85,8 @@ Just be aware of the pros and cons of solo work, understand the time that you an
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our team built `xyz`, an abc. You can view the project
-here: [xyz on GitHub](https://github.com/pathakanshu/).
+Our team built `handoff`, a simple CLI for tracking project owners, backups, and runbooks. You can view the project
+here: [handoff on GitHub](https://github.com/pathakanshu/handoff).
 
 :::
 

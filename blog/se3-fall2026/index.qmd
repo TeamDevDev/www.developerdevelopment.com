@@ -1,6 +1,6 @@
 ---
 author: [Anshu Pathak, Aidana Kuat, Jake, Gregory M. Kapfhammer]
-title: xyz 
+title: The Three Pillars of Social Interaction
 date: '2026-9-14'
 date-format: long
 categories: [post, professional development, software engineering]
@@ -9,13 +9,27 @@ toc: true
 page-layout: full
 ---
 
-## Aidana's Work
+## Summary
+This article explains why teamwork is one of the most important parts of software engineering. It shows that being a good programmer is not enough because engineers also need to communicate, share ideas, and work well with others. Many programmers are afraid to show unfinished work because they worry about being judged or making mistakes. However, hiding work can slow down progress and prevent people from getting useful feedback. The article also challenges the “Genius Myth,” which is the idea that successful software is usually created by one brilliant person working alone. In reality, most successful software is created by teams that not only share knowledge, review each other’s work, but also solve problems together. Getting feedback early and making sure that more than one person understands the project can make development safer and faster. Thus, the author's main idea is that strong collaboration and trust are just as important as technical skills when building successful software.
 
+### Why Software Engineering Depends on Teamwork
+Software engineering is not something that people usually do successfully alone. Even though some programmers are remembered as “geniuses,” most successful software is created by many people working together. This is what the article calls the Genius Myth. People often connect Linux with Linus Torvalds or Python with Guido van Rossum, but both projects became successful because many developers contributed ideas, features, testing, and improvements. The article explains that technical ability alone is not enough. Engineers also need communication, teamwork, and social skills if they wanna build comthing sustainable. This changes the way we should think about a good software engineer. Someone can be extremely good at programming but still create problems for the team if they refuse to communicate or cooperate. The article shows that the success of a project depends not only on individual talent, but also on how well people work together.
 
+### Why Sharing Work Early Matters
 
+Programmers should not hide their work until it feels perfect. Many developers feel uncomfortable showing unfinished code because they are worried that other people will notice mistakes or judge their abilities. This feeling is normal, but working in complete isolation can create bigger problems later. The article gives an example of someone spending months developing an idea alone, only to discover that another person solved the same problem faster by working with others. This shows why early feedback is so useful. A teammate may notice a mistake in a few minutes that you could spend days trying to solve by yourself. It is also possible to spend a long time building something before realizing that the original idea was wrong.
 
+This idea is closely connected to shifting left. In software development, shifting left means moving important checks earlier in the development process instead of leaving them until the end. The article compares this to using a compiler. A programmer would not normally write 10,000 lines of code and compile everything only after finishing. Instead, they write a small part, compile it, fix any problems, and then continue. This creates a short feedback loop where mistakes can be found almost immediately.
 
-# The Three Pillars of Social Interaction
+### Building a Team That Can Succeed Together
+
+Working as a team also means that knowledge should not stay with only one person. Using the idea of the bus factor from the book, if only one engineer understands an important part of a project, the whole team may struggle if that person suddenly becomes unavailable. Someone could leave the company, move to another team, or simply be away for a long period of time. Because of this, teams need to make sure that important knowledge is shared. When people understand each other’s work, it becomes easier to continue the project and help someone who gets stuck. 
+
+The article also shows that the work environment can influence how easily this knowledge is shared. In the past, engineers were often given private offices because people believed that programmers needed complete silence to concentrate. Although quiet time is important, being separated from the rest of the team can create another problem. If asking a simple question means leaving your office, finding another person, or interrupting them formally, people may decide not to ask at all. Small questions can then turn into larger problems because communication does not happen naturally. At the same time, putting everyone into one large open office is not necessarily better. Constant conversations, movement, and noise can interrupt engineers when they are trying to solve difficult problems. Programming often requires deep concentration, and even a small interruption can make someone lose their train of thought. Because of this, the article argues that neither complete isolation nor constant communication is ideal. A better environment allows both focus and easy communication. Engineers should be able to work without unnecessary interruptions, but asking a teammate for help should also feel normal and simple. Some teams create signals to show when a person should not be disturbed. For example, wearing headphones may mean that someone is concentrating and should only be interrupted for something important. This allows people to protect their focus without completely separating themselves from the team.
+
+The larger point is that good teamwork requires a balance. Engineers sometimes need to work independently, but they should never become disconnected from the people around them. A strong team creates an environment where people can concentrate on their own tasks while still feeling comfortable asking questions, sharing knowledge, and helping each other when necessary.
+
+### The Three Pillars of Social Interaction
 
 Collaboration is built on the “3 pillars” of social skills that serve as a foundation for healthy interaction.
 - Humility
@@ -31,7 +45,7 @@ Performing a root-cause analysis on most social conflicts almost always reveals 
 
 Dealing with social problems can be difficult, but is incredibly useful when engaging in any work, as collaboration can lead to a more efficient workflow. Work groups will outlast any project, and can meet deadlines much faster than if each person would instead have done their own thing.
 
-Humility, Trust, and Respect in Practice
+### Humility, Trust, and Respect in Practice
 
 Being a proper team member may sound incredibly difficult, but when put into practice, is incredibly easy if broken down to the simplest levels.
 
@@ -43,7 +57,8 @@ Being a proper team member may sound incredibly difficult, but when put into pra
 
 
 
-# Blameless Post-Mortem Culture
+
+### Blameless Post-Mortem Culture
 
 Understanding failures can be made easier by performing a root-cause analysis and writing a “postmortem” (as is called at Google and other companies). Ensure that the report isn’t a list of apologies or excuses, and addresses what exactly failed and what has been learned.
 - A good postmortem should include:
@@ -55,7 +70,7 @@ Understanding failures can be made easier by performing a root-cause analysis an
     - A set of action items to prevent the event from reoccurring
     - Lessons learned
 
-## Being “Googley”
+### Being “Googley”
 
 “Googley” in this document is more so just a wide term for a set of attitudes and behaviors that represent strong leadership and exemplify humility, respect, and trust.
 - Thrives in ambiguity

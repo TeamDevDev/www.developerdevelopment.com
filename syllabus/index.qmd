@@ -632,20 +632,23 @@ token, no work will be accepted after the deadline.
 Students may "spend" up to three "developer development tokens" that they may
 use to secure seven calendar days of time to revise an already assessed project
 and subsequently request a reassessment of it and receive a new assessment
-score. You may use a token to request the reassessment of revised work that you
-completed as part of specific tasks in the professional development, technical
-development, or project development categories. For instance, you may choose to
-spend a token by asking the instructor to reevaluate one of the executive
-summaries that you posted to the Quarto-based web site. Outside of these three
-tokens, the instructor will not consider any additional requests for deadline
-extensions or project reassessment. Students may not request to use a token to
-re-assess their team participation, their work for a completed phase of a
-long-term software engineering project, or the final examination. However, they
-may apply tokens to the midterm examinations, the programming skill-checks, and
-the executive summaries. The instructor will submit to a student the assessment
-for work revised as part of token used at the end of a course module. Unless
-there are extenuating circumstances, you may not spend any tokens in the last
-two weeks of the semester.
+score. You may not use a token to request the reassessment of revised work that
+you completed as part of specific tasks in the professional development,
+technical development, or project development categories. For instance, you may
+not spend a token by asking the instructor to reevaluate one of the executive
+summaries (i.e., the blog posts) that you publish on the Quarto-based web site.
+Students also may not request to use a token to re-assess their team
+participation, their work for a completed phase of a long-term software
+engineering project, or the final examination. However, they may apply tokens
+to the midterm examinations, the programming skill-checks, and the knowledge
+checks. Outside of these three tokens, the instructor will not consider any
+additional requests for deadline extensions or project reassessment. The
+instructor will submit to a student the assessment for work revised as part of
+token used at the end of a course module. Unless there are extenuating
+circumstances, you may not spend any tokens in the last two weeks of the
+semester. Students will gain access to a GitHub repository that both enables
+them to receive assessments from the instructor while also sharing more details
+about the process for requesting the use of a token.
 
 ##### Assignment Evaluation
 

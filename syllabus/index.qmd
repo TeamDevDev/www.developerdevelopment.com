@@ -634,8 +634,8 @@ use to secure seven calendar days of time to revise an already assessed project
 and subsequently request a reassessment of it and receive a new assessment
 score. You may not use a token to request the reassessment of revised work that
 you completed as part of specific tasks in the professional development,
-technical development, or project development categories. For instance, you may
-not spend a token by asking the instructor to reevaluate one of the executive
+technical development, or project development categories. You also may not
+spend a token to ask the instructor to reevaluate one of the executive
 summaries (i.e., the blog posts) that you publish on the Quarto-based web site.
 Students also may not request to use a token to re-assess their team
 participation, their work for a completed phase of a long-term software

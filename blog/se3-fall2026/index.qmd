@@ -96,15 +96,12 @@ concentrating and should only be interrupted for something crucial.
 Collaboration is built on the “3 pillars” of social skills that serve as a
 foundation for healthy interaction.
 
-- Humility
-  - You are not the center of the universe, are not omniscient, and can make
-  mistakes. Be open to self improvement.
-- Respect
-  - Care about the people you work with, treat them kindly and appreciate their
-  contributions, abilities, and accomplishments.
-- Trust
-  - Believe that others are competent and will do the right thing and have
-  faith that they will be able to handle themselves.
+- **Humility**: You are not the center of the universe, are not omniscient, and
+can make mistakes. Be open to self improvement.
+- **Respect**: Care about the people you work with, treat them kindly and
+appreciate their contributions, abilities, and accomplishments.
+- **Trust**: Believe that others are competent and will do the right thing and
+have faith that they will be able to handle themselves.
 
 Performing a root-cause analysis on most social conflicts almost always reveals
 a lack of one of the three at the most basic level.

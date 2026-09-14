@@ -15,7 +15,63 @@ page-layout: full
 
 
 
-## Jake's Work
+# The Three Pillars of Social Interaction
+
+Collaboration is built on the “3 pillars” of social skills that serve as a foundation for healthy interaction.
+- Humility
+    - You are not the center of the universe, are not omniscient, and can make mistakes. Be open to self improvement.
+- Respect
+    - Care about the people you work with, treat them kindly and appreciate their contributions, abilities, and accomplishments.
+- Trust
+    - Believe that others are competent and will do the right thing and have faith that they will be able to handle themselves.
+
+Performing a root-cause analysis on most social conflicts almost always reveals a lack of one of the three at the most basic level.
+
+## Why Do These Pillars Matter?
+
+Dealing with social problems can be difficult, but is incredibly useful when engaging in any work, as collaboration can lead to a more efficient workflow. Work groups will outlast any project, and can meet deadlines much faster than if each person would instead have done their own thing.
+
+Humility, Trust, and Respect in Practice
+
+Being a proper team member may sound incredibly difficult, but when put into practice, is incredibly easy if broken down to the simplest levels.
+
+- Relax /Lose your ego
+- Give AND TAKE criticism
+- Fail fast, iterate, and improve
+- Learn proper patience
+- Be open to influence
+
+
+
+# Blameless Post-Mortem Culture
+
+Understanding failures can be made easier by performing a root-cause analysis and writing a “postmortem” (as is called at Google and other companies). Ensure that the report isn’t a list of apologies or excuses, and addresses what exactly failed and what has been learned.
+- A good postmortem should include:
+    - An event summary
+    - Timeline of the event
+    - The cause of the event
+    - Impact/damage assessment
+    - A list of action items and owners to fix the problem
+    - A set of action items to prevent the event from reoccurring
+    - Lessons learned
+
+## Being “Googley”
+
+“Googley” in this document is more so just a wide term for a set of attitudes and behaviors that represent strong leadership and exemplify humility, respect, and trust.
+- Thrives in ambiguity
+    - Can deal with conflicting requests and directions even when the environment is constantly shifting.
+- Values feedback
+    - Can receive and give feedback gracefully and understands the value of that feedback.
+- Challenges the status quo
+    - Can set ambitious goals and pursue them even when there may be resistance or inertia from others
+- Puts the user first
+    - Has empathy and respect for the users of products.
+- Cares about the team
+    - Has empathy and respect for coworkers.
+
+
+## TLDRs
+Just be aware of the pros and cons of solo work, understand the time that you and your team spend communicating and in conflict. Working effectively with a team or large organization requires being aware of your and their preferred working styles.
 
 
 

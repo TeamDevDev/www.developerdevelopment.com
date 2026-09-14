@@ -1,10 +1,10 @@
 ---
 author: [Anshu Pathak, Aidana Kuat, Jake, Gregory M. Kapfhammer]
-title: The Three Pillars of Social Interaction
+title: Why Teamwork Matters in Software Engineering
 date: '2026-9-14'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>xyz</em>
+description: <em>This article explores why teamwork is essential in software engineering and how collaboration can improve the quality of a project. It discusses the importance of sharing work early, getting feedback, avoiding the “Genius Myth,” and creating a team environment where knowledge and responsibility are shared.</em>
 toc: true
 page-layout: full
 ---
@@ -13,21 +13,18 @@ page-layout: full
 This article explains why teamwork is one of the most important parts of software engineering. It shows that being a good programmer is not enough because engineers also need to communicate, share ideas, and work well with others. Many programmers are afraid to show unfinished work because they worry about being judged or making mistakes. However, hiding work can slow down progress and prevent people from getting useful feedback. The article also challenges the “Genius Myth,” which is the idea that successful software is usually created by one brilliant person working alone. In reality, most successful software is created by teams that not only share knowledge, review each other’s work, but also solve problems together. Getting feedback early and making sure that more than one person understands the project can make development safer and faster. Thus, the author's main idea is that strong collaboration and trust are just as important as technical skills when building successful software.
 
 ### Why Software Engineering Depends on Teamwork
-Software engineering is not something that people usually do successfully alone. Even though some programmers are remembered as “geniuses,” most successful software is created by many people working together. This is what the article calls the Genius Myth. People often connect Linux with Linus Torvalds or Python with Guido van Rossum, but both projects became successful because many developers contributed ideas, features, testing, and improvements. The article explains that technical ability alone is not enough. Engineers also need communication, teamwork, and social skills if they wanna build comthing sustainable. This changes the way we should think about a good software engineer. Someone can be extremely good at programming but still create problems for the team if they refuse to communicate or cooperate. The article shows that the success of a project depends not only on individual talent, but also on how well people work together.
+Software engineering is not something that people usually do successfully alone. Even though some programmers are remembered as “geniuses,” most successful software is created by many people working together. This is what the author calls the Genius Myth. People often connect Linux with Linus Torvalds or Python with Guido van Rossum, but both projects became successful because many developers contributed ideas, features, testing, and improvements. According to the author technical ability alone is not the most important part of creating a successful project; we should not give one person credit for the achievement of an entire team or community. Engineers also need communication, teamwork, and social skills to build successful software. This changes the way we should think about a good software engineer. Someone can be extremely good at programming but still create problems for the team if they refuse to communicate or cooperate.
 
 ### Why Sharing Work Early Matters
+Programmers should avoid hiding their work until it feels perfect for them. Many developers often eel uncomfortable showing unfinished code because they are worried that other people will notice mistakes or judge their abilities. This feeling is normal, however working in complete isolation can create bigger problems later. The article provides an example of someone spending months developing an idea alone, only to discover that another person solved the same problem faster by working with others. Therefore, an early feedback is extremely important. A teammate may notice a mistake in a few minutes that you could spend days trying to solve by yourself. 
 
-Programmers should not hide their work until it feels perfect. Many developers feel uncomfortable showing unfinished code because they are worried that other people will notice mistakes or judge their abilities. This feeling is normal, but working in complete isolation can create bigger problems later. The article gives an example of someone spending months developing an idea alone, only to discover that another person solved the same problem faster by working with others. This shows why early feedback is so useful. A teammate may notice a mistake in a few minutes that you could spend days trying to solve by yourself. It is also possible to spend a long time building something before realizing that the original idea was wrong.
-
-This idea is closely connected to shifting left. In software development, shifting left means moving important checks earlier in the development process instead of leaving them until the end. The article compares this to using a compiler. A programmer would not normally write 10,000 lines of code and compile everything only after finishing. Instead, they write a small part, compile it, fix any problems, and then continue. This creates a short feedback loop where mistakes can be found almost immediately.
+This idea is closely connected to shifting left. In software development, shifting left means moving important checks earlier in the development process instead of leaving them until the end. For instance, when using a compiler, a programmer would not normally write 10,000 lines of code and compile everything only after finishing. Instead, they would write a small part, compile it, fix any problems, and only then continue. This creates a short feedback loop where mistakes can be found almost immediately.
 
 ### Building a Team That Can Succeed Together
 
 Working as a team also means that knowledge should not stay with only one person. Using the idea of the bus factor from the book, if only one engineer understands an important part of a project, the whole team may struggle if that person suddenly becomes unavailable. Someone could leave the company, move to another team, or simply be away for a long period of time. Because of this, teams need to make sure that important knowledge is shared. When people understand each other’s work, it becomes easier to continue the project and help someone who gets stuck. 
 
-The article also shows that the work environment can influence how easily this knowledge is shared. In the past, engineers were often given private offices because people believed that programmers needed complete silence to concentrate. Although quiet time is important, being separated from the rest of the team can create another problem. If asking a simple question means leaving your office, finding another person, or interrupting them formally, people may decide not to ask at all. Small questions can then turn into larger problems because communication does not happen naturally. At the same time, putting everyone into one large open office is not necessarily better. Constant conversations, movement, and noise can interrupt engineers when they are trying to solve difficult problems. Programming often requires deep concentration, and even a small interruption can make someone lose their train of thought. Because of this, the article argues that neither complete isolation nor constant communication is ideal. A better environment allows both focus and easy communication. Engineers should be able to work without unnecessary interruptions, but asking a teammate for help should also feel normal and simple. Some teams create signals to show when a person should not be disturbed. For example, wearing headphones may mean that someone is concentrating and should only be interrupted for something important. This allows people to protect their focus without completely separating themselves from the team.
-
-The larger point is that good teamwork requires a balance. Engineers sometimes need to work independently, but they should never become disconnected from the people around them. A strong team creates an environment where people can concentrate on their own tasks while still feeling comfortable asking questions, sharing knowledge, and helping each other when necessary.
+The article also shows that the work environment can influence how easily this knowledge is shared. In the past, engineers were often given private offices because people believed that programmers needed complete silence to concentrate. Although quiet time is important, being separated from the rest of the team can create another problem. If asking a simple question means leaving your office, finding another person, or interrupting them formally, people may decide not to ask at all. Small questions can then turn into larger problems because communication does not happen naturally. At the same time, putting everyone into one large open office is not necessarily better. Constant conversations and movements can interrupt engineers when they are trying to solve difficult problems. Because of this, the article argues that neither complete isolation nor constant communication is ideal. A better environment allows both focus and easy communication. Engineers should be able to work without unnecessary interruptions, but asking a teammate for help should also feel normal and simple. Some teams create signals to show when a person should not be disturbed. For example, wearing headphones may mean that someone is concentrating and should only be interrupted for something crucial. 
 
 ### The Three Pillars of Social Interaction
 
@@ -41,7 +38,7 @@ Collaboration is built on the “3 pillars” of social skills that serve as a f
 
 Performing a root-cause analysis on most social conflicts almost always reveals a lack of one of the three at the most basic level.
 
-## Why Do These Pillars Matter?
+### Why Do These Pillars Matter?
 
 Dealing with social problems can be difficult, but is incredibly useful when engaging in any work, as collaboration can lead to a more efficient workflow. Work groups will outlast any project, and can meet deadlines much faster than if each person would instead have done their own thing.
 
@@ -54,9 +51,6 @@ Being a proper team member may sound incredibly difficult, but when put into pra
 - Fail fast, iterate, and improve
 - Learn proper patience
 - Be open to influence
-
-
-
 
 ### Blameless Post-Mortem Culture
 
@@ -87,10 +81,6 @@ Understanding failures can be made easier by performing a root-cause analysis an
 
 ## TLDRs
 Just be aware of the pros and cons of solo work, understand the time that you and your team spend communicating and in conflict. Working effectively with a team or large organization requires being aware of your and their preferred working styles.
-
-
-
-
 
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}

@@ -233,6 +233,8 @@ Our team built `coverlab`, a command-line program that shows code coverage in
 action. You can view the project here: [CoverLab on
 GitHub](https://github.com/pathakanshu/coverlab).
 
+We created a simple coverage tool in Python called CoverLab that can be found at: https://github.com/pathakanshu/coverlab
+
 :::
 
 <!-- Include the license statement for the online book -->

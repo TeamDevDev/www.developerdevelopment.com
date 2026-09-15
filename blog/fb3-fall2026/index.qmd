@@ -9,14 +9,30 @@ toc: true
 page-layout: full
 ---
 
-## Overiew
+## Overview
 
 ## Summary
 
 ### What is Fuzzing?
 #### Fuzzers
-`Fuzzer` is a base class for fuzzers, with RandomFuzzer as a simple instantiation. The fuzz() method of Fuzzer objects and returns a string with a generated input.
+`Fuzzer` is a base class for fuzzers, with `RandomFuzzer` as a simple instantiation. The `fuzz()` method of `Fuzzer` objects and returns a string with a generated input.
 
-`>>> random_fuzzer = RandomFuzzer()`
-`>>> random_fuzzer.fuzz()`
-`%$<1&<%+=!"83?+)9:++9138 42/ "7;0-,)06 "1(2;6>?99$%7!!*#96=>2&-/(5*)=$;0$$+;<12"?30&`
+```python
+>>> random_fuzzer = RandomFuzzer()
+>>> random_fuzzer.fuzz()
+```
+
+Output: `%$<1&<%+=!"83?+)9:++9138 42/ "7;0-,)06 "1(2;6>?99$%7!!*#96=>2&-/(5*)=$;0$$+;<12"?30&`
+
+The `RandomFuzzer` constructor allows a number of keyword arguments:
+
+```python
+>>> print(RandomFuzzer.__init__.__doc__)
+Produce strings of `min_length` to `max_length` characters
+           in the range [`char_start`, `char_start` + `char_range`)
+
+>>> random_fuzzer = RandomFuzzer(min_length=10, max_length=20, char_start=65, char_range=26)
+>>> random_fuzzer.fuzz()
+```
+
+Output: `'XGZVDDPZOOW'`

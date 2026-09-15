@@ -1,0 +1,10 @@
+---
+author: [Lukas Deemer, Johnny Sharsheev, Gregory M. Kapfhammer]
+title: Fuzzing: Breaking Things with Random Inputs
+date: '2026-09-09'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>Why fuzzing is important for software testing.</em>
+toc: true
+page-layout: full
+---

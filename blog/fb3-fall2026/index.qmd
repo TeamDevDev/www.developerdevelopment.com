@@ -51,3 +51,18 @@ A `Fuzzer` can be paired with a `Runner` which takes the fuzzed strings as input
 
 Outcome: `('EQYGAXPTVPJGTYHXFJ', 'UNRESOLVED')`
 
+A `ProgramRunner` will feed the generated input into an external program. Its result is a pair of the program status (a `CompletedProcess` instance) and an *outcome* (`PASS`, `FAIL` or `UNRESOLVED`):
+
+```python
+>>> cat = ProgramRunner('cat')
+>>> random_fuzzer.run(cat)
+```
+
+Outcome: `(CompletedProcess(args='cat', returncode=0, stdout='BZOQTXFBTEOVYX', stderr=''),
+ 'PASS')`
+
+ ![Runners](Runners.png)
+
+ ### A Testing Assignment
+
+ 

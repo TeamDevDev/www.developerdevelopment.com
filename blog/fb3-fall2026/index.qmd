@@ -65,4 +65,52 @@ Outcome: `(CompletedProcess(args='cat', returncode=0, stdout='BZOQTXFBTEOVYX', s
 
  ### A Testing Assignment
 
- 
+
+### Catching Errors
+
+Fuzzing also needs checks for failures that do not cause obvious crashes.
+
+#### Generic Checkers
+
+Generic checkers detect common problems. For example, AddressSanitizer detects invalid memory accesses in C and C++ programs. Outputs can also be checked for leaked secret information.
+
+#### Program-Specific Checkers
+
+Program-specific checkers use assertions to verify rules about a program's data or results. The chapter's [airport-code example](https://www.fuzzingbook.org/html/Fuzzer.html#Program-Specific-Checkers) checks for three uppercase letters. Here is a simplified version:
+
+```{python}
+def check_airport_code(code):
+    assert len(code) == 3, "Expected three characters"
+    assert all(c.isalpha() and c.isupper() for c in code), "Expected uppercase letters"
+
+for code in ["JFK", "jfK"]:
+    try:
+        check_airport_code(code)
+        print(code, "PASS")
+    except AssertionError as error:
+        print(code, "FAIL:", error)
+```
+
+`JFK` passes both checks. `jfK` fails because it contains lowercase letters.
+
+#### Static Code Checkers
+
+Static checkers inspect code without running it. For example, mypy can detect type mismatches, but it cannot check every program-specific rule.
+
+### A Fuzzing Architecture
+
+The classes introduced above separate two responsibilities: `Fuzzer` creates inputs, and `Runner` handles them and classifies the results.
+
+`run()` sends one generated input to a runner, while `runs()` repeats the process. This separation lets us reuse a generator with different targets.
+
+A runner reports `PASS`, `FAIL`, or `UNRESOLVED`. Passing means its checks found no failure; it does not prove correctness. `UNRESOLVED` means the runner could not judge the result.
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `FuzzerCheck`, a Python command-line tool that demonstrates random fuzzing using two examples adapted from the chapter. It generates inputs, reports passing and failing trials, and displays sample failing inputs.
+
+You can view the project here: [FuzzerCheck on GitHub](https://github.com/Jsharsh33v/fuzzercheck).
+
+:::
+
+{{< include /_back-blog.qmd >}}

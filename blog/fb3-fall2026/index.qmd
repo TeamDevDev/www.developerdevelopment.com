@@ -28,11 +28,26 @@ The `RandomFuzzer` constructor allows a number of keyword arguments:
 
 ```python
 >>> print(RandomFuzzer.__init__.__doc__)
-Produce strings of `min_length` to `max_length` characters
-           in the range [`char_start`, `char_start` + `char_range`)
+```
 
+Output: Produce strings of `min_length` to `max_length` characters in the range [`char_start`, `char_start` + `char_range`)
+
+```python
 >>> random_fuzzer = RandomFuzzer(min_length=10, max_length=20, char_start=65, char_range=26)
 >>> random_fuzzer.fuzz()
 ```
 
 Output: `'XGZVDDPZOOW'`
+
+![Fuzzer & Random Fuzzer](Fuzzer&RandomFuzzer.png)
+
+#### Runners
+A `Fuzzer` can be paired with a `Runner` which takes the fuzzed strings as input. Its result is a class-specific *status* and an *outcome* (`PASS`, `FAIL`, or `UNRESOLVED`). A `PrintRunner` will simply print out the given input and return a `PASS` outcome:
+
+```python
+>>> print_runner = PrintRunner()
+>>> random_fuzzer.run(print_runner)
+```
+
+Outcome: `('EQYGAXPTVPJGTYHXFJ', 'UNRESOLVED')`
+

@@ -11,11 +11,13 @@ page-layout: full
 
 ## Overview
 
-## Summary
-
 ### What is Fuzzing?
+
 #### Fuzzers
-`Fuzzer` is a base class for fuzzers, with `RandomFuzzer` as a simple instantiation. The `fuzz()` method of `Fuzzer` objects and returns a string with a generated input.
+
+`Fuzzer` is a base class for fuzzers, with `RandomFuzzer` as a simple
+instantiation. The `fuzz()` method of `Fuzzer` objects and returns a string
+with a generated input.
 
 ```python
 >>> random_fuzzer = RandomFuzzer()
@@ -30,7 +32,8 @@ The `RandomFuzzer` constructor allows a number of keyword arguments:
 >>> print(RandomFuzzer.__init__.__doc__)
 ```
 
-Output: Produce strings of `min_length` to `max_length` characters in the range [`char_start`, `char_start` + `char_range`)
+Output: Produce strings of `min_length` to `max_length` characters in the range
+[`char_start`, `char_start` + `char_range`)
 
 ```python
 >>> random_fuzzer = RandomFuzzer(min_length=10, max_length=20, char_start=65, char_range=26)
@@ -42,6 +45,7 @@ Output: `'XGZVDDPZOOW'`
 ![Fuzzer & Random Fuzzer](Fuzzer&RandomFuzzer.png)
 
 #### Runners
+
 A `Fuzzer` can be paired with a `Runner` which takes the fuzzed strings as input. Its result is a class-specific *status* and an *outcome* (`PASS`, `FAIL`, or `UNRESOLVED`). A `PrintRunner` will simply print out the given input and return a `PASS` outcome:
 
 ```python
@@ -63,7 +67,7 @@ Outcome: `(CompletedProcess(args='cat', returncode=0, stdout='BZOQTXFBTEOVYX', s
 
  ![Runners](Runners.png)
 
- ### A Testing Assignment
+### A Testing Assignment
 
 Fuzzing was created in the Fall of 1988. While sitting in his apartment in Wisconsin, Madison, professor Barton Miller was connected to his university computer via a 1200 baud telephone line. The thunderstorm caused noise on the line, and this noise in turn caused the UNIX commands on either end to get bad inputs and crash. He wanted to investigate the extent of the problem and its causes. So he made a *programming exerise* for his students at the University of Wisconsin-Madison. This exercise would have his students create the first fuzzers.
 
@@ -120,6 +124,7 @@ Output: `zskscocrxllosagkvaszlngpysurezehvcqcghygphnhonehczraznkibltfmocxddoxcmr
 Let's invoke an external program with fuzzed inputs. First, we create an *input file* with fuzzed test data; then we feed this input file into a program of choice.
 
 #### Creating Input Files
+
 ```python
 basename = "input.txt"
 tempdir = tempfile.mkdtemp()
@@ -277,6 +282,7 @@ The classes introduced above separate two responsibilities: `Fuzzer` creates inp
 A runner reports `PASS`, `FAIL`, or `UNRESOLVED`. Passing means its checks found no failure; it does not prove correctness. `UNRESOLVED` means the runner could not judge the result.
 
 ### Lessons Learned
+
 - Randomly generating inputs ("fuzzing") is a simple, cost-effective way to quickly test arbitrary programs for their robustness.
 - Bugs fuzzers find are mainly due to errors and deficiencies in *input processing*.
 - To catch errors, have as many *consistency checkers* as possible.

@@ -276,13 +276,12 @@ amount of time, printing an error message.
 
 #### Rogue Numbers
 
-When fuzzing, it is very, very easy to generate **uncommon values** in the
-input, which can lead to a load of interesting behavior. The value could exceed
-program memory, lead to a crash, or an array of other unexpected outcomes.
+When fuzzing, it is easy to generate **uncommon values** in the input, which
+can lead to a load of interesting behavior. The value could exceed program
+memory, lead to a crash, or an array of other unexpected outcomes.
 
-It is important to utilize these rogue numbers because it is much better to
-quickly fail the program than to allow it to destroy something later down the
-line.
+It is important to use these rogue numbers because it is much better to quickly
+fail the program than to allow it to destroy something later down the line.
 
 ### Catching Errors
 

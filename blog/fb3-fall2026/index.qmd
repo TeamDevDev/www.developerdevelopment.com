@@ -65,7 +65,55 @@ Outcome: `(CompletedProcess(args='cat', returncode=0, stdout='BZOQTXFBTEOVYX', s
 
  ### A Testing Assignment
 
+Fuzzing was created in the Fall of 1988. While sitting in his apartment in Wisconsin, Madison, professor Barton Miller was connected to his university computer via a 1200 baud telephone line. The thunderstorm caused noise on the line, and this noise in turn caused the UNIX commands on either end to get bad inputs and crash. He wanted to investigate the extent of the problem and its causes. So he made a *programming exerise* for his students at the University of Wisconsin-Madison. This exercise would have his students create the first fuzzers.
 
+This is how the [assignment](https://pages.cs.wisc.edu/~bart/fuzz/CS736-Projects-f1988.pdf) read:
+
+>The goal of this project is to evaluate the robustness of various UNIX utility programs, given an unpredictable input stream. [...] First, you will build a fuzz generator. This is a program that will output a random character stream. Second, you will take the fuzz generator and use it to attack as many UNIX utilities as possible, with the goal of trying to break them.
+
+This assignment captures the essence of fuzzing: *Create random inputs, and see if they break things*. Just let it run long enough, and you'll see.
+
+### A Simple Fuzzer
+
+Let's build a fuzz generator. The idea is to produce random characters, adding them to a buffer string variable (out), and finally returning the string.
+
+This implementation uses the following Python features and functions:
+
+- `random.randrange(start, end)` - return a random number [`start`, `end`)
+- `range(start, end)` – create an iterator (which can be used as a list) with integers in the range [`start, end`).
+- `for elem in list: body` – execute body in a loop with `elem` taking each value from `list`.
+- `for i in range(start, end): body` – execute body in a loop with `i` from `start` to `end` — 1.
+- `chr(n)` – return a character with ASCII code `n`
+
+Here is the actual `fuzzer()` function:
+
+```python
+def fuzzer(max_length: int = 100, char-start: int = 32, char_range: int = 32) -> str:
+    """A string of up to `max_length` characters in the range [`char_start`, `char_start` + `char_range`]"""
+    string_length = random.randrange(0, max_length + 1)
+    out = ""
+    for i in range(0, string_length):
+        out += chr(random.randrange(char_start, char_start + char_range))
+    return out
+```
+
+With its default arguments, the `fuzzer()` function returns a string of random characters:
+
+```python
+fuzzer()
+```
+
+Output: `!7#%"*#0=)$;%6*;>638:*>80"=</>(/*:-(2<4 !:5*6856&?""11<7+%<%7,4.8,*+&,,$,."`
+
+Bart Miller had created the term "fuzz" as the name for such random, unstructured data.
+
+It is also possible to produce a series of lowercase letters. We use `ord(c)` to return the ASCII code of the character c.
+
+```python
+fuzzer(1000, ord('a'), 26)
+```
+
+Output: `zskscocrxllosagkvaszlngpysurezehvcqcghygphnhonehczraznkibltfmocxddoxcmrvatcleysksodzlwmzdndoxrjfqigjhqjxkblyrtoaydlwwisrvxtxsejhfbnforvlfisojqaktcxpmjqsfsycisoexjctydzxzzutukdztxvdpqbjuqmsectwjvylvbixzfmqiabdnihqagsvlyxwxxconminadcaqjdzcnzfjlwccyudmdfceiepwvyggepjxoeqaqbjzvmjdlebxqvehkmlevoofjlilegieeihmetjappbisqgrjhglzgffqrdqcwfmmwqecxlqfpvgtvcddvmwkplmwadgiyckrfjddxnegvmxravaunzwhpfpyzuyyavwwtgykwfszasvlbwojetvcygectelwkputfczgsfsbclnkzzcjfywitooygjwqujseflqyvqgyzpvknddzemkegrjjrshbouqxcmixnqhgsgdwgzwzmgzfajymbcfezqxndbmzwnxjeevgtpjtcwgbzptozflrwvuopohbvpmpaifnyyfvbzzdsdlznusarkmmtazptbjbqdkrsnrpgdffemnpehoapiiudokczwrvpsonybfpaeyorrgjdmgvkvupdtkrequicexqkoikygepawmwsdcrhivoegynnhodfhryeqbebtbqnwhogdfrsrksntqjbocvislhgrgchkhpaiugpbdygwkhrtyniufabdnqhtnwreiascfvmuhettfpbowbjadfxnbtzhobnxsnf`
 ### Catching Errors
 
 Fuzzing also needs checks for failures that do not cause obvious crashes.

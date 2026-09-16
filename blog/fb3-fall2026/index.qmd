@@ -276,6 +276,11 @@ The classes introduced above separate two responsibilities: `Fuzzer` creates inp
 
 A runner reports `PASS`, `FAIL`, or `UNRESOLVED`. Passing means its checks found no failure; it does not prove correctness. `UNRESOLVED` means the runner could not judge the result.
 
+### Lessons Learned
+- Randomly generating inputs ("fuzzing") is a simple, cost-effective way to quickly test arbitrary programs for their robustness.
+- Bugs fuzzers find are mainly due to errors and deficiencies in *input processing*.
+- To catch errors, have as many *consistency checkers* as possible.
+
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
 Our team built `FuzzerCheck`, a Python command-line tool that demonstrates random fuzzing using two examples adapted from the chapter. It generates inputs, reports passing and failing trials, and displays sample failing inputs.
@@ -283,5 +288,7 @@ Our team built `FuzzerCheck`, a Python command-line tool that demonstrates rando
 You can view the project here: [FuzzerCheck on GitHub](https://github.com/Jsharsh33v/fuzzercheck).
 
 :::
+
+{{< include /_fuzzingbook-reference.qmd >}}
 
 {{< include /_back-blog.qmd >}}

@@ -1,5 +1,5 @@
 ---
-author: [Lukas Deemer, Johnny Sharsheev, Gregory M. Kapfhammer]
+author: [Lukas Deemer, Johnny Sharsheev]
 title: Fuzzing — Breaking Things with Random Inputs
 date: '2026-09-09'
 date-format: long

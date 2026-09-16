@@ -1,7 +1,7 @@
 ---
 author: [Lukas Deemer, Johnny Sharsheev]
 title: Fuzzing — Breaking Things with Random Inputs
-date: '2026-09-09'
+date: '2026-09-16'
 date-format: long
 categories: [post, software engineering, fuzzing book]
 description: <em>Why fuzzing is important for software testing.</em>

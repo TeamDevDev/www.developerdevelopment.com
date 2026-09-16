@@ -192,6 +192,50 @@ Output: `''`
 
 Any program is able to go through this process, however, you should be careful as you could change or even damage your system.
 
+### Bug Fuzzers Find
+
+When Miller and his students ran their first fuzzers in 1989, they found an alarming result: About **A third of the UNIX utilities** they fuzzed had issues - they crashed, hung, or otherwise failed when confronted with fuzzing input. This also included the `bc` program above.
+
+Because many of these UNIX utilities were used in scripts that would also process network input, this was a potential hazard, one which need fuzzers to fix.
+
+#### Buffer Overflows
+
+**Buffer overflows** are triggered when going over a program's built-in maximum lengths for inputs and input elements.
+
+Buffer overflow behavior can be easily simulated in a Python function:
+
+```Python
+def crash_if_too_long(s):
+    buffer = "Thursday"
+    if len(s) > len(buffer):
+        raise ValueError
+```
+
+This leads to a crash very quickly.
+
+```Python
+trials = 100
+with ExpectError():
+    for i in range(trials):
+        s = fuzzer()
+        crash_if_too_long(s)
+```
+
+Output: `Traceback (most recent call last): File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_1932/292568387.py", line 5, in <module> crash_if_too_long(s) File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_1932/2784561514.py", line 4, in crash_if_too_long raise ValueError ValueError (expected)`
+
+The `with ExpectError()` line in the above code ensures that the error message is printed, yet execution continues; this is to differentiate this "expected" error from "unexpected" errors in other code examples.
+
+#### Missing Error Checks
+
+Many programming languages do not have exceptions, but instead have functions return special **error codes** in exceptional circumstances. The C function `getchar()`, for instance, normally returns a character from the standard input; if no input is available anymore, it returns the special value `EOF`(end of file).
+
+In a situation where, for example, `getchar()` reaches and scans a space character, `getchar()` could return `EOF`, and keep returning `EOF` when called again. This would lead to an infinite loop. However, if a line with the `with ExpectTimeout()` was implemented, the code would be interrupted after a set amount of time, printing an error message.
+
+#### Rogue Numbers
+
+When fuzzing, it is very, very easy to generate **uncommon values** in the input, which can lead to a load of interesting behavior. The value could exceed program memory, lead to a crash, or an array of other unexpected outcomes.
+
+It is important to utilize these rogue numbers because it is much better to quickly fail the program than to allow it to destroy something later down the line.
 
 ### Catching Errors
 

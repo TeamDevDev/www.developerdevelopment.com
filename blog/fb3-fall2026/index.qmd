@@ -46,7 +46,10 @@ Output: `'XGZVDDPZOOW'`
 
 #### Runners
 
-A `Fuzzer` can be paired with a `Runner` which takes the fuzzed strings as input. Its result is a class-specific *status* and an *outcome* (`PASS`, `FAIL`, or `UNRESOLVED`). A `PrintRunner` will simply print out the given input and return a `PASS` outcome:
+A `Fuzzer` can be paired with a `Runner` which takes the fuzzed strings as
+input. Its result is a class-specific *status* and an *outcome* (`PASS`,
+`FAIL`, or `UNRESOLVED`). A `PrintRunner` will simply print out the given input
+and return a `PASS` outcome:
 
 ```python
 >>> print_runner = PrintRunner()
@@ -55,38 +58,56 @@ A `Fuzzer` can be paired with a `Runner` which takes the fuzzed strings as input
 
 Outcome: `('EQYGAXPTVPJGTYHXFJ', 'UNRESOLVED')`
 
-A `ProgramRunner` will feed the generated input into an external program. Its result is a pair of the program status (a `CompletedProcess` instance) and an *outcome* (`PASS`, `FAIL` or `UNRESOLVED`):
+A `ProgramRunner` will feed the generated input into an external program. Its
+result is a pair of the program status (a `CompletedProcess` instance) and an
+*outcome* (`PASS`, `FAIL` or `UNRESOLVED`):
 
 ```python
 >>> cat = ProgramRunner('cat')
 >>> random_fuzzer.run(cat)
 ```
 
-Outcome: `(CompletedProcess(args='cat', returncode=0, stdout='BZOQTXFBTEOVYX', stderr=''),
- 'PASS')`
+Outcome: `(CompletedProcess(args='cat', returncode=0, stdout='BZOQTXFBTEOVYX',
+stderr=''), 'PASS')`
 
  ![Runners](Runners.png)
 
 ### A Testing Assignment
 
-Fuzzing was created in the Fall of 1988. While sitting in his apartment in Wisconsin, Madison, professor Barton Miller was connected to his university computer via a 1200 baud telephone line. The thunderstorm caused noise on the line, and this noise in turn caused the UNIX commands on either end to get bad inputs and crash. He wanted to investigate the extent of the problem and its causes. So he made a *programming exerise* for his students at the University of Wisconsin-Madison. This exercise would have his students create the first fuzzers.
+Fuzzing was created in the Fall of 1988. While sitting in his apartment in
+Wisconsin, Madison, professor Barton Miller was connected to his university
+computer via a 1200 baud telephone line. The thunderstorm caused noise on the
+line, and this noise in turn caused the UNIX commands on either end to get bad
+inputs and crash. He wanted to investigate the extent of the problem and its
+causes. So he made a *programming exercise* for his students at the University
+of Wisconsin-Madison. This exercise would have his students create the first
+fuzzers.
 
 This is how the [assignment](https://pages.cs.wisc.edu/~bart/fuzz/CS736-Projects-f1988.pdf) read:
 
->The goal of this project is to evaluate the robustness of various UNIX utility programs, given an unpredictable input stream. [...] First, you will build a fuzz generator. This is a program that will output a random character stream. Second, you will take the fuzz generator and use it to attack as many UNIX utilities as possible, with the goal of trying to break them.
+>The goal of this project is to evaluate the robustness of various UNIX utility
+>programs, given an unpredictable input stream. [...] First, you will build a
+>fuzz generator. This is a program that will output a random character stream.
+>Second, you will take the fuzz generator and use it to attack as many UNIX
+>utilities as possible, with the goal of trying to break them.
 
-This assignment captures the essence of fuzzing: *Create random inputs, and see if they break things*. Just let it run long enough, and you'll see.
+This assignment captures the essence of fuzzing: *Create random inputs, and see
+if they break things*. Just let it run long enough, and you'll see.
 
 ### A Simple Fuzzer
 
-Let's build a fuzz generator. The idea is to produce random characters, adding them to a buffer string variable (out), and finally returning the string.
+Let's build a fuzz generator. The idea is to produce random characters, adding
+them to a buffer string variable (out), and finally returning the string.
 
 This implementation uses the following Python features and functions:
 
 - `random.randrange(start, end)` - return a random number [`start`, `end`)
-- `range(start, end)` – create an iterator (which can be used as a list) with integers in the range [`start, end`).
-- `for elem in list: body` – execute body in a loop with `elem` taking each value from `list`.
-- `for i in range(start, end): body` – execute body in a loop with `i` from `start` to `end` — 1.
+- `range(start, end)` – create an iterator (which can be used as a list) with
+integers in the range [`start, end`).
+- `for elem in list: body` – execute body in a loop with `elem` taking each
+value from `list`.
+- `for i in range(start, end): body` – execute body in a loop with `i` from
+`start` to `end` — 1.
 - `chr(n)` – return a character with ASCII code `n`
 
 Here is the actual `fuzzer()` function:

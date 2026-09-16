@@ -216,17 +216,24 @@ results.stderr
 
 Output: `''`
 
-Any program is able to go through this process, however, you should be careful as you could change or even damage your system.
+Any program is able to go through this process, however, you should be careful
+as you could change or even damage your system.
 
 ### Bug Fuzzers Find
 
-When Miller and his students ran their first fuzzers in 1989, they found an alarming result: About **A third of the UNIX utilities** they fuzzed had issues - they crashed, hung, or otherwise failed when confronted with fuzzing input. This also included the `bc` program above.
+When Miller and his students ran their first fuzzers in 1989, they found an
+alarming result: About **A third of the UNIX utilities** they fuzzed had issues
+--- they crashed, hung, or otherwise failed when confronted with fuzzing input.
+This also included the `bc` program above.
 
-Because many of these UNIX utilities were used in scripts that would also process network input, this was a potential hazard, one which need fuzzers to fix.
+Because many of these UNIX utilities were used in scripts that would also
+process network input, this was a potential hazard, one which need fuzzers to
+fix.
 
 #### Buffer Overflows
 
-**Buffer overflows** are triggered when going over a program's built-in maximum lengths for inputs and input elements.
+**Buffer overflows** are triggered when going over a program's built-in maximum
+lengths for inputs and input elements.
 
 Buffer overflow behavior can be easily simulated in a Python function:
 

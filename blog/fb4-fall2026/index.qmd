@@ -1,0 +1,41 @@
+---
+author: [Abishek Dhakal, Anshu Pathak, Gregory M. Kapfhammer]
+title: Mutation-Based Fuzzing
+date: '2026-09-23'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>A deep dive into Chapter 4 of The Fuzzing Book covering bit flipping, seed mutation, and coverage-guided input generation.</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+Overview of Mutation-Based Fuzzing
+
+## Summary
+
+### The Limitation of Random Generation
+
+### What Is Mutational Fuzzing?
+
+### Fuzzing a URL Parser
+
+### Primary Mutation Operators
+
+### Mutating URLs in Practice
+
+### Stacking Multiple Mutations
+
+### Guiding Mutations with Coverage
+
+### The MutationFuzzer Architecture
+
+### Key Lessons & Trade-offs
+
+### Quiz Check
+
+Q1. What is the primary advantage of mutation-based fuzzing over purely random fuzzing?
+
+Q2. How does coverage-guided fuzzing use the seed population?
+
+### Reflection

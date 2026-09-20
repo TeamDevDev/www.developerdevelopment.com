@@ -1,5 +1,5 @@
 ---
-author: [Abishek Dhakal, Anshu Pathak, Gregory M. Kapfhammer]
+author: [Abishek Dhakal, Logan Butler, Gregory M. Kapfhammer]
 title: Mutation-Based Fuzzing
 date: '2026-09-23'
 date-format: long

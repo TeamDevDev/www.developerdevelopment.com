@@ -153,21 +153,27 @@ The best time to improve documentation is when you are learning something for
 the first time. Beginners see gaps experts overlook. Google encourages
 engineers to fix typos, clarify steps, and update examples immediately.
 
-Creating Documentation: Engineers should document new workflows, tools, and tribal knowledge. Documentation must be:
+Creating Documentation: Engineers should document new workflows, tools, and
+tribal knowledge. Documentation must be:
 
 - discoverable
 - searchable
 - easy to update
 - open to feedback
 
-Google’s g3doc system places documentation next to source code, making it easy to find and maintain.
+Google’s g3doc system places documentation next to source code, making it easy
+to find and maintain.
 
-Promoting Documentation
-Writing documentation saves time in the long run. Instead of repeatedly answering the same question, engineers can point teammates to a canonical reference. Documentation also reduces SPOFs and helps teams scale.
+Promoting Documentation Writing documentation saves time in the long run.
+Instead of repeatedly answering the same question, engineers can point
+teammates to a canonical reference. Documentation also reduces SPOFs and helps
+teams scale.
 
 ### Conclusion: Knowledge Sharing as Organizational Infrastructure
 
-The chapter makes a compelling argument: knowledge sharing is not a luxury — it is infrastructure. Organizations that fail to invest in learning accumulate technical debt, cultural debt, and operational fragility.
+The chapter makes a compelling argument: knowledge sharing is not a luxury ---
+it is infrastructure. Organizations that fail to invest in learning accumulate
+technical debt, cultural debt, and operational fragility.
 
 Google’s approach blends:
 
@@ -177,9 +183,16 @@ Google’s approach blends:
 - structured teaching
 - robust documentation systems
 
-The overarching lesson is clear: expertise must be grown, shared, and maintained deliberately. Software engineering is fundamentally a human discipline, and knowledge sharing is how organizations turn individual expertise into collective capability.
+The overarching lesson is clear: expertise must be grown, shared, and
+maintained deliberately. Software engineering is fundamentally a human
+discipline, and knowledge sharing is how organizations turn individual
+expertise into collective capability.
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
+Our team built KnowledgeBoard, a simple program for tracking who is working on
+what, if they need help, and if they are available to help others. You can view
+the project here: [KnowledgeBoard on
+GitHub](https://github.com/Rivan-Deets/KnowledgeBoard)
 
-Our team built KnowledgeBoard, a simple program for tracking who is working on what, if they need help, and if they are available to help others. You can view the project here: [KnowledgeBoard on GitHub](https://github.com/Rivan-Deets/KnowledgeBoard)
+:::

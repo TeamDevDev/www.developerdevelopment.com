@@ -1,5 +1,5 @@
 ---
-author: [Rivan Deets, Benito Aguero, Gregory M. Kapfhammer]
+author: [Rivan Deets, Benito Aguero]
 title: Knowledge Sharing in Software Engineering
 date: '2026-9-21'
 date-format: long
@@ -11,25 +11,48 @@ page-layout: full
 
 ## Knowledge Sharing in Software Engineering: Lessons from Google
 
-Knowledge sharing is one of the most persistent challenges in large engineering organizations. The chapter Knowledge Sharing from Software Engineering at Google argues that an organization’s ability to learn collectively is just as important as its ability to write code. As the authors put it, “your organization should be able to answer most of its own questions.” This article examines the chapter’s core ideas, focusing on the cultural, structural, and technical mechanisms Google uses to scale knowledge across tens of thousands of engineers.
+Knowledge sharing is one of the most persistent challenges in large engineering
+organizations. The chapter Knowledge Sharing from Software Engineering at
+Google argues that an organization’s ability to learn collectively is just as
+important as its ability to write code. As the authors put it, “your
+organization should be able to answer most of its own questions.” This article
+examines the chapter’s core ideas, focusing on the cultural, structural, and
+technical mechanisms Google uses to scale knowledge across tens of thousands of
+engineers.
 
 # The Human Foundations of Knowledge Sharing
 
 ## Psychological Safety as a Prerequisite
-The chapter emphasizes that learning begins with vulnerability. Engineers must feel safe admitting what they don’t know. The authors note that “an enormous part of learning is being able to try things and feeling safe to fail.” Without psychological safety, engineers hide confusion, avoid asking questions, and allow mistakes to compound.
 
-Google’s research on effective teams consistently shows psychological safety as the strongest predictor of success. This is not accidental: learning requires risk, and risk requires trust.
+The chapter emphasizes that learning begins with vulnerability. Engineers must
+feel safe admitting what they don’t know. The authors note that “an enormous
+part of learning is being able to try things and feeling safe to fail.” Without
+psychological safety, engineers hide confusion, avoid asking questions, and
+allow mistakes to compound.
+
+Google’s research on effective teams consistently shows psychological safety as
+the strongest predictor of success. This is not accidental: learning requires
+risk, and risk requires trust.
 
 ## Mentorship and Onboarding
 
-Google formalizes psychological safety through its Noogler mentorship program. New engineers are paired with mentors outside their immediate team, giving them a safe, judgment‑free space to ask questions. This structure prevents the “fear of bothering teammates” and reduces the likelihood of new hires becoming isolated or overwhelmed.
+Google formalizes psychological safety through its Noogler mentorship program.
+New engineers are paired with mentors outside their immediate team, giving them
+a safe, judgment‑free space to ask questions. This structure prevents the “fear
+of bothering teammates” and reduces the likelihood of new hires becoming
+isolated or overwhelmed.
 
-Mentorship also combats single points of failure (SPOFs) — situations where only one person knows how something works. SPOFs often arise from good intentions (“It’s faster if I do it”), but they create fragile systems and slow organizational learning.
+Mentorship also combats single points of failure (SPOFs) — situations where
+only one person knows how something works. SPOFs often arise from good
+intentions (“It’s faster if I do it”), but they create fragile systems and slow
+organizational learning.
 
 ## Common Failure Modes in Knowledge Sharing
+
 The chapter identifies several patterns that hinder learning in engineering organizations:
 
 ### Information Islands
+
 Teams develop isolated workflows, tools, and norms. This leads to:
 
 - Fragmentation — incomplete understanding of the whole system
@@ -37,9 +60,13 @@ Teams develop isolated workflows, tools, and norms. This leads to:
 - Skew — inconsistent or conflicting approaches
 
 ### All‑or‑Nothing Expertise
-Experts accumulate more and more responsibility, while novices struggle to ramp up. Without deliberate mentoring or documentation, knowledge concentrates instead of spreading.
+
+Experts accumulate more and more responsibility, while novices struggle to ramp
+up. Without deliberate mentoring or documentation, knowledge concentrates
+instead of spreading.
 
 ### Parroting and Haunted Graveyards
+
 Parroting: copying code or patterns without understanding them
 
 Haunted graveyards: parts of the codebase people avoid touching out of fear
@@ -47,21 +74,30 @@ Haunted graveyards: parts of the codebase people avoid touching out of fear
 Both behaviors emerge when engineers lack context or confidence.
 
 ### The Philosophy: People, Not Just Code
-The authors remind us that software engineering is the multiperson development of multiversion programs. Code is only one artifact; the real work is coordinating people, knowledge, and decisions.
+
+The authors remind us that software engineering is the multi-person development
+of multi-version programs. Code is only one artifact; the real work is
+coordinating people, knowledge, and decisions.
 
 Two forms of knowledge coexist:
 
-- Tribal Knowledge
-Unwritten, experience‑based, often held by experts.
+- Tribal Knowledge Unwritten, experience‑based, often held by experts.
 
-- Written Knowledge
-Documentation, tutorials, wikis, mailing lists, Q&A platforms.
+- Written Knowledge Documentation, tutorials, wikis, mailing lists, Q&A
+platforms.
 
-Neither is sufficient alone. Tribal knowledge provides nuance and context; documentation provides scale and permanence. Healthy organizations cultivate both.
+Neither is sufficient alone. Tribal knowledge provides nuance and context;
+documentation provides scale and permanence. Healthy organizations cultivate
+both.
 
 ### Asking Better Questions: The Engine of Learning
-Always Be Learning
-The chapter’s strongest message is simple: ask questions. Engineers often hesitate, fearing their questions are too basic. But the authors insist that learning is continuous — even senior engineers regularly encounter unfamiliar systems.
+
+**Always Be Learning
+
+The chapter’s strongest message is simple: ask questions. Engineers often
+hesitate, fearing their questions are too basic. But the authors insist that
+learning is continuous — even senior engineers regularly encounter unfamiliar
+systems.
 
 Asking questions:
 
@@ -71,38 +107,49 @@ Asking questions:
 - strengthens team culture
 
 ### Understanding Context
-The chapter invokes Chesterton’s fence: before changing something, understand why it exists. Legacy systems often encode historical constraints or subtle requirements. Engineers who skip context risk breaking critical functionality or repeating past mistakes.
+
+The chapter invokes Chesterton’s fence: before changing something, understand
+why it exists. Legacy systems often encode historical constraints or subtle
+requirements. Engineers who skip context risk breaking critical functionality
+or repeating past mistakes.
 
 ### Scaling Knowledge Beyond Individuals
-Group Chats
-Fast, informal, high‑bandwidth communication. Great for quick questions, but poor for long‑term discoverability.
 
-Mailing Lists
-More structured, searchable, and archived. Useful for complex questions requiring detailed context. However, they can become noisy and outdated.
+- **Group Chats**: Fast, informal, high‑bandwidth communication. Great for
+quick questions, but poor for long‑term discoverability.
 
-YAQS (Google’s Internal Stack Overflow)
-A structured Q&A platform with:
+- **Mailing Lists**: More structured, searchable, and archived. Useful for
+complex questions requiring detailed context. However, they can become noisy
+and outdated.
 
-- editable answers
-- upvoting
-- long‑term discoverability
-- links to internal code
+- **YAQS** (Google’s Internal Stack Overflow) A structured Q&A platform with:
+  - editable answers
+  - upvoting
+  - long‑term discoverability
+  - links to internal code
 
 YAQS reduces duplication and centralizes knowledge, making it easier for future engineers to find authoritative answers.
 
 ### Teaching as a Core Engineering Skill
-The chapter stresses that everyone has something to teach. Expertise is not binary; it is multidimensional. Google encourages teaching through:
 
-Office Hours
-Scheduled time for engineers to ask experts questions. Useful for ambiguous or complex problems.
+The chapter stresses that everyone has something to teach. Expertise is not
+binary; it is multidimensional. Google encourages teaching through:
 
-Tech Talks and Classes
-Google’s engEDU and g2g programs allow engineers to teach topics ranging from CPU vectorization to swing dancing. Classes are resource‑intensive but effective for stable, complex topics that require guided learning.
+- **Office Hours**: Scheduled time for engineers to ask experts questions.
+Useful for ambiguous or complex problems.
+
+**Tech Talks and Classes**: Google’s engEDU and g2g programs allow engineers to
+teach topics ranging from CPU vectorization to swing dancing. Classes are
+resource‑intensive but effective for stable, complex topics that require guided
+learning.
 
 ### Documentation: The Backbone of Scalable Knowledge
-Documentation is the most scalable form of knowledge sharing — but only if it is maintained.
 
-Updating Documentation
+Documentation is the most scalable form of knowledge sharing — but only if it
+is maintained.
+
+- **Updating Documentation**:
+
 The best time to improve documentation is when you are learning something for the first time. Beginners see gaps experts overlook. Google encourages engineers to fix typos, clarify steps, and update examples immediately.
 
 Creating Documentation
@@ -119,6 +166,7 @@ Promoting Documentation
 Writing documentation saves time in the long run. Instead of repeatedly answering the same question, engineers can point teammates to a canonical reference. Documentation also reduces SPOFs and helps teams scale.
 
 ### Conclusion: Knowledge Sharing as Organizational Infrastructure
+
 The chapter makes a compelling argument: knowledge sharing is not a luxury — it is infrastructure. Organizations that fail to invest in learning accumulate technical debt, cultural debt, and operational fragility.
 
 Google’s approach blends:

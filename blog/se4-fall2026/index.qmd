@@ -14,8 +14,8 @@ page-layout: full
 Knowledge sharing is one of the most persistent challenges in large engineering
 organizations. The chapter Knowledge Sharing from Software Engineering at
 Google argues that an organization’s ability to learn collectively is just as
-important as its ability to write code. As the authors put it, “your
-organization should be able to answer most of its own questions.” This article
+important as its ability to write code. As the authors put it, "your
+organization should be able to answer most of its own questions." This article
 examines the chapter’s core ideas, focusing on the cultural, structural, and
 technical mechanisms Google uses to scale knowledge across tens of thousands of
 engineers.
@@ -126,7 +126,8 @@ and outdated.
   - long‑term discoverability
   - links to internal code
 
-YAQS reduces duplication and centralizes knowledge, making it easier for future engineers to find authoritative answers.
+YAQS reduces duplication and centralizes knowledge, making it easier for future
+engineers to find authoritative answers.
 
 ### Teaching as a Core Engineering Skill
 
@@ -136,10 +137,10 @@ binary; it is multidimensional. Google encourages teaching through:
 - **Office Hours**: Scheduled time for engineers to ask experts questions.
 Useful for ambiguous or complex problems.
 
-**Tech Talks and Classes**: Google’s engEDU and g2g programs allow engineers to
-teach topics ranging from CPU vectorization to swing dancing. Classes are
-resource‑intensive but effective for stable, complex topics that require guided
-learning.
+**Tech Talks and Classes**: Google’s `engEDU` and `g2g` programs allow
+engineers to teach topics ranging from CPU vectorization to swing dancing.
+Classes are resource‑intensive but effective for stable, complex topics that
+require guided learning.
 
 ### Documentation: The Backbone of Scalable Knowledge
 
@@ -148,10 +149,11 @@ is maintained.
 
 - **Updating Documentation**:
 
-The best time to improve documentation is when you are learning something for the first time. Beginners see gaps experts overlook. Google encourages engineers to fix typos, clarify steps, and update examples immediately.
+The best time to improve documentation is when you are learning something for
+the first time. Beginners see gaps experts overlook. Google encourages
+engineers to fix typos, clarify steps, and update examples immediately.
 
-Creating Documentation
-Engineers should document new workflows, tools, and tribal knowledge. Documentation must be:
+Creating Documentation: Engineers should document new workflows, tools, and tribal knowledge. Documentation must be:
 
 - discoverable
 - searchable

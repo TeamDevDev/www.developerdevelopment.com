@@ -137,7 +137,7 @@ binary; it is multidimensional. Google encourages teaching through:
 - **Office Hours**: Scheduled time for engineers to ask experts questions.
 Useful for ambiguous or complex problems.
 
-**Tech Talks and Classes**: Google’s `engEDU` and `g2g` programs allow
+- **Tech Talks and Classes**: Google’s `engEDU` and `g2g` programs allow
 engineers to teach topics ranging from CPU vectorization to swing dancing.
 Classes are resource‑intensive but effective for stable, complex topics that
 require guided learning.

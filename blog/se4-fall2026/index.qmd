@@ -42,9 +42,9 @@ a safe, judgment‑free space to ask questions. This structure prevents the “f
 of bothering teammates” and reduces the likelihood of new hires becoming
 isolated or overwhelmed.
 
-Mentorship also combats single points of failure (SPOFs) — situations where
+Mentorship also combats single points of failure (SPOFs) --- situations where
 only one person knows how something works. SPOFs often arise from good
-intentions (“It’s faster if I do it”), but they create fragile systems and slow
+intentions ("It’s faster if I do it"), but they create fragile systems and slow
 organizational learning.
 
 ## Common Failure Modes in Knowledge Sharing

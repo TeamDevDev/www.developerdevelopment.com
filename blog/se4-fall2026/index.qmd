@@ -159,8 +159,8 @@ and tribal knowledge. Documentation must be:
   - easy to update
   - open to feedback
 
-Google’s `g3doc` system places documentation next to source code, making it easy
-to find and maintain.
+- Google’s `g3doc` system places documentation next to source code, making it
+easy to find and maintain.
 
 - **Promoting Documentation**: Writing documentation saves time in the long run.
 Instead of repeatedly answering the same question, engineers can point

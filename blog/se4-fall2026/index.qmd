@@ -191,7 +191,7 @@ expertise into collective capability.
 Our team built KnowledgeBoard, a simple program for tracking who is working on
 what, if they need help, and if they are available to help others. You can view
 the project here: [KnowledgeBoard on
-GitHub](https://github.com/Rivan-Deets/KnowledgeBoard)
+GitHub](https://github.com/Rivan-Deets/KnowledgeBoard).
 
 :::
 

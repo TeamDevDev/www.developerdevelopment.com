@@ -4,7 +4,7 @@ title: Knowledge Sharing in Software Engineering
 date: '2026-9-21'
 date-format: long
 categories: [post, professional development, software engineering]
-description: <em>Why is Knowledge Sharing Important in Software Engineering?</em>
+description: <em>Why is knowledge sharing important in software engineering?</em>
 toc: true
 page-layout: full
 ---
@@ -147,24 +147,22 @@ require guided learning.
 Documentation is the most scalable form of knowledge sharing — but only if it
 is maintained.
 
-- **Updating Documentation**:
+- **Updating Documentation**: The best time to improve documentation is when
+you are learning something for the first time. Beginners see gaps experts
+overlook. Google encourages engineers to fix typos, clarify steps, and update
+examples immediately.
 
-The best time to improve documentation is when you are learning something for
-the first time. Beginners see gaps experts overlook. Google encourages
-engineers to fix typos, clarify steps, and update examples immediately.
+- **Creating Documentation**: Engineers should document new workflows, tools,
+and tribal knowledge. Documentation must be:
+  - discoverable
+  - searchable
+  - easy to update
+  - open to feedback
 
-Creating Documentation: Engineers should document new workflows, tools, and
-tribal knowledge. Documentation must be:
-
-- discoverable
-- searchable
-- easy to update
-- open to feedback
-
-Google’s g3doc system places documentation next to source code, making it easy
+Google’s `g3doc` system places documentation next to source code, making it easy
 to find and maintain.
 
-Promoting Documentation Writing documentation saves time in the long run.
+- **Promoting Documentation**: Writing documentation saves time in the long run.
 Instead of repeatedly answering the same question, engineers can point
 teammates to a canonical reference. Documentation also reduces SPOFs and helps
 teams scale.

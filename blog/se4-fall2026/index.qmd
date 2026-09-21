@@ -49,15 +49,16 @@ organizational learning.
 
 ## Common Failure Modes in Knowledge Sharing
 
-The chapter identifies several patterns that hinder learning in engineering organizations:
+The chapter identifies several patterns that hinder learning in engineering
+organizations:
 
 ### Information Islands
 
 Teams develop isolated workflows, tools, and norms. This leads to:
 
-- Fragmentation — incomplete understanding of the whole system
-- Duplication — reinventing solutions
-- Skew — inconsistent or conflicting approaches
+- **Fragmentation** — incomplete understanding of the whole system
+- **Duplication** — reinventing solutions
+- **Skew** — inconsistent or conflicting approaches
 
 ### All‑or‑Nothing Expertise
 
@@ -67,9 +68,8 @@ instead of spreading.
 
 ### Parroting and Haunted Graveyards
 
-Parroting: copying code or patterns without understanding them
-
-Haunted graveyards: parts of the codebase people avoid touching out of fear
+- **Parroting**: copying code or patterns without understanding them
+- **Haunted graveyards**: parts of the codebase people avoid touching out of fear
 
 Both behaviors emerge when engineers lack context or confidence.
 
@@ -81,9 +81,9 @@ coordinating people, knowledge, and decisions.
 
 Two forms of knowledge coexist:
 
-- Tribal Knowledge Unwritten, experience‑based, often held by experts.
+- **Tribal Knowledge**: Unwritten, experience‑based, often held by experts.
 
-- Written Knowledge Documentation, tutorials, wikis, mailing lists, Q&A
+- **Written Knowledge**: Documentation, tutorials, wikis, mailing lists, Q&A
 platforms.
 
 Neither is sufficient alone. Tribal knowledge provides nuance and context;
@@ -92,12 +92,10 @@ both.
 
 ### Asking Better Questions: The Engine of Learning
 
-**Always Be Learning
-
-The chapter’s strongest message is simple: ask questions. Engineers often
-hesitate, fearing their questions are too basic. But the authors insist that
-learning is continuous — even senior engineers regularly encounter unfamiliar
-systems.
+**Always Be Learning**: The chapter’s strongest message is simple: ask
+questions. Engineers often hesitate, fearing their questions are too basic. But
+the authors insist that learning is continuous — even senior engineers
+regularly encounter unfamiliar systems.
 
 Asking questions:
 

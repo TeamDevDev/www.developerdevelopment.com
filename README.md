@@ -69,6 +69,49 @@ cd _site
 python -m http.server 8000
 ```
 
+## Export the syllabus and schedule as one PDF
+
+Students often need the whole course structure in a single file. The export
+script renders the syllabus and the schedule to PDF and joins them, syllabus
+first, into one document:
+
+```bash
+./scripts/build-syllabus-pdf.sh
+```
+
+The result is written to `export/syllabus-and-schedule.pdf`, a directory that
+git ignores. Each part keeps its own title page, contents page, and page
+numbering, and the joined file preserves the nested PDF bookmarks, the links on
+both contents pages, every external URL, and its title, author, and subject
+metadata. The script reads the two `.qmd` files without modifying them and does
+not touch the website build.
+
+The script can be run from any directory. It builds from an isolated copy of the
+two pages, so it never writes into `syllabus/` or `schedule/`, and it is safe to
+run while `quarto preview` or a website build is running, or to run several
+copies at once.
+
+The script needs Quarto, a LaTeX engine that provides LuaLaTeX, and uv. It
+reports any missing tool together with the NixOS package that provides it, and
+an ad-hoc shell supplies all three without changing the system configuration:
+
+```bash
+nix-shell -p quarto texlive.combined.scheme-full uv \
+  --run ./scripts/build-syllabus-pdf.sh
+```
+
+Common options:
+
+```bash
+./scripts/build-syllabus-pdf.sh -o ~/Desktop/course.pdf  # write elsewhere
+./scripts/build-syllabus-pdf.sh --keep --verbose         # keep per-part PDFs
+./scripts/build-syllabus-pdf.sh --help                   # list all options
+```
+
+The `iconify` icons on the schedule page are drawn by JavaScript in the HTML
+site, so they do not appear in the PDF; the text labels that accompany each
+icon carry the same information.
+
 ## Continuous integration
 
 The GitHub Actions workflows use uv exclusively for Python setup:
@@ -125,6 +168,8 @@ _quarto.yml                 Main Quarto configuration
 _quarto-optimize.yml        Optimized build profile
 blog/                       Course blog posts
 schedule/                   Course schedule
+scripts/build-syllabus-pdf.sh
+                            Syllabus and schedule PDF export
 scripts/minify-files.py     CSS, HTML, and JavaScript minification
 scripts/migrate-to-cloudflare.py
                             Cloudflare migration helper

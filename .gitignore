@@ -148,3 +148,7 @@ _freeze
 _site
 _optimize
 **/*.quarto_ipynb
+
+### Exported artifacts ###
+# Generated PDFs from scripts/build-syllabus-pdf.sh and friends
+export/

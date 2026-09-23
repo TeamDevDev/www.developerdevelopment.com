@@ -107,9 +107,9 @@ Mutation-based fuzzing is not a magic bullet—it can still get stuck on strict 
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our team built `FuzzerChecker`, a command-line program that shows code coverage in
-action. You can view the project here: [FuzzerChecker on
-GitHub](github link goes here).
+Our team built `Fizzbuzz`, a command-line program that shows code coverage in
+action. You can view the project here: [Fizzbuzz on
+GitHub](https://github.com/Abishek-D-7/Fizzbuzz).
 
 :::
 

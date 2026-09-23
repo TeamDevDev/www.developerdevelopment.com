@@ -77,7 +77,7 @@ enhance their abilities as a software engineering while collaboratively building
 and releasing two open-source tools. Ultimately, these challenges are worth it!
 Computer and information science graduates, like [Aidan
 Dyga](https://www.linkedin.com/in/aidandyga/), frequently report that the
-software engineering course is the [most impactful one that they take at
+software engineering course is the [most impactful one that they took at
 Allegheny
 College](https://allegheny.edu/about/news/curiosity-leads-to-career-outcomes/)
 because it effectively emphasizes "communication skills and real-world project

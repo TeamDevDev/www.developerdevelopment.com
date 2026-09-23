@@ -4,15 +4,12 @@ title: Mutation-Based Fuzzing
 date: '2026-09-23'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>A deep dive into Chapter 4 of The Fuzzing Book covering bit flipping, seed mutation, and coverage-guided input generation.</em>
+description: <em>A deep dive into mutation-based fuzzing techniques.</em>
 toc: true
 page-layout: full
 ---
 
 ## Overview
-Overview of Mutation-Based Fuzzing
-
-## Summary
 
 ### The Limitation of Random Generation
 
@@ -20,7 +17,7 @@ Random generation often fails on structured inputs because it produces strings t
 
 ### What Is Mutational Fuzzing?
 
-Mutation-based fuzzing avoids the problem of generating valid inputs from scratch by starting from an existing valid seed and applying small changes to it. A mutation might delete a character, insert a random character, or flip a bit in a character. Because the input remains close to the original, it is far more likely to remain parsable and useful. This approach is especially effective for inputs with fixed structure, such as URLs, file paths, or network protocol messages.
+Mutation-based fuzzing avoids the problem of generating valid inputs from scratch by starting from an existing valid seed and applying small changes to it. A mutation might delete a character, insert a random character, or flip a bit in a character. Because the input remains close to the original, it is far more likely to remain parseable and useful. This approach is especially effective for inputs with fixed structure, such as URLs, file paths, or network protocol messages.
 
 The idea is simple but powerful: if a program accepts a valid input, then a slightly modified version of that input may still be valid while exercising a different path or edge case. This makes mutational fuzzing a practical compromise between pure random generation and a full grammar-based generator.
 

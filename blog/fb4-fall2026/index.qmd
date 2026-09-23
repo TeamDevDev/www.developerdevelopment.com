@@ -11,6 +11,11 @@ page-layout: full
 
 ## Overview
 
+This article summarizes the [Mutation-Based
+Fuzzing](https://www.fuzzingbook.org/html/MutationFuzzer.html) chapter,
+focusing on seed mutation, coverage-guided selection, and the Fizzbuzz
+demonstration.
+
 ### The Limitation of Random Generation
 
 Random generation often fails on structured inputs because it produces strings

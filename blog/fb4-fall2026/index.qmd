@@ -13,33 +13,64 @@ page-layout: full
 
 ### The Limitation of Random Generation
 
-Random generation often fails on structured inputs because it produces strings that are syntactically invalid far more often than valid ones. For a URL, even a simple value like `http://` has a very specific prefix, and the probability of generating it at random is extremely small. The chapter illustrates this with a URL parser example: the chance of producing a valid `http://` prefix using printable ASCII characters is roughly $1 / 96^7$, and the odds are even lower for `https://`. In practice, this means a purely random fuzzer may spend enormous amounts of time generating strings that are rejected almost immediately, without ever reaching the interesting logic of the program.
+Random generation often fails on structured inputs because it produces strings
+that are syntactically invalid far more often than valid ones. For a URL, even
+a simple value like `http://` has a very specific prefix, and the probability
+of generating it at random is extremely small. The chapter illustrates this
+with a URL parser example: the chance of producing a valid `http://` prefix
+using printable ASCII characters is roughly $1 / 96^7$, and the odds are even
+lower for `https://`. In practice, this means a purely random fuzzer may spend
+enormous amounts of time generating strings that are rejected almost
+immediately, without ever reaching the interesting logic of the program.
 
 ### What Is Mutational Fuzzing?
 
-Mutation-based fuzzing avoids the problem of generating valid inputs from scratch by starting from an existing valid seed and applying small changes to it. A mutation might delete a character, insert a random character, or flip a bit in a character. Because the input remains close to the original, it is far more likely to remain parseable and useful. This approach is especially effective for inputs with fixed structure, such as URLs, file paths, or network protocol messages.
+Mutation-based fuzzing avoids the problem of generating valid inputs from
+scratch by starting from an existing valid seed and applying small changes to
+it. A mutation might delete a character, insert a random character, or flip a
+bit in a character. Because the input remains close to the original, it is far
+more likely to remain parseable and useful. This approach is especially
+effective for inputs with fixed structure, such as URLs, file paths, or network
+protocol messages.
 
-The idea is simple but powerful: if a program accepts a valid input, then a slightly modified version of that input may still be valid while exercising a different path or edge case. This makes mutational fuzzing a practical compromise between pure random generation and a full grammar-based generator.
+The idea is simple but powerful: if a program accepts a valid input, then a
+slightly modified version of that input may still be valid while exercising a
+different path or edge case. This makes mutational fuzzing a practical
+compromise between pure random generation and a full grammar-based generator.
 
 ### Fuzzing a URL Parser
 
-The chapter uses a URL parser as a motivating example. A URL is typically structured as:
+The chapter uses a URL parser as a motivating example. A URL is typically
+structured as:
 
 `scheme://netloc/path?query#fragment`
 
-where the scheme is something like `http` or `https`, the net location is the host such as `www.google.com`, and the path and query further specify the resource. In Python, `urllib.parse.urlparse()` decomposes this structure into named parts, making it easy to validate whether a URL is well-formed.
+where the scheme is something like `http` or `https`, the net location is the
+host such as `www.google.com`, and the path and query further specify the
+resource. In Python, `urllib.parse.urlparse()` decomposes this structure into
+named parts, making it easy to validate whether a URL is well-formed.
 
-The chapter then defines a tiny `http_program()` that accepts only `http` and `https` URLs with a non-empty host. As expected, random fuzzing almost never produces a valid URL, so the parser is rarely exercised beyond input validation. This illustrates the key limitation of generational fuzzing for structured data and motivates mutation-based strategies that begin from a valid URL instead of a random string.
+The chapter then defines a tiny `http_program()` that accepts only `http` and
+`https` URLs with a non-empty host. As expected, random fuzzing almost never
+produces a valid URL, so the parser is rarely exercised beyond input
+validation. This illustrates the key limitation of generational fuzzing for
+structured data and motivates mutation-based strategies that begin from a valid
+URL instead of a random string.
 
 ### Primary Mutation Operators
 
-The core mutation operators are intentionally small and easy to implement. The chapter introduces three standard ones:
+The core mutation operators are intentionally small and easy to implement. The
+chapter introduces three standard ones:
 
-* Delete: remove a random character from the input.
-* Insert: add a random printable character at a random position.
-* Bit flip: randomly choose a byte and flip one of its bits, which can turn one character into another and produce surprisingly realistic variants.
+* **Delete**: remove a random character from the input.
+* **Insert**: add a random printable character at a random position.
+* **Bit flip**: randomly choose a byte and flip one of its bits, which can turn
+one character into another and produce surprisingly realistic variants.
 
-These operators are usually combined in a single mutator that chooses one of them at random and applies it to the current string. Even a small mutation can produce new and interesting test cases while preserving much of the original structure.
+These operators are usually combined in a single mutator that chooses one of
+them at random and applies it to the current string. Even a small mutation can
+produce new and interesting test cases while preserving much of the original
+structure.
 
 ### Mutating URLs in Practice
 
@@ -47,9 +78,17 @@ The chapter then applies these mutations to a valid URL such as:
 
 `http://www.google.com/search?q=fuzzing`
 
-When the mutation process is applied to this seed, a surprisingly high percentage of the resulting strings remain valid. Mutating valid inputs preserves syntactic validity much more often than generating random strings from scratch. This allows the fuzzer to stay near the grammar of the original input while still exploring nearby variants, such as slightly different hosts, schemes, paths, or query strings.
+When the mutation process is applied to this seed, a surprisingly high
+percentage of the resulting strings remain valid. Mutating valid inputs
+preserves syntactic validity much more often than generating random strings
+from scratch. This allows the fuzzer to stay near the grammar of the original
+input while still exploring nearby variants, such as slightly different hosts,
+schemes, paths, or query strings.
 
-The authors also show that a valid seed can help discover new variations such as `https://`, which would be dramatically harder to reach through pure randomness. In other words, mutation allows the fuzzer to take a known-good input and slowly explore the neighborhood around it.
+The authors also show that a valid seed can help discover new variations such
+as `https://`, which would be dramatically harder to reach through pure
+randomness. In other words, mutation allows the fuzzer to take a known-good
+input and slowly explore the neighborhood around it.
 
 ### Stacking Multiple Mutations
 

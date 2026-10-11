@@ -11,11 +11,28 @@ page-layout: full
 
 # Overview
 
+In this chapter, engineering for equity, we will explore the responsibilities of designing products for a broad base of users. Our chapter explores how embracing diversity can design systems that work for everyone and avoid  creating a harmful environment for users. Engineering for equity exists because understanding the impact that software engineering has on underrepresented people and diverse societies is something being researched and understood today. Google is currently learning how to engineer products that empower and respect all of their users. To make more equitable products, we have to evaluate our own failures and encourage growth toward a more equitable future.
+
 ### Bias Is the Default
 
-### Disrupting the "Computer Science Degree" Myth:
+Everyone has biases that are often exhibited as unconscious bias, which enforces existing stereotypes on people unintentionally. Unconscious bias is more difficult of an act to mitigate than intentional acts of exclusion because we might not even recognize our own bias when trying to do the right thing. Google has failed to represent all users equitably in all of its products due to these biases. Due to this failure, in 2015 there was a case study conducted on Google missing the mark on racial inclusion.
+
+Jacky Alciné recognized that Google's recognition algorithms in Google Photos were recognizing and classifying his black friends as "gorillas." Google did not respond to these mistakes immediately and did not completely address them either. There were several things that caused this huge failure for Google.
+
+1. Image recognition algorithms depend on being supplied with a "proper" or complete data set.
+    - The photo data that was fed to Google's image recognition algorithm was incomplete, this resulted in the data not representing the entire populace.
+2. Google did not have much black representation, which affected decisions.
+    - The unconscious bias of Google led to a subjective design in their algorithms and collection of datasets. This left a more representative product on the table.
+3. Google's target market for image recognition did not include underrepresented groups.
+    - Google's tests did not catch the mistakes that the users did, which in turn embarrassed Google and harmed their users.
+
+As late as 2018, Google had still not completely addressed the underlying problem in its image recognition.
+
+Other technology from Google faced similar failures just as the image recognition did. Autocomplete can return offensive or racist results, Google's ad system can be manipulated to show racist and offensive ads. YouTube can let hate speech slip through the cracks even though it is outlawed on the platform. In these cases, the technology itself is not to blame they were not designed to target users or discriminate, but the unconscious bias of Google's programmers resulted in a product that was not resilient enough to exclude these things and returned results that harmed users. This led to decreased user trust and engagement with the company from user bases that were harmed by these exclusions.
 
 ### Understanding the Need for Diversity
+
+To understand the need for diversity, we have to first disrupt the computer science degree myth. This myth is that because a person has a computer science degree or work experience, they have all the skills they need to be an exceptional engineer. The degree is a necessary foundation, but the degree alone does not make someone an engineer. We also have to disrupt the idea that only people with degrees can design and build products. Most programmers do have a degree and are successful at building code, establishing theories of change, and applying methods for problem solving. This approach is not inclusive and equitable engineering. Engineers need to understand the population demographics of all users and focus on people who are different from themselves. Engineering teams need to build in representation of their existing and future users. If there is not diverse representation in a team of engineers they need to learn how to build for all users.
 
 ### Building Multicultural Capacity
 

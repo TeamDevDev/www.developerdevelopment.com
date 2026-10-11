@@ -1,6 +1,6 @@
 ---
 author: [Kathryn Boidock, Kaitlyn Walker, Ritesh Ojha, Gregory M. Kapfhammer]
-title: Introduction to Software Testing
+title: Engineering for Equity
 date: '2026-10-12'
 date-format: long
 categories: [post, professional development, software engineering]
@@ -11,19 +11,56 @@ page-layout: full
 
 # Overview
 
-## Bias Is the Default
+### Bias Is the Default
 
-## Disrupting the "Computer Science Degree" Myth:
+### Disrupting the "Computer Science Degree" Myth:
 
-## Diversity over Quantity
+### Understanding the Need for Diversity
 
-## Rejecting Singular Approaches
+### Building Multicultural Capacity
+
+Exceptional engineers need more than technical skill. They also need the
+perception to understand how a product can advantage one group while
+disadvantaging another, and when a feature should be delayed or rejected
+because its possible harms have not been addressed. This requires building
+multicultural capacity: learning about the different communities affected by a
+product, seeking perspectives beyond our own experiences, and continuing to
+develop our understanding of race, gender, ability, age, culture, and
+socioeconomic status.
+
+This responsibility cannot fall on one person alone. Engineering teams should
+include perspectives that reflect their current and future users, while
+organizations should provide ongoing, multidisciplinary professional
+development. When a team lacks representation, engineers can still improve
+their work by researching the people most likely to be excluded, involving
+community members and subject-matter experts, and testing the most difficult
+use cases first. Designing with the users who face the greatest barriers often
+creates a better experience for everyone.
+
+### Making Diversity Actionable
+
+Making diversity actionable means turning good intentions into measurable
+responsibility. Leaders should examine whether candidate pools, hiring
+decisions, opportunities for advancement, and retention outcomes are equitable
+instead of assuming that a policy is effective because it has inclusive goals.
+Teams should also measure product outcomes across different user groups and
+investigate disparities when they appear. These steps make equity part of the
+engineering process rather than an issue considered only after harm occurs.
+
+Progress also depends on accountability. Managers can review whether candidate
+slates are representative, distribute growth opportunities fairly, and create
+psychological safety for people from underrepresented groups. Engineers can
+question processes that rely on incomplete data or narrow definitions of a
+successful user. Together, these actions help organizations move from building
+for everyone in theory to building with everyone in practice.
+
+### Rejecting Singular Approaches
 
 One of the main statements that you as a software engineer should hold close is: "If we want to drive change and increase representation, we need to evaluate whether we’re creating an ecosystem in which all aspiring engineers and other technology professionals can thrive." We need to stay aware of the fact that the software engineering field is not a monolith, and that there are many different ways to approach problems. 
 
 We need to be open to new ideas and perspectives, and we need to be willing to challenge our own assumptions. One common methodology is to build for the majority use case first, leaving improvements and features that address edge cases for later. This approach gives users who are not part of the majority use case a subpar experience, and it can be frustrating for them to have to wait for improvements that address their needs. We need to be willing to challenge this approach and to build for all users from the start.
 
-## Challenging Established Processes
+### Challenging Established Processes
 
 A case at Google was evaluated for equity implications. Multiple engineering teams got together to try to build a new feature, a global hiring requisition system. Their main line of communication was the feedback from what would be the main users of this new feature, recruiters. The recruiters main focus was to minimize wasted time when it comes to hiring. One of the main features they wanted added was the ability to highlight performance ratings as soon as interest was expressed in a job by an internal transfer. This raised some questions by another engineer:
 
@@ -35,7 +72,7 @@ If you answered "no" to any of these questions, then this new feature could driv
 
 After seeing the potential for inequitable results, a study was conducted in which those with a lower performance rating were discovered to have a higher likelihood of overcoming the poor rating if they found a new team. These results showed that while ratings are important, they are only indicative of a person's performance at that moment in time, and that they are not a predictive measure of future performance.
 
-## Values vs Outcomes
+### Values vs Outcomes
 
 Despite a strong commitment, heavy investments, and inclusive core values, Google continuously misses its goal of building a hiring workforce that represents its global user base. The issue does not arise within company values or intentions, but rather in how policies are applied and practiced at the implementation level. Feedback is easy to gather when you rely on those familiar, but do not consider those that you may not have reached yet.
 
@@ -53,7 +90,7 @@ How can we ensure that our values are reflected in our outcomes?
 5. Change is possible.
     - Overcoming modern, overwhelming digital challenges requires a fundamental willingness to abandon outdated, failing approaches in favor of continuous self-change. 
 
-# Pushing Forward
+### Pushing Forward
 
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}

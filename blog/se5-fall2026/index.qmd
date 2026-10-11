@@ -95,8 +95,8 @@ How can we ensure that our values are reflected in our outcomes?
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our team built `TBA`, a simple CLI for TBA. You can view the project here: [TBA on
-GitHub](TBA).
+Our team built `Equity-Planner`, a simple CLI for creating inclusive software testing checklists. You can view the project here: [Equity-Planner on
+GitHub](https://github.com/ojharitesh/Equity-Planner).
 
 :::
 

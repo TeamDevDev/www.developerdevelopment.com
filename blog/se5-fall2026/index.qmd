@@ -109,6 +109,8 @@ How can we ensure that our values are reflected in our outcomes?
 
 ### Pushing Forward
 
+The path to equity will never be easy. although we not only can but we should transition from simply creating tools to growing our understanding of how what we are producing will impact others. We should challenge our education, influence our own teams and managers, and do comprehensive user research. As future engineers ourselves we should focus first on the users who are most impacted by bias and discrimination. It is possible together to accelerate progress to a more inclusive engineering environment by owning up to our own failures and make changes that push everyone forward without creating products and environments that ignore underrepresented groups. This is not something that can be done alone we all have to work together to produce these effects and create products for not only ourselves and our peers but for those who constantly face discrimination in the products that they use today.
+
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 

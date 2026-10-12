@@ -1,0 +1,217 @@
+---
+author: [Kathryn Boidock, Kaitlyn Walker, Ritesh Ojha, Gregory M. Kapfhammer]
+title: Engineering for Equity
+date: '2026-10-12'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>Intentional inclusion is required to stop engineering biases from harming users and engineers.</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+In this chapter, engineering for equity, we will explore the responsibilities
+of designing products for a broad base of users. Our chapter explores how
+embracing diversity can design systems that work for everyone and avoid
+creating a harmful environment for users. Engineering for equity exists because
+understanding the impact that software engineering has on underrepresented
+people and diverse societies is something being researched and understood
+today. Google is currently learning how to engineer products that empower and
+respect all of their users. To make more equitable products, we have to
+evaluate our own failures and encourage growth toward a more equitable future.
+
+### Bias Is the Default
+
+Everyone has biases that are often exhibited as unconscious bias, which
+enforces existing stereotypes on people unintentionally. Unconscious bias is
+more difficult of an act to mitigate than intentional acts of exclusion because
+we might not even recognize our own bias when trying to do the right thing.
+Google has failed to represent all users equitably in all of its products due
+to these biases. Due to this failure, in 2015 there was a case study conducted
+on Google missing the mark on racial inclusion.
+
+Jacky Alciné recognized that Google's recognition algorithms in Google Photos
+were recognizing and classifying his black friends as "gorillas." Google did
+not respond to these mistakes immediately and did not completely address them
+either. There were several things that caused this huge failure for Google.
+
+1. Image recognition algorithms depend on being supplied with a "proper" or
+complete data set.
+   - The photo data that was fed to Google's image recognition algorithm was
+   incomplete, this resulted in the data not representing the entire populace.
+2. Google did not have much black representation, which affected decisions.
+   - The unconscious bias of Google led to a subjective design in their
+   algorithms and collection of datasets. This left a more representative
+   product on the table.
+3. Google's target market for image recognition did not include
+underrepresented groups.
+   - Google's tests did not catch the mistakes that the users did, which in
+   turn embarrassed Google and harmed their users.
+
+As late as 2018, Google had still not completely addressed the underlying
+problem in its image recognition.
+
+Other technology from Google faced similar failures just as the image
+recognition did. Autocomplete can return offensive or racist results, Google's
+ad system can be manipulated to show racist and offensive ads. YouTube can let
+hate speech slip through the cracks even though it is outlawed on the platform.
+In these cases, the technology itself is not to blame they were not designed to
+target users or discriminate, but the unconscious bias of Google's programmers
+resulted in a product that was not resilient enough to exclude these things and
+returned results that harmed users. This led to decreased user trust and
+engagement with the company from user bases that were harmed by these
+exclusions.
+
+### Understanding the Need for Diversity
+
+To understand the need for diversity, we have to first disrupt the computer
+science degree myth. This myth is that because a person has a computer science
+degree or work experience, they have all the skills they need to be an
+exceptional engineer. The degree is a necessary foundation, but the degree
+alone does not make someone an engineer. We also have to disrupt the idea that
+only people with degrees can design and build products. Most programmers do
+have a degree and are successful at building code, establishing theories of
+change, and applying methods for problem solving. This approach is not
+inclusive and equitable engineering. Engineers need to understand the
+population demographics of all users and focus on people who are different from
+themselves. Engineering teams need to build in representation of their existing
+and future users. If there is not diverse representation in a team of engineers
+they need to learn how to build for all users.
+
+### Building Multicultural Capacity
+
+Exceptional engineers need more than technical skill. They also need the
+perception to understand how a product can advantage one group while
+disadvantaging another, and when a feature should be delayed or rejected
+because its possible harms have not been addressed. This requires building
+multicultural capacity: learning about the different communities affected by a
+product, seeking perspectives beyond our own experiences, and continuing to
+develop our understanding of race, gender, ability, age, culture, and
+socioeconomic status.
+
+This responsibility cannot fall on one person alone. Engineering teams should
+include perspectives that reflect their current and future users, while
+organizations should provide ongoing, multidisciplinary professional
+development. When a team lacks representation, engineers can still improve
+their work by researching the people most likely to be excluded, involving
+community members and subject-matter experts, and testing the most difficult
+use cases first. Designing with the users who face the greatest barriers often
+creates a better experience for everyone.
+
+### Making Diversity Actionable
+
+Making diversity actionable means turning good intentions into measurable
+responsibility. Leaders should examine whether candidate pools, hiring
+decisions, opportunities for advancement, and retention outcomes are equitable
+instead of assuming that a policy is effective because it has inclusive goals.
+Teams should also measure product outcomes across different user groups and
+investigate disparities when they appear. These steps make equity part of the
+engineering process rather than an issue considered only after harm occurs.
+
+Progress also depends on accountability. Managers can review whether candidate
+slates are representative, distribute growth opportunities fairly, and create
+psychological safety for people from underrepresented groups. Engineers can
+question processes that rely on incomplete data or narrow definitions of a
+successful user. Together, these actions help organizations move from building
+for everyone in theory to building with everyone in practice.
+
+### Rejecting Singular Approaches
+
+One of the main statements that you as a software engineer should hold close
+is: "If we want to drive change and increase representation, we need to
+evaluate whether we’re creating an ecosystem in which all aspiring engineers
+and other technology professionals can thrive." We need to stay aware of the
+fact that the software engineering field is not a monolith, and that there are
+many different ways to approach problems.
+
+We need to be open to new ideas and perspectives, and we need to be willing to
+challenge our own assumptions. One common methodology is to build for the
+majority use case first, leaving improvements and features that address edge
+cases for later. This approach gives users who are not part of the majority use
+case a subpar experience, and it can be frustrating for them to have to wait
+for improvements that address their needs. We need to be willing to challenge
+this approach and to build for all users from the start.
+
+### Challenging Established Processes
+
+A case at Google was evaluated for equity implications. Multiple engineering
+teams got together to try to build a new feature, a global hiring requisition
+system. Their main line of communication was the feedback from what would be
+the main users of this new feature, recruiters. The recruiters main focus was
+to minimize wasted time when it comes to hiring. One of the main features they
+wanted added was the ability to highlight performance ratings as soon as
+interest was expressed in a job by an internal transfer. This raised some
+questions by another engineer:
+
+- Are developmental assessments a predictive measure of performance?
+- Are the performance assessments being presented to prospective managers free
+of individual bias?
+- Are performance assessment scores standardized across organizations?
+
+If you answered "no" to any of these questions, then this new feature could
+drive inequitable, and therefore potentially harmful, results.
+
+After seeing the potential for inequitable results, a study was conducted in
+which those with a lower performance rating were discovered to have a higher
+likelihood of overcoming the poor rating if they found a new team. These
+results showed that while ratings are important, they are only indicative of a
+person's performance at that moment in time, and that they are not a predictive
+measure of future performance.
+
+### Values versus Outcomes
+
+Despite a strong commitment, heavy investments, and inclusive core values,
+Google continuously misses its goal of building a hiring workforce that
+represents its global user base. The issue does not arise within company values
+or intentions, but rather in how policies are applied and practiced at the
+implementation level. Feedback is easy to gather when you rely on those
+familiar, but do not consider those that you may not have reached yet.
+
+How can we ensure that our values are reflected in our outcomes?
+
+1. Take a hard look in the mirror.
+   - True inclusivity requires fixing implementation failures and breaking old
+   habits, rather than relying solely on good intentions or company values.
+2. Don’t build for everyone. Build with everyone.
+   - To build universally accessible technology, products must be designed with
+   diverse communities, highlighting the most vulnerable populations, rather
+   than assuming their needs.
+3. Design for the user who will have the most difficulty using your product.
+   - Don’t trade equity for short-term velocity.
+   - Prioritizing and solving for the users who face the greatest barriers
+   automatically improves the overall product experience for everyone.
+4. Don’t assume equity; measure equity throughout your systems.
+   - Keep in mind that even those who make decisions can also be under-educated
+   and subject others to bias. Companies must be sure to continuously measure
+   equity across all systems and collaborate with teams and individuals who are
+   subject matter experts to expose and mitigate implicit biases.
+5. Change is possible.
+   - Overcoming modern, overwhelming digital challenges requires a fundamental
+   willingness to abandon outdated, failing approaches in favor of continuous
+   self-change.
+
+### Pushing Forward
+
+The path to equity will never be easy. Although we not only can but we should
+transition from simply creating tools to growing our understanding of how what
+we are producing will impact others. We should challenge our education,
+influence our own teams and managers, and do comprehensive user research. As
+future engineers ourselves we should focus first on the users who are most
+impacted by bias and discrimination. It is possible together to accelerate
+progress to a more inclusive engineering environment by owning up to our own
+failures and make changes that push everyone forward without creating products
+and environments that ignore underrepresented groups. This is not something
+that can be done alone we all have to work together to produce these effects
+and create products for not only ourselves and our peers but for those who
+constantly face discrimination in the products that they use today.
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `Equity-Planner`, a simple CLI for creating inclusive software
+testing checklists. You can view the project here: [Equity-Planner on
+GitHub](https://github.com/ojharitesh/Equity-Planner).
+
+:::
+
+{{< include /_back-blog.qmd >}}

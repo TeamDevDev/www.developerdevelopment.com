@@ -159,7 +159,7 @@ results showed that while ratings are important, they are only indicative of a
 person's performance at that moment in time, and that they are not a predictive
 measure of future performance.
 
-### Values vs Outcomes
+### Values versus Outcomes
 
 Despite a strong commitment, heavy investments, and inclusive core values,
 Google continuously misses its goal of building a hiring workforce that

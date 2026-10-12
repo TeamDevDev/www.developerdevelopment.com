@@ -65,7 +65,19 @@ exclusions.
 
 ### Understanding the Need for Diversity
 
-To understand the need for diversity, we have to first disrupt the computer science degree myth. This myth is that because a person has a computer science degree or work experience, they have all the skills they need to be an exceptional engineer. The degree is a necessary foundation, but the degree alone does not make someone an engineer. We also have to disrupt the idea that only people with degrees can design and build products. Most programmers do have a degree and are successful at building code, establishing theories of change, and applying methods for problem solving. This approach is not inclusive and equitable engineering. Engineers need to understand the population demographics of all users and focus on people who are different from themselves. Engineering teams need to build in representation of their existing and future users. If there is not diverse representation in a team of engineers they need to learn how to build for all users.
+To understand the need for diversity, we have to first disrupt the computer
+science degree myth. This myth is that because a person has a computer science
+degree or work experience, they have all the skills they need to be an
+exceptional engineer. The degree is a necessary foundation, but the degree
+alone does not make someone an engineer. We also have to disrupt the idea that
+only people with degrees can design and build products. Most programmers do
+have a degree and are successful at building code, establishing theories of
+change, and applying methods for problem solving. This approach is not
+inclusive and equitable engineering. Engineers need to understand the
+population demographics of all users and focus on people who are different from
+themselves. Engineering teams need to build in representation of their existing
+and future users. If there is not diverse representation in a team of engineers
+they need to learn how to build for all users.
 
 ### Building Multicultural Capacity
 

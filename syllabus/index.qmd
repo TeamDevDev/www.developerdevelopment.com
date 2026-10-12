@@ -175,10 +175,13 @@ social processes undergirding software development methodologies, students
 participate in teams tasked with designing, developing, and delivering a
 significant software application for a customer. During a weekly laboratory
 session, students use state-of-the-art software engineering, management, and
-communication tools to complete projects, reporting on their results through
-both written documents and oral presentations. Students are invited to use their
-own departmentally approved laptop in this course; a limited number of laptops
-are available for use during class and lab sessions.
+communication tools, including automated testing, debugging, and analysis
+techniques, and AI coding best practices, to complete projects, reporting on
+their results through both written documents and oral presentations. Working in
+teams, students design, implement, and evaluate multiple open-source software
+engineering tools that apply these techniques and practices. Students are
+invited to use their own departmentally approved laptop in this course; a
+limited number of laptops are available for use during class and lab sessions.
 
 - **Prerequisite**: CMPSC 101
 - **Distribution Requirements**: SB, SP
@@ -426,7 +429,7 @@ engineering. All students should be prepared to answer questions that assess
 their comprehension of both concepts and implementation details in the field of
 software engineering. Unless the instructor provides access to a computational
 device, the in-person assessments invite students to demonstrate their knowledge
-of computer security without the aid of any external sources, including, but not
+of software engineering without the aid of any external sources, including, but not
 limited to, software tools running on a student laptop.
 
 - **Final Examination**: The final examination is an online, executable,
@@ -436,7 +439,7 @@ prior arrangements are made with the instructor, all students should use their
 computer to take the final examination on the scheduled date and to complete it
 in the stated location while taking no more than the required amount of time.
 The cumulative final is an executable examination that a student will complete
-through the use of GitHub, VS Code, and the computer security and programming
+through the use of GitHub, VS Code, and the software engineering and programming
 tools installed on their laptops. Students may use external sources, including
 artificial intelligence coding assistants, during the completion of the final
 examination provided that they cite these sources and explain, in detail, how

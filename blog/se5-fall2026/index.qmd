@@ -118,47 +118,98 @@ for everyone in theory to building with everyone in practice.
 
 ### Rejecting Singular Approaches
 
-One of the main statements that you as a software engineer should hold close is: "If we want to drive change and increase representation, we need to evaluate whether we’re creating an ecosystem in which all aspiring engineers and other technology professionals can thrive." We need to stay aware of the fact that the software engineering field is not a monolith, and that there are many different ways to approach problems.
+One of the main statements that you as a software engineer should hold close
+is: "If we want to drive change and increase representation, we need to
+evaluate whether we’re creating an ecosystem in which all aspiring engineers
+and other technology professionals can thrive." We need to stay aware of the
+fact that the software engineering field is not a monolith, and that there are
+many different ways to approach problems.
 
-We need to be open to new ideas and perspectives, and we need to be willing to challenge our own assumptions. One common methodology is to build for the majority use case first, leaving improvements and features that address edge cases for later. This approach gives users who are not part of the majority use case a subpar experience, and it can be frustrating for them to have to wait for improvements that address their needs. We need to be willing to challenge this approach and to build for all users from the start.
+We need to be open to new ideas and perspectives, and we need to be willing to
+challenge our own assumptions. One common methodology is to build for the
+majority use case first, leaving improvements and features that address edge
+cases for later. This approach gives users who are not part of the majority use
+case a subpar experience, and it can be frustrating for them to have to wait
+for improvements that address their needs. We need to be willing to challenge
+this approach and to build for all users from the start.
 
 ### Challenging Established Processes
 
-A case at Google was evaluated for equity implications. Multiple engineering teams got together to try to build a new feature, a global hiring requisition system. Their main line of communication was the feedback from what would be the main users of this new feature, recruiters. The recruiters main focus was to minimize wasted time when it comes to hiring. One of the main features they wanted added was the ability to highlight performance ratings as soon as interest was expressed in a job by an internal transfer. This raised some questions by another engineer:
+A case at Google was evaluated for equity implications. Multiple engineering
+teams got together to try to build a new feature, a global hiring requisition
+system. Their main line of communication was the feedback from what would be
+the main users of this new feature, recruiters. The recruiters main focus was
+to minimize wasted time when it comes to hiring. One of the main features they
+wanted added was the ability to highlight performance ratings as soon as
+interest was expressed in a job by an internal transfer. This raised some
+questions by another engineer:
 
 - Are developmental assessments a predictive measure of performance?
-- Are the performance assessments being presented to prospective managers free of individual bias?
+- Are the performance assessments being presented to prospective managers free
+of individual bias?
 - Are performance assessment scores standardized across organizations?
 
-If you answered "no" to any of these questions, then this new feature could drive inequitable, and therefore potentially harmful, results.
+If you answered "no" to any of these questions, then this new feature could
+drive inequitable, and therefore potentially harmful, results.
 
-After seeing the potential for inequitable results, a study was conducted in which those with a lower performance rating were discovered to have a higher likelihood of overcoming the poor rating if they found a new team. These results showed that while ratings are important, they are only indicative of a person's performance at that moment in time, and that they are not a predictive measure of future performance.
+After seeing the potential for inequitable results, a study was conducted in
+which those with a lower performance rating were discovered to have a higher
+likelihood of overcoming the poor rating if they found a new team. These
+results showed that while ratings are important, they are only indicative of a
+person's performance at that moment in time, and that they are not a predictive
+measure of future performance.
 
 ### Values vs Outcomes
 
-Despite a strong commitment, heavy investments, and inclusive core values, Google continuously misses its goal of building a hiring workforce that represents its global user base. The issue does not arise within company values or intentions, but rather in how policies are applied and practiced at the implementation level. Feedback is easy to gather when you rely on those familiar, but do not consider those that you may not have reached yet.
+Despite a strong commitment, heavy investments, and inclusive core values,
+Google continuously misses its goal of building a hiring workforce that
+represents its global user base. The issue does not arise within company values
+or intentions, but rather in how policies are applied and practiced at the
+implementation level. Feedback is easy to gather when you rely on those
+familiar, but do not consider those that you may not have reached yet.
 
 How can we ensure that our values are reflected in our outcomes?
 
 1. Take a hard look in the mirror.
-   - True inclusivity requires fixing implementation failures and breaking old habits, rather than relying solely on good intentions or company values.
+   - True inclusivity requires fixing implementation failures and breaking old
+   habits, rather than relying solely on good intentions or company values.
 2. Don’t build for everyone. Build with everyone.
-   - To build universally accessible technology, products must be designed with diverse communities, highlighting the most vulnerable populations, rather than assuming their needs.
+   - To build universally accessible technology, products must be designed with
+   diverse communities, highlighting the most vulnerable populations, rather
+   than assuming their needs.
 3. Design for the user who will have the most difficulty using your product.
    - Don’t trade equity for short-term velocity.
-   - Prioritizing and solving for the users who face the greatest barriers automatically improves the overall product experience for everyone.
+   - Prioritizing and solving for the users who face the greatest barriers
+   automatically improves the overall product experience for everyone.
 4. Don’t assume equity; measure equity throughout your systems.
-   - Keep in mind that even those who make decisions can also be undereducated and subject others to bias. Companies must be sure to continuously measure equity across all systems and collaborate with teams and individuals who are subject matter experts to expose and mitigate implicit biases.
+   - Keep in mind that even those who make decisions can also be under-educated
+   and subject others to bias. Companies must be sure to continuously measure
+   equity across all systems and collaborate with teams and individuals who are
+   subject matter experts to expose and mitigate implicit biases.
 5. Change is possible.
-   - Overcoming modern, overwhelming digital challenges requires a fundamental willingness to abandon outdated, failing approaches in favor of continuous self-change.
+   - Overcoming modern, overwhelming digital challenges requires a fundamental
+   willingness to abandon outdated, failing approaches in favor of continuous
+   self-change.
 
 ### Pushing Forward
 
-The path to equity will never be easy. although we not only can but we should transition from simply creating tools to growing our understanding of how what we are producing will impact others. We should challenge our education, influence our own teams and managers, and do comprehensive user research. As future engineers ourselves we should focus first on the users who are most impacted by bias and discrimination. It is possible together to accelerate progress to a more inclusive engineering environment by owning up to our own failures and make changes that push everyone forward without creating products and environments that ignore underrepresented groups. This is not something that can be done alone we all have to work together to produce these effects and create products for not only ourselves and our peers but for those who constantly face discrimination in the products that they use today.
+The path to equity will never be easy. Although we not only can but we should
+transition from simply creating tools to growing our understanding of how what
+we are producing will impact others. We should challenge our education,
+influence our own teams and managers, and do comprehensive user research. As
+future engineers ourselves we should focus first on the users who are most
+impacted by bias and discrimination. It is possible together to accelerate
+progress to a more inclusive engineering environment by owning up to our own
+failures and make changes that push everyone forward without creating products
+and environments that ignore underrepresented groups. This is not something
+that can be done alone we all have to work together to produce these effects
+and create products for not only ourselves and our peers but for those who
+constantly face discrimination in the products that they use today.
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our team built `Equity-Planner`, a simple CLI for creating inclusive software testing checklists. You can view the project here: [Equity-Planner on
+Our team built `Equity-Planner`, a simple CLI for creating inclusive software
+testing checklists. You can view the project here: [Equity-Planner on
 GitHub](https://github.com/ojharitesh/Equity-Planner).
 
 :::

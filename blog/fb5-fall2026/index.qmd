@@ -4,7 +4,7 @@ title: 'Mutation Analysis'
 date: '2026-10-14'
 date-format: long
 categories: [post, software engineering, fuzzing book]
-description: <em>How can we assess the effectiveness of test suites?</em>
+description: <em>How can mutation analysis make our program more effective</em>
 toc: true
 page-layout: full
 ---

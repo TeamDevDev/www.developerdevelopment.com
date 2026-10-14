@@ -1,1 +1,170 @@
+---
+author: [ Alexander Goddard, Eyra Co, Gregory M. Kapfhammer]
+title: 'Mutation Analysis'
+date: '2026-10-14'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can we assess the effectiveness of test suites?</em>
+toc: true
+page-layout: full
+---
 
+## Overview
+
+This blog focuses on the ["Mutation
+Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of
+[The Fuzzing Book](https://www.fuzzingbook.org/). Mutation testing is a technique 
+used to evaluate how well a test suite identifies errors in a program. It involves 
+making small, intentional changes to the code to see whether existing tests can 
+detect them. This approach helps developers understand whether their tests are
+effective and where improvements may be needed.
+
+## Summary
+
+Mutation is a type of testing where it uses bases of the original code and from
+that it creates potiential bugs called "mutants". Developers then run their program 
+hoping that it detects the changes made. However if all tests pass it means that their 
+test suite has a weakness. 
+
+### Limits to Fuzzing
+
+Mutation testing is different from regular code coverage because code coverage
+only shows which parts of a program are tested. It does not tell us if the 
+program gives the correct results. For example, we could have 100% code coverage
+and still have bugs that our tests do not catch. This happens because tests may 
+check whether the program runs without errors instead of checking whether the 
+results are correct. Code coverage is still useful, but it does not tell us 
+everything we need to know. Mutation testing helps us find weaknesses in our 
+tests by making small changes to the code and checkingif our tests catch them. 
+This helps developers find hidden bugs and feel more confident in their code.
+
+
+### Injecting Artificial Faults
+
+Mutation analysis is a way to check how well our tests find bugs in a program.
+It works by making small changes to the code and checking if the tests catch 
+them. For example, we could change a + to a -. If the tests do not catch the 
+change, it means they may need to be improved. The mutation score tells us 
+how many changes the tests were able to catch.
+
+Mutation testing helps us understand if our tests can find real bugs. It 
+can be used with regular tests and other testing tools. It is similar to 
+fuzzing because both help find problems in software, but mutation testing 
+focuses on checking how good our tests are.
+
+Adding errors to code by hand can take a lot of time, and developers might 
+miss some important problems. Mutation analysis makes this easier by 
+creating small changes to the code automatically. Each changed version 
+is called a mutant. If the tests catch the change, the mutant is called
+killed. If the tests do not catch it, the mutant survives. This helps 
+developers see where their tests need improvement.
+
+### A Simple Function Mutator
+
+Below is code from the [Fuzzing
+Book](https://www.fuzzingbook.org/html/MutationAnalysis.html), which
+demonstrates a simple mutator.
+
+```{python}
+import ast
+import inspect
+
+def triangle(a, b, c):
+    if a == b:
+        if b == c:
+            return 'Equilateral'
+        else:
+            return 'Isosceles'
+    elif b == c:
+        return 'Isosceles'
+    elif a == c:
+        return 'Isosceles'
+    else:
+        return 'Scalene'
+
+class MuFunctionAnalyzer:
+    def __init__(self, fn, log=False):
+        self.fn = fn
+        self.name = fn.__name__
+        src = inspect.getsource(fn)
+        self.ast = ast.parse(src)
+        self.src = ast.unparse(self.ast)  # normalize
+        self.mutator = self.mutator_object()
+        self.nmutations = self.get_mutation_count()
+        self.un_detected = set()
+        self.mutants = []
+        self.log = log
+
+    def mutator_object(self, locations=None):
+        return StmtDeletionMutator(locations)
+
+    def register(self, m):
+        self.mutants.append(m)
+
+    def finish(self):
+        pass
+    
+    def get_mutation_count(self):
+        self.mutator.visit(self.ast)
+        return self.mutator.count
+
+class Mutator(ast.NodeTransformer):
+    def __init__(self, mutate_location=-1):
+        self.count = 0
+        self.mutate_location = mutate_location
+
+    def mutable_visit(self, node):
+        self.count += 1  # statements start at line no 1
+        if self.count == self.mutate_location:
+            return self.mutation_visit(node)
+        return self.generic_visit(node)
+
+class StmtDeletionMutator(Mutator):
+    def visit_Return(self, node): return self.mutable_visit(node)
+    def visit_Delete(self, node): return self.mutable_visit(node)
+
+    def visit_Assign(self, node): return self.mutable_visit(node)
+    def visit_AnnAssign(self, node): return self.mutable_visit(node)
+    def visit_AugAssign(self, node): return self.mutable_visit(node)
+
+    def visit_Raise(self, node): return self.mutable_visit(node)
+    def visit_Assert(self, node): return self.mutable_visit(node)
+
+    def visit_Global(self, node): return self.mutable_visit(node)
+    def visit_Nonlocal(self, node): return self.mutable_visit(node)
+
+    def visit_Expr(self, node): return self.mutable_visit(node)
+
+    def visit_Pass(self, node): return self.mutable_visit(node)
+    def visit_Break(self, node): return self.mutable_visit(node)
+    def visit_Continue(self, node): return self.mutable_visit(node)
+    def mutation_visit(self, node): return ast.Pass()
+
+MuFunctionAnalyzer(triangle).nmutations
+```
+
+
+
+### Limitations to Mutators
+
+One challenge in mutation analysis is that not all generated mutants are faulty.
+For instance, consider a basic python function, think about how many different
+ways you could add a mutator to it. Now consider this, while most mutants
+introduce faults, some may be the same as the original program in functionality,
+which may not in itself be a bug. These **equivalent mutants** do not represent
+actual faults, making it hard to accurately judge the effectiveness of a test
+suite. For example, if a mutation score is 70%, it's unclear if the remaining
+30% are undetected faults or equivalent mutants. This ambiguity makes it
+difficult to determine how much a test suite can be improved.
+
+## Reflection
+
+In this article, we discussed the limitations of fuzzing, an example of an
+ineffective test, injecting artificial faults, a code example for a simple
+mutator, and limitations to mutators. Like fuzzing, mutators have their benefits
+and uses, but they also have their faults. How should we start to incorporate
+mutation testing into our development process?
+
+{{< include /_fuzzingbook-reference.qmd >}}
+
+{{< include /_back-blog.qmd >}}

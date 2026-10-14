@@ -74,10 +74,7 @@ class TestGCD(unittest.TestCase):
 ======================================================================
 FAIL: test_simple (__main__.TestGCD)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
-    assert cfg.gcd(1, 0) == 1
-AssertionError
+
 ```
 
 ### 1. Creating the Tests
@@ -91,11 +88,14 @@ class TestGCD(unittest.TestCase):
         assert cfg.gcd(0, 1) == 1
 ```
 
-- `class TestGCD(unittest.TestCase):` creates a group of tests for the GCD function.
+- `class TestGCD(unittest.TestCase):` creates a group of tests for the GCD 
+function.
 - `def test_simple(self):` creates the first test.
-- `assert cfg.gcd(1, 0) == 1` runs the GCD function with `1` and `0` and checks that the answer is `1`.
+- `assert cfg.gcd(1, 0) == 1` runs the GCD function with `1` and `0` and 
+checks that the answer is `1`.
 - `def test_mirror(self):` creates a second test.
-- `assert cfg.gcd(0, 1) == 1` checks that the GCD function returns `1` when the numbers are reversed.
+- `assert cfg.gcd(0, 1) == 1` checks that the GCD function returns `1` when
+the numbers are reversed.
 
 These tests check whether the function gives the correct answers.
 
@@ -106,7 +106,8 @@ for mutant in MuProgramAnalyzer('gcd', gcd_src):
     mutant[test_module].runTest('TestGCD')
 ```
 
-- `MuProgramAnalyzer('gcd', gcd_src)` takes the name of the program (`gcd`) and its source code (`gcd_src`) and creates changed versions of the program.
+- `MuProgramAnalyzer('gcd', gcd_src)` takes the name of the program (`gcd`) and 
+its source code (`gcd_src`) and creates changed versions of the program.
 - `for mutant in ...` goes through each changed version, called a *mutant*.
 - `mutant[test_module]` accesses the test module for that mutant.
 - `.runTest('TestGCD')` runs the tests in `TestGCD` against the changed program.
@@ -119,7 +120,8 @@ This lets us check whether the tests can catch mistakes caused by changes to the
 mutant.pm.score()
 ```
 
-This calculates the mutation score, which tells us how many mutants were caught by the tests compared with the total number counted in the score.
+This calculates the mutation score, which tells us how many mutants were caught by 
+the tests compared with the total number counted in the score.
 
 ### 4. Understanding the Error Message
 
@@ -136,7 +138,8 @@ FAILED (failures=1)
 - `Ran 1 test` means one test ran during this execution.
 - `FAILED (failures=1)` means that test did not pass.
 
-The test failed because the modified program did not give the expected result. This shows how mutation analysis checks whether tests can detect problems in changed code.
+The test failed because the modified program did not give the expected result. 
+This shows how mutation analysis checks whether tests can detect problems in changed code.
 
 
 ## Reflection

@@ -1,0 +1,168 @@
+---
+author: [ Alexander Goddard, Eyra Co, Gregory M. Kapfhammer]
+title: 'Mutation Analysis'
+date: '2026-10-14'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can mutation analysis make our program more effective</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog focuses on the ["Mutation
+Analysis"](https://www.fuzzingbook.org/html/MutationAnalysis.html) chapter of
+[The Fuzzing Book](https://www.fuzzingbook.org/). Mutation testing is a
+technique used to evaluate how well a test suite identifies errors in a
+program. It involves making small, intentional changes to the code to see
+whether existing tests can detect them. This approach helps developers
+understand whether their tests are effective and where improvements may be
+needed.
+
+## Summary
+
+Mutation is a type of testing where it uses bases of the original code and from
+that it creates potential bugs called "mutants". Developers then run their
+program hoping that it detects the changes made. However, if all tests pass it
+means that their test suite has a weakness.
+
+### Limits to Fuzzing
+
+Mutation testing is different from regular code coverage because code coverage
+only shows which parts of a program are tested. It does not tell us if the
+program gives the correct results. For example, we could have 100% code coverage
+and still have bugs that our tests do not catch. This happens because tests may
+check whether the program runs without errors instead of checking whether the
+results are correct. Code coverage is still useful, but it does not tell us
+everything we need to know. Mutation testing helps us find weaknesses in our
+tests by making small changes to the code and checking if our tests catch them.
+This helps developers find hidden bugs and feel more confident in their code.
+
+### Injecting Artificial Faults
+
+Mutation analysis is a way to check how well our tests find bugs in a program.
+It works by making small changes to the code and checking if the tests catch
+them. For example, we could change a `+` to a `-`. If the tests do not catch
+the change, it means they may need to be improved. The mutation score tells us
+how many changes the tests were able to catch.
+
+Mutation testing helps us understand if our tests can find real bugs. It can be
+used with regular tests and other testing tools. It is similar to fuzzing
+because both help find problems in software, but mutation testing focuses on
+checking how good our tests are.
+
+Adding errors to code by hand can take a lot of time, and developers might miss
+some important problems. Mutation analysis makes this easier by creating small
+changes to the code automatically. Each changed version is called a mutant. If
+the tests catch the change, the mutant is called killed. If the tests do not
+catch it, the mutant survives. This helps developers see where their tests need
+improvement.
+
+Here is `MuProgramAnalyzer` that runs tests for an entire program used in the FB:
+
+```python
+class TestGCD(unittest.TestCase):
+>>>     def test_simple(self):
+>>>         assert cfg.gcd(1, 0) == 1
+>>>
+>>>     def test_mirror(self):
+>>>         assert cfg.gcd(0, 1) == 1
+>>> for mutant in MuProgramAnalyzer('gcd', gcd_src):
+>>>     mutant[test_module].runTest('TestGCD')
+>>> mutant.pm.score()
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+
+```
+
+### 1. Creating the Tests
+
+```python
+class TestGCD(unittest.TestCase):
+    def test_simple(self):
+        assert cfg.gcd(1, 0) == 1
+
+    def test_mirror(self):
+        assert cfg.gcd(0, 1) == 1
+```
+
+- `class TestGCD(unittest.TestCase):` creates a group of tests for the GCD
+function.
+- `def test_simple(self):` creates the first test.
+- `assert cfg.gcd(1, 0) == 1` runs the GCD function with `1` and `0` and
+checks that the answer is `1`.
+- `def test_mirror(self):` creates a second test.
+- `assert cfg.gcd(0, 1) == 1` checks that the GCD function returns `1` when
+the numbers are reversed.
+
+These tests check whether the function gives the correct answers.
+
+### 2. Running Mutation Analysis
+
+```python
+for mutant in MuProgramAnalyzer('gcd', gcd_src):
+    mutant[test_module].runTest('TestGCD')
+```
+
+- `MuProgramAnalyzer('gcd', gcd_src)` takes the name of the program (`gcd`) and
+its source code (`gcd_src`) and creates changed versions of the program.
+- `for mutant in ...` goes through each changed version, called a *mutant*.
+- `mutant[test_module]` accesses the test module for that mutant.
+- `.runTest('TestGCD')` runs the tests in `TestGCD` against the changed program.
+
+This lets us check whether the tests can catch mistakes caused by changes to
+the code.
+
+### 3. Calculating the Score
+
+```python
+mutant.pm.score()
+```
+
+This calculates the mutation score, which tells us how many mutants were caught
+by the tests compared with the total number counted in the score.
+
+### 4. Understanding the Error Message
+
+```text
+FAIL: test_simple
+AssertionError
+
+Ran 1 test
+FAILED (failures=1)
+```
+
+- `FAIL: test_simple` means the first test failed.
+- `AssertionError` means the result was not equal to the expected answer, `1`.
+- `Ran 1 test` means one test ran during this execution.
+- `FAILED (failures=1)` means that test did not pass.
+
+The test failed because the modified program did not give the expected result.
+This shows how mutation analysis checks whether tests can detect problems in
+changed code.
+
+## Reflection
+
+To start using mutation testing, developers can add it to their normal testing
+process. First, they should write tests for their code and make sure the tests
+pass. Then, they can use a mutation testing tool to make small changes to the
+code and run the tests again. If the tests fail, it means they caught the
+change. If the tests still pass, developers can look at their tests and see if
+they need to improve them. Mutation testing can help find weaknesses in tests,
+but it should be used alongside other testing methods because it cannot find
+every possible problem. By using it regularly, developers can build stronger
+tests and make their software more reliable.
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+We built a tool called `Mutalysis`, which performs mutation analysis on a
+python program. You can view the project here: [Mutalysis on
+GitHub](https://github.com/XanderGoddard7/Mutalyasis)
+
+:::
+
+{{< include /_fuzzingbook-reference.qmd >}}
+
+{{< include /_back-blog.qmd >}}

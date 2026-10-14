@@ -59,111 +59,96 @@ is called a mutant. If the tests catch the change, the mutant is called
 killed. If the tests do not catch it, the mutant survives. This helps 
 developers see where their tests need improvement.
 
-### A Simple Function Mutator
+Here is `MuProgramAnalyzer` that runs tests for an entire program used in the FB:
 
-Below is code from the [Fuzzing
-Book](https://www.fuzzingbook.org/html/MutationAnalysis.html), which
-demonstrates a simple mutator.
-
-```{python}
-import ast
-import inspect
-
-def triangle(a, b, c):
-    if a == b:
-        if b == c:
-            return 'Equilateral'
-        else:
-            return 'Isosceles'
-    elif b == c:
-        return 'Isosceles'
-    elif a == c:
-        return 'Isosceles'
-    else:
-        return 'Scalene'
-
-class MuFunctionAnalyzer:
-    def __init__(self, fn, log=False):
-        self.fn = fn
-        self.name = fn.__name__
-        src = inspect.getsource(fn)
-        self.ast = ast.parse(src)
-        self.src = ast.unparse(self.ast)  # normalize
-        self.mutator = self.mutator_object()
-        self.nmutations = self.get_mutation_count()
-        self.un_detected = set()
-        self.mutants = []
-        self.log = log
-
-    def mutator_object(self, locations=None):
-        return StmtDeletionMutator(locations)
-
-    def register(self, m):
-        self.mutants.append(m)
-
-    def finish(self):
-        pass
-    
-    def get_mutation_count(self):
-        self.mutator.visit(self.ast)
-        return self.mutator.count
-
-class Mutator(ast.NodeTransformer):
-    def __init__(self, mutate_location=-1):
-        self.count = 0
-        self.mutate_location = mutate_location
-
-    def mutable_visit(self, node):
-        self.count += 1  # statements start at line no 1
-        if self.count == self.mutate_location:
-            return self.mutation_visit(node)
-        return self.generic_visit(node)
-
-class StmtDeletionMutator(Mutator):
-    def visit_Return(self, node): return self.mutable_visit(node)
-    def visit_Delete(self, node): return self.mutable_visit(node)
-
-    def visit_Assign(self, node): return self.mutable_visit(node)
-    def visit_AnnAssign(self, node): return self.mutable_visit(node)
-    def visit_AugAssign(self, node): return self.mutable_visit(node)
-
-    def visit_Raise(self, node): return self.mutable_visit(node)
-    def visit_Assert(self, node): return self.mutable_visit(node)
-
-    def visit_Global(self, node): return self.mutable_visit(node)
-    def visit_Nonlocal(self, node): return self.mutable_visit(node)
-
-    def visit_Expr(self, node): return self.mutable_visit(node)
-
-    def visit_Pass(self, node): return self.mutable_visit(node)
-    def visit_Break(self, node): return self.mutable_visit(node)
-    def visit_Continue(self, node): return self.mutable_visit(node)
-    def mutation_visit(self, node): return ast.Pass()
-
-MuFunctionAnalyzer(triangle).nmutations
+```python
+class TestGCD(unittest.TestCase):
+>>>     def test_simple(self):
+>>>         assert cfg.gcd(1, 0) == 1
+>>>
+>>>     def test_mirror(self):
+>>>         assert cfg.gcd(0, 1) == 1
+>>> for mutant in MuProgramAnalyzer('gcd', gcd_src):
+>>>     mutant[test_module].runTest('TestGCD')
+>>> mutant.pm.score()
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
 ```
 
+### 1. Creating the Tests
 
+```python
+class TestGCD(unittest.TestCase):
+    def test_simple(self):
+        assert cfg.gcd(1, 0) == 1
 
-### Limitations to Mutators
+    def test_mirror(self):
+        assert cfg.gcd(0, 1) == 1
+```
 
-One challenge in mutation analysis is that not all generated mutants are faulty.
-For instance, consider a basic python function, think about how many different
-ways you could add a mutator to it. Now consider this, while most mutants
-introduce faults, some may be the same as the original program in functionality,
-which may not in itself be a bug. These **equivalent mutants** do not represent
-actual faults, making it hard to accurately judge the effectiveness of a test
-suite. For example, if a mutation score is 70%, it's unclear if the remaining
-30% are undetected faults or equivalent mutants. This ambiguity makes it
-difficult to determine how much a test suite can be improved.
+- `class TestGCD(unittest.TestCase):` creates a group of tests for the GCD function.
+- `def test_simple(self):` creates the first test.
+- `assert cfg.gcd(1, 0) == 1` runs the GCD function with `1` and `0` and checks that the answer is `1`.
+- `def test_mirror(self):` creates a second test.
+- `assert cfg.gcd(0, 1) == 1` checks that the GCD function returns `1` when the numbers are reversed.
+
+These tests check whether the function gives the correct answers.
+
+### 2. Running Mutation Analysis
+
+```python
+for mutant in MuProgramAnalyzer('gcd', gcd_src):
+    mutant[test_module].runTest('TestGCD')
+```
+
+- `MuProgramAnalyzer('gcd', gcd_src)` takes the name of the program (`gcd`) and its source code (`gcd_src`) and creates changed versions of the program.
+- `for mutant in ...` goes through each changed version, called a *mutant*.
+- `mutant[test_module]` accesses the test module for that mutant.
+- `.runTest('TestGCD')` runs the tests in `TestGCD` against the changed program.
+
+This lets us check whether the tests can catch mistakes caused by changes to the code.
+
+### 3. Calculating the Score
+
+```python
+mutant.pm.score()
+```
+
+This calculates the mutation score, which tells us how many mutants were caught by the tests compared with the total number counted in the score.
+
+### 4. Understanding the Error Message
+
+```text
+FAIL: test_simple
+AssertionError
+
+Ran 1 test
+FAILED (failures=1)
+```
+
+- `FAIL: test_simple` means the first test failed.
+- `AssertionError` means the result was not equal to the expected answer, `1`.
+- `Ran 1 test` means one test ran during this execution.
+- `FAILED (failures=1)` means that test did not pass.
+
+The test failed because the modified program did not give the expected result. This shows how mutation analysis checks whether tests can detect problems in changed code.
+
 
 ## Reflection
 
-In this article, we discussed the limitations of fuzzing, an example of an
-ineffective test, injecting artificial faults, a code example for a simple
-mutator, and limitations to mutators. Like fuzzing, mutators have their benefits
-and uses, but they also have their faults. How should we start to incorporate
-mutation testing into our development process?
+To start using mutation testing, developers can add it to their normal testing process.
+First, they should write tests for their code and make sure the tests pass. Then, 
+they can use a mutation testing tool to make small changes to the code and run the 
+tests again. If the tests fail, it means they caught the change. If the tests still 
+pass, developers can look at their tests and see if they need to improve them. Mutation 
+testing can help find weaknesses in tests, but it should be used alongside other testing 
+methods because it cannot find every possible problem. By using it regularly, developers
+can build stronger tests and make their software more reliable.
 
 {{< include /_fuzzingbook-reference.qmd >}}
 

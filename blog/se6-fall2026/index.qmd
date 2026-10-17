@@ -1,0 +1,32 @@
+---
+author: [Dylan DeLong-Headley, Abishek Dhakal, Gregory M. Kapfhammer]
+title: 'How to Lead a Team'
+date: '2026-10-17'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can we cultivate great leaders in and for our team?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+## Summary
+
+### Managers & Tech Leads (and Both)
+
+### Moving from an Individual Contributor Role to a Leadership Role
+
+### The Engineering Manager
+
+### Antipatterns
+
+### Positive Patterns
+
+### The Unexpected Question
+
+### Other Tips & Tricks
+
+### People Are Like Plants
+
+### Reflection

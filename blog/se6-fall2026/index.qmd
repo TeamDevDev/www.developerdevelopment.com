@@ -33,7 +33,83 @@ can build the team's skills and ability to work independently.
 
 ### Moving from an Individual Contributor Role to a Leadership Role
 
+Every project needs someone to guide it, and that person is often an engaged
+individual contributor who gradually starts settling disagreements, making
+decisions, and coordinating teammates. The chapter calls this drift
+"manageritis." Even engineers who insist they will never manage can end up
+leading after doing their work well. The chapter does not try to convince
+readers to become managers. Instead, it explains how good leaders serve their
+teams through humility, respect, and trust, so that anyone can understand
+leadership well enough to guide their own work.
+
+Many engineers are hesitant to take on a leadership role, and the chapter
+identifies several common reasons:
+
+- **Less time coding:** Writing code produces visible results each day, while
+  management work is harder to measure and its benefits take longer to appear.
+  New leaders can feel unproductive even when their team is doing well.
+- **The Peter Principle:** *“In a hierarchy every employee tends to rise to*
+  *his level of incompetence.”* People tend to be promoted until they reach a
+  role they cannot perform well. Google tries to avoid this by expecting people
+  to work above their current level for a time before they are promoted.
+- **Bad past managers:** Engineers who have mostly worked for poor managers may
+  have little desire to become one, as they've never had a model for what to
+  do that would be successful.
+
+The chapter also offers reasons to consider leading. An individual's output is
+limited, but guiding a team allows a person to have a much larger impact.
+People who step in when a team lacks direction often discover that they are
+good at helping and protecting others. Google asserts that someone has to lead,
+and a capable engineer is often the right person to do it.
+
+#### Servant Leadership
+
+New managers sometimes repeat the habits of the bad managers they once worked
+for, such as micromanaging, ignoring low performers, or hiring people who will
+not challenge them. The author recalls a Google mentor that told him,
+*"Above all, resist the urge to manage."* The urge to "manage" is often,
+according to the chapter, the new leader's most harmful instinct. It offers the
+alternative: servant leadership, where the leader's main job is to support
+the team. In practice, this means building an environment of humility,
+respect, and trust; clearing obstacles the team cannot remove alone; helping
+the group reach consensus; offering small kindnesses; and staying involved in
+the work when needed. A servant leader looks after both the technical and the
+social health of the team, and the social side, though harder to manage, is
+just as important.
+
 ### The Engineering Manager
+
+The common image of a rigid, controlling manager goes back to military
+hierarchies and to factories in the Industrial Revolution. Factory workers
+could be trained quickly and replaced easily, so supervisors relied on a
+"carrot-and-stick" approach: reward people who comply and punish those who
+do not. Google says that Software engineering is different. Engineers working
+on large codebases can need months to become productive, and creative work
+requires time, support, and room to think. Research suggests that
+carrot-and-stick management actually hurts this kind of work.
+
+Today's engineering managers are more effective when they trust their teams.
+When people can see that their manager trusts them, they feel *"a positive*
+*pressure to live up to that trust."*" The chapter's key distinction is that
+traditional managers focus on *how* work gets done, while great managers focus
+on *what* gets done and let the team decide how to do it.
+
+#### Failure Is an Option
+
+Leaders should also create psychological safety, an environment where team
+members can be themselves and take risks without fearing their manager's or
+peers' reactions. People are poor at judging risk, and organizations often
+settle for small, safe wins. Aiming for an ambitious goal may fail, but it
+usually produces far more than a conservative target. Failure is acceptable as
+long as the team learns from it and avoids repeating the same mistake.
+
+Not all failures cost the same. Failing fast is cheap, failing slowly wastes
+engineering time, and failures that reach customers are the most expensive.
+After major failures, Google teams write postmortems that explain what
+happened and how to prevent it from happening again. The goal is to fix the
+underlying problem rather than assign blame. The chapter also recommends
+praising individuals in public, giving individual criticism in private, and
+treating failures as learning opportunities for the whole team.
 
 ### Antipatterns
 
@@ -67,6 +143,43 @@ leadership. A leader needs to listen, address problems directly, and give
 people enough support and independence to do their work well.
 
 ### Positive Patterns
+
+The chapter also describes positive patterns: practices the authors have seen
+in effective leaders at Google, in other leaders they have observed, and in
+their own mentors. These habits help leaders earn trust, keep the team moving,
+and give people room to grow.
+
+- **Lose the ego:** Humility does not mean a lack of confidence. Leaders can
+  hold strong opinions while building a shared team identity, trusting the
+  people closest to the work, welcoming criticism, and apologizing sincerely
+  when they make mistakes.
+- **Be a Zen master:** Teams take emotional cues from their leader, so staying
+  calm and avoiding excessive cynicism matters. Answering questions with
+  questions helps teammates reach their own solutions and keep ownership.
+- **Be a catalyst:** Leaders often move work forward by building consensus
+  rather than relying on authority. A team may choose to let its lead make
+  quick decisions, and leaders do not need complete agreement before acting.
+- **Remove roadblocks:** When the team is stuck on a technical or
+  organizational problem, the leader steps in to get it moving. Knowing the
+  right person to ask is often more valuable than knowing the answer.
+- **Be a teacher and a mentor:** Leaders should let junior engineers learn by
+  doing a task, even when it would be faster to do it themselves. Good mentors
+  explain clearly and judge how much help someone needs without
+  over-explaining.
+- **Set clear goals:** A concise mission statement, clear priorities, and
+  guidance on trade-offs keep everyone moving in the same direction. Once the
+  goals are set, the leader can step back and only check in periodically.
+- **Be honest:** Leaders should admit when they do not know something or
+  cannot share information. Difficult feedback should be specific, private,
+  and respectful rather than hidden inside a "compliment sandwich," where the
+  criticism is easy to miss.
+- **Track happiness:** Leaders should watch for burnout, recognize good work,
+  and share thankless tasks fairly. Asking what people need and making their
+  career goals explicit helps leaders offer useful support.
+
+These patterns share a common thread: a leader's main job is to support the
+people doing the work. By staying humble, honest, and focused on clear goals,
+leaders create a team where people can do their best work and grow over time.
 
 ### The Unexpected Question
 
@@ -116,6 +229,42 @@ commitments deserve more careful consideration.
 
 ### People Are Like Plants
 
+The author's mother-in-law, who raised six very children, compared kids to
+plants when he asked her how she "managed" it. Some need little water and
+lots of sun, others need shade and damp soil, and some do best with fertilizer.
+Treating them all the same means none of them gets what they need. Team members
+work the same way, and a leader's job is to learn what each person needs. On
+a team, the two main inputs are motivation and direction. Someone stuck in
+a rut needs motivation, someone distracted or unsure of what to do needs
+direction, and someone who feels adrift may need both. Giving either one to a
+person who does not need it can be frustrating for them.
+
+Direction is fairly simple to provide: understand what needs to be done,
+organize the work, and break it into manageable tasks. Motivation is more
+complicated.
+
+#### Intrinsic Versus Extrinsic Motivation
+
+Extrinsic motivation comes from outside a person, such as a paycheck, while
+intrinsic motivation comes from within. Drawing on Dan Pink's book *Drive*,
+Google argues that the best way to motivate people is to strengthen their
+intrinsic motivation. Pink identifies three sources of it:
+
+- **Autonomy:** People work better when they are not micromanaged. A leader
+  can set the general direction and let the team decide how to get there,
+  which gives people a real stake in the product and a sense of ownership.
+- **Mastery:** People need chances to improve their skills and learn new ones.
+  Like a knife that dulls without sharpening, skills fade without practice,
+  and a team grows stronger when its members keep learning.
+- **Purpose:** Work is more motivating when people understand why it matters.
+  Even a product with modest impact can inspire a team when leaders connect
+  the work to the people it helps. One manager shared customer emails praising
+  the product with the engineers, which raised morale and led to new ideas.
+
+Money still matters, but the chapter treats it as a baseline: people should be
+paid well enough that income is not a source of stress. Beyond that point,
+autonomy, mastery, and purpose do far more to keep a team engaged.
+
 ### Reflection
 
 As future software engineers, we can apply these ideas before holding a formal
@@ -135,3 +284,16 @@ what support each person needs, agreeing on clear responsibilities, and
 addressing concerns early. We can also recognize each other's contributions
 and share opportunities to lead. The chapter encourages us to see leadership
 as an ongoing responsibility to help people grow and work effectively together.
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `team-garden`, a Discord bot for end-of-day team check-ins.
+Each teammate tends a flower by sharing their mood, their energy, and the
+answer to "What do you need?", and the team's garden shows its overall health.
+You can view the project here: [team-garden on
+GitHub](https://github.com/dheadley06/team-garden). You can also try the bot
+in our [test Discord server](https://discord.gg/uvMpejKr).
+
+:::
+
+{{< include /_back-blog.qmd >}}

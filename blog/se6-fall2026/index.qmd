@@ -105,7 +105,7 @@ The common image of a rigid, controlling manager goes back to military
 hierarchies and to factories in the Industrial Revolution. Factory workers
 could be trained quickly and replaced easily, so supervisors relied on a
 "carrot-and-stick" approach: reward people who comply and punish those who
-do not. Google says that Software engineering is different. Engineers working
+do not. Google says that software engineering is different. Engineers working
 on large codebases can need months to become productive, and creative work
 requires time, support, and room to think. Research suggests that
 carrot-and-stick management actually hurts this kind of work.

@@ -111,8 +111,8 @@ requires time, support, and room to think. Research suggests that
 carrot-and-stick management actually hurts this kind of work.
 
 Today's engineering managers are more effective when they trust their teams.
-When people can see that their manager trusts them, they feel *"a positive*
-*pressure to live up to that trust."*" The chapter's key distinction is that
+When people can see that their manager trusts them, they feel *"a positive
+pressure to live up to that trust."* The chapter's key distinction is that
 traditional managers focus on *how* work gets done, while great managers focus
 on *what* gets done and let the team decide how to do it.
 

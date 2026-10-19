@@ -13,7 +13,7 @@ page-layout: full
 
 ## Summary
 
-### Managers & Tech Leads (and Both)
+### Managers & Tech Leads
 
 Engineering leadership includes two closely connected roles. An engineering manager
 supports the team's performance, productivity, and well-being while balancing

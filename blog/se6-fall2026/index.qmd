@@ -58,7 +58,7 @@ can build the team's skills and ability to work independently.
 Every project needs someone to guide it, and that person is often an engaged
 individual contributor who gradually starts settling disagreements, making
 decisions, and coordinating teammates. The chapter calls this drift
-"manageritis." Even engineers who insist they will never manage can end up
+"manageritis". Even engineers who insist they will never manage can end up
 leading after doing their work well. The chapter does not try to convince
 readers to become managers. Instead, it explains how good leaders serve their
 teams through humility, respect, and trust, so that anyone can understand

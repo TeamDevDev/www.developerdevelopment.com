@@ -15,18 +15,123 @@ page-layout: full
 
 ### Managers & Tech Leads (and Both)
 
+Engineering leadership includes two closely connected roles. An engineering manager
+supports the team's performance, productivity, and well-being while balancing
+individual needs with the goals of the business. A tech lead focuses on the
+technical direction of the product, including architecture, technology choices,
+priorities, and project coordination. Together, they help engineers find work
+that matches their abilities and gives them opportunities to grow.
+
+On smaller teams, one person may fill both roles as a Tech Lead Manager (TLM).
+This requires balancing technical contributions with delegation and people
+management, which can be difficult for someone moving from an individual
+contributor role. Larger teams at Google generally divide these responsibilities
+between two people so each can give their work enough attention. Across these
+roles, effective leadership depends on helping other people succeed. A tech
+lead who delegates a task, even when completing it personally would be faster,
+can build the team's skills and ability to work independently.
+
 ### Moving from an Individual Contributor Role to a Leadership Role
 
 ### The Engineering Manager
 
 ### Antipatterns
 
+The chapter describes several leadership antipatterns: habits that undermine
+trust, weaken collaboration, and make a team less effective. Recognizing these
+habits helps leaders understand how their own decisions affect the people
+around them.
+
+- **Hiring pushovers:** Choosing people who will never challenge the leader
+  limits the team's independence. Strong teammates bring different ideas,
+  question mistakes, and can eventually take on leadership responsibilities.
+- **Ignoring low performers:** Avoiding difficult conversations leaves other
+  team members carrying extra work and allows frustration to grow. Leaders
+  should address problems early through respectful coaching, clear
+  expectations, and small, measurable goals.
+- **Ignoring human issues:** Technical progress depends on people whose needs
+  and circumstances vary. A leader who dismisses personal challenges can lose
+  the team's trust, even when the work itself is going well.
+- **Trying to be everyone's friend:** A manager's influence over people's
+  careers changes the relationship. Leaders can remain approachable and
+  supportive while maintaining boundaries and making fair decisions.
+- **Compromising the hiring bar:** Filling positions quickly can create lasting
+  problems if candidates do not meet the requirements of the role. Maintaining
+  hiring standards protects the team's time and ability to succeed.
+- **Treating the team like children:** Constant supervision and unnecessary
+  restrictions discourage ownership. Giving capable engineers responsibility
+  shows trust and allows them to develop their judgment.
+
+These antipatterns show why humility, respect, and trust matter in everyday
+leadership. A leader needs to listen, address problems directly, and give
+people enough support and independence to do their work well.
+
 ### Positive Patterns
 
 ### The Unexpected Question
 
+The author, Fitzpatrick, describes preparing for difficult questions before his first
+meeting with then-CEO Eric Schmidt. Instead, Schmidt ended the meeting by
+asking whether Fitzpatrick needed anything. The question caught him off guard
+because he had prepared to defend his work rather than ask for support.
+
+This example shows how a simple question can put servant leadership into
+practice. Asking team members what they need creates an opportunity to discuss
+obstacles, missing resources, or concerns that might otherwise stay hidden.
+Asking regularly during one-on-one meetings gives people time to recognize
+their needs and become more comfortable sharing them.
+
+These conversations can also help leaders understand job satisfaction and
+career goals. Someone may want to learn a skill, take on more responsibility,
+or receive recognition for work that has gone unnoticed. Leaders should also
+recognize that circumstances outside work can affect a person's capacity,
+while respecting their privacy. Listening and following through on these
+conversations helps turn concern for the team into useful support.
+
 ### Other Tips & Tricks
+
+The chapter offers several practical habits for supporting a team. Delegation
+is especially important because it gives others opportunities to learn and
+prevents the leader from becoming a bottleneck. Leaders should also stay
+involved enough to understand the work. Taking on an unpleasant task can show
+commitment and help a leader learn what the team is dealing with.
+
+Developing future leaders is another responsibility. Giving interested team
+members opportunities to coordinate work or make decisions prepares them to
+take on more responsibility. This should account for individual interests:
+engineers who prefer to remain individual contributors also need meaningful
+opportunities to grow.
+
+Leaders must also address difficult situations before they damage the team.
+Delaying a conversation about performance or disruptive behavior usually makes
+the problem harder to resolve. At the same time, leaders should protect the
+team's focus by handling unnecessary outside demands and sharing relevant
+organizational information without passing along every uncertainty.
+
+Finally, effective leaders recognize good work and make room for experiments.
+Specific praise helps people understand the value of their contributions.
+When a proposed experiment is easy to reverse and fits the team's priorities,
+giving it a chance can encourage learning. Decisions that create lasting
+commitments deserve more careful consideration.
 
 ### People Are Like Plants
 
 ### Reflection
+
+As future software engineers, we can apply these ideas before holding a formal
+leadership title. In a class project, leadership might mean clarifying the
+next milestone, helping a teammate work through a blocker, or making space for
+someone whose ideas have not been heard. These actions help the group move
+forward while building trust.
+
+One lesson we can take from this chapter is to reconsider how we measure our
+contributions. Completing a difficult feature matters, but helping another
+person understand the code or take ownership of a task can strengthen the
+whole team. Doing everything ourselves may produce a quick result while
+leaving teammates without opportunities to learn.
+
+In our next group project, we can put these lessons into practice by asking
+what support each person needs, agreeing on clear responsibilities, and
+addressing concerns early. We can also recognize each other's contributions
+and share opportunities to lead. The chapter encourages us to see leadership
+as an ongoing responsibility to help people grow and work effectively together.

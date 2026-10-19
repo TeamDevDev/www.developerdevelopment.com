@@ -11,7 +11,29 @@ page-layout: full
 
 ## Overview
 
+This blog post explores the ["How to Lead a
+Team"](https://abseil.io/resources/swe-book/html/ch05.html) chapter from
+[*Software Engineering at Google*](https://abseil.io/resources/swe-book),
+written by Brian Fitzpatrick. After earlier chapters on team culture, this
+chapter discusses the people who work to help a team succeed: its leaders.
+The chapter compares a team without a leader to a boat without a captain.
+It may keep moving, but it drifts without a clear direction. Even for
+engineers who never plan to manage anyone, understanding good leadership helps
+them work better with their own leaders and guide their own projects.
+
 ## Summary
+
+Google recognizes two leadership roles: a manager, who leads people, and a
+tech lead, who leads the technical work. Both roles require planning, but they
+call for different people skills. The chapter argues that leading a team is a
+different job from writing software, so strong engineers do not automatically
+become strong managers. Good leaders move away from traditional command-style
+management and focus on serving their team. They delegate whenever they can,
+remove obstacles, and keep the team focused on the right goals while
+protecting it from outside distractions. The sections below cover how
+engineers move into leadership, what today's engineering managers do, which
+habits help or harm a team, and how leaders can support each person's
+motivation and growth.
 
 ### Managers & Tech Leads
 

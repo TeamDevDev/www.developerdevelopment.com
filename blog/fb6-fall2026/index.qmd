@@ -134,8 +134,8 @@ As with all code, testing is important. The book uses assert statements and runs
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our tool is `FuzzGram`
-You can view the project here: [FuzzGram on
+Our tool is `FuzzGram` a command line grammar fuzzer that creates 
+random inputs following a grammar’s rules
 GitHub](https://github.com/loganbutler01/FuzzGram).
 
 :::

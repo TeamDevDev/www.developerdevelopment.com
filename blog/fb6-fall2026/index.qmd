@@ -172,18 +172,18 @@ in the program being tested.
 The book also mentions a couple smaller pieces of information that can be useful
 when working with grammars.
 
-- Escapes: When using `<` and `>` to denote nonterminals, it can be useful to
-have a way to escape them if they are needed in the input.
-- Extending Grammars: How to add new nonterminals and expansions to an existing
-grammar using copy.
-- Character Classes: Sometimes there are quicker ways to create a list with a
-lot of expansions, like using a function to generate a list from
+- **Escapes**: When using `<` and `>` to denote nonterminals, it can be useful
+to have a way to escape them if they are needed in the input.
+- **Extending Grammars**: How to add new nonterminals and expansions to an
+existing grammar using copy.
+- **Character Classes**: Sometimes there are quicker ways to create a list with
+a lot of expansions, like using a function to generate a list from
 `string.ascii_letters`, rather than typing out every single letter.
-- Grammar Shortcuts: Rather than requiring recursion to give any repetition,
+- **Grammar Shortcuts**: Rather than requiring recursion to give any repetition,
 symbols like `*` and `+` can be used to denote zero or more, and one or more
 repetitions, respectively. Another shortcut is to use parentheses to symbolize
 that what is inside is optional.
-- Grammar Extensions: Expansions can be included in a tuple, where the first
+- **Grammar Extensions**: Expansions can be included in a tuple, where the first
 element is the expansion and the second can be additional information if there
 are any constraints you may want, such as the minimum or maximum depth.
 

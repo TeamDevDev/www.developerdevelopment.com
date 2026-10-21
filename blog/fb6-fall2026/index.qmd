@@ -11,37 +11,71 @@ page-layout: full
 
 ## Overview
 
-This blog focuses on the ["Fuzzing with Grammars"](https://www.fuzzingbook.org/html/Grammars.html) chapter of [The Fuzzing Book](https://www.fuzzingbook.org/). Fuzzing is a way of testing software by generating random inputs to see if they will fail or not. This chapter introduces the concept of fuzzing with grammars. A grammar provides a structure to how the inputs are generated, which can help to provide more valid inputs for testing in a more systematic and efficient way.
+This blog focuses on the ["Fuzzing with
+Grammars"](https://www.fuzzingbook.org/html/Grammars.html) chapter of [The
+Fuzzing Book](https://www.fuzzingbook.org/). Fuzzing is a way of testing
+software by generating random inputs to see if they will fail or not. This
+chapter introduces the concept of fuzzing with grammars. A grammar provides a
+structure to how the inputs are generated, which can help to provide more valid
+inputs for testing in a more systematic and efficient way.
 
 ### Synopsis
 
-The fuzzing book describes a grammar as "a mapping of nonterminal symbols to lists of alternative expansions." In the book, nonterminal symbols are notated with angle brackets, like `<nonterminal>`. Each nonterminal will have a list of expansions to be made, eventually all leading to terminal symbols, the actual characters used in the input. For example, `<digit>`, a nonterminal, leads to the expansions `["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]`. Any of those numbers can be chosen to replace any space where `<digit>` appears in the grammar.
+The fuzzing book describes a grammar as "a mapping of nonterminal symbols to
+lists of alternative expansions." In the book, nonterminal symbols are notated
+with angle brackets, like `<nonterminal>`. Each nonterminal will have a list of
+expansions to be made, eventually all leading to terminal symbols, the actual
+characters used in the input. For example, `<digit>`, a nonterminal, leads to
+the expansions `["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]`. Any of
+those numbers can be chosen to replace any space where `<digit>` appears in the
+grammar.
 
 ### Input Languages
 
-According to the fuzzing book, "all possible behaviors of a program can be triggered by input," meaning that input is what changes how the code can behave. "Input" can be data from files, network connections, user input, etc. The set of all valid inputs to a program is called a `language`. For example, the Python language contains the set of all valid Python programs. Another example the book uses is how a regular expression like `[a-z]*` represents all sequences of lowercase letters.
+According to the fuzzing book, "all possible behaviors of a program can be
+triggered by input," meaning that input is what changes how the code can behave.
+"Input" can be data from files, network connections, user input, etc. The set of
+all valid inputs to a program is called a `language`. For example, the Python
+language contains the set of all valid Python programs. Another example the book
+uses is how a regular expression like `[a-z]*` represents all sequences of
+lowercase letters.
 
 ### Grammars
 
-Grammars are the systems for specifying how input languages are generated. They are formulas used for expressing the syntax, or rules for how characters and symbols can be arranged. The grammars the book uses are context-free grammars which are one of the types of formal grammars that can be used to describe the syntax of programming languages. Context-free grammars are given their name because nonterminals can always be replaced with their expansions regardless of what surrounds them; they don't need context to be replaced.
+Grammars are the systems for specifying how input languages are generated. They
+are formulas used for expressing the syntax, or rules for how characters and
+symbols can be arranged. The grammars the book uses are context-free grammars
+which are one of the types of formal grammars that can be used to describe the
+syntax of programming languages. Context-free grammars are given their name
+because nonterminals can always be replaced with their expansions regardless of
+what surrounds them; they don't need context to be replaced.
 
 #### Rules and Expansions
 
-Grammars have somewhere to begin with - a start symbol - and a set of rules for expansion. In the book's example:
+Grammars have somewhere to begin with --- a start symbol --- and a set of rules
+for expansion. In the book's example:
 
-```
+```text
 <start>  ::= <integer>
 <integer> ::= <digit> | <digit><integer>
 <digit>   ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ```
 
-Originally beginning with `<start>`, the first expansion is to replace `<start>` with `<integer>`. Then, `<integer>` can be replaced with either `<digit>` or `<digit><integer>`. If `<digit>` is chosen, it can be replaced with any of the digits 0-9. If `<digit><integer>` is chosen, `<digit>` will be replaced as before, but now `<integer>` will also be replaced with either `<digit>` or `<digit><integer>`. This process continues until all nonterminals have been replaced with terminals, resulting in a valid input for the program. You can also have characters next to nonterminals, like `+<integer>`, which would result in a `+` followed by a valid integer.
+Originally beginning with `<start>`, the first expansion is to replace `<start>`
+with `<integer>`. Then, `<integer>` can be replaced with either `<digit>` or
+`<digit><integer>`. If `<digit>` is chosen, it can be replaced with any of the
+digits 0-9. If `<digit><integer>` is chosen, `<digit>` will be replaced as
+before, but now `<integer>` will also be replaced with either `<digit>` or
+`<digit><integer>`. This process continues until all nonterminals have been
+replaced with terminals, resulting in a valid input for the program. You can
+also have characters next to nonterminals, like `+<integer>`, which would result
+in a `+` followed by a valid integer.
 
 #### Arithmetic Expressions
 
 Grammar can also be used to generate entire arithmetic expressions. For example:
 
-```
+```text
 <start>   ::= <expr>
 <expr>    ::= <term> + <expr> | <term> - <expr> | <term>
 <term>    ::= <term> * <factor> | <term> / <factor> | <factor>
@@ -50,11 +84,15 @@ Grammar can also be used to generate entire arithmetic expressions. For example:
 <digit>   ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ```
 
-This could generate an expression like `-3.14 + 2 * (1 - 5)`, which is a valid arithmetic expression according to the grammar. This expression can be computed later on, but first the grammar is used to generate it.
+This could generate an expression like `-3.14 + 2 * (1 - 5)`, which is a valid
+arithmetic expression according to the grammar. This expression can be computed
+later on, but first the grammar is used to generate it.
 
 ### Representing Grammars in Python
 
-The first step of representing grammars in Python is figuring out the format to display it with. The easiest way is to do this with a dictionary, where the keys are the nonterminals and the values are lists of expansions.
+The first step of representing grammars in Python is figuring out the format to
+display it with. The easiest way is to do this with a dictionary, where the keys
+are the nonterminals and the values are lists of expansions.
 
 ```python
     DIGIT_GRAMMAR = {
@@ -69,11 +107,16 @@ The first step of representing grammars in Python is figuring out the format to 
 }
 ```
 
-Each key is a single nonterminal, which is what makes this a context-free grammar. Each item in a value list is what could possibly replace that nonterminal.
+Each key is a single nonterminal, which is what makes this a context-free
+grammar. Each item in a value list is what could possibly replace that
+nonterminal.
 
 ### Some Definitions
 
-The book then defines two functions: `nonterminals` and `is_nonterminal`. The former uses regular expressions to find all nonterminals to be replaced, and the latter checks if the nonterminals that are found are actually options in the grammar.
+The book then defines two functions: `nonterminals` and `is_nonterminal`. The
+former uses regular expressions to find all nonterminals to be replaced, and the
+latter checks if the nonterminals that are found are actually options in the
+grammar.
 
 ```python
 import re
@@ -96,7 +139,11 @@ def is_nonterminal(s):
 
 ### A Simple Grammar Fuzzer
 
-The book then builds a simple grammar fuzzer, using a while loop to keep replacing nonterminals with expansions until there are no more nonterminals left. The fuzzer also defines `max_nonterminals` and `max_expansions` to avoid infinite loops in case of recursion. Lastly, it has a log option to show the process of the input being build from the grammar.
+The book then builds a simple grammar fuzzer, using a while loop to keep
+replacing nonterminals with expansions until there are no more nonterminals
+left. The fuzzer also defines `max_nonterminals` and `max_expansions` to avoid
+infinite loops in case of recursion. Lastly, it has a log option to show the
+process of the input being build from the grammar.
 
 ### Visualizing Grammars
 
@@ -104,38 +151,61 @@ The fuzzing book provides an option to visualize grammars: [Railroad Diagrams](h
 
 ### Some Grammars
 
-The book provides three example grammars: one for cgi_decode (a function introduced in the coverage chapter), one for generating URLs, and one that uses english to create actual sentences. These all show the uses that grammars can have.
+The book provides three example grammars: one for `cgi_decode` (a function
+introduced in the coverage chapter), one for generating URLs, and one that uses
+English to create actual sentences. These all show the uses that grammars can
+have.
 
 ### Grammars as Mutation Seeds
 
-A grammar is made to produce valid inputs. This can be useful for testing with valid inputs, of course, but it can also be useful in combination with mutation testing. Using grammars to generate valid inputs first gives the mutation testing a wider range of seeds to mutate from. This can help to find more bugs in the program being tested.
+A grammar is made to produce valid inputs. This can be useful for testing with
+valid inputs, of course, but it can also be useful in combination with mutation
+testing. Using grammars to generate valid inputs first gives the mutation
+testing a wider range of seeds to mutate from. This can help to find more bugs
+in the program being tested.
 
 ### A Grammar Toolbox
 
-The book also mentions a couple smaller pieces of information that can be useful when working with grammars.
+The book also mentions a couple smaller pieces of information that can be useful
+when working with grammars.
 
-- Escapes: When using `<` and `>` to denote nonterminals, it can be useful to have a way to escape them if they are needed in the input.
-- Extending Grammars: How to add new nonterminals and expansions to an existing grammar using copy.
-- Character Classes: Sometimes there are quicker ways to create a list with a lot of expansions, like using a function to generate a list from `string.ascii_letters`, rather than typing out every single letter.
-- Grammar Shortcuts: Rather than requiring recursion to give any repetition, symbols like `*` and `+` can be used to denote zero or more, and one or more repetitions, respectively. Another shortcut is to use parentheses to symbolize that what is inside is optional.
-- Grammar Extensions: Expansions can be included in a tuple, where the first element is the expansion and the second can be additional information if there are any constraints you may want, such as min or max depth.
+- Escapes: When using `<` and `>` to denote nonterminals, it can be useful to
+have a way to escape them if they are needed in the input.
+- Extending Grammars: How to add new nonterminals and expansions to an existing
+grammar using copy.
+- Character Classes: Sometimes there are quicker ways to create a list with a
+lot of expansions, like using a function to generate a list from
+`string.ascii_letters`, rather than typing out every single letter.
+- Grammar Shortcuts: Rather than requiring recursion to give any repetition,
+symbols like `*` and `+` can be used to denote zero or more, and one or more
+repetitions, respectively. Another shortcut is to use parentheses to symbolize
+that what is inside is optional.
+- Grammar Extensions: Expansions can be included in a tuple, where the first
+element is the expansion and the second can be additional information if there
+are any constraints you may want, such as the minimum or maximum depth.
 
 ### Checking Grammars
 
-As with all code, testing is important. The book uses assert statements and runs is_valid_grammar to check that all symbols that occur are actually defined and that all symbols are actually reachable from the start symbol. For example, `{"<start>": ["<x>"], "<y>": ["1"]}` would not pass as `<y>` can never be reached.
+As with all code, testing is important. The book uses `assert` statements and runs
+is_valid_grammar to check that all symbols that occur are actually defined and
+that all symbols are actually reachable from the start symbol. For example,
+`{"<start>": ["<x>"], "<y>": ["1"]}` would not pass as `<y>` can never be
+reached.
 
 ### Lessons Learned
 
 - Grammars are the systems for specifying how input languages are generated.
 - The set of all valid inputs to a program is called a `language`.
-- Each nonterminal will have a list of expansions to be made, eventually all leading to terminal symbols.
-- Fuzzing with grammars can be used in combination with mutation testing as a provider of valid seeds to mutate from.
-
+- Each nonterminal will have a list of expansions to be made, eventually all
+leading to terminal symbols.
+- Fuzzing with grammars can be used in combination with mutation testing as a
+provider of valid seeds to mutate from.
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our tool is `FuzzGram` a command line grammar fuzzer that creates random inputs following a grammar’s rules.
-[FuzzGram on GitHub](https://github.com/loganbutler01/FuzzGram).
+Our tool is `FuzzGram` a command-line grammar fuzzer that creates random inputs
+following a grammar’s rules. [FuzzGram on
+GitHub](https://github.com/loganbutler01/FuzzGram).
 
 :::
 

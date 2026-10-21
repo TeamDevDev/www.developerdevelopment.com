@@ -139,15 +139,18 @@ def is_nonterminal(s):
 
 ### A Simple Grammar Fuzzer
 
-The book then builds a simple grammar fuzzer, using a while loop to keep
+The book then builds a simple grammar fuzzer, using a `while` loop to keep
 replacing nonterminals with expansions until there are no more nonterminals
 left. The fuzzer also defines `max_nonterminals` and `max_expansions` to avoid
-infinite loops in case of recursion. Lastly, it has a log option to show the
+infinite loops in case of recursion. Lastly, it has a logging option to show the
 process of the input being build from the grammar.
 
 ### Visualizing Grammars
 
-The fuzzing book provides an option to visualize grammars: [Railroad Diagrams](https://www.fuzzingbook.org/html/RailroadDiagrams.html) (also called Syntax Diagrams). These diagrams follow possible paths left to right to simulate the generation of an input.
+The fuzzing book provides an option to visualize grammars: [Railroad
+Diagrams](https://www.fuzzingbook.org/html/RailroadDiagrams.html) (also called
+Syntax Diagrams). These diagrams follow possible paths left to right to simulate
+the generation of an input.
 
 ### Some Grammars
 

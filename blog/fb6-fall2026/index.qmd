@@ -202,7 +202,7 @@ reached.
 - Each nonterminal will have a list of expansions to be made, eventually all
 leading to terminal symbols.
 - Fuzzing with grammars can be used in combination with mutation testing as a
-provider of valid seeds to mutate from.
+provider of valid seeds from which to mutate.
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 

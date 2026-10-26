@@ -1,0 +1,51 @@
+---
+author: [Johnny Sharsheev, Jake McCallen, Gregory M. Kapfhammer]
+title: 'Leading at Scale'
+date: '2026-10-26'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How can leaders build a team that keeps going without them?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog post explores the ["Leading at
+Scale"](https://abseil.io/resources/swe-book/html/ch06.html) chapter from
+[*Software Engineering at Google*](https://abseil.io/resources/swe-book),
+written by Ben Collins-Sussman and edited by Riona MacNamara. The previous
+chapter, "How to Lead a Team," focused on leading one team. This chapter goes
+a step further and looks at what changes when a leader is in charge of many
+teams at once. At that level, a leader cannot be involved in every technical
+detail anymore, so their job becomes making good decisions, building teams
+that can work without them, and protecting their own time and energy. The
+chapter organizes this advice around three ideas: **Always Be Deciding**,
+**Always Be Leaving**, and **Always Be Scaling**. Even as students, these ideas
+apply to us, since we often lead small parts of our team projects and need to
+make sure the project does not fall apart when one person is busy or
+unavailable.
+
+## Summary
+
+### Always Be Deciding
+
+### Always Be Leaving
+
+### Always Be Scaling
+
+## Action Items
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `busfactor`, a Python command-line tool that reads a Git
+repository's history and finds the files that only one person has ever worked
+on. It also estimates the team's bus factor, which is how many people would
+have to leave before most of the files have nobody left who worked on them.
+This connects to the chapter's idea of "Always Be Leaving," since a good
+leader builds a team that does not depend on any single person. You can view
+the project here: [busfactor on GitHub](https://github.com/Jsharsh33v/busfactor).
+
+:::
+
+{{< include /_back-blog.qmd >}}

@@ -29,12 +29,50 @@ unavailable.
 ## Summary
 
 ### Always Be Deciding
+Managing a team of teams means making more decisions all the time, and higher level decisions at that. Jobs become about high-level
+strategy, as compared to solving any one single task. Additionally, you should always be considering trade-offs. Some trade offs are
+simple: "working on one project means postponing another". However, other times, the trade-offs have unforseen results or consequences
+that nobody can predict or prepare for.
+
+#### Identify the Blinders
+When approaching a problem, there's likely a group of people already investing work into the problem, sometimes for so long that they've
+become 'blind' to the status quo. This is where someone with a fresh perspective on the problem has an advantage, since they're able to
+look at the problem in a way it hasn't previously been looked at.
 
 ### Always Be Leaving
+At face value, "Always Be Leaving" appears to be terrible advice. But actually, this is a famous quote from Bharat Mediratta, who is a
+former Google engineering director! The quote means that solving an ambiguous problem isn't exactly your job, but the organization's job,
+and your job is to get the organization to solve it by itself, even without your presence.
+
+Being a successful leader means building an organization capable of solving a problem on its own. Immediately, the bus factor might come
+back to mind. A successful organization can work around this and become self-sufficient and self-driving. If you as a leader can disappear,
+or get sick, or go on vacation, and the team will continue to work, the team is on its path to being self-sufficient.
+
+One way to break down the tasks or problems a team is facing is by dividing them into subproblems: smaller tasks or problems that can be
+handled by a small team or even one single individual. When put together, these teams can work on each individual subproblem at a high level
+of efficiency. However, subproblems can change, and rigid team boundaries won't change to meet the changing problems. Walking a fine line
+between "too rigid" and "too vague" is the key to success.
 
 ### Always Be Scaling
+When a team is handling a difficult problem, a pattern emerges: analysis, struggle, traction, reward. Typically, however, a team will not
+get more members as it gets more problem. This leads to a 'compression' stage needing added to the pattern, where a team needs to scale a
+problem to fit within half the size AND half the time.
+
+Leadership is extremely stressful - and higher-leadership roles only force more reactive acting as opposed to granding proactive opportunity.
+More time spent being reactive causes attention to fall to urgent problems, but not important problems. Being a leader means that you need to
+perform work on the problems that ONLY the leader (you) is capable of.
+
+#### Key Techniques
+Delegate - Pass urgent tasks to other leaders and people who are capable of doing those tasks.
+Schedule - Regularly block out hours and timeslots to sit and work on important, but NOT urgent tasks. This will save them from BECOMING urgent.
+Track - Make a system for task-tracking, and make sure it works and works well. It will allow you to identify those important tasks you may not see.
+
 
 ## Action Items
+Start - Scheduling work time, tracking problems, and delegating tasks to people who can do them.
+Stop - Working without focus, ignoring important tasks for urgent ones, and ignoring forms of task planning
+Continue - Monitoring work with teams, consdering the bus factor, and maintaining efficiency
+
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 

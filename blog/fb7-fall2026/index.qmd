@@ -1,0 +1,136 @@
+---
+author: [Benito Aguero, Rivan Deets, Gregory M. Kapfhammer]
+title: Efficient Grammar Fuzzing
+date: '2026-10-27'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can we efficiently implement grammars for fuzzing?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This post discusses the [Efficient Grammar Fuzzing](https://www.fuzzingbook.org/html/GrammarFuzzer.html) chapter from [The Fuzzing Book](https://www.fuzzingbook.org/). In this post, we will cover derivation trees and what they are, tree expansion and how it works, and cost functions and how they control string generation. We will examine both the theoretical concepts as well as code examples explaining how it works in practice.
+
+## Summary
+
+Grammars are essential tools for producing syntactically valid inputs while offering a structured approach to test generation. However, simple string-based replacement algorithms are slow and easily get stuck in infinite loops. This chapter refines the string-based algorithm into a tree-based algorithm, allowing for faster fuzzers that offer far more control over input production.
+
+### What is a Derivation Tree?
+
+In grammar fuzzing, derivation trees are used to manage and control the expansion of grammar rules. A derivation tree represents the entire structure of a generated string, keeping track of which parts have been expanded and which still need work.
+
+Each node in the tree corresponds to either a terminal or a non-terminal symbol. The tree is built step by step, starting from a root node and progressively expanding non-terminals until only terminal symbols remain.
+
+#### Make-Up of a Derivation Tree
+
+Below are the core components of a derivation tree:
+
+- **Terminal Node(s):** The "leaf" nodes representing actual characters or words in the final output. They cannot be expanded further.
+- **Non-terminal Node(s):** Symbols like `<expr>` or `<term>` that can be expanded into other symbols using grammar rules.
+- **Root Node:** The starting symbol of the grammar (usually `<start>`).
+- **Expansion:** The recursive process of replacing non-terminal nodes with their corresponding grammar definitions.
+
+While naive string-based fuzzers search through raw text—causing slow $O(N^2)$ execution times and infinite loops—derivation trees fix these issues by storing structural history and updating nodes directly in place. Instead of repeatedly scanning a growing string via regular expressions to find remaining nonterminals, tree-based algorithms target exact child references in memory, yielding a dramatic boost in efficiency.
+
+**What is the purpose of using a derivation tree in grammar-based string generation, and how does it improve the process compared to generating a string directly?**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+Derivation trees provide a structured representation of the string generation process. By keeping track of unexpanded nodes in a tree structure rather than scanning a growing string, the fuzzer runs in linear time $O(N)$, avoids infinite loops, and allows fine-grained control over input complexity while preserving the complete derivation history for debugging.
+
+</details>
+
+### How Expansion Works
+
+Expansion starts by finding an unexpanded non-terminal symbol (a leaf node with no children). An expansion rule is selected from the grammar, converted into child nodes, and added to that leaf. The fuzzer then picks another non-terminal to expand until no unexpanded symbols remain.
+
+Crucially, tree expansion relies on in-place mutation. Rather than rebuilding the entire structure at each step, 'expand_tree_once()' locates an expandable child node and swaps out its placeholder directly in memory, keeping execution lightning fast.
+
+In Python, we use simple data conventions to represent node states:
+
+- 'None' indicates an unexpanded non-terminal symbol (ready to be expanded).
+- '[]' (an empty list) indicates a terminal symbol (cannot be expanded).
+
+```python
+# Represents <expr> -> <expr> + <term>
+derivation_tree = (
+    "<start>",
+    [
+        (
+            "<expr>",
+            [
+                ("<expr>", None),  # Pending expansion
+                (" + ", []),  # Terminal node
+                ("<term>", None),  # Pending expansion
+            ],
+        )
+    ],
+)
+```
+
+**What are the three main strategies for tree expansion**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+1. Random expansion
+2. Minimum cost expansion
+3. Maximum cost expansion
+
+</details>
+
+### Cost Functions
+
+To stop derivation trees from growing infinitely large or getting trapped in recursive loops, we use cost functions. Cost functions compute the "distance" or complexity needed to close off a non-terminal symbol with terminal values. 
+
+#### Determine the Cost of Expanding
+
+1. **`symbol_cost`**: Calculates the minimum expansion cost among all candidate rules for a non-terminal symbol.
+
+2. **`expansion_cost`**: Calculates the total cost of an expansion rule by summing up the costs of its symbols. Re-entering a recursive non-terminal sets its cost to infinity to prevent loops.
+
+#### Expanding by Minimum and Maximum Cost
+
+Using cost metrics, GrammarFuzzer can dynamically shift strategies to control the size of generated test cases:
+
+```python
+class GrammarFuzzer(GrammarFuzzer):
+
+  def expand_node_min_cost(self, node: DerivationTree) -> DerivationTree:
+    if self.log:
+      print("Expanding", all_terminals(node), "at minimum cost")
+    return self.expand_node_by_cost(node, min)
+
+  def expand_node_max_cost(self, node: DerivationTree) -> DerivationTree:
+    if self.log:
+      print("Expanding", all_terminals(node), "at maximum cost")
+    return self.expand_node_by_cost(node, max)
+```
+
+**In what specific situations would someone prefer to use expanding by maximum versus minimum costs?**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+- Minimum Cost: Ideal for quickly wrapping up open trees, avoiding runaway recursion, or producing short, clean edge-case inputs.
+
+- Maximum Cost: Ideal for generating deep, complex inputs to stress-test parsers, compilers, and interpreters against intricate nested structures.
+
+</details>
+
+## Key Takeaways
+
+Derivation trees and cost functions transform grammar fuzzing from an inefficient string-matching process into a fast, controllable testing engine. By managing expansion steps as tree nodes, fuzzers avoid infinite loops, operate in linear time, and can precisely tune input size using cost-based strategies.
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our tool is `GrammarForge`, a tool that creates test inputs for a program that expects structured input. [GrammarForge on GitHub](https://github.com/Rivan-Deets/GrammarForge).
+
+:::
+
+{{< include /_fuzzingbook-reference.qmd >}}
+
+{{< include /_back-blog.qmd >}}

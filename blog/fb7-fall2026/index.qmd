@@ -1,7 +1,7 @@
 ---
-author: [Benito Aguero, Rivan Deets, Gregory M. Kapfhammer]
+author: [Benito Aguero, Rivan Deets]
 title: Efficient Grammar Fuzzing
-date: '2026-10-27'
+date: '2026-10-28'
 date-format: long
 categories: [post, software engineering, fuzzing book]
 description: <em>How can we efficiently implement grammars for fuzzing?</em>

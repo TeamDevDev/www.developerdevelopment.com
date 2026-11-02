@@ -1,7 +1,7 @@
 ---
 title: "Blameless Postmortem"
 description: "Review of the missed article, its contributing factors, and steps to prevent similar misses."
-author: "CMPSC-203 Students Fall 2026"
+author: "Dylan DeLong-Headley, Ritesh Ojha, Anshu Pathak, CMPSC203 Software Engineering Team"
 date: "2026-10-26"
 categories: [post, software engineering]
 toc: true
@@ -11,19 +11,46 @@ page-layout: full
 ## Incident Overview
 
 ## What Happened
-<!-- Describe the incident in clear, factual terms. -->
+
+For the SE7 executive summary regarding, "Leading at Scale," due Monday the 26th by 9am, a pull request was created with unsatisfactory/incomplete content before the deadline, but was only filled with further content after the deadline had passed and the executive summary could not reasonably be reviewed. This led to a presentation day for which there was no content, and therefore a full class period discussing the process of executive summary protocols rather than learning the content from the reading.
 
 ## What went wrong?
 
-<!-- Document gaps, failures, delays, or missed opportunities without assigning blame. -->
+We, whether you look at us as a team or as a course, do not have systems in place to ensure that executive summaries are being completed on a healthy timeline which prevents these mishaps. A majority of teams in the past few months have submitted their executive summaries later than the 9am deadline, causing Professor Kapfhammer to work through his lunchbreak to ensure that we have a presentation. This developed habit of groups to submit at the last possible, permissable moment created several close calls for days without executive summaries.
 
 ## Impact
 
-<!-- Describe who or what was affected, including scope and duration. -->
+With no reading-based executive summary on Monday the 26th, members of the team were left unprepared for the knowledge check which occurred on the Friday of that week. The entire team was left without original course content to look on that might shed more light than the original reading.
 
 ## What can be done?
 
+We have, as a team, agreed to the following measures to address this problem:
+
+1. The implementation of a kanban board for the DeveloperDevelopment website GitHub, which will include the reading and executive summary schedule.
+    - Teams will be required to keep their executive summary progress updated publicly during their working period.
+    - This enables other members of the course to check in during the process if work appears to be stagnant on a specific executive summary.
+
+2. The implementation of earlier deadlines for executive summarys to ensure that Prof. Kapfhammer is given reasonable time to review PR content.
+    - For Monday executive summaries, final PRs will be due the Friday before at 11:59pm.
+    - For Wednesday executive summaries, final PRs will be due the Monday before at 11:59pm.
+    - Content submitted past these deadlines will receive a grade deduction.
+        - Monday executive summaries submitted on Saturday will receive, __at best__, an 80%, and on Sunday a 65%.
+        - Wednesday executive summaries submitted on Tuesday will receive, __at best__, a 75%, since there is only a one day buffer.
+        - Executive summaries submitted the day of **before 9am** will receive, __at best__, a 50%, and **after 9am** they will receive a 0%.
+
+3. In the instance that an article and tool are not provided within a reasonable timeframe for the review and presentation of the executive summary, there are a few protocols. *It is important to note that according to the syllabus, students may not use a token to have an executive summary reassessed.*
+    - Team members responsible for that executive summary are still expected to complete it for the benefit of the entire group.
+    - In the instance that this does not occur before the Friday session following the relevant executive summary, another group of **no more than 3** may fulfill the requirements of the executive summary by 11:59pm on the following Monday.
+        - Executive summaries created past the deadline cannot be presented for extra credit. However, the additional work may be included in the project development repository for that module.
+
+4. Blameless postmortem grading practices will be decided solely by Prof. Kapfhammer.
+
+5. All specifications above refer to both *articles* and *tools*.
 
 ## Lessons Learned
 
-<!-- Record the main lessons and how they should influence future work. -->
+- A deadline immediately before a presentation is not sufficient when the work also needs review. Future executive summaries must be complete before the presentation day so that there is time to identify and correct problems.
+- An incomplete pull request is functionally the same as a missed deliverable if it cannot support review or presentation.
+- The kanban board should show ownership and current progress for both articles and tools, allowing team members and classmates to notice stalled work early and escalate before the deadline.
+- Process changes are most useful when they create clear incentives and consequences. The earlier deadlines and grading rules establish a predictable buffer for review, while the fallback protocol preserves the course's learning goals when the original submission cannot be completed in time.
+- A blameless postmortem should end with an accountable process change, not personal blame. We will use the board, earlier checkpoints, and communication skills to prevent this recurring pattern rather than relying on a last-minute rescue.

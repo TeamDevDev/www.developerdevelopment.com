@@ -106,11 +106,19 @@ We can apply this approach through three actions:
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our team built `Style Guide Checker`, a lightweight Python command-line tool that checks Python files against a set of team coding conventions.
+Our team built `Style Guide Checker`, a lightweight Python command-line tool
+that checks Python files against a set of team coding conventions.
 
-The tool checks whether function names and filenames follow `snake_case` conventions and whether public functions include docstrings. When a violation is found, it provides an explanation of the issue and why following the convention matters.
+The tool checks whether function names and filenames follow `snake_case`
+conventions and whether public functions include docstrings. When a violation
+is found, it provides an explanation of the issue and why following the
+convention matters.
 
-Using Python's built-in `ast` and `pathlib` modules, our project demonstrates how automated checks can improve code readability, consistency, and maintainability across a team.
+Using Python's built-in `ast` and `pathlib` modules, our project demonstrates
+how automated checks can improve code readability, consistency, and
+maintainability across a team.
+You can view the project here: [style-guide-checker on
+GitHub](https://github.com/Abishek-D-7/style-guide-checker).
 
 :::
 

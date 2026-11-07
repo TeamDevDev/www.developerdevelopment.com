@@ -118,9 +118,19 @@ For our class projects, we should continue running the configured checks locally
 
 ### Where Human Judgment Still Matters
 
-## Applying the Chapter to Our Projects
+Although automated tools can enforce coding standards, they cannot evaluate every aspect of code quality. Some decisions, such as whether code is readable, documentation is meaningful, or a particular design is appropriate, require human judgment. As the chapter explains, automation works best for clearly defined rules, while developers and code reviewers handle decisions that require context and reasoning.
 
 ## Key Takeaways
+
+- **Consistency matters**: Shared coding conventions make code easier to understand, maintain, and collaborate on.
+
+- **Prioritize readability**: Code should be written for future readers, not just the original developer.
+
+- **Rules should have a purpose**: Every rule should provide meaningful benefits without creating unnecessary restrictions.
+
+- **Automate when possible**: Tools can enforce coding standards consistently and reduce repetitive manual checks.
+
+- **Allow flexibility**: Coding standards should evolve over time, and some decisions still require human judgment.
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 

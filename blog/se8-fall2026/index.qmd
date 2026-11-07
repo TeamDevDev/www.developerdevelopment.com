@@ -1,0 +1,80 @@
+---
+author: [Johnny, Abishek Dhakal, Lukas, Gregory M. Kapfhammer]
+title: 'Style Guides and Rules: Building Maintainable Code'
+date: '2026-10-17'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How do shared rules, readable code, and automated tools help software teams build code that lasts?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This post explores Chapter 8, ["Style Guides and
+Rules"](https://abseil.io/resources/swe-book/html/ch08.html), from
+[*Software Engineering at Google*](https://abseil.io/resources/swe-book).
+Written by Shaindel Schwartz and edited by Tom Manshreck, the chapter explains
+how shared coding conventions help engineers maintain software as teams grow
+and projects age. A style guide covers more than indentation: it establishes
+expectations for naming, documentation, language features, and code organization.
+
+The chapter distinguishes between **rules**, which engineers must follow
+unless an exception is approved, and **guidance**, which recommends useful
+practices while leaving room for judgment. Both help teams make decisions,
+but they carry different expectations of enforcement.
+
+## Why Teams Need Coding Rules
+
+Rules give a team a shared vocabulary for writing and reading code. When
+engineers agree on common patterns, they can spend more time understanding a
+program's behavior and less time interpreting unfamiliar conventions.
+Consistency also makes it easier to review changes, move between projects,
+and maintain code after its original authors have left.
+
+Useful rules begin with an engineering goal. A team might prioritize
+readability, reliability, performance, or compatibility with other systems.
+Its conventions should support those needs. Google's choices reflect the
+challenges of maintaining a large, long-lived codebase; another organization
+may need different rules to achieve sustainable development.
+
+but they carry different expectations of enforcement.
+
+
+# Johnny's Work
+## Five Principles for Effective Rules
+
+## What Belongs in a Style Guide?
+
+## How Rules Should Change
+
+### Case Study: Python Naming Conventions
+
+## Guidance and Training Support the Rules
+
+## Automating Enforcement
+
+
+# Lukas's Work
+
+### Static Analysis and Error Checkers
+
+### Formatters and Presubmit Checks
+
+### Where Human Judgment Still Matters
+
+## Applying the Chapter to Our Projects
+
+## Key Takeaways
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `Style Guide Checker`, a lightweight Python command-line tool that checks Python files against a set of team coding conventions.
+
+The tool checks whether function names and filenames follow `snake_case` conventions and whether public functions include docstrings. When a violation is found, it provides an explanation of the issue and why following the convention matters.
+
+Using Python's built-in `ast` and `pathlib` modules, our project demonstrates how automated checks can improve code readability, consistency, and maintainability across a team.
+
+:::
+
+{{< include /_back-blog.qmd >}}

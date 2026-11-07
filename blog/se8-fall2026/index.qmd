@@ -90,13 +90,31 @@ We can apply this approach through three actions:
 - **Stop** leaving recurring explanations only in private conversations; add them to documentation that other contributors can find.
 - **Continue** discussing unclear cases in pull requests and recording the reasons behind agreed changes.
 
-# Lukas's Work
-
 ## Automating Enforcement
+
+After documenting coding rules, a team needs a reliable way to check whether contributions follow them. [Chapter 8](https://abseil.io/resources/swe-book/html/ch08.html) recommends automating enforcement where possible. Automated checks can apply the same criteria across contributions and give developers feedback before a manual review.
+
+The team still needs to keep its checks aligned with its documented rules. If the guide changes but the configuration stays the same, contributors may receive warnings that no longer reflect the team's decisions.
+
+For our class projects, this means maintaining checks that support our agreed conventions and documenting how everyone can run them.
 
 ### Static Analysis and Error Checkers
 
+Static analysis examines source code without executing the program being checked. For example, Python's [ast module](https://docs.python.org/3/library/ast.html) represents code as a tree containing structures such as function definitions and expressions. A checker can inspect these structures to examine names or look for docstrings.
+
+Tools such as [Ruff](https://docs.astral.sh/ruff/linter/) provide existing checks for Python code, including unused imports and undefined names. The project's configuration determines which rules are enabled.
+
+These checks give contributors feedback about specific problems, but their results have limits. A successful lint check means that the enabled checks detected no violations. Tests and review are still needed to investigate whether the program behaves correctly.
+
 ### Formatters and Presubmit Checks
+
+Formatters apply a consistent layout to code, reducing the need for reviewers to discuss spacing and line wrapping. The [Ruff formatter](https://docs.astral.sh/ruff/formatter/) can format Python files, while its `--check` option reports whether formatting changes are needed without rewriting the files.
+
+Linting and formatting serve different purposes. For example, `ruff check` runs lint checks, while `ruff format --check` checks formatting. A project can use both to support its conventions.
+
+Presubmit checks bring automated verification into the process before a change is accepted. In a GitHub workflow, [GitHub Actions](https://docs.github.com/en/actions/get-started/understand-github-actions) can run checks when a pull request is opened or updated.
+
+For our class projects, we should continue running the configured checks locally before pushing, addressing reported problems, and reviewing automated results before merging. We should also keep the local checks and automated workflow aligned so that teammates receive consistent feedback.
 
 ### Where Human Judgment Still Matters
 

@@ -1,7 +1,7 @@
 ---
 author: [Johnny Sharsheev, Abishek Dhakal, Lukas, Gregory M. Kapfhammer]
 title: 'Style Guides and Rules: Building Maintainable Code'
-date: '2026-10-17'
+date: '2026-11-09'
 date-format: long
 categories: [post, professional development, software engineering]
 description: <em>How do shared rules, readable code, and automated tools help software teams build code that lasts?</em>

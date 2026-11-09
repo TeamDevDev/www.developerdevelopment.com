@@ -1,5 +1,5 @@
 ---
-author: [Johnny Sharsheev, Abishek Dhakal, Lukas, Gregory M. Kapfhammer]
+author: [Johnny Sharsheev, Abishek Dhakal, Gregory M. Kapfhammer]
 title: 'Style Guides and Rules: Building Maintainable Code'
 date: '2026-11-09'
 date-format: long
@@ -12,12 +12,12 @@ page-layout: full
 ## Overview
 
 This post explores Chapter 8, ["Style Guides and
-Rules"](https://abseil.io/resources/swe-book/html/ch08.html), from
-[*Software Engineering at Google*](https://abseil.io/resources/swe-book).
-Written by Shaindel Schwartz and edited by Tom Manshreck, the chapter explains
-how shared coding conventions help engineers maintain software as teams grow
-and projects age. A style guide covers more than indentation: it establishes
-expectations for naming, documentation, language features, and code organization.
+Rules"](https://abseil.io/resources/swe-book/html/ch08.html), from [*Software
+Engineering at Google*](https://abseil.io/resources/swe-book). Written by
+Shaindel Schwartz and edited by Tom Manshreck, the chapter explains how shared
+coding conventions help engineers maintain software as teams grow and projects
+age. A style guide covers more than indentation: it establishes expectations for
+naming, documentation, language features, and code organization.
 
 The chapter distinguishes between **rules**, which engineers must follow
 unless an exception is approved, and **guidance**, which recommends useful

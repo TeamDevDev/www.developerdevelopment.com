@@ -72,83 +72,158 @@ our preferred naming convention.
 
 ## What Belongs in a Style Guide?
 
-The chapter identifies three purposes for style guide rules: preventing mistakes, supporting good practices, and maintaining consistency.
+The chapter identifies three purposes for style guide rules: preventing
+mistakes, supporting good practices, and maintaining consistency.
 
-For a Python project, a guide could explain how to compare values correctly, what public function docstrings should describe, and which naming conventions contributors should follow. Each rule should include a short explanation and an example so that a new teammate can apply it.
+For a Python project, a guide could explain how to compare values correctly,
+what public function docstrings should describe, and which naming conventions
+contributors should follow. Each rule should include a short explanation and an
+example so that a new teammate can apply it.
 
-A useful guide should also explain what following a rule looks like in practice. For example, requiring a docstring does not guarantee that the documentation is helpful. A function documented as “does the calculation” still leaves readers wondering what it calculates and what it returns. Including an example of a clear docstring would help contributors understand the purpose of the requirement.
+A useful guide should also explain what following a rule looks like in practice.
+For example, requiring a docstring does not guarantee that the documentation is
+helpful. A function documented as “does the calculation” still leaves readers
+wondering what it calculates and what it returns. Including an example of a
+clear docstring would help contributors understand the purpose of the
+requirement.
 
 ## How Rules Should Change
 
-Rules need to be reconsidered when evidence shows that they are causing problems. At Google, engineers can propose changes, while language experts called **style arbiters** evaluate the trade-offs and approve updates or exceptions.
+Rules need to be reconsidered when evidence shows that they are causing
+problems. At Google, engineers can propose changes, while language experts
+called **style arbiters** evaluate the trade-offs and approve updates or
+exceptions.
 
-For our team, a proposed change should identify the existing rule, show a concrete problem, and explain how the replacement would help. If a naming convention conflicts with an external interface, for example, the proposal should show the affected code and explain why the conflict requires an exception or a change.
+For our team, a proposed change should identify the existing rule, show a
+concrete problem, and explain how the replacement would help. If a naming
+convention conflicts with an external interface, for example, the proposal
+should show the affected code and explain why the conflict requires an exception
+or a change.
 
-We should also record why the decision was made. Otherwise, a future contributor might encounter the same issue and repeat the discussion without knowing its history.
+We should also record why the decision was made. Otherwise, a future contributor
+might encounter the same issue and repeat the discussion without knowing its
+history.
 
 ### Case Study: Python Naming Conventions
 
-Google initially used CamelCase for Python methods because much of its Python code supported C++ projects. As independent Python development grew, its guide allowed snake_case while accommodating existing code and consistency within files.
+Google initially used CamelCase for Python methods because much of its Python
+code supported C++ projects. As independent Python development grew, its guide
+allowed snake_case while accommodating existing code and consistency within
+files.
 
-[PEP 8](https://peps.python.org/pep-0008/#function-and-variable-names) recommends lowercase function names with underscores between words. For example, `calculate_total` follows this convention and separates the words in the function's name.
+[PEP 8](https://peps.python.org/pep-0008/#function-and-variable-names)
+recommends lowercase function names with underscores between words. For example,
+`calculate_total` follows this convention and separates the words in the
+function's name.
 
-However, renaming an existing public function also affects the code that calls it. Before changing function names, we should identify those callers and plan any necessary updates. This helps us improve consistency while preserving the behavior that users depend on.
+However, renaming an existing public function also affects the code that calls
+it. Before changing function names, we should identify those callers and plan
+any necessary updates. This helps us improve consistency while preserving the
+behavior that users depend on.
 
 ## Guidance and Training Support the Rules
 
-Google supports its rules with introductory guides, short tips, and training about its development practices. These resources help engineers understand how to apply the conventions.
+Google supports its rules with introductory guides, short tips, and training
+about its development practices. These resources help engineers understand how
+to apply the conventions.
 
-This connects to our earlier post on [Knowledge Sharing in Software Engineering](https://developerdevelopment.com/blog/se4-fall2026/), which discusses documentation and mentoring as ways to share knowledge across a team.
+This connects to our earlier post on [Knowledge Sharing in Software
+Engineering](https://developerdevelopment.com/blog/se4-fall2026/), which
+discusses documentation and mentoring as ways to share knowledge across a team.
 
-For our projects, the README or contribution guide could show a common mistake, its corrected version, and the reason for the correction. When reviewing a teammate's work, linking to that explanation would give them a reference they can use again.
+For our projects, the README or contribution guide could show a common mistake,
+its corrected version, and the reason for the correction. When reviewing a
+teammate's work, linking to that explanation would give them a reference they
+can use again.
 
 We can apply this approach through three actions:
 
-- **Start** documenting important project conventions with their purpose and an example.
-- **Stop** leaving recurring explanations only in private conversations; add them to documentation that other contributors can find.
-- **Continue** discussing unclear cases in pull requests and recording the reasons behind agreed changes.
+- **Start** documenting important project conventions with their purpose and an
+example.
+- **Stop** leaving recurring explanations only in private conversations; add
+them to documentation that other contributors can find.
+- **Continue** discussing unclear cases in pull requests and recording the
+reasons behind agreed changes.
 
 ## Automating Enforcement
 
-After documenting coding rules, a team needs a reliable way to check whether contributions follow them. [Chapter 8](https://abseil.io/resources/swe-book/html/ch08.html) recommends automating enforcement where possible. Automated checks can apply the same criteria across contributions and give developers feedback before a manual review.
+After documenting coding rules, a team needs a reliable way to check whether
+contributions follow them. [Chapter
+8](https://abseil.io/resources/swe-book/html/ch08.html) recommends automating
+enforcement where possible. Automated checks can apply the same criteria across
+contributions and give developers feedback before a manual review.
 
-The team still needs to keep its checks aligned with its documented rules. If the guide changes but the configuration stays the same, contributors may receive warnings that no longer reflect the team's decisions.
+The team still needs to keep its checks aligned with its documented rules. If
+the guide changes but the configuration stays the same, contributors may receive
+warnings that no longer reflect the team's decisions.
 
-For our class projects, this means maintaining checks that support our agreed conventions and documenting how everyone can run them.
+For our class projects, this means maintaining checks that support our agreed
+conventions and documenting how everyone can run them.
 
 ### Static Analysis and Error Checkers
 
-Static analysis examines source code without executing the program being checked. For example, Python's [ast module](https://docs.python.org/3/library/ast.html) represents code as a tree containing structures such as function definitions and expressions. A checker can inspect these structures to examine names or look for docstrings.
+Static analysis examines source code without executing the program being
+checked. For example, Python's [ast
+module](https://docs.python.org/3/library/ast.html) represents code as a tree
+containing structures such as function definitions and expressions. A checker
+can inspect these structures to examine names or look for docstrings.
 
-Tools such as [Ruff](https://docs.astral.sh/ruff/linter/) provide existing checks for Python code, including unused imports and undefined names. The project's configuration determines which rules are enabled.
+Tools such as [Ruff](https://docs.astral.sh/ruff/linter/) provide existing
+checks for Python code, including unused imports and undefined names. The
+project's configuration determines which rules are enabled.
 
-These checks give contributors feedback about specific problems, but their results have limits. A successful lint check means that the enabled checks detected no violations. Tests and review are still needed to investigate whether the program behaves correctly.
+These checks give contributors feedback about specific problems, but their
+results have limits. A successful lint check means that the enabled checks
+detected no violations. Tests and review are still needed to investigate whether
+the program behaves correctly.
 
 ### Formatters and Presubmit Checks
 
-Formatters apply a consistent layout to code, reducing the need for reviewers to discuss spacing and line wrapping. The [Ruff formatter](https://docs.astral.sh/ruff/formatter/) can format Python files, while its `--check` option reports whether formatting changes are needed without rewriting the files.
+Formatters apply a consistent layout to code, reducing the need for reviewers to
+discuss spacing and line wrapping. The [Ruff
+formatter](https://docs.astral.sh/ruff/formatter/) can format Python files,
+while its `--check` option reports whether formatting changes are needed without
+rewriting the files.
 
-Linting and formatting serve different purposes. For example, `ruff check` runs lint checks, while `ruff format --check` checks formatting. A project can use both to support its conventions.
+Linting and formatting serve different purposes. For example, `ruff check` runs
+lint checks, while `ruff format --check` checks formatting. A project can use
+both to support its conventions.
 
-Presubmit checks bring automated verification into the process before a change is accepted. In a GitHub workflow, [GitHub Actions](https://docs.github.com/en/actions/get-started/understand-github-actions) can run checks when a pull request is opened or updated.
+Presubmit checks bring automated verification into the process before a change
+is accepted. In a GitHub workflow, [GitHub
+Actions](https://docs.github.com/en/actions/get-started/understand-github-actions)
+can run checks when a pull request is opened or updated.
 
-For our class projects, we should continue running the configured checks locally before pushing, addressing reported problems, and reviewing automated results before merging. We should also keep the local checks and automated workflow aligned so that teammates receive consistent feedback.
+For our class projects, we should continue running the configured checks locally
+before pushing, addressing reported problems, and reviewing automated results
+before merging. We should also keep the local checks and automated workflow
+aligned so that teammates receive consistent feedback.
 
 ### Where Human Judgment Still Matters
 
-Although automated tools can enforce coding standards, they cannot evaluate every aspect of code quality. Some decisions, such as whether code is readable, documentation is meaningful, or a particular design is appropriate, require human judgment. As the chapter explains, automation works best for clearly defined rules, while developers and code reviewers handle decisions that require context and reasoning.
+Although automated tools can enforce coding standards, they cannot evaluate
+every aspect of code quality. Some decisions, such as whether code is readable,
+documentation is meaningful, or a particular design is appropriate, require
+human judgment. As the chapter explains, automation works best for clearly
+defined rules, while developers and code reviewers handle decisions that require
+context and reasoning.
 
 ## Key Takeaways
 
-- **Consistency matters**: Shared coding conventions make code easier to understand, maintain, and collaborate on.
+- **Consistency matters**: Shared coding conventions make code easier to
+understand, maintain, and collaborate on.
 
-- **Prioritize readability**: Code should be written for future readers, not just the original developer.
+- **Prioritize readability**: Code should be written for future readers, not
+just the original developer.
 
-- **Rules should have a purpose**: Every rule should provide meaningful benefits without creating unnecessary restrictions.
+- **Rules should have a purpose**: Every rule should provide meaningful benefits
+without creating unnecessary restrictions.
 
-- **Automate when possible**: Tools can enforce coding standards consistently and reduce repetitive manual checks.
+- **Automate when possible**: Tools can enforce coding standards consistently
+and reduce repetitive manual checks.
 
-- **Allow flexibility**: Coding standards should evolve over time, and some decisions still require human judgment.
+- **Allow flexibility**: Coding standards should evolve over time, and some
+decisions still require human judgment.
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 

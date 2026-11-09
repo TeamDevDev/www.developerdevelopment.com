@@ -1,0 +1,246 @@
+---
+author: [Johnny Sharsheev, Abishek Dhakal, Gregory M. Kapfhammer]
+title: 'Style Guides and Rules: Building Maintainable Code'
+date: '2026-11-09'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>How do shared rules, readable code, and automated tools help software teams build code that lasts?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This post explores Chapter 8, ["Style Guides and
+Rules"](https://abseil.io/resources/swe-book/html/ch08.html), from [*Software
+Engineering at Google*](https://abseil.io/resources/swe-book). Written by
+Shaindel Schwartz and edited by Tom Manshreck, the chapter explains how shared
+coding conventions help engineers maintain software as teams grow and projects
+age. A style guide covers more than indentation: it establishes expectations for
+naming, documentation, language features, and code organization.
+
+The chapter distinguishes between **rules**, which engineers must follow
+unless an exception is approved, and **guidance**, which recommends useful
+practices while leaving room for judgment. Both help teams make decisions,
+but they carry different expectations of enforcement.
+
+## Why Teams Need Coding Rules
+
+Rules give a team a shared vocabulary for writing and reading code. When
+engineers agree on common patterns, they can spend more time understanding a
+program's behavior and less time interpreting unfamiliar conventions.
+Consistency also makes it easier to review changes, move between projects,
+and maintain code after its original authors have left.
+
+Useful rules begin with an engineering goal. A team might prioritize
+readability, reliability, performance, or compatibility with other systems.
+Its conventions should support those needs. Google's choices reflect the
+challenges of maintaining a large, long-lived codebase; another organization
+may need different rules to achieve sustainable development.
+
+## Five Principles for Effective Rules
+
+Once a team understands why it needs rules, the next question is how to choose
+useful ones. [Chapter 8](https://abseil.io/resources/swe-book/html/ch08.html)
+describes five principles that can help us make these decisions.
+
+1. **Rules should justify their cost.** Every additional rule takes effort to
+   learn, follow, and maintain. For our team, starting with a few clearly
+explained rules gives everyone a manageable set of expectations.
+
+2. **Write for the reader.** In a Python function, a name such as
+   `failed_check_count` explains more than `n`. Although the longer name takes
+more time to type, another contributor can understand what it represents without
+tracing every assignment.
+
+3. **Keep conventions consistent.** Before adding a function or module, we
+   should check how the surrounding code is organized. For example, functions
+named `load_report` and `save_report` establish a pattern that another
+contributor can follow when adding related functionality.
+
+4. **Avoid confusing or risky code.** One relevant Python example is choosing
+   between `==` and `is`. The [Python
+documentation](https://docs.python.org/3/reference/expressions.html#comparisons)
+explains that `==` compares values, while `is` checks object identity. When
+checking whether two strings contain the same text, using `==` makes the
+intended comparison explicit.
+
+5. **Allow justified exceptions.** Performance and compatibility requirements
+   can justify approved exceptions. If an external library requires a particular
+callback name, we should document that requirement before changing it to match
+our preferred naming convention.
+
+## What Belongs in a Style Guide?
+
+The chapter identifies three purposes for style guide rules: preventing
+mistakes, supporting good practices, and maintaining consistency.
+
+For a Python project, a guide could explain how to compare values correctly,
+what public function docstrings should describe, and which naming conventions
+contributors should follow. Each rule should include a short explanation and an
+example so that a new teammate can apply it.
+
+A useful guide should also explain what following a rule looks like in practice.
+For example, requiring a docstring does not guarantee that the documentation is
+helpful. A function documented as “does the calculation” still leaves readers
+wondering what it calculates and what it returns. Including an example of a
+clear docstring would help contributors understand the purpose of the
+requirement.
+
+## How Rules Should Change
+
+Rules need to be reconsidered when evidence shows that they are causing
+problems. At Google, engineers can propose changes, while language experts
+called **style arbiters** evaluate the trade-offs and approve updates or
+exceptions.
+
+For our team, a proposed change should identify the existing rule, show a
+concrete problem, and explain how the replacement would help. If a naming
+convention conflicts with an external interface, for example, the proposal
+should show the affected code and explain why the conflict requires an exception
+or a change.
+
+We should also record why the decision was made. Otherwise, a future contributor
+might encounter the same issue and repeat the discussion without knowing its
+history.
+
+### Case Study: Python Naming Conventions
+
+Google initially used CamelCase for Python methods because much of its Python
+code supported C++ projects. As independent Python development grew, its guide
+allowed snake_case while accommodating existing code and consistency within
+files.
+
+[PEP 8](https://peps.python.org/pep-0008/#function-and-variable-names)
+recommends lowercase function names with underscores between words. For example,
+`calculate_total` follows this convention and separates the words in the
+function's name.
+
+However, renaming an existing public function also affects the code that calls
+it. Before changing function names, we should identify those callers and plan
+any necessary updates. This helps us improve consistency while preserving the
+behavior that users depend on.
+
+## Guidance and Training Support the Rules
+
+Google supports its rules with introductory guides, short tips, and training
+about its development practices. These resources help engineers understand how
+to apply the conventions.
+
+This connects to our earlier post on [Knowledge Sharing in Software
+Engineering](https://developerdevelopment.com/blog/se4-fall2026/), which
+discusses documentation and mentoring as ways to share knowledge across a team.
+
+For our projects, the README or contribution guide could show a common mistake,
+its corrected version, and the reason for the correction. When reviewing a
+teammate's work, linking to that explanation would give them a reference they
+can use again.
+
+We can apply this approach through three actions:
+
+- **Start** documenting important project conventions with their purpose and an
+example.
+- **Stop** leaving recurring explanations only in private conversations; add
+them to documentation that other contributors can find.
+- **Continue** discussing unclear cases in pull requests and recording the
+reasons behind agreed changes.
+
+## Automating Enforcement
+
+After documenting coding rules, a team needs a reliable way to check whether
+contributions follow them. [Chapter
+8](https://abseil.io/resources/swe-book/html/ch08.html) recommends automating
+enforcement where possible. Automated checks can apply the same criteria across
+contributions and give developers feedback before a manual review.
+
+The team still needs to keep its checks aligned with its documented rules. If
+the guide changes but the configuration stays the same, contributors may receive
+warnings that no longer reflect the team's decisions.
+
+For our class projects, this means maintaining checks that support our agreed
+conventions and documenting how everyone can run them.
+
+### Static Analysis and Error Checkers
+
+Static analysis examines source code without executing the program being
+checked. For example, Python's [ast
+module](https://docs.python.org/3/library/ast.html) represents code as a tree
+containing structures such as function definitions and expressions. A checker
+can inspect these structures to examine names or look for docstrings.
+
+Tools such as [Ruff](https://docs.astral.sh/ruff/linter/) provide existing
+checks for Python code, including unused imports and undefined names. The
+project's configuration determines which rules are enabled.
+
+These checks give contributors feedback about specific problems, but their
+results have limits. A successful lint check means that the enabled checks
+detected no violations. Tests and review are still needed to investigate whether
+the program behaves correctly.
+
+### Formatters and Presubmit Checks
+
+Formatters apply a consistent layout to code, reducing the need for reviewers to
+discuss spacing and line wrapping. The [Ruff
+formatter](https://docs.astral.sh/ruff/formatter/) can format Python files,
+while its `--check` option reports whether formatting changes are needed without
+rewriting the files.
+
+Linting and formatting serve different purposes. For example, `ruff check` runs
+lint checks, while `ruff format --check` checks formatting. A project can use
+both to support its conventions.
+
+Presubmit checks bring automated verification into the process before a change
+is accepted. In a GitHub workflow, [GitHub
+Actions](https://docs.github.com/en/actions/get-started/understand-github-actions)
+can run checks when a pull request is opened or updated.
+
+For our class projects, we should continue running the configured checks locally
+before pushing, addressing reported problems, and reviewing automated results
+before merging. We should also keep the local checks and automated workflow
+aligned so that teammates receive consistent feedback.
+
+### Where Human Judgment Still Matters
+
+Although automated tools can enforce coding standards, they cannot evaluate
+every aspect of code quality. Some decisions, such as whether code is readable,
+documentation is meaningful, or a particular design is appropriate, require
+human judgment. As the chapter explains, automation works best for clearly
+defined rules, while developers and code reviewers handle decisions that require
+context and reasoning.
+
+## Key Takeaways
+
+- **Consistency matters**: Shared coding conventions make code easier to
+understand, maintain, and collaborate on.
+
+- **Prioritize readability**: Code should be written for future readers, not
+just the original developer.
+
+- **Rules should have a purpose**: Every rule should provide meaningful benefits
+without creating unnecessary restrictions.
+
+- **Automate when possible**: Tools can enforce coding standards consistently
+and reduce repetitive manual checks.
+
+- **Allow flexibility**: Coding standards should evolve over time, and some
+decisions still require human judgment.
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `Style Guide Checker`, a lightweight Python command-line tool
+that checks Python files against a set of team coding conventions.
+
+The tool checks whether function names and filenames follow `snake_case`
+conventions and whether public functions include docstrings. When a violation
+is found, it provides an explanation of the issue and why following the
+convention matters.
+
+Using Python's built-in `ast` and `pathlib` modules, our project demonstrates
+how automated checks can improve code readability, consistency, and
+maintainability across a team.
+You can view the project here: [style-guide-checker on
+GitHub](https://github.com/Abishek-D-7/style-guide-checker).
+
+:::
+
+{{< include /_back-blog.qmd >}}

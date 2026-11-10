@@ -1,0 +1,46 @@
+---
+author: [V Rieger, Kaitlyn Walker, Gregory M. Kapfhammer]
+title: 'Parsing Inputs'
+date: '2026-11-11'
+date-format: long
+categories: [post, fuzzing book, software engineering]
+description: <em>How can we combine parsing with grammars?</em>
+toc: true
+page-layout: full
+---
+
+## Overview
+
+This blog focuses on the ["Parsing Inputs"](https://www.fuzzingbook.org/html/Parser.html) chapter of [The
+Fuzzing Book](https://www.fuzzingbook.org/).
+
+### Parsing Inputs
+
+### Why Parsing for Fuzzing?
+
+### Using a Parser
+
+### An Ad Hoc Parser
+
+### Grammars in Parsing
+#### Grammars and Derivation Trees
+
+#### Recursion
+
+### A Parser Class
+
+### Parsing Expression Tree Grammars
+
+### Parsing Context-Free Grammars
+
+### Lessons Learned
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our tool is []().
+
+:::
+
+{{< include /_fuzzingbook-reference.qmd >}}
+
+{{< include /_back-blog.qmd >}}

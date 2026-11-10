@@ -37,7 +37,7 @@ Fuzzing Book](https://www.fuzzingbook.org/).
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our tool is []().
+Our tool is [ParseBench](https://github.com/katie-sol/ParseBench), a benchmark that compares PEG and Earley parsers on speed, growth rate, and which strings each one accepts.
 
 :::
 

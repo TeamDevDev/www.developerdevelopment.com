@@ -38,7 +38,7 @@ more of the values. The book suggests that instead the solution could be to get
 the "template" for valid inputs by parsing valid samples and using them for
 fuzzing.
 
-```text
+```python
 def process_van(year, company, model):
     res = ["We have a %s %s van from %s vintage." % (company, model, year)]
     iyear = int(year)
@@ -49,7 +49,7 @@ def process_van(year, company, model):
     return res
 ```
 
-```text
+```python
 def process_car(year, company, model):
     res = ["We have a %s %s car from %s vintage." % (company, model, year)]
     iyear = int(year)
@@ -60,7 +60,7 @@ def process_car(year, company, model):
     return res
 ```
 
-```text
+```python
 CSV_GRAMMAR: Grammar = {
     '<start>': ['<csvline>'],
     '<csvline>': ['<items>'],

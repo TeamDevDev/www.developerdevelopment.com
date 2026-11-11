@@ -16,13 +16,29 @@ Fuzzing Book](https://www.fuzzingbook.org/).
 
 ### Parsing Inputs
 
-We have seen how grammars can be used to generate strings from a language. They can also be used to break strings down to tell the parts of grammar they were made from. A derivation tree would show a broken down string and its hierarchical organization. You can use the derivation tree to recreate the string, or you can swap put branches to create new strings. This is how parsing can be used for fuzzing; get the parts of a valid input by parsing, and make a few changes, while following the grammar, and you'll have new valid inputs to use.
+We have seen how grammars can be used to generate strings from a language. They
+can also be used to break strings down to tell the parts of grammar they were
+made from. A derivation tree would show a broken down string and its
+hierarchical organization. You can use the derivation tree to recreate the
+string, or you can swap put branches to create new strings. This is how parsing
+can be used for fuzzing; get the parts of a valid input by parsing, and make a
+few changes, while following the grammar, and you'll have new valid inputs to
+use.
 
 ### Why Parsing for Fuzzing?
 
-The book provides an example where parsing inputs for fuzzing could be useful. A program takes in a CSV file of vehicle details and processes each line, behaving differently with a van vs. a car. Using a grammar for generating comma separated values, 1000 inputs are created. None of them work, however, as the vehicle types `car` and `van` aren't included. The grammar is updated to include `car` and `van` as options, but many invalid inputs are still generated, having either the wrong amount of comma separated values or incorrect types of one or more of the values. The book suggests that instead the solution could be to get the "template" for valid inputs by parsing valid samples and using them for fuzzing.
+The book provides an example where parsing inputs for fuzzing could be useful. A
+program takes in a CSV file of vehicle details and processes each line, behaving
+differently with a van versus a car. Using a grammar for generating comma
+separated values, 1000 inputs are created. None of them work, however, as the
+vehicle types `car` and `van` aren't included. The grammar is updated to include
+`car` and `van` as options, but many invalid inputs are still generated, having
+either the wrong amount of comma separated values or incorrect types of one or
+more of the values. The book suggests that instead the solution could be to get
+the "template" for valid inputs by parsing valid samples and using them for
+fuzzing.
 
-```
+```text
 def process_van(year, company, model):
     res = ["We have a %s %s van from %s vintage." % (company, model, year)]
     iyear = int(year)
@@ -33,7 +49,7 @@ def process_van(year, company, model):
     return res
 ```
 
-```
+```text
 def process_car(year, company, model):
     res = ["We have a %s %s car from %s vintage." % (company, model, year)]
     iyear = int(year)
@@ -44,7 +60,7 @@ def process_car(year, company, model):
     return res
 ```
 
-```
+```text
 CSV_GRAMMAR: Grammar = {
     '<start>': ['<csvline>'],
     '<csvline>': ['<items>'],
@@ -55,7 +71,7 @@ CSV_GRAMMAR: Grammar = {
 }
 ```
 
-```
+```text
 '9w9J\'/,LU<"l,|,Y,Zv)Amvx,c\n'     Invalid entry
 '(n8].H7,qolS'     not enough values to unpack (expected at least 4, got 2)
 '\nQoLWQ,jSa'     not enough values to unpack (expected at least 4, got 2)
@@ -68,7 +84,7 @@ CSV_GRAMMAR: Grammar = {
 'ol,\nH<\tn,^#,=A'     Invalid entry
 ```
 
-```
+```text
 ',h,van,|'     Invalid entry
 'M,w:K,car,car,van'     Invalid entry
 'J,?Y,van,van,car,J,~D+'     Invalid entry
@@ -89,7 +105,7 @@ A parser is "the part of a program that processes (structured) input". It takes 
 
 The book creates a simple parser for demonstration. It takes the input and breaks it down by line into records, and then by comma separated value.`Display_tree()` is used to show a visual of an example derivation tree. More complicated examples are then given, such as handling commas in quoted values and handling embedded quotes. More and more changes would need to be made to this parser, and it would be difficult to ensure you've gotten everything. This is where formal parsers come in. Rather than trying to figure out every parsing rule needed on your own, a formal parser is created directly from a formal grammar (this includes context-free grammars).
 
-```
+```text
 def simple_parse_csv(mystring: str) -> DerivationTree:
     children: List[DerivationTree] = []
     tree = (START_SYMBOL, children)
@@ -129,13 +145,13 @@ The parser class the book defines uses the Tree Pruner option, and includes a `p
 
 A Parsing Expression Grammar (PEG) is a type of formal grammar that specifies the sequence of steps to take to parse a given string. Both PEGs and Context-Free Grammars use nonterminals and corresponding alternatives representing how to match each. PEGs, however, use *ordered choice* and will stop at the first match that succeeds. One technique for parsing PEGs is Packrat parsing, which is so named because it caches results to avoid recomputation.
 
-```
+```text
 PEG1 = {
     '<start>': ['a', 'b']
 }
 ```
 
-```
+```text
 PEG2 = {
     '<start>': ['ab', 'abc']
 }

@@ -99,13 +99,23 @@ CSV_GRAMMAR: Grammar = {
 
 ### Using a Parser
 
-A parser is "the part of a program that processes (structured) input". It takes in an input string and outputs a derivation tree. Current parsers usually require two steps: initialize the parser, and give it some input to parse.
+A parser is "the part of a program that processes (structured) input". It takes
+in an input string and outputs a derivation tree. Current parsers usually
+require two steps: initialize the parser and give it some input to parse.
 
 ### An Ad Hoc Parser
 
-The book creates a simple parser for demonstration. It takes the input and breaks it down by line into records, and then by comma separated value.`Display_tree()` is used to show a visual of an example derivation tree. More complicated examples are then given, such as handling commas in quoted values and handling embedded quotes. More and more changes would need to be made to this parser, and it would be difficult to ensure you've gotten everything. This is where formal parsers come in. Rather than trying to figure out every parsing rule needed on your own, a formal parser is created directly from a formal grammar (this includes context-free grammars).
+The book creates a simple parser for demonstration. It takes the input and
+breaks it down by line into records, and then by comma separated
+value.`Display_tree()` is used to show a visual of an example derivation tree.
+More complicated examples are then given, such as handling commas in quoted
+values and handling embedded quotes. More and more changes would need to be made
+to this parser, and it would be difficult to ensure you've gotten everything.
+This is where formal parsers come in. Rather than trying to figure out every
+parsing rule needed on your own, a formal parser is created directly from a
+formal grammar (this includes context-free grammars).
 
-```text
+```python
 def simple_parse_csv(mystring: str) -> DerivationTree:
     children: List[DerivationTree] = []
     tree = (START_SYMBOL, children)
@@ -119,39 +129,67 @@ def simple_parse_csv(mystring: str) -> DerivationTree:
 
 #### Grammars and Derivation Trees
 
-A grammar is "a set of rules that explain how the start symbol can be expanded. Each rule has a name, also called a nonterminal, and a set of alternative choices in how the nonterminal can be expanded." An example: `<expr>: [<expr>+<expr>, <expr>-<expr>, <integer>]` It tells how the nonterminal `<expr>` might be expanded. `<expr>` has three "alternative expansions", one of them being `<expr>+<expr>` which can be broken down into three "symbols": `<expr>`, `+`, and `<expr>`. Notice that a symbol can be nonterminal or terminal. From this grammar, an input string can be made. For example, `"1+2"`. This input can be parsed into a derivation tree. At the top of the tree is the `<start>` symbol. All expansions made are shown until all terminals are reached.
+A grammar is "a set of rules that explain how the start symbol can be expanded.
+Each rule has a name, also called a nonterminal, and a set of alternative
+choices in how the nonterminal can be expanded." An example: `<expr>:
+[<expr>+<expr>, <expr>-<expr>, <integer>]` It tells how the nonterminal `<expr>`
+might be expanded. `<expr>` has three "alternative expansions", one of them
+being `<expr>+<expr>` which can be broken down into three "symbols": `<expr>`,
+`+`, and `<expr>`. Notice that a symbol can be nonterminal or terminal. From
+this grammar, an input string can be made. For example, `"1+2"`. This input can
+be parsed into a derivation tree. At the top of the tree is the `<start>`
+symbol. All expansions made are shown until all terminals are reached.
 
 #### Recursion
 
-Using a nonterminal in its own definition, like with `<expr>`, is called recursion. There are two types of recursion: left recursion and right recursion. Some definitions:
+Using a nonterminal in its own definition, like with `<expr>`, is called
+recursion. There are two types of recursion: left recursion and right recursion.
+Some definitions:
 
-- Left Recursion: when the left-most symbol of any expansion is the nonterminal itself
-- Right Recursion: when the right-most symbol of any expansion is the nonterminal itself
-- Direct Recursion: The symbol that causes left or right recursion is doing so as one of the expansions of the nonterminal
-- Indirect Recursion: The symbol that causes left or right recursion is doing so as the expansion of another nonterminal that was reached from expansions that trace back to the original nonterminal
-- Ambiguity: When parsing an input to create a derivation tree, ambiguous grammar may lead to multiple possible derivation trees
+- **Left Recursion**: when the left-most symbol of any expansion is the
+nonterminal itself
+- **Right Recursion**: when the right-most symbol of any expansion is the
+nonterminal itself
+- **Direct Recursion**: The symbol that causes left or right recursion is doing
+so as one of the expansions of the nonterminal
+- **Indirect Recursion**: The symbol that causes left or right recursion is
+doing so as the expansion of another nonterminal that was reached from
+expansions that trace back to the original nonterminal
+- **Ambiguity**: When parsing an input to create a derivation tree, ambiguous
+grammar may lead to multiple possible derivation trees
 
 ### A Parser Class
 
 The Fuzzing Book describes two approaches for parsing:
 
-- Lexer: Lexing breaks its source down into its smallest meaningful parts. Then, these "parts," or "tokens," are fed to the parser to be organized into a derivation tree.
+- **Lexer**: Lexing breaks its source down into its smallest meaningful parts. Then,
+these "parts," or "tokens," are fed to the parser to be organized into a
+derivation tree.
 
-- Tree Pruner: Use "a grammar that incorporates complete details of the syntax." After parsing, "prune" the tree by replacing nodes that correspond to tokens with their corresponding strings as leaf nodes.
+- **Tree Pruner**: Use "a grammar that incorporates complete details of the syntax."
+After parsing, "prune" the tree by replacing nodes that correspond to tokens
+with their corresponding strings as leaf nodes.
 
-The parser class the book defines uses the Tree Pruner option, and includes a `parse` method which returns a list of derivation trees if the parse was successful.
+The parser class the book defines uses the Tree Pruner option, and includes a
+`parse` method which returns a list of derivation trees if the parse was
+successful.
 
 ### Parsing Expression Grammars
 
-A Parsing Expression Grammar (PEG) is a type of formal grammar that specifies the sequence of steps to take to parse a given string. Both PEGs and Context-Free Grammars use nonterminals and corresponding alternatives representing how to match each. PEGs, however, use *ordered choice* and will stop at the first match that succeeds. One technique for parsing PEGs is Packrat parsing, which is so named because it caches results to avoid recomputation.
+A Parsing Expression Grammar (PEG) is a type of formal grammar that specifies
+the sequence of steps to take to parse a given string. Both PEGs and
+Context-Free Grammars use nonterminals and corresponding alternatives
+representing how to match each. PEGs, however, use *ordered choice* and will
+stop at the first match that succeeds. One technique for parsing PEGs is Packrat
+parsing, which is so named because it caches results to avoid recomputation.
 
-```text
+```python
 PEG1 = {
     '<start>': ['a', 'b']
 }
 ```
 
-```text
+```python
 PEG2 = {
     '<start>': ['ab', 'abc']
 }
@@ -161,11 +199,16 @@ PEG2 = {
 
 #### Problems with PEG
 
-Working with PEGs can be simple and intuitive with simple parser like packrat parsers, but they don't easily cross over with Context-Free Grammars, which is what the book has been using. It is not easy to translate from PEG to CFG, so the book looks at a new type of parser.
+Working with PEGs can be simple and intuitive with simple parser like packrat
+parsers, but they don't easily cross over with Context-Free Grammars, which is
+what the book has been using. It is not easy to translate from PEG to CFG, so
+the book looks at a new type of parser.
 
 #### The Earley Parser
 
-Earley parsers are able to parse any arbitrary context-free grammar. It uses chart parsing which is where it stores partial parses in tables to avoid any backtracking. The book goes into detail about implementing an Earley parser.
+Earley parsers are able to parse any arbitrary context-free grammar. It uses
+chart parsing which is where it stores partial parses in tables to avoid any
+backtracking. The book goes into detail about implementing an Earley parser.
 
 ### Lessons Learned
 

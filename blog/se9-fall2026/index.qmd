@@ -251,4 +251,6 @@ are reported without blocking it.
 You can view the project here: [CodeGuardian on
 GitHub](https://github.com/Rivan-Deets/CodeGuardian).
 
+:::
+
 {{< include /_back-blog.qmd >}}

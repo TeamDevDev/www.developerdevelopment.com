@@ -1,0 +1,254 @@
+---
+author: [Benito Aguero, Rivan Deets, Gregory M. Kapfhammer]
+title: Code Review
+date: '2026-11-16'
+date-format: long
+categories: [post, professional development, software engineering]
+description: <em>Let's investigate Google's code review practices!</em>
+toc: true
+page-layout: full
+---
+## Overview & Summary
+
+
+This blog post discusses the [Code
+Review](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
+[Software Engineering at Google book](https://abseil.io/resources/swe-book).
+The chapter explains why Google requires that someone other than the author
+review every change before it enters the codebase. It describes the review
+flow, the different kinds of approval a change may need, and the habits that
+keep review fast, respectful, and useful.
+
+## Introduction
+
+Code review is far more than a bug-catching gate. At Google it is a way to
+keep the codebase healthy over the long term and to spread knowledge across
+teams. The chapter looks at the practical benefits (correctness,
+comprehension, consistency) as well as the social ones, like shared ownership
+and a historical record of why decisions were made.
+
+### Code Review Flow
+
+The typical flow is deliberately simple, and most changes follow the same
+stages.
+
+**What are the steps of the typical code review process at Google, and how
+could they map onto our own projects?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+1. The author creates a change and runs automated checks (tests, linters,
+   static analysis) locally.
+2. The author requests a review and describes what the change does and why.
+3. Reviewers read the change and leave comments, from required fixes to
+   optional suggestions.
+4. The author modifies the change and replies to each comment, either by fixing
+   the issue or by explaining a disagreement.
+5. A reviewer gives an "LGTM" (looks good to me) once they are satisfied.
+6. After all required approvals and passing checks, the change is committed.
+
+</details>
+
+```{mermaid}
+flowchart LR
+    A[Create change] --> B[Request review]
+    B --> C[Reviewer comments]
+    C --> D[Author modifies & replies]
+    D --> C
+    D --> E[LGTM]
+    E --> F[Commit]
+```
+
+Automation matters here too. Presubmit checks run before a human spends time
+on the change, so reviewers can focus on design, clarity, and correctness
+instead of formatting or trivially detectable problems.
+
+## Why Review Code? The Benefits
+
+### Code Correctness
+
+A second pair of eyes catches logic errors, missed edge cases, and unclear
+assumptions that the author is too close to see. Finding these problems before
+they land is much cheaper than finding them in production.
+
+### Code Comprehension
+
+If a reviewer cannot understand a change, future maintainers probably cannot
+either. Review works as an early readability test: a confusing change is a
+signal to simplify the code or explain it better through naming, structure,
+comments, or a clearer description.
+
+**If a reviewer asks a question about your code, what does that tell you?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+* the code (or its description) may not be clear enough on its own
+* the fix is usually to improve the code or add documentation, not just to
+  answer in the comment thread
+
+</details>
+
+### Code Consistency
+
+Review enforces shared conventions so a large codebase feels like it was
+written by one team. Consistent code lowers the cost of moving between projects
+and of reading unfamiliar code, and it lets reviewers spend their attention on
+substance instead of style.
+
+### Psychological and Cultural Benefits
+
+Knowing a colleague will read your work encourages care. Review also
+normalizes giving and receiving feedback and builds a sense of shared
+ownership. Done well, it reinforces teamwork rather than gatekeeping.
+
+### Knowledge Sharing and Historical Record
+
+Reviewers learn about parts of the system they do not own, and authors pick up
+techniques and idioms from reviewers. The discussion attached to a change also
+becomes documentation: months later it can explain *why* something was written
+the way it was.
+
+## Three Kinds of Approval
+
+A single change at Google may need several distinct sign-offs, and one person
+can sometimes provide more than one.
+
+| Approval type | Question it answers |
+|---|---|
+| **Correctness and comprehension** | Is this change right, and can another engineer understand it? |
+| **Ownership** | Does an owner of this part of the codebase agree it belongs here? |
+| **Readability** | Does the code follow the language's idioms and the codebase's style? |
+
+**Why might it help to separate these approvals instead of having one reviewer
+judge everything?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+* each reviewer can focus on one kind of judgment
+* code owners protect their area without needing to review language style
+* readability reviewers spread good language habits across the organization
+
+</details>
+
+## Code Review Best Practices
+
+Review can introduce friction and delay if it is done poorly. A handful of
+habits keep it worth the cost for both individuals and the organization.
+
+**Discussion Question: Have we run into any of these problems with code review
+as a group?**
+
+### Be Polite and Professional
+
+Review is a conversation between colleagues. Feedback should be about the code,
+not the person, and should explain *why* a change is requested. Treat each
+comment as a to-do item that deserves a response. If you disagree, explain your
+side rather than silently marking the comment resolved, and consider asking the
+reviewer to "please take another look" (PTAL).
+
+Authors should remember that once code is committed it belongs to the team.
+Be open to questions and ready to explain your choices.
+
+### Write Small Changes
+
+Small changes are easier to understand, faster to review, less likely to hide
+bugs, and simpler to roll back. A rough rule of thumb from the chapter is that
+a "small" change is around 200 lines or fewer. For larger features, break the
+work into a sequence of independently reviewable steps.
+
+### Write Good Change Descriptions
+
+The first line works like an email subject: a short summary of the change.
+The rest should explain what changed and why, with a list if there are many
+modifications. Vague descriptions like "fix bug" or "updates" are discouraged,
+since the description becomes part of the permanent record.
+
+### Keep Reviewers to a Minimum
+
+More reviewers do not automatically mean better review. Each additional
+reviewer adds delay and can dilute responsibility, because everyone assumes
+someone else looked carefully. Choose reviewers who cover the required
+approvals, and if several are needed, have each focus on a different part of
+the change.
+
+### Automate Where Possible
+
+Anything a machine can check reliably (formatting, linting, tests, common bug
+patterns) should be checked by a machine. Presubmits save everyone time and
+leave humans free for bigger issues with the code.
+
+## Different Types of Code Reviews
+
+As we read this section, consider which of these categories the code we write
+as a class most often falls into.
+
+### Greenfield Reviews and New Code
+
+New code deserves the closest look at design: Is the API sensible? Is it well
+tested? Will it be maintainable and fit within the larger system?
+
+**Why might greenfield review be more common in our projects than at Google?**
+
+<details> <summary>Click to Expand for the Answer</summary>
+
+- our codebases are smaller
+- our projects are newer
+
+**And what else?**
+
+**Finally, why do you think it is called "greenfield"?**
+
+</details>
+
+### Behavioral Changes, Improvements, and Optimizations
+
+Here reviewers ask whether the change is really needed, whether it solves the
+stated problem, and whether it risks breaking existing behavior. Remember that
+some of the best changes are deletions.
+
+### Bug Fixes and Rollbacks
+
+A bug fix should address that bug and nothing else, and reviewers should check
+that it targets the root cause. Rollbacks need to be reviewed quickly, so it is
+wise to keep them in mind whenever you make a change.
+
+### Refactorings and Large-Scale Changes (LSC)
+
+Mostly mechanical edits can be reviewed with a different lens: confirm that the
+transformation is consistent and behavior-preserving rather than scrutinizing
+every line as new logic.
+
+## Review Speed and Culture
+
+Slow reviews are costly. Authors lose context, switch tasks, and are tempted to
+batch more work into each change, which makes the next review even harder.
+Small changes, automation, and a shared expectation of quick turnaround all
+help. Just as important, review works best where people see it as a normal and
+valued part of collaboration, not as an evaluation of their competence.
+
+## Moving Forward
+
+Many of these practices can be adopted on any team. Consider agreeing on a
+review turnaround time, keeping pull requests small, writing descriptions that
+explain the *why*, and moving style checks into continuous integration.
+
+What aspects of code review do we do differently from Google? Are there
+practices we should adopt that we are not currently using?
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our team built `CodeGuardian`, a lightweight, dependency-free Python
+command-line tool that runs as a Git pre-commit hook to enforce code review
+practices before changes are committed.
+
+The tool checks staged files against `OWNERS` files to confirm that every
+required owner has recorded an LGTM ("Looks Good To Me") approval, and that a
+designated readability approver has signed off. It also warns about possible
+duplicate function and class names and flags required review comments that have
+gone unanswered for more than 24 hours. Errors block the commit, while warnings
+are reported without blocking it.
+
+You can view the project here: [CodeGuardian on
+GitHub](https://github.com/Rivan-Deets/CodeGuardian).
+
+{{< include /_back-blog.qmd >}}

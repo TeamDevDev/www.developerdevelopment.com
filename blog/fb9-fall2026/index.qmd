@@ -56,6 +56,57 @@ In this example, the final input is enough to reproduce the failure. However, re
 
 ## Delta Debugging
 
+Delta debugging automates the trial-and-error process of manual reduction. It
+divides the input into sections, removes one section at a time, and tests the
+remaining complement. If the complement still causes the failure, the removed
+section was not necessary and the reducer keeps the smaller input. If none of
+the complements fails, the input is divided into more sections and the process
+continues.
+
+The following pseudocode illustrates the central idea:
+
+```python
+def delta_debug(inp):
+    granularity = 2
+
+    while len(inp) >= 2:
+        chunk_size = max(1, len(inp) // granularity)
+        reduced = False
+
+        for start in range(0, len(inp), chunk_size):
+            complement = inp[:start] + inp[start + chunk_size:]
+            if causes_failure(complement):
+                inp = complement
+                granularity = max(granularity - 1, 2)
+                reduced = True
+                break
+
+        if not reduced:
+            if granularity >= len(inp):
+                break
+            granularity = min(granularity * 2, len(inp))
+
+    return inp
+```
+
+For example, a reducer might test the following candidates:
+
+```text
+abc123()xyz789   FAIL
+()xyz789         FAIL
+()               FAIL
+```
+
+The final candidate is smaller but preserves the failure. In practice, a
+reducer should also distinguish a real failure from a passing input and from
+an input that is invalid or cannot be executed. Caching previously tested
+candidates can reduce the number of repeated program executions.
+
+Delta debugging is useful because it does not require knowledge of the input
+format. Its main limitation is that removing arbitrary sections can create
+many invalid inputs. Those candidates may be unable to reach the original bug,
+which can increase the number of tests needed.
+
 ## Grammar-Based Input Reduction
 
 Delta debugging can remove pieces of an input without knowing how that input is structured. This works well for many strings, but it can become less useful when a program expects a specific syntax. For example, removing a character from a valid arithmetic expression might make the expression invalid before the program reaches the behavior we want to test.
@@ -117,6 +168,62 @@ Derivation trees describe the grammatical structure of an input. By simplifying 
 
 ## Comparing Reduction Techniques
 
+The main reduction techniques differ in how much they know about the input:
+
+| Technique | How it works | Advantages | Limitations |
+|---|---|---|---|
+| Manual reduction | A developer removes sections and reruns the test | Easy to start and inspect | Slow and difficult to repeat for large inputs |
+| Delta debugging | Automatically removes chunks and tests their complements | Works without a grammar and applies to many formats | May generate many invalid candidates |
+| Grammar-based reduction | Simplifies derivation trees and grammar expansions | Preserves syntactic structure and produces meaningful inputs | Requires a grammar and parser |
+
+Delta debugging is a good general-purpose choice when the input format is
+unknown or unstructured. Grammar-based reduction is usually better for source
+code, queries, configuration files, and other structured inputs where syntax is
+necessary to reach the failure. In either case, the reducer should verify that
+the final result still reproduces the original failure before it is used as a
+regression test.
+
+### Comparing Strategies on a Long Expression
+
+The chapter demonstrates this trade-off by generating a long arithmetic
+expression with a grammar fuzzer and reducing the same input with both
+strategies:
+
+```python
+long_expr_input = GrammarFuzzer(
+    EXPR_GRAMMAR, min_nonterminals=100
+).fuzz()
+```
+
+The grammar-based reducer works with the expression's derivation tree. In the
+demonstration, it needs only a small number of tests to find a reduced,
+failure-inducing expression:
+
+```python
+grammar_reducer = GrammarReducer(
+    eval_mystery, EarleyParser(EXPR_GRAMMAR)
+)
+grammar_reducer.reduce(long_expr_input)
+grammar_reducer.tests
+```
+
+The text-based delta debugger does not have access to the expression's
+structure. It tries many more character-level complements before reaching a
+failure-inducing result:
+
+```python
+dd_reducer = DeltaDebuggingReducer(eval_mystery)
+dd_reducer.reduce(long_expr_input)
+dd_reducer.tests
+```
+
+In the chapter's example, grammar-based reduction takes about 10 tests, while
+delta debugging takes about 900. The exact counts depend on the generated
+input and the runner, but the result illustrates the central trade-off:
+grammar-aware reduction is more efficient for syntactically complex inputs,
+while delta debugging requires less setup and applies to inputs without a
+known grammar.
+
 ## Lessons Learned
 
 - Reducing a failing input can make it easier to identify the behavior responsible for a bug.
@@ -127,8 +234,11 @@ Derivation trees describe the grammatical structure of an input. By simplifying 
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
-Our tool is `TOOL` a command-line DESCRIPTION. [TOOL on
-GitHub](LINK).
+Our tool is [`text-reducer`](https://github.com/ojharitesh/text-reducer), a
+small educational command-line tool that minimizes a text file while keeping a
+user-provided checker failing. It demonstrates the delta debugging technique
+from this chapter. [text-reducer on
+GitHub](https://github.com/ojharitesh/text-reducer).
 
 :::
 

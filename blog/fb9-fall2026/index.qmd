@@ -1,0 +1,12 @@
+---
+author: [Kathryn Boidock, Ritesh Ojha, Gregory M. Kapfhammer]
+title: 'Reducing Failure-Inducing Inputs'
+date: '2026-11-18'
+date-format: long
+categories: [post, software engineering, fuzzing book]
+description: <em>How can reducing failure-inducing inputs make debugging easier?</em>
+toc: true
+page-layout: full
+---
+
+## Overview

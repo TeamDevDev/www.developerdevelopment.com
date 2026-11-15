@@ -10,3 +10,128 @@ page-layout: full
 ---
 
 ## Overview
+
+This blog discusses the ["Reducing Failure-Inducing Inputs"](https://www.fuzzingbook.org/html/Reducer.html) chapter of [The Fuzzing Book](https://www.fuzzingbook.org/). Fuzzers can generate complex inputs that reveal problems in a program, but determining exactly what caused a failure can be difficult. Input reduction helps by removing unnecessary portions of a failing input while keeping the failure reproducible. We will look at why reduction matters, how it can be performed manually, and how grammar-based techniques simplify structured inputs. We will also discuss delta debugging, compare reduction approaches, and introduce a tool that demonstrates these ideas.
+
+## Why Reduce Failure-Inducing Inputs?
+
+Finding a bug is only the beginning of the debugging process. A fuzzer may produce a long string containing many characters or operations, even though only a small portion is responsible for the failure. When developers inspect the entire input, the unrelated parts make it harder to identify the cause.
+
+**Input reduction** is the process of simplifying a failure-inducing input while checking that the reduced input still triggers the failure being investigated. The goal is to produce a smaller and more understandable example that can be used to explain, reproduce, and eventually fix the bug.
+
+For example, the chapter shows a Python expression that raises a division-by-zero error:
+
+```python
+x = 1 + 2 * 3 / 0
+```
+
+The expression contains several operations, but it can be reduced to:
+
+```python
+3 / 0
+```
+
+Both examples trigger a `ZeroDivisionError`. The reduced expression makes the cause of the problem much easier to recognize.
+
+## Manual Input Reduction
+
+One way to reduce a failure-inducing input is to remove portions of it by hand and test whether the same failure still occurs. If deleting a section does not remove the failure, that section was not necessary for reproducing the problem. The process can be repeated to make the input progressively smaller.
+
+Consider a hypothetical program that fails whenever `(` appears before `)` in its input. The program receives the following failing string:
+
+```text
+abc123()xyz789
+```
+
+A developer might try removing different sections and testing the result:
+
+```text
+abc123()xyz789   FAIL
+123()xyz         FAIL
+()xyz            FAIL
+()               FAIL
+```
+
+In this example, the final input is enough to reproduce the failure. However, reducing inputs manually becomes time-consuming when there are many possible deletions to test. It is also possible to remove too much and accidentally eliminate the original failure. This motivates automated reduction techniques.
+
+## Delta Debugging
+
+## Grammar-Based Input Reduction
+
+Delta debugging can remove pieces of an input without knowing how that input is structured. This works well for many strings, but it can become less useful when a program expects a specific syntax. For example, removing a character from a valid arithmetic expression might make the expression invalid before the program reaches the behavior we want to test.
+
+### Why Syntax Matters
+
+Consider the following valid expression:
+
+```text
+1 + (2 * 3)
+```
+
+Deleting arbitrary characters could produce:
+
+```text
+1 + (2 *
+```
+
+The new expression is syntactically invalid. If the program rejects it for a syntax error, that result might tell us nothing about the original bug. Grammar-based input reduction attempts to avoid this by making changes that follow the rules of the input language.
+
+### Derivation Trees
+
+A **grammar** defines rules for building valid inputs, while a **derivation tree** represents how a specific input was constructed using those rules. Instead of treating an input as a sequence of unrelated characters, grammar-based reduction works with the tree's structure.
+
+For example, the expression `2 * 3` can be viewed as a multiplication operation with two number operands. A grammar-based reducer can use the expression's tree to identify complete components that could be replaced or simplified, rather than deleting individual symbols without regard for their roles.
+
+## Simplifying Structured Inputs
+
+Grammar-based reduction simplifies an input by working with its derivation tree rather than removing individual characters. The chapter introduces two approaches: replacing subtrees and using alternative grammar expansions. Both approaches aim to produce smaller inputs that still follow the grammar's rules.
+
+#### Simplifying by Replacing Subtrees
+
+One approach is to replace a larger subtree with a smaller subtree that represents the same grammar symbol. This allows the reducer to remove unnecessary parts of an expression without making it syntactically invalid.
+
+For example, the chapter begins with the expression `1 + (2 * 3)`. The following derivation tree shows how the original expression is organized into grammar symbols such as `<expr>`, `<term>`, and `<factor>`.
+
+![Original derivation tree for `1 + (2 * 3)`. Source: The Fuzzing Book.](blog1.png){fig-align="center" width="55%"}
+
+The reducer can simplify the original expression by replacing its larger `<expr>` subtree with the smaller `<expr>` subtree representing `(2 * 3)`. This removes the `1 +` portion while keeping the expression valid according to the grammar.
+
+![Reduced derivation tree for `(2 * 3)`. Source: The Fuzzing Book.](blog2.png){fig-align="center" width="55%"}
+
+#### Simplifying by Alternative Expansions
+
+Another approach discussed in the chapter is simplifying an input using alternative grammar expansions. Instead of replacing a subtree with an existing smaller subtree, the reducer can use another expansion allowed by the grammar to produce a simpler expression.
+
+For example, the expression `(2 * 3)` could be simplified to `(3)` by replacing the multiplication with a simpler expression.
+
+In both approaches, the reduced input must still be tested to determine whether it causes the same failure as the original input. A smaller and syntactically valid input is only useful for debugging if it continues to reproduce the failure being investigated.
+
+**Why can derivation trees be helpful when reducing structured inputs?**
+
+<details>
+<summary>Click to Expand for the Answer</summary>
+
+Derivation trees describe the grammatical structure of an input. By simplifying complete subtrees or replacing them with valid expansions, a reducer can avoid many malformed candidates that result from deleting arbitrary characters. This helps it focus more of its tests on inputs that the program can actually process.
+
+</details>
+
+## Comparing Reduction Techniques
+
+## Lessons Learned
+
+- Reducing a failing input can make it easier to identify the behavior responsible for a bug.
+- A reduction is useful only if the relevant failure can still be reproduced.
+- Manual reduction is possible, but repeated testing can make it slow for large inputs.
+- Grammar-based reduction uses the structure of inputs to avoid many syntactically invalid candidates.
+- Different reduction techniques have different strengths, so the right approach depends on the input and the program being tested.
+
+::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
+
+Our tool is `TOOL` a command-line DESCRIPTION. [TOOL on
+GitHub](LINK).
+
+:::
+
+{{< include /_fuzzingbook-reference.qmd >}}
+
+{{< include /_back-blog.qmd >}}

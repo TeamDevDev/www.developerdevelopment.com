@@ -8,8 +8,8 @@ description: <em>Let's investigate Google's code review practices!</em>
 toc: true
 page-layout: full
 ---
-## Overview & Summary
 
+## Overview & Summary
 
 This blog post discusses the [Code
 Review](https://abseil.io/resources/swe-book/html/ch09.html) chapter in the
@@ -191,8 +191,8 @@ tested? Will it be maintainable and fit within the larger system?
 
 <details> <summary>Click to Expand for the Answer</summary>
 
-- our codebases are smaller
-- our projects are newer
+* our codebases are smaller
+* our projects are newer
 
 **And what else?**
 

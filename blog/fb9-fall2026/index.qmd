@@ -153,44 +153,74 @@ Deleting arbitrary characters could produce:
 1 + (2 *
 ```
 
-The new expression is syntactically invalid. If the program rejects it for a syntax error, that result might tell us nothing about the original bug. Grammar-based input reduction attempts to avoid this by making changes that follow the rules of the input language.
+The new expression is syntactically invalid. If the program rejects it for a
+syntax error, that result might tell us nothing about the original bug.
+Grammar-based input reduction attempts to avoid this by making changes that
+follow the rules of the input language.
 
 ### Derivation Trees
 
-A **grammar** defines rules for building valid inputs, while a **derivation tree** represents how a specific input was constructed using those rules. Instead of treating an input as a sequence of unrelated characters, grammar-based reduction works with the tree's structure.
+A **grammar** defines rules for building valid inputs, while a **derivation
+tree** represents how a specific input was constructed using those rules.
+Instead of treating an input as a sequence of unrelated characters,
+grammar-based reduction works with the tree's structure.
 
-For example, the expression `2 * 3` can be viewed as a multiplication operation with two number operands. A grammar-based reducer can use the expression's tree to identify complete components that could be replaced or simplified, rather than deleting individual symbols without regard for their roles.
+For example, the expression `2 * 3` can be viewed as a multiplication operation
+with two number operands. A grammar-based reducer can use the expression's tree
+to identify complete components that could be replaced or simplified, rather
+than deleting individual symbols without regard for their roles.
 
 ## Simplifying Structured Inputs
 
-Grammar-based reduction simplifies an input by working with its derivation tree rather than removing individual characters. The chapter introduces two approaches: replacing subtrees and using alternative grammar expansions. Both approaches aim to produce smaller inputs that still follow the grammar's rules.
+Grammar-based reduction simplifies an input by working with its derivation tree
+rather than removing individual characters. The chapter introduces two
+approaches: replacing subtrees and using alternative grammar expansions. Both
+approaches aim to produce smaller inputs that still follow the grammar's rules.
 
 ### Simplifying by Replacing Subtrees
 
-One approach is to replace a larger subtree with a smaller subtree that represents the same grammar symbol. This allows the reducer to remove unnecessary parts of an expression without making it syntactically invalid.
+One approach is to replace a larger subtree with a smaller subtree that
+represents the same grammar symbol. This allows the reducer to remove
+unnecessary parts of an expression without making it syntactically invalid.
 
-For example, the chapter begins with the expression `1 + (2 * 3)`. The following derivation tree shows how the original expression is organized into grammar symbols such as `<expr>`, `<term>`, and `<factor>`.
+For example, the chapter begins with the expression `1 + (2 * 3)`. The
+following derivation tree shows how the original expression is organized into
+grammar symbols such as `<expr>`, `<term>`, and `<factor>`.
 
 ![Original derivation tree for `1 + (2 * 3)`. Source: The Fuzzing Book.](blog1.png){fig-align="center" width="55%"}
 
-The reducer can simplify the original expression by replacing its larger `<expr>` subtree with the smaller `<expr>` subtree representing `(2 * 3)`. This removes the `1 +` portion while keeping the expression valid according to the grammar.
+The reducer can simplify the original expression by replacing its larger
+`<expr>` subtree with the smaller `<expr>` subtree representing `(2 * 3)`. This
+removes the `1 +` portion while keeping the expression valid according to the
+grammar.
 
 ![Reduced derivation tree for `(2 * 3)`. Source: The Fuzzing Book.](blog2.png){fig-align="center" width="55%"}
 
 #### Simplifying by Alternative Expansions
 
-Another approach discussed in the chapter is simplifying an input using alternative grammar expansions. Instead of replacing a subtree with an existing smaller subtree, the reducer can use another expansion allowed by the grammar to produce a simpler expression.
+Another approach discussed in the chapter is simplifying an input using
+alternative grammar expansions. Instead of replacing a subtree with an existing
+smaller subtree, the reducer can use another expansion allowed by the grammar
+to produce a simpler expression.
 
-For example, the expression `(2 * 3)` could be simplified to `(3)` by replacing the multiplication with a simpler expression.
+For example, the expression `(2 * 3)` could be simplified to `(3)` by replacing
+the multiplication with a simpler expression.
 
-In both approaches, the reduced input must still be tested to determine whether it causes the same failure as the original input. A smaller and syntactically valid input is only useful for debugging if it continues to reproduce the failure being investigated.
+In both approaches, the reduced input must still be tested to determine whether
+it causes the same failure as the original input. A smaller and syntactically
+valid input is only useful for debugging if it continues to reproduce the
+failure being investigated.
 
 **Why can derivation trees be helpful when reducing structured inputs?**
 
 <details>
 <summary>Click to Expand for the Answer</summary>
 
-Derivation trees describe the grammatical structure of an input. By simplifying complete subtrees or replacing them with valid expansions, a reducer can avoid many malformed candidates that result from deleting arbitrary characters. This helps it focus more of its tests on inputs that the program can actually process.
+Derivation trees describe the grammatical structure of an input. By simplifying
+complete subtrees or replacing them with valid expansions, a reducer can avoid
+many malformed candidates that result from deleting arbitrary characters. This
+helps it focus more of its tests on inputs that the program can actually
+process.
 
 </details>
 
@@ -254,19 +284,23 @@ known grammar.
 
 ## Lessons Learned
 
-- Reducing a failing input can make it easier to identify the behavior responsible for a bug.
+- Reducing a failing input can make it easier to identify the behavior
+responsible for a bug.
 - A reduction is useful only if the relevant failure can still be reproduced.
-- Manual reduction is possible, but repeated testing can make it slow for large inputs.
-- Grammar-based reduction uses the structure of inputs to avoid many syntactically invalid candidates.
-- Different reduction techniques have different strengths, so the right approach depends on the input and the program being tested.
+- Manual reduction is possible, but repeated testing can make it slow for large
+inputs.
+- Grammar-based reduction uses the structure of inputs to avoid many
+syntactically invalid candidates.
+- Different reduction techniques have different strengths, so the right
+approach depends on the input and the program being tested.
 
 ::: {.callout-note appearance="minimal" title="Open-Source Tool for Software Engineers" collapse="false"}
 
 Our tool is [`text-reducer`](https://github.com/ojharitesh/text-reducer), a
 small educational command-line tool that minimizes a text file while keeping a
 user-provided checker failing. It demonstrates the delta debugging technique
-from this chapter. [text-reducer on
-GitHub](https://github.com/ojharitesh/text-reducer).
+from this chapter. You should check out the [text-reducer on
+GitHub](https://github.com/ojharitesh/text-reducer)!
 
 :::
 

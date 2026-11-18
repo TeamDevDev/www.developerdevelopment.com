@@ -11,15 +11,31 @@ page-layout: full
 
 ## Overview
 
-This blog discusses the ["Reducing Failure-Inducing Inputs"](https://www.fuzzingbook.org/html/Reducer.html) chapter of [The Fuzzing Book](https://www.fuzzingbook.org/). Fuzzers can generate complex inputs that reveal problems in a program, but determining exactly what caused a failure can be difficult. Input reduction helps by removing unnecessary portions of a failing input while keeping the failure reproducible. We will look at why reduction matters, how it can be performed manually, and how grammar-based techniques simplify structured inputs. We will also discuss delta debugging, compare reduction approaches, and introduce a tool that demonstrates these ideas.
+This blog discusses the ["Reducing Failure-Inducing
+Inputs"](https://www.fuzzingbook.org/html/Reducer.html) chapter of [The Fuzzing
+Book](https://www.fuzzingbook.org/). Fuzzers can generate complex inputs that
+reveal problems in a program, but determining exactly what caused a failure can
+be difficult. Input reduction helps by removing unnecessary portions of a
+failing input while keeping the failure reproducible. We will look at why
+reduction matters, how it can be performed manually, and how grammar-based
+techniques simplify structured inputs. We will also discuss delta debugging,
+compare reduction approaches, and introduce a tool that demonstrates these
+ideas.
 
 ## Why Reduce Failure-Inducing Inputs?
 
-Finding a bug is only the beginning of the debugging process. A fuzzer may produce a long string containing many characters or operations, even though only a small portion is responsible for the failure. When developers inspect the entire input, the unrelated parts make it harder to identify the cause.
+Finding a bug is only the beginning of the debugging process. A fuzzer may
+produce a long string containing many characters or operations, even though
+only a small portion is responsible for the failure. When developers inspect
+the entire input, the unrelated parts make it harder to identify the cause.
 
-**Input reduction** is the process of simplifying a failure-inducing input while checking that the reduced input still triggers the failure being investigated. The goal is to produce a smaller and more understandable example that can be used to explain, reproduce, and eventually fix the bug.
+**Input reduction** is the process of simplifying a failure-inducing input
+while checking that the reduced input still triggers the failure being
+investigated. The goal is to produce a smaller and more understandable example
+that can be used to explain, reproduce, and eventually fix the bug.
 
-For example, the chapter shows a Python expression that raises a division-by-zero error:
+For example, the chapter shows a Python expression that raises a
+division-by-zero error:
 
 ```python
 x = 1 + 2 * 3 / 0
@@ -31,7 +47,8 @@ The expression contains several operations, but it can be reduced to:
 3 / 0
 ```
 
-Both examples trigger a `ZeroDivisionError`. The reduced expression makes the cause of the problem much easier to recognize.
+Both examples trigger a `ZeroDivisionError`. The reduced expression makes the
+cause of the problem much easier to recognize.
 
 ## Manual Input Reduction
 
@@ -137,7 +154,7 @@ For example, the expression `2 * 3` can be viewed as a multiplication operation 
 
 Grammar-based reduction simplifies an input by working with its derivation tree rather than removing individual characters. The chapter introduces two approaches: replacing subtrees and using alternative grammar expansions. Both approaches aim to produce smaller inputs that still follow the grammar's rules.
 
-#### Simplifying by Replacing Subtrees
+### Simplifying by Replacing Subtrees
 
 One approach is to replace a larger subtree with a smaller subtree that represents the same grammar symbol. This allows the reducer to remove unnecessary parts of an expression without making it syntactically invalid.
 

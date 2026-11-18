@@ -52,9 +52,13 @@ cause of the problem much easier to recognize.
 
 ## Manual Input Reduction
 
-One way to reduce a failure-inducing input is to remove portions of it by hand and test whether the same failure still occurs. If deleting a section does not remove the failure, that section was not necessary for reproducing the problem. The process can be repeated to make the input progressively smaller.
+One way to reduce a failure-inducing input is to remove portions of it by hand
+and test whether the same failure still occurs. If deleting a section does not
+remove the failure, that section was not necessary for reproducing the problem.
+The process can be repeated to make the input progressively smaller.
 
-Consider a hypothetical program that fails whenever `(` appears before `)` in its input. The program receives the following failing string:
+Consider a hypothetical program that fails whenever `(` appears before `)` in
+its input. The program receives the following failing string:
 
 ```text
 abc123()xyz789
@@ -69,7 +73,10 @@ abc123()xyz789   FAIL
 ()               FAIL
 ```
 
-In this example, the final input is enough to reproduce the failure. However, reducing inputs manually becomes time-consuming when there are many possible deletions to test. It is also possible to remove too much and accidentally eliminate the original failure. This motivates automated reduction techniques.
+In this example, the final input is enough to reproduce the failure. However,
+reducing inputs manually becomes time-consuming when there are many possible
+deletions to test. It is also possible to remove too much and accidentally
+eliminate the original failure. This motivates automated reduction techniques.
 
 ## Delta Debugging
 
@@ -126,7 +133,11 @@ which can increase the number of tests needed.
 
 ## Grammar-Based Input Reduction
 
-Delta debugging can remove pieces of an input without knowing how that input is structured. This works well for many strings, but it can become less useful when a program expects a specific syntax. For example, removing a character from a valid arithmetic expression might make the expression invalid before the program reaches the behavior we want to test.
+Delta debugging can remove pieces of an input without knowing how that input is
+structured. This works well for many strings, but it can become less useful
+when a program expects a specific syntax. For example, removing a character
+from a valid arithmetic expression might make the expression invalid before the
+program reaches the behavior we want to test.
 
 ### Why Syntax Matters
 
